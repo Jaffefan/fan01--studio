@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-04-28-1647",
+  "title": "AI记者上线，新闻编辑部无人了",
+  "published_at": "2026-04-28 16:47",
+  "duration_seconds": 376.1,
+  "duration_label": "6分16秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "AI记者运行编辑部，写稿赚钱全自动",
+      "golden_quote": "AI记者写出爆款，赚的稿费比我还多。",
+      "keywords": [
+        "AI记者",
+        "自主新闻",
+        "智能体经济",
+        "TokenToday"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "谷歌测试 YouTube AI搜索，聊天式找视频",
+      "golden_quote": "AI搜索YouTube：从此不再翻列表，直接问答案。",
+      "keywords": [
+        "YouTube",
+        "AI搜索",
+        "谷歌",
+        "对话式搜索"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’",
+      "golden_quote": "AI领域第一起‘离婚案’，双方都没有赢家。",
+      "keywords": [
+        "马斯克",
+        "奥特曼",
+        "OpenAI",
+        "陪审团"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Delegare：让AI智能体安全付钱，不交私钥",
+      "golden_quote": "AI帮你付款，但你的私钥还是你的。",
+      "keywords": [
+        "AI支付",
+        "Delegare",
+        "智能体",
+        "安全"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "VibeBrowser：让AI直接登录你的真实浏览器",
+      "golden_quote": "AI能登录你的浏览器了——既是帮手，也是风险。",
+      "keywords": [
+        "VibeBrowser",
+        "浏览器",
+        "AI智能体",
+        "MCP协议"
+      ],
+      "source": "Hacker News"
+    }
+  ]
+}
