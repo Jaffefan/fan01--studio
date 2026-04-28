@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI重塑世界：本周5大惊喜 - 2026-04-28</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 32px 24px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+  .channel {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .meta {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  .player {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .toc-title {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fafafa; }
+  .toc-time {
+    color: #ff5500;
+    font-size: 13px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 50px;
+    margin-right: 12px;
+    margin-top: 2px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+  }
+  .segment {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 18px 20px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: #ff5500;
+    font-size: 12px;
+    font-weight: 600;
+    background: #fff3ed;
+    padding: 3px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: "SF Mono", Consolas, monospace;
+  }
+  .segment-time:hover { background: #ffe5d6; }
+  .segment-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1d1d1f;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: #888;
+  }
+  .tag {
+    background: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #666;
+  }
+  .source-link {
+    color: #007aff;
+    text-decoration: none;
+  }
+  .source-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 32px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="channel">📡 每日 AI 资讯电波</div>
+    <div class="title">AI重塑世界：本周5大惊喜</div>
+    <div class="meta">2026-04-28 · 共 5 条 · 时长约 6分7秒</div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="21.99">  <span class="toc-time">00:21</span>  <span class="toc-text">AI考古：庞贝遇难者被“复活”</span></div>
+    <div class="toc-item" data-seek="93.5">  <span class="toc-time">01:33</span>  <span class="toc-text">AI版“摩尔定律”诞生：智能体效率每18个月翻倍</span></div>
+    <div class="toc-item" data-seek="161.64">  <span class="toc-time">02:41</span>  <span class="toc-text">AI语音助手“空降”YouTube：搜索变聊天</span></div>
+    <div class="toc-item" data-seek="224.77">  <span class="toc-time">03:44</span>  <span class="toc-text">画一张图，AI就替你敲代码？</span></div>
+    <div class="toc-item" data-seek="295.79">  <span class="toc-time">04:55</span>  <span class="toc-text">让AI更“通人性”：上下文感知的单词查询工具</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg" alt="AI考古：庞贝遇难者被“复活”">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="21.99">▶ 00:21</span>
+      <div class="segment-title">1. AI考古：庞贝遇难者被“复活”</div>
+      <div class="segment-summary">考古学家利用3D扫描和深度学习技术，重建了庞贝火山遇难者的容貌与生前状态。该技术通过分析骨骼特征推断年龄、性别、健康及死亡姿势，颠覆了传统考古依赖人工复原的模式。未来将应用于法医鉴定、历史纪录片及家谱可视化，使博物馆展品从静态骨架变为动态数字故事。</div>
+      <div class="segment-meta">
+        <span class="tag">考古</span> <span class="tag">3D扫描</span> <span class="tag">深度学习</span> <span class="tag">法医</span> <span class="tag">庞贝</span>
+        <span class="tag">来源: NPR</span>
+        <a class="source-link" href="https://www.npr.org/2026/04/28/g-s1-118986/pompeii-archaeologists-use-ai-to-reconstruct-man-killed-in-volcanos-eruption" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg" alt="AI版“摩尔定律”诞生：智能体效率每18个月翻倍">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="93.5">▶ 01:33</span>
+      <div class="segment-title">2. AI版“摩尔定律”诞生：智能体效率每18个月翻倍</div>
+      <div class="segment-summary">研究者提出'Time Horizons'理论，类似摩尔定律：AI智能体的有效智力劳动量每18-24个月翻倍。该定律基于模型架构、推理效率与训练数据的协同进化，颠覆了AI进步不可预测的认知。用户将在未来一年半内体验到智能体处理任务速度和复杂度的大幅提升，如报告生成、数据分析等。</div>
+      <div class="segment-meta">
+        <span class="tag">摩尔定律</span> <span class="tag">AI智能体</span> <span class="tag">效率</span> <span class="tag">Time Horizons</span> <span class="tag">指数增长</span>
+        <span class="tag">来源: The AI Digest</span>
+        <a class="source-link" href="https://theaidigest.org/time-horizons" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg" alt="AI语音助手“空降”YouTube：搜索变聊天">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="161.64">▶ 02:41</span>
+      <div class="segment-title">3. AI语音助手“空降”YouTube：搜索变聊天</div>
+      <div class="segment-summary">Google在YouTube测试AI对话式搜索，用户可用自然语言提问，AI结合多模态技术分析长视频、Shorts和文字内容后综合反馈。这颠覆了传统关键词搜索模式，实现'聊+看'的交互。用户无需纠结搜索词，即可获得精准的视频推荐，提升学习和娱乐效率。</div>
+      <div class="segment-meta">
+        <span class="tag">YouTube</span> <span class="tag">对话式搜索</span> <span class="tag">多模态</span> <span class="tag">检索增强生成</span> <span class="tag">谷歌</span>
+        <span class="tag">来源: The Verge</span>
+        <a class="source-link" href="https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg" alt="画一张图，AI就替你敲代码？">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="224.77">▶ 03:44</span>
+      <div class="segment-title">4. 画一张图，AI就替你敲代码？</div>
+      <div class="segment-summary">Extern工具超越传统UI生成，可根据设计图自动构建后端逻辑、数据库及API接口，实现从设计到功能的端到端生成。其核心技术为代码生成大模型与智能体网络的结合，能自主决策技术栈并组装功能。这改变了对AI仅辅助编码的认知，使个人或小团队能快速搭建可用软件，极大降低开发门槛。</div>
+      <div class="segment-meta">
+        <span class="tag">Extern</span> <span class="tag">代码生成</span> <span class="tag">后端</span> <span class="tag">智能体</span> <span class="tag">MVP</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://www.extern.co.za/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg" alt="让AI更“通人性”：上下文感知的单词查询工具">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="295.79">▶ 04:55</span>
+      <div class="segment-title">5. 让AI更“通人性”：上下文感知的单词查询工具</div>
+      <div class="segment-summary">QuickDef浏览器插件利用GPT-4o-mini模型，实现上下文感知的单词查询。传统词典仅提供静态释义，常与原文语境不符；QuickDef则结合所在句子信息给出精准解释。其技术核心是让AI同时处理单词与上下文词语，改善阅读体验。对英语学习者，这能显著减少因查词导致的注意力中断，提升阅读流畅度。</div>
+      <div class="segment-meta">
+        <span class="tag">上下文感知</span> <span class="tag">词典</span> <span class="tag">GPT</span> <span class="tag">阅读</span> <span class="tag">Chrome插件</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://chromewebstore.google.com/detail/quickdef-–-ai-dictionary/ioepkncpchchdiookgpkckafhfjcehke" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-04-28 14:53
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
