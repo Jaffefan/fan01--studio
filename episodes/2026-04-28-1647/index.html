@@ -4,126 +4,152 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI记者上线，新闻编辑部无人了 - 2026-04-28 16:47</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: #f5f5f7;
-    color: #1d1d1f;
-    line-height: 1.7;
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
   }
   .container {
     max-width: 720px;
     margin: 0 auto;
     padding: 24px 20px 80px;
   }
+  /* 期刊头：杂志专栏感 */
   .header {
-    position: relative;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 32px 24px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    overflow: hidden;
+    background: transparent;
+    color: var(--ink);
+    padding: 32px 4px 28px;
+    margin-bottom: 28px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--line);
   }
-  .header::before {
-    content: '';
-    position: absolute;
-    top: -20px; right: -20px;
-    width: 120px; height: 120px;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .mascot-avatar {
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 2px;
+    flex-shrink: 0;
   }
-  .header-text {
-    position: relative;
-    z-index: 2;
-    padding-right: 90px;
-  }
-  .mascot {
-    position: absolute;
-    right: 12px;
-    bottom: -8px;
-    height: 130px;
-    z-index: 3;
-    animation: mascot-float 3s ease-in-out infinite;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
-  }
-  @keyframes mascot-float {
-    0%, 100% { transform: translateY(0) rotate(-2deg); }
-    50% { transform: translateY(-6px) rotate(3deg); }
-  }
-  .channel {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 12px;
-    margin-bottom: 12px;
-    backdrop-filter: blur(8px);
-  }
-  .title {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 12px;
+  .masthead-meta {
+    flex: 1;
     line-height: 1.4;
   }
-  .meta {
+  .masthead-by {
+    font-family: var(--serif);
     font-size: 13px;
-    opacity: 0.9;
+    color: var(--ink);
+    letter-spacing: 1px;
+  }
+  .masthead-channel {
+    font-family: var(--serif);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 1px;
   }
   .player {
-    background: white;
+    background: var(--bg-card);
     padding: 20px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
   }
   audio {
     width: 100%;
     height: 44px;
   }
   .toc {
-    background: white;
-    padding: 16px 20px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
   }
   .toc-title {
-    font-size: 13px;
-    color: #888;
-    margin-bottom: 12px;
-    font-weight: 500;
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
   }
   .toc-item {
     display: flex;
     align-items: flex-start;
-    padding: 8px 0;
+    padding: 10px 0;
     cursor: pointer;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f5efe1;
     transition: background 0.15s;
   }
   .toc-item:last-child { border-bottom: none; }
-  .toc-item:hover { background: #fafafa; }
+  .toc-item:hover { background: #fdfaf1; }
   .toc-time {
-    color: #ff5500;
-    font-size: 13px;
+    color: var(--accent);
+    font-size: 12.5px;
     font-family: "SF Mono", Consolas, monospace;
-    min-width: 50px;
+    min-width: 52px;
     margin-right: 12px;
     margin-top: 2px;
+    letter-spacing: 0.5px;
   }
   .toc-text {
     flex: 1;
-    font-size: 14px;
-    color: #333;
+    font-size: 14.5px;
+    color: var(--ink);
   }
   .segment {
-    background: white;
-    border-radius: 16px;
-    margin-bottom: 16px;
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
   }
   .segment-image {
     width: 100%;
@@ -133,90 +159,106 @@
     display: block;
   }
   .segment-body {
-    padding: 18px 20px;
+    padding: 20px 22px 22px;
   }
   .segment-time {
     display: inline-block;
-    color: #ff5500;
+    color: var(--accent);
     font-size: 12px;
     font-weight: 600;
-    background: #fff3ed;
-    padding: 3px 8px;
-    border-radius: 6px;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
   }
-  .segment-time:hover { background: #ffe5d6; }
+  .segment-time:hover { background: #f9e6c3; }
   .segment-title {
-    font-size: 17px;
+    font-family: var(--serif);
+    font-size: 19px;
     font-weight: 600;
-    margin-bottom: 10px;
-    color: #1d1d1f;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
   }
   .segment-summary {
     font-size: 14.5px;
-    color: #444;
-    margin-bottom: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
   }
   .golden-quote {
+    font-family: var(--serif);
     font-size: 15px;
-    font-weight: 600;
-    color: #ff5500;
-    background: linear-gradient(90deg, #fff3ed 0%, #fffaf6 100%);
-    border-left: 3px solid #ff5500;
-    padding: 10px 14px;
-    margin: 12px 0;
-    border-radius: 4px;
-    line-height: 1.6;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
   }
   .golden-quote::before {
     content: '"';
-    font-size: 22px;
-    color: #ff5500;
-    margin-right: 4px;
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
     font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
   }
   .segment-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     font-size: 12px;
-    color: #888;
+    color: var(--ink-mute);
+    align-items: center;
   }
   .tag {
-    background: #f0f0f0;
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: #666;
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
   }
   .source-link {
-    color: #007aff;
+    color: var(--accent);
     text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
   }
   .source-link:hover { text-decoration: underline; }
   .footer {
     text-align: center;
-    color: #999;
-    font-size: 12px;
-    margin-top: 32px;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 50px;
+    letter-spacing: 0.5px;
   }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <div class="header-text">
-      <div class="channel">⭐ AstraX · AI 雷达 | 主播伊恩</div>
-      <div class="title">AI记者上线，新闻编辑部无人了</div>
-      <div class="meta">2026-04-28 16:47 · 共 5 条 · 时长约 6分16秒</div>
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260429095240" alt="AstraX">
+      <div class="masthead-meta">
+        <div class="masthead-by">主笔 · 伊恩</div>
+        <div class="masthead-channel">AstraX · AI 雷达</div>
+      </div>
     </div>
-    <img class="mascot" src="mascot.png?v=20260429091719" alt="AstraX">
+    <div class="title">AI记者上线，新闻编辑部无人了</div>
+    <div class="meta">2026-04-28 16:47 · 共 5 条 · 时长约 6分16秒</div>
   </div>
 
   <div class="player">
     <audio id="player" controls preload="metadata">
-      <source src="full.mp3?v=20260429091719" type="audio/mpeg">
+      <source src="full.mp3?v=20260429095240" type="audio/mpeg">
       你的浏览器不支持音频播放。
     </audio>
   </div>
@@ -247,7 +289,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_02.jpg?v=20260429091719" alt="谷歌测试 YouTube AI搜索，聊天式找视频">
+    <img class="segment-image" src="image_02.jpg?v=20260429095240" alt="谷歌测试 YouTube AI搜索，聊天式找视频">
     <div class="segment-body">
       <span class="segment-time" data-seek="109.22">▶ 01:49</span>
       <div class="segment-title">2. 谷歌测试 YouTube AI搜索，聊天式找视频</div>
@@ -262,7 +304,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_03.jpg?v=20260429091719" alt="马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’">
+    <img class="segment-image" src="image_03.jpg?v=20260429095240" alt="马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’">
     <div class="segment-body">
       <span class="segment-time" data-seek="178.25">▶ 02:58</span>
       <div class="segment-title">3. 马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’</div>
@@ -277,7 +319,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_04.jpg?v=20260429091719" alt="Delegare：让AI智能体安全付钱，不交私钥">
+    <img class="segment-image" src="image_04.jpg?v=20260429095240" alt="Delegare：让AI智能体安全付钱，不交私钥">
     <div class="segment-body">
       <span class="segment-time" data-seek="245.98">▶ 04:05</span>
       <div class="segment-title">4. Delegare：让AI智能体安全付钱，不交私钥</div>
@@ -292,7 +334,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_05.jpg?v=20260429091719" alt="VibeBrowser：让AI直接登录你的真实浏览器">
+    <img class="segment-image" src="image_05.jpg?v=20260429095240" alt="VibeBrowser：让AI直接登录你的真实浏览器">
     <div class="segment-body">
       <span class="segment-time" data-seek="311.2">▶ 05:11</span>
       <div class="segment-title">5. VibeBrowser：让AI直接登录你的真实浏览器</div>
@@ -307,7 +349,7 @@
   </div>
 
   <div class="footer">
-    Powered by Claude Code · 2026-04-29 09:17
+    Powered by Claude Code · 2026-04-29 09:52
   </div>
 </div>
 
