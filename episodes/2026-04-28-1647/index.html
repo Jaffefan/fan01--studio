@@ -18,11 +18,39 @@
     padding: 24px 20px 80px;
   }
   .header {
+    position: relative;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 32px 24px;
     border-radius: 16px;
     margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header-text {
+    position: relative;
+    z-index: 2;
+    padding-right: 90px;
+  }
+  .mascot {
+    position: absolute;
+    right: 12px;
+    bottom: -8px;
+    height: 130px;
+    z-index: 3;
+    animation: mascot-float 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+  }
+  @keyframes mascot-float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-6px) rotate(3deg); }
   }
   .channel {
     display: inline-block;
@@ -31,6 +59,7 @@
     border-radius: 12px;
     font-size: 12px;
     margin-bottom: 12px;
+    backdrop-filter: blur(8px);
   }
   .title {
     font-size: 22px;
@@ -177,14 +206,17 @@
 <body>
 <div class="container">
   <div class="header">
-    <div class="channel">⭐ AstraX · AI 雷达 | 主播伊恩</div>
-    <div class="title">AI记者上线，新闻编辑部无人了</div>
-    <div class="meta">2026-04-28 16:47 · 共 5 条 · 时长约 6分16秒</div>
+    <div class="header-text">
+      <div class="channel">⭐ AstraX · AI 雷达 | 主播伊恩</div>
+      <div class="title">AI记者上线，新闻编辑部无人了</div>
+      <div class="meta">2026-04-28 16:47 · 共 5 条 · 时长约 6分16秒</div>
+    </div>
+    <img class="mascot" src="mascot.png?v=20260429091719" alt="AstraX">
   </div>
 
   <div class="player">
     <audio id="player" controls preload="metadata">
-      <source src="full.mp3?v=20260428165123" type="audio/mpeg">
+      <source src="full.mp3?v=20260429091719" type="audio/mpeg">
       你的浏览器不支持音频播放。
     </audio>
   </div>
@@ -215,7 +247,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_02.jpg?v=20260428165123" alt="谷歌测试 YouTube AI搜索，聊天式找视频">
+    <img class="segment-image" src="image_02.jpg?v=20260429091719" alt="谷歌测试 YouTube AI搜索，聊天式找视频">
     <div class="segment-body">
       <span class="segment-time" data-seek="109.22">▶ 01:49</span>
       <div class="segment-title">2. 谷歌测试 YouTube AI搜索，聊天式找视频</div>
@@ -230,7 +262,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_03.jpg?v=20260428165123" alt="马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’">
+    <img class="segment-image" src="image_03.jpg?v=20260429091719" alt="马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’">
     <div class="segment-body">
       <span class="segment-time" data-seek="178.25">▶ 02:58</span>
       <div class="segment-title">3. 马斯克诉奥特曼开庭，陪审团直言‘不喜欢他’</div>
@@ -245,7 +277,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_04.jpg?v=20260428165123" alt="Delegare：让AI智能体安全付钱，不交私钥">
+    <img class="segment-image" src="image_04.jpg?v=20260429091719" alt="Delegare：让AI智能体安全付钱，不交私钥">
     <div class="segment-body">
       <span class="segment-time" data-seek="245.98">▶ 04:05</span>
       <div class="segment-title">4. Delegare：让AI智能体安全付钱，不交私钥</div>
@@ -260,7 +292,7 @@
   </div>
 
   <div class="segment">
-    <img class="segment-image" src="image_05.jpg?v=20260428165123" alt="VibeBrowser：让AI直接登录你的真实浏览器">
+    <img class="segment-image" src="image_05.jpg?v=20260429091719" alt="VibeBrowser：让AI直接登录你的真实浏览器">
     <div class="segment-body">
       <span class="segment-time" data-seek="311.2">▶ 05:11</span>
       <div class="segment-title">5. VibeBrowser：让AI直接登录你的真实浏览器</div>
@@ -275,7 +307,7 @@
   </div>
 
   <div class="footer">
-    Powered by Claude Code · 2026-04-28 16:51
+    Powered by Claude Code · 2026-04-29 09:17
   </div>
 </div>
 
