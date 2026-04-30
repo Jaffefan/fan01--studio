@@ -25,6 +25,19 @@ RATE = "+5%"
 VOLUME = "+0%"
 
 
+def _resolve_ffmpeg_bin(name: str) -> str:
+    """跨平台解析 ffmpeg/ffprobe 路径：CI/Linux 用 PATH，Windows 走 FFMPEG_DIR"""
+    try:
+        from config import FFMPEG_DIR
+    except ImportError:
+        return name
+    if not FFMPEG_DIR:  # CI 环境，已在 PATH 中
+        return name
+    # Windows 本地：拼路径 + .exe
+    suffix = ".exe" if sys.platform == "win32" else ""
+    return os.path.join(FFMPEG_DIR, f"{name}{suffix}")
+
+
 def clean_text_for_tts(text: str) -> str:
     """
     清洗文案中不适合 TTS 朗读的内容：
@@ -108,11 +121,7 @@ def generate_audio(script: dict, output_dir: str, date_str: str) -> dict:
 def _get_audio_duration(filepath: str) -> float:
     """用 ffprobe 获取音频时长（秒）"""
     import subprocess
-    try:
-        from config import FFMPEG_DIR
-        ffprobe = os.path.join(FFMPEG_DIR, "ffprobe.exe")
-    except ImportError:
-        ffprobe = "ffprobe"
+    ffprobe = _resolve_ffmpeg_bin("ffprobe")
     result = subprocess.run(
         [ffprobe, "-v", "error", "-show_entries", "format=duration",
          "-of", "default=noprint_wrappers=1:nokey=1", filepath],
@@ -130,12 +139,7 @@ def _merge_audio(audio_files: dict, output_path: str, script: dict | None = None
     返回章节时间戳列表 [{"title", "start_seconds", "label"}, ...]
     """
     import subprocess
-
-    try:
-        from config import FFMPEG_DIR
-        ffmpeg = os.path.join(FFMPEG_DIR, "ffmpeg.exe")
-    except ImportError:
-        ffmpeg = "ffmpeg"
+    ffmpeg = _resolve_ffmpeg_bin("ffmpeg")
 
     # 按顺序排列：开场 → 各段资讯 → 结尾
     order = ["opening"]
