@@ -1,0 +1,45 @@
+name: Daily AI Podcast
+
+on:
+  schedule:
+    # 北京时间 9:00 = UTC 1:00
+    - cron: '0 1 * * *'
+  workflow_dispatch:  # 支持在 GitHub 网页上手动触发
+
+permissions:
+  contents: write  # 允许 commit 和 push 回仓库
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run podcast pipeline
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          TTS_PROVIDER: ${{ secrets.TTS_PROVIDER || 'edge' }}
+        run: python main.py

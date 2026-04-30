@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# 中间产物（每天会重新生成）
+output/
+*.log
+run_log.txt
+
+# 本地克隆的发布仓库（CI 不需要）
+podcast_site/
+
+# 测试遗留文件
+tts_test.mp3
+voice_test_*.mp3
+mascot_full.png
+mascot_source.png
+
+# 暂停中的旧功能
+material.py
+draft_generator.py
+remotion-demo/
+
+# 编辑器临时文件
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Claude Code 本地配置
+.claude/settings.local.json
+memory/
