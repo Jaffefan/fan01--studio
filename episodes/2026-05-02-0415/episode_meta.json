@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-02-0415",
+  "title": "GPT-5.5逆袭，AI泡沫有救了？",
+  "published_at": "2026-05-02 04:15",
+  "duration_seconds": 389.33,
+  "duration_label": "6分29秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "GPT-5.5 追平 Mythos 安全评测",
+      "golden_quote": "通用模型打平专业模型，垂直AI的护城河正在消失。",
+      "keywords": [
+        "GPT-5.5",
+        "Mythos",
+        "网络安全",
+        "垂直AI",
+        "评测"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Sam Altman 说不想取代你，但……",
+      "golden_quote": "AI 不是来取代你的，但会用 AI 的人会取代你。",
+      "keywords": [
+        "Sam Altman",
+        "取代",
+        "AI就业",
+        "公关",
+        "技能转型"
+      ],
+      "source": "Neowin"
+    },
+    {
+      "title": "终端 AI 交易员 Finny",
+      "golden_quote": "AI 交易员从华尔街走进终端，金融民主化有了新注脚。",
+      "keywords": [
+        "Finny",
+        "AI交易员",
+        "终端",
+        "开源",
+        "量化交易"
+      ],
+      "source": "FinnyAI"
+    },
+    {
+      "title": "AI 编程工具的隐藏成本：年费上万",
+      "golden_quote": "AI 编程工具省了时间，但可能花了更多钱——成本要算总账。",
+      "keywords": [
+        "AI编程",
+        "成本分析",
+        "团队效率",
+        "ROI",
+        "隐藏成本"
+      ],
+      "source": "DevGenius"
+    },
+    {
+      "title": "AI 泡沫到底有多大？大西洋月刊深度分析",
+      "golden_quote": "AI 不是泡沫，泡沫的是估值。技术趋势不变，资本狂欢会消退。",
+      "keywords": [
+        "AI泡沫",
+        "估值",
+        "营收",
+        "Anthropic",
+        "趋势"
+      ],
+      "source": "The Atlantic"
+    }
+  ]
+}
