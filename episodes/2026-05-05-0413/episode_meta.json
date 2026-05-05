@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-05-0413",
+  "title": "AI抢饭碗？黄仁勋说反话，谷歌被告上法庭",
+  "published_at": "2026-05-05 04:13",
+  "duration_seconds": 385.03,
+  "duration_label": "6分25秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "微软高管：AI永远取代不了程序员",
+      "golden_quote": "AI取代的不是程序员，是那些拒绝进化的码农。",
+      "keywords": [
+        "微软",
+        "程序员",
+        "AI替代",
+        "视频"
+      ],
+      "source": "YouTube / Microsoft Lead"
+    },
+    {
+      "title": "黄仁勋：AI正在创造大量就业",
+      "golden_quote": "黄仁勋的潜台词：AI抢走的饭碗，英伟达会造新的。",
+      "keywords": [
+        "黄仁勋",
+        "AI就业",
+        "英伟达",
+        "TechCrunch"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "谷歌AI把人误标成性侵犯，被告了",
+      "golden_quote": "AI给活人贴杀人标签，这锅算法背不起。",
+      "keywords": [
+        "谷歌",
+        "AI侵权",
+        "诉讼",
+        "AI幻觉"
+      ],
+      "source": "The Guardian"
+    },
+    {
+      "title": "在任意Linux机器上跑AI Agent",
+      "golden_quote": "AI Agent正在成为Linux的新标配，就像当年Docker改变部署一样。",
+      "keywords": [
+        "AI Agent",
+        "Linux",
+        "Claw",
+        "开源工具"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "小心！AI正在让我们“认知投降”",
+      "golden_quote": "AI最大的风险不是失控，是我们主动放弃思考。",
+      "keywords": [
+        "认知投降",
+        "经济学人",
+        "AI风险",
+        "教育"
+      ],
+      "source": "The Economist"
+    }
+  ]
+}
