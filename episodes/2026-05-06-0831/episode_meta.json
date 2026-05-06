@@ -1,0 +1,67 @@
+{
+  "episode_id": "2026-05-06-0831",
+  "title": "AI诊断碾压医生、豆包开始收费、美国国会查Cursor母公司——今天5件大事",
+  "published_at": "2026-05-06 08:31",
+  "duration_seconds": 550.75,
+  "duration_label": "9分10秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "AI诊断准确率碾压医生",
+      "golden_quote": "AI不是取代医生，而是重构决策的参考系",
+      "keywords": [
+        "AI诊断",
+        "急诊",
+        "OpenAI o1",
+        "医疗AI"
+      ],
+      "source": "Science"
+    },
+    {
+      "title": "字节跳动豆包开始收费",
+      "golden_quote": "免费做教育，付费做收割——AI变现竞赛打响",
+      "keywords": [
+        "豆包",
+        "字节跳动",
+        "AI订阅",
+        "商业化"
+      ],
+      "source": "TechNode"
+    },
+    {
+      "title": "美国国会调查Cursor和Airbnb",
+      "golden_quote": "商业逻辑在地缘政治面前，必须让位于安全逻辑",
+      "keywords": [
+        "Cursor",
+        "Airbnb",
+        "美国国会",
+        "中国AI",
+        "国家安全"
+      ],
+      "source": "Semafor"
+    },
+    {
+      "title": "Marc Lore：AI让任何人一分钟开一家餐厅",
+      "golden_quote": "AI抹平了开餐厅的最后一道门槛——现在只需要一个创意",
+      "keywords": [
+        "Marc Lore",
+        "Wonder",
+        "AI餐饮",
+        "机器人厨房"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "芬兰AI实验室QuTwo估值3.8亿美元",
+      "golden_quote": "欧洲没建成的AI巨头，QuTwo要在下个时代建成",
+      "keywords": [
+        "QuTwo",
+        "欧洲AI",
+        "量子计算",
+        "融资"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
