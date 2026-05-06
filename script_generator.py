@@ -138,6 +138,13 @@ DEEP_SCRIPT_PROMPT = """你是 AI 播客主持人「伊恩」的专属文案编�
 - 任何看起来像章节小标题的词
 - markdown 符号 (** # `)
 
+## 8.5 JSON 安全规则（极其重要，违反会导致整个输出报废）
+- **所有字段值（script / opening / ending 等）内部禁止使用英文双引号 `"`**
+- 引用人物原话、产品名、专有名词时一律改用中文引号 `「」` 或 `『』`
+- 例：✅ 用「Claude 是工具不是主角」  ❌ 用 "Claude 是工具不是主角"
+- 字段值里的换行用 `\n`，不要直接换行
+- 不要在字符串里包含未配对的括号或反斜杠
+
 ## 9. 标题要求（爆款风格）
 **禁止平铺直叙**（如"本周 AI 大事盘点"、"AI 资讯五条"）
 **用以下爆款公式之一**：
@@ -264,17 +271,29 @@ def _load_history_titles() -> list[str]:
 
 
 def _parse_json_response(text: str) -> dict:
-    """从 AI 回复中提取 JSON"""
+    """从 AI 回复中提取 JSON。LLM 长文本里偶尔会有未转义引号，用 json_repair 兜底。"""
     text = text.strip()
     if text.startswith("```"):
         lines = text.split("\n")
         lines = [l for l in lines if not l.strip().startswith("```")]
         text = "\n".join(lines)
+
+    start = text.find("{")
+    end = text.rfind("}") + 1
+    candidate = text[start:end] if (start != -1 and end > start) else text
+
     try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        start = text.find("{")
-        end = text.rfind("}") + 1
-        if start != -1 and end > start:
-            return json.loads(text[start:end])
-        raise ValueError(f"无法解析 AI 返回的 JSON:\n{text[:200]}")
+        return json.loads(candidate)
+    except json.JSONDecodeError as e:
+        print(f"     ⚠️ 标准 JSON 解析失败 ({e})，尝试 json_repair 兜底...")
+        try:
+            from json_repair import repair_json
+            repaired = repair_json(candidate, return_objects=True)
+            if isinstance(repaired, dict) and repaired:
+                print(f"     ✓ json_repair 修复成功")
+                return repaired
+        except ImportError:
+            pass
+        except Exception as e2:
+            print(f"     ⚠️ json_repair 也失败: {e2}")
+        raise ValueError(f"无法解析 AI 返回的 JSON:\n{candidate[:300]}")
