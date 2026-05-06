@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstraX · AI 雷达 | 主播伊恩</title>
+<title>伊恩 AI 小报 | 主播伊恩</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -69,19 +69,36 @@
   }
   .logo {
     font-family: var(--serif);
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     color: var(--ink);
+    letter-spacing: 5px;
+    margin-bottom: 6px;
+    position: relative;
+    display: inline-block;
+  }
+  .logo::before, .logo::after {
+    content: '✦';
+    color: var(--accent);
+    font-size: 14px;
+    margin: 0 16px;
+    vertical-align: 8px;
+    opacity: 0.7;
+  }
+  .author-line {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
   }
   .tagline {
     font-family: var(--serif);
-    font-size: 14.5px;
+    font-size: 14px;
     color: var(--ink-soft);
     margin-bottom: 22px;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
+    line-height: 1.85;
+    font-style: italic;
   }
   .stats {
     display: inline-block;
@@ -182,15 +199,28 @@
   <div class="hero">
     <img class="hero-mascot" src="mascot.png" alt="AstraX">
     <div class="hero-text">
-      <div class="logo">AstraX · AI 雷达</div>
-      <div class="tagline">主播伊恩 · 每日 10 分钟<br>把全网最炸的 AI 大事讲给你听</div>
-      <span class="stats">已发布 6 期</span>
+      <div class="logo">伊恩 AI 小报</div>
+      <div class="author-line">主笔 · 伊恩 / 形象 · AstraX</div>
+      <div class="tagline">每日一份带音频的 AI 资讯简报<br>把全网最值得关注的大事讲给你听</div>
+      <span class="stats">已发布 7 期</span>
     </div>
   </div>
 
   <div class="section-title">All Issues · 历期</div>
 
-  <a class="episode-card" href="episodes/2026-05-05-0413/">
+  <a class="episode-card" href="episodes/2026-05-06-0256/">
+  <img class="ep-cover" src="episodes/2026-05-06-0256/image_01.jpg" alt="AI暴改客服、IDE、助手">
+  <div class="ep-body">
+    <div class="ep-meta-top">
+      <span>📅 2026-05-06 02:56</span>
+      <span>⏱ 5分51秒 · 5 条</span>
+    </div>
+    <div class="ep-title">AI暴改客服、IDE、助手</div>
+    <div class="ep-quote">"AI代理不应只读代码，而该成为开发工具本身。"</div>
+    <div class="ep-segments">给AI整个IDE，效率飙升54% · Google秘密代理「雷米」曝光 · FFmpeg开发者怒斥AI公司「许可 · Telus用AI改客服口音，工会怒了 · OpenAI低延迟语音：实时AI对话</div>
+  </div>
+</a>
+<a class="episode-card" href="episodes/2026-05-05-0413/">
   <img class="ep-cover" src="episodes/2026-05-05-0413/image_01.jpg" alt="AI抢饭碗？黄仁勋说反话，谷歌被告上法庭">
   <div class="ep-body">
     <div class="ep-meta-top">
@@ -264,7 +294,7 @@
 </a>
 
   <div class="footer">
-    Powered by Claude Code · Updated 2026-05-05 04:15
+    Powered by Claude Code · Updated 2026-05-06 02:57
   </div>
 </div>
 </body>

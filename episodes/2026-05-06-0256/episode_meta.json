@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-06-0256",
+  "title": "AI暴改客服、IDE、助手",
+  "published_at": "2026-05-06 02:56",
+  "duration_seconds": 351.53,
+  "duration_label": "5分51秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "给AI整个IDE，效率飙升54%",
+      "golden_quote": "AI代理不应只读代码，而该成为开发工具本身。",
+      "keywords": [
+        "MCP Steroid",
+        "AI代理",
+        "IDE",
+        "JetBrains",
+        "软件开发"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "Google秘密代理「雷米」曝光",
+      "golden_quote": "真正的AI代理，不是你叫它才动，而是它替你着想。",
+      "keywords": [
+        "Google",
+        "Gemini",
+        "AI代理",
+        "Remy",
+        "OpenClaw"
+      ],
+      "source": "Business Insider"
+    },
+    {
+      "title": "FFmpeg开发者怒斥AI公司「许可证洗钱」",
+      "golden_quote": "AI可以生成代码，但不能抹掉代码背后的人类创作者。",
+      "keywords": [
+        "FFmpeg",
+        "OxideAV",
+        "开源许可",
+        "AI",
+        "许可证洗钱"
+      ],
+      "source": "GitHub Issues"
+    },
+    {
+      "title": "Telus用AI改客服口音，工会怒了",
+      "golden_quote": "技术可以消除偏见，但掩盖身份不是消除偏见。",
+      "keywords": [
+        "Telus",
+        "AI",
+        "口音修改",
+        "客服",
+        "伦理"
+      ],
+      "source": "The Globe and Mail"
+    },
+    {
+      "title": "OpenAI低延迟语音：实时AI对话来了",
+      "golden_quote": "当AI能流畅对话，沉默的成本就转嫁给了人类。",
+      "keywords": [
+        "OpenAI",
+        "语音AI",
+        "低延迟",
+        "实时交互",
+        "规模化"
+      ],
+      "source": "Hacker News"
+    }
+  ]
+}
