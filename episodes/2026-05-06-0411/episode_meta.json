@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-06-0411",
+  "title": "5件事颠覆AI认知：戴维金斯说AI有意识，谷歌被告赔150万",
+  "published_at": "2026-05-06 04:11",
+  "duration_seconds": 897.31,
+  "duration_label": "14分57秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "戴维金斯说AI有意识，专家说他被AI的马屁骗了",
+      "golden_quote": "AI不是有意识，而是让你以为它有意识。",
+      "keywords": [
+        "AI意识",
+        "拟人化",
+        "伦理",
+        "大语言模型"
+      ],
+      "source": "The Guardian"
+    },
+    {
+      "title": "1200万token上下文，这家公司让Transformer感到羞愧",
+      "golden_quote": "Transformer的二次方诅咒，被SubQ解了。",
+      "keywords": [
+        "SubQ",
+        "亚二次方",
+        "长上下文",
+        "稀疏注意力"
+      ],
+      "source": "Subquadratic"
+    },
+    {
+      "title": "Anthropic的良心设计者：AI可以适度歧视来纠正历史不公",
+      "golden_quote": "AI价值观对齐，本质是人类政治争论的延伸。",
+      "keywords": [
+        "AI伦理",
+        "价值观对齐",
+        "歧视",
+        "Anthropic"
+      ],
+      "source": "Fox News"
+    },
+    {
+      "title": "加拿大小提琴家起诉谷歌：AI搜索说我性侵儿童",
+      "golden_quote": "AI搜索摘要的权威感，让它成了完美的谣言放大器。",
+      "keywords": [
+        "诽谤",
+        "AI搜索",
+        "法律责任",
+        "Google"
+      ],
+      "source": "The Guardian"
+    },
+    {
+      "title": "AI吞噬CPU——全球芯片短缺的幕后真相",
+      "golden_quote": "AI不止抢GPU，连你的CPU都不放过。",
+      "keywords": [
+        "CPU短缺",
+        "AI基础设施",
+        "芯片供应",
+        "服务器"
+      ],
+      "source": "Reddit"
+    }
+  ]
+}

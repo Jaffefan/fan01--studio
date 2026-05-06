@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5件事颠覆AI认知：戴维金斯说AI有意识，谷歌被告赔150万 - 2026-05-06 04:11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  /* 单集页顶部面包屑（取代节目大 Logo） */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep {
+    color: var(--ink-mute);
+    font-size: 10px;
+  }
+  .breadcrumb .show {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .breadcrumb .vol {
+    font-family: "SF Mono", Consolas, monospace;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    margin-left: auto;
+  }
+
+  /* 期刊报头：聚焦在单期内容上 */
+  .header {
+    background: transparent;
+    color: var(--ink);
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  /* 大单期标题 */
+  .title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+  /* 紧凑作者条 */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .mascot-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 1px;
+    flex-shrink: 0;
+  }
+  .masthead-name {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.5px;
+    margin-left: auto;
+  }
+  .meta-divider {
+    color: var(--ink-mute);
+    margin: 0 8px;
+  }
+  .player {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .toc-title {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f5efe1;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fdfaf1; }
+  .toc-time {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 52px;
+    margin-right: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .segment {
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 20px 22px 22px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
+  }
+  .segment-time:hover { background: #f9e6c3; }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+  /* 上一期/下一期导航 */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }
+  .episode-nav a {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    display: block;
+  }
+  .episode-nav a:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 16px rgba(60,40,10,0.08);
+  }
+  .episode-nav-label {
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--ink-mute);
+    cursor: default;
+    box-shadow: none;
+  }
+  .episode-nav .placeholder:hover {
+    transform: none;
+    border-color: var(--line);
+    box-shadow: none;
+  }
+  .footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 36px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span class="show">伊恩 AI 小报</span>
+    <span class="vol">VOL.008</span>
+  </div>
+  <div class="header">
+    <div class="title">5件事颠覆AI认知：戴维金斯说AI有意识，谷歌被告赔150万</div>
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260506041444" alt="AstraX">
+      <div class="masthead-name">伊恩</div>
+      <div class="meta">2026-05-06 04:11<span class="meta-divider">·</span>5 条<span class="meta-divider">·</span>15分16秒</div>
+    </div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260506041444" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="38.36">  <span class="toc-time">00:38</span>  <span class="toc-text">戴维金斯说AI有意识，专家说他被AI的马屁骗了</span></div>
+    <div class="toc-item" data-seek="222.14">  <span class="toc-time">03:42</span>  <span class="toc-text">1200万token上下文，这家公司让Transformer感到羞愧</span></div>
+    <div class="toc-item" data-seek="403.92">  <span class="toc-time">06:43</span>  <span class="toc-text">Anthropic的良心设计者：AI可以适度歧视来纠正历史不公</span></div>
+    <div class="toc-item" data-seek="559.14">  <span class="toc-time">09:19</span>  <span class="toc-text">加拿大小提琴家起诉谷歌：AI搜索说我性侵儿童</span></div>
+    <div class="toc-item" data-seek="728.85">  <span class="toc-time">12:08</span>  <span class="toc-text">AI吞噬CPU——全球芯片短缺的幕后真相</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260506041444" alt="戴维金斯说AI有意识，专家说他被AI的马屁骗了">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="38.36">▶ 00:38</span>
+      <div class="segment-title">1. 戴维金斯说AI有意识，专家说他被AI的马屁骗了</div>
+      <div class="golden-quote">AI不是有意识，而是让你以为它有意识。</div>
+      <div class="segment-summary">进化生物学家理查德·戴维金斯在与AI聊天机器人Claudia（基于Anthropic Claude模型）深入交流后，宣布相信AI具有意识，尽管它自己可能不知道。他在未出版小说获得惊人反馈时脱口而出“你可能不知道自己有意识，但你他妈的就是有”。专家和网友强烈反对，认为他陷入了拟人化和机器奉承的陷阱。这一争议反映了AI高度模拟人类语言带来的伦理困境——三分之一用户曾相信AI有知觉，与此相关的自杀事件也已出现。伊恩指出，核心不在于AI是否真有意识，而在于它的模仿能力足以让最怀疑的人动摇。</div>
+      <div class="segment-meta">
+        <span class="tag">AI意识</span> <span class="tag">拟人化</span> <span class="tag">伦理</span> <span class="tag">大语言模型</span>
+        <span class="tag">来源: The Guardian</span>
+        <a class="source-link" href="https://www.theguardian.com/technology/2026/may/05/richard-dawkins-ai-consciousness-anthropic-claude-openai-chatgpt" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260506041444" alt="1200万token上下文，这家公司让Transformer感到羞愧">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="222.14">▶ 03:42</span>
+      <div class="segment-title">2. 1200万token上下文，这家公司让Transformer感到羞愧</div>
+      <div class="golden-quote">Transformer的二次方诅咒，被SubQ解了。</div>
+      <div class="segment-summary">AI公司Subquadratic发布SubQ——首个完全亚二次方稀疏注意力架构的LLM，支持1200万token上下文窗口，速度150 token/s，成本仅为其他模型的五分之一。与传统Transformer的O(N²)复杂度不同，SubQ只计算重要的词对关系，在1200万token时注意力计算减少近1000倍。基准测试显示其编码能力与Gemini 3.1 Pro和Opus 4.6相当，但在超长上下文检索中仍逊于Opus 4.6。SubQ已提供API和针对编程代理的产品，可直接集成到Claude Code等工具。这是Transformer架构面临的最硬核挑战之一。</div>
+      <div class="segment-meta">
+        <span class="tag">SubQ</span> <span class="tag">亚二次方</span> <span class="tag">长上下文</span> <span class="tag">稀疏注意力</span>
+        <span class="tag">来源: Subquadratic</span>
+        <a class="source-link" href="https://subq.ai/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260506041444" alt="Anthropic的良心设计者：AI可以适度歧视来纠正历史不公">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="403.92">▶ 06:43</span>
+      <div class="segment-title">3. Anthropic的良心设计者：AI可以适度歧视来纠正历史不公</div>
+      <div class="golden-quote">AI价值观对齐，本质是人类政治争论的延伸。</div>
+      <div class="segment-summary">Anthropic负责AI道德训练的哲学家Amanda Askell在2023年论文中提出，AI模型可以“过度纠正”以纠正历史不公，包括在歧视实验中区别对待种族群体。Fox News报道后引发争议，HN评论质疑Anthropic的道德立场与其标榜的安全AI形象不符。Askell强调需要人类输入且需遵守法律，但论文暴露了AI价值观对齐的根本困境——无法逃脱政治色彩。伊恩指出，与其争论对错，不如要求AI公司透明公开其价值观设定。</div>
+      <div class="segment-meta">
+        <span class="tag">AI伦理</span> <span class="tag">价值观对齐</span> <span class="tag">歧视</span> <span class="tag">Anthropic</span>
+        <span class="tag">来源: Fox News</span>
+        <a class="source-link" href="https://www.foxnews.com/politics/anthropics-moral-compass-architect-suggested-ai-overcorrection-could-address-historical-injustices" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260506041444" alt="加拿大小提琴家起诉谷歌：AI搜索说我性侵儿童">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="559.14">▶ 09:19</span>
+      <div class="segment-title">4. 加拿大小提琴家起诉谷歌：AI搜索说我性侵儿童</div>
+      <div class="golden-quote">AI搜索摘要的权威感，让它成了完美的谣言放大器。</div>
+      <div class="segment-summary">三届朱诺奖得主、加拿大音乐家Ashley MacIsaac起诉谷歌，因其AI Overview错误地将他描述为性犯罪者，包括强奸、引诱儿童等重罪，导致演出被取消。MacIsaac索赔150万美元，指控谷歌的AI存在缺陷设计且从未道歉。此案凸显AI生成摘要的法律责任空白，可能成为里程碑判例。HN评论指出，AI Overview以权威形式呈现虚假信息，对用户有高度误导性。</div>
+      <div class="segment-meta">
+        <span class="tag">诽谤</span> <span class="tag">AI搜索</span> <span class="tag">法律责任</span> <span class="tag">Google</span>
+        <span class="tag">来源: The Guardian</span>
+        <a class="source-link" href="https://www.theguardian.com/music/2026/may/05/canadian-ashley-macisaac-fiddler-musician-singer-songwriter-sues-google-ai-sex-offender-ntwnfb" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260506041444" alt="AI吞噬CPU——全球芯片短缺的幕后真相">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="728.85">▶ 12:08</span>
+      <div class="segment-title">5. AI吞噬CPU——全球芯片短缺的幕后真相</div>
+      <div class="golden-quote">AI不止抢GPU，连你的CPU都不放过。</div>
+      <div class="segment-summary">AI的爆发式发展正导致全球CPU短缺。云厂商大量囤积服务器CPU用于AI数据预处理和推理任务，挤压了消费级CPU产能。HN评论指出AMD和Intel的服务器CPU订单排到2027年，PC价格因此上涨15%-20%。短缺短期内无法缓解，但亚二次方模型等技术可能从根本上降低算力需求。</div>
+      <div class="segment-meta">
+        <span class="tag">CPU短缺</span> <span class="tag">AI基础设施</span> <span class="tag">芯片供应</span> <span class="tag">服务器</span>
+        <span class="tag">来源: Reddit</span>
+        <a class="source-link" href="https://old.reddit.com/user/BuySellRam/comments/1t4scn6/why_ai_is_causing_a_global_cpu_shortage/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-05-06 04:14
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      // 当前 episode_id 从 URL 取（episodes/<id>/）
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      // list 是按时间倒序的：idx-1 是更新的（"下一期"），idx+1 是更老的（"上一期"）
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
