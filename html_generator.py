@@ -45,24 +45,64 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     margin: 0 auto;
     padding: 24px 20px 80px;
   }}
-  /* 期刊头：杂志专栏感 */
+  /* 顶部返回按钮 */
+  .back-link {{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 12.5px;
+    margin-bottom: 16px;
+    transition: color 0.15s;
+    letter-spacing: 0.5px;
+  }}
+  .back-link:hover {{ color: var(--accent); }}
+  .back-link::before {{
+    content: '←';
+    font-size: 14px;
+  }}
+
+  /* 期刊报头：杂志风 */
   .header {{
     background: transparent;
     color: var(--ink);
-    padding: 32px 4px 28px;
+    padding: 0 0 28px;
     margin-bottom: 28px;
-    border-top: 2px solid var(--ink);
     border-bottom: 1px solid var(--line);
   }}
+  /* 节目名（大 LOGO） */
+  .show-logo {{
+    font-family: var(--serif);
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 18px 0 16px;
+    border-top: 3px double var(--ink);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 22px;
+    position: relative;
+  }}
+  .show-logo::before, .show-logo::after {{
+    content: '✦';
+    color: var(--accent);
+    font-size: 14px;
+    margin: 0 14px;
+    vertical-align: middle;
+    opacity: 0.7;
+  }}
+  /* 作者署名行 */
   .masthead {{
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }}
   .mascot-avatar {{
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background: var(--bg-card);
     border: 1px solid var(--line);
@@ -70,6 +110,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     object-position: center top;
     padding: 2px;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(60,40,10,0.06);
   }}
   .masthead-meta {{
     flex: 1;
@@ -77,25 +118,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   }}
   .masthead-by {{
     font-family: var(--serif);
-    font-size: 13px;
+    font-size: 14.5px;
     color: var(--ink);
+    font-weight: 500;
+  }}
+  .masthead-by-label {{
+    color: var(--ink-mute);
+    font-weight: 400;
+    margin-right: 4px;
+    font-size: 12px;
     letter-spacing: 1px;
   }}
-  .masthead-channel {{
-    font-family: var(--serif);
+  .masthead-issue {{
+    font-family: "SF Mono", Consolas, monospace;
     font-size: 11.5px;
     color: var(--ink-mute);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 2px;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
   }}
+  /* 期标题 */
   .title {{
     font-family: var(--serif);
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--ink);
-    line-height: 1.5;
-    margin-bottom: 14px;
+    line-height: 1.45;
+    margin-bottom: 12px;
     letter-spacing: 0.5px;
   }}
   .meta {{
@@ -246,27 +294,81 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     margin-left: auto;
   }}
   .source-link:hover {{ text-decoration: underline; }}
+  /* 上一期/下一期导航 */
+  .episode-nav {{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }}
+  .episode-nav a {{
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    display: block;
+  }}
+  .episode-nav a:hover {{
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 16px rgba(60,40,10,0.08);
+  }}
+  .episode-nav-label {{
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }}
+  .episode-nav-title {{
+    font-family: var(--serif);
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }}
+  .episode-nav .next {{ text-align: right; }}
+  .episode-nav .placeholder {{
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--ink-mute);
+    cursor: default;
+    box-shadow: none;
+  }}
+  .episode-nav .placeholder:hover {{
+    transform: none;
+    border-color: var(--line);
+    box-shadow: none;
+  }}
   .footer {{
     text-align: center;
     color: var(--ink-mute);
     font-size: 11.5px;
-    margin-top: 50px;
+    margin-top: 36px;
     letter-spacing: 0.5px;
   }}
 </style>
 </head>
 <body>
 <div class="container">
+  <a href="../../index.html" class="back-link">全部期刊</a>
   <div class="header">
+    <div class="show-logo">伊恩 AI 小报</div>
     <div class="masthead">
       <img class="mascot-avatar" src="mascot.png?v={cache_bust}" alt="AstraX">
       <div class="masthead-meta">
-        <div class="masthead-by">主笔 · 伊恩</div>
-        <div class="masthead-channel">AstraX · AI 雷达</div>
+        <div class="masthead-by"><span class="masthead-by-label">主笔</span>伊恩</div>
+        <div class="masthead-issue">VOL. {issue_no} · {date_str}</div>
       </div>
     </div>
     <div class="title">{title}</div>
-    <div class="meta">{date_str} · 共 {segment_count} 条 · 时长约 {duration_label}</div>
+    <div class="meta">共 {segment_count} 条 · 时长约 {duration_label}</div>
   </div>
 
   <div class="player">
@@ -283,6 +385,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   {segments_html}
 
+  <div class="episode-nav" id="episode-nav"></div>
+
   <div class="footer">
     Powered by Claude Code · {generated_at}
   </div>
@@ -298,6 +402,42 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       window.scrollTo({{ top: 0, behavior: 'smooth' }});
     }});
   }});
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {{
+      // 当前 episode_id 从 URL 取（episodes/<id>/）
+      const m = window.location.pathname.match(/episodes\\/([^\\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      // list 是按时间倒序的：idx-1 是更新的（"下一期"），idx+1 是更老的（"上一期"）
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${{older.episode_id}}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${{older.title}}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${{newer.episode_id}}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${{newer.title}}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    }})
+    .catch(() => {{}});
 </script>
 </body>
 </html>"""
@@ -315,6 +455,17 @@ def generate_html(
 
     # 缓存破坏戳：每次生成用一个新的版本号，强制浏览器重新加载资源
     cache_bust = datetime.now().strftime("%Y%m%d%H%M%S")
+
+    # 计算"第几期"：扫描 episodes/ 已有目录数 + 1（本期还没加入）
+    episodes_root = os.path.join(".", "episodes")
+    existing_count = 0
+    if os.path.isdir(episodes_root):
+        existing_count = sum(
+            1 for name in os.listdir(episodes_root)
+            if os.path.isdir(os.path.join(episodes_root, name))
+            and name != date_str  # 重复发同一期不重复计数
+        )
+    issue_no = existing_count + 1
 
     page_dir = os.path.join(output_dir, f"site_{date_str}")
     os.makedirs(page_dir, exist_ok=True)
@@ -414,6 +565,7 @@ def generate_html(
     html = HTML_TEMPLATE.format(
         title=_escape(script.get("title", "每日AI资讯")),
         date_str=display_date,
+        issue_no=f"{issue_no:03d}",  # 三位数补零，如 001 / 042
         segment_count=len(script.get("segments", [])),
         duration_label=duration_label,
         toc_items="\n    ".join(toc_items),

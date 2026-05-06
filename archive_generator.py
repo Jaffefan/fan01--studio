@@ -15,7 +15,7 @@ ARCHIVE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstraX · AI 雷达 | 主播伊恩</title>
+<title>伊恩 AI 小报 | 主播伊恩</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -81,19 +81,36 @@ ARCHIVE_TEMPLATE = """<!DOCTYPE html>
   }}
   .logo {{
     font-family: var(--serif);
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     color: var(--ink);
+    letter-spacing: 5px;
+    margin-bottom: 6px;
+    position: relative;
+    display: inline-block;
+  }}
+  .logo::before, .logo::after {{
+    content: '✦';
+    color: var(--accent);
+    font-size: 14px;
+    margin: 0 16px;
+    vertical-align: 8px;
+    opacity: 0.7;
+  }}
+  .author-line {{
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
   }}
   .tagline {{
     font-family: var(--serif);
-    font-size: 14.5px;
+    font-size: 14px;
     color: var(--ink-soft);
     margin-bottom: 22px;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
+    line-height: 1.85;
+    font-style: italic;
   }}
   .stats {{
     display: inline-block;
@@ -194,8 +211,9 @@ ARCHIVE_TEMPLATE = """<!DOCTYPE html>
   <div class="hero">
     <img class="hero-mascot" src="mascot.png" alt="AstraX">
     <div class="hero-text">
-      <div class="logo">AstraX · AI 雷达</div>
-      <div class="tagline">主播伊恩 · 每日 10 分钟<br>把全网最炸的 AI 大事讲给你听</div>
+      <div class="logo">伊恩 AI 小报</div>
+      <div class="author-line">主笔 · 伊恩 / 形象 · AstraX</div>
+      <div class="tagline">每日一份带音频的 AI 资讯简报<br>把全网最值得关注的大事讲给你听</div>
       <span class="stats">已发布 {episode_count} 期</span>
     </div>
   </div>
@@ -237,6 +255,18 @@ def build_archive(repo_dir: str) -> str:
                 episodes.append(json.load(f))
         except Exception:
             continue
+
+    # 写一份 episodes-list.json 给 episode 页面 JS 用（实现上一期/下一期导航）
+    nav_list = [
+        {
+            "episode_id": ep["episode_id"],
+            "title": ep.get("title", ""),
+            "published_at": ep.get("published_at", ""),
+        }
+        for ep in episodes
+    ]
+    with open(os.path.join(repo_dir, "episodes-list.json"), "w", encoding="utf-8") as f:
+        json.dump(nav_list, f, ensure_ascii=False, indent=2)
 
     # 渲染卡片
     if not episodes:

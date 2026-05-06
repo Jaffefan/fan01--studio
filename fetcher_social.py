@@ -140,6 +140,9 @@ def _parse_report(data: dict) -> list[dict]:
                 image_url = val
                 break
 
+        # 抽取热门评论（Reddit/HN 在 metadata 中可能含 comments / top_comments）
+        top_comments = _extract_top_comments(meta)
+
         articles.append({
             "title": title,
             "summary": snippet[:500],
@@ -151,9 +154,36 @@ def _parse_report(data: dict) -> list[dict]:
             "engagement": engagement,
             "score": item.get("local_rank_score") or 0,
             "image_url": image_url,
+            "top_comments": top_comments,
         })
 
     return articles
+
+
+def _extract_top_comments(meta: dict) -> list[str]:
+    """从 last30days metadata 抽取最多 5 条高赞评论文本"""
+    comments_raw = (
+        meta.get("comments")
+        or meta.get("top_comments")
+        or meta.get("replies")
+        or []
+    )
+    if not isinstance(comments_raw, list):
+        return []
+    out = []
+    for c in comments_raw[:8]:
+        if isinstance(c, str):
+            text = c
+        elif isinstance(c, dict):
+            text = c.get("text") or c.get("body") or c.get("content") or ""
+        else:
+            text = ""
+        text = (text or "").strip()
+        if text and len(text) > 10:
+            out.append(text[:300])
+        if len(out) >= 5:
+            break
+    return out
 
 
 def _source_label(source: str) -> str:

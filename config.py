@@ -37,8 +37,8 @@ MAX_ARTICLES_PER_FEED = 10
 # 最终筛选出的资讯条数（只取当天 Top5）
 TOP_NEWS_COUNT = 5
 
-# 口播视频目标时长（秒），10 分钟
-TARGET_DURATION_SECONDS = 600
+# 口播视频目标时长（秒）：15 分钟（每条资讯 2.5-3 分钟深度讲解）
+TARGET_DURATION_SECONDS = 900
 
 # 输出目录
 OUTPUT_DIR = "output"
