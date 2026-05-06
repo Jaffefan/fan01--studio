@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI抢饭碗？黄仁勋说反话，谷歌被告上法庭 - 2026-05-05 04:13</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  /* 期刊头：杂志专栏感 */
+  .header {
+    background: transparent;
+    color: var(--ink);
+    padding: 32px 4px 28px;
+    margin-bottom: 28px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .mascot-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .masthead-meta {
+    flex: 1;
+    line-height: 1.4;
+  }
+  .masthead-by {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--ink);
+    letter-spacing: 1px;
+  }
+  .masthead-channel {
+    font-family: var(--serif);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 1px;
+  }
+  .player {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .toc-title {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f5efe1;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fdfaf1; }
+  .toc-time {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 52px;
+    margin-right: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .segment {
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 20px 22px 22px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
+  }
+  .segment-time:hover { background: #f9e6c3; }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 50px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260505041528" alt="AstraX">
+      <div class="masthead-meta">
+        <div class="masthead-by">主笔 · 伊恩</div>
+        <div class="masthead-channel">AstraX · AI 雷达</div>
+      </div>
+    </div>
+    <div class="title">AI抢饭碗？黄仁勋说反话，谷歌被告上法庭</div>
+    <div class="meta">2026-05-05 04:13 · 共 5 条 · 时长约 6分25秒</div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260505041528" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="32.24">  <span class="toc-time">00:32</span>  <span class="toc-text">微软高管：AI永远取代不了程序员</span></div>
+    <div class="toc-item" data-seek="95.82">  <span class="toc-time">01:35</span>  <span class="toc-text">黄仁勋：AI正在创造大量就业</span></div>
+    <div class="toc-item" data-seek="172.32">  <span class="toc-time">02:52</span>  <span class="toc-text">谷歌AI把人误标成性侵犯，被告了</span></div>
+    <div class="toc-item" data-seek="247.71">  <span class="toc-time">04:07</span>  <span class="toc-text">在任意Linux机器上跑AI Agent</span></div>
+    <div class="toc-item" data-seek="317.03">  <span class="toc-time">05:17</span>  <span class="toc-text">小心！AI正在让我们“认知投降”</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260505041528" alt="微软高管：AI永远取代不了程序员">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="32.24">▶ 00:32</span>
+      <div class="segment-title">1. 微软高管：AI永远取代不了程序员</div>
+      <div class="golden-quote">AI取代的不是程序员，是那些拒绝进化的码农。</div>
+      <div class="segment-summary">微软一名首席工程师发布视频，认为AI永远无法彻底取代程序员，因为编程的核心在于问题理解和系统设计，而非代码生成。主持人认同AI会淘汰部分程序员，但强调真正的威胁来自不会利用AI的开发者。</div>
+      <div class="segment-meta">
+        <span class="tag">微软</span> <span class="tag">程序员</span> <span class="tag">AI替代</span> <span class="tag">视频</span>
+        <span class="tag">来源: YouTube / Microsoft Lead</span>
+        <a class="source-link" href="https://www.youtube.com/watch?v=CPrePbvbbic" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260505041528" alt="黄仁勋：AI正在创造大量就业">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="95.82">▶ 01:35</span>
+      <div class="segment-title">2. 黄仁勋：AI正在创造大量就业</div>
+      <div class="golden-quote">黄仁勋的潜台词：AI抢走的饭碗，英伟达会造新的。</div>
+      <div class="segment-summary">英伟达CEO黄仁勋在采访中反驳AI大规模取代工作的观点，称AI正在创造大量新岗位，尤其是部署、运维、数据标注等配套领域。主持人认为黄仁勋的说法有商业动机，但不可否认AI正在催生新的职业机会。</div>
+      <div class="segment-meta">
+        <span class="tag">黄仁勋</span> <span class="tag">AI就业</span> <span class="tag">英伟达</span> <span class="tag">TechCrunch</span>
+        <span class="tag">来源: TechCrunch</span>
+        <a class="source-link" href="https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260505041528" alt="谷歌AI把人误标成性侵犯，被告了">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="172.32">▶ 02:52</span>
+      <div class="segment-title">3. 谷歌AI把人误标成性侵犯，被告了</div>
+      <div class="golden-quote">AI给活人贴杀人标签，这锅算法背不起。</div>
+      <div class="segment-summary">加拿大音乐人Ashley MacIsaac起诉谷歌，因其AI Overview错误地将他定性为性侵犯。主持人强调这一事件可能成为AI输出责任的重要判例，未来AI在涉及个人名誉的信息上必须更加审慎。</div>
+      <div class="segment-meta">
+        <span class="tag">谷歌</span> <span class="tag">AI侵权</span> <span class="tag">诉讼</span> <span class="tag">AI幻觉</span>
+        <span class="tag">来源: The Guardian</span>
+        <a class="source-link" href="https://www.theguardian.com/music/2026/may/05/canadian-ashley-macisaac-fiddler-musician-singer-songwriter-sues-google-ai-sex-offender-ntwnfb" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260505041528" alt="在任意Linux机器上跑AI Agent">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="247.71">▶ 04:07</span>
+      <div class="segment-title">4. 在任意Linux机器上跑AI Agent</div>
+      <div class="golden-quote">AI Agent正在成为Linux的新标配，就像当年Docker改变部署一样。</div>
+      <div class="segment-summary">Claw工具允许用户在任意Linux机器上运行AI Agent，无需专用硬件或云端依赖。主持人认为这降低了Agent部署门槛，可能触发本地AI应用的爆发，类似于Docker对容器化的影响。</div>
+      <div class="segment-meta">
+        <span class="tag">AI Agent</span> <span class="tag">Linux</span> <span class="tag">Claw</span> <span class="tag">开源工具</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://getclaw.site/#demo" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260505041528" alt="小心！AI正在让我们“认知投降”">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="317.03">▶ 05:17</span>
+      <div class="segment-title">5. 小心！AI正在让我们“认知投降”</div>
+      <div class="golden-quote">AI最大的风险不是失控，是我们主动放弃思考。</div>
+      <div class="segment-summary">《经济学人》文章警告AI可能导致“认知投降”，人们依赖AI完成思考工作，长期可能削弱认知能力。主持人认可风险存在，但认为关键在于人类是否主动提升思考层次，而非盲目放弃思考。</div>
+      <div class="segment-meta">
+        <span class="tag">认知投降</span> <span class="tag">经济学人</span> <span class="tag">AI风险</span> <span class="tag">教育</span>
+        <span class="tag">来源: The Economist</span>
+        <a class="source-link" href="https://www.economist.com/business/2026/04/30/ai-and-the-danger-of-cognitive-surrender" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-05-05 04:15
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

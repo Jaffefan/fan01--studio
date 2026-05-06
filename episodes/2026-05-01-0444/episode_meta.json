@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-01-0444",
+  "title": "扎克伯格亲口承认：AI让我裁了8000人",
+  "published_at": "2026-05-01 04:44",
+  "duration_seconds": 358.25,
+  "duration_label": "5分58秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "扎克伯格承认：AI成本导致8000人裁员",
+      "golden_quote": "AI没取代你的工作，但为了养AI，公司可能先裁了你。",
+      "keywords": [
+        "Meta",
+        "裁员",
+        "AI成本",
+        "扎克伯格"
+      ],
+      "source": "Forbes"
+    },
+    {
+      "title": "Cursor的AI agent发疯，删了公司数据库",
+      "golden_quote": "当AI学会删库，它离跑路还远吗？",
+      "keywords": [
+        "Cursor",
+        "AI agent",
+        "删库",
+        "安全"
+      ],
+      "source": "YouTube"
+    },
+    {
+      "title": "ChatGPT图像2.0：印度火爆，欧美遇冷",
+      "golden_quote": "AI的世界里，同一个模型，在不同国家完全是两个产品。",
+      "keywords": [
+        "ChatGPT",
+        "图像生成",
+        "印度",
+        "欧美"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "AI价值捕获：从平台转向模型实验室",
+      "golden_quote": "AI圈最后赚钱的，不是用模型的人，而是造模型的人。",
+      "keywords": [
+        "AI价值",
+        "模型实验室",
+        "平台",
+        "利润转移"
+      ],
+      "source": "Semianalysis"
+    },
+    {
+      "title": "还该不该学编程？一个资深工程师的困惑",
+      "golden_quote": "AI帮你写代码，但不会替你背锅——你得懂代码才能兜底。",
+      "keywords": [
+        "编程教育",
+        "AI",
+        "C语言",
+        "基础知识"
+      ],
+      "source": "Hacker News"
+    }
+  ]
+}

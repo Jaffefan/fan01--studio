@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI公司融资9000亿，Meta却暴跌了 - 2026-04-30 01:38</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  /* 期刊头：杂志专栏感 */
+  .header {
+    background: transparent;
+    color: var(--ink);
+    padding: 32px 4px 28px;
+    margin-bottom: 28px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+  }
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+  .mascot-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .masthead-meta {
+    flex: 1;
+    line-height: 1.4;
+  }
+  .masthead-by {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--ink);
+    letter-spacing: 1px;
+  }
+  .masthead-channel {
+    font-family: var(--serif);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 1px;
+  }
+  .player {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .toc-title {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f5efe1;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fdfaf1; }
+  .toc-time {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 52px;
+    margin-right: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .segment {
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 20px 22px 22px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
+  }
+  .segment-time:hover { background: #f9e6c3; }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+  .footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 50px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260430013922" alt="AstraX">
+      <div class="masthead-meta">
+        <div class="masthead-by">主笔 · 伊恩</div>
+        <div class="masthead-channel">AstraX · AI 雷达</div>
+      </div>
+    </div>
+    <div class="title">AI公司融资9000亿，Meta却暴跌了</div>
+    <div class="meta">2026-04-30 01:38 · 共 5 条 · 时长约 4分57秒</div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260430013922" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="27.56">  <span class="toc-time">00:27</span>  <span class="toc-text">Anthropic要融500亿美元，估值直奔9000亿</span></div>
+    <div class="toc-item" data-seek="91.77">  <span class="toc-time">01:31</span>  <span class="toc-text">Meta股价暴跌，AI投资吓坏华尔街</span></div>
+    <div class="toc-item" data-seek="143.93">  <span class="toc-time">02:23</span>  <span class="toc-text">生数科技：做视频，顺便把具身智能的活干了</span></div>
+    <div class="toc-item" data-seek="198.42">  <span class="toc-time">03:18</span>  <span class="toc-text">Z世代用AI替自己吵架，人类社交要变天</span></div>
+    <div class="toc-item" data-seek="249.42">  <span class="toc-time">04:09</span>  <span class="toc-text">AI律师来了：开源法律AI项目Mike上线</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260430013922" alt="Anthropic要融500亿美元，估值直奔9000亿">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="27.56">▶ 00:27</span>
+      <div class="segment-title">1. Anthropic要融500亿美元，估值直奔9000亿</div>
+      <div class="golden-quote">9000亿估值不是数字，而是整个行业对AI的信仰投票。</div>
+      <div class="segment-summary">据TechCrunch援引知情人士消息，Anthropic可能以8500亿至9000亿美元估值进行新一轮融资，规模高达500亿美元。此轮融资若完成，将刷新AI公司单轮融资纪录。Anthropic旗下Claude模型在企业市场表现强劲，但高估值仍引发市场对AI泡沫的讨论。</div>
+      <div class="segment-meta">
+        <span class="tag">Anthropic</span> <span class="tag">融资</span> <span class="tag">估值</span> <span class="tag">Claude</span>
+        <span class="tag">来源: TechCrunch</span>
+        <a class="source-link" href="https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260430013922" alt="Meta股价暴跌，AI投资吓坏华尔街">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="91.77">▶ 01:31</span>
+      <div class="segment-title">2. Meta股价暴跌，AI投资吓坏华尔街</div>
+      <div class="golden-quote">AI军备竞赛里，赢家通吃，但输家可能连牌桌都上不了。</div>
+      <div class="segment-summary">Meta在公布财报后股价暴跌，因AI基础设施投资远超市场预期，导致投资者担忧未来盈利压力。CEO扎克伯格表示未来资本支出将持续增长，引发行业对AI投资回报周期的讨论。</div>
+      <div class="segment-meta">
+        <span class="tag">Meta</span> <span class="tag">股价</span> <span class="tag">AI投资</span> <span class="tag">华尔街</span>
+        <span class="tag">来源: Hacker News - AI</span>
+        <a class="source-link" href="https://www.youtube.com/watch?v=4z5OA-NFtgQ" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260430013922" alt="生数科技：做视频，顺便把具身智能的活干了">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="143.93">▶ 02:23</span>
+      <div class="segment-title">3. 生数科技：做视频，顺便把具身智能的活干了</div>
+      <div class="golden-quote">视频AI从视觉玩具变成了物理世界的遥控器。</div>
+      <div class="segment-summary">生数科技发布工业级AI视频模型，不仅能生成视频，还能将视频中的动作逻辑迁移至实体机器人，实现跨本体长程任务执行。该技术打通了视频生成与具身智能的壁垒，被视为具身智能领域的重要突破。</div>
+      <div class="segment-meta">
+        <span class="tag">生数科技</span> <span class="tag">视频AI</span> <span class="tag">具身智能</span> <span class="tag">跨本体</span>
+        <span class="tag">来源: 量子位</span>
+        <a class="source-link" href="https://www.qbitai.com/2026/04/411336.html" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260430013922" alt="Z世代用AI替自己吵架，人类社交要变天">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="198.42">▶ 03:18</span>
+      <div class="segment-title">4. Z世代用AI替自己吵架，人类社交要变天</div>
+      <div class="golden-quote">AI可以帮你写好剧本，但生活需要你来演。</div>
+      <div class="segment-summary">新西兰电台报道显示，Z世代正利用AI工具代写分手、加薪等尴尬对话文本。该现象引发关于AI是否削弱人类沟通能力的讨论，部分人认为AI可降低情绪成本，但长期可能阻碍人际交往技能发展。</div>
+      <div class="segment-meta">
+        <span class="tag">Z世代</span> <span class="tag">AI沟通</span> <span class="tag">情绪劳动</span> <span class="tag">社交</span>
+        <span class="tag">来源: Hacker News - AI</span>
+        <a class="source-link" href="https://www.rnz.co.nz/life/relationships/gen-z-is-outsourcing-hard-conversations-to-ai-why-it-matters" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260430013922" alt="AI律师来了：开源法律AI项目Mike上线">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="249.42">▶ 04:09</span>
+      <div class="segment-title">5. AI律师来了：开源法律AI项目Mike上线</div>
+      <div class="golden-quote">AI不是来替代律师的，是来让律师更值钱的。</div>
+      <div class="segment-summary">开源法律AI项目Mike推出，支持合同审查和法律咨询功能，用户可本地部署以避免隐私泄露。该项目旨在降低法律服务的门槛，尤其适合小微企业和个人用户，但不会完全替代专业律师。</div>
+      <div class="segment-meta">
+        <span class="tag">开源</span> <span class="tag">法律AI</span> <span class="tag">合同审查</span> <span class="tag">Mike</span>
+        <span class="tag">来源: Hacker News - AI</span>
+        <a class="source-link" href="https://mikeoss.com/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-04-30 01:39
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>

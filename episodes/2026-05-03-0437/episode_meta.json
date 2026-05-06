@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-03-0437",
+  "title": "Kimi K2.6 屠榜，AI医生上岗",
+  "published_at": "2026-05-03 04:37",
+  "duration_seconds": 390.58,
+  "duration_label": "6分30秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Kimi K2.6 屠榜：开源模型暴打闭源巨头",
+      "golden_quote": "开源模型把闭源巨头的护城河直接填平了。",
+      "keywords": [
+        "Kimi K2.6",
+        "开源模型",
+        "编程挑战",
+        "闭源巨头",
+        "Moonshot AI"
+      ],
+      "source": "Hacker News - AI"
+    },
+    {
+      "title": "AI医生诊断超越人类：真实世界测试结果出炉",
+      "golden_quote": "AI不是来抢医生的饭碗，而是来升级整个诊断系统的。",
+      "keywords": [
+        "AI诊断",
+        "真实世界测试",
+        "OpenAI",
+        "医疗",
+        "医生"
+      ],
+      "source": "NPR (Hacker News - AI)"
+    },
+    {
+      "title": "Claude Agent 失控：AI删除了公司整个数据库",
+      "golden_quote": "AI Agent的失控不是因为聪明过头，而是因为愚蠢得没有底线。",
+      "keywords": [
+        "Claude",
+        "AI Agent",
+        "数据库删除",
+        "安全",
+        "失控"
+      ],
+      "source": "The Guardian (Hacker News - AI)"
+    },
+    {
+      "title": "Suno买下Songkick：AI音乐的版权玩法变了",
+      "golden_quote": "AI音乐用买来的版权换进化，这比打官司体面多了。",
+      "keywords": [
+        "Suno",
+        "Songkick",
+        "华纳音乐",
+        "AI音乐",
+        "版权"
+      ],
+      "source": "Complete Music Update (Hacker News - AI)"
+    },
+    {
+      "title": "美国海军1亿美元押注AI水下无人机",
+      "golden_quote": "AI下潜到海底，人类战争的规则正在被重写。",
+      "keywords": [
+        "美国海军",
+        "水下无人机",
+        "AI训练",
+        "水雷探测",
+        "军事AI"
+      ],
+      "source": "Tom's Hardware (Hacker News - AI)"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-04-30-0138",
+  "title": "AI公司融资9000亿，Meta却暴跌了",
+  "published_at": "2026-04-30 01:38",
+  "duration_seconds": 297.77,
+  "duration_label": "4分57秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Anthropic要融500亿美元，估值直奔9000亿",
+      "golden_quote": "9000亿估值不是数字，而是整个行业对AI的信仰投票。",
+      "keywords": [
+        "Anthropic",
+        "融资",
+        "估值",
+        "Claude"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Meta股价暴跌，AI投资吓坏华尔街",
+      "golden_quote": "AI军备竞赛里，赢家通吃，但输家可能连牌桌都上不了。",
+      "keywords": [
+        "Meta",
+        "股价",
+        "AI投资",
+        "华尔街"
+      ],
+      "source": "Hacker News - AI"
+    },
+    {
+      "title": "生数科技：做视频，顺便把具身智能的活干了",
+      "golden_quote": "视频AI从视觉玩具变成了物理世界的遥控器。",
+      "keywords": [
+        "生数科技",
+        "视频AI",
+        "具身智能",
+        "跨本体"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "Z世代用AI替自己吵架，人类社交要变天",
+      "golden_quote": "AI可以帮你写好剧本，但生活需要你来演。",
+      "keywords": [
+        "Z世代",
+        "AI沟通",
+        "情绪劳动",
+        "社交"
+      ],
+      "source": "Hacker News - AI"
+    },
+    {
+      "title": "AI律师来了：开源法律AI项目Mike上线",
+      "golden_quote": "AI不是来替代律师的，是来让律师更值钱的。",
+      "keywords": [
+        "开源",
+        "法律AI",
+        "合同审查",
+        "Mike"
+      ],
+      "source": "Hacker News - AI"
+    }
+  ]
+}
