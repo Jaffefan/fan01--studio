@@ -1,4 +1,10 @@
-"""文章正文抓取模块：尝试拉取原文全文，配合社交平台评论增强 DeepSeek 输入"""
+"""文章正文抓取模块：多重兜底确保拿到原文
+
+策略优先级：
+1. jina.ai Reader（免费、无需 key、专为 LLM 设计、抗反爬）
+2. trafilatura（本地解析，离线可用）
+3. 直接 GET + 简单正则（最后兜底）
+"""
 
 import sys
 import re
@@ -15,7 +21,7 @@ USER_AGENT = (
 )
 HEADERS = {"User-Agent": USER_AGENT, "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"}
 
-MAX_BODY_CHARS = 4000  # 单篇抓取的正文上限
+MAX_BODY_CHARS = 5000  # 单篇抓取的正文上限
 
 
 def enrich_articles(articles: list[dict]) -> list[dict]:
@@ -25,7 +31,14 @@ def enrich_articles(articles: list[dict]) -> list[dict]:
         link = art.get("link")
         if not link:
             continue
-        body = _fetch_full_text(link)
+
+        # 顺序尝试三种方法，先成功的胜出
+        body = (
+            _fetch_via_jina(link)
+            or _fetch_via_trafilatura(link)
+            or _fetch_via_simple_get(link)
+        )
+
         if body and len(body) > len(art.get("summary", "")):
             art["full_body"] = body[:MAX_BODY_CHARS]
             print(f"  ✓ {art['title'][:30]}: {len(body)} 字")
@@ -35,9 +48,33 @@ def enrich_articles(articles: list[dict]) -> list[dict]:
     return articles
 
 
-def _fetch_full_text(url: str) -> str:
-    """尝试用 trafilatura（如有）抓正文，否则降级为 BeautifulSoup-style 正则"""
-    # 优先用 trafilatura（语义抽取最准）
+def _fetch_via_jina(url: str) -> str:
+    """jina.ai Reader：最稳定的方案，专为 LLM 抓取设计"""
+    try:
+        # jina.ai Reader 接口：https://r.jina.ai/<encoded_url>
+        # 直接拼接即可，它会返回干净的 markdown
+        proxy_url = f"https://r.jina.ai/{url}"
+        with httpx.Client(timeout=20, follow_redirects=True) as client:
+            resp = client.get(
+                proxy_url,
+                headers={"Accept": "text/plain", "X-Return-Format": "text"},
+            )
+            if resp.status_code == 200 and len(resp.text) > 200:
+                # jina 返回包含 Title/URL Source/Markdown Content 等头部，提取正文
+                text = resp.text
+                # 去掉常见的元信息头部
+                if "Markdown Content:" in text:
+                    text = text.split("Markdown Content:", 1)[1]
+                elif "\n\n" in text[:500]:
+                    text = text.split("\n\n", 1)[1] if text.startswith("Title:") else text
+                return text.strip()
+    except Exception as e:
+        pass
+    return ""
+
+
+def _fetch_via_trafilatura(url: str) -> str:
+    """trafilatura：离线解析，速度快"""
     try:
         import trafilatura
         downloaded = trafilatura.fetch_url(url, no_ssl=True)
@@ -54,18 +91,19 @@ def _fetch_full_text(url: str) -> str:
         pass
     except Exception:
         pass
+    return ""
 
-    # 降级：直接 GET + 简单提取 <article> 或 <p> 文本
+
+def _fetch_via_simple_get(url: str) -> str:
+    """简单 GET + 正则提取 <article>/<p>"""
     try:
         with httpx.Client(headers=HEADERS, timeout=15, follow_redirects=True) as client:
             resp = client.get(url)
             if resp.status_code != 200:
                 return ""
             html = resp.text
-        # 优先 <article>
         article_match = re.search(r'<article[^>]*>(.*?)</article>', html, re.DOTALL | re.IGNORECASE)
         block = article_match.group(1) if article_match else html
-        # 提取所有 <p>
         paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', block, re.DOTALL | re.IGNORECASE)
         text = "\n\n".join(_strip_html(p) for p in paragraphs)
         return text.strip()
@@ -80,6 +118,10 @@ def _strip_html(html: str) -> str:
 
 
 if __name__ == "__main__":
-    test = [{"title": "test", "link": "https://www.qbitai.com", "summary": "abc"}]
+    test = [
+        {"title": "test1", "link": "https://www.qbitai.com", "summary": "abc"},
+        {"title": "test2", "link": "https://techcrunch.com", "summary": "abc"},
+    ]
     enrich_articles(test)
-    print(test[0].get("full_body", "")[:300])
+    for t in test:
+        print(t["title"], "→", len(t.get("full_body", "")), "chars")

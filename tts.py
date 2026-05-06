@@ -41,28 +41,40 @@ def _resolve_ffmpeg_bin(name: str) -> str:
 def clean_text_for_tts(text: str) -> str:
     """
     清洗文案中不适合 TTS 朗读的内容：
-    - 去除 markdown 加粗/斜体标记（** * __）
-    - 去除 markdown 标题标记（#）
-    - 将【对比分析】【技术科普】等标签转为自然过渡语
-    - 去除多余空行
+    - 去除 markdown 标记
+    - 去除"金句来了"、"总结一下"等元标签短语
+    - 去除【XX分析】等结构标签
     """
-    # 去除 ** 加粗标记
+    # 去除 markdown 加粗/斜体/反引号
     text = re.sub(r'\*{1,3}', '', text)
-    # 去除 __ 下划线强调
     text = re.sub(r'_{1,2}', '', text)
-    # 去除 markdown 标题 #
     text = re.sub(r'^#+\s*', '', text, flags=re.MULTILINE)
-    # 去除反引号
     text = re.sub(r'`+', '', text)
 
-    # 将结构标签转为口播过渡语，让朗读更自然
-    text = text.replace('【对比分析】', '我们来横向对比一下。')
-    text = text.replace('【技术科普】', '简单科普一下背后的技术。')
-    text = text.replace('【颠覆认知】', '这件事真正颠覆的是——')
-    text = text.replace('【实际影响】', '对我们普通人来说，')
+    # 删除元标签提示语（这些是 AI 写脚本时的"小标题"，朗读出来很违和）
+    meta_patterns = [
+        r'金句来了[：:]?\s*——?\s*',
+        r'金句[：:]?\s*——?\s*',
+        r'最后[，,]?\s*金句[：:]?\s*',
+        r'(?:本条|这条)?[一]句话总结[：:]?\s*',
+        r'总结一下[：:]?\s*',
+        r'划重点[：:]?\s*',
+        r'敲黑板[：:]?\s*',
+        r'重点来了[：:]?\s*',
+    ]
+    for pat in meta_patterns:
+        text = re.sub(pat, '', text)
+
+    # 老结构标签转为口播过渡语
+    text = text.replace('【对比分析】', '横向对比一下。')
+    text = text.replace('【技术科普】', '简单解释一下背后的技术。')
+    text = text.replace('【颠覆认知】', '这件事真正打破的是——')
+    text = text.replace('【实际影响】', '对普通人来说，')
+    text = re.sub(r'【[^】]{2,8}】', '', text)  # 兜底删除其他【XX】
 
     # 清理多余空白行
     text = re.sub(r'\n{3,}', '\n\n', text)
+    text = re.sub(r' {2,}', ' ', text)
     text = text.strip()
 
     return text

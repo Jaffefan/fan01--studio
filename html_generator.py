@@ -45,25 +45,39 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     margin: 0 auto;
     padding: 24px 20px 80px;
   }}
-  /* 顶部返回按钮 */
-  .back-link {{
-    display: inline-flex;
+  /* 单集页顶部面包屑（取代节目大 Logo） */
+  .breadcrumb {{
+    display: flex;
     align-items: center;
-    gap: 6px;
-    color: var(--ink-soft);
-    text-decoration: none;
+    gap: 10px;
     font-size: 12.5px;
-    margin-bottom: 16px;
-    transition: color 0.15s;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
     letter-spacing: 0.5px;
   }}
-  .back-link:hover {{ color: var(--accent); }}
-  .back-link::before {{
-    content: '←';
-    font-size: 14px;
+  .breadcrumb a {{
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }}
+  .breadcrumb a:hover {{ color: var(--accent); }}
+  .breadcrumb .sep {{
+    color: var(--ink-mute);
+    font-size: 10px;
+  }}
+  .breadcrumb .show {{
+    color: var(--ink);
+    font-weight: 500;
+  }}
+  .breadcrumb .vol {{
+    font-family: "SF Mono", Consolas, monospace;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    margin-left: auto;
   }}
 
-  /* 期刊报头：杂志风 */
+  /* 期刊报头：聚焦在单期内容上 */
   .header {{
     background: transparent;
     color: var(--ink);
@@ -71,85 +85,49 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     margin-bottom: 28px;
     border-bottom: 1px solid var(--line);
   }}
-  /* 节目名（大 LOGO） */
-  .show-logo {{
+  /* 大单期标题 */
+  .title {{
     font-family: var(--serif);
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--ink);
-    letter-spacing: 4px;
-    text-align: center;
-    padding: 18px 0 16px;
-    border-top: 3px double var(--ink);
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 22px;
-    position: relative;
+    line-height: 1.4;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
   }}
-  .show-logo::before, .show-logo::after {{
-    content: '✦';
-    color: var(--accent);
-    font-size: 14px;
-    margin: 0 14px;
-    vertical-align: middle;
-    opacity: 0.7;
-  }}
-  /* 作者署名行 */
+  /* 紧凑作者条 */
   .masthead {{
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 24px;
+    gap: 12px;
+    margin-bottom: 4px;
   }}
   .mascot-avatar {{
-    width: 56px;
-    height: 56px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: var(--bg-card);
     border: 1px solid var(--line);
     object-fit: cover;
     object-position: center top;
-    padding: 2px;
+    padding: 1px;
     flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(60,40,10,0.06);
   }}
-  .masthead-meta {{
-    flex: 1;
-    line-height: 1.4;
-  }}
-  .masthead-by {{
+  .masthead-name {{
     font-family: var(--serif);
-    font-size: 14.5px;
+    font-size: 14px;
     color: var(--ink);
     font-weight: 500;
-  }}
-  .masthead-by-label {{
-    color: var(--ink-mute);
-    font-weight: 400;
-    margin-right: 4px;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }}
-  .masthead-issue {{
-    font-family: "SF Mono", Consolas, monospace;
-    font-size: 11.5px;
-    color: var(--ink-mute);
-    letter-spacing: 1.5px;
-    margin-top: 4px;
-  }}
-  /* 期标题 */
-  .title {{
-    font-family: var(--serif);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--ink);
-    line-height: 1.45;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
   }}
   .meta {{
     font-size: 12px;
     color: var(--ink-mute);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+  }}
+  .meta-divider {{
+    color: var(--ink-mute);
+    margin: 0 8px;
   }}
   .player {{
     background: var(--bg-card);
@@ -357,18 +335,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </head>
 <body>
 <div class="container">
-  <a href="../../index.html" class="back-link">全部期刊</a>
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span class="show">伊恩 AI 小报</span>
+    <span class="vol">VOL.{issue_no}</span>
+  </div>
   <div class="header">
-    <div class="show-logo">伊恩 AI 小报</div>
+    <div class="title">{title}</div>
     <div class="masthead">
       <img class="mascot-avatar" src="mascot.png?v={cache_bust}" alt="AstraX">
-      <div class="masthead-meta">
-        <div class="masthead-by"><span class="masthead-by-label">主笔</span>伊恩</div>
-        <div class="masthead-issue">VOL. {issue_no} · {date_str}</div>
-      </div>
+      <div class="masthead-name">伊恩</div>
+      <div class="meta">{date_str}<span class="meta-divider">·</span>{segment_count} 条<span class="meta-divider">·</span>{duration_label}</div>
     </div>
-    <div class="title">{title}</div>
-    <div class="meta">共 {segment_count} 条 · 时长约 {duration_label}</div>
   </div>
 
   <div class="player">
@@ -552,8 +531,11 @@ def generate_html(
     </div>
   </div>""")
 
-    total_seconds = chapters[-1]["start_seconds"] if chapters else 0
-    duration_label = f"{int(total_seconds // 60)}分{int(total_seconds % 60)}秒"
+    # 直接 ffprobe 测合并后 mp3 实际时长（最准）
+    total_seconds = _get_audio_duration_safe(audio_full_path)
+    if not total_seconds and chapters:
+        total_seconds = chapters[-1]["start_seconds"]  # 兜底
+    duration_label = f"{int(total_seconds // 60)}分{int(total_seconds % 60):02d}秒"
 
     # 把期号 2026-04-28-1647 格式化为友好显示 "2026-04-28 16:47"
     parts = date_str.split("-")
@@ -591,6 +573,24 @@ def _escape(text: str) -> str:
             .replace(">", "&gt;")
             .replace('"', "&quot;")
     )
+
+
+def _get_audio_duration_safe(filepath: str) -> float:
+    """用 ffprobe 测时长，失败返回 0"""
+    if not filepath or not os.path.exists(filepath):
+        return 0.0
+    try:
+        from tts import _resolve_ffmpeg_bin
+        import subprocess
+        ffprobe = _resolve_ffmpeg_bin("ffprobe")
+        result = subprocess.run(
+            [ffprobe, "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=noprint_wrappers=1:nokey=1", filepath],
+            capture_output=True, text=True,
+        )
+        return float(result.stdout.strip())
+    except Exception:
+        return 0.0
 
 
 if __name__ == "__main__":
