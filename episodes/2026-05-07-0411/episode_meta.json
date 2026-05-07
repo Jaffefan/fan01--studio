@@ -1,0 +1,69 @@
+{
+  "episode_id": "2026-05-07-0411",
+  "title": "OpenAI暗钱买水军抹黑中国AI，马斯克却把22万GPU卖给Claude",
+  "published_at": "2026-05-07 04:11",
+  "duration_seconds": 415.54,
+  "duration_label": "6分55秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "暗钱买水军抹黑中国AI",
+      "golden_quote": "AI冷战，比算力更先开火的是人心。",
+      "keywords": [
+        "AI冷战",
+        "舆论战",
+        "OpenAI",
+        "中国AI",
+        "超级PAC"
+      ],
+      "source": "WIRED"
+    },
+    {
+      "title": "Character.ai面临非法行医指控",
+      "golden_quote": "AI聊天不代表能当医生，法律红线就在那里。",
+      "keywords": [
+        "Character.ai",
+        "非法行医",
+        "AI法律",
+        "宾州诉讼"
+      ],
+      "source": "Law.com"
+    },
+    {
+      "title": "AI裁员或致社保医保破产",
+      "golden_quote": "AI效率红利若只归资本，社保这根弦就会断。",
+      "keywords": [
+        "AI裁员",
+        "社保",
+        "医保",
+        "FICA",
+        "福利危机"
+      ],
+      "source": "Minnesota Reformer"
+    },
+    {
+      "title": "马斯克把22万GPU卖给Claude",
+      "golden_quote": "火星牌算力，租给对手用。",
+      "keywords": [
+        "马斯克",
+        "Anthropic",
+        "Claude",
+        "GPU",
+        "算力合作"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "程序员用AI：既焦虑又依赖",
+      "golden_quote": "AI不是帮你写代码，而是逼你重新定义编程。",
+      "keywords": [
+        "程序员",
+        "AI焦虑",
+        "技能退化",
+        "生产效率"
+      ],
+      "source": "The Software Survey"
+    }
+  ]
+}

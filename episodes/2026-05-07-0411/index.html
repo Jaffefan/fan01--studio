@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenAI暗钱买水军抹黑中国AI，马斯克却把22万GPU卖给Claude - 2026-05-07 04:11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  /* 单集页顶部面包屑（取代节目大 Logo） */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep {
+    color: var(--ink-mute);
+    font-size: 10px;
+  }
+  .breadcrumb .show {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .breadcrumb .vol {
+    font-family: "SF Mono", Consolas, monospace;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    margin-left: auto;
+  }
+
+  /* 期刊报头：聚焦在单期内容上 */
+  .header {
+    background: transparent;
+    color: var(--ink);
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  /* 大单期标题 */
+  .title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+  /* 紧凑作者条 */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .mascot-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 1px;
+    flex-shrink: 0;
+  }
+  .masthead-name {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.5px;
+    margin-left: auto;
+  }
+  .meta-divider {
+    color: var(--ink-mute);
+    margin: 0 8px;
+  }
+  .player {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .toc-title {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f5efe1;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fdfaf1; }
+  .toc-time {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 52px;
+    margin-right: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .segment {
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 20px 22px 22px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
+  }
+  .segment-time:hover { background: #f9e6c3; }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+  /* 上一期/下一期导航 */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }
+  .episode-nav a {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    display: block;
+  }
+  .episode-nav a:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 16px rgba(60,40,10,0.08);
+  }
+  .episode-nav-label {
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--ink-mute);
+    cursor: default;
+    box-shadow: none;
+  }
+  .episode-nav .placeholder:hover {
+    transform: none;
+    border-color: var(--line);
+    box-shadow: none;
+  }
+  .footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 36px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span class="show">伊恩 AI 小报</span>
+    <span class="vol">VOL.010</span>
+  </div>
+  <div class="header">
+    <div class="title">OpenAI暗钱买水军抹黑中国AI，马斯克却把22万GPU卖给Claude</div>
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260507041325" alt="AstraX">
+      <div class="masthead-name">伊恩</div>
+      <div class="meta">2026-05-07 04:11<span class="meta-divider">·</span>5 条<span class="meta-divider">·</span>7分17秒</div>
+    </div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260507041325" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="21.37">  <span class="toc-time">00:21</span>  <span class="toc-text">暗钱买水军抹黑中国AI</span></div>
+    <div class="toc-item" data-seek="111.33">  <span class="toc-time">01:51</span>  <span class="toc-text">Character.ai面临非法行医指控</span></div>
+    <div class="toc-item" data-seek="180.55">  <span class="toc-time">03:00</span>  <span class="toc-text">AI裁员或致社保医保破产</span></div>
+    <div class="toc-item" data-seek="256.23">  <span class="toc-time">04:16</span>  <span class="toc-text">马斯克把22万GPU卖给Claude</span></div>
+    <div class="toc-item" data-seek="339.69">  <span class="toc-time">05:39</span>  <span class="toc-text">程序员用AI：既焦虑又依赖</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260507041325" alt="暗钱买水军抹黑中国AI">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="21.37">▶ 00:21</span>
+      <div class="segment-title">1. 暗钱买水军抹黑中国AI</div>
+      <div class="golden-quote">AI冷战，比算力更先开火的是人心。</div>
+      <div class="segment-summary">WIRED报道揭露，一个由OpenAI和Palantir高管资助的超级PAC，通过非营利组织「Build American AI」雇佣TikTok和Instagram网红，散布对中国AI的恐惧。该组织已投入数百万美元购买流量和网红推广，旨在推动美国AI投资立法。评论认为这是风投试图靠政府续命的伎俩，也有分析指出中国人力资本优势无法靠宣传逆转。</div>
+      <div class="segment-meta">
+        <span class="tag">AI冷战</span> <span class="tag">舆论战</span> <span class="tag">OpenAI</span> <span class="tag">中国AI</span> <span class="tag">超级PAC</span>
+        <span class="tag">来源: WIRED</span>
+        <a class="source-link" href="https://www.wired.com/story/super-pac-backed-by-openai-and-palantir-is-paying-tiktok-influencers-to-fear-monger-about-china/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260507041325" alt="Character.ai面临非法行医指控">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="111.33">▶ 01:51</span>
+      <div class="segment-title">2. Character.ai面临非法行医指控</div>
+      <div class="golden-quote">AI聊天不代表能当医生，法律红线就在那里。</div>
+      <div class="segment-summary">Character.ai在宾夕法尼亚州遭遇非法行医诉讼，指控其AI聊天机器人提供诊断和治疗建议，违反了要求医疗行为必须由持证专业人员执行的法律。该案若成立，将迫使所有涉及健康建议的AI产品整改，甚至永久下线。评论认为这比版权诉讼更致命，直接触犯职业许可制度。</div>
+      <div class="segment-meta">
+        <span class="tag">Character.ai</span> <span class="tag">非法行医</span> <span class="tag">AI法律</span> <span class="tag">宾州诉讼</span>
+        <span class="tag">来源: Law.com</span>
+        <a class="source-link" href="https://www.law.com/therecorder/2026/05/06/characterai-maker-faces-unlawful-practice-of-medicine-claim-in-pennsylvania-suit/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260507041325" alt="AI裁员或致社保医保破产">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="180.55">▶ 03:00</span>
+      <div class="segment-title">3. AI裁员或致社保医保破产</div>
+      <div class="golden-quote">AI效率红利若只归资本，社保这根弦就会断。</div>
+      <div class="segment-summary">经济学家Jennifer Schultz指出，AI取代工作岗位将导致FICA工资税收入锐减，威胁社保和医保偿付能力。以MEDVi等零雇员企业为例，未来若普及，基础公共福利体系将无以为继。评论呼吁必须重新设计税制和福利体系，否则AI的效率提升越快，公共保障崩塌越急。</div>
+      <div class="segment-meta">
+        <span class="tag">AI裁员</span> <span class="tag">社保</span> <span class="tag">医保</span> <span class="tag">FICA</span> <span class="tag">福利危机</span>
+        <span class="tag">来源: Minnesota Reformer</span>
+        <a class="source-link" href="https://minnesotareformer.com/2026/04/17/if-ai-cuts-jobs-it-would-also-threaten-social-security-and-medicare/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260507041325" alt="马斯克把22万GPU卖给Claude">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="256.23">▶ 04:16</span>
+      <div class="segment-title">4. 马斯克把22万GPU卖给Claude</div>
+      <div class="golden-quote">火星牌算力，租给对手用。</div>
+      <div class="segment-summary">马斯克与Anthropic达成算力合作，将Colossus 1超算的22万GPU出租给Claude，导致用户限额翻倍。此前马斯克多次公开抨击Anthropic，双方在Grok与Claude上直接竞争。分析认为这次合作是算力短缺下的无奈之举，也反映了马斯克试图通过扶持Anthropic来打击OpenAI的IPO进程。</div>
+      <div class="segment-meta">
+        <span class="tag">马斯克</span> <span class="tag">Anthropic</span> <span class="tag">Claude</span> <span class="tag">GPU</span> <span class="tag">算力合作</span>
+        <span class="tag">来源: 量子位</span>
+        <a class="source-link" href="https://www.qbitai.com/2026/05/413569.html" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260507041325" alt="程序员用AI：既焦虑又依赖">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="339.69">▶ 05:39</span>
+      <div class="segment-title">5. 程序员用AI：既焦虑又依赖</div>
+      <div class="golden-quote">AI不是帮你写代码，而是逼你重新定义编程。</div>
+      <div class="segment-summary">针对程序员的调查显示，73%已在日常使用AI编程工具，19%的代码由AI生成。但同时约一半受访者对未来焦虑，31%表示AI让他们更累。39%经历技能重塑——旧技能退化同时新技能增长。评论认为真正的程序员将转向更高层的系统设计与AI协作，而非简单编码。</div>
+      <div class="segment-meta">
+        <span class="tag">程序员</span> <span class="tag">AI焦虑</span> <span class="tag">技能退化</span> <span class="tag">生产效率</span>
+        <span class="tag">来源: The Software Survey</span>
+        <a class="source-link" href="https://thesoftwaresurvey.com/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-05-07 04:13
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      // 当前 episode_id 从 URL 取（episodes/<id>/）
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      // list 是按时间倒序的：idx-1 是更新的（"下一期"），idx+1 是更老的（"上一期"）
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
