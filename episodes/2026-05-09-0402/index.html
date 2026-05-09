@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepSeek估值飙3500亿，AI硬盘短缺危及互联网存档 - 2026-05-09 04:02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  /* 单集页顶部面包屑（取代节目大 Logo） */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep {
+    color: var(--ink-mute);
+    font-size: 10px;
+  }
+  .breadcrumb .show {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .breadcrumb .vol {
+    font-family: "SF Mono", Consolas, monospace;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    margin-left: auto;
+  }
+
+  /* 期刊报头：聚焦在单期内容上 */
+  .header {
+    background: transparent;
+    color: var(--ink);
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  /* 大单期标题 */
+  .title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+  /* 紧凑作者条 */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .mascot-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 1px;
+    flex-shrink: 0;
+  }
+  .masthead-name {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.5px;
+    margin-left: auto;
+  }
+  .meta-divider {
+    color: var(--ink-mute);
+    margin: 0 8px;
+  }
+  .player {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .toc-title {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f5efe1;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fdfaf1; }
+  .toc-time {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 52px;
+    margin-right: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .segment {
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 20px 22px 22px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
+  }
+  .segment-time:hover { background: #f9e6c3; }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+  /* 上一期/下一期导航 */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }
+  .episode-nav a {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    display: block;
+  }
+  .episode-nav a:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 16px rgba(60,40,10,0.08);
+  }
+  .episode-nav-label {
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--ink-mute);
+    cursor: default;
+    box-shadow: none;
+  }
+  .episode-nav .placeholder:hover {
+    transform: none;
+    border-color: var(--line);
+    box-shadow: none;
+  }
+  .footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 36px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span class="show">伊恩 AI 小报</span>
+    <span class="vol">VOL.011</span>
+  </div>
+  <div class="header">
+    <div class="title">DeepSeek估值飙3500亿，AI硬盘短缺危及互联网存档</div>
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260509040400" alt="AstraX">
+      <div class="masthead-name">伊恩</div>
+      <div class="meta">2026-05-09 04:02<span class="meta-divider">·</span>5 条<span class="meta-divider">·</span>11分04秒</div>
+    </div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260509040400" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="18.37">  <span class="toc-time">00:18</span>  <span class="toc-text">DeepSeek首轮融资500亿，梁文锋自掏200亿</span></div>
+    <div class="toc-item" data-seek="193.17">  <span class="toc-time">03:13</span>  <span class="toc-text">智会心研免费开放AI深度分析</span></div>
+    <div class="toc-item" data-seek="298.39">  <span class="toc-time">04:58</span>  <span class="toc-text">如何与AI高效协作并持续进化</span></div>
+    <div class="toc-item" data-seek="420.25">  <span class="toc-time">07:00</span>  <span class="toc-text">AI硬短缺威胁互联网存档</span></div>
+    <div class="toc-item" data-seek="528.86">  <span class="toc-time">08:48</span>  <span class="toc-text">人们为什么讨厌AI艺术</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260509040400" alt="DeepSeek首轮融资500亿，梁文锋自掏200亿">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="18.37">▶ 00:18</span>
+      <div class="segment-title">1. DeepSeek首轮融资500亿，梁文锋自掏200亿</div>
+      <div class="golden-quote">不是背叛理想，而是让理想活下去。</div>
+      <div class="segment-summary">DeepSeek 启动首轮融资，估值飙升至 3500 亿元，梁文锋个人出资最高 200 亿元。融资将用于算力、人才和产品化，V4.1 定档 6 月，标志着从实验室向商业公司转型。</div>
+      <div class="segment-meta">
+        <span class="tag">DeepSeek</span> <span class="tag">融资</span> <span class="tag">梁文锋</span> <span class="tag">V4.1</span> <span class="tag">商业化</span>
+        <span class="tag">来源: 量子位</span>
+        <a class="source-link" href="https://www.qbitai.com/2026/05/414432.html" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260509040400" alt="智会心研免费开放AI深度分析">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="193.17">▶ 03:13</span>
+      <div class="segment-title">2. 智会心研免费开放AI深度分析</div>
+      <div class="golden-quote">免费是最好的获客方式，尤其对于高价值用户。</div>
+      <div class="segment-summary">智会心研向个人用户免费开放高级检索与 AI 深度分析核心功能，包括专利 AI 检索、AI 伴读、图表分析及多智能体协作，降低技术创新门槛。</div>
+      <div class="segment-meta">
+        <span class="tag">智会心研</span> <span class="tag">AI</span> <span class="tag">专利检索</span> <span class="tag">免费</span>
+        <span class="tag">来源: 量子位</span>
+        <a class="source-link" href="https://www.qbitai.com/2026/05/414445.html" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260509040400" alt="如何与AI高效协作并持续进化">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="298.39">▶ 04:58</span>
+      <div class="segment-title">3. 如何与AI高效协作并持续进化</div>
+      <div class="golden-quote">跟AI协作不是靠直觉，而是靠系统。</div>
+      <div class="segment-summary">Eugene Yan 分享了与 AI 高效协作的工作流，包括建立上下文、培训 AI 如新员工、构建记忆层等实践，强调系统化方法而非随机操作。</div>
+      <div class="segment-meta">
+        <span class="tag">AI协作</span> <span class="tag">工作流</span> <span class="tag">CLAUDE.md</span> <span class="tag">效率</span>
+        <span class="tag">来源: Eugene Yan</span>
+        <a class="source-link" href="https://eugeneyan.com/writing/working-with-ai/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260509040400" alt="AI硬短缺威胁互联网存档">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="420.25">▶ 07:00</span>
+      <div class="segment-title">4. AI硬短缺威胁互联网存档</div>
+      <div class="golden-quote">AI的繁荣，不能以牺牲数字记忆为代价。</div>
+      <div class="segment-summary">AI 公司大规模采购硬盘导致市场短缺价格上涨，互联网档案馆等机构面临采购困难，可能威胁到数字内容的长期保存。</div>
+      <div class="segment-meta">
+        <span class="tag">硬盘短缺</span> <span class="tag">AI</span> <span class="tag">互联网存档</span> <span class="tag">存储</span>
+        <span class="tag">来源: 404 Media</span>
+        <a class="source-link" href="https://www.404media.co/the-ai-hard-drive-shortage-is-making-it-more-expensive-and-harder-to-archive-the-internet/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260509040400" alt="人们为什么讨厌AI艺术">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="528.86">▶ 08:48</span>
+      <div class="segment-title">5. 人们为什么讨厌AI艺术</div>
+      <div class="golden-quote">人们对AI艺术的厌恶，本质是对「未经认可的努力」的抵触。</div>
+      <div class="segment-summary">Ethan McCue 认为大多数人讨厌 AI 艺术，使用它会给观众负面信号。他提供了懒人 PS、涂鸦、委托艺术家等替代方案，并指出 AI 艺术更适合用来吸引低批判性思维者。</div>
+      <div class="segment-meta">
+        <span class="tag">AI艺术</span> <span class="tag">社会情绪</span> <span class="tag">替代方案</span> <span class="tag">价值认同</span>
+        <span class="tag">来源: Ethan McCue</span>
+        <a class="source-link" href="https://mccue.dev/pages/5-8-26-ai-art" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-05-09 04:04
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      // 当前 episode_id 从 URL 取（episodes/<id>/）
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      // list 是按时间倒序的：idx-1 是更新的（"下一期"），idx+1 是更老的（"上一期"）
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

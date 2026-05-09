@@ -1,0 +1,67 @@
+{
+  "episode_id": "2026-05-09-0402",
+  "title": "DeepSeek估值飙3500亿，AI硬盘短缺危及互联网存档",
+  "published_at": "2026-05-09 04:02",
+  "duration_seconds": 646.39,
+  "duration_label": "10分46秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "DeepSeek首轮融资500亿，梁文锋自掏200亿",
+      "golden_quote": "不是背叛理想，而是让理想活下去。",
+      "keywords": [
+        "DeepSeek",
+        "融资",
+        "梁文锋",
+        "V4.1",
+        "商业化"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "智会心研免费开放AI深度分析",
+      "golden_quote": "免费是最好的获客方式，尤其对于高价值用户。",
+      "keywords": [
+        "智会心研",
+        "AI",
+        "专利检索",
+        "免费"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "如何与AI高效协作并持续进化",
+      "golden_quote": "跟AI协作不是靠直觉，而是靠系统。",
+      "keywords": [
+        "AI协作",
+        "工作流",
+        "CLAUDE.md",
+        "效率"
+      ],
+      "source": "Eugene Yan"
+    },
+    {
+      "title": "AI硬短缺威胁互联网存档",
+      "golden_quote": "AI的繁荣，不能以牺牲数字记忆为代价。",
+      "keywords": [
+        "硬盘短缺",
+        "AI",
+        "互联网存档",
+        "存储"
+      ],
+      "source": "404 Media"
+    },
+    {
+      "title": "人们为什么讨厌AI艺术",
+      "golden_quote": "人们对AI艺术的厌恶，本质是对「未经认可的努力」的抵触。",
+      "keywords": [
+        "AI艺术",
+        "社会情绪",
+        "替代方案",
+        "价值认同"
+      ],
+      "source": "Ethan McCue"
+    }
+  ]
+}
