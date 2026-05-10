@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 重写工作规则：Coinbase 裁 14%，代码安全急追 - 2026-05-10 04:30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #faf6ee;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #6e6e73;
+    --ink-mute: #a0a0a4;
+    --line: #e8e2d2;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  /* 单集页顶部面包屑（取代节目大 Logo） */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep {
+    color: var(--ink-mute);
+    font-size: 10px;
+  }
+  .breadcrumb .show {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .breadcrumb .vol {
+    font-family: "SF Mono", Consolas, monospace;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    margin-left: auto;
+  }
+
+  /* 期刊报头：聚焦在单期内容上 */
+  .header {
+    background: transparent;
+    color: var(--ink);
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  /* 大单期标题 */
+  .title {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+  }
+  /* 紧凑作者条 */
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+  .mascot-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+    padding: 1px;
+    flex-shrink: 0;
+  }
+  .masthead-name {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--ink-mute);
+    letter-spacing: 0.5px;
+    margin-left: auto;
+  }
+  .meta-divider {
+    color: var(--ink-mute);
+    margin: 0 8px;
+  }
+  .player {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+  }
+  .toc {
+    background: var(--bg-card);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .toc-title {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #f5efe1;
+    transition: background 0.15s;
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { background: #fdfaf1; }
+  .toc-time {
+    color: var(--accent);
+    font-size: 12.5px;
+    font-family: "SF Mono", Consolas, monospace;
+    min-width: 52px;
+    margin-right: 12px;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .segment {
+    background: var(--bg-card);
+    border-radius: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+  }
+  .segment-body {
+    padding: 20px 22px 22px;
+  }
+  .segment-time {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf2e0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-family: "SF Mono", Consolas, monospace;
+    letter-spacing: 0.5px;
+  }
+  .segment-time:hover { background: #f9e6c3; }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .segment-summary {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+    line-height: 1.85;
+  }
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 12px 16px;
+    margin: 14px 0;
+    line-height: 1.75;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '"';
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--accent);
+    margin-right: 6px;
+    font-weight: 700;
+    line-height: 0;
+    vertical-align: -8px;
+  }
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5efe1;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+  /* 上一期/下一期导航 */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 36px;
+  }
+  .episode-nav a {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    display: block;
+  }
+  .episode-nav a:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 16px rgba(60,40,10,0.08);
+  }
+  .episode-nav-label {
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--ink-mute);
+    cursor: default;
+    box-shadow: none;
+  }
+  .episode-nav .placeholder:hover {
+    transform: none;
+    border-color: var(--line);
+    box-shadow: none;
+  }
+  .footer {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 11.5px;
+    margin-top: 36px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span class="show">伊恩 AI 小报</span>
+    <span class="vol">VOL.012</span>
+  </div>
+  <div class="header">
+    <div class="title">AI 重写工作规则：Coinbase 裁 14%，代码安全急追</div>
+    <div class="masthead">
+      <img class="mascot-avatar" src="mascot.png?v=20260510043320" alt="AstraX">
+      <div class="masthead-name">伊恩</div>
+      <div class="meta">2026-05-10 04:30<span class="meta-divider">·</span>5 条<span class="meta-divider">·</span>12分12秒</div>
+    </div>
+  </div>
+
+  <div class="player">
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260510043320" type="audio/mpeg">
+      你的浏览器不支持音频播放。
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">📑 章节</div>
+    <div class="toc-item" data-seek="21.66">  <span class="toc-time">00:21</span>  <span class="toc-text">Snyk 实时拦截 AI 写出的漏洞</span></div>
+    <div class="toc-item" data-seek="166.79">  <span class="toc-time">02:46</span>  <span class="toc-text">YourMemory 用图神经网络记住关联事实</span></div>
+    <div class="toc-item" data-seek="298.9">  <span class="toc-time">04:58</span>  <span class="toc-text">Draft 插件终结 AI 助手的「记忆丧失」</span></div>
+    <div class="toc-item" data-seek="446.41">  <span class="toc-time">07:26</span>  <span class="toc-text">GitHub 项目用 AI 助手复现 58 篇论文</span></div>
+    <div class="toc-item" data-seek="577.41">  <span class="toc-time">09:37</span>  <span class="toc-text">Coinbase 裁员 14%：AI 让工程师几天干完几周活</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260510043320" alt="Snyk 实时拦截 AI 写出的漏洞">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="21.66">▶ 00:21</span>
+      <div class="segment-title">1. Snyk 实时拦截 AI 写出的漏洞</div>
+      <div class="golden-quote">AI 生成代码的速度，必须慢于安全扫描。</div>
+      <div class="segment-summary">Snyk 推出了与 Claude Code 集成的实时安全扫描插件。数据显示 Anthropic 的模型在无安全提示时只有 56% 代码安全；AI 引入 XSS 的概率是人工的 2.74 倍。Snyk 通过 MCP 方式嵌入开发者终端，每段 AI 生成的代码都会被即时扫描并自动修复。文章指出，随着企业 65-70% 的代码由 AI 生成，将安全能力内置到开发流程中而非事后补救已成为刚需。</div>
+      <div class="segment-meta">
+        <span class="tag">Snyk</span> <span class="tag">Claude Code</span> <span class="tag">代码安全</span> <span class="tag">MCP</span> <span class="tag">AI编程</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://codebrainery.com/articles/snyk-claude-code-real-time-security-scanning-for-ai-code" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260510043320" alt="YourMemory 用图神经网络记住关联事实">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="166.79">▶ 02:46</span>
+      <div class="segment-title">2. YourMemory 用图神经网络记住关联事实</div>
+      <div class="golden-quote">记忆不是存得越多越好，而是忘得越对越好。</div>
+      <div class="segment-summary">开源项目 YourMemory 提出了一种基于图神经网络的 AI 记忆方案，解决了传统向量搜索无法关联跨实体事实的问题。在 HotpotQA 数据集上，加入实体图后双事实同时召回率从 59.5% 提升至 71.5%；在 LongMemEval 上完整会话召回率达 84.8%。系统还具备自动衰减和修剪机制，模拟人类记忆的遗忘与强化过程。所有检索和衰减均在本地运行，无需 LLM API 调用。</div>
+      <div class="segment-meta">
+        <span class="tag">YourMemory</span> <span class="tag">AI记忆</span> <span class="tag">图神经网络</span> <span class="tag">遗忘机制</span> <span class="tag">多跳推理</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://yourmemoryai.xyz/" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260510043320" alt="Draft 插件终结 AI 助手的「记忆丧失」">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="298.9">▶ 04:58</span>
+      <div class="segment-title">3. Draft 插件终结 AI 助手的「记忆丧失」</div>
+      <div class="golden-quote">AI 助手的上限不是它能写多快，而是它能记住多少。</div>
+      <div class="segment-summary">Draft 是一个针对 Claude Code、Codex CLI 和 Cursor 的开源插件，旨在解决 AI 编程助手在新会话中丢失产品上下文的问题。通过一个命令即可初始化，在每次新 session 启动时自动注入包括公司、产品、团队优先级和最近决策在内的完整上下文。它还通过 append-only 日志和持久化索引来防止上下文随时间过时，使 AI 始终基于最新信息工作。目前仅支持 macOS 和 Linux。</div>
+      <div class="segment-meta">
+        <span class="tag">Draft</span> <span class="tag">Claude Code</span> <span class="tag">上下文管理</span> <span class="tag">Codex CLI</span> <span class="tag">AI代理</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://github.com/idodekerobo/draft-cli-plugin" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260510043320" alt="GitHub 项目用 AI 助手复现 58 篇论文">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="446.41">▶ 07:26</span>
+      <div class="segment-title">4. GitHub 项目用 AI 助手复现 58 篇论文</div>
+      <div class="golden-quote">复现 35 年的论文，只需一个 AI 助手。</div>
+      <div class="segment-summary">开发者 yaroslavvb 在 GitHub 上发起项目，利用 AI coding assistant 复现了 Jürgen Schmidhuber 从 1990 年到 2025 年的 58 篇论文，包括著名的「World Models」论文并附完整实现。项目展示了 AI 在加速学术复现方面的潜力，但也引发关于科研诚信和创新本质的讨论。</div>
+      <div class="segment-meta">
+        <span class="tag">论文复现</span> <span class="tag">Schmidhuber</span> <span class="tag">AI编程助手</span> <span class="tag">World Models</span> <span class="tag">科学研究</span>
+        <span class="tag">来源: Hacker News</span>
+        <a class="source-link" href="https://github.com/cybertronai/schmidhuber-problems/blob/main/VISUAL_TOUR.md" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260510043320" alt="Coinbase 裁员 14%：AI 让工程师几天干完几周活">
+    <div class="segment-body">
+      <span class="segment-time" data-seek="577.41">▶ 09:37</span>
+      <div class="segment-title">5. Coinbase 裁员 14%：AI 让工程师几天干完几周活</div>
+      <div class="golden-quote">裁员不是因为你不值钱，而是因为你的产出可以用更少的你来完成。</div>
+      <div class="segment-summary">Coinbase 宣布裁员 14%（约 700 人），CEO Brian Armstrong 指出 AI 让工程师效率大幅提升，过去数周的工作现在几天即可完成。公司正转向「AI-native」组织，通过减少管理层级、推行「玩家教练」管理者和实验「一人团队」结构（一人兼任工程、设计、产品）来重塑业务。2026 年初科技行业裁员总数已超 5.2 万，同比增加 40%。</div>
+      <div class="segment-meta">
+        <span class="tag">Coinbase</span> <span class="tag">裁员</span> <span class="tag">AI组织</span> <span class="tag">效率</span> <span class="tag">科技行业</span>
+        <span class="tag">来源: Los Angeles Times</span>
+        <a class="source-link" href="https://www.latimes.com/business/story/2026-05-05/crypto-exchange-coinbase-to-lay-off-14-of-staff-as-ai-reshapes-work" target="_blank">原文 →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-05-10 04:33
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      // 当前 episode_id 从 URL 取（episodes/<id>/）
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      // list 是按时间倒序的：idx-1 是更新的（"下一期"），idx+1 是更老的（"上一期"）
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

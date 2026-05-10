@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-10-0430",
+  "title": "AI 重写工作规则：Coinbase 裁 14%，代码安全急追",
+  "published_at": "2026-05-10 04:30",
+  "duration_seconds": 711.91,
+  "duration_label": "11分51秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Snyk 实时拦截 AI 写出的漏洞",
+      "golden_quote": "AI 生成代码的速度，必须慢于安全扫描。",
+      "keywords": [
+        "Snyk",
+        "Claude Code",
+        "代码安全",
+        "MCP",
+        "AI编程"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "YourMemory 用图神经网络记住关联事实",
+      "golden_quote": "记忆不是存得越多越好，而是忘得越对越好。",
+      "keywords": [
+        "YourMemory",
+        "AI记忆",
+        "图神经网络",
+        "遗忘机制",
+        "多跳推理"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "Draft 插件终结 AI 助手的「记忆丧失」",
+      "golden_quote": "AI 助手的上限不是它能写多快，而是它能记住多少。",
+      "keywords": [
+        "Draft",
+        "Claude Code",
+        "上下文管理",
+        "Codex CLI",
+        "AI代理"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "GitHub 项目用 AI 助手复现 58 篇论文",
+      "golden_quote": "复现 35 年的论文，只需一个 AI 助手。",
+      "keywords": [
+        "论文复现",
+        "Schmidhuber",
+        "AI编程助手",
+        "World Models",
+        "科学研究"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "Coinbase 裁员 14%：AI 让工程师几天干完几周活",
+      "golden_quote": "裁员不是因为你不值钱，而是因为你的产出可以用更少的你来完成。",
+      "keywords": [
+        "Coinbase",
+        "裁员",
+        "AI组织",
+        "效率",
+        "科技行业"
+      ],
+      "source": "Los Angeles Times"
+    }
+  ]
+}
