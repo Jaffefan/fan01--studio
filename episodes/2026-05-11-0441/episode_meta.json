@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-11-0441",
+  "title": "99.9%成功率背后：机器人终于学会“先想再做”",
+  "published_at": "2026-05-11 04:41",
+  "duration_seconds": 776.9,
+  "duration_label": "12分56秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "机器人终结者：99.9%的满分答卷",
+      "golden_quote": "机器人终于开始长脑子了",
+      "keywords": [
+        "具身智能",
+        "隐空间推理",
+        "LAPO",
+        "LaST-R1",
+        "强化学习"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "AI 焊枪：工厂里的 Copilot",
+      "golden_quote": "AI 焊枪点亮的不是火花，是智能制造的火苗",
+      "keywords": [
+        "焊接自动化",
+        "Blue iQ",
+        "NovAI",
+        "制造业",
+        "自适应智能"
+      ],
+      "source": "Miller Welds"
+    },
+    {
+      "title": "OpenAI 员工：人均彩票头奖",
+      "golden_quote": "一张 OpenAI 工牌可能值 3000 万",
+      "keywords": [
+        "OpenAI",
+        "员工套现",
+        "财富",
+        "AI 泡沫",
+        "硅谷"
+      ],
+      "source": "The Wall Street Journal"
+    },
+    {
+      "title": "AI 天网：边境监控的万亿生意",
+      "golden_quote": "AI 应该建桥，不是建墙",
+      "keywords": [
+        "AI 监控",
+        "边境安全",
+        "Palantir",
+        "Anduril",
+        "隐私"
+      ],
+      "source": "The Wall Street Journal"
+    },
+    {
+      "title": "RPCS3 对 AI 程序员说：先学会写代码",
+      "golden_quote": "真正的工程能力依然稀缺",
+      "keywords": [
+        "RPCS3",
+        "AI 代码",
+        "开源",
+        "Learn to Code",
+        "维护者"
+      ],
+      "source": "Neowin"
+    }
+  ]
+}
