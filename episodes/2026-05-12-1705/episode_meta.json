@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-12-1705",
+  "title": "200亿美元可灵独立，万亿参数模型免费，AI数学危机来了",
+  "published_at": "2026-05-12 17:05",
+  "duration_seconds": 962.86,
+  "duration_label": "16分02秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "万亿参数模型免费开放",
+      "golden_quote": "万亿参数免费，是理性，也是算计。",
+      "keywords": [
+        "万亿参数",
+        "Ring-2.6-1T",
+        "OpenRouter",
+        "AntLingAGI",
+        "免费"
+      ],
+      "source": "X：OpenRouter (@OpenRouter)"
+    },
+    {
+      "title": "Anthropic开源金融AI模板",
+      "golden_quote": "这不仅仅是开源，这是给金融行业修高速公路。",
+      "keywords": [
+        "Anthropic",
+        "金融AI",
+        "开源模板",
+        "MCP",
+        "行业标准"
+      ],
+      "source": "X：小北 (@frxiaobei)"
+    },
+    {
+      "title": "OpenAI 成立 DeployCo",
+      "golden_quote": "AI 不再是壁垒，部署 AI 的能力才是。",
+      "keywords": [
+        "OpenAI",
+        "DeployCo",
+        "企业部署",
+        "FDE",
+        "40亿美元"
+      ],
+      "source": "OpenAI 官网动态"
+    },
+    {
+      "title": "菲尔兹奖得主被AI数学能力惊到",
+      "golden_quote": "AI 做数学是工具，理解 AI 做数学才是能力。",
+      "keywords": [
+        "菲尔兹奖",
+        "ChatGPT 5.5 Pro",
+        "数学证明",
+        "博士生危机",
+        "陶哲轩"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "可灵AI估值200亿美元独立上市",
+      "golden_quote": "可灵的独立，真正标志着 AI 视频不再只是一个 demo 生意。",
+      "keywords": [
+        "可灵AI",
+        "快手",
+        "分拆上市",
+        "200亿美元",
+        "AI视频"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
