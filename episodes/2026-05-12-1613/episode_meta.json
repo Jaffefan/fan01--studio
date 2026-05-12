@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-12-1613",
+  "title": "5个信号表明AI正在重新定义智能边界",
+  "published_at": "2026-05-12 16:13",
+  "duration_seconds": 457.32,
+  "duration_label": "7分37秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "万亿参数模型免费开放，思考强度可调",
+      "golden_quote": "万亿参数不是终点，可控的思考才是。",
+      "keywords": [
+        "万亿参数",
+        "思考模型",
+        "AntLingAGI",
+        "动态计算"
+      ],
+      "source": "OpenRouter on X"
+    },
+    {
+      "title": "Luma Agents：从情绪板到广告一步到位",
+      "golden_quote": "创意决定方向，AI负责执行。",
+      "keywords": [
+        "Luma Agents",
+        "广告自动化",
+        "创意工具",
+        "视频生成"
+      ],
+      "source": "Luma AI on X"
+    },
+    {
+      "title": "Cerebras IPO疯涨20倍，晶圆级芯片成新宠",
+      "golden_quote": "AI芯片市场不再一家独大，开源架构才是未来。",
+      "keywords": [
+        "Cerebras",
+        "IPO",
+        "晶圆级芯片",
+        "AI推理"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "7B小模型指挥GPT-5，智能来自协调而非规模",
+      "golden_quote": "小模型指挥大模型，智能不在规模而在协调。",
+      "keywords": [
+        "小模型",
+        "强化学习",
+        "协调",
+        "AI指挥"
+      ],
+      "source": "Berry Xia on X"
+    },
+    {
+      "title": "菲尔兹奖得主警告：17分钟AI生成博士级成果",
+      "golden_quote": "AI能产出论文，但无法替代数学家的理解与创造。",
+      "keywords": [
+        "菲尔兹奖",
+        "ChatGPT 5.5 Pro",
+        "数学研究",
+        "博士生危机"
+      ],
+      "source": "IT之家"
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5个信号表明AI正在重新定义智能边界 - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── 日报速览 ── */
+  .briefing {
+    margin-top: 52px;
+    padding-top: 36px;
+    border-top: 2px solid var(--ink);
+  }
+  .briefing-head {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .briefing-subhead {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+  }
+  .briefing-section {
+    margin-bottom: 24px;
+  }
+  .briefing-section-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line-light);
+  }
+  .briefing-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f2ea;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .briefing-item:last-child { border-bottom: none; }
+  .briefing-item a {
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--serif);
+    font-weight: 600;
+  }
+  .briefing-item a:hover { color: var(--accent); }
+  .briefing-item .bi-source {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-left: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 016 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-05-12 16:13（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>7分58秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">5个信号表明AI正在重新定义智能边界</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260512081550" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="24.01">  <span class="toc-time">00:24</span>  <span class="toc-text">万亿参数模型免费开放，思考强度可调</span></div>
+    <div class="toc-item" data-seek="103.79">  <span class="toc-time">01:43</span>  <span class="toc-text">Luma Agents：从情绪板到广告一步到位</span></div>
+    <div class="toc-item" data-seek="182.26">  <span class="toc-time">03:02</span>  <span class="toc-text">Cerebras IPO疯涨20倍，晶圆级芯片成新宠</span></div>
+    <div class="toc-item" data-seek="267.18">  <span class="toc-time">04:27</span>  <span class="toc-text">7B小模型指挥GPT-5，智能来自协调而非规模</span></div>
+    <div class="toc-item" data-seek="358.38">  <span class="toc-time">05:58</span>  <span class="toc-text">菲尔兹奖得主警告：17分钟AI生成博士级成果</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260512081550" alt="万亿参数模型免费开放，思考强度可调" data-seek="24.01" style="cursor:pointer">
+    <div class="segment-number" data-seek="24.01" style="cursor:pointer">第 1 条 · 00:24</div>
+    <h2 class="segment-title">万亿参数模型免费开放，思考强度可调</h2>
+    <div class="segment-summary">AntLingAGI发布万亿参数思考模型Ring-2.6-1T，核心是可调节思考强度，灵活平衡深度、成本和速度，专为智能体优化，免费试用至5月15日。</div>
+    <div class="golden-quote">万亿参数不是终点，可控的思考才是。</div>
+    <div class="segment-meta">
+      <span class="tag">万亿参数</span> <span class="tag">思考模型</span> <span class="tag">AntLingAGI</span> <span class="tag">动态计算</span>
+      <span class="tag">来源: OpenRouter on X</span>
+      <a class="source-link" href="https://x.com/OpenRouter/status/2053834087023133025" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260512081550" alt="Luma Agents：从情绪板到广告一步到位" data-seek="103.79" style="cursor:pointer">
+    <div class="segment-number" data-seek="103.79" style="cursor:pointer">第 2 条 · 01:43</div>
+    <h2 class="segment-title">Luma Agents：从情绪板到广告一步到位</h2>
+    <div class="segment-summary">Luma AI推出Luma Agents，可从情绪板一键生成完整广告，降低创意制作门槛，冲击传统广告行业。</div>
+    <div class="golden-quote">创意决定方向，AI负责执行。</div>
+    <div class="segment-meta">
+      <span class="tag">Luma Agents</span> <span class="tag">广告自动化</span> <span class="tag">创意工具</span> <span class="tag">视频生成</span>
+      <span class="tag">来源: Luma AI on X</span>
+      <a class="source-link" href="https://x.com/LumaLabsAI/status/2053941836402901409" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260512081550" alt="Cerebras IPO疯涨20倍，晶圆级芯片成新宠" data-seek="182.26" style="cursor:pointer">
+    <div class="segment-number" data-seek="182.26" style="cursor:pointer">第 3 条 · 03:02</div>
+    <h2 class="segment-title">Cerebras IPO疯涨20倍，晶圆级芯片成新宠</h2>
+    <div class="segment-summary">AI芯片公司Cerebras IPO超额认购20倍以上，计划提价扩股，最高融资48亿美元，其晶圆级芯片在推理领域优势显著。</div>
+    <div class="golden-quote">AI芯片市场不再一家独大，开源架构才是未来。</div>
+    <div class="segment-meta">
+      <span class="tag">Cerebras</span> <span class="tag">IPO</span> <span class="tag">晶圆级芯片</span> <span class="tag">AI推理</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/948/591.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260512081550" alt="7B小模型指挥GPT-5，智能来自协调而非规模" data-seek="267.18" style="cursor:pointer">
+    <div class="segment-number" data-seek="267.18" style="cursor:pointer">第 4 条 · 04:27</div>
+    <h2 class="segment-title">7B小模型指挥GPT-5，智能来自协调而非规模</h2>
+    <div class="segment-summary">研究证明7B小模型通过强化学习可有效指挥GPT-5等大模型，性能超越单个前沿模型，揭示AI智能的新方向在于协调能力。</div>
+    <div class="golden-quote">小模型指挥大模型，智能不在规模而在协调。</div>
+    <div class="segment-meta">
+      <span class="tag">小模型</span> <span class="tag">强化学习</span> <span class="tag">协调</span> <span class="tag">AI指挥</span>
+      <span class="tag">来源: Berry Xia on X</span>
+      <a class="source-link" href="https://x.com/berryxia/status/2053794010582683759" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260512081550" alt="菲尔兹奖得主警告：17分钟AI生成博士级成果" data-seek="358.38" style="cursor:pointer">
+    <div class="segment-number" data-seek="358.38" style="cursor:pointer">第 5 条 · 05:58</div>
+    <h2 class="segment-title">菲尔兹奖得主警告：17分钟AI生成博士级成果</h2>
+    <div class="segment-summary">菲尔兹奖得主Gowers测试ChatGPT 5.5 Pro，17分钟解决数学难题并生成博士级论文，警告数学博士生培养面临危机。</div>
+    <div class="golden-quote">AI能产出论文，但无法替代数学家的理解与创造。</div>
+    <div class="segment-meta">
+      <span class="tag">菲尔兹奖</span> <span class="tag">ChatGPT 5.5 Pro</span> <span class="tag">数学研究</span> <span class="tag">博士生危机</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/949/032.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  
+  <div class="briefing">
+    <div class="briefing-head">今日 AI 速览</div>
+    <div class="briefing-subhead">数据来源：aihot.virxact.com + RSS</div>
+    <div class="briefing-section"><div class="briefing-section-label">模型发布/更新</div><div class="briefing-item"><a href="https://x.com/SenseTime_AI/status/2053782644492525847" target="_blank" rel="noopener">SenseNova U1图像生成模型登陆ComfyUI平台</a><span class="bi-source">— X：商汤 SenseTime (@SenseTime_AI)</span><br>SenseNova U1图像生成模型现已在ComfyUI上可运行，并获得包括REBEL AI在内的评测者高度认可。REBEL AI发布的实践教程展示了该模型的部署工作流，并对其图像生成能力进行了真实场景测试。模型支持8步快速推理，生成速度极</div><div class="briefing-item"><a href="https://x.com/OpenRouter/status/2053834087023133025" target="_blank" rel="noopener">AntLingAGI发布万亿参数模型Ring-2.6-1T</a><span class="bi-source">— X：OpenRouter (@OpenRouter)</span><br>AntLingAGI发布了其万亿参数旗舰“思考模型”Ring-2.6-1T，该模型在5月15日前可通过OpenRouter免费使用。其核心特性包括可调节的思考强度，能动态平衡认知深度、token成本和执行速度；专为智能体优化，适用于高频工作</div><div class="briefing-item"><a href="https://x.com/TencentHunyuan/status/2053771684482851255" target="_blank" rel="noopener">腾讯混元Hy3预览版发布，专注复杂智能体任务</a><span class="bi-source">— X：腾讯混元 (@TencentHunyuan)</span><br>腾讯混元Hy3预览版已开放早期体验，被描述为该系列最强模型。其核心设计面向现实世界有效性，而非单纯追求基准测试分数。模型具备处理复杂智能体任务的能力，采用256K上下文长度，并融合了快慢思维机制的混合专家架构。该模型基于重建的预训练和强化学</div></div><div class="briefing-section"><div class="briefing-section-label">产品发布/更新</div><div class="briefing-item"><a href="https://x.com/frxiaobei/status/2053861985008431398" target="_blank" rel="noopener">Anthropic开源金融AI全栈模板，定义行业落地新标准</a><span class="bi-source">— X：小北 (@frxiaobei)</span><br>Anthropic在GitHub开源了金融服务行业AI解决方案完整模板库，包含10个端到端智能体、7个垂直行业插件及11家主流金融数据商的MCP连接器，覆盖投研、投行、风控等核心工作流。该库提供了从个人插件到企业API的部署方式，支持集成至</div><div class="briefing-item"><a href="https://x.com/OpenRouter/status/2053843701261025290" target="_blank" rel="noopener">帕累托代码以市场需求重塑模型选择</a><span class="bi-source">— X：OpenRouter (@OpenRouter)</span><br>Pareto Code 是一种利用真实市场需求观察帕累托前沿的新方法 DeepSeek V4 Pro 占据首位，其次是 GPT 5.4 Mini 和 Gemini 3.1 Pro https://openrouter.ai/openrout</div><div class="briefing-item"><a href="https://x.com/LumaLabsAI/status/2053941836402901409" target="_blank" rel="noopener">Luma Agents：从情绪板到完整广告的自动化创作</a><span class="bi-source">— X：Luma AI (@LumaLabsAI)</span><br>情绪板曾是最精彩的部分。如今它只是起点。 上传你的参考素材。设定方向。Luma Agents 会将其从情绪板转化为完整的广告。 生成广告 → http://lumalabs.ai/app</div><div class="briefing-item"><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.139" target="_blank" rel="noopener">Claude Code v2.1.139 版本更新</a><span class="bi-source">— Claude Code：GitHub Releases（RSS）</span><br>本次更新引入了多项新功能与优化。核心新增包括：集中管理会话的Agent视图（研究预览）、可设置目标并持续工作的`/goal`命令、实时调整滚轮速度的`/scroll-speed`命令，以及查看插件详情的`claude plugin deta</div><div class="briefing-item"><a href="https://x.com/alibaba_cloud/status/2053646520998560033" target="_blank" rel="noopener">HappyHorse AI视频引擎登陆阿里云</a><span class="bi-source">— X：阿里云 / Alibaba Cloud (@alibaba_cloud)</span><br>资产审核：通过。物理逻辑：无缝衔接。🐎 HappyHorse是面向生产就绪内容的排名第一的AI视频引擎。从复杂的物理交互到原生1080p唇形同步，我们不仅生成——更精准执行。 现已上线阿里云Model Studio。 https://int</div><div class="briefing-item"><a href="https://x.com/xiaohu/status/2053985835339661679" target="_blank" rel="noopener">Claude Code 发布多任务管理工具 Agent View</a><span class="bi-source">— X：小互 (@xiaohu)</span><br>Claude Code 推出 Agent View，解决了多任务运行时需在多个终端窗口间切换、状态难以区分的痛点。该工具将所有会话集中在一个界面管理，用户可直观查看各Agent状态（如工作中、等待输入、已完成），并快速切换或接管任务，实现了</div><div class="briefing-item"><a href="https://x.com/AYi_AInotes/status/2053699900727075150" target="_blank" rel="noopener">中国移动上线AI模型中转平台MoMA，国家队入局AI基础设施竞争</a><span class="bi-source">— X：阿易 AI Notes (@AYi_AInotes)</span><br>中国移动推出的AI模型中转平台MoMA，标志着“国家队”正式进入AI基础设施领域。该平台已接入DeepSeek、通义千问等300多个主流模型，并通过央视新闻进行宣传。其核心逻辑在于，AI中转站被视为未来AGI时代的“智能电网”，是掌握行业定</div></div><div class="briefing-section"><div class="briefing-section-label">行业动态</div><div class="briefing-item"><a href="https://openai.com/index/openai-launches-the-deployment-company" target="_blank" rel="noopener">OpenAI 推出 DeployCo 以协助企业围绕智能构建业务</a><span class="bi-source">— OpenAI：官网动态（RSS · 排除企业/客户案例）</span><br>OpenAI 正式推出全新企业部署公司 DeployCo，旨在帮助各类组织将前沿人工智能技术投入实际生产，并转化为可衡量的商业影响。该举措标志着 OpenAI 进一步深入企业服务领域，专注于解决 AI 模型从测试到规模化部署的落地挑战，助力</div><div class="briefing-item"><a href="https://www.ithome.com/0/948/591.htm" target="_blank" rel="noopener">消息称 AI 芯片企业 Cerebras IPO 获 20+ 倍超额认购，拟调升发行价近三成</a><span class="bi-source">— IT之家（RSS）</span><br>AI芯片企业Cerebras的IPO获得超过20倍超额认购，有望成为2026年以来全球最大IPO。公司计划将发行股票数量从2800万股增至3000万股，发行价区间从115-125美元上调至150-160美元，以中间价计涨幅达29.17%，最</div><div class="briefing-item"><a href="https://www.ithome.com/0/949/045.htm" target="_blank" rel="noopener">纳德拉出庭反击马斯克诉讼案：他明明有我的手机号，但从未抱怨过微软与 OpenAI 的合作</a><span class="bi-source">— IT之家（RSS）</span><br>微软CEO纳德拉在马斯克诉OpenAI案中作证，反驳了马斯克关于OpenAI背离非营利初衷的指控。他出示了马斯克2016年的感谢邮件，证明其当时完全支持微软与OpenAI的合作，且微软为此承受了1500万美元亏损。纳德拉强调，双方一直保持沟</div><div class="briefing-item"><a href="https://x.com/kimmonismus/status/2053911732028907972" target="_blank" rel="noopener">Anthropic估值五日激增2000亿美元，营收呈指数级增长</a><span class="bi-source">— X：Kim (@kimmonismus)</span><br>人工智能公司Anthropic的市场隐含估值在短短五天内从1.2万亿美元飙升至1.4万亿美元，暴增2000亿美元。根据链上Pre-IPO交易数据，其估值自2025年10月以来已上涨1067%，近期24天内又录得40%的涨幅。这一惊人飙升的背</div><div class="briefing-item"><a href="https://x.com/MiniMax_AI/status/2053899661334003938" target="_blank" rel="noopener">旧金山AI模型开发者盛会周三举行</a><span class="bi-source">— X：MiniMax (@MiniMax_AI)</span><br>本周三在旧金山，与@vercel_dev、@AnthropicAI和@Kimi_Moonshot共同参与美国下一代模型盛会。 每位参与者将获得$30 MiniMax API积分 + 大奖池。 📅 5月13日 | 太平洋时间下午5:30 | </div><div class="briefing-item"><a href="https://x.com/MiniMax_AI/status/2053860184532066737" target="_blank" rel="noopener">MiniMax组建“10x团队”，邀请领域专家共推AI跨越式发展</a><span class="bi-source">— X：MiniMax (@MiniMax_AI)</span><br>MiniMax宣布成立“10x团队”，旨在邀请各领域深度专家共同推动人工智能实现十倍速进步。公司认为大模型已从演示阶段发展为真实生产力设施，而将顶尖领域人才引入模型研发能显著提升能力并产生实际影响。团队寻求的是坚信AI能加速自身领域发展的专</div></div><div class="briefing-section"><div class="briefing-section-label">论文研究</div><div class="briefing-item"><a href="https://x.com/berryxia/status/2053794010582683759" target="_blank" rel="noopener">小块有大智慧？这下真成真了！</a><span class="bi-source">— X：Berry Xia (@berryxia)</span><br>一项新研究证明，一个通过强化学习训练的7B语言模型能够有效指挥GPT-5、Claude Sonnet 4和Gemini 2.5 Pro等前沿大模型。该模型通过编写自然语言子任务、分配给不同大模型执行，并精确指定上下文信息，在GPQA Dia</div><div class="briefing-item"><a href="https://x.com/MSFTResearch/status/2053890478165147693" target="_blank" rel="noopener">智能体执行能力强但优化用户立场不足</a><span class="bi-source">— X：Microsoft Research (@MSFTResearch)</span><br>通过SocialReasoning Bench测试发现，各模型呈现稳定模式——智能体能够胜任执行任务，但即便在明确要求优化用户利益的指令下，仍无法持续改善用户处境。https://msft.it/6011vPOLF</div><div class="briefing-item"><a href="https://machinelearning.apple.com/research/balcaprl-mllm-image-captioning" target="_blank" rel="noopener">BalCapRL: 基于强化学习的MLLM图像描述平衡框架</a><span class="bi-source">— Apple Machine Learning Research（RSS）</span><br>研究团队针对多模态大语言模型图像描述任务提出BalCapRL平衡框架。该框架通过设计多维度奖励函数，系统解决了现有强化学习方法在追求描述效用时引发的幻觉、噪声和冗长等问题。实验表明，BalCapRL在保持描述准确性的同时，显著提升了信息密度</div></div><div class="briefing-section"><div class="briefing-section-label">技巧与观点</div><div class="briefing-item"><a href="https://simonwillison.net/2026/May/11/llm-shebang" target="_blank" rel="noopener">在脚本的shebang行中使用LLM</a><span class="bi-source">— Simon Willison 博客</span><br>本文介绍了一种创新方法，将LLM工具直接嵌入脚本的shebang行中执行指令。通过LLM的fragments模式，shebang行可执行简单任务，如生成SVG图像；使用-T选项能调用外部工具（如llm_time）创作包含当前时间的俳句；更复</div><div class="briefing-item"><a href="https://x.com/op7418/status/2053657613460771142" target="_blank" rel="noopener">开源PPT工具“鬼藏PPT技能”迎重大更新，新增瑞士风格与AI配图功能</a><span class="bi-source">— X：歸藏 (@op7418)</span><br>开源项目“鬼藏PPT技能”迎来重大更新，新增瑞士国际主义视觉风格，提供克莱因蓝等四套主题色。核心升级包括：通过接入GPT-Image 2.0，可根据PPT内容与风格自动生成胶片质感配图、流程图及UI截图美化；支持基于同一内容一键生成公众号、</div><div class="briefing-item"><a href="https://x.com/frxiaobei/status/2053827716605169804" target="_blank" rel="noopener">AI工具批量生成知识产权申请材料引关注</a><span class="bi-source">— X：小北 (@frxiaobei)</span><br>知识产权全面沦陷。 发明专利生成 skill https://github.com/handsomestWei/patent-disclosure-skill 软著生成 skill https://github.com/Fokkyp/Sof</div><div class="briefing-item"><a href="https://x.com/karpathy/status/2053872850101285137" target="_blank" rel="noopener">人机交互界面的演进：从文本到交互式神经视频</a><span class="bi-source">— X：Andrej Karpathy (@karpathy)</span><br>作者认为，AI的人机交互界面正从当前的Markdown默认输出向更丰富的HTML格式演进，后者能提供更好的图形、布局和交互性。长远看，由扩散神经网络直接生成的交互式神经视频或模拟将是终极输出形式，但其如何与精确的传统软件结合仍是开放问题。在</div><div class="briefing-item"><a href="https://x.com/berryxia/status/2053842082603937926" target="_blank" rel="noopener">兄弟们！这套结构，这个图理解后。GPT-Image-2 生图也就算是入门了吧。</a><span class="bi-source">— X：Berry Xia (@berryxia)</span><br>推文介绍了一套提升AI生图质量的结构化提示词框架。其核心是“结构越清晰，输出质量越好”。框架将提示系统分解为几个关键模块：首先定义画幅与用途；其次明确主题与核心主体的位置、占比及情绪价值；接着通过视觉隐喻用具体元素象征抽象概念；然后选择如A</div><div class="briefing-item"><a href="https://www.ithome.com/0/949/032.htm" target="_blank" rel="noopener">菲尔兹奖得主亲测 ChatGPT 5.5 Pro：17 分钟出论文级成果，替学生拉响红色警报</a><span class="bi-source">— IT之家（RSS）</span><br>菲尔兹奖得主 Timothy Gowers 测试 ChatGPT 5.5 Pro，AI 在 17 分钟内独立解决了一个加法数论公开难题，产出了博士论文级别的成果。整个过程无需数学指导，仅通过简单提示完成。Gowers 警告，若 AI 数学能</div><div class="briefing-item"><a href="https://x.com/swyx/status/2053856676969890189" target="_blank" rel="noopener">传奇总部“Cog House”首度公开：天才创始人Scott Wu与Cognition AI的崛起之路</a><span class="bi-source">— X：swyx (@swyx)</span><br>推文首次公开了Cognition AI总部“Cog House”的内部影像。创始人Scott Wu是美国顶尖竞技程序员，自幼展现数学天赋，曾三获国际信息学奥赛金牌。2023年11月，他在母亲去世与Sam Altman被OpenAI解雇的同日</div></div><div class="briefing-section"><div class="briefing-section-label">其他来源</div><div class="briefing-item"><a href="https://breadcrumb.vc/the-great-reset-navigating-a-turbulent-post-ai-world-4b5b4d434c5b" target="_blank" rel="noopener">The Great Reset: Navigating a Turbulent Post-AI World</a><span class="bi-source">— Hacker News - AI</span><br>Article URL: https://breadcrumb.vc/the-great-reset-navigating-a-turbulent-post-ai-world-4b5b4d434c5b Comments URL: https</div><div class="briefing-item"><a href="https://www.jotform.com/claude/" target="_blank" rel="noopener">Build, edit, and analyze forms directly in Claude</a><span class="bi-source">— Hacker News - AI</span><br>Article URL: https://www.jotform.com/claude/ Comments URL: https://news.ycombinator.com/item?id=48105466 Points: 1 # Com</div><div class="briefing-item"><a href="https://arxiv.org/abs/2605.07723" target="_blank" rel="noopener">LLM Hallucinations in the Wild</a><span class="bi-source">— Hacker News - AI</span><br>Article URL: https://arxiv.org/abs/2605.07723 Comments URL: https://news.ycombinator.com/item?id=48105415 Points: 1 # Co</div></div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-05-12 08:15
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
