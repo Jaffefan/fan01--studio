@@ -39,10 +39,8 @@ def main():
         print("未抓取到任何资讯，请检查网络连接或 RSS 源配置。")
         return
 
-    # ========== 2. 生成日报速览 + 深度口播 ==========
-    print(f"\n📋 第二步：生成日报速览 + 深度口播文案...\n")
-    from script_generator import build_daily_briefing
-    briefing = build_daily_briefing(articles, aihot_data)
+    # ========== 2. AI 生成深度口播 ==========
+    print(f"\n🤖 第二步：生成深度口播文案...\n")
     script = generate_script(articles)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -84,7 +82,7 @@ def main():
     # ========== 5. 生成网页 ==========
     print(f"\n🌐 第五步：生成播客网页...\n")
     full_mp3 = audio_files["full"]
-    site_path = generate_html(script, chapters, image_paths, full_mp3, OUTPUT_DIR, episode_id, briefing=briefing)
+    site_path = generate_html(script, chapters, image_paths, full_mp3, OUTPUT_DIR, episode_id)
     site_dir = os.path.dirname(site_path)
     print(f"  ✅ 本地预览: {site_path}")
 

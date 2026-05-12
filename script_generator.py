@@ -25,15 +25,13 @@ SELECTION_PROMPT = """你是 AI 资讯筛选专家。从下面这批资讯中，
 2. 颠覆性的应用案例（"以前要 XX 现在只要 YY"）
 3. 真正的"行业 watershed moment"
 4. 优先选择能引起讨论、有故事性的话题
-
-**类别均衡要求**：
-- 资讯后面标注了 [分类]，请按以下 5 类各挑 1 条：ai-models / ai-products / industry / paper / tip
-- 如果某类没有合适的候选，从其他类别补足
+5. 内容足够丰富有趣，能支撑 2.5-3 分钟深度讲解的优先
 
 排除：
 - 软文、PR 稿、纯学术 paper（除非有产业影响）
 - 安全漏洞类、负面消极内容
 - 与近期已报道过的话题重复
+- 简短资讯、一句话新闻（缺乏展开空间）
 
 {history_hint}
 
@@ -180,77 +178,6 @@ DEEP_SCRIPT_PROMPT = """你是 AI 播客主持人「伊恩」的专属文案编�
   "ending": "结尾：'好了，今天的《伊恩 AI 小报》就到这里。' 可点出本期最值得复盘的一条，引导关注/订阅，30秒内。不要'拜拜'、'明天见呀'这种轻浮措辞",
   "total_word_count": 预估总字数（整数，必须 ≥ 4000）
 }}"""
-
-
-# ── 日报速览构建（aiHot Daily 结构为主，RSS 补充）──
-
-BRIEFING_CATEGORY_NAMES = {
-    "ai-models": "模型发布/更新",
-    "ai-products": "产品发布/更新",
-    "industry": "行业动态",
-    "paper": "论文研究",
-    "tip": "技巧与观点",
-}
-
-
-def build_daily_briefing(articles: list[dict], aihot_data: dict | None) -> dict:
-    """基于 aiHot Daily 5 大分类，构建结构化日报速览。
-    aiHot 日报已包含 5 个版块的精选条目，直接使用并补充 RSS 独有内容。
-    返回格式：{ sections: [{label, items: [{title, summary, source, url}]}] }
-    """
-    briefing_sections = []
-    seen_urls: set[str] = set()
-
-    # 1. 优先用 aiHot 日报的 sections（它是编辑精选，质量最高）
-    if aihot_data and aihot_data.get("sections"):
-        for section in aihot_data["sections"]:
-            label = section.get("label", "")
-            items = []
-            for item in section.get("items", [])[:4]:  # 每版块最多 4 条
-                url = item.get("sourceUrl", "")
-                if url in seen_urls:
-                    continue
-                seen_urls.add(url)
-                items.append({
-                    "title": item.get("title", ""),
-                    "summary": (item.get("summary") or "")[:120],
-                    "source": item.get("sourceName", ""),
-                    "url": url,
-                })
-            if items:
-                briefing_sections.append({"label": label, "items": items})
-
-    # 2. 补充 RSS/social 中未被 aiHot 收录的文章（归入对应 category）
-    orphans_by_cat: dict[str, list] = {}
-    for a in articles:
-        url = a.get("link", "")
-        if not url or url in seen_urls:
-            continue
-        cat = a.get("category", "") or "other"
-        if cat not in orphans_by_cat:
-            orphans_by_cat[cat] = []
-        if len(orphans_by_cat[cat]) < 3:
-            orphans_by_cat[cat].append({
-                "title": a["title"],
-                "summary": (a.get("summary") or "")[:120],
-                "source": a["source"],
-                "url": url,
-            })
-            seen_urls.add(url)
-
-    # 合并——已有版块追加，新 category 新建版块
-    existing_labels = {s["label"] for s in briefing_sections}
-    for cat, items in orphans_by_cat.items():
-        label = BRIEFING_CATEGORY_NAMES.get(cat, "其他来源")
-        if label in existing_labels:
-            for s in briefing_sections:
-                if s["label"] == label:
-                    s["items"].extend(items)
-                    break
-        elif items:
-            briefing_sections.append({"label": label, "items": items})
-
-    return {"sections": briefing_sections}
 
 
 def generate_script(articles: list[dict]) -> dict:
