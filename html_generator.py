@@ -321,6 +321,63 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     letter-spacing: 0.5px;
   }}
 
+  /* ── 日报速览 ── */
+  .briefing {{
+    margin-top: 52px;
+    padding-top: 36px;
+    border-top: 2px solid var(--ink);
+  }}
+  .briefing-head {{
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 6px;
+  }}
+  .briefing-subhead {{
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+  }}
+  .briefing-section {{
+    margin-bottom: 24px;
+  }}
+  .briefing-section-label {{
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line-light);
+  }}
+  .briefing-item {{
+    padding: 8px 0;
+    border-bottom: 1px solid #f5f2ea;
+    font-size: 14px;
+    line-height: 1.7;
+  }}
+  .briefing-item:last-child {{ border-bottom: none; }}
+  .briefing-item a {{
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--serif);
+    font-weight: 600;
+  }}
+  .briefing-item a:hover {{ color: var(--accent); }}
+  .briefing-item .bi-source {{
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-left: 8px;
+  }}
+
   @media (max-width: 600px) {{
     .container {{ padding: 24px 16px 64px; }}
     .title {{ font-size: 26px; }}
@@ -341,7 +398,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <div class="masthead">
     <div class="masthead-show">伊恩 AI 小报</div>
     <div class="masthead-info">
-      <span>{date_str}</span><span>·</span><span>{segment_count} 条资讯</span><span>·</span><span>{duration_label}</span><span>·</span><span>主笔 伊恩</span>
+      <span>{date_str}（北京时间）</span><span>·</span><span>{segment_count} 条深度报道</span><span>·</span><span>{duration_label}</span><span>·</span><span>主笔 伊恩</span>
     </div>
   </div>
 
@@ -360,6 +417,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </div>
 
   {segments_html}
+
+  {briefing_html}
 
   <div class="episode-nav" id="episode-nav"></div>
 
@@ -424,6 +483,7 @@ def generate_html(
     audio_full_path: str,
     output_dir: str,
     date_str: str,
+    briefing: dict | None = None,
 ) -> str:
     """生成播客详情页 HTML，并把音频/图片复制到同一目录"""
 
@@ -537,6 +597,9 @@ def generate_html(
     else:
         display_date = date_str
 
+    # 日报速览 HTML
+    briefing_html = _render_briefing(briefing) if briefing else ""
+
     html = HTML_TEMPLATE.format(
         title=_escape(script.get("title", "每日AI资讯")),
         date_str=display_date,
@@ -545,6 +608,7 @@ def generate_html(
         duration_label=duration_label,
         toc_items="\n    ".join(toc_items),
         segments_html="\n".join(segments_html),
+        briefing_html=briefing_html,
         generated_at=datetime.now().strftime("%Y-%m-%d %H:%M"),
         cache_bust=cache_bust,
     )
@@ -554,6 +618,39 @@ def generate_html(
         f.write(html)
 
     return page_path
+
+
+def _render_briefing(briefing: dict) -> str:
+    """渲染日报速览 HTML"""
+    sections_html = []
+    for sec in briefing.get("sections", []):
+        items_html = []
+        for item in sec.get("items", []):
+            title = _escape(item.get("title", ""))
+            url = _escape(item.get("url", ""))
+            source = _escape(item.get("source", ""))
+            summary = _escape(item.get("summary", ""))
+            link = f'<a href="{url}" target="_blank" rel="noopener">{title}</a>' if url else title
+            items_html.append(
+                f'<div class="briefing-item">'
+                f'{link}<span class="bi-source">— {source}</span>'
+                f'{"<br>" + summary if summary else ""}'
+                f'</div>'
+            )
+        label = _escape(sec.get("label", ""))
+        sections_html.append(
+            f'<div class="briefing-section">'
+            f'<div class="briefing-section-label">{label}</div>'
+            f'{"".join(items_html)}'
+            f'</div>'
+        )
+
+    return f"""
+  <div class="briefing">
+    <div class="briefing-head">今日 AI 速览</div>
+    <div class="briefing-subhead">数据来源：aihot.virxact.com + RSS</div>
+    {"".join(sections_html)}
+  </div>"""
 
 
 def _escape(text: str) -> str:
