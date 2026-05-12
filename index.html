@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>伊恩 AI 小报 | 主播伊恩</title>
+<title>伊恩 AI 小报 | 全部期刊</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -18,367 +18,411 @@
     --ink-mute: #a0a0a4;
     --line: #e8e2d2;
     --accent: #d4801b;
-    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
   }
   body {
     font-family: var(--sans);
     background: var(--bg-page);
     color: var(--ink);
-    line-height: 1.75;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 24px 20px 80px;
-  }
+
+  /* ── Hero 舞台 ── */
   .hero {
-    position: relative;
     background: var(--bg-stage);
-    color: var(--ink);
-    padding: 56px 28px 44px;
-    border-radius: 24px;
-    margin-bottom: 32px;
     text-align: center;
-    overflow: hidden;
+    padding: 48px 24px 36px;
+    border-radius: 28px;
+    margin: 18px auto 0;
+    max-width: 840px;
+    position: relative;
   }
-  /* 模拟舞台底部柔光阴影 */
   .hero::after {
     content: '';
     position: absolute;
     left: 0; right: 0; bottom: 0;
     height: 60px;
-    background: linear-gradient(to top, rgba(60,40,10,0.06), transparent);
+    background: linear-gradient(to top, rgba(60,40,10,0.05), transparent);
     pointer-events: none;
+    border-radius: 0 0 28px 28px;
   }
   .hero-mascot {
-    height: 200px;
-    margin: 0 auto 28px;
+    height: 180px;
+    margin: 0 auto 22px;
     display: block;
     position: relative;
     z-index: 2;
-    /* 多层阴影模拟真实物体落在台面上 */
     filter:
-      drop-shadow(0 30px 25px rgba(80,50,10,0.18))
-      drop-shadow(0 12px 10px rgba(80,50,10,0.10));
+      drop-shadow(0 28px 22px rgba(80,50,10,0.16))
+      drop-shadow(0 10px 8px rgba(80,50,10,0.09));
   }
-  .hero-text {
-    position: relative;
-    z-index: 2;
-  }
+  .hero-text { position: relative; z-index: 2; }
   .logo {
     font-family: var(--serif);
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: 5px;
-    margin-bottom: 6px;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    margin-bottom: 4px;
     position: relative;
-    display: inline-block;
   }
   .logo::before, .logo::after {
     content: '✦';
     color: var(--accent);
     font-size: 14px;
-    margin: 0 16px;
-    vertical-align: 8px;
-    opacity: 0.7;
-  }
-  .author-line {
-    font-family: var(--serif);
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 18px;
-    letter-spacing: 2px;
+    margin: 0 18px;
+    vertical-align: 10px;
+    opacity: 0.65;
   }
   .tagline {
-    font-family: var(--serif);
-    font-size: 14px;
+    font-size: 13.5px;
     color: var(--ink-soft);
-    margin-bottom: 22px;
-    line-height: 1.85;
-    font-style: italic;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
   }
   .stats {
     display: inline-block;
     background: var(--bg-card);
-    padding: 7px 20px;
+    padding: 6px 22px;
     border-radius: 999px;
     font-size: 12.5px;
     color: var(--ink-soft);
     border: 1px solid var(--line);
     letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  /* ── Grid 容器 ── */
+  .grid-container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
   }
   .section-title {
     font-family: var(--serif);
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
-    color: var(--ink-soft);
-    margin: 12px 4px 16px;
-    letter-spacing: 3px;
+    color: var(--ink-mute);
+    margin: 8px 4px 18px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     border-bottom: 1px solid var(--line);
     padding-bottom: 12px;
   }
+  .episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 640px) {
+    .episodes-grid { grid-template-columns: 1fr; }
+    .hero { margin: 10px 12px 0; padding: 36px 16px 28px; border-radius: 20px; }
+    .hero::after { border-radius: 0 0 20px 20px; }
+    .hero-mascot { height: 140px; }
+    .logo { font-size: 30px; letter-spacing: 4px; }
+    .logo::before, .logo::after { margin: 0 8px; }
+  }
+
+  /* ── 卡片 ── */
   .episode-card {
     background: var(--bg-card);
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(60,40,10,0.04), 0 4px 16px rgba(60,40,10,0.04);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s, box-shadow 0.25s;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--line);
+    box-shadow: 0 2px 8px rgba(60,40,10,0.04);
+    position: relative;
   }
   .episode-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(60,40,10,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(60,40,10,0.10);
   }
+  /* 5 种强调色循环，像不同封面的杂志 */
+  .episode-card.card-accent-0 { border-top: 3px solid #d4801b; }
+  .episode-card.card-accent-1 { border-top: 3px solid #c75b4a; }
+  .episode-card.card-accent-2 { border-top: 3px solid #4a8c6f; }
+  .episode-card.card-accent-3 { border-top: 3px solid #5b6fb5; }
+  .episode-card.card-accent-4 { border-top: 3px solid #8b5e9e; }
+
   .ep-cover {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     object-fit: cover;
     background: #eee;
     display: block;
   }
   .ep-body {
-    padding: 18px 20px 20px;
-  }
-  .ep-meta-top {
+    padding: 16px 18px 18px;
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    font-size: 11.5px;
+    flex-direction: column;
+  }
+  .ep-issue-no {
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 700;
     color: var(--ink-mute);
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
   }
   .ep-title {
     font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
     color: var(--ink);
     line-height: 1.5;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .ep-meta {
+    display: flex;
+    gap: 14px;
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+  .ep-meta-chip {
+    background: #f5efe1;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--ink-soft);
   }
   .ep-quote {
     font-family: var(--serif);
-    font-size: 13.5px;
-    color: var(--ink);
-    background: #fdf8ed;
-    border-left: 2px solid var(--accent);
-    padding: 10px 14px;
-    margin-bottom: 12px;
-    line-height: 1.7;
-    font-style: italic;
-  }
-  .ep-segments {
     font-size: 12.5px;
     color: var(--ink-soft);
-    line-height: 1.7;
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 8px 12px;
+    margin-top: auto;
+    line-height: 1.65;
+    font-style: italic;
+    border-radius: 0 6px 6px 0;
   }
   .empty {
     text-align: center;
     padding: 60px 20px;
     color: var(--ink-mute);
+    font-family: var(--serif);
   }
   .footer {
     text-align: center;
     color: var(--ink-mute);
     font-size: 11.5px;
-    margin-top: 50px;
+    margin-top: 48px;
     letter-spacing: 0.5px;
   }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="grid-container">
   <div class="hero">
     <img class="hero-mascot" src="mascot.png" alt="AstraX">
     <div class="hero-text">
       <div class="logo">伊恩 AI 小报</div>
-      <div class="author-line">主笔 · 伊恩 / 形象 · AstraX</div>
-      <div class="tagline">每日一份带音频的 AI 资讯简报<br>把全网最值得关注的大事讲给你听</div>
-      <span class="stats">已发布 14 期</span>
+      <div class="tagline">每日一份带音频的 AI 资讯简报 · 把全网最值得关注的大事讲给你听</div>
+      <span class="stats">已发布 15 期</span>
     </div>
   </div>
 
-  <div class="section-title">All Issues · 历期</div>
+  <div class="section-title">历 期</div>
 
-  <a class="episode-card" href="episodes/2026-05-12-0412/">
+  <div class="episodes-grid">
+    <a class="episode-card card-accent-0" href="episodes/2026-05-12-0658/">
+  <img class="ep-cover" src="episodes/2026-05-12-0658/image_01.jpg" alt="AI 不再等你说完：全双工模型、电脑操控与 UBI 提案的开源冲击">
+  <div class="ep-body">
+    <div class="ep-issue-no">VOL.015 · 5/12</div>
+    <div class="ep-title">AI 不再等你说完：全双工模型、电脑操控与 UBI 提案的开源冲击</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 16分54秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;当 AI 学会同时听和说，你准备好被它打断了吗？&rdquo;</div>
+  </div>
+</a>
+<a class="episode-card card-accent-1" href="episodes/2026-05-12-0412/">
   <img class="ep-cover" src="episodes/2026-05-12-0412/image_01.jpg" alt="5 个故事揭示 AI 的真相：代码、文化、漏洞与边界">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-12 04:12</span>
-      <span>⏱ 13分20秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.014 · 5/12</div>
     <div class="ep-title">5 个故事揭示 AI 的真相：代码、文化、漏洞与边界</div>
-    <div class="ep-quote">"AI 竞争不仅是算力比拼，更是文化效率的比拼。"</div>
-    <div class="ep-segments">为什么中国 AI 实验室能「完美追赶 · 摩斯电码骗走 AI 代理 20 万美 · METR 也测不出 Claude M · Claude 写了 3000 行代码 · 打破双头垄断，马斯克的 Grok 低</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 13分20秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI 竞争不仅是算力比拼，更是文化效率的比拼。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-11-0441/">
+<a class="episode-card card-accent-2" href="episodes/2026-05-11-0441/">
   <img class="ep-cover" src="episodes/2026-05-11-0441/image_01.jpg" alt="99.9%成功率背后：机器人终于学会“先想再做”">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-11 04:41</span>
-      <span>⏱ 12分56秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.013 · 5/11</div>
     <div class="ep-title">99.9%成功率背后：机器人终于学会“先想再做”</div>
-    <div class="ep-quote">"机器人终于开始长脑子了"</div>
-    <div class="ep-segments">机器人终结者：99.9%的满分答卷 · AI 焊枪：工厂里的 Copilot · OpenAI 员工：人均彩票头奖 · AI 天网：边境监控的万亿生意 · RPCS3 对 AI 程序员说：先学</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 12分56秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;机器人终于开始长脑子了&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-10-0430/">
+<a class="episode-card card-accent-3" href="episodes/2026-05-10-0430/">
   <img class="ep-cover" src="episodes/2026-05-10-0430/image_01.jpg" alt="AI 重写工作规则：Coinbase 裁 14%，代码安全急追">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-10 04:30</span>
-      <span>⏱ 11分51秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.012 · 5/10</div>
     <div class="ep-title">AI 重写工作规则：Coinbase 裁 14%，代码安全急追</div>
-    <div class="ep-quote">"AI 生成代码的速度，必须慢于安全扫描。"</div>
-    <div class="ep-segments">Snyk 实时拦截 AI 写出的漏洞 · YourMemory 用图神经网络记 · Draft 插件终结 AI 助手的「 · GitHub 项目用 AI 助手复现 · Coinbase 裁员 14%：AI</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 11分51秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI 生成代码的速度，必须慢于安全扫描。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-09-0402/">
+<a class="episode-card card-accent-4" href="episodes/2026-05-09-0402/">
   <img class="ep-cover" src="episodes/2026-05-09-0402/image_01.jpg" alt="DeepSeek估值飙3500亿，AI硬盘短缺危及互联网存档">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-09 04:02</span>
-      <span>⏱ 10分46秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.011 · 5/9</div>
     <div class="ep-title">DeepSeek估值飙3500亿，AI硬盘短缺危及互联网存档</div>
-    <div class="ep-quote">"不是背叛理想，而是让理想活下去。"</div>
-    <div class="ep-segments">DeepSeek首轮融资500亿，梁 · 智会心研免费开放AI深度分析 · 如何与AI高效协作并持续进化 · AI硬短缺威胁互联网存档 · 人们为什么讨厌AI艺术</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 10分46秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;不是背叛理想，而是让理想活下去。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-07-0411/">
+<a class="episode-card card-accent-0" href="episodes/2026-05-07-0411/">
   <img class="ep-cover" src="episodes/2026-05-07-0411/image_01.jpg" alt="OpenAI暗钱买水军抹黑中国AI，马斯克却把22万GPU卖给Claude">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-07 04:11</span>
-      <span>⏱ 6分55秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.010 · 5/7</div>
     <div class="ep-title">OpenAI暗钱买水军抹黑中国AI，马斯克却把22万GPU卖给Claude</div>
-    <div class="ep-quote">"AI冷战，比算力更先开火的是人心。"</div>
-    <div class="ep-segments">暗钱买水军抹黑中国AI · Character.ai面临非法行医 · AI裁员或致社保医保破产 · 马斯克把22万GPU卖给Claude · 程序员用AI：既焦虑又依赖</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 6分55秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI冷战，比算力更先开火的是人心。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-06-0831/">
+<a class="episode-card card-accent-1" href="episodes/2026-05-06-0831/">
   <img class="ep-cover" src="episodes/2026-05-06-0831/image_01.jpg" alt="AI诊断碾压医生、豆包开始收费、美国国会查Cursor母公司——今天5件大事">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-06 08:31</span>
-      <span>⏱ 9分10秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.009 · 5/6</div>
     <div class="ep-title">AI诊断碾压医生、豆包开始收费、美国国会查Cursor母公司——今天5件大事</div>
-    <div class="ep-quote">"AI不是取代医生，而是重构决策的参考系"</div>
-    <div class="ep-segments">AI诊断准确率碾压医生 · 字节跳动豆包开始收费 · 美国国会调查Cursor和Airbn · Marc Lore：AI让任何人一分 · 芬兰AI实验室QuTwo估值3.8亿</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 9分10秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI不是取代医生，而是重构决策的参考系&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-06-0411/">
+<a class="episode-card card-accent-2" href="episodes/2026-05-06-0411/">
   <img class="ep-cover" src="episodes/2026-05-06-0411/image_01.jpg" alt="5件事颠覆AI认知：戴维金斯说AI有意识，谷歌被告赔150万">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-06 04:11</span>
-      <span>⏱ 14分57秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.008 · 5/6</div>
     <div class="ep-title">5件事颠覆AI认知：戴维金斯说AI有意识，谷歌被告赔150万</div>
-    <div class="ep-quote">"AI不是有意识，而是让你以为它有意识。"</div>
-    <div class="ep-segments">戴维金斯说AI有意识，专家说他被AI · 1200万token上下文，这家公司 · Anthropic的良心设计者：AI · 加拿大小提琴家起诉谷歌：AI搜索说我 · AI吞噬CPU——全球芯片短缺的幕后</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 14分57秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI不是有意识，而是让你以为它有意识。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-06-0256/">
+<a class="episode-card card-accent-3" href="episodes/2026-05-06-0256/">
   <img class="ep-cover" src="episodes/2026-05-06-0256/image_01.jpg" alt="AI暴改客服、IDE、助手">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-06 02:56</span>
-      <span>⏱ 5分51秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.007 · 5/6</div>
     <div class="ep-title">AI暴改客服、IDE、助手</div>
-    <div class="ep-quote">"AI代理不应只读代码，而该成为开发工具本身。"</div>
-    <div class="ep-segments">给AI整个IDE，效率飙升54% · Google秘密代理「雷米」曝光 · FFmpeg开发者怒斥AI公司「许可 · Telus用AI改客服口音，工会怒了 · OpenAI低延迟语音：实时AI对话</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 5分51秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI代理不应只读代码，而该成为开发工具本身。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-05-0413/">
+<a class="episode-card card-accent-4" href="episodes/2026-05-05-0413/">
   <img class="ep-cover" src="episodes/2026-05-05-0413/image_01.jpg" alt="AI抢饭碗？黄仁勋说反话，谷歌被告上法庭">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-05 04:13</span>
-      <span>⏱ 6分25秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.006 · 5/5</div>
     <div class="ep-title">AI抢饭碗？黄仁勋说反话，谷歌被告上法庭</div>
-    <div class="ep-quote">"AI取代的不是程序员，是那些拒绝进化的码农。"</div>
-    <div class="ep-segments">微软高管：AI永远取代不了程序员 · 黄仁勋：AI正在创造大量就业 · 谷歌AI把人误标成性侵犯，被告了 · 在任意Linux机器上跑AI Age · 小心！AI正在让我们“认知投降”</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 6分25秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI取代的不是程序员，是那些拒绝进化的码农。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-03-0437/">
+<a class="episode-card card-accent-0" href="episodes/2026-05-03-0437/">
   <img class="ep-cover" src="episodes/2026-05-03-0437/image_01.jpg" alt="Kimi K2.6 屠榜，AI医生上岗">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-03 04:37</span>
-      <span>⏱ 6分30秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.005 · 5/3</div>
     <div class="ep-title">Kimi K2.6 屠榜，AI医生上岗</div>
-    <div class="ep-quote">"开源模型把闭源巨头的护城河直接填平了。"</div>
-    <div class="ep-segments">Kimi K2.6 屠榜：开源模型暴 · AI医生诊断超越人类：真实世界测试结 · Claude Agent 失控：AI · Suno买下Songkick：AI音 · 美国海军1亿美元押注AI水下无人机</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 6分30秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;开源模型把闭源巨头的护城河直接填平了。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-02-0415/">
+<a class="episode-card card-accent-1" href="episodes/2026-05-02-0415/">
   <img class="ep-cover" src="episodes/2026-05-02-0415/image_01.jpg" alt="GPT-5.5逆袭，AI泡沫有救了？">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-02 04:15</span>
-      <span>⏱ 6分29秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.004 · 5/2</div>
     <div class="ep-title">GPT-5.5逆袭，AI泡沫有救了？</div>
-    <div class="ep-quote">"通用模型打平专业模型，垂直AI的护城河正在消失。"</div>
-    <div class="ep-segments">GPT-5.5 追平 Mythos  · Sam Altman 说不想取代你， · 终端 AI 交易员 Finny · AI 编程工具的隐藏成本：年费上万 · AI 泡沫到底有多大？大西洋月刊深度</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 6分29秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;通用模型打平专业模型，垂直AI的护城河正在消失。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-05-01-0444/">
+<a class="episode-card card-accent-2" href="episodes/2026-05-01-0444/">
   <img class="ep-cover" src="episodes/2026-05-01-0444/image_01.jpg" alt="扎克伯格亲口承认：AI让我裁了8000人">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-05-01 04:44</span>
-      <span>⏱ 5分58秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.003 · 5/1</div>
     <div class="ep-title">扎克伯格亲口承认：AI让我裁了8000人</div>
-    <div class="ep-quote">"AI没取代你的工作，但为了养AI，公司可能先裁了你。"</div>
-    <div class="ep-segments">扎克伯格承认：AI成本导致8000人 · Cursor的AI agent发疯， · ChatGPT图像2.0：印度火爆， · AI价值捕获：从平台转向模型实验室 · 还该不该学编程？一个资深工程师的困惑</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 5分58秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI没取代你的工作，但为了养AI，公司可能先裁了你。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-04-30-0138/">
+<a class="episode-card card-accent-3" href="episodes/2026-04-30-0138/">
   <img class="ep-cover" src="episodes/2026-04-30-0138/image_01.jpg" alt="AI公司融资9000亿，Meta却暴跌了">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-04-30 01:38</span>
-      <span>⏱ 4分57秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.002 · 4/30</div>
     <div class="ep-title">AI公司融资9000亿，Meta却暴跌了</div>
-    <div class="ep-quote">"9000亿估值不是数字，而是整个行业对AI的信仰投票。"</div>
-    <div class="ep-segments">Anthropic要融500亿美元， · Meta股价暴跌，AI投资吓坏华尔街 · 生数科技：做视频，顺便把具身智能的活 · Z世代用AI替自己吵架，人类社交要变 · AI律师来了：开源法律AI项目Mik</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 4分57秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;9000亿估值不是数字，而是整个行业对AI的信仰投票。&rdquo;</div>
   </div>
 </a>
-<a class="episode-card" href="episodes/2026-04-28-1647/">
+<a class="episode-card card-accent-4" href="episodes/2026-04-28-1647/">
   <img class="ep-cover" src="episodes/2026-04-28-1647/image_01.jpg" alt="AI记者上线，新闻编辑部无人了">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 2026-04-28 16:47</span>
-      <span>⏱ 6分16秒 · 5 条</span>
-    </div>
+    <div class="ep-issue-no">VOL.001 · 4/28</div>
     <div class="ep-title">AI记者上线，新闻编辑部无人了</div>
-    <div class="ep-quote">"AI记者写出爆款，赚的稿费比我还多。"</div>
-    <div class="ep-segments">AI记者运行编辑部，写稿赚钱全自动 · 谷歌测试 YouTube AI搜索， · 马斯克诉奥特曼开庭，陪审团直言‘不喜 · Delegare：让AI智能体安全付 · VibeBrowser：让AI直接登</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ 6分16秒</span>
+      <span class="ep-meta-chip">5 条</span>
+    </div>
+    <div class="ep-quote">&ldquo;AI记者写出爆款，赚的稿费比我还多。&rdquo;</div>
   </div>
 </a>
+  </div>
 
   <div class="footer">
-    Powered by Claude Code · Updated 2026-05-12 04:15
+    Powered by Claude Code · Updated 2026-05-12 07:01
   </div>
 </div>
 </body>

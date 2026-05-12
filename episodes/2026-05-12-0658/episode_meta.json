@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-12-0658",
+  "title": "AI 不再等你说完：全双工模型、电脑操控与 UBI 提案的开源冲击",
+  "published_at": "2026-05-12 06:58",
+  "duration_seconds": 1014.74,
+  "duration_label": "16分54秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "AI 终于可以打断你了",
+      "golden_quote": "当 AI 学会同时听和说，你准备好被它打断了吗？",
+      "keywords": [
+        "全双工",
+        "Thinking Machines Lab",
+        "Mira Murati",
+        "AI 对话",
+        "延迟"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "龙虾长手脚了！OpenClaw 的 Peekaboo 能替你操作 Mac",
+      "golden_quote": "龙虾伸出了手和脚，而你桌上的键盘和鼠标，第一次有了真正的 AI 接班人。",
+      "keywords": [
+        "OpenClaw",
+        "Peekaboo v3",
+        "Computer Use",
+        "Mac 自动化",
+        "MCP 协议"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "UBI 和四天工作制再被科技领袖提出，欧洲说「我早就听过了」",
+      "golden_quote": "别把再发明轮子误认为创新——UBI 不是新药方，而是被搁置的老问题。",
+      "keywords": [
+        "UBI",
+        "缩短工作周",
+        "AI 失业",
+        "欧洲经验",
+        "社会制度"
+      ],
+      "source": "Le Monde / Hacker News"
+    },
+    {
+      "title": "别让 Claude Code 等你：最大瓶颈是你的注意力",
+      "golden_quote": "别让 AI 等你，让它替你跑通宵——你需要学习的是任务架构，而不是更好的 prompt。",
+      "keywords": [
+        "Claude Code",
+        "并行编程",
+        "AI 代理",
+        "自主开发",
+        "效率优化"
+      ],
+      "source": "JigJoy / Hacker News"
+    },
+    {
+      "title": "技能 vs.文档：Wix 跑了 250 次评测，结果出乎意料",
+      "golden_quote": "技能不是银弹，文档不是古董——最好的 agent 知识库是一个不断自我更新的生态。",
+      "keywords": [
+        "AI 技能",
+        "文档",
+        "Agent 评测",
+        "知识库",
+        "Wix Engineering"
+      ],
+      "source": "Wix Engineering / Hacker News"
+    }
+  ]
+}
