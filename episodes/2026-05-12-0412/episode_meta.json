@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-12-0412",
+  "title": "5 个故事揭示 AI 的真相：代码、文化、漏洞与边界",
+  "published_at": "2026-05-12 04:12",
+  "duration_seconds": 800.9,
+  "duration_label": "13分20秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "为什么中国 AI 实验室能「完美追赶」？",
+      "golden_quote": "AI 竞争不仅是算力比拼，更是文化效率的比拼。",
+      "keywords": [
+        "中国AI实验室",
+        "文化差异",
+        "快速追赶",
+        "集体主义",
+        "AI竞争"
+      ],
+      "source": "Interconnects AI"
+    },
+    {
+      "title": "摩斯电码骗走 AI 代理 20 万美元",
+      "golden_quote": "不要把 AI 代理直接挂到金融系统上，除非你想提前破产。",
+      "keywords": [
+        "AI代理",
+        "提示注入",
+        "摩斯电码",
+        "金融安全",
+        "漏洞"
+      ],
+      "source": "Dave's Garage YouTube"
+    },
+    {
+      "title": "METR 也测不出 Claude Mythos 的极限",
+      "golden_quote": "当 AI 能连续工作一整天，员工的定义要重新写了。",
+      "keywords": [
+        "任务视野",
+        "METR",
+        "Claude Mythos",
+        "AI自主性",
+        "评估基准"
+      ],
+      "source": "Hugonomy Systems"
+    },
+    {
+      "title": "Claude 写了 3000 行代码拒绝 import",
+      "golden_quote": "AI 编码的弱点：不怕它写不出代码，怕它把轮子重造十遍。",
+      "keywords": [
+        "Claude",
+        "代码生成",
+        "重新发明轮子",
+        "RL训练偏差",
+        "沉没成本"
+      ],
+      "source": "FireflySentinel博客"
+    },
+    {
+      "title": "打破双头垄断，马斯克的 Grok 低开低走",
+      "golden_quote": "AI竞赛进入深水区：文化、安全、谦逊和专注决定成败。",
+      "keywords": [
+        "Grok",
+        "马斯克",
+        "xAI",
+        "AI竞赛",
+        "掉队"
+      ],
+      "source": "Wall Street Journal"
+    }
+  ]
+}
