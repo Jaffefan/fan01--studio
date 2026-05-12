@@ -179,8 +179,12 @@ def _fetch_aihot_daily() -> dict | None:
             if resp.status_code != 200:
                 print(f"     aiHot API 返回 {resp.status_code}")
                 return None
+            if not resp.text or not resp.text.strip():
+                print("     aiHot 日报尚未生成（空响应）")
+                return None
             data = resp.json()
-            if "sections" not in data:
+            if not data.get("sections"):
+                print(f"     aiHot 日报无 sections: {list(data.keys()) if data else 'empty'}")
                 return None
             return data
     except Exception as e:

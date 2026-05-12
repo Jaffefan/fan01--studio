@@ -271,7 +271,9 @@ def generate_script(articles: list[dict]) -> dict:
         from article_enricher import enrich_articles
         enrich_articles(selected)
     except Exception as e:
+        import traceback
         print(f"     ⚠️ 抓取异常（继续用 summary）: {e}")
+        traceback.print_exc()
         for a in selected:
             a.setdefault("full_body", a.get("summary", ""))
 
