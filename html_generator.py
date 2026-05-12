@@ -16,43 +16,46 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} - {date_str}</title>
+<title>{title} - 伊恩 AI 小报</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   :root {{
-    --bg-page: #faf6ee;
+    --bg-page: #fdfcf8;
     --bg-card: #ffffff;
     --ink: #1d1d1f;
-    --ink-soft: #6e6e73;
-    --ink-mute: #a0a0a4;
-    --line: #e8e2d2;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
     --accent: #d4801b;
-    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
   }}
   body {{
-    font-family: var(--sans);
+    font-family: var(--serif);
     background: var(--bg-page);
     color: var(--ink);
-    line-height: 1.75;
+    line-height: 1.85;
     -webkit-font-smoothing: antialiased;
   }}
   .container {{
-    max-width: 720px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 24px 20px 80px;
+    padding: 40px 24px 80px;
   }}
-  /* 单集页顶部面包屑（取代节目大 Logo） */
+
+  /* ── 面包屑 ── */
   .breadcrumb {{
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 12.5px;
-    color: var(--ink-soft);
-    margin-bottom: 28px;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
     letter-spacing: 0.5px;
   }}
   .breadcrumb a {{
@@ -61,134 +64,128 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     transition: color 0.15s;
   }}
   .breadcrumb a:hover {{ color: var(--accent); }}
-  .breadcrumb .sep {{
-    color: var(--ink-mute);
-    font-size: 10px;
-  }}
-  .breadcrumb .show {{
-    color: var(--ink);
-    font-weight: 500;
-  }}
+  .breadcrumb .sep {{ font-size: 9px; }}
   .breadcrumb .vol {{
-    font-family: "SF Mono", Consolas, monospace;
-    color: var(--ink-mute);
-    font-size: 11.5px;
-    letter-spacing: 1.5px;
     margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
   }}
 
-  /* 期刊报头：聚焦在单期内容上 */
-  .header {{
-    background: transparent;
-    color: var(--ink);
-    padding: 0 0 28px;
-    margin-bottom: 28px;
-    border-bottom: 1px solid var(--line);
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {{
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
   }}
-  /* 大单期标题 */
+  .masthead-show {{
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }}
+  .masthead-info {{
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }}
+  .masthead-info span {{ margin: 0 10px; }}
+
+  /* ── 标题 ── */
   .title {{
     font-family: var(--serif);
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 34px;
+    font-weight: 900;
     color: var(--ink);
-    line-height: 1.4;
-    margin-bottom: 18px;
-    letter-spacing: 0.5px;
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
   }}
-  /* 紧凑作者条 */
-  .masthead {{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 4px;
-  }}
-  .mascot-avatar {{
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--bg-card);
-    border: 1px solid var(--line);
-    object-fit: cover;
-    object-position: center top;
-    padding: 1px;
-    flex-shrink: 0;
-  }}
-  .masthead-name {{
-    font-family: var(--serif);
-    font-size: 14px;
-    color: var(--ink);
-    font-weight: 500;
-  }}
-  .meta {{
-    font-size: 12px;
-    color: var(--ink-mute);
-    letter-spacing: 0.5px;
-    margin-left: auto;
-  }}
-  .meta-divider {{
-    color: var(--ink-mute);
-    margin: 0 8px;
-  }}
+
+  /* ── 播放器 ── */
   .player {{
     background: var(--bg-card);
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 24px;
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
     border: 1px solid var(--line);
-    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+  }}
+  .player-label {{
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
   }}
   audio {{
     width: 100%;
     height: 44px;
+    border-radius: 8px;
   }}
+
+  /* ── 章节目录 ── */
   .toc {{
-    background: var(--bg-card);
-    padding: 18px 22px;
-    border-radius: 14px;
-    margin-bottom: 28px;
-    border: 1px solid var(--line);
-    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    margin-bottom: 36px;
+    padding: 0 4px;
   }}
   .toc-title {{
-    font-family: var(--serif);
-    font-size: 12px;
-    color: var(--ink-soft);
-    margin-bottom: 14px;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
     letter-spacing: 3px;
     text-transform: uppercase;
+    margin-bottom: 14px;
     font-weight: 600;
   }}
   .toc-item {{
     display: flex;
-    align-items: flex-start;
-    padding: 10px 0;
+    align-items: baseline;
+    padding: 8px 0;
     cursor: pointer;
-    border-bottom: 1px solid #f5efe1;
-    transition: background 0.15s;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
   }}
   .toc-item:last-child {{ border-bottom: none; }}
-  .toc-item:hover {{ background: #fdfaf1; }}
+  .toc-item:hover {{ color: var(--accent); }}
   .toc-time {{
+    font-family: var(--sans);
+    font-size: 12px;
     color: var(--accent);
-    font-size: 12.5px;
-    font-family: "SF Mono", Consolas, monospace;
-    min-width: 52px;
-    margin-right: 12px;
-    margin-top: 2px;
-    letter-spacing: 0.5px;
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
   }}
   .toc-text {{
     flex: 1;
-    font-size: 14.5px;
+    font-size: 15px;
     color: var(--ink);
   }}
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {{
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }}
+
+  /* ── 资讯片段 ── */
   .segment {{
-    background: var(--bg-card);
-    border-radius: 14px;
-    margin-bottom: 18px;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    margin-bottom: 44px;
   }}
   .segment-image {{
     width: 100%;
@@ -196,74 +193,75 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     object-fit: cover;
     background: #eee;
     display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
   }}
-  .segment-body {{
-    padding: 20px 22px 22px;
-  }}
-  .segment-time {{
-    display: inline-block;
-    color: var(--accent);
-    font-size: 12px;
+  .segment-number {{
+    font-family: var(--sans);
+    font-size: 11px;
     font-weight: 600;
-    background: #fdf2e0;
-    padding: 4px 10px;
-    border-radius: 999px;
-    cursor: pointer;
-    margin-bottom: 12px;
-    font-family: "SF Mono", Consolas, monospace;
-    letter-spacing: 0.5px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
   }}
-  .segment-time:hover {{ background: #f9e6c3; }}
   .segment-title {{
     font-family: var(--serif);
-    font-size: 19px;
-    font-weight: 600;
-    margin-bottom: 12px;
+    font-size: 21px;
+    font-weight: 700;
     color: var(--ink);
-    line-height: 1.5;
+    line-height: 1.45;
+    margin-bottom: 12px;
   }}
   .segment-summary {{
-    font-size: 14.5px;
-    color: var(--ink-soft);
-    margin-bottom: 14px;
-    line-height: 1.85;
-  }}
-  .golden-quote {{
     font-family: var(--serif);
     font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }}
+
+  /* ── 金句引用 ── */
+  .golden-quote {{
+    font-family: var(--serif);
+    font-size: 18px;
     font-weight: 500;
     color: var(--ink);
-    background: #fdf8ed;
-    border-left: 2px solid var(--accent);
-    padding: 12px 16px;
-    margin: 14px 0;
-    line-height: 1.75;
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
     font-style: italic;
   }}
   .golden-quote::before {{
-    content: '"';
-    font-family: var(--serif);
-    font-size: 26px;
+    content: '\\201C';
+    font-size: 56px;
     color: var(--accent);
-    margin-right: 6px;
+    position: absolute;
+    left: 0;
+    top: 6px;
     font-weight: 700;
-    line-height: 0;
-    vertical-align: -8px;
+    line-height: 1;
+    opacity: 0.4;
   }}
+
+  /* ── 来源与标签 ── */
   .segment-meta {{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    font-size: 12px;
+    font-family: var(--sans);
+    font-size: 11.5px;
     color: var(--ink-mute);
     align-items: center;
   }}
   .tag {{
-    background: #f5efe1;
+    background: #f5f0e8;
     padding: 3px 10px;
     border-radius: 999px;
     color: var(--ink-soft);
-    font-size: 11.5px;
+    font-size: 11px;
   }}
   .source-link {{
     color: var(--accent);
@@ -272,38 +270,34 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     margin-left: auto;
   }}
   .source-link:hover {{ text-decoration: underline; }}
-  /* 上一期/下一期导航 */
+
+  /* ── 上下期导航 ── */
   .episode-nav {{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 36px;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
   }}
   .episode-nav a {{
-    background: var(--bg-card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 16px 18px;
     text-decoration: none;
     color: inherit;
-    transition: all 0.2s;
-    box-shadow: 0 1px 3px rgba(60,40,10,0.04);
+    transition: color 0.15s;
     display: block;
   }}
-  .episode-nav a:hover {{
-    transform: translateY(-2px);
-    border-color: var(--accent);
-    box-shadow: 0 6px 16px rgba(60,40,10,0.08);
-  }}
+  .episode-nav a:hover {{ color: var(--accent); }}
   .episode-nav-label {{
-    font-size: 11.5px;
+    font-size: 11px;
     color: var(--ink-mute);
     letter-spacing: 2px;
     margin-bottom: 6px;
+    text-transform: uppercase;
   }}
   .episode-nav-title {{
     font-family: var(--serif);
-    font-size: 14.5px;
+    font-size: 14px;
     color: var(--ink);
     line-height: 1.5;
     overflow: hidden;
@@ -313,23 +307,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   }}
   .episode-nav .next {{ text-align: right; }}
   .episode-nav .placeholder {{
-    background: transparent;
-    border: 1px dashed var(--line);
     color: var(--ink-mute);
     cursor: default;
-    box-shadow: none;
+    opacity: 0.5;
   }}
-  .episode-nav .placeholder:hover {{
-    transform: none;
-    border-color: var(--line);
-    box-shadow: none;
-  }}
+
   .footer {{
     text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
     color: var(--ink-mute);
-    font-size: 11.5px;
-    margin-top: 36px;
+    margin-top: 48px;
     letter-spacing: 0.5px;
+  }}
+
+  @media (max-width: 600px) {{
+    .container {{ padding: 24px 16px 64px; }}
+    .title {{ font-size: 26px; }}
+    .segment-title {{ font-size: 18px; }}
+    .golden-quote {{ font-size: 16px; padding: 16px 20px; }}
   }}
 </style>
 </head>
@@ -338,27 +334,28 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <div class="breadcrumb">
     <a href="../../index.html">← 全部期刊</a>
     <span class="sep">·</span>
-    <span class="show">伊恩 AI 小报</span>
-    <span class="vol">VOL.{issue_no}</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 {issue_no} 期</span>
   </div>
-  <div class="header">
-    <div class="title">{title}</div>
-    <div class="masthead">
-      <img class="mascot-avatar" src="mascot.png?v={cache_bust}" alt="AstraX">
-      <div class="masthead-name">伊恩</div>
-      <div class="meta">{date_str}<span class="meta-divider">·</span>{segment_count} 条<span class="meta-divider">·</span>{duration_label}</div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>{date_str}</span><span>·</span><span>{segment_count} 条资讯</span><span>·</span><span>{duration_label}</span><span>·</span><span>主笔 伊恩</span>
     </div>
   </div>
 
+  <h1 class="title">{title}</h1>
+
   <div class="player">
+    <div class="player-label">收听本期</div>
     <audio id="player" controls preload="metadata">
       <source src="full.mp3?v={cache_bust}" type="audio/mpeg">
-      你的浏览器不支持音频播放。
     </audio>
   </div>
 
   <div class="toc">
-    <div class="toc-title">📑 章节</div>
+    <div class="toc-title">章节</div>
     {toc_items}
   </div>
 
@@ -386,13 +383,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   fetch('../../episodes-list.json')
     .then(r => r.json())
     .then(list => {{
-      // 当前 episode_id 从 URL 取（episodes/<id>/）
       const m = window.location.pathname.match(/episodes\\/([^\\/]+)/);
       if (!m) return;
       const currentId = m[1];
       const idx = list.findIndex(e => e.episode_id === currentId);
       if (idx === -1) return;
-      // list 是按时间倒序的：idx-1 是更新的（"下一期"），idx+1 是更老的（"上一期"）
       const newer = idx > 0 ? list[idx - 1] : null;
       const older = idx < list.length - 1 ? list[idx + 1] : null;
       const nav = document.getElementById('episode-nav');
@@ -476,7 +471,7 @@ def generate_html(
             f'</div>'
         )
 
-    # 渲染每条资讯卡片
+    # 渲染每条资讯片段（报纸式编排：大图 → 编号 → 标题 → 正文 → 引用）
     segments_html = []
     for i, seg in enumerate(script.get("segments", []), 1):
         chapter = segment_chapters[i - 1] if i - 1 < len(segment_chapters) else None
@@ -492,7 +487,7 @@ def generate_html(
                 break
 
         img_html = (
-            f'<img class="segment-image" src="{img_filename}?v={cache_bust}" alt="{_escape(seg["news_title"])}">'
+            f'<img class="segment-image" src="{img_filename}?v={cache_bust}" alt="{_escape(seg["news_title"])}" data-seek="{seek_seconds}" style="cursor:pointer">'
             if img_filename else
             '<div class="segment-image"></div>'
         )
@@ -504,11 +499,11 @@ def generate_html(
         source_link = seg.get("source_link", "")
         source_name = seg.get("source", "")
         source_html = (
-            f'<a class="source-link" href="{_escape(source_link)}" target="_blank">原文 →</a>'
+            f'<a class="source-link" href="{_escape(source_link)}" target="_blank" rel="noopener">原文 →</a>'
             if source_link else ""
         )
 
-        summary = seg.get("summary") or seg.get("script", "")[:200]
+        summary = seg.get("summary") or ""
         golden_quote = seg.get("golden_quote", "")
         quote_html = (
             f'<div class="golden-quote">{_escape(golden_quote)}</div>'
@@ -518,16 +513,14 @@ def generate_html(
         segments_html.append(f"""
   <div class="segment">
     {img_html}
-    <div class="segment-body">
-      <span class="segment-time" data-seek="{seek_seconds}">▶ {time_label}</span>
-      <div class="segment-title">{i}. {_escape(seg["news_title"])}</div>
-      {quote_html}
-      <div class="segment-summary">{_escape(summary)}</div>
-      <div class="segment-meta">
-        {keywords_html}
-        <span class="tag">来源: {_escape(source_name)}</span>
-        {source_html}
-      </div>
+    <div class="segment-number" data-seek="{seek_seconds}" style="cursor:pointer">第 {i} 条 · {time_label}</div>
+    <h2 class="segment-title">{_escape(seg["news_title"])}</h2>
+    <div class="segment-summary">{_escape(summary)}</div>
+    {quote_html}
+    <div class="segment-meta">
+      {keywords_html}
+      <span class="tag">来源: {_escape(source_name)}</span>
+      {source_html}
     </div>
   </div>""")
 

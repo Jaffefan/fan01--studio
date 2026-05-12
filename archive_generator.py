@@ -15,10 +15,10 @@ ARCHIVE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>伊恩 AI 小报 | 主播伊恩</title>
+<title>伊恩 AI 小报 | 全部期刊</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   :root {{
@@ -30,197 +30,229 @@ ARCHIVE_TEMPLATE = """<!DOCTYPE html>
     --ink-mute: #a0a0a4;
     --line: #e8e2d2;
     --accent: #d4801b;
-    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
   }}
   body {{
     font-family: var(--sans);
     background: var(--bg-page);
     color: var(--ink);
-    line-height: 1.75;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }}
-  .container {{
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 24px 20px 80px;
-  }}
+
+  /* ── Hero 舞台 ── */
   .hero {{
-    position: relative;
     background: var(--bg-stage);
-    color: var(--ink);
-    padding: 56px 28px 44px;
-    border-radius: 24px;
-    margin-bottom: 32px;
     text-align: center;
-    overflow: hidden;
+    padding: 48px 24px 36px;
+    border-radius: 28px;
+    margin: 18px auto 0;
+    max-width: 840px;
+    position: relative;
   }}
-  /* 模拟舞台底部柔光阴影 */
   .hero::after {{
     content: '';
     position: absolute;
     left: 0; right: 0; bottom: 0;
     height: 60px;
-    background: linear-gradient(to top, rgba(60,40,10,0.06), transparent);
+    background: linear-gradient(to top, rgba(60,40,10,0.05), transparent);
     pointer-events: none;
+    border-radius: 0 0 28px 28px;
   }}
   .hero-mascot {{
-    height: 200px;
-    margin: 0 auto 28px;
+    height: 180px;
+    margin: 0 auto 22px;
     display: block;
     position: relative;
     z-index: 2;
-    /* 多层阴影模拟真实物体落在台面上 */
     filter:
-      drop-shadow(0 30px 25px rgba(80,50,10,0.18))
-      drop-shadow(0 12px 10px rgba(80,50,10,0.10));
+      drop-shadow(0 28px 22px rgba(80,50,10,0.16))
+      drop-shadow(0 10px 8px rgba(80,50,10,0.09));
   }}
-  .hero-text {{
-    position: relative;
-    z-index: 2;
-  }}
+  .hero-text {{ position: relative; z-index: 2; }}
   .logo {{
     font-family: var(--serif);
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: 5px;
-    margin-bottom: 6px;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    margin-bottom: 4px;
     position: relative;
-    display: inline-block;
   }}
   .logo::before, .logo::after {{
     content: '✦';
     color: var(--accent);
     font-size: 14px;
-    margin: 0 16px;
-    vertical-align: 8px;
-    opacity: 0.7;
-  }}
-  .author-line {{
-    font-family: var(--serif);
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 18px;
-    letter-spacing: 2px;
+    margin: 0 18px;
+    vertical-align: 10px;
+    opacity: 0.65;
   }}
   .tagline {{
-    font-family: var(--serif);
-    font-size: 14px;
+    font-size: 13.5px;
     color: var(--ink-soft);
-    margin-bottom: 22px;
-    line-height: 1.85;
-    font-style: italic;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
   }}
   .stats {{
     display: inline-block;
     background: var(--bg-card);
-    padding: 7px 20px;
+    padding: 6px 22px;
     border-radius: 999px;
     font-size: 12.5px;
     color: var(--ink-soft);
     border: 1px solid var(--line);
     letter-spacing: 1px;
+    font-weight: 500;
+  }}
+
+  /* ── Grid 容器 ── */
+  .grid-container {{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
   }}
   .section-title {{
     font-family: var(--serif);
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
-    color: var(--ink-soft);
-    margin: 12px 4px 16px;
-    letter-spacing: 3px;
+    color: var(--ink-mute);
+    margin: 8px 4px 18px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     border-bottom: 1px solid var(--line);
     padding-bottom: 12px;
   }}
+  .episodes-grid {{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }}
+  @media (max-width: 640px) {{
+    .episodes-grid {{ grid-template-columns: 1fr; }}
+    .hero {{ margin: 10px 12px 0; padding: 36px 16px 28px; border-radius: 20px; }}
+    .hero::after {{ border-radius: 0 0 20px 20px; }}
+    .hero-mascot {{ height: 140px; }}
+    .logo {{ font-size: 30px; letter-spacing: 4px; }}
+    .logo::before, .logo::after {{ margin: 0 8px; }}
+  }}
+
+  /* ── 卡片 ── */
   .episode-card {{
     background: var(--bg-card);
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
-    margin-bottom: 16px;
-    box-shadow: 0 1px 3px rgba(60,40,10,0.04), 0 4px 16px rgba(60,40,10,0.04);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s, box-shadow 0.25s;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--line);
+    box-shadow: 0 2px 8px rgba(60,40,10,0.04);
+    position: relative;
   }}
   .episode-card:hover {{
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(60,40,10,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(60,40,10,0.10);
   }}
+  /* 5 种强调色循环，像不同封面的杂志 */
+  .episode-card.card-accent-0 {{ border-top: 3px solid #d4801b; }}
+  .episode-card.card-accent-1 {{ border-top: 3px solid #c75b4a; }}
+  .episode-card.card-accent-2 {{ border-top: 3px solid #4a8c6f; }}
+  .episode-card.card-accent-3 {{ border-top: 3px solid #5b6fb5; }}
+  .episode-card.card-accent-4 {{ border-top: 3px solid #8b5e9e; }}
+
   .ep-cover {{
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     object-fit: cover;
     background: #eee;
     display: block;
   }}
   .ep-body {{
-    padding: 18px 20px 20px;
-  }}
-  .ep-meta-top {{
+    padding: 16px 18px 18px;
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    font-size: 11.5px;
+    flex-direction: column;
+  }}
+  .ep-issue-no {{
+    font-family: var(--sans);
+    font-size: 10.5px;
+    font-weight: 700;
     color: var(--ink-mute);
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
   }}
   .ep-title {{
     font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
     color: var(--ink);
     line-height: 1.5;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }}
+  .ep-meta {{
+    display: flex;
+    gap: 14px;
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }}
+  .ep-meta-chip {{
+    background: #f5efe1;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: var(--ink-soft);
   }}
   .ep-quote {{
     font-family: var(--serif);
-    font-size: 13.5px;
-    color: var(--ink);
-    background: #fdf8ed;
-    border-left: 2px solid var(--accent);
-    padding: 10px 14px;
-    margin-bottom: 12px;
-    line-height: 1.7;
-    font-style: italic;
-  }}
-  .ep-segments {{
     font-size: 12.5px;
     color: var(--ink-soft);
-    line-height: 1.7;
+    background: #fdf8ed;
+    border-left: 2px solid var(--accent);
+    padding: 8px 12px;
+    margin-top: auto;
+    line-height: 1.65;
+    font-style: italic;
+    border-radius: 0 6px 6px 0;
   }}
   .empty {{
     text-align: center;
     padding: 60px 20px;
     color: var(--ink-mute);
+    font-family: var(--serif);
   }}
   .footer {{
     text-align: center;
     color: var(--ink-mute);
     font-size: 11.5px;
-    margin-top: 50px;
+    margin-top: 48px;
     letter-spacing: 0.5px;
   }}
 </style>
 </head>
 <body>
-<div class="container">
+<div class="grid-container">
   <div class="hero">
     <img class="hero-mascot" src="mascot.png" alt="AstraX">
     <div class="hero-text">
       <div class="logo">伊恩 AI 小报</div>
-      <div class="author-line">主笔 · 伊恩 / 形象 · AstraX</div>
-      <div class="tagline">每日一份带音频的 AI 资讯简报<br>把全网最值得关注的大事讲给你听</div>
+      <div class="tagline">每日一份带音频的 AI 资讯简报 · 把全网最值得关注的大事讲给你听</div>
       <span class="stats">已发布 {episode_count} 期</span>
     </div>
   </div>
 
-  <div class="section-title">All Issues · 历期</div>
+  <div class="section-title">历 期</div>
 
-  {episodes_html}
+  <div class="episodes-grid">
+    {episodes_html}
+  </div>
 
   <div class="footer">
     Powered by Claude Code · Updated {generated_at}
@@ -270,11 +302,13 @@ def build_archive(repo_dir: str) -> str:
 
     # 渲染卡片
     if not episodes:
-        episodes_html = '<div class="empty">还没有节目，敬请期待 🎙️</div>'
+        episodes_html = '<div class="empty">还没有节目，敬请期待</div>'
     else:
         cards = []
-        for ep in episodes:
-            cards.append(_render_episode_card(ep))
+        for i, ep in enumerate(episodes):
+            # 补 issue_no（反向计算：最新一期 = len）
+            ep.setdefault("issue_no", f"VOL.{len(episodes) - i:03d}")
+            cards.append(_render_episode_card(ep, i))
         episodes_html = "\n".join(cards)
 
     html = ARCHIVE_TEMPLATE.format(
@@ -291,13 +325,14 @@ def build_archive(repo_dir: str) -> str:
     return out_path
 
 
-def _render_episode_card(ep: dict) -> str:
-    """渲染一张期刊卡片"""
+def _render_episode_card(ep: dict, index: int) -> str:
+    """渲染一张期刊卡片（双列网格，每张不同强调色）"""
     episode_id = ep["episode_id"]
     title = _escape(ep.get("title", ""))
-    published = _escape(ep.get("published_at", ""))
+    published = _escape(_short_date(ep.get("published_at", "")))
     duration = _escape(ep.get("duration_label", ""))
     segment_count = ep.get("segment_count", 0)
+    issue_no = ep.get("issue_no", "")
     cover = ep.get("cover_image", "image_01.jpg")
     cover_url = f"episodes/{episode_id}/{cover}"
 
@@ -309,26 +344,22 @@ def _render_episode_card(ep: dict) -> str:
             top_quote = seg["golden_quote"]
             break
 
-    # 各段标题列表
-    seg_titles = " · ".join(
-        _escape((s.get("title") or "")[:18]) for s in segments[:5]
-    )
-
     quote_html = (
-        f'<div class="ep-quote">"{_escape(top_quote)}"</div>'
+        f'<div class="ep-quote">&ldquo;{_escape(top_quote)}&rdquo;</div>'
         if top_quote else ""
     )
+    accent_class = f"card-accent-{index % 5}"
 
-    return f'''<a class="episode-card" href="episodes/{episode_id}/">
+    return f'''<a class="episode-card {accent_class}" href="episodes/{episode_id}/">
   <img class="ep-cover" src="{cover_url}" alt="{title}">
   <div class="ep-body">
-    <div class="ep-meta-top">
-      <span>📅 {published}</span>
-      <span>⏱ {duration} · {segment_count} 条</span>
-    </div>
+    <div class="ep-issue-no">{issue_no} · {published}</div>
     <div class="ep-title">{title}</div>
+    <div class="ep-meta">
+      <span class="ep-meta-chip">⏱ {duration}</span>
+      <span class="ep-meta-chip">{segment_count} 条</span>
+    </div>
     {quote_html}
-    <div class="ep-segments">{seg_titles}</div>
   </div>
 </a>'''
 
@@ -342,6 +373,17 @@ def _escape(text: str) -> str:
             .replace(">", "&gt;")
             .replace('"', "&quot;")
     )
+
+
+def _short_date(date_str: str) -> str:
+    """2026-05-12 08:30 → 5/12"""
+    try:
+        parts = date_str.split(" ")[0].split("-")
+        if len(parts) == 3:
+            return f"{int(parts[1])}/{int(parts[2])}"
+    except Exception:
+        pass
+    return date_str
 
 
 if __name__ == "__main__":
