@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-13-1228",
+  "title": "5 件让你重新理解 AI 边界的事：从交互模型到版权大战",
+  "published_at": "2026-05-13 12:28",
+  "duration_seconds": 794.06,
+  "duration_label": "13分14秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "你随时能打断的 AI 来了：Mira 的交互模型",
+      "golden_quote": "AI 终于不再装聋作哑。",
+      "keywords": [
+        "交互模型",
+        "Mira Murati",
+        "Thinking Machines",
+        "多模态",
+        "实时交互"
+      ],
+      "source": "X：歸藏 (@op7418)"
+    },
+    {
+      "title": "Claude 正式攻占律所：20 多个 MCP 连接器",
+      "golden_quote": "AI 落地行业的最佳姿势：嵌入工具，而非替换工具。",
+      "keywords": [
+        "Claude",
+        "法律行业",
+        "MCP连接器",
+        "插件",
+        "Anthropic"
+      ],
+      "source": "Claude：Blog（网页）"
+    },
+    {
+      "title": "六州司法部长联手调查奥特曼",
+      "golden_quote": "8520 亿美元的公司，CEO 没有股权——这本身就是一个巨大的问号。",
+      "keywords": [
+        "山姆·奥特曼",
+        "OpenAI",
+        "利益冲突",
+        "SEC",
+        "调查"
+      ],
+      "source": "X：cb_doge (@cb_doge)"
+    },
+    {
+      "title": "爱思唯尔首次起诉 Meta：盗版论文训练 Llama",
+      "golden_quote": "学术出版商下场起诉 AI，标志着版权大战进入新阶段。",
+      "keywords": [
+        "爱思唯尔",
+        "Meta",
+        "版权",
+        "Llama",
+        "Sci-Hub"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "何恺明 105M 参数语言模型：不做预测下一个词",
+      "golden_quote": "自回归不是语言模型的唯一答案。",
+      "keywords": [
+        "何恺明",
+        "ELF",
+        "扩散语言模型",
+        "非自回归",
+        "连续embedding"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
