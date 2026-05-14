@@ -56,22 +56,25 @@ def _select_top_articles(articles: list[dict], history_titles: list[str]) -> lis
         cat_tag = f"[{cat}]" if cat else ""
         formatted.append(f"[{i}] {cat_tag} {a['title']}  (来源: {a['source']}, {a['summary'][:80]})")
 
-    client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url=DEEPSEEK_BASE_URL)
-    resp = client.chat.completions.create(
-        model="deepseek-chat",
-        max_tokens=1024,
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": SELECTION_PROMPT.format(top_n=TOP_NEWS_COUNT, history_hint=history_hint)},
-            {"role": "user", "content": "候选资讯：\n\n" + "\n".join(formatted)},
-        ],
-    )
-    data = _parse_json_response(resp.choices[0].message.content)
-    indices = data.get("selected_indices", [])
-    # 兜底：若返回不合理，前 N 条
-    if not indices or len(indices) < TOP_NEWS_COUNT:
-        indices = list(range(min(TOP_NEWS_COUNT, len(articles))))
-    return indices[:TOP_NEWS_COUNT]
+    try:
+        client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url=DEEPSEEK_BASE_URL)
+        resp = client.chat.completions.create(
+            model="deepseek-chat",
+            max_tokens=1024,
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": SELECTION_PROMPT.format(top_n=TOP_NEWS_COUNT, history_hint=history_hint)},
+                {"role": "user", "content": "候选资讯：\n\n" + "\n".join(formatted)},
+            ],
+        )
+        data = _parse_json_response(resp.choices[0].message.content)
+        indices = data.get("selected_indices", [])
+        if not indices or len(indices) < TOP_NEWS_COUNT:
+            indices = list(range(min(TOP_NEWS_COUNT, len(articles))))
+        return indices[:TOP_NEWS_COUNT]
+    except Exception as e:
+        print(f"     ⚠️ DeepSeek 筛选失败 ({e})，取前 {TOP_NEWS_COUNT} 条兜底")
+        return list(range(min(TOP_NEWS_COUNT, len(articles))))
 
 
 # ============== 阶段 2：深度口播稿 ==============
@@ -210,21 +213,27 @@ def generate_script(articles: list[dict]) -> dict:
     user_text = _format_for_deep_prompt(selected)
 
     client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url=DEEPSEEK_BASE_URL)
-    resp = client.chat.completions.create(
-        model="deepseek-chat",
-        max_tokens=16384,
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": DEEP_SCRIPT_PROMPT.format(
-                top_n=TOP_NEWS_COUNT,
-                duration=TARGET_DURATION_SECONDS,
-                word_count=word_count,
-            )},
-            {"role": "user", "content": user_text},
-        ],
-    )
+    try:
+        resp = client.chat.completions.create(
+            model="deepseek-chat",
+            max_tokens=16384,
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": DEEP_SCRIPT_PROMPT.format(
+                    top_n=TOP_NEWS_COUNT,
+                    duration=TARGET_DURATION_SECONDS,
+                    word_count=word_count,
+                )},
+                {"role": "user", "content": user_text},
+            ],
+        )
+        script = _parse_json_response(resp.choices[0].message.content)
+    except Exception as e:
+        import traceback
+        print(f"  ❌ DeepSeek 脚本生成失败: {e}")
+        traceback.print_exc()
+        raise RuntimeError(f"无法生成口播脚本——DeepSeek API 异常。原因: {e}")
 
-    script = _parse_json_response(resp.choices[0].message.content)
     _enrich_with_source_meta(script, selected)
     return script
 
