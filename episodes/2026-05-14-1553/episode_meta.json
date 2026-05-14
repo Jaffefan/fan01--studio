@@ -1,0 +1,67 @@
+{
+  "episode_id": "2026-05-14-1553",
+  "title": "AI日报：Agent接管创意、广播和生产线，Anthropic首超OpenAI",
+  "published_at": "2026-05-14 15:53",
+  "duration_seconds": 511.39,
+  "duration_label": "8分31秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Runway Agent：一句话生成完整视频",
+      "golden_quote": "视频制作，从手艺活变成对话活。",
+      "keywords": [
+        "Runway",
+        "AI视频生成",
+        "创意代理",
+        "自动化"
+      ],
+      "source": "Runway News"
+    },
+    {
+      "title": "全球首个全AI电台：五主播轮班，24/7",
+      "golden_quote": "AI主播不只是念数据，他们收集模式、发现矛盾、形成观点。",
+      "keywords": [
+        "AI电台",
+        "信息聚合",
+        "AI主播",
+        "实时新闻"
+      ],
+      "source": "X: @kimmonismus"
+    },
+    {
+      "title": "Anthropic首超OpenAI：B2B份额34.4%对32.3%",
+      "golden_quote": "发展速度压倒供应商锁定，这才是AI市场的常态。",
+      "keywords": [
+        "Anthropic",
+        "OpenAI",
+        "B2B",
+        "市场份额",
+        "竞争"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "人形机器人完成8小时轮班：蓝领也不安全了？",
+      "golden_quote": "蓝领工作也失守了，AI不挑行业。",
+      "keywords": [
+        "人形机器人",
+        "自动化",
+        "Figure Robot",
+        "蓝领工作"
+      ],
+      "source": "X: @kimmonismus / @adcock_brett"
+    },
+    {
+      "title": "Notion发布开发者平台：把工作空间变成Agent中枢",
+      "golden_quote": "Notion从笔记工具变成AI编排层。",
+      "keywords": [
+        "Notion",
+        "AI Agent",
+        "开发者平台",
+        "工作流自动化"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
