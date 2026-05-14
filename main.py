@@ -96,7 +96,10 @@ def main():
 
     # ========== 7. 推送飞书 ==========
     print(f"\n📨 第七步：推送到飞书...\n")
-    push_to_feishu(script, episode_id, podcast_url=podcast_url)
+    try:
+        push_to_feishu(script, episode_id, podcast_url=podcast_url)
+    except Exception as e:
+        print(f"  ⚠️ 飞书推送失败（不影响发布）: {e}")
 
     # ========== 完成汇总 ==========
     print(f"\n{'='*50}")

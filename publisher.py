@@ -55,25 +55,34 @@ def publish(site_dir: str, episode_id: str, script: dict | None = None, chapters
     ]
     for p in paths_to_add:
         if os.path.exists(p):
-            subprocess.run(["git", "add", p], capture_output=True, text=True)
+            print(f"  📎 git add {p}")
+            subprocess.run(["git", "add", p], check=True)
+        else:
+            print(f"  ⚠️ 路径不存在，跳过 add: {p}")
 
     commit_msg = f"podcast episode: {episode_id}"
     result = subprocess.run(
         ["git", "commit", "-m", commit_msg],
         capture_output=True, text=True,
     )
-    if result.returncode != 0 and "nothing to commit" not in result.stdout:
-        # 没有变更也不算错
+    print(f"  📝 commit: {result.stdout.strip() or result.stderr.strip()}")
+    if result.returncode != 0 and "nothing to commit" not in result.stdout + result.stderr:
         if "nothing" not in result.stdout.lower():
-            print(f"  ⚠️ commit 异常: {result.stdout[:200]} {result.stderr[:200]}")
+            print(f"  ⚠️ commit 异常")
+
+    # 先拉取最新，避免 non-fast-forward 被拒
+    print(f"  📥 git pull...")
+    subprocess.run(["git", "pull", "--rebase", "origin", "main"],
+                   capture_output=True, text=True)
 
     print(f"  📤 推送到 GitHub...")
     result = subprocess.run(
         ["git", "push", "origin", "HEAD:main"],
         capture_output=True, text=True,
     )
+    print(f"  push stdout: {result.stdout.strip()}")
     if result.returncode != 0:
-        print(f"  ❌ push 失败: {result.stderr[:300]}")
+        print(f"  push stderr: {result.stderr[:300]}")
         raise RuntimeError("git push 失败，请检查 GitHub 凭据")
 
     url = f"{GITHUB_PAGES_URL}/episodes/{episode_id}/"
