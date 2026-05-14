@@ -82,7 +82,8 @@ def _fetch_single_feed(feed_config: dict) -> list[dict]:
     articles = []
     for entry in feed.entries[:MAX_ARTICLES_PER_FEED]:
         published_iso = _parse_time(entry)
-        date_str = published_iso[:10]  # YYYY-MM-DD
+        # 转北京时间再取日期（否则 UTC 下今天早上的文章会显示昨天）
+        date_str = _to_beijing_date(published_iso)
 
         summary_html = entry.get("summary", "") or entry.get("description", "")
         summary = _strip_html(summary_html)
@@ -150,6 +151,18 @@ def _parse_time(entry) -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def _to_beijing_date(iso_str: str) -> str:
+    """UTC ISO 时间 → 北京时间日期 YYYY-MM-DD"""
+    try:
+        # 解析 ISO 8601（可能带 Z 后缀）
+        s = iso_str.replace("Z", "+00:00")
+        dt = datetime.fromisoformat(s)
+        dt_bj = dt.astimezone(BJT)
+        return dt_bj.strftime("%Y-%m-%d")
+    except Exception:
+        return iso_str[:10]
+
+
 def _strip_html(text: str) -> str:
     """去除 HTML 标签"""
     clean = re.sub(r"<[^>]+>", "", text)
@@ -207,7 +220,7 @@ def _aihot_to_articles(daily: dict | None) -> list[dict]:
                 "summary": (item.get("summary") or "")[:300],
                 "link": item.get("sourceUrl", ""),
                 "published": item.get("publishedAt") or now_iso,
-                "date": (item.get("publishedAt") or now_iso)[:10],
+                "date": _to_beijing_date(item.get("publishedAt") or now_iso),
                 "source": item.get("sourceName", "aiHot"),
                 "lang": "zh",
                 "image_url": None,

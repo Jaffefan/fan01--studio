@@ -129,7 +129,14 @@ def _parse_report(data: dict) -> list[dict]:
             engagement = eng
 
         published_at = item.get("published_at") or datetime.now(timezone.utc).isoformat()
-        date_str = published_at[:10]
+        # UTC → 北京时间日期（否则凌晨文章 date 是前一天，被过滤掉）
+        try:
+            s = published_at.replace("Z", "+00:00")
+            dt = datetime.fromisoformat(s)
+            dt_bj = dt.astimezone(timezone(timedelta(hours=8)))
+            date_str = dt_bj.strftime("%Y-%m-%d")
+        except Exception:
+            date_str = published_at[:10]
 
         # 从 metadata 里找图片（Reddit 有 thumbnail，HN 通常没有）
         image_url = None
