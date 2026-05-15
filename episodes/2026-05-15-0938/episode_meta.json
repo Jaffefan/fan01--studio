@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-15-0938",
+  "title": "460万美元干翻GPT-5.5，Kimi凭啥？",
+  "published_at": "2026-05-15 09:38",
+  "duration_seconds": 557.59,
+  "duration_label": "9分17秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Kimi K2.6登顶金融智能体基准",
+      "golden_quote": "AI 开始敲金融行业的大门了。",
+      "keywords": [
+        "Kimi",
+        "金融智能体",
+        "开源模型",
+        "AI分析师",
+        "基准测试"
+      ],
+      "source": "X：Kimi.ai (@Kimi_Moonshot)"
+    },
+    {
+      "title": "Kimi网页桥接让AI像人一样上网",
+      "golden_quote": "把「人操控电脑」变成「人指挥AI操控电脑」。",
+      "keywords": [
+        "Kimi",
+        "网页桥接",
+        "浏览器扩展",
+        "AI智能体",
+        "RPA"
+      ],
+      "source": "X：Kimi.ai (@Kimi_Moonshot)"
+    },
+    {
+      "title": "xAI推出Grok Build专业编程智能体",
+      "golden_quote": "AI编程工具正在从IDE插件向全能终端智能体演进。",
+      "keywords": [
+        "xAI",
+        "Grok Build",
+        "编程智能体",
+        "CLI",
+        "并行子智能体"
+      ],
+      "source": "xAI：News"
+    },
+    {
+      "title": "OpenEvidence覆65%美国医生，冰面下的AI",
+      "golden_quote": "AI落地垂直行业的关键：不是行政命令，而是让一线用户自发觉得好用。",
+      "keywords": [
+        "OpenEvidence",
+        "医疗AI",
+        "shadow AI",
+        "医生",
+        "渗透策略"
+      ],
+      "source": "X：小北 (@frxiaobei)"
+    },
+    {
+      "title": "杨植麟拆解460万美元训练Kimi K2",
+      "golden_quote": "AI竞赛规则正在改变：巧干也能出奇迹。",
+      "keywords": [
+        "杨植麟",
+        "Kimi K2",
+        "460万美元",
+        "架构创新",
+        "AI竞赛"
+      ],
+      "source": "X：Berry Xia (@berryxia)"
+    }
+  ]
+}
