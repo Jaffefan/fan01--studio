@@ -22,6 +22,17 @@ from publisher import publish
 from feishu import push_to_feishu
 
 
+def _today_already_published(today: str) -> bool:
+    """检查 episodes/ 下是否已有今天的播客"""
+    episodes_dir = os.path.join(".", "episodes")
+    if not os.path.isdir(episodes_dir):
+        return False
+    for name in os.listdir(episodes_dir):
+        if name.startswith(today) and os.path.isdir(os.path.join(episodes_dir, name)):
+            return True
+    return False
+
+
 def main():
     # 期号 = 唯一 ID，北京时间，含时分钟
     now = datetime.now(BJT)
@@ -31,6 +42,11 @@ def main():
     print(f"  每日 AI 资讯播客生成器")
     print(f"  期号: {episode_id}")
     print(f"{'='*50}\n")
+
+    # 防重复：如果今天已有发布，跳过（为兜底 cron 提供安全的幂等性）
+    if _today_already_published(today):
+        print(f"✅ {today} 已有播客发布，跳过。")
+        return
 
     # ========== 1. 抓取资讯 ==========
     print("📡 第一步：抓取 AI 资讯...\n")

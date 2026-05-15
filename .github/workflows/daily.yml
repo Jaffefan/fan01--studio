@@ -2,8 +2,10 @@ name: Daily AI Podcast
 
 on:
   schedule:
-    # UTC 1:07 = 北京时间 9:07，GitHub cron 有 10-30 分钟延迟，实际 9:15-9:40 左右收到
+    # UTC 1:07 = 北京时间 9:07（主 trigger）
     - cron: '7 1 * * *'
+    # UTC 3:07 = 北京时间 11:07（兜底，主 trigger 宕机或崩了也没事）
+    - cron: '7 3 * * *'
   workflow_dispatch:  # 支持在 GitHub 网页上手动触发
 
 permissions:
