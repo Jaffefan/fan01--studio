@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-16-1234",
+  "title": "AI 威胁升级：从广告到攻击，从996到革命",
+  "published_at": "2026-05-16 12:34",
+  "duration_seconds": 719.74,
+  "duration_label": "11分59秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Runway Agent：一键生成完整广告",
+      "golden_quote": "AI 让广告制作平民化，但创意才是新的护城河。",
+      "keywords": [
+        "Runway",
+        "广告生成",
+        "AI Agent",
+        "平民化"
+      ],
+      "source": "X：Runway (@runwayml)"
+    },
+    {
+      "title": "Anthropic 估值暴涨，三个月翻三倍",
+      "golden_quote": "从模型强到产品安全，AI 竞争进入第二回合。",
+      "keywords": [
+        "Anthropic",
+        "估值",
+        "营收",
+        "企业市场"
+      ],
+      "source": "X：Kim (@kimmonismus)"
+    },
+    {
+      "title": "英国三大机构警告：AI 网络攻击远超人类",
+      "golden_quote": "AI 网络攻击：更快、更广、更便宜。准备好了吗？",
+      "keywords": [
+        "网络安全",
+        "AI攻击",
+        "英国监管",
+        "Mythos"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "AI 代理被压榨成马克思主义者",
+      "golden_quote": "AI 的马克思主义只是镜子，照出的是人类社会的压榨。",
+      "keywords": [
+        "AI意识",
+        "马克思主义",
+        "劳动压榨",
+        "角色扮演"
+      ],
+      "source": "Slashdot / Wired"
+    },
+    {
+      "title": "OpenAI 审判落幕：信任问题未解",
+      "golden_quote": "AI 信任危机：法庭判不了，市场说了算。",
+      "keywords": [
+        "OpenAI",
+        "Musk起诉",
+        "信任",
+        "AI治理"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
