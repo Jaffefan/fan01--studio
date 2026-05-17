@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-17-1258",
+  "title": "Anthropic内部手册揭穿AI神话：创业失败率将上升",
+  "published_at": "2026-05-17 12:58",
+  "duration_seconds": 681.1,
+  "duration_label": "11分21秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "OpenAI大重组：Brockman夺权，ChatGPT之父被调离",
+      "golden_quote": "成则继续领跑，败则加速坠落。",
+      "keywords": [
+        "OpenAI",
+        "重组",
+        "Brockman",
+        "超级应用"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "NVIDIA开源世界模型：一张图生成一分钟720p视频",
+      "golden_quote": "效率才是开源的真正武器。",
+      "keywords": [
+        "NVIDIA",
+        "世界模型",
+        "SANA-WM",
+        "开源视频生成"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "美国AI相关岗位首次出现大规模裁员",
+      "golden_quote": "0.2%的下降是分水岭：AI对就业的冲击从理论进入现实。",
+      "keywords": [
+        "AI裁员",
+        "就业冲击",
+        "客服",
+        "劳动力市场"
+      ],
+      "source": "Bloomberg"
+    },
+    {
+      "title": "MagicPath与Codex整合：设计开发流程彻底合一",
+      "golden_quote": "设计到开发的翻译成本，正在降为零。",
+      "keywords": [
+        "MagicPath",
+        "Codex",
+        "设计开发一体化",
+        "AI编辑器"
+      ],
+      "source": "X：Berry Xia"
+    },
+    {
+      "title": "Anthropic内部手册：AI会让创业失败率上升",
+      "golden_quote": "瓶颈不再是你能造什么，而是你选择造什么。",
+      "keywords": [
+        "Anthropic",
+        "创业手册",
+        "AI创业",
+        "判断力"
+      ],
+      "source": "X：Berry Xia"
+    }
+  ]
+}
