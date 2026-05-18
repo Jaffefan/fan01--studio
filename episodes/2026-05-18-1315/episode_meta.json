@@ -1,0 +1,69 @@
+{
+  "episode_id": "2026-05-18-1315",
+  "title": "5天击穿苹果5年防线：AI黑客时代降临",
+  "published_at": "2026-05-18 13:15",
+  "duration_seconds": 695.59,
+  "duration_label": "11分35秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Claude 5天攻破苹果M5内核",
+      "golden_quote": "AI正在重新定义安全的攻防速度",
+      "keywords": [
+        "Claude",
+        "M5",
+        "MIE",
+        "安全漏洞",
+        "提权"
+      ],
+      "source": "X（Berryxia）"
+    },
+    {
+      "title": "Anthropic CEO：软件免费，职业消失",
+      "golden_quote": "软件免费化将摧毁SaaS商业模式",
+      "keywords": [
+        "软件免费",
+        "职业消失",
+        "Anthropic",
+        "Dario Amodei"
+      ],
+      "source": "X（Rohan Paul）"
+    },
+    {
+      "title": "微软AI CEO：18个月，AI取代所有白领",
+      "golden_quote": "白领工作被AI取代不再是科幻，而是倒计时",
+      "keywords": [
+        "AI替代白领",
+        "Mustafa Suleyman",
+        "微软",
+        "自动化"
+      ],
+      "source": "X（Kim）"
+    },
+    {
+      "title": "Garry Tan开源GBrain，AI获得终身记忆",
+      "golden_quote": "个人AI的致命缺陷——没有记忆——终于被解决了",
+      "keywords": [
+        "GBrain",
+        "Garry Tan",
+        "AI记忆",
+        "开源",
+        "个人AI"
+      ],
+      "source": "X（阿易 AI Notes）"
+    },
+    {
+      "title": "马斯克诉OpenAI：信任成为审判焦点",
+      "golden_quote": "AI时代，信任不再是奢侈品，而是生存必需品",
+      "keywords": [
+        "马斯克",
+        "OpenAI",
+        "审判",
+        "信任",
+        "Sam Altman"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
