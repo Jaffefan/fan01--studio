@@ -2,10 +2,10 @@ name: Daily AI Podcast
 
 on:
   schedule:
-    # UTC 1:07 = 北京时间 9:07（主 trigger）
-    - cron: '7 1 * * *'
-    # UTC 3:07 = 北京时间 11:07（兜底，主 trigger 宕机或崩了也没事）
-    - cron: '7 3 * * *'
+    # 每 15 分钟一次，覆盖北京时间 8:45-11:00（UTC 00:45-03:00）
+    # GitHub cron 有随机延迟，多时间点确保总有一个接近 9:00
+    # main.py 已内置 _today_already_published() 防重复，只第一发生效
+    - cron: '7,22,37,52 0,1,2 * * *'
   workflow_dispatch:  # 支持在 GitHub 网页上手动触发
 
 permissions:
