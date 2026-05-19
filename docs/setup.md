@@ -18,17 +18,13 @@ FEISHU_WEBHOOK      # 可选
 TTS_PROVIDER        # edge（默认），改 siliconflow 用付费音色
 ```
 
-## Cloudflare Workers（精准 9:00 触发）
+## 定时触发（密集 cron + 双兜底）
 
-GitHub 自带 cron 经常延迟 2-4 小时。Cloudflare Worker 可以 ±1 分钟精度。
+GitHub cron 已从 2 个时间点改为密集模式：`'7,22,37,52 0,1,2 * * *'`，每 15 分钟一次覆盖北京 8:45-11:00。`_today_already_published()` 确保只第一发生效。
 
-文件：`cloudflare-worker.js`
-
-部署步骤：
-1. dash.cloudflare.com → Workers & Pages → Create Worker
-2. 粘贴 `cloudflare-worker.js` 内容 → Deploy
-3. Settings → Variables → 添加 Secret `GITHUB_TOKEN`（GitHub Personal Access Token，workflow 权限）
-4. Settings → Triggers → Cron: `0 1 * * *`（UTC 1:00 = 北京 9:00）
+额外兜底：
+- **Windows Task Scheduler**：`trigger_podcast.bat`，每天 9:00 本地触发（需电脑开机）
+- **Google Apps Script**：`trigger_podcast.gs`，云端日定时器（需部署到 script.google.com）
 
 ## GitHub Pages
 

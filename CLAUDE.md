@@ -24,7 +24,10 @@
 | `image_fetcher.py` | 配图：原文 og:image 优先 → AI 生成兜底 |
 | `publisher.py` | git add → commit → pull --rebase → push origin main |
 | `feishu.py` | 飞书机器人富文本卡片推送 |
+| `image_fetcher.py` | 配图：4 级获取（原文 → og:image → Pexels → AI 生成） |
 | `config.py` | 所有配置（RSS 源、API key、路径） |
+| `trigger_podcast.bat` | Windows 定时任务脚本（本地 9:00 触发） |
+| `trigger_podcast.gs` | Google Apps Script（云端 9:00 触发备用） |
 
 ## 硬规则（违反必出事）
 
@@ -47,10 +50,10 @@
 
 ## 已知陷阱
 
-- **GitHub cron 延迟**：schedule 事件经常拖 2-4 小时，Cloudflare Worker（`cloudflare-worker.js`）可精准触发
+- **GitHub cron 延迟**：已改为密集 cron `'7,22,37,52 0,1,2 * * *'`，每 15 分钟一次覆盖北京 8:45-11:00，配合 `_today_already_published()` 防重复。另有 Windows Task Scheduler（`trigger_podcast.bat`）+ Google Apps Script（`trigger_podcast.gs`）双云端兜底
+- **配图缺失**：已升级 4 级获取：RSS 原图 → og:image → Pexels 免费图库 → AI 生成，基本不空
 - **aiHot 日报可能为空**：每日 08:00 北京生成，08:30 可能还没好，空响应已处理
-- **机器之心/量子位 RSS 偶尔空**：网站可能改版或反爬，观察频率
-- **edge-tts 音色稳定性**：免费但偶有波动，SiliconFlow CosyVoice2 是备选（需充值）
+- **飞书推送偶发 webhook 错误**：已加 try/except，不影响整体发布
 - **DeepSeek JSON 偶尔破损**：长文本含未转义字符，`json_repair` 兜底 + prompt 禁止英文双引号
 
 ## 本地运行

@@ -87,7 +87,8 @@ RSS 5源  aiHot API  last30days(social)
 | edge-tts | 语音合成 | 免费 |
 | jina.ai Reader | 全文抓取 | 免费 |
 | aiHot API | AI 日报 | 免费 |
-| SiliconFlow | AI 图片（备用） | ~¥0.1/张 |
+| Pexels API | 免费图库搜图（配图第 3 级兜底） | 免费 |
+| SiliconFlow | AI 图片（第 4 级兜底） | ~¥0.1/张 |
 | GitHub Pages | 网页托管 | 免费 |
 | Cloudflare Workers | 定时触发 | 免费 |
 | 飞书 Webhook | 推送通知 | 免费 |
