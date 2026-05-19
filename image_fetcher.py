@@ -10,7 +10,7 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-from config import SILICONFLOW_API_KEY, SILICONFLOW_IMAGE_MODEL
+from config import SILICONFLOW_API_KEY, SILICONFLOW_IMAGE_MODEL, PEXELS_API_KEY
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -46,8 +46,15 @@ def fetch_images(script: dict, output_dir: str, date_str: str) -> dict:
                 image_paths[i] = local_path
                 continue
 
-        # 3. AI 生成兜底
+        # 3. Pexels 免费图库搜图
         keywords = seg.get("keywords", [])
+        pexels_url = _search_pexels(keywords)
+        if pexels_url and _download_image(pexels_url, local_path):
+            print(f"     ✓ Pexels 搜图")
+            image_paths[i] = local_path
+            continue
+
+        # 4. AI 生成兜底
         title = seg.get("news_title", "")
         prompt = _build_image_prompt(title, keywords)
         if _generate_ai_image(prompt, local_path):
@@ -116,6 +123,31 @@ def _extract_og_image(page_url: str) -> str | None:
                     parsed = urlparse(page_url)
                     img_url = f"{parsed.scheme}://{parsed.netloc}{img_url}"
                 return img_url
+    except Exception:
+        return None
+    return None
+
+
+def _search_pexels(keywords: list[str]) -> str | None:
+    """用 Pexels 免费图库搜索配图"""
+    try:
+        query = " ".join(keywords[:3]) if keywords else "AI technology"
+        with httpx.Client(timeout=15) as client:
+            resp = client.get(
+                "https://api.pexels.com/v1/search",
+                headers={"Authorization": PEXELS_API_KEY},
+                params={"query": query, "per_page": 5, "orientation": "landscape"},
+            )
+            if resp.status_code != 200:
+                return None
+            photos = resp.json().get("photos", [])
+            if not photos:
+                return None
+            for photo in photos:
+                src = photo.get("src", {})
+                url = src.get("large") or src.get("original") or src.get("large2x")
+                if url:
+                    return url
     except Exception:
         return None
     return None
