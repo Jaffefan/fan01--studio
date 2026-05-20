@@ -73,6 +73,12 @@ FEISHU_WEBHOOK = os.environ.get(
     "https://open.feishu.cn/open-apis/bot/v2/hook/df9a7177-66c0-459a-968c-a21517a6330b"
 )
 
+# Server酱（微信推送）
+SERVERCHAN_SENDKEY = os.environ.get(
+    "SERVERCHAN_SENDKEY",
+    "SCT352206Tpo1WqtMJ8KNyQMHiNTk8Zn1P"
+)
+
 
 # ============== 运行环境判断 ==============
 # 是在 GitHub Actions 还是本地

@@ -20,6 +20,7 @@ from tts import generate_audio
 from html_generator import generate_html
 from publisher import publish
 from feishu import push_to_feishu
+from wechat_push import push_to_wechat
 
 
 def _today_already_published(today: str) -> bool:
@@ -116,6 +117,13 @@ def main():
         push_to_feishu(script, episode_id, podcast_url=podcast_url)
     except Exception as e:
         print(f"  ⚠️ 飞书推送失败（不影响发布）: {e}")
+
+    # ========== 8. 推送微信 ==========
+    print(f"\n💬 第八步：推送到微信...\n")
+    try:
+        push_to_wechat(script, episode_id, podcast_url=podcast_url)
+    except Exception as e:
+        print(f"  ⚠️ 微信推送失败（不影响发布）: {e}")
 
     # ========== 完成汇总 ==========
     print(f"\n{'='*50}")
