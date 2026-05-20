@@ -1,0 +1,70 @@
+{
+  "episode_id": "2026-05-20-0901",
+  "title": "谷歌 I/O 2026 炸场：自主 AI 来了，科学家说这是奇点前夜",
+  "published_at": "2026-05-20 09:01",
+  "duration_seconds": 628.3,
+  "duration_label": "10分28秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Gemini 自主代理时代，今天开始",
+      "golden_quote": "AI 不再等你叫，它自己会动。",
+      "keywords": [
+        "Gemini Spark",
+        "自主代理",
+        "token",
+        "Sundar Pichai",
+        "隐私"
+      ],
+      "source": "Google Blog"
+    },
+    {
+      "title": "Gemini Omni：从任何输入生成任何内容",
+      "golden_quote": "AI 开始像人类一样融通五感。",
+      "keywords": [
+        "Gemini Omni",
+        "多模态",
+        "视频生成",
+        "深度伪造",
+        "版权"
+      ],
+      "source": "X：Gemini"
+    },
+    {
+      "title": "Andrej Karpathy 加盟 Anthropic",
+      "golden_quote": "一个 Karpathy 的选择，足以改变 AI 市场的版图。",
+      "keywords": [
+        "Andrej Karpathy",
+        "Anthropic",
+        "人才流动",
+        "LLM"
+      ],
+      "source": "X：Claude Devs"
+    },
+    {
+      "title": "Demis Hassabis：我们正站在奇点山麓",
+      "golden_quote": "他说‘山麓’的时候，我相信他自己看到了山上的轮廓。",
+      "keywords": [
+        "奇点",
+        "Demis Hassabis",
+        "AGI",
+        "Google DeepMind",
+        "科学发现"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "AI 原生系统：从 vibe code 到智能眼镜",
+      "golden_quote": "五年后，写 app 的门槛跟写 PPT 一样低。",
+      "keywords": [
+        "vibe code",
+        "Project Aura",
+        "Gmail AI",
+        "Android",
+        "生态战争"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
