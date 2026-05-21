@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-21-1241",
+  "title": "5个信号告诉你，AI正经历从玩具到工具的蜕变",
+  "published_at": "2026-05-21 12:41",
+  "duration_seconds": 701.47,
+  "duration_label": "11分41秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Qwen3.7：能自动优化内核35小时的智能体",
+      "golden_quote": "参数大战落幕，智能体耐力赛开跑。",
+      "keywords": [
+        "Qwen3.7",
+        "智能体",
+        "自主执行",
+        "内核优化",
+        "AI编程"
+      ],
+      "source": "Qwen Blog"
+    },
+    {
+      "title": "可灵4K：好莱坞导演亲证的超清AI视频",
+      "golden_quote": "分辨率从来不只是参数，它是信任的门槛。",
+      "keywords": [
+        "可灵",
+        "原生4K",
+        "AI视频",
+        "好莱坞",
+        "影视制作"
+      ],
+      "source": "X：可灵 Kling AI"
+    },
+    {
+      "title": "商汤 SenseNova U1：图文同思，多模态融合新范式",
+      "golden_quote": "能「看」图和能「理解」图，中间隔着整个思考的距离。",
+      "keywords": [
+        "SenseNova U1",
+        "商汤",
+        "多模态",
+        "图文融合",
+        "AI创作"
+      ],
+      "source": "X：商汤 SenseTime"
+    },
+    {
+      "title": "OpenAI证伪80年数学猜想，AI独立推翻核心理论",
+      "golden_quote": "AI不再只是助手，它开始扮演合作者的角色。",
+      "keywords": [
+        "OpenAI",
+        "单位距离问题",
+        "数学猜想",
+        "AI推理",
+        "科学发现"
+      ],
+      "source": "OpenAI官网"
+    },
+    {
+      "title": "Anthropic预计首次盈利，收入超109亿美元",
+      "golden_quote": "盈利是AI从信仰走向商业的现实一步。",
+      "keywords": [
+        "Anthropic",
+        "盈利",
+        "Claude",
+        "收入109亿",
+        "AI商业化"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
