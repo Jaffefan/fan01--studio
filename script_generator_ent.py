@@ -143,7 +143,7 @@ def generate_ent_script(articles: list[dict]) -> dict:
 
     # 阶段 2：故事化写稿
     print("\n  ✍️ 阶段 2：DeepSeek 写故事化深度稿...")
-    word_count = ENT_TARGET_DURATION // 2  # ~600 Chinese chars/min
+    word_count = ENT_TARGET_DURATION * 4  # 中文 ~4 字/秒，20min = 4800 字
     duration_min = ENT_TARGET_DURATION // 60
     hook_words = int(word_count * 0.10)
     event_words = int(word_count * 0.30)
