@@ -91,3 +91,31 @@ GITHUB_REPO = "fan01--studio"
 GITHUB_PAGES_URL = f"https://{GITHUB_USERNAME.lower()}.github.io/{GITHUB_REPO}"
 # CI 上代码就在仓库里，不需要 clone；本地保留兼容路径
 LOCAL_REPO_DIR = "." if IS_CI else "podcast_site"
+
+
+# ============== 娱乐深度谈 配置 ==============
+ENT_RSS_FEEDS = [
+    {"name": "IGN",  "url": "https://feeds.feedburner.com/ign/all", "lang": "en"},
+    {"name": "Variety", "url": "https://variety.com/feed/", "lang": "en"},
+    {"name": "Deadline", "url": "https://deadline.com/feed/", "lang": "en"},
+    {"name": "Kotaku", "url": "https://kotaku.com/rss", "lang": "en"},
+    {"name": "Anime News Network", "url": "https://www.animenewsnetwork.com/news/rss.xml", "lang": "en"},
+    {"name": "机核", "url": "https://www.gcores.com/rss", "lang": "zh"},
+    {"name": "游研社", "url": "https://www.yystv.cn/rss/feed", "lang": "zh"},
+    {"name": "Hacker News - Gaming", "url": "https://hnrss.org/newest?q=game+OR+gaming+OR+Nintendo+OR+PlayStation+OR+anime+OR+movie", "lang": "en"},
+]
+ENT_MAX_ARTICLES_PER_FEED = 10
+ENT_OUTPUT_DIR = "output_ent"
+
+# 娱乐栏目 TTS 音色（更松弛、不那么"新闻腔"）
+ENT_TTS_VOICE = "zh-CN-XiaoxiaoNeural"  # 自然甜美，比晓伊更柔和
+ENT_TTS_RATE = "+0%"  # 正常语速，不加速
+
+# 娱乐栏目飞书 webhook（待更换为娱乐群机器人）
+ENT_FEISHU_WEBHOOK = os.environ.get(
+    "ENT_FEISHU_WEBHOOK",
+    "https://open.feishu.cn/open-apis/bot/v2/hook/cd945c01-2682-4e23-9e94-3fa86d66d3d9"
+)
+
+# 娱乐栏目目标时长（秒）：单事件深度讲述 15-20 分钟
+ENT_TARGET_DURATION = 1200
