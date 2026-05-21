@@ -3,6 +3,7 @@
 import sys
 import os
 import re
+import json
 import httpx
 from urllib.parse import urlparse
 
@@ -101,28 +102,65 @@ def _looks_like_image(data: bytes) -> bool:
 
 
 def _extract_og_image(page_url: str) -> str | None:
-    """从网页中提取 og:image meta 标签"""
+    """从网页中提取图片：og:image → twitter:image → 文章第一张大图 → JSON-LD"""
     try:
         with httpx.Client(headers=HEADERS, timeout=15, follow_redirects=True) as client:
             resp = client.get(page_url)
             if resp.status_code != 200:
                 return None
-            html = resp.text[:50000]  # 只看前 50KB（meta 都在 head 里）
+            html = resp.text
 
-        patterns = [
+        parsed = urlparse(page_url)
+        base = f"{parsed.scheme}://{parsed.netloc}"
+
+        def fix_url(u):
+            if u.startswith("//"): return f"https:{u}"
+            if u.startswith("/"): return f"{base}{u}"
+            return u
+
+        # 1. og:image / twitter:image meta
+        meta_patterns = [
             r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
             r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
             r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+name=["\']twitter:image:src["\'][^>]+content=["\']([^"\']+)["\']',
         ]
-        for pat in patterns:
-            match = re.search(pat, html, re.IGNORECASE)
-            if match:
-                img_url = match.group(1)
-                # 处理相对路径
-                if img_url.startswith("/"):
-                    parsed = urlparse(page_url)
-                    img_url = f"{parsed.scheme}://{parsed.netloc}{img_url}"
-                return img_url
+        for pat in meta_patterns:
+            m = re.search(pat, html[:80000], re.IGNORECASE)
+            if m:
+                return fix_url(m.group(1))
+
+        # 2. 找文章中第一张合理尺寸的图片（跳过 icon/logo/avatar）
+        img_matches = re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', html, re.IGNORECASE)
+        for src in img_matches:
+            src_lower = src.lower()
+            # 跳过明显的 icon/logo/avatar/广告
+            skip = ("icon", "logo", "avatar", "pixel", "track", "1x1", "banner-ad", "favicon")
+            if any(k in src_lower for k in skip):
+                continue
+            # 跳过太短的路径（通常是装饰图）
+            if len(src) < 30:
+                continue
+            return fix_url(src)
+
+        # 3. JSON-LD 结构化数据里的 image
+        ld_match = re.search(
+            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            html, re.DOTALL | re.IGNORECASE
+        )
+        if ld_match:
+            try:
+                ld = json.loads(ld_match.group(1))
+                img = ld.get("image")
+                if isinstance(img, list) and img:
+                    img = img[0]
+                if isinstance(img, dict):
+                    img = img.get("url") or img.get("@id")
+                if isinstance(img, str) and img.startswith("http"):
+                    return img
+            except Exception:
+                pass
+
     except Exception:
         return None
     return None
