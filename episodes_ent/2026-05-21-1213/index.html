@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一部烂尾国漫的海外奇幻漂流 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg: #fef9f0;
+  --card: #fffaf5;
+  --ink: #2c2416;
+  --ink-soft: #5c4a3a;
+  --ink-mute: #9a8a7a;
+  --line: #e8dcc8;
+  --accent: #c8782a;
+  --accent-soft: #e8a84a;
+  --warm: #f5e6d0;
+  --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+  --sans: "Noto Sans SC", -apple-system, "PingFang SC", sans-serif;
+}
+body{font-family:var(--serif);background:var(--bg);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased}
+.container{max-width:720px;margin:0 auto;padding:32px 24px 80px}
+
+/* 顶部：第 X 夜 */
+.issue-tag{text-align:center;margin-bottom:8px}
+.issue-tag span{display:inline-block;font-family:var(--sans);font-size:12px;letter-spacing:3px;color:var(--accent);background:var(--warm);padding:4px 16px;border-radius:999px;font-weight:600}
+
+/* 封面图 */
+.cover{margin:20px 0 28px;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.cover img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+
+/* 标题 */
+.title{font-family:var(--serif);font-size:30px;font-weight:900;color:var(--ink);text-align:center;line-height:1.45;margin-bottom:20px;letter-spacing:.5px}
+
+/* 元信息 */
+.meta{text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-mute);margin-bottom:8px}
+.meta span{margin:0 10px}
+
+/* 播放器 */
+.player{background:var(--card);padding:24px;border-radius:14px;margin:24px 0;border:1px solid var(--line)}
+.player-label{font-family:var(--sans);font-size:11px;letter-spacing:3px;color:var(--ink-mute);text-transform:uppercase;margin-bottom:10px;text-align:center}
+audio{width:100%;height:44px;border-radius:8px}
+
+/* 章节 */
+.chapters{margin:28px 0}
+.chapter-item{display:flex;align-items:center;padding:12px 16px;margin-bottom:6px;background:var(--card);border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:all .15s}
+.chapter-item:hover{border-color:var(--accent-soft);background:var(--warm)}
+.chapter-num{font-family:var(--sans);font-size:12px;font-weight:700;color:var(--accent);min-width:32px}
+.chapter-title{flex:1;font-family:var(--serif);font-size:15px;color:var(--ink)}
+.chapter-time{font-family:var(--sans);font-size:12px;color:var(--ink-mute)}
+
+/* 故事正文区 */
+.story{background:var(--card);border-radius:14px;padding:28px 24px;margin:28px 0;border:1px solid var(--line);line-height:2}
+.story h3{font-family:var(--serif);font-size:19px;color:var(--accent);margin:24px 0 12px;font-weight:700}
+.story h3:first-child{margin-top:0}
+.story p{font-size:15px;color:var(--ink-soft);margin-bottom:16px}
+.story .highlight{font-family:var(--serif);font-size:17px;color:var(--ink);font-weight:600;font-style:italic;padding:16px 0;border-left:3px solid var(--accent-soft);padding-left:16px;margin:16px 0}
+
+/* 来源 */
+.source-bar{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;color:var(--ink-mute);margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.source-bar a{color:var(--accent);text-decoration:none}
+.source-bar a:hover{text-decoration:underline}
+
+/* 底栏 */
+.footer{text-align:center;font-family:var(--sans);font-size:11px;color:var(--ink-mute);margin-top:48px;letter-spacing:.5px}
+
+@media(max-width:600px){
+  .container{padding:20px 16px 64px}
+  .title{font-size:24px}
+  .story h3{font-size:17px}
+}
+</style></head>
+<body><div class="container">
+  <div class="issue-tag"><span>第 001 夜</span></div>
+  <div class="cover"><img src="cover.jpg?v=20260521121413" alt=""></div>
+  <h1 class="title">一部烂尾国漫的海外奇幻漂流</h1>
+  <div class="meta"><span>2026-05-21 午间</span><span>4分15秒</span><span>伊恩 讲述</span></div>
+  <div class="player"><div class="player-label">🎧 收听本期故事</div>
+    <audio id="player" controls preload="metadata"><source src="full.mp3?v=20260521121413" type="audio/mpeg"></audio>
+  </div>
+  <div class="chapters"><div class="chapter-item"><span class="chapter-num">01</span><span class="chapter-title">失踪的动画</span></div><div class="chapter-item"><span class="chapter-num">02</span><span class="chapter-title">海外的意外走红</span></div><div class="chapter-item"><span class="chapter-num">03</span><span class="chapter-title">权力的游戏与腰斩</span></div><div class="chapter-item"><span class="chapter-num">04</span><span class="chapter-title">出口转内销的复活赛</span></div></div>
+  <div class="story"><p>2019年，种田流网文《放开那个女巫》完结时，没人会想到它的动画化会让人一等就是7年。</p>
+<p>这部动画每一次露面，都伴随着制作方变动和回炉重做的流言。</p>
+<p>2022年最后一次公布预告后，它彻底陷入死寂。</p>
+<p>直到今年4月，国内粉丝才发现，这部已被默认为腰斩的动画，悄悄在海外平台Crunchyroll播完了第一季，拿下了4.8分（满分5.0）和IMDb的8.6分。</p>
+<p>大多数中国观众还没看过它。</p>
+<p>动画原本是为国内制作，海外观众看到的是中文配音版，前两集不温不火，直到剧情近半，才在海外社区里有了讨论度。</p>
+<p>Crunchyroll买下的8集是个半成品，最后一集停在一个没头没尾的剧情点上。</p>
+<p>但就是这部半成品，拿到了1万人的4.8分。</p>
+<p>海外观众评价它“严肃基调”“世界观宏大”“有《权力的游戏》既视感”，看腻了低龄化异世界番剧的他们，看中了这部作品成人化的叙事。</p>
+<p>原著小说是出海最成功的国产网文之一，在Webnovel累计阅读量超1.4亿次，漫画版也登陆了北美和日本的平台，早已积累了不少海外原著党。</p>
+<p>动画播出后，Reddit板块迅速形成活跃社区，他们讨论剧情、搬运导演直播内容，甚至把“导演回我消息了”当成大事来分享。</p>
+<p>据导演孙猛在直播中透露，动画原订24集，后来砍到12集，最后只做完8集。</p>
+<p>他给出了“用东方思想引领西方愚昧文明觉醒”的史诗方案，负责人兴奋地拍板说会全力支持。</p>
+<p>但到了2022至2023年，制作被突然叫停。</p>
+<p>原因是甲方换了负责人，新负责人不想在“有风险”的作品上试错，希望成片变得更轻松、更低龄化，更像《斗罗大陆》和《斗破苍穹》。</p>
+<p>孙猛理解甲方的需求，但已经完成的8集只能在现有成片上改动，实在无法满足新要求。</p>
+<p>第9集的分镜都画完了，只能以半成品状态搁置。</p>
+<p>最终，出海成了不是办法的办法，孙猛甚至把Crunchyroll推荐给了阅文。</p>
+<p>一个月前，海外请愿网站Change.org上出现了催更第二季的请愿帖，十几天下来才1000人支持，但随着动画口碑发酵，迅速积累到1.2万名观众的署名。</p>
+<p>这反过来成了动画的宣传，国内观众也听说了这部“优质国产动画”，甚至带动小说原著重回起点榜单榜首。</p>
+<p>早早拿到国内上线许可的《放开那个女巫》，终于被B站和爱奇艺“出口转内销”式上线播出。</p>
+<p>版权方阅文集团也感受到了高呼声，5月1日，他们在X官方账号上发起了“是否期待第二季”的投票，两周内近3000人参与，支持率95%。</p>
+<p>这个投票成了阅文官号阅读量最大的推文。</p>
+<p>当初被叫停时，动画其实没有片头动画。</p>
+<p>为了上线海外，孙猛和震雷动画用已有的8集素材拼拼凑凑剪出了现在的OP。</p>
+<p>它诞生于权力的夹缝，经历了无人问津的严冬，却依然能用匮乏的资源做出自己想要的作品。</p>
+<p>对于《放开那个女巫》的主角和主创来说，这都是一个经历漫长黑夜后走向破晓的故事。</p></div>
+  <div class="source-bar">来源：游研社 · <a href="https://www.yystv.cn/p/13957" target="_blank" rel="noopener">🔗 原文</a></div>
+  <div class="footer">伊恩娱乐深度谈 · 每日一个故事 · 2026-05-21 12:14</div>
+</div>
+<script>
+const player=document.getElementById('player');
+document.querySelectorAll('[data-seek]').forEach(el=>{el.addEventListener('click',()=>{player.currentTime=parseFloat(el.getAttribute('data-seek'));player.play();window.scrollTo({top:0,behavior:'smooth'})})});
+</script>
+</body></html>
