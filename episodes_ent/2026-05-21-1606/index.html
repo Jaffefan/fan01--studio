@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一部被腰斩的国产动画，如何成为海外的“幻之神作”？ - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 003 夜 / 2026-05-21</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 放开那个女巫</div>
+    <h1 class="ep-title">一部被腰斩的国产动画，如<span class="hl">何成为海外的“幻之神作”？</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:25</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260521080735" alt=""></div></div>
+<div class="section" id="sec-0001"><p>你好，我是伊恩。</p><p>2019年，一部叫《放开那个女巫》的网文完结了，它的动画化却让人等了整整七年。期间，制作方换了，资金断了，连预告片都成了绝唱。可就在今年4月，这部被默认腰斩的动画，突然在海外平台Crunchyroll播完了第一季，评分4.8，IMDb 8.6。而国内的大多数观众，还没看过它。</p><p>一部做一半没钱了的烂尾国产动画，卖去国外回本，却成了“幻之神作”。今天，我们就来聊聊这个故事。</p><p>## 一、</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(62.9,'sec-0002')"><span>▶</span> 01:02</button><h3 class="section-title">从腰斩到出海</h3></div><p>从腰斩到出海</p></div>
+<div class="section" id="sec-0003"><p>2017年，《放开那个女巫》动画化宣布时，粉丝们充满期待。原著是一部穿越异世界搞基建的种田流小说，主角带着现代知识，把女巫的超能力变成生产力，对抗封建教廷。故事格局宏大，节奏成人化，改编潜力巨大。</p><p>制作方是震雷动画，导演孙猛。立项时，有个类似“制作委员会”的组织，包括平台方和版权方。孙猛给了对方五种方案：从成本最低的标准异世界番，到轻松种田文，再到“用东方思想引领西方愚昧文明觉醒”的史诗感动画。负责人听到最后一个方案后，非常兴奋，立刻拍板：“孙总，如果你愿意接受第五个方案的挑战，我们会全力支持你。”</p><p>于是，动画定位为“《权力的游戏》级别”，剧本、人设、分镜都按这个基调来，更慢热，更史诗，更成年观众向。片头曲甚至做成了类“黄河大合唱”的红歌风格。</p><p>但到了2022年到2023年间，动画刚做完前8集，制作被突然叫停。原因很简单：甲方不想要“这种类型的东西了”。孙猛在直播中说，不知道是主动还是被动，总之负责人走了，换了新的对接人。新负责人不想把宝押在前任的“遗产”上，在大环境不好的彼时，他更不想在“有风险”的作品上试错。他要求成片变得更轻松、更低龄化，更像《斗罗大陆》和《斗破苍穹》那些已被验证的成功作品。</p><p>孙猛完全理解甲方的需求，他说，在阅文和腾讯这样的大公司里，永远是赚钱的部门比不赚钱的部门更有话语权。但已完成的8集只能在现有成片上改动，实在无法满足新要求。第9集分镜都画完了，只能以8集的半成品状态搁置。动画被进一步打成劣质资产冷藏。</p><p>最终，“出海”成了不是办法的办法。孙猛说，连Crunchyroll平台也是他推荐给阅文的。七年后，一部只有中文配音的国产动画在海外播出，才收获了后来的火热反响。</p><p>## 二、</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(188.6,'sec-0004')"><span>▶</span> 03:08</button><h3 class="section-title">海外社区的热捧与考古</h3></div><p>海外社区的热捧与考古</p></div>
+<div class="section" id="sec-0005"><p>《放开那个女巫》在海外受欢迎，其实没多少人料到。它没有前期宣传，前两集播出后一直不温不火，直到剧情近半，才在海外社区里慢慢有了不容忽视的讨论度。更重要的是，Crunchyroll买下的8集是个半成品，最后一集停在没头没尾的剧情点上。</p><p>但就是这部“半成品”，拿到了1万人的4.8分。从海外观众的口中，我们不难看出他们为什么喜欢：“严肃基调的动画”“世界观很宏大”“权力的游戏既视感”。他们看腻了市面上泛滥的低龄化异世界番剧，看中的正是《女巫》里成人化的剧情编排和叙事节奏。</p><p>原著小说本也是出海最成功的国产网文之一，连载期间是Webnovel（起点国际版）榜单常客，累计阅读量超1.4亿次。漫画版也登陆了北美的Tapas和日本的Renta!等平台，积累了不少海外“原著党”。动画播出后，小说又回到了Webnovel的首页推荐。</p><p>动画版在海外迅速形成了极度活跃的社区。以Reddit版块为例，粉丝讨论剧情、玩梗图、聊天，甚至有人盯着导演孙猛的直播，定期搬运AI翻译的直播内容总结，连“导演回我消息了”这种事儿也拿来讨论。他们起初以为动画没头没尾只是因为还在更新，后来才了解到这只是半成品的真相。导演在直播中说，动画原订24集，后来砍到12集，最后只做完8集。这些海外粉丝，比国内观众更关心这部片子当年为何被腰斩。</p><p>## 三、</p></div>
+<div class="section" id="sec-0006"><div class="section-header"><button class="section-btn" onclick="seek(314.4,'sec-0006')"><span>▶</span> 05:14</button><h3 class="section-title">历史的回响：出口转内销的宿命</h3></div><p>历史的回响：出口转内销的宿命</p></div>
+<div class="section" id="sec-0007"><p>《放开那个女巫》的故事，不是孤例。</p><p>在中国动画产业，资本驱动下的“项目腰斩”几乎成了某种宿命。2015年《大圣归来》成功后，资本疯狂涌入，大量动画项目上马。但很多作品做到一半，金主发现不赚钱，或换了负责人，项目就被砍掉或雪藏。比如《魁拔》系列，做三部亏三部，第四部遥遥无期；《纳米核心》也是做了几季后陷入沉寂。</p><p>而“出口转内销”的路数，在游戏和网文领域早有先例。比如手游《原神》虽然全球同步发行，但早期在海外先火，再带动国内热度。网文《诡秘之主》在海外读者中口碑爆棚，才反过来推动国内版权开发。动画领域，《狐妖小红娘》也曾先在海外播出，收获好评后在国内重获关注。</p><p>《放开那个女巫》的独特之处在于，它是一部被资本抛弃的“半成品”，海外观众用真金白银的评分和请愿，硬生生把它抬回了牌桌。一个月前，Change.org上出现了“催更”第二季的请愿贴。一开始只有1000人支持，随着口碑发酵和了解到动画的曲折经历，迅速积累到1.2万人的署名。这反过来又成了动画的宣传。</p><p>国内平台B站和爱奇艺也终于“引进”了这部动画，更确切地说是“出口转内销式”的上线播出。版权方阅文集团的态度也发生了微妙转变。今年4月之前，阅文的海外X官方账号上从未提过任何关于《放开那个女巫》的推文；动画人气飙升后，官号开始全方位宣传这个IP，甚至在一条推文里把它放进了代表作品名单。</p><p>5月1日，阅文在X上发了一个“是否期待《放开那个女巫》第二季”的投票，两周内近3000人参加，支持率95%。这个投票成了阅文官号阅读量最大的推文。与此同时，国内平台上的搬运版视频也取得了不错的播放数据。这部曾一度被视为“不良资产”的动画，靠出口转内销的操作，仅靠自己就解决了被诟病的“市场问题”。</p><p>## 四、</p></div>
+<div class="section" id="sec-0008"><div class="section-header"><button class="section-btn" onclick="seek(440.2,'sec-0008')"><span>▶</span> 07:20</button><h3 class="section-title">余韵：一个走向破晓的故事</h3></div><p>余韵：一个走向破晓的故事</p></div>
+<div class="section" id="sec-0009"><p>值得一提的是，当初动画被叫停时，其实没有片头动画。为了上线海外，孙猛和震雷动画对原作进行过最后一次调整，用已有的8集素材拼拼凑凑，剪出了现在的OP。这也正是整部动画命运的缩影：诞生于权力的夹缝，经历了无人问津的严冬，却依然能用匮乏的资源做出自己想要的作品。那句“靠自己”，并不像听起来那么简单。</p><p>现在，第二季的呼声越来越高。阅文的投票结果让不少人看到了希望，但资本逻辑不会轻易改变。在阅文和腾讯这样的大公司里，赚钱的部门永远比不赚钱的更有话语权。动画能复活吗？也许要看海外观众的持续热情和商业价值的证明。</p><p>孙猛在直播中说过，他理解甲方的需求，更庆幸有出海这条路。他说：“其实大家都没做错什么。”权力更迭，市场变化，都是常态。但对《放开那个女巫》的主角罗兰和主创来说，这是一个经历漫长黑夜后，走向破晓的故事。</p><p>而对于我们这些观众，这部动画的起死回生或许也在提醒我们：有些好东西不会轻易消失，只要还有人记得它。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(62.9,'sec-0002')"><span class="tl-time">01:02</span><span class="tl-title">从腰斩到出海</span></div>
+<div class="tl-item" onclick="seek(188.6,'sec-0004')"><span class="tl-time">03:08</span><span class="tl-title">海外社区的热捧与考古</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260521080735" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
