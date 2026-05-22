@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>命运终局：Bungie与守护者的十年 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 004 夜 / 2026-05-22</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Bungie</div>
+    <h1 class="ep-title">命运终局：Bung<span class="hl">ie与守护者的十年</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:59</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">2017年，《命运2》发售，首周销售额突破2亿美元</h3></div><div class="image-card"><div class="image-card-inner"><img src="image_01.jpg?v=20260522142823" alt=""></div></div><p>你好，我是伊恩。2026年6月9日，距离《命运2》的终极更新还有不到半年。这一刻，不是突然的终点，而是十年漫长告别的终点。</p><p>5小时前，机核网发布了一条简讯：《命运2》将于2026年6月9日迎来最终在线服务内容更新。Bungie在官方声明中说，是时候让世界观和命运系列在《命运2》之外继续发展了。过去近十二年里，能和玩家们共同探索命运世界，是一份巨大的荣幸。</p><p>几乎同一时间，彭博社爆出更劲爆的消息：Bungie将在近期进行大规模裁员，而且《命运3》并没有在积极开发中。这意味着，Bungie在砍掉《命运2》之后，并没有一张安全的底牌。他们目前唯一的重心，是去年发售但表现平平的《马拉松》（Marathon），一款PvPvE撤离射击游戏。</p><p>你可能会想，一个运营了十年的顶级IP，怎么就突然走到这一步了？其实，这场暴风雨的种子，早在索尼收购之前就已经埋下。</p><p>让我们把时间倒回2014年。那一年，Bungie脱离微软后推出了《命运》初代。首日销售额超过5亿美元，成为当时史上最成功的全新游戏IP。但光环之下，初代《命运》的开发过程极其混乱——2013年，Bungie砍掉大量原有剧情，导致主线支离破碎，随后几年里，游戏靠着「The Taken King」等大型DLC才逐渐挽回口碑。</p><p>2017年，《命运2》发售，首周销售额突破2亿美元。但玩家很快发现，初代的很多好设计被反向「改进」，装备系统、社交功能、终局内容都大幅倒退。Bungie花了整整两年，靠「遗落之族」和「命运2：新光」等大更新，才把玩家数量拉回健康水平。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(119.9,'sec-0002')"><span>▶</span> 01:59</button><h3 class="section-title">彭博社的报道透露，Bungie管理层曾评估各种让《</h3></div><div class="image-card"><div class="image-card-inner"><img src="image_02.jpg?v=20260522142823" alt=""></div></div><p>然后，2022年，索尼以36亿美元的价格收购了Bungie。当时索尼的意图很明确——Bungie将成为PlayStation在服务型游戏领域的核心支柱，帮助索尼对抗微软Game Pass带来的冲击。Bungie也确实被赋予了一定的独立性，包括继续在多平台发行游戏。</p><p>但收购后的日子并不好过。2023年，《命运2：光陨之秋》资料片口碑暴跌，玩家数腰斩。索尼在财报中确认，Bungie未能达到营收预期，导致索尼计提了2.04亿美元的减值损失。紧接着，Bungie在2023年底裁掉了大约100名员工，占员工总数的8%。</p><p>2024年6月，《命运2：终焉之形》发售，作为光与暗之章的完结篇，它获得了系列近十年来的最高媒体评分，玩家也暂时回归。但Bungie内部的问题并没有解决。2025年，Bungie推出了酝酿多年的新IP《马拉松》。这是一款PvPvE撤离射击游戏，直接对标《逃离塔科夫》。但发售后的玩家数量远低于预期，Steam同时在线峰值不足5万。索尼随后在财报中记录了7.65亿美元的减值损失——这几乎相当于收购价的五分之一。</p><p>彭博社的报道透露，Bungie管理层曾评估各种让《命运2》对新玩家更友好的方案，但最终决定将开发资源和人力全部转向《马拉松》。而《命运3》的提案虽然存在，但在当前严峻的市场和经济环境下，没有被批准进入全面开发。这意味着，Bungie现在没有第二款游戏在线上——要么《马拉松》能起死回生，要么Bungie将面临更严重的生存危机。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(239.7,'sec-0003')"><span>▶</span> 03:59</button><h3 class="section-title">从行业角度看，Bungie的困境其实是中型独立工作</h3></div><div class="image-card"><div class="image-card-inner"><img src="image_03.jpg?v=20260522142823" alt=""></div></div><p>那么，索尼的这笔36亿美元收购案，到底算不算失败？我们可以算一笔账：收购至今，索尼因Bungie业绩不达标导致的减值损失累计已接近10亿美元。加上收购本身的资金成本，索尼在Bungie上的净投入已经超过46亿美元，而Bungie迄今为止为索尼带来的直接收入，主要来自《命运2》的持续销售和微交易。这个数字没能达到索尼的预期。更关键的是，Bungie没能帮助索尼建立跨工作室的服务型游戏研发体系——比如Naughty Dog的《最后生还者》多人游戏项目，在咨询Bungie后选择取消，因为Bungie告诉他们「做服务型游戏比想象中难得多」。</p><p>现在回到玩家这边。Reddit上，有玩家语气凄然：「所以《命运2》死，是为了让《马拉松》晚死一会儿。」也有玩家抱有希望：「这也许意味着《命运3》在路上，毕竟停更老游戏是为了给新游戏让路。」但更多人是愤怒和失望：有玩家指出《命运2》在Steam上的日活跃玩家已经比《星空》还少——是的，就是那个被骂了两年多的《星空》。</p><p>Bungie在公告里承诺，服务器将继续保持开放，就像现在《命运1》那样。但如果你经历过2017年《命运1》实质上停止更新后的状态，你会明白所谓「保持运营」意味着什么——没有新内容、没有赛季活动、只剩下忠诚的核心玩家反复刷着老本。那些倾注了数千小时的守护者，将在2026年6月9日之后面对一个逐渐冻结的宇宙。</p><p>从行业角度看，Bungie的困境其实是中型独立工作室被大企业收购后的典型症状：被收购时被寄予厚望，被要求扩大规模、同时开发多个项目，结果资源分散、核心团队流失、产品质量下滑。与此形成对比的，是《博德之门3》的开发商拉瑞安——他们坚持独立运营，拒绝被收购，花了六年时间打磨一款作品，最终成为行业标杆。</p></div>
+<div class="section" id="sec-0004"><div class="image-card"><div class="image-card-inner"><img src="image_04.jpg?v=20260522142823" alt=""></div></div><p>那么，Bungie的未来在哪里？《马拉松》会否成为救世主？目前《马拉松》宣布将在后续更新中加入PvE内容，降低新手上手门槛。但撤离射击赛道已经十分拥挤，从《逃离塔科夫》到《猎杀：对决》，每个对手都在抢用户。Bungie拿什么赢？他们曾塑造了主机FPS黄金时代的《光环》，也创造了《命运》这一持续十年的宇宙。但现在，他们必须重新证明自己。</p><p>在机核那篇文章的最后，Bungie写道：「是因为玩家们的陪伴，这个宇宙才如此广阔。希望能在星辰中再会。」这句话让我想起《命运2》最经典的开场CG：您的守护者从废弃的航站楼苏醒，Ghost悬浮在您眼前，说：「我一直在找你。」十年后，这个「你」变成了玩家们目送Bungie离开的背影。</p><p>没有谁永远年轻，但总有人正年轻。也许某一天，当新一代玩家在某个新平台上打开「命运」的新作时，他们会不知道2026年那个平静的6月9日，有一群老玩家曾默默地向一个宇宙告别。</p><p>以上，是本期深度谈的全部内容。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar"><img src="mascot.png?v=20260522142823" alt="伊恩" style="width:100%;height:100%;border-radius:50%;object-fit:cover"></div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">2017年，《命运2》发售，首周销售额突</span></div>
+<div class="tl-item" onclick="seek(119.9,'sec-0002')"><span class="tl-time">01:59</span><span class="tl-title">彭博社的报道透露，Bungie管理层曾评</span></div>
+<div class="tl-item" onclick="seek(239.7,'sec-0003')"><span class="tl-time">03:59</span><span class="tl-title">从行业角度看，Bungie的困境其实是中</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260522142823" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+document.querySelector('.progress-bar').addEventListener('click',function(e){var r=this.getBoundingClientRect();var p=(e.clientX-r.left)/r.width;audio.currentTime=p*audio.duration;if(audio.paused)audio.play()});
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
