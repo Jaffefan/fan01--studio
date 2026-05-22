@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-22-0901",
+  "title": "AI盈利时代已至？Anthropic赚钱、Codex远程控Mac、加州备战失业潮",
+  "published_at": "2026-05-22 09:01",
+  "duration_seconds": 588.67,
+  "duration_label": "9分48秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Runway发布Aleph 2.0：用自然语言编辑视频",
+      "golden_quote": "视频编辑进入对话时代。",
+      "keywords": [
+        "Runway",
+        "Aleph 2.0",
+        "Edit Studio",
+        "AI视频",
+        "自然语言编辑"
+      ],
+      "source": "Runway：Changelog（网页）"
+    },
+    {
+      "title": "OpenAI Codex实现锁屏远程操控Mac",
+      "golden_quote": "AI代理突破了物理边界。",
+      "keywords": [
+        "OpenAI",
+        "Codex",
+        "Mac",
+        "远程控制",
+        "AI代理"
+      ],
+      "source": "X：OpenAI Developers (@OpenAIDevs)"
+    },
+    {
+      "title": "加州签署行政令：为AI失业潮做准备",
+      "golden_quote": "AI红利不能被企业独吞。",
+      "keywords": [
+        "加州",
+        "纽森",
+        "AI失业",
+        "行政令",
+        "劳动力市场"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "Anthropic即将成为首个盈利的AI实验室",
+      "golden_quote": "AI实验室开始自己造血了。",
+      "keywords": [
+        "Anthropic",
+        "盈利",
+        "AI实验室",
+        "Claude",
+        "财报"
+      ],
+      "source": "The Decoder：AI News（RSS）"
+    },
+    {
+      "title": "首部100%AI生成电影亮相戛纳",
+      "golden_quote": "AI电影开始向院线发起冲击。",
+      "keywords": [
+        "AI电影",
+        "戛纳",
+        "可灵AI",
+        "RAPHAEL",
+        "院线"
+      ],
+      "source": "X：可灵 Kling AI (@Kling_ai)"
+    }
+  ]
+}
