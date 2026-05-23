@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>赌局剧透：当预测市场成为真人秀杀手 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 007 夜 / 2026-05-23</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Survivor</div>
+    <h1 class="ep-title">赌局剧透：当预测<span class="hl">市场成为真人秀杀手</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:02</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260523061909" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">问题在于，这些平台是否真的在鼓励内幕交易？Kals</h3></div><p>你追过真人秀吗？那种每周追更、和网友一起猜谁会赢的感觉，是追剧的一大乐趣。但如果，在季终集播出之前，你刷手机时收到一条推送：“今晚决赛，Aubry胜率97%——小岛命运已定？”你会怎么想？</p><p>这不是假设。就在本周，《幸存者》第50季决赛播出前几分钟，预测市场平台Kalshi向用户推送了这样一条通知。而结果，正如预测：选手Aubry Bracco成为了最终的“唯一幸存者”。</p><p>《幸存者》的主持人兼执行制作人Jeff Probst在Variety的采访中得知这条推送时，正在实时接受采访。他说：“我现在才知道这事——他们是在我们决赛前公布的？”他的语气里没有愤怒，更多的是一种无奈和疲惫。</p><p>Kalshi是一个合法的预测市场平台，用户可以用真金白银下注预测事件结果，比如选举、体育比赛，现在还有真人秀。在本季《幸存者》开播前，Aubry的胜率就超过了80%；到决赛前，这个数字飙到了97%。整个市场的交易量达到了3270万美元。</p><p>这意味着什么？意味着大量用户——可能包括知情人——在很早的时候就开始押注Aubry赢得比赛。而这些押注的赔率本身，就成了剧透的晴雨表：当某位选手的胜率远高于其他人，观众自然能猜到结果。</p><p>Probst直言：“这些平台‘鼓励人们撒谎、欺骗、偷窃来抢先一步’。他们找到了利用节目牟利的方式，这让我作为一个人感到不舒服。我理解——他们建了一门好生意。但他们不在乎。”</p><p>问题在于，这些平台是否真的在鼓励内幕交易？Kalshi坚称，他们有效执行了禁止内幕交易的规定，并对“幸存者”市场进行了彻底调查。公司高管认为，交易者是根据Reddit等社区上的公开传言来操作的——而那些散布传言的匿名者，可能确实违反了保密协议。但交易者本身并不违法。因此，Kalshi认为自己没有义务去阻止。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(141.0,'sec-0002')"><span>▶</span> 02:20</button><h3 class="section-title">更棘手的是，这些平台声称自己是“信息聚合器”，不是</h3></div><p>可Probst不这么看。“如果90%的人都在赌某个人赢，那肯定有信息泄露。但你把矛头指向我们制作方，说我们有问题，这镜子照反了。这些平台才是问题的源头，不是我们。”</p><p>《幸存者》的剧组人员都签署了协议，禁止利用内幕信息进行博彩或牟利。CBS甚至专门针对本季加入了关于预测市场的条款。但Probst认为，把管理剧透的责任推给制作方并不公平。</p><p>这其实不是新鲜事。早在2023年，政治预测市场就曾因为“特朗普胜选”的赔率波动引发了无数争议；而娱乐领域的预测市场，则更是近两年才兴起的。在《幸存者》之前，像《老大哥》《美国偶像》这类节目的结局也曾在网络上被预测平台提前剧透。但这次不同：3270万美元的交易量，以及Kalshi主动推送的通知，把这件事推向了风口浪尖。</p><p>我们回顾一下历史：预测市场最早可以追溯到19世纪的华尔街，交易员们通过押注选举结果来对冲风险。但真正让它进入大众视野的，是2008年奥巴马与麦凯恩的总统大选，当时Intrade等平台上的赔率精准预测了结果。此后，预测市场逐渐扩展到体育、娱乐、甚至天气。</p><p>然而，当预测市场遇上真人秀，问题就来了：真人秀的本质是悬念——你不知道谁会赢，所以你会一集集追下去。但如果一个平台可以通过数据告诉你答案，那节目的核心价值就被侵蚀了。</p><p>更棘手的是，这些平台声称自己是“信息聚合器”，不是博彩公司。它们认为，自己只是将分散的公开信息整合为概率，本质上和民调类似。但区别在于，民调不涉及金钱，而预测市场用真金白银激励用户去挖掘信息——包括内幕信息。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(281.9,'sec-0003')"><span>▶</span> 04:41</button><h3 class="section-title">我们不知道Kalshi会推出什么样的“防剧透功能”</h3></div><p>Probst对此毫不留情：“如果你跟我说，‘幸存者’需要更好地管理剧透，那你就是不懂人性。这太荒谬了。你告诉我有一个方法可以靠分享信息赚钱，而且我可能永远不会被抓到？当然会有人去做。如果我发现我们剧组有人下注，那他们就被开除了。”</p><p>Kalshi的发言人Elisabeth Diana回应说，公司现在正在考虑增加产品功能来防止剧透。但具体是什么功能？怎么防止？她没说。</p><p>事实上，这不仅是《幸存者》的问题。好莱坞高管们普遍担心，预测市场的兴起会导致内幕交易，而广泛的剧透会降低悬念、损害收视率。但对Kalshi这样的平台来说，这恰恰是他们的卖点——为用户提供“超前信息”，换取交易量和佣金。</p><p>那么，未来的真人秀会变成什么样？也许节目组会开始实时调整剪辑，或者在播出前对最终结果严加保密，甚至可能引入反预测机制。但无论如何，当观众在决赛前就能预知结果，那种“大家一起猜”的乐趣，还能剩下多少呢？</p><p>Kalshi在声明中说，如果市场交易量是任何指标的话，那么这并没有阻止人们关心《幸存者》。但问题在于，关心的方式变了：你不再是看节目，而是看赔率。节目本身，变成了赔率的副产品。</p><p>Probst最后说：“他们建了一门好生意。但他们不在乎。”也许对他来说，真正让人失落的，不是剧透本身，而是发现自己的心血之作，在别人眼里不过是一串可以投注的代码。</p><p>我们不知道Kalshi会推出什么样的“防剧透功能”。但可以确定的是，当金钱和信息开始共谋，每个追剧的人，都得在“知道”和“不知道”之间，做出自己的选择。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">问题在于，这些平台是否真的在鼓励内幕交易</span></div>
+<div class="tl-item" onclick="seek(141.0,'sec-0002')"><span class="tl-time">02:20</span><span class="tl-title">更棘手的是，这些平台声称自己是“信息聚合</span></div>
+<div class="tl-item" onclick="seek(281.9,'sec-0003')"><span class="tl-time">04:41</span><span class="tl-title">我们不知道Kalshi会推出什么样的“防</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260523061909" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
