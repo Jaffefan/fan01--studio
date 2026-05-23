@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-23-1206",
+  "title": "AI写代码先烧4万亿？开源国产芯破局，DeepSeek坚持不做买卖",
+  "published_at": "2026-05-23 12:06",
+  "duration_seconds": 655.56,
+  "duration_label": "10分55秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "首个纯国产昇腾芯片训练的开源1.58比特大模型发布",
+      "golden_quote": "硬件越贵，能落地的方案才越值钱。",
+      "keywords": [
+        "华为昇腾",
+        "1.58比特",
+        "开源大模型",
+        "三元量化",
+        "边缘AI"
+      ],
+      "source": "X：Rohan Paul"
+    },
+    {
+      "title": "黄仁勋抛出4万亿AI基建预言，电费已先涨了",
+      "golden_quote": "AI越烧钱，你的电费越贵。",
+      "keywords": [
+        "英伟达",
+        "黄仁勋",
+        "AI基建",
+        "资本支出",
+        "电费"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "DeepSeek七轮700亿融资在即，梁文锋公开承诺继续开源",
+      "golden_quote": "开源不是不挣钱，而是换一种赢法。",
+      "keywords": [
+        "DeepSeek",
+        "梁文锋",
+        "开源",
+        "融资",
+        "通用人工智能"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "图灵测试首次被AI通过：GPT-4.5以73%概率骗过人类裁判",
+      "golden_quote": "AI像人不是胜利，而是一场信任危机。",
+      "keywords": [
+        "图灵测试",
+        "GPT-4.5",
+        "AI",
+        "信任",
+        "安全"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "微软砍了Claude Code许可证，AI写代码比雇人还贵",
+      "golden_quote": "AI降本增效，结果成本反超人力。",
+      "keywords": [
+        "微软",
+        "Claude Code",
+        "AI成本",
+        "企业支出",
+        "代理型AI"
+      ],
+      "source": "Fortune"
+    }
+  ]
+}
