@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-24-1236",
+  "title": "AI 悖论：算力成本飙升，入门岗位骤降，谁在为技术买单？",
+  "published_at": "2026-05-24 12:36",
+  "duration_seconds": 810.48,
+  "duration_label": "13分30秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Anthropic 融资 300 亿美元，估值反超 OpenAI",
+      "golden_quote": "估值背后是营收，营收背后是盈利。",
+      "keywords": [
+        "Anthropic",
+        "融资",
+        "估值",
+        "OpenAI",
+        "盈利"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "微软砍掉 Claude Code，AI 用多了比人工贵",
+      "golden_quote": "AI 不是免费的，用多了比人工贵。",
+      "keywords": [
+        "微软",
+        "Claude Code",
+        "成本",
+        "AI 经济学",
+        "token"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "74% 科技 CEO 缩招，入门级工作被 AI 替代",
+      "golden_quote": "人才金字塔正在变成钻石，但抽掉底座的代价谁来付？",
+      "keywords": [
+        "AI 替代",
+        "入门级工作",
+        "裁员",
+        "招聘",
+        "人才结构"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Mistral AI 收购 Emmi AI，押注物理仿真",
+      "golden_quote": "工业 AI 不是聊天，是物理世界的硬仗。",
+      "keywords": [
+        "Mistral AI",
+        "Emmi AI",
+        "物理仿真",
+        "工业 AI",
+        "收购"
+      ],
+      "source": "Mistral AI：News（网页）"
+    },
+    {
+      "title": "Replit Agent 与 Squidler 集成，AI 自测自修",
+      "golden_quote": "AI 写代码、AI 测试、AI 修 bug，但谁来决定什么是对的？",
+      "keywords": [
+        "Replit",
+        "Squidler",
+        "AI 测试",
+        "自动化",
+        "开发工具"
+      ],
+      "source": "X：Replit (@Replit)"
+    }
+  ]
+}
