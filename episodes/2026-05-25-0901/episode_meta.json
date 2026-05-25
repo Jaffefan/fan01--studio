@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-05-25-0901",
+  "title": "5个AI事实：降价95%、内部危机、真假广告，和一个无法预测的未来",
+  "published_at": "2026-05-25 09:01",
+  "duration_seconds": 578.93,
+  "duration_label": "9分38秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Luma Agents：UGC广告也可以被批量生产",
+      "golden_quote": "当UGC可以批量生产，它就不再是用户生成内容了。",
+      "keywords": [
+        "Luma AI",
+        "UGC",
+        "AI广告",
+        "真实性"
+      ],
+      "source": "X：Luma AI"
+    },
+    {
+      "title": "DeepSeek 永久降价75%：价格战打到地板",
+      "golden_quote": "当模型成本降到原来的四分之一，AI才真正开始基础设施化。",
+      "keywords": [
+        "DeepSeek",
+        "模型降价",
+        "价格战",
+        "基础设施"
+      ],
+      "source": "Bloomberg"
+    },
+    {
+      "title": "Greg Brockman 讲述差点摧毁OpenAI的72小时",
+      "golden_quote": "AI公司治理的脆弱性，比AI本身更值得警惕。",
+      "keywords": [
+        "OpenAI",
+        "Greg Brockman",
+        "董事会政变",
+        "AI治理"
+      ],
+      "source": "Farnam Street"
+    },
+    {
+      "title": "AI如何说服人们放弃阴谋论？方法比你想象的简单",
+      "golden_quote": "AI能说服人放弃阴谋论，也能说服人相信阴谋论——刀本身没有善恶。",
+      "keywords": [
+        "AI",
+        "阴谋论",
+        "说服",
+        "虚假信息"
+      ],
+      "source": "Wall Street Journal"
+    },
+    {
+      "title": "Benedict Evans：预测AI工作影响，基本上是徒劳的",
+      "golden_quote": "预测哪个工作会被AI取代，就像在1970年预测会计会消失——结果它翻倍了。",
+      "keywords": [
+        "AI就业",
+        "工作自动化",
+        "杰文斯悖论",
+        "会计"
+      ],
+      "source": "Benedict Evans"
+    }
+  ]
+}
