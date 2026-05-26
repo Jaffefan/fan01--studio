@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-26-0901",
+  "title": "5 则 AI 速报：苹果联手谷歌、Siri 重生、端侧大模型突进",
+  "published_at": "2026-05-26 09:01",
+  "duration_seconds": 557.54,
+  "duration_label": "9分17秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "面壁开源首个国产端侧三值大模型",
+      "golden_quote": "1.58-bit 才是端侧 AI 的及格线。",
+      "keywords": [
+        "面壁智能",
+        "华为昇腾",
+        "端侧大模型",
+        "1.58-bit",
+        "国产算力"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "苹果据称用谷歌 1.2T 模型重做 Siri",
+      "golden_quote": "1.2T 参数是苹果迟到十年的补课。",
+      "keywords": [
+        "苹果",
+        "Siri",
+        "谷歌",
+        "1.2T模型",
+        "AI整合"
+      ],
+      "source": "X：Kim (@kimmonismus)"
+    },
+    {
+      "title": "GPT-5.6 泄露：150 万 token 上下文",
+      "golden_quote": "150 万 token 不是天花板，是起跑线。",
+      "keywords": [
+        "OpenAI",
+        "GPT-5.6",
+        "上下文窗口",
+        "150万token",
+        "前端生成"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Anthropic 联合创始人在梵蒂冈谈 AI 伦理",
+      "golden_quote": "如果连造 AI 的人都承认不懂它，那每个用 AI 的人都该想一想。",
+      "keywords": [
+        "Anthropic",
+        "Chris Olah",
+        "AI伦理",
+        "教皇通谕",
+        "外部监督"
+      ],
+      "source": "Anthropic：Newsroom"
+    },
+    {
+      "title": "怀俄明公司用 AI 喷淋系统对抗野火",
+      "golden_quote": "最好的 AI 不跟你聊天，而是帮你救房子。",
+      "keywords": [
+        "AI喷淋",
+        "野火防御",
+        "Frontline",
+        "智能家居",
+        "安全"
+      ],
+      "source": "Cowboy State Daily"
+    }
+  ]
+}
