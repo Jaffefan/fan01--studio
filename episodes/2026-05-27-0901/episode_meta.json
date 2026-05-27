@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-27-0901",
+  "title": "数学难题被AI狂破，开源小模型卷土重来",
+  "published_at": "2026-05-27 09:01",
+  "duration_seconds": 600.82,
+  "duration_label": "10分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "谷歌AI框架破解56年数学难题",
+      "golden_quote": "AI不是取代数学家，而是数学家的超级实验室。",
+      "keywords": [
+        "谷歌",
+        "AlphaProof Nexus",
+        "数学难题",
+        "AI",
+        "Erdős问题"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "面壁1B模型超越2B参数对手",
+      "golden_quote": "参数不是唯一标准，小模型加高质量数据也能走出一条路。",
+      "keywords": [
+        "面壁智能",
+        "MiniCPM5-1B",
+        "端侧模型",
+        "开源",
+        "手机AI"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "阿里Qwen3.7-Max成全球第二大编程模型",
+      "golden_quote": "编程模型正在从辅助走向自主，AI程序员的时代来了。",
+      "keywords": [
+        "阿里云",
+        "Qwen3.7-Max",
+        "AI编程",
+        "Code Arena",
+        "Claude"
+      ],
+      "source": "X：阿里云 / Alibaba Cloud"
+    },
+    {
+      "title": "Claude Mythos用巧妙证明解决OpenAI难题",
+      "golden_quote": "巧妙简洁的证明，意味着AI开始理解数学的美学。",
+      "keywords": [
+        "Claude Mythos",
+        "Anthropic",
+        "Erdős问题",
+        "数学证明",
+        "AI"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "OpenRouter估值一年翻倍至13亿美元",
+      "golden_quote": "模型多到需要路由器的时候，卖铲人才是赢家。",
+      "keywords": [
+        "OpenRouter",
+        "估值",
+        "AI网关",
+        "多模型",
+        "融资"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
