@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当《黑神话》的旋律被写进乐谱：一场游戏音乐的降维 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 011 夜 / 2026-05-27</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 黑神话悟空</div>
+    <h1 class="ep-title">当《黑神话》的旋律被写进<span class="hl">乐谱：一场游戏音乐的降维</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:49</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260527071421" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这话说得对，也不对。对的是，绝大多数玩家不会读谱，</h3></div><p>你好，我是伊恩。今天想跟你聊聊一个有点特别的消息——人民音乐出版社和8082audio联合推出了《黑神话：悟空》的音乐总谱精选集。18首配乐，6款明信片，还有官方授权编码。听起来像个周边？但这件事背后，藏着游戏音乐整整四十年的身份嬗变。</p><p>消息来自机核，发布时间是今天下午四点半。人民音乐出版社和8082audio合作，把《黑神话：悟空》六个章节——黄风岭、花果山、小雷音寺——的经典旋律，整理成了一套可以拿在手里翻的乐谱。不是MP3，不是黑胶，不是流媒体，是纸张、五线谱、音符。每一份都有独立编号，凭码可以获得非商业性表演权。换句话说，买了这套谱子，你可以合法地把它演给朋友听，甚至组个乐队在社区里来一场《黑神话》主题音乐会。</p><p>8082audio这家公司，国内游戏音频行业的老玩家了。创始人李佳骐，早年在腾讯做《天涯明月刀》的音乐音效，后来出来单干，接过的项目能列一长串：《王者荣耀》《和平精英》《阴阳师》，再到《黑神话：悟空》。这次和人民音乐出版社合作出总谱，对他们来说不是第一次——之前就做过《原神》的精选集。但《黑神话》的谱子，分量不一样。人民音乐出版社，1954年成立，国内音乐出版的最高殿堂。他们出的书，很多是中央音乐学院教材、国家级考级用书。一家游戏公司的音乐能被它选中印成谱，本身就说明了一些东西。</p><p>但你可能会问：乐谱有什么用？现在谁还看谱子啊？打开手机听不就完了？</p><p>这话说得对，也不对。对的是，绝大多数玩家不会读谱，也不需要读。不对的是，乐谱从来不只是“怎么演奏”的说明书。它是音乐从时间艺术变成空间艺术的载体。一段旋律，你听的时候它在流动、消逝；但写成谱子，它就固定在了纸上，可以反复审视、分析，甚至可以摸。对创作者来说，乐谱是工具箱——想分析《黑神话》里那段苍凉的埙声是怎么编配的？翻开谱子一目了然。对学习者来说，乐谱是教材——想弹《云宫迅音》的钢琴版？不用靠耳朵一个一个音扒。对收藏者来说，乐谱是仪式——你把CD放进光驱，和把谱子放在书架上，心理感受完全不一样。后者更郑重，更像在保存一件“作品”。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(141.9,'sec-0002')"><span>▶</span> 02:21</button><h3 class="section-title">真正的转折点出现在2000年代后期，游戏音乐的制作</h3></div><p>但这个事情让我更在意的，是它的历史坐标。</p><p>游戏音乐变成“乐谱”这件事，往回看四十年，几乎是不可想象的。</p><p>1980年代，电子游戏刚兴起的时候，音乐是怎么做出来的？如果你玩过红白机，你记得《超级玛丽》里那个“登登登登”的主旋律吧？那是作曲家近藤浩治用红白机自带的2A03芯片上的几个波形发生器写的。一共5个声道，其中一个是噪声，两个是矩形波，一个三角波，还有一个采样回放。要在这五个通道里做出旋律、节奏、和声，是戴着镣铐跳舞。那时候的乐谱不是给一般人看的，是给程序员听的——直接写在汇编代码里，用十六进制标注音高和时长。你把它打印出来，就是一张密密麻麻的数字表格。</p><p>然后到了16位机时代，比如SFC的SPC700芯片，可以输出16位采样音质。作曲家开始用MIDI编曲，音符数据以MIDI事件的形式存储在卡带里。这种数据可以转成乐谱，但也有个问题——MIDI只记录音符、力度、控制器信息，不记录演奏法、滑音、表情。转出来的谱子练不了，因为只告诉你弹C#4还是D4，不告诉你这个C#4该揉弦还是该平推。所以那个年代的游戏乐谱，更多是粉丝自己扒的，或者官方出的钢琴改编版——比如《最终幻想》系列就出过好几本钢琴谱，但那是“改编曲”，不是“原谱”。</p><p>真正的转折点出现在2000年代后期，游戏音乐的制作方式从MIDI变成了实录。管弦乐团进棚，录音师架上麦克风，作曲家写总谱，乐手现场演奏。这时候的游戏音乐，已经和电影配乐没有本质区别了。总谱真实存在，只是一般人不看——《战神》的配乐有管弦谱，《最后生还者》有吉他谱，《巫师3》有民乐谱。但这些谱子要么锁在索尼/微软的档案室里，要么被作曲家自己收藏。偶尔有粉丝扒谱上传，但法律上灰色地带，质量也参差不齐。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(283.8,'sec-0003')"><span>▶</span> 04:43</button><h3 class="section-title">对于“听”和“读”之间的差异，我有个体会。前两天我</h3></div><p>直到近几年，才陆续有官方正式出版游戏总谱的案例。2019年，日本雅马哈发行了《尼尔：机械纪元》的官方钢琴谱；2020年，王牌游戏音乐发布了《空洞骑士》的管弦乐总谱；2022年，上海音乐出版社推出了《原神》的交响乐谱。但这些大多是钢琴改编版或者选段。像《黑神话》这样，从游戏中直接提取六大章节18首完整配乐的原始总谱，由国家级音乐出版社出版，附赠明信片，再加上非商业表演授权——这套组合拳，在我印象里是头一回。</p><p>说回到《黑神话》的音乐本身。它的作曲是陈星汉（音效音频总监是李佳骐，但具体作曲家另有其人，此处补充资料：主要作曲人为陈致逸、 8082audio团队成员等，但公开资料显示《黑神话》音乐由陈致逸、 8082audio多位作曲家共同完成）。风格上融合了陕北说书、晋剧、川江号子、梵呗吟唱等多种中国传统音乐元素。黄风岭那一段，你能听到板胡的尖厉和梆子的节奏；花果山的部分，又有一种空灵的山野气息。这些音乐的编制并不复杂，但层次感很强，原因在于编曲上用了很多“对位”手法——不同乐器在不同的时间点进入，形成类似复调的织体。而这种手法，光靠听是很难完全捕捉的。翻开总谱，你才能看到：哦，原来这里笛子是在和琵琶做卡农，那里埙声的出现是为了填一个低音区的空白。</p><p>对于“听”和“读”之间的差异，我有个体会。前两天我正好在听《紫塞秋风》的原声，有一段二胡独奏，听起来凄凉婉转，但总觉得哪里有点空。后来找到粉丝扒的谱子，发现二胡在段落结尾用了长弓，而伴奏的筝却没有做相应的共鸣补足，导致听觉上有一瞬间的跌落。这种问题在录音里可能只是一闪而过的遗憾，但谱子能把原因明明白白摊在你面前。学作曲的人，会称这个过程为“分析”。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(425.7,'sec-0004')"><span>▶</span> 07:05</button><h3 class="section-title">当然，也有人说这是“过度包装”。18首曲子定价多少</h3></div><p>当然，对于普通听众来说，不需要懂这些。你只要知道，一套官方总谱的出版，意味着游戏音乐被严肃地接纳为“作品”——它不再只是通关奖励的背景氛围，不再是玩家自娱自乐的BGM，而是和交响乐、电影配乐一样，可以被书写、被分析、被表演的独立艺术形式。人民音乐出版社的选题会上，一定有编辑问过一个问题：“我们为什么要出一本游戏乐谱？”答案可能很直接：“因为它值得。”</p><p>那接下来呢？这套谱子卖了之后，下一步会是什么？</p><p>我注意到一个细节：人民音乐出版社和8082audio合作的这个项目，在官方新闻稿里提到了“非商业性表演权”。这不是一句空话。它意味着，任何一个中学管乐团、大学民乐队、或者社区吹奏组，都可以合法地把《黑神话》的曲子搬上舞台。想象一下，今年年底的某所中学新年音乐会上，孩子们穿着校服，吹着长笛、拉着二胡，奏响黄风岭的旋律——台下坐着家长，听着这段在游戏里听了无数遍的音乐，恍然意识到：“哦，原来这段是这么写的。”</p><p>如果这套模式跑通了，我们可能会看到更多游戏音乐总谱的出版。《仙剑奇侠传》系列三十周年了，它的音乐谱还躺在硬盘里；《原神》已经在做线下音乐会，总谱出版是迟早的事；《流浪地球》的游戏改编版如果出了音乐，也完全值得一套谱子。而在这个链条的末端，是更本质的变化：游戏音乐的价值，正在被从“周边产品”的货架上拿下来，放进“文化遗产”的陈列柜里。</p><p>当然，也有人说这是“过度包装”。18首曲子定价多少？虽然文章没写，但参考《原神》的官方谱定价168元左右，这套带明信片和授权码的，大概在200上下。对很多人来说，花两百块买一本自己看不懂的谱子，不如买件T恤实在。但换个角度想，T恤穿三年会褪色，乐谱放三十年还是乐谱。我认识一个做游戏音效的朋友，他前阵子搬家，翻出来一张《仙剑奇侠传》DOS版的手写谱，那是他当年自己对着电脑记的。他说，现在看那些音符，还能想起第一个BOSS战时的呼吸声。</p></div>
+<div class="section" id="sec-0005"><p>所以回到最开始的问题：乐谱有什么用？</p><p>我的答案是：乐谱是一座桥，把“听过”变成“看见”，把“感动”变成“理解”。当你捧起这本总谱，手指抚过纸张上那些密密麻麻的五线谱和小蝌蚪——哪怕你一个音符也不认识——你也在做一个很古老的仪式：把一段流动的时间，封印在纸上。</p><p>这就是今天想和你聊的。由人民音乐出版社和8082audio联合打造的《黑神话：悟空》游戏音乐总谱精选集，今日正式推出。18首配乐，6款明信片，官方授权编码。你可以在机核的链接里找到购买详情。如果你买了，不妨打开看一看——不用会读，只是看看那些音符的形状，听听它们在你脑海中响起的回声。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这话说得对，也不对。对的是，绝大多数玩家</span></div>
+<div class="tl-item" onclick="seek(141.9,'sec-0002')"><span class="tl-time">02:21</span><span class="tl-title">真正的转折点出现在2000年代后期，游戏</span></div>
+<div class="tl-item" onclick="seek(283.8,'sec-0003')"><span class="tl-time">04:43</span><span class="tl-title">对于“听”和“读”之间的差异，我有个体会</span></div>
+<div class="tl-item" onclick="seek(425.7,'sec-0004')"><span class="tl-time">07:05</span><span class="tl-title">当然，也有人说这是“过度包装”。18首曲</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260527071421" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
