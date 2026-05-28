@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>纸板王国与十年孤旅 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 012 夜 / 2026-05-28</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 蘑菇社</div>
+    <h1 class="ep-title">纸板王国与十年孤旅</h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:47</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260528070303" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">它仍然是一部点击解谜游戏，画风延续了蘑菇社一贯的粗</h3></div><p>你好，我是伊恩。想象你走进一家游戏公司，工位上没有电脑，只有砂纸、剪刀和一堆皱巴巴的纸板。这不是手工作坊——这是《机械迷城》的工作室，蘑菇社。他们用了十年，用纸搭出了一座反乌托邦城市。</p><p>现在听我慢慢讲这个故事。</p><p>2026年，如果你去拜访这家位于布拉格的游戏工作室，你会发现一个奇怪的场景：员工工位上没有显示器，取而代之的是卡纸、胶水和切割垫。美术导演会摊开一桌大小不一的纸片，告诉你这就是游戏的核心资产——不是数字贴图，是真正的纸质模型。而当你问起开发进度，负责人会带你走进储藏室，拍拍一个纸箱做的模型脑袋，说这是制作中的关卡雏形。接着，他费力地展开一张比人还高的工程图纸，那上面画着整座城市的地图。</p><p>这群人看上去就像入了魔。但他们是谁？他们是蘑菇社，十八年前做出了那款让全球玩家惊艳的《机械迷城》。那款游戏里，每一根管道、每一个齿轮都是手绘的，甚至故意用左手画下歪歪扭扭的线条。而这一次，他们花了十年时间，“古法手搓”出了新作《喇叭之城》。</p><p>在聊这个漫长的制作过程之前，不如先看看《喇叭之城》到底是一款怎样的游戏。</p><p>它仍然是一部点击解谜游戏，画风延续了蘑菇社一贯的粗粝和奇妙。但和以前的作品不同，它有了画外音，有了更线性的剧情。旁白像老动画一样娓娓道来，讲述一个反乌托邦的故事。主角阿力克斯是个垃圾工，生活在一座由喇叭统治的城市。每当领袖的“绝对音调”通过喇叭传来，人们就必须依照指令工作、生活，直到死亡。但有一天，阿力克斯捡到一副耳机，隔断了指令。他开始自由漫步，追寻一位被遗忘的女歌手。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(129.6,'sec-0002')"><span>▶</span> 02:09</button><h3 class="section-title">而之所以能做出这样的质感，要归功于蘑菇社在制作流程</h3></div><p>这座城市层次分明：低处是工厂、垃圾场和旧世界废墟；中层是迷宫般的官僚机构；最顶层是至高无上的权力。每一处细节都带有瓦楞纸的纹理和手工的粗糙痕迹。你看得见纸板上的毛边，阳光投下的阴影，甚至颜料不均匀的色块。游戏的指针是一只眼睛，静止时会左右扫视，好像在打量这个世界。</p><p>《喇叭之城》的视觉灵感来自两次世界大战间的前卫艺术运动。那时人们相信旧秩序崩塌，新世界必须被发明。于是艺术家们打碎传统，拥抱构成主义、未来主义——那些更机械、更激进的视觉语言。游戏里，旧时代的剧院和画作埋在垃圾堆里，带着朦胧的光晕，像被刻意压抑的记忆；新世界的城市则是硬朗的几何色块，带着丝网印刷的质感，显得刚硬而决绝。</p><p>谜题并不算特别流畅，有时要靠反复试错。但当你拨动机关，看着纸板机械咬合转动，那种物理层面的反馈让人着迷。配上诡谲的电子乐，游戏自带一种“无所适从”的魅力。它不急着讲宏大的政治寓言，而是先让你感受：一个从秩序中松脱的人，最早的变化是感官的苏醒。你会做梦，梦境是抖动手绘的色块，模糊而美丽。</p><p>而之所以能做出这样的质感，要归功于蘑菇社在制作流程上做的一件事。为了打造这座纸板城市，他们发明了一套不可思议的流程。团队先在电脑里搭建3D场景，把每个细节描出来，再拆成平面图纸。然后把这些图纸送进切割机，切成模板，贴到纸板上。接着，美术人员手工绘制、上色、打磨、做旧，做成真正的纸质道具。最后再拍照，导回电脑，替换掉原来的数字贴图。也就是说，一个素材先从数字变成实体，加工后再“回锅”到电脑上。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(259.1,'sec-0003')"><span>▶</span> 04:19</button><h3 class="section-title">至此再看，“十年手搓”就不只是一个适合传播的幕后奇</h3></div><p>这套流程听起来简直多此一举。团队自己也知道，每次向别人展示时，对方的第一反应都是：“你们为什么要这么做？这真的有意义吗？”但对蘑菇社来说，这恰恰是意义所在。如果所有东西都在电脑里完成，画面最终会滑向过于干净、过于可控的效果。他们想要保留手工制作里的不确定性：纸板边缘被砂纸磨过之后的毛糙，颜料覆盖不均留下的痕迹，拍照时真实的阴影，以及材料本身无法完全服从人的微小误差。</p><p>在展示砂纸打磨时，团队总监嘟囔着说：“这些东西如果在电脑里模拟，反而会变得很麻烦。可在现实中，只要拿砂纸轻轻磨一下边缘，时间感和磨损感就自然出现了。”</p><p>但这还没完。进入技术管线后，程序还需要对游戏引擎进行“手搓级别”的调试。《喇叭之城》想打造老动画的质感，角色动作要控制在低帧数，带着微微卡顿的时代感。但问题在于，当动画输入Unity之后，引擎会自动猜测补帧，让动作变得更顺滑——而这恰恰破坏了动画师想要的味道。于是团队只能自己写脚本，把这些手绘动画“无损”地接进引擎。</p><p>至此再看，“十年手搓”就不只是一个适合传播的幕后奇观了。所有这些复杂的技术环节，最终都是为了让一张纸看起来仍然像一张纸。而巧合的是，就在这篇稿子写作时，Epic刚揭晓了虚幻6引擎，距离虚幻5正式发布不过四年。技术导向的画面总会被更新的技术追上，但蘑菇社二十年来一直走在另一条路上。通过坚持手绘，他们把游戏做成一种尽可能“脱离时间禁锢”的东西。十年后，人们未必还会在意这些游戏的谜题是否顺滑，但很可能仍然会惊叹于它们的美。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(388.7,'sec-0004')"><span>▶</span> 06:28</button><h3 class="section-title">那么，蘑菇社真的不担心效率问题吗？他们确实不。在过</h3></div><p>当然，蘑菇社并不是突然决定要用十年时间来“手搓”游戏的。这背后有一条清晰的传承——你可以一直追溯到半个多世纪前的捷克斯洛伐克。</p><p>上世纪60年代，捷克经历过一段如履薄冰的艺术活跃期。1968年“布拉格之春”之后，文化管制收紧，大量艺术家被边缘化。动画大师扬·史云梅耶就是其中之一。他被列为“不可靠艺术家”，七年内无法拍摄电影。但这段被迫脱离工业的时期，反而塑造了他后来的艺术观。他开始用触觉表达——用触觉直接激发想象力、记忆、潜意识与情绪。1986年，他创作了享誉世界的《对话的维度》，用果蔬、金属和粘土在银幕上碰撞，以材质本身代替了直接的政治表达。</p><p>而蘑菇社的创始人雅库布·德沃斯基，恰好在布拉格求学时师从史云梅耶。所以蘑菇社的游戏里，总能清晰地看到这层师承关系。比如《银河历险记》，画面带着强烈的触感；到了《喇叭之城》，材质和触感已经成了叙事的核心。</p><p>这座纸板城市的反乌托邦故事很简单，甚至像童话。但正是通过材质，蘑菇社微妙地呈现了新旧交替的动荡，也做出了讽刺：那些看似宏大、深刻、不可动摇的制度与斗争，抽离出结构来看，也不过是孩童用纸板搭建城堡的游戏。在捷克的历史语境里，这种“简单”有沉重的余韵——人们见过太多理论变成灰暗的烙印，而生命之树常青。</p><p>那么，蘑菇社真的不担心效率问题吗？他们确实不。在过去二十多年的采访里，他们无数次被问：“为什么要这么费劲地手搓游戏？”这个问题背后，也隐藏着一种当代语境里的怀疑。“匠人精神”这个词在今天已略带贬义，常被等同于无意义的堆料和低效率。</p></div>
+<div class="section" id="sec-0005"><p>但蘑菇社不太适合被这样概括。《喇叭之城》内置的花絮视频只展示了手工制作的几个场景。只有足够好奇的玩家，追到他们的YouTube频道继续看纪录片和采访，才会意识到背后的不易。比如那个矿车关卡，成了游戏里的传奇：它是第一个开始制作的，却也成了十年开发周期里最后完成的。</p><p>但即便看完所有这些幕后，你很难只觉得他们是在吃苦。更强烈的感受是，对这群人来说，这些不是开发之外的负担，而是创作本身。创作当然痛苦，但当他们用砂纸打磨一张小纸片时，那种专注里的幸福，有着溢出屏幕的感染力。</p><p>蘑菇社并不反技术，也不是卖惨。他们清楚地知道，手工劳动能带来数字流程难以自然生成的艺术效果，而他们真的享受这个过程。更重要的是，他们对自己的定位一直很清醒：不考虑商业模式，也不过分依赖技术，而是把游戏做成个人表达。</p><p>这种选择的结果，就是《喇叭之城》成为了一部带着触感的记忆装置。你可以想象，多年以后当人们再打开它，纸板的纹理和手指的温度依然在。而在这个AI生成图像越来越廉价的时代，蘑菇社用时间堆出了一个独特的艺术品，轻轻讲述着：有些东西值得慢下来。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">它仍然是一部点击解谜游戏，画风延续了蘑菇</span></div>
+<div class="tl-item" onclick="seek(129.6,'sec-0002')"><span class="tl-time">02:09</span><span class="tl-title">而之所以能做出这样的质感，要归功于蘑菇社</span></div>
+<div class="tl-item" onclick="seek(259.1,'sec-0003')"><span class="tl-time">04:19</span><span class="tl-title">至此再看，“十年手搓”就不只是一个适合传</span></div>
+<div class="tl-item" onclick="seek(388.7,'sec-0004')"><span class="tl-time">06:28</span><span class="tl-title">那么，蘑菇社真的不担心效率问题吗？他们确</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260528070303" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
