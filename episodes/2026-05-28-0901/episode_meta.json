@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-28-0901",
+  "title": "260亿估值AI编程黑马，教皇却给AGI泼冷水",
+  "published_at": "2026-05-28 09:01",
+  "duration_seconds": 568.99,
+  "duration_label": "9分28秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "7秒30秒1080p视频开源",
+      "golden_quote": "七秒生成半分钟视频，视频创作的瓶颈不再是时间。",
+      "keywords": [
+        "实时视频生成",
+        "开源",
+        "FastVideo Dreamverse",
+        "LTX-2",
+        "NVIDIA B200"
+      ],
+      "source": "X：Sky Computing Lab (@haoailab)"
+    },
+    {
+      "title": "Cognition 260亿估值背后的真相",
+      "golden_quote": "企业级AI工具的核心不是模型，而是对工作流的深度理解。",
+      "keywords": [
+        "Cognition",
+        "融资",
+        "AI软件工程师",
+        "Devin",
+        "独立智能体实验室"
+      ],
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "教皇的AI通谕，没有AGI什么事",
+      "golden_quote": "教皇说AI不是技术问题，而是权利、机会和自由的问题——AGI不是唯一的忧虑。",
+      "keywords": [
+        "教皇",
+        "AI通谕",
+        "Magnifica Humanitas",
+        "Anthropic",
+        "社会影响"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Google搜索VP谈AI原生时代的矛盾",
+      "golden_quote": "AI搜索不是取代搜索，而是让搜索变得更深、更多——但出版商可能成为牺牲品。",
+      "keywords": [
+        "Google搜索",
+        "AI原生",
+        "Robby Stein",
+        "AI概要",
+        "出版商流量"
+      ],
+      "source": "X：Kim (@kimmonismus)"
+    },
+    {
+      "title": "AI编程的独立时代来了",
+      "golden_quote": "独立AI公司依然能对抗巨头，靠的不是模型，而是对企业痛点的深度理解。",
+      "keywords": [
+        "Cognition",
+        "融资",
+        "AI编程",
+        "独立实验室",
+        "企业应用"
+      ],
+      "source": "TechCrunch AI"
+    }
+  ]
+}
