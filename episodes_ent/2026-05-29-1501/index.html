@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>《女神异闻录6》的泄密风波：一场未完成的演出 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 013 夜 / 2026-05-29</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 女神异闻录6</div>
+    <h1 class="ep-title">《女神异闻录6》的泄密<span class="hl">风波：一场未完成的演出</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:50</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260529070255" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">但重点不是“发生了什么”，而是“为什么会有这样的画</h3></div><p>你好，我是伊恩。</p><p>最近，小红书上突然冒出了几张《女神异闻录6》的角色设计图和概念场景图，据说来自一家外包动画公司。然后，一个靠谱的舅舅党确认了其中大部分是真的。但紧接着，那个泄密的外包团队就被解雇罚款了。整个过程就像一场极速版的人间悲喜剧。今天，我们就来聊聊这场泄密事件，看看它背后藏着什么。</p><p>我们先回顾一下事件本身。事情发生在中国社交平台小红书，一个自称是负责《女神异闻录6》动画制作的外包工作室的员工，上传了几张图片。图片里包括角色设计、场景概念，甚至还有登场角色列表。网易的机核网报道了这件事，提到知名世嘉舅舅党lolilolailo发话了：除了有一张明显是AI生成的假图，其他都是真实的。这位舅舅党以爆料《如龙》和《女神异闻录》系列消息准确而出名。他还说，泄密的外包团队已经被解雇，并且被处以罚款。所以，这起泄密事件从曝光到处理，几乎在一天内完成了一个闭环。</p><p>但重点不是“发生了什么”，而是“为什么会有这样的画面”。机核的报道里提到，泄露的图片除了那张AI假图，其他都是真的。这意味着什么？意味着《女神异闻录6》的开发确实在推进，而且已经进入到了需要外包动画制作的阶段。按照《女神异闻录》系列的开发周期，这大概意味着游戏离正式公布不会太远了——可能就在未来一两年。从泄露的角色设计看，它们延续了系列一贯的时尚风格，但又有点不一样：色彩更跳跃，线条更锐利，有人说这可能是新主角，也有人说只是配角。概念场景图里出现了霓虹灯闪烁的都市夜景，还有类似地下通道的封闭空间，跟《女神异闻录5》的东京涩谷很像，但更潮湿、更逼仄。这些细节让人浮想联翩。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(130.1,'sec-0002')"><span>▶</span> 02:10</button><h3 class="section-title">第三个阶段，就是现在的“外包人员泄密”。大型3A游</h3></div><p>但最让我在意的，是那个外包团队的命运。为什么一个普通员工的泄密，会导致整个团队被解雇？这背后反映的，是整个日本游戏产业对外包管理的严格程度——以及他们在信息安全上付出的代价。</p><p>你有没有发现，最近几年，游戏泄密事件越来越多？从《侠盗猎车手6》的早期试玩片段，到《塞尔达传说：王国之泪》的设定集泄露，再到《女神异闻录6》的这些图，似乎没有哪款大作能真正做到“零泄密”。这是为什么？</p><p>这就要说到游戏行业的泄密史了。大概可以分成三个阶段。</p><p>第一个阶段，是“门店泄密时代”。2000年左右，游戏主要靠实体店销售。这些店在正式发售前一两周就会收到库存，有些店员会提前玩，然后在论坛上发帖子说“我玩到了，告诉你们结局是什么”。比如2004年的《侠盗猎车手：圣安地列斯》，就发生过店员偷跑并上传截图的事。厂商无奈之下，只能加设“保密协议”和“锁箱运送”。但效果有限。</p><p>第二个阶段，是“数字平台的泄漏”。2010年后，数字商店如Steam、PlayStation Store开始主导。有时，厂商会提前把游戏数据上传到商店，但审核不严，导致玩家能提前下载或者看到页面。比如2011年的《传送门2》，就因为Steam的预载机制，让部分玩家在官方发售日之前就拿到了游戏文件。这逼迫厂商不得不修改预载规则。</p><p>第三个阶段，就是现在的“外包人员泄密”。大型3A游戏开发周期长、成本高，厂商会大量外包——美术、动画、音乐、测试，全都交给第三方公司。这些公司遍布全球，员工流动性大，管理复杂。而社交媒体让泄密变得极其容易——拍张照片，几秒就能上传到微博、Twitter、Reddit。这次《女神异闻录6》的泄密，就是典型。其实，2022年《侠盗猎车手6》的泄密也差不多：一个18岁的黑客从Slack聊天记录里偷了90个视频，然后公然发到网上。那些视频后来被Rockstar确认是早期开发版本。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(260.2,'sec-0003')"><span>▶</span> 04:20</button><h3 class="section-title">在2020年的一次采访中，和田和久说：“我们不会永</h3></div><p>你看，泄密的方式在变，但根子没变：工具越来越方便，而人的自律却未必跟上。</p><p>回到《女神异闻录》系列本身。这个系列由Atlus开发，从1996年第一款《女神转生：女神异闻录》算起，已经快30年了。它之所以成为文化现象，不只是因为它好玩的战斗系统，更因为它把“日常”和“超自然”结合得极其巧妙。比如《女神异闻录5》里，你白天是东京的高中生，上学、打工、谈恋爱，晚上就变身怪盗，潜入别人的心灵迷宫，偷走那些扭曲欲望。这种“戴着面具生活”的隐喻，戳中了无数年轻人的心。所以，每次新作消息，都能引发热烈讨论。</p><p>这次的泄密，虽然只是冰山一角，但它像一扇半开的门：门里透出光，让我们窥见Atlus下一盘大棋的可能性。要知道，《女神异闻录6》是继《女神异闻录5》（2016年发售）后的正统续作，中间隔了将近9年。在这段时间里，Atlus做了什么呢？他们移植了《女神异闻录4 黄金版》到PC，重制了《女神异闻录3 携带版》和《女神异闻录5 皇家版》到更多平台，还捣鼓了那个颇有争议的《真女神转生V》。但核心团队——制作人桥野桂和导演和田和久——似乎在憋大招。</p><p>在2020年的一次采访中，和田和久说：“我们不会永远只做《女神异闻录5》风格的东西。”这句话被很多人解读为，《女神异闻录6》可能会有革命性变化。从泄露的概念图看，那些霓虹灯和阴暗小巷似乎暗示着一个更成熟、更抑郁的世界。有人猜测，这代主题可能是“自由与约束”——主角或许不是学生，而是一个刚刚步入社会的年轻人，被困在都市的灰霾里。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(390.3,'sec-0004')"><span>▶</span> 06:30</button><h3 class="section-title">从中长期看，日本游戏公司对外包管理的严格程度可能会</h3></div><p>但另一个关键点，是Atlus对泄密的态度。他们这次处理堪称“铁腕”：不仅解雇整个外包团队，还处以罚款。为什么这么狠？一方面，Atlus本身就有“秘密主义”传统——他们曾因《女神异闻录5》的剧情被提前泄露，而推迟过游戏的某些内容发布。另一方面，泄密对商业的打击是直接的：早期美术泄露会破坏官方预告的“惊喜感”，导致玩家期待值下降。更严重的是，如果系统或剧情漏洞被曝光，可能迫使开发组推翻重做。</p><p>当然，也有不同的声音。有些玩家认为，泄密虽然不道德，但客观上激发了更多人对游戏的兴趣——比如这次泄密后，微博上#女神异闻录6#话题一天内涨了数百万阅读。但厂商显然不这么想：你看任天堂，每次泄密都发律师函；Rockstar更是把那个18岁的黑客送进了精神病院。这背后，是资本对“可控信息环境”的执着。</p><p>那么，这件事之后会怎么发展？从短期看，Atlus可能会加速《女神异闻录6》的公布流程。按照惯例，他们或许会在今年年底或明年年初就发布首个预告。至于那张AI假图，它倒是给行业敲了个警钟：当AI能生成以假乱真的概念图时，“泄密”和“伪造”的界限会越来越模糊。未来，你可能在社交媒体看到一堆所谓“泄露图”，但其中绝大部分可能都是AI生成的，目的只是为了博眼球。</p><p>从中长期看，日本游戏公司对外包管理的严格程度可能会进一步升级：比如要求外包公司安装行为监控软件，或者禁止员工带手机进入工作室。但这又牵涉到隐私问题。也许，这反而会倒逼行业产生新的沟通方式——比如用虚拟工位、加密传输工具、甚至区块链技术来追溯泄密源头。</p></div>
+<div class="section" id="sec-0005"><p>还有一个更哲学的问题：在这种“全民围堵泄密”的环境下，那种“一张图就能引爆全世界玩家热情”的浪漫，是不是也一起被围堵了？想想看，如果每款游戏都能严格保密，直到官方发布会那一刻才惊艳亮相，那种纯粹的惊喜会不会更罕见？但反过来，泄密是否也变成了另一种形式的“提前狂欢”？就像有人说的：“偷来的乐趣，往往更刺激。”</p><p>所以，我很好奇你怎么看：如果你是游戏开发者，你会怎么对待泄密者？如果你是玩家，你会忍不住点开那些“疑似”泄露图吗？或者，你会觉得这一切都是厂商和媒体联合起来的炒作？无论如何，这些都不只是游戏行业的问题，它其实关乎我们这个时代的共同困境：信息究竟是越多越好，还是越有序越好？</p><p>好了，以上就是这期的主要内容。感谢你花时间听我聊这些。我们下次再见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">但重点不是“发生了什么”，而是“为什么会</span></div>
+<div class="tl-item" onclick="seek(130.1,'sec-0002')"><span class="tl-time">02:10</span><span class="tl-title">第三个阶段，就是现在的“外包人员泄密”。</span></div>
+<div class="tl-item" onclick="seek(260.2,'sec-0003')"><span class="tl-time">04:20</span><span class="tl-title">在2020年的一次采访中，和田和久说：“</span></div>
+<div class="tl-item" onclick="seek(390.3,'sec-0004')"><span class="tl-time">06:30</span><span class="tl-title">从中长期看，日本游戏公司对外包管理的严格</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260529070255" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
