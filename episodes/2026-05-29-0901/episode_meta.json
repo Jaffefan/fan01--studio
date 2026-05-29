@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-29-0901",
+  "title": "AI 狂飙：2千美元电影闯电影节，Anthropic估值逼近万亿",
+  "published_at": "2026-05-29 09:01",
+  "duration_seconds": 1007.95,
+  "duration_label": "16分47秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Claude Opus 4.8 降临，Anthropic 一天双响",
+      "golden_quote": "Opus 4.8 开始有节奏感了。",
+      "keywords": [
+        "Claude Opus 4.8",
+        "Anthropic",
+        "融资",
+        "AI模型",
+        "企业应用"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "万亿融资背后：Anthropic 年化收入 470 亿美元",
+      "golden_quote": "Anthropic 赌的不只是模型，而是基础设施。",
+      "keywords": [
+        "Anthropic",
+        "650亿美元",
+        "融资",
+        "算力扩张",
+        "企业级AI"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "Oculus 创始人入局，对话 AI 塞进手机",
+      "golden_quote": "对话 AI 的尽头是行动。",
+      "keywords": [
+        "Sesame",
+        "对话式AI",
+        "Oculus",
+        "智能眼镜",
+        "语音交互"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "2000 美元 AI 电影登上翠贝卡，好莱坞慌了",
+      "golden_quote": "2000 美元买不到好莱坞，但能买到一张电影节入场券。",
+      "keywords": [
+        "AI电影",
+        "翠贝卡",
+        "2000美元",
+        "生成式AI",
+        "好莱坞"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "互联网正在被机器接管：AI 流量即将超过人类",
+      "golden_quote": "2027 年，互联网上每两个访客里就有一个是机器人。",
+      "keywords": [
+        "AI agent流量",
+        "OpenSearch Serverless",
+        "Cloudflare",
+        "基础设施",
+        "机器流量"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
