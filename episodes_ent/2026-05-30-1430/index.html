@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>被遗忘的恐怖版《E.T.》：斯皮尔伯格失落的《夜空》 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 014 夜 / 2026-05-30</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 斯皮尔伯格</div>
+    <h1 class="ep-title">被遗忘的恐怖版《E.T.》<span class="hl">：斯皮尔伯格失落的《夜空》</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:25</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260530063113" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">埃夫里做了大量研究，采访了许多与斯皮尔伯格有关的人</h3></div><p>你好，我是伊恩。想象一下，如果斯皮尔伯格最经典的外星人电影不是那个骑自行车飞过月球的暖心故事，而是一部血腥恐怖片——里面的外星人会屠杀整个家庭。这听起来像是平行宇宙的事情，但它确实存在过。这个十月，一本新书《困在地球上》将揭开这个被放弃的项目——《夜空》——如何最终变成了我们熟知的《E.T.外星人》。</p><p>先说说这本书的来头。作者马克斯·埃夫里，你可能没听过这个名字，但如果你对电影幕后感兴趣，应该知道他那本《混乱的杰作：大卫·林奇的《沙丘》》。那本书被誉为近年来最好的电影制作书之一——不仅详尽，而且诚实到让好莱坞公关团队头疼。埃夫里告诉我，他写《沙丘》那本书时有个习惯：越挖深入，故事就越离奇。这次写《夜空》也一样。</p><p>《困在地球上》将于十月由1984出版社出版。根据出版社的新闻稿，这本书追踪了斯皮尔伯格从被放弃的恐怖片《夜空》到《E.T.外星人》的不寻常旅程。它不是简单的幕后花絮，而是一部电影史加上调查记者的追寻。书中既讲到斯皮尔伯格青少年时期对外星人的痴迷——他1960年代的电影《火光》，也讲到1977年《第三类接触》的成功，然后深入到《夜空》的制作——这个雄心勃勃但最终失败的黑暗科幻恐怖片，如何悄悄演变成了那个暖心的经典《E.T.》</p><p>埃夫里做了大量研究，采访了许多与斯皮尔伯格有关的人。听起来就像他为《沙丘》那本书付出的努力一样。他说：“就像写大卫·林奇的《沙丘》一样，我挖得越深，故事就变得越大——也更疯狂。”</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(113.1,'sec-0002')"><span>▶</span> 01:53</button><h3 class="section-title">这个过程听起来很简单一个从黑暗到光明的转变，但背后</h3></div><p>现在，让我们回到时间线里，看看这个疯狂的转化到底怎么发生的。</p><p>《夜空》是什么？简单说，它原本是斯皮尔伯格在《第三类接触》之后构思的一个恐怖片。故事设定在加利福尼亚的一个农场里，一群外星人入侵人类的家庭。但这不是《E.T.》那样的友好拜访——这些外星人是恶意的，其中会有一个疯狂的外星人杀死家里的父亲，然后绑架母亲和孩子。你可以想象，如果这个电影拍出来，它可能会是斯皮尔伯格最黑暗的作品之一，而不是那个所有孩子都想拥抱的E.T.</p><p>但事情在剧本改编中慢慢发生了变化。斯皮尔伯格找来了一位编剧——梅丽莎·马西森，也就是后来《E.T.》的剧本作者。马西森在改写《夜空》剧本时，对那个邪恶的外星人角色完全没有兴趣，反而被另一个角色吸引：一个迷路的小外星人，被困在地球上，渴望回家。据后来公开的资料，马西森完全无视了恐怖片的设定，直接写了另一个故事。斯皮尔伯格看到她的草稿后，意识到这才是他想拍的电影。于是，《夜空》被彻底放弃，《E.T.外星人》诞生了。</p><p>这个过程听起来很简单一个从黑暗到光明的转变，但背后的细节比你想象的复杂得多。事实上，斯皮尔伯格在整个80年代初期一直有点分裂。他同时筹备着好几部电影——一边是《夺宝奇兵》，一边是《E.T.》，另一边还有《鬼驱人》和《小魔怪》。这些电影的DNA其实都互相交叉着。《夜空》的余波并没有消失——它的恐怖元素被拆解后，散布到了整个好莱坞。比如，那个邪恶外星人的概念后来被用在了《鬼驱人》里，而狂野、恶作剧般的生物则成了《小魔怪》的灵感。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(226.3,'sec-0003')"><span>▶</span> 03:46</button><h3 class="section-title">那么，那些被砍掉的创意去了哪里呢？它们没有消失。除</h3></div><p>这就是埃夫里在书里想讲的故事：一个被放弃的项目如何像幽灵一样游荡在好莱坞，影响了80年代的整个科幻恐怖类型。</p><p>但我们要把时间再往前拨一点。斯皮尔伯格对外星人的痴迷不是从《第三类接触》开始的。他15岁就拍了一部电影叫《火光》，讲的是外星人入侵。你想想，一个十几岁的孩子用8毫米摄影机拍出来的东西，后来居然成了他人生的一条主线。这很惊人，不是吗？</p><p>今天我们回头看，《第三类接触》是1977年出来的，那一年还有《星球大战》。但斯皮尔伯格当时没有像其他人一样跑去拍太空歌剧，他更关心的是“接触”本身——而不是战争。他后来在《E.T.》里延续了这种好奇心，只不过换了一个更温柔的角度。但有趣的是，斯皮尔伯格同时也在想一个黑暗版本：如果外星人来了，不是带着和平，而是带着恶意呢？那就是《夜空》的起点。</p><p>但《夜空》没有被拍出来。据说是因为成本太高，加上斯皮尔伯格自己感到不安——他觉得拍一部恐怖片来吓唬小孩不太对劲。但更现实的原因可能是，他同时在拍《夺宝奇兵》，累得半死。1981年《夺宝奇兵》上映后，他立刻转向了《E.T.》，整个制作周期只用了几个星期。斯皮尔伯格后来在采访里说，拍《E.T.》是他最愉快的经历之一，因为那是一个完全发自内心的故事。</p><p>那么，那些被砍掉的创意去了哪里呢？它们没有消失。除了《鬼驱人》和《小魔怪》外，我们还可以讨论一下《夜空》对80年代电影工业的影响。在书里，埃夫里还分析了《夜空》的DNA如何扩散到整个类型片领域。比如，那个恶意外星人后来成了很多低成本恐怖片的原型。有些导演甚至直接引用它，比如乔·丹特的《小魔怪》里的Gizmo——一个可爱的小生物，但他其实是从邪恶变异来的。这层隐喻其实和《夜空》一脉相承。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(339.4,'sec-0004')"><span>▶</span> 05:39</button><h3 class="section-title">至于斯皮尔伯格本人，他会不会公开谈论《夜空》？我猜</h3></div><p>今年2026年，堪称是“斯皮尔伯格外星人年”。不仅这本书要出来，斯皮尔伯格还要在6月12日上映他的新片《曝光日》。讲的是人类终于知道外星人存在后会怎么样。你发现了吗？斯皮尔伯格拍了差不多50年电影，外星人始终是他挥之不去的主题。为什么？可能因为他一直相信，地球上还有比战争和冲突更重要的东西——未知的、好奇的、甚至有点恐怖的东西。</p><p>最后，埃夫里在书中还做了很特别的设计：封面和插图是由艺术家伊恩·弗里德创作的，他笔名DarkMatter。伊恩画了一个未拍摄的《夜空》场景：一个外星人站在农舍前，画面阴森。和那个骑自行车飞过月亮的E.T.相比，简直两个世界。</p><p>出版社说，《困在地球上》不仅要讲一个电影如何变成另一个电影，它要表达的是：在好莱坞，没有真正的“废弃”项目。每部失败的脚本、每个被砍的创意，都会以某种形式存活下来，在你不注意的地方发酵，然后突然出现在另一部作品里。这或许就是整个娱乐产业的本质——一个不断循环、相互滋养的生态系统。</p><p>所以，如果你喜欢电影，或者对人如何从黑暗中找到光的故事感兴趣，这本书可能正是你要的。埃夫里那种诚实又细致的写作风格，会让你感觉像坐在咖啡馆里听一个老朋友讲故事。不是那种装模作样的“内幕”，而是带着温度的还原。</p><p>至于斯皮尔伯格本人，他会不会公开谈论《夜空》？我猜他不会主动提起。但偶尔在纪录片或访谈里，他还是会提到一个细节：他记得自己坐在办公室里，看着梅丽莎·马西森写的《E.T.》剧本第一行字——“一个迷路的外星人”，然后他笑了。他知道，那个黑暗的版本终于可以放下了。</p></div>
+<div class="section" id="sec-0005"><p>好了，今天就说到这里。也许下一次你重看《E.T.》时，可以想想那个没拍出来的恐怖片。有时候，一部电影最美的地方，就是它差一点就没能成为现在的样子。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">埃夫里做了大量研究，采访了许多与斯皮尔伯</span></div>
+<div class="tl-item" onclick="seek(113.1,'sec-0002')"><span class="tl-time">01:53</span><span class="tl-title">这个过程听起来很简单一个从黑暗到光明的转</span></div>
+<div class="tl-item" onclick="seek(226.3,'sec-0003')"><span class="tl-time">03:46</span><span class="tl-title">那么，那些被砍掉的创意去了哪里呢？它们没</span></div>
+<div class="tl-item" onclick="seek(339.4,'sec-0004')"><span class="tl-time">05:39</span><span class="tl-title">至于斯皮尔伯格本人，他会不会公开谈论《夜</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260530063113" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
