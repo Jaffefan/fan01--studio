@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>游戏不能死：加州法案背后的十年抗争 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 015 夜 / 2026-05-31</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 停止扼杀游戏</div>
+    <h1 class="ep-title">游戏不能死：加州<span class="hl">法案背后的十年抗争</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:34</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260531070537" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">育碧不是第一个这么干的。2019年，迪士尼就关闭了</h3></div><p>你好，我是伊恩。今天早上，加州议会以43比16通过了一项法案，要求游戏公司关服前必须提前60天通知，并给玩家留条活路。你可能觉得这只是个新闻，但为了这一刻，一群人已经吵了十年。</p><p>《The Crew》是育碧在2014年推出的一款开放世界赛车游戏。你开着车横穿美国，从洛杉矶一路飙到纽约，沿途风景变换，和朋友们组队竞速。这款游戏卖了几百万份，不算顶级大作，但有自己的忠实玩家群。2023年底，育碧突然宣布，《The Crew》将于2024年3月31日停服，届时游戏将从所有数字商店下架，已经购买的玩家也无法再进入游戏。玩家们炸了锅。你花了60美元买的东西，说没就没了？育碧的理由是服务器维护成本高，而且他们想集中资源搞续作。但玩家不买账：你卖的时候可没说过这游戏是有保质期的。更狠的是，停服之后，连单人模式也玩不了，因为所有数据都存在育碧的服务器上。好比你买了一辆真车，厂家却说，十年后我们收回这车的发动机，你就推着走吧。</p><p>育碧不是第一个这么干的。2019年，迪士尼就关闭了《迪士尼：无限》的服务器，那可是个实体玩具加数字游戏的混合体，玩家花大价钱买的玩具瞬间变废塑料。2021年，索尼关了《驾驶俱乐部》的服务器。2022年，任天堂下架了《火焰之纹章：英雄》的离线模式。2023年，EA停掉了《战地风云1943》的线上服务。这些游戏被做成了漂漂亮亮的数据墓碑，墓碑上刻着发行日期和死亡日期。玩家们愤怒，但愤怒完也就散了，直到《The Crew》事件彻底戳到了痛处。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(127.0,'sec-0002')"><span>▶</span> 02:06</button><h3 class="section-title">反对的声音当然很大。商业软件联盟代表微软、育碧、E</h3></div><p>有个叫罗斯·斯科特的YouTube博主，专门做游戏评论，频道叫“Accursed Farms”。2024年4月，他发起了一个叫“停止扼杀游戏”的运动。这个运动的核心诉求很简单：游戏公司不应该在玩家购买后又悄无声息地把游戏弄死。斯科特的想法迅速发酵，几个月内，他们在Change.org上收集了超过40万个签名。他们的目标很明确：推动立法，从法律上要求游戏公司为停服游戏提供补偿或离线版本。</p><p>运动很快从线上走到了线下。2024年秋天，“停止扼杀游戏”的志愿者开始联络政界人士，最终美籍华裔加州众议员克里斯·沃德注意到了这个议题。沃德的选区里有不少游戏从业者，他自己也玩《马力欧赛车》。几个月后，沃德正式提交了AB-1921号法案，也就是后来的“保护我们的游戏法案”。</p><p>法案的内容拆开来看，其实不复杂：任何在加州销售的服务型游戏，如果开发商要关闭服务器，必须提前60天通知玩家，而且必须提供至少一条后路——要么是让玩家可以自己搭建私人服务器继续玩，要么给离线版本，要么干脆退款。违者面临罚款，公司有可能被起诉。</p><p>反对的声音当然很大。商业软件联盟代表微软、育碧、EA等大公司游说加州议员，说这会扼杀游戏行业的创新。他们的逻辑是：服务型游戏是时代的趋势，如果强制要求停服后维持可玩性，会大幅增加成本，很多小开发者根本负担不起。沃德的回应很有意思，他说：“游戏不是为了打破之后才卖出去的。”他引用了一个数据：每年全球有超过200款服务型游戏停服，其中一半在运营不满两年。如果买游戏真等于租游戏，那开发商至少该告诉玩家你这东西是租来的。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(253.9,'sec-0003')"><span>▶</span> 04:13</button><h3 class="section-title">加拿大1988年在《消费者保护法》里隐约涉及了“数</h3></div><p>the Crew事件不是孤例，它是2010年代以来游戏产业变迁的一个缩影。2009年，街霸4和使命召唤：现代战争2让在线游戏卖了几千万份，但从始至终玩家都知道自己买的是能独自游玩的软件。2013年，微软在Xbox One发布会上犯了一个致命的错误：他们试图规定所有游戏必须时刻联网，而且二手交易将被限制。玩家们愤怒到极点，微软最终完败，收回了政策。那一次，玩家赢了。但此后的十年里，行业悄悄走了另一条路。</p><p>2014年起，越来越多的厂商开始只做下载版，包月订阅制也渐渐流行，玩家逐渐丧失了对一款游戏的所有权。你买的其实不是游戏，而是某个访问权。就像Steam其实只卖许可证，Uplay更是把用户协议写得比词典还厚。到了2020年代，连单机游戏也常常需要联网才能玩，因为反盗版或成就系统必须联网。</p><p>游戏的法律定义在国际上长期模糊。在美国，游戏被视为“软件”，受版权法保护，但版权法并未明确规定消费者享有永久使用权。EULA，也就是最终用户许可协议，实际上允许厂商随时收回你的游戏权。每年都有玩家购买的游戏停服，但只有少数人会真的起诉。2018年，有玩家因《GT赛车》联网关服集体起诉索尼，法院却以“玩家已同意用户协议”为由驳回了。不过1988年，美国有个标志性案件叫做路易斯诉加州，确立了“消费者有权合理使用所购产品”的精神，但它从未被直接适用在数字商品上。</p><p>加拿大1988年在《消费者保护法》里隐约涉及了“数字商品永久性”的概念，欧盟2022年的数字市场法也间接允许用户自主搭建服务的可能性。不过真正最接近的，是2023年法国国会议员提出的一项法案草案，要求所有“在线游戏”必须保证停服后仍能游玩离线版本。那个草案当年被驳回了，理由是“会阻碍创新”。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(380.9,'sec-0004')"><span>▶</span> 06:20</button><h3 class="section-title">至于那些坚持了几年的运动志愿者，很多人反而对后续发</h3></div><p>“停止扼杀游戏”本质上是一个消费者保护运动，关涉的是权利，也是文化。游戏已经被联合国教科文组织认定为文化遗产，但实际操作中，没人管。任天堂、世嘉在1980年代生产的卡带现在依然能运行，可2030年代的玩家可能再也玩不到2010年代的代码了。数字时代加速了这种消失：据数据统计，2008年至2023年间，互联网上已有超过30%的在线游戏彻底消失，超过60%的数字购物的商品逐渐消失或者无法再次访问。人类对数字物品的所有权，正在被科技巨头悄悄抽走。</p><p>AB-1921的通过是一个巨大胜利。但它还远没结束。下一步，法案还要在加州参议院通过，然后由州长签字才能生效。就算全通过，也仍然只覆盖加州一个州。加州的玩家连上了服务器，但得克萨斯、佛州的玩家怎么办？而且大型游戏公司真的会安安静静地赔钱吗？</p><p>在加州投票的当天，育碧没有立即回应。但据消息人士透露，EA内部已经开了好几次紧急会议，讨论是否在新游戏中加入离线保证。索尼不久前还宣布，要关停一款刚发售半年多的PS5游戏服务器。2K则刚刚下架了乐高2K赛车。所以这道法案，是在考验整个产业。</p><p>议员沃德的智囊团给出的预测相对悲观：如果最终通过，初期可能会有更多小型游戏在发售前直接声明“我们可能随时停服”，反而让玩家更警惕。但这总比现在闷声扼杀好。斯科特自己倒是乐观得多，他说：“我们证明了只要玩家团结起来，可以改变世界上最庞大的产业之一的规则。”</p><p>至于那些坚持了几年的运动志愿者，很多人反而对后续发展有点恐惧。游戏的商业模式正从一次性买断转向长期服务，这会彻底改变行业形态，短时间恐怕会带来更多关服先例。现在的《TheCrew》已经停服一年多了，当年那位愤怒的玩家可能早就死了心。但如果没有他，没有40万个签名，没有加州43票对16票的胜利，这盘棋可能永远没人敢下。</p></div>
+<div class="section" id="sec-0005"><p>数字世界的命运，从来没有那么简单过。以后你会买到更多随买随关的游戏吗？不一定。但至少，有人开始认真思考该怎么做了。</p><p>（深呼吸）</p><p>加州这个法案也许并不完美，但它让很多游戏从业人员意识到，那个既想让玩家掏钱又想让游戏永远消失的商业模式，已经不被容忍了。技术、金钱、文化，这些全都纠缠在一起。我们买的不仅仅是一串代码，还是自己在这段数码时光里的记忆。记忆不该被轻易删除，你说呢？</p><p>好，我是伊恩，这篇故事的脚步先到这儿了。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">育碧不是第一个这么干的。2019年，迪士</span></div>
+<div class="tl-item" onclick="seek(127.0,'sec-0002')"><span class="tl-time">02:06</span><span class="tl-title">反对的声音当然很大。商业软件联盟代表微软</span></div>
+<div class="tl-item" onclick="seek(253.9,'sec-0003')"><span class="tl-time">04:13</span><span class="tl-title">加拿大1988年在《消费者保护法》里隐约</span></div>
+<div class="tl-item" onclick="seek(380.9,'sec-0004')"><span class="tl-time">06:20</span><span class="tl-title">至于那些坚持了几年的运动志愿者，很多人反</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260531070537" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
