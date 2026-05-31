@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-05-31-1249",
+  "title": "NVIDIA自研芯片、xAI弃JAX、Copilot涨价，AI界三巨头同日掀桌",
+  "published_at": "2026-05-31 12:49",
+  "duration_seconds": 956.74,
+  "duration_label": "15分56秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Google悄悄发了两款小模型",
+      "golden_quote": "Google的小模型是边缘AI的轻骑兵，但能否成势取决于生态闭环。",
+      "keywords": [
+        "Google",
+        "Nano Banana",
+        "Gemini",
+        "边缘AI",
+        "轻量模型"
+      ],
+      "source": "X：Google AI Developers"
+    },
+    {
+      "title": "xAI放弃JAX GPU，自己写C框架",
+      "golden_quote": "最大的GPU客户告诉你：你的框架不行，我自己来。",
+      "keywords": [
+        "xAI",
+        "JAX",
+        "NVIDIA",
+        "训练框架",
+        "MFU"
+      ],
+      "source": "X：SemiAnalysis"
+    },
+    {
+      "title": "AI骗子用假黑人形象卖Shein劣质货",
+      "golden_quote": "当同情心被AI生成的脸贩卖，信任就变成了商品。",
+      "keywords": [
+        "AI欺诈",
+        "虚假形象",
+        "TikTok",
+        "社交电商",
+        "同情心诈骗"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Copilot按token计费，有人账单翻60倍",
+      "golden_quote": "AI编程工具的免费午餐结束了，微软正在从拉新转向收割。",
+      "keywords": [
+        "GitHub Copilot",
+        "token计费",
+        "涨价",
+        "愤怒开发者",
+        "氛围编程"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "NVIDIA联手联发科打造ARM笔记本芯片",
+      "golden_quote": "NVIDIA不想再当装空调的师傅，它要自己当开发商。",
+      "keywords": [
+        "NVIDIA",
+        "N1X",
+        "ARM笔记本芯片",
+        "联发科",
+        "PC新纪元"
+      ],
+      "source": "X：阿易 AI Notes"
+    }
+  ]
+}
