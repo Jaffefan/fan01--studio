@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-01-0930",
+  "title": "5件颠覆你AI硬件认知的真实事件",
+  "published_at": "2026-06-01 09:30",
+  "duration_seconds": 476.98,
+  "duration_label": "7分56秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "OpenAI正式进军机器人领域",
+      "golden_quote": "机器人是AI最后的物理出口。",
+      "keywords": [
+        "OpenAI",
+        "机器人",
+        "硬件",
+        "AI"
+      ],
+      "source": "X：Sam Altman (@sama)"
+    },
+    {
+      "title": "苹果AI升级依赖Google Gemini",
+      "golden_quote": "苹果的隐私是营销，不是技术。",
+      "keywords": [
+        "苹果",
+        "AI",
+        "Gemini",
+        "隐私"
+      ],
+      "source": "X：Kim (@kimmonismus)"
+    },
+    {
+      "title": "特斯拉FSD横穿加拿大零干预",
+      "golden_quote": "FSD已到法规瓶颈，而非技术瓶颈。",
+      "keywords": [
+        "特斯拉",
+        "FSD",
+        "自动驾驶",
+        "零干预"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "OpenAI发布生物防御AI工具Rosalind",
+      "golden_quote": "AI的下一个战场是生物防御。",
+      "keywords": [
+        "OpenAI",
+        "Rosalind",
+        "生物防御",
+        "AI安全"
+      ],
+      "source": "X：Sam Altman (@sama)"
+    },
+    {
+      "title": "200英镑数据中心GPU塞进游戏电脑",
+      "golden_quote": "二手数据中心GPU是个人AI的捷径。",
+      "keywords": [
+        "V100",
+        "数据中心GPU",
+        "本地AI",
+        "DIY"
+      ],
+      "source": "Hacker News"
+    }
+  ]
+}
