@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-02-0901",
+  "title": "5条AI重磅炸弹：模型开源、政府诉讼、IPO与芯片军备竞赛",
+  "published_at": "2026-06-02 09:01",
+  "duration_seconds": 668.66,
+  "duration_label": "11分08秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "MiniMax M3：百万上下文击败GPT",
+      "golden_quote": "开源模型正在逼近前沿护城河。",
+      "keywords": [
+        "MiniMax M3",
+        "稀疏注意力",
+        "百万上下文",
+        "开源模型",
+        "编码AI"
+      ],
+      "source": "MiniMax Blog"
+    },
+    {
+      "title": "Replit一提示词生成完整业务",
+      "golden_quote": "创业的本质从实现变成了该做什么。",
+      "keywords": [
+        "Replit",
+        "单提示词",
+        "自动建站",
+        "低代码",
+        "AI创业"
+      ],
+      "source": "Replit on X"
+    },
+    {
+      "title": "佛罗里达起诉OpenAI谋杀案关联",
+      "golden_quote": "AI开始介入暴力犯罪时，工具无罪还能站住脚吗？",
+      "keywords": [
+        "佛罗里达起诉OpenAI",
+        "ChatGPT谋杀",
+        "AI责任",
+        "Sam Altman",
+        "产品安全"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Anthropic递交IPO文件领先OpenAI",
+      "golden_quote": "安全派先敲开了资本市场的大门。",
+      "keywords": [
+        "Anthropic IPO",
+        "OpenAI",
+        "资本市场",
+        "AI估值",
+        "安全派"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "NVIDIA RTX Spark杀入2000亿美元CPU市场",
+      "golden_quote": "当电脑不再需要你操作时，操作系统界面将消失。",
+      "keywords": [
+        "NVIDIA RTX Spark",
+        "AI PC",
+        "CPU市场",
+        "黄仁勋",
+        "AI智能体"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
