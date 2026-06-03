@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-03-0901",
+  "title": "5件事让你重新理解AI边界：微软自研推理模型、Anthropic递交IPO、智能体清理电脑120G",
+  "published_at": "2026-06-03 09:01",
+  "duration_seconds": 694.08,
+  "duration_label": "11分34秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "微软自研推理模型MAI-Thinking-1发布",
+      "golden_quote": "微软不再只做OpenAI的金主，它要自己上牌桌。",
+      "keywords": [
+        "微软",
+        "MAI-Thinking-1",
+        "推理模型",
+        "Build 2026",
+        "OpenAI"
+      ],
+      "source": "The Verge：AI（RSS）"
+    },
+    {
+      "title": "Alphabet融资800亿，Anthropic提交IPO",
+      "golden_quote": "AI竞赛的门票，已经涨到百亿美元级别。",
+      "keywords": [
+        "Alphabet",
+        "融资",
+        "Anthropic",
+        "IPO",
+        "AI基建"
+      ],
+      "source": "Bloomberg：Technology（RSS）"
+    },
+    {
+      "title": "他用AI做了个免费清理工具，省下120刀",
+      "golden_quote": "不是软件不行，是AI让信息透明了。",
+      "keywords": [
+        "Codex",
+        "清理工具",
+        "开源",
+        "Agent",
+        "CleanMyMac"
+      ],
+      "source": "X：卡兹克 (@Khazix0918)"
+    },
+    {
+      "title": "Claude Code团队复盘：AI如何重塑工程流程",
+      "golden_quote": "写代码不再卡脖子，但验证和安全成了新的瓶颈。",
+      "keywords": [
+        "Claude Code",
+        "工程组织",
+        "AI原生",
+        "代码审查",
+        "流程变革"
+      ],
+      "source": "Claude：Blog（网页）"
+    },
+    {
+      "title": "OpenAI发布六款Codex插件，瞄准白领工作",
+      "golden_quote": "AI复制白领工作，不是取代，是重新定义。",
+      "keywords": [
+        "OpenAI",
+        "Codex",
+        "插件",
+        "白领工作",
+        "企业AI"
+      ],
+      "source": "TechCrunch AI"
+    }
+  ]
+}

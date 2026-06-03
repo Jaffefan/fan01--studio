@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5件事让你重新理解AI边界：微软自研推理模型、Anthropic递交IPO、智能体清理电脑120G - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 038 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-06-03 09:01（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>11分59秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">5件事让你重新理解AI边界：微软自研推理模型、Anthropic递交IPO、智能体清理电脑120G</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260603010317" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="35.7">  <span class="toc-time">00:35</span>  <span class="toc-text">微软自研推理模型MAI-Thinking-1发布</span></div>
+    <div class="toc-item" data-seek="170.61">  <span class="toc-time">02:50</span>  <span class="toc-text">Alphabet融资800亿，Anthropic提交IPO</span></div>
+    <div class="toc-item" data-seek="286.75">  <span class="toc-time">04:46</span>  <span class="toc-text">他用AI做了个免费清理工具，省下120刀</span></div>
+    <div class="toc-item" data-seek="416.41">  <span class="toc-time">06:56</span>  <span class="toc-text">Claude Code团队复盘：AI如何重塑工程流程</span></div>
+    <div class="toc-item" data-seek="550.62">  <span class="toc-time">09:10</span>  <span class="toc-text">OpenAI发布六款Codex插件，瞄准白领工作</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260603010317" alt="微软自研推理模型MAI-Thinking-1发布" data-seek="35.7" style="cursor:pointer">
+    <div class="segment-number" data-seek="35.7" style="cursor:pointer">第 1 条 · 00:35</div>
+    <h2 class="segment-title">微软自研推理模型MAI-Thinking-1发布</h2>
+    <div class="segment-summary">微软在Build 2026大会上发布了首款高级推理AI模型MAI-Thinking-1，该模型定位中等规模，在软件工程基准测试中与领先模型匹敌。微软强调模型完全使用干净数据训练，未蒸馏第三方模型。同时推出图像生成、转录、语音和编程等共七款新模型，其中MAI-Transcribe-1.5速度快五倍，MAI-Code-1-Flash已整合GitHub Copilot和VS Code。此举标志着微软在AI自研上迈出关键一步，与OpenAI重新协商合作后关系松绑。</div>
+    <div class="golden-quote">微软不再只做OpenAI的金主，它要自己上牌桌。</div>
+    <div class="segment-meta">
+      <span class="tag">微软</span> <span class="tag">MAI-Thinking-1</span> <span class="tag">推理模型</span> <span class="tag">Build 2026</span> <span class="tag">OpenAI</span>
+      <span class="tag">来源: The Verge：AI（RSS）</span>
+      <a class="source-link" href="https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260603010317" alt="Alphabet融资800亿，Anthropic提交IPO" data-seek="170.61" style="cursor:pointer">
+    <div class="segment-number" data-seek="170.61" style="cursor:pointer">第 2 条 · 02:50</div>
+    <h2 class="segment-title">Alphabet融资800亿，Anthropic提交IPO</h2>
+    <div class="segment-summary">Alphabet宣布拟通过股权融资800亿美元用于AI基础设施扩展，规模创历史纪录。同时，Anthropic已秘密提交IPO申请，在上市竞赛中领先OpenAI。SpaceX正与华尔街协商IPO承销费用，HPE因AI基础设施需求强劲销售预期超出市场估计。这些事件表明AI产业资本化加速，巨头不惜代价投入基础设施，AI公司的估值和上市步伐也在加快。</div>
+    <div class="golden-quote">AI竞赛的门票，已经涨到百亿美元级别。</div>
+    <div class="segment-meta">
+      <span class="tag">Alphabet</span> <span class="tag">融资</span> <span class="tag">Anthropic</span> <span class="tag">IPO</span> <span class="tag">AI基建</span>
+      <span class="tag">来源: Bloomberg：Technology（RSS）</span>
+      <a class="source-link" href="https://www.bloomberg.com/news/videos/2026-06-02/bloomberg-tech-6-2-2026-video" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260603010317" alt="他用AI做了个免费清理工具，省下120刀" data-seek="286.75" style="cursor:pointer">
+    <div class="segment-number" data-seek="286.75" style="cursor:pointer">第 3 条 · 04:46</div>
+    <h2 class="segment-title">他用AI做了个免费清理工具，省下120刀</h2>
+    <div class="segment-summary">博主卡兹克受X上推文启发，使用Codex对自己的MacBook做只读存储分析，发现大量可清理空间（激进方案超140G，实际清理120G），其中B站缓存视频占96.7G。为替代收费软件CleanMyMac，他制作并开源了一个跨平台AI清理skill。该skill扫描文件生成可交互HTML报告，通过三色分级（绿灯放心清理、黄灯需人工判断、红灯禁止动）直观展示，并提供安全执行按钮。对比CleanMyMac仅扫描出15.8G，该skill效果显著，展示了AI Agent对传统应用的冲击。</div>
+    <div class="golden-quote">不是软件不行，是AI让信息透明了。</div>
+    <div class="segment-meta">
+      <span class="tag">Codex</span> <span class="tag">清理工具</span> <span class="tag">开源</span> <span class="tag">Agent</span> <span class="tag">CleanMyMac</span>
+      <span class="tag">来源: X：卡兹克 (@Khazix0918)</span>
+      <a class="source-link" href="https://x.com/Khazix0918/status/2061669881725309048" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260603010317" alt="Claude Code团队复盘：AI如何重塑工程流程" data-seek="416.41" style="cursor:pointer">
+    <div class="segment-number" data-seek="416.41" style="cursor:pointer">第 4 条 · 06:56</div>
+    <h2 class="segment-title">Claude Code团队复盘：AI如何重塑工程流程</h2>
+    <div class="segment-summary">在Code w/ Claude SF 2026活动上，Claude Code工程总监Fiona Fung分享了AI原生工程组织的实践。当智能体编程成为默认方式后，团队流程发生三项核心变化：规划从长周期转向即时响应，强调快速原型和用户反馈；上下文获取从问作者变为直接问Claude，并考虑自动化；代码审查中Claude处理风格和测试，人工聚焦法律、安全等专业判断。新范式下，工程瓶颈从编写代码转为验证、审查与安全维护。这要求工程师提升更高阶的能力。</div>
+    <div class="golden-quote">写代码不再卡脖子，但验证和安全成了新的瓶颈。</div>
+    <div class="segment-meta">
+      <span class="tag">Claude Code</span> <span class="tag">工程组织</span> <span class="tag">AI原生</span> <span class="tag">代码审查</span> <span class="tag">流程变革</span>
+      <span class="tag">来源: Claude：Blog（网页）</span>
+      <a class="source-link" href="https://claude.com/blog/running-an-ai-native-engineering-org" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260603010317" alt="OpenAI发布六款Codex插件，瞄准白领工作" data-seek="550.62" style="cursor:pointer">
+    <div class="segment-number" data-seek="550.62" style="cursor:pointer">第 5 条 · 09:10</div>
+    <h2 class="segment-title">OpenAI发布六款Codex插件，瞄准白领工作</h2>
+    <div class="segment-summary">OpenAI发布了六款Codex新插件，瞄准数据分析、创意制作、销售、产品设计、股权投资和投资银行六类白领工作。每个插件集成指令和上下文，开箱即用。同时发布内部报告显示Codex周活跃用户超500万，其中知识工作者占20%且增速是开发者的3倍多。新增Sites功能可将成果输出为托管网站，Annotations支持文档内精准标记。配合此前成立的OpenAI Deployment Company，OpenAI正加速将Codex打造为企业AI中台，意味着白领岗位的智能化进程加速。</div>
+    <div class="golden-quote">AI复制白领工作，不是取代，是重新定义。</div>
+    <div class="segment-meta">
+      <span class="tag">OpenAI</span> <span class="tag">Codex</span> <span class="tag">插件</span> <span class="tag">白领工作</span> <span class="tag">企业AI</span>
+      <span class="tag">来源: TechCrunch AI</span>
+      <a class="source-link" href="https://techcrunch.com/2026/06/02/openai-launches-new-codex-tools-for-white-collar-work/" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-06-03 01:03
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
