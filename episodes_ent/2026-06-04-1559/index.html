@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>古墓丽影重制版里的AI幽灵 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 019 夜 / 2026-06-04</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 古墓丽影</div>
+    <h1 class="ep-title">古墓丽影重制<span class="hl">版里的AI幽灵</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 06:55</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260604080025" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">Crystal Dynamics很快回应了Euro</h3></div><p>你好，我是伊恩。最近《古墓丽影：亚特兰蒂斯遗产》的预告片刚在PlayStation State of Play上亮相，画面美得让人心动，但一个藏在Steam页面角落的声明，让不少粉丝的心凉了半截。</p><p>事情是这样的：6月3日，Crystal Dynamics发布了《古墓丽影》初代重制版的新预告，虚幻引擎5的画面确实惊艳，水面的光影、废墟的纹理，都让人期待满满。但很快，眼尖的玩家发现，游戏的Steam页面上多了一行小字，写着：“AI辅助工具在开发早期被用于探索和临时内容。任何AI生成的素材，都已由人工替换或精修，以维持开发团队的创意愿景。”</p><p>这行字就像一颗石子投入平静的湖面。要知道，《古墓丽影》系列粉丝对AI的态度，早已不是“无所谓”了。去年，Aspyr发行的《古墓丽影4-6重制版》就因为AI配音闹得沸沸扬扬——法国配音演员Françoise Cadol指控工作室用AI篡改了她的表演，Aspyr最后道歉并删除了所有AI配音内容。更早之前，Aspyr还被质疑用AI制作了劳拉的服装，虽然他们矢口否认，但信任的裂痕已经出现。</p><p>所以当Crystal Dynamics的声明一出，玩家的第一反应不是“哦，这很正常”，而是“又来了”。有人在论坛上直接说：“我退订了。”还有人说：“如果他们能诚实说明AI的用途，我倒还放心一点，但‘早期探索’这个说法太模糊了。”</p><p>Crystal Dynamics很快回应了Eurogamer的采访，发言人说：“我们利用AI工具帮助团队更快迭代想法，确保最终产品的所有内容都是人工精心制作的。”这个说法听起来很官方，也很耳熟——几乎和去年Aspyr的声明如出一辙。但玩家并不买账，因为关键在于“早期探索”这四个字到底意味着什么。是AI生成了贴图纹理？是AI设计了关卡布局？还是AI参与了剧本对白？没有具体说明，就给了所有人想象的空间。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(138.6,'sec-0002')"><span>▶</span> 02:18</button><h3 class="section-title">但代价是什么？是玩家对“手工制作”的信任。电子游戏</h3></div><p>更重要的是，Crystal Dynamics背后是Embracer集团。这个集团CEO Phil Rogers去年曾公开称AI是“驱动效率的强大工具”。而Embracer最近几年的日子很不好过：2023年一笔20亿美元的沙特投资泡汤后，公司被迫进入“甩卖模式”，旗下工作室被裁的裁、卖的卖。Crystal Dynamics自己在2025年就经历了三轮裁员，2026年初又裁了一波。在这样的大环境下，用AI节省成本似乎成了自然选择。</p><p>但游戏行业的AI争议，远不止这一家公司。从2022年生成式AI爆发以来，几乎所有工作室都面临过类似的灵魂拷问。2023年《红霞岛》的AI配音丑闻，2024年《赛博朋克2077》的AI夜之城市民对话系统，再到2025年《使命召唤》被曝用AI生成武器皮肤——每一次，玩家反应都很激烈，但每一次，工作室还是继续尝试。</p><p>为什么？因为AI确实能省钱、省时间。一个普通的3A游戏，光是背景贴图就需要上百个艺术家数月的劳动。如果AI能生成80%的初稿，人工只需要调整剩下的20%，那成本和时间都能大幅压缩。对于像Embracer这样资金紧张的公司，这几乎是无法拒绝的诱惑。</p><p>但代价是什么？是玩家对“手工制作”的信任。电子游戏一直被视为数字工艺品，玩家相信每一个像素背后都有一个艺术家的选择。当AI介入时，这种信任就会动摇。就像一位Reddit用户说的：“我打开游戏看到一棵树，会想这是人画的还是AI生成的？如果是AI，那它为什么长这样？有什么意图？”这种不确定性会破坏沉浸感。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(277.2,'sec-0003')"><span>▶</span> 04:37</button><h3 class="section-title">如果你只想重温原汁原味的古墓丽影，2007年的《周</h3></div><p>历史总是惊人地相似。2010年代，当动视暴雪用自动化质检系统取代QA团队时，也引发过抗议。当时玩家的理由很相似：“机器无法理解‘好玩’是什么感觉。”但十年过去，自动化测试已经成为行业标准，玩家也接受了。今天的AI争议，会不会也走同样的路？</p><p>Crystal Dynamics的声明中有一个细节值得玩味：“任何AI辅助的资产都已由人工替换或精修。”这意味着最终成品里可能看不出AI痕迹，但玩家在乎的不是结果，而是过程。他们想知道自己支持的公司是否在走捷径，是否在牺牲艺术追求换取效率。</p><p>《古墓丽影：亚特兰蒂斯遗产》预定2027年发售，还有足够的时间让Crystal Dynamics证明他们的诚意。但不管他们怎么证明，有一个事实已经改变：关于手工匠心的光环，已经碎了一小块。就像当年人们发现劳拉胸前的钥匙扣是用低模贴图凑出来的影响体验吗？不影响。但知道了之后，那种“一切都很完美”的感觉就回不来了。</p><p>这段历史，或许会像2007年《古墓丽影：周年纪念》那样被铭记——那是一次没有AI争议、纯粹由人类工匠完成的致敬。而今天的《亚特兰蒂斯遗产》，无论如何都会因为这次AI声明，成为系列史上的一个特殊注脚。</p><p>如果你只想重温原汁原味的古墓丽影，2007年的《周年纪念》永远是安全的选择。但如果你愿意给Crystal Dynamics一次机会，也许可以等游戏发售后，看看那些所谓“精修”过的AI素材，到底和传统手工制作有几分差距。毕竟，最后的裁判永远是玩家的眼睛和感受。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">Crystal Dynamics很快回应</span></div>
+<div class="tl-item" onclick="seek(138.6,'sec-0002')"><span class="tl-time">02:18</span><span class="tl-title">但代价是什么？是玩家对“手工制作”的信任</span></div>
+<div class="tl-item" onclick="seek(277.2,'sec-0003')"><span class="tl-time">04:37</span><span class="tl-title">如果你只想重温原汁原味的古墓丽影，200</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260604080025" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
