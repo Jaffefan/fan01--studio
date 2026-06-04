@@ -1,0 +1,76 @@
+{
+  "episode_id": "2026-06-04-0901",
+  "title": "微软与OpenAI翻脸，DeepSeek估值4000亿，AI格局一夜重写",
+  "published_at": "2026-06-04 09:01",
+  "duration_seconds": 651.6,
+  "duration_label": "10分51秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "微软与 OpenAI 正式翻脸：离婚之后，正面开战",
+      "golden_quote": "微软终于不再躲在OpenAI身后。",
+      "keywords": [
+        "微软",
+        "OpenAI",
+        "竞争",
+        "MAI-Thinking-1",
+        "自研",
+        "Build 2026"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "ChatGPT 月活破 10 亿，但 Claude 增速是它的 10 倍",
+      "golden_quote": "10亿月活的王冠，正在松动。",
+      "keywords": [
+        "ChatGPT",
+        "月活",
+        "10亿",
+        "Claude",
+        "增速",
+        "IPO"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "DeepSeek 首轮融资 500 亿，中国 AI 独角兽来袭",
+      "golden_quote": "3500亿估值，买的是生态不是技术。",
+      "keywords": [
+        "DeepSeek",
+        "融资",
+        "500亿",
+        "腾讯",
+        "宁德时代",
+        "中国AI"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "英伟达发布首个通用抓取基础模型：机器人终于学会抓任何东西",
+      "golden_quote": "机器人的通用性，从学会抓开始。",
+      "keywords": [
+        "英伟达",
+        "GraspGen-X",
+        "抓取",
+        "基础模型",
+        "CVPR",
+        "机器人"
+      ],
+      "source": "NVIDIA AI Blog"
+    },
+    {
+      "title": "李飞飞团队给「世界模型」正名：别再什么都叫世界模型了",
+      "golden_quote": "术语清晰比炫酷demo更珍贵。",
+      "keywords": [
+        "世界模型",
+        "李飞飞",
+        "功能分类",
+        "POMDP",
+        "World Labs",
+        "概念分层"
+      ],
+      "source": "X：Fei-Fei Li"
+    }
+  ]
+}
