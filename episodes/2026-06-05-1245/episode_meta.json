@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-06-05-1245",
+  "title": "AI 自我改进初现，Meta 搭帐篷盖数据中心",
+  "published_at": "2026-06-05 12:45",
+  "duration_seconds": 521.04,
+  "duration_label": "8分41秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "OpenAI 承认 AI 正在自我加速",
+      "golden_quote": "AI 自我加速的飞轮正在转动。",
+      "keywords": [
+        "递归自我改进",
+        "AI 安全",
+        "治理挑战"
+      ],
+      "source": "X：Kim"
+    },
+    {
+      "title": "Anthropic 呼吁全球暂停 AI 开发",
+      "golden_quote": "AI 公司自己喊停，说明事情真的有点危险了。",
+      "keywords": [
+        "全球暂停",
+        "AI 风险",
+        "Anthropic"
+      ],
+      "source": "WSJ"
+    },
+    {
+      "title": "Meta 搭帐篷放 AI 芯片，只为省钱",
+      "golden_quote": "帐篷里的 AI 芯片，Meta 的省钱妙招也是无奈之举。",
+      "keywords": [
+        "Meta",
+        "帐篷数据中心",
+        "AI 投资"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Replit Agent 联手 Shopify，几句话建个店",
+      "golden_quote": "一句话开网店，AI 让创业门槛变成零。",
+      "keywords": [
+        "Replit",
+        "Shopify",
+        "AI 建站"
+      ],
+      "source": "X：Replit"
+    },
+    {
+      "title": "Nex-N2-Pro 发布，性能对标 GPT-5.5",
+      "golden_quote": "开源模型正在逼近闭源最强者的边缘。",
+      "keywords": [
+        "Nex-N2-Pro",
+        "MoE 模型",
+        "开源 AI"
+      ],
+      "source": "X：硅基流动"
+    }
+  ]
+}
