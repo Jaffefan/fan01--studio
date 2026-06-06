@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>狼人归途：十年等待背后的真相与决裂 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 021 夜 / 2026-06-06</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Telltale</div>
+    <h1 class="ep-title">狼人归途：十年等<span class="hl">待背后的真相与决裂</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 17:29</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260606063849" alt=""></div></div>
+<div class="section" id="sec-0001"><p>你好，我是伊恩。</p><p>2017年，Telltale Games在游戏开发者大会上宣布《我们身边的狼》将推出续作。台下掌声雷动，粉丝们欢呼雀跃。谁能想到，这一等就是整整九年。</p><p>2026年6月，Telltale CEO Jamie Ottilie接受IGN专访，终于揭开了《我们身边的狼2》难产背后的全部真相。这不是一篇普通的公关稿，而是一次罕见的、坦诚的剖白。从工作室倒闭到团队重组，从合作伙伴决裂到项目重启，每一步都充满了戏剧性的转折。</p><p>今天，我带你回到这个故事的起点，看看这家曾经定义了叙事冒险游戏品类的工作室，如何在废墟中重新站起来。</p><p>## 一、</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(209.8,'sec-0002')"><span>▶</span> 03:29</button><h3 class="section-title">从辉煌到死亡：Telltale的过山车十年</h3></div><p>从辉煌到死亡：Telltale的过山车十年</p></div>
+<div class="section" id="sec-0003"><p>要理解《我们身边的狼2》为什么花了这么久，必须先了解Telltale Games这家公司本身。它成立于2004年，在很长一段时间里，它几乎是叙事冒险游戏的代名词。</p><p>2005年，Telltale推出《断剑》系列的新作，但真正让它声名鹊起的，是2006年开始的《萨姆与马克斯》系列。这款改编自同名漫画的游戏，将电视剧式的章节发布模式带到了游戏界。每个章节独立发售，像美剧一样每周更新，这种模式在当时几乎是革命性的。</p><p>但真正让Telltale走向巅峰的，是2012年的《行尸走肉》第一季。这款游戏改编自罗伯特·柯克曼的同名漫画，讲述了一个名叫李·埃弗雷特的大学教授，带着小女孩克莱蒙汀在丧尸末日中生存的故事。它不依赖动作场面，而是通过对话选择和道德困境来推动剧情。玩家做出的每个决定都会影响角色关系和故事走向。</p><p>《行尸走肉》第一季获得了Game of the Year等多项大奖，全球销量超过2800万套。Telltale一夜之间成为业界明星。接下来的几年里，他们接连推出了《无主之地传说》、《权力的游戏》、《我的世界：故事模式》、《蝙蝠侠》等一系列授权作品。</p><p>但问题也接踵而至。Telltale陷入了典型的增长陷阱：为了满足股东的期望，他们同时开发多个项目，每个项目都要求快速交货。2016年到2017年间，他们连续推出了《蝙蝠侠》第一季、《我们身边的狼》第一季的重制版、《行尸走肉》第三季等作品，但质量明显下滑。玩家开始抱怨剧情敷衍、选择不再有意义、bug频出。</p><p>2017年的《行尸走肉：最终季》本应是一个体面的收尾，但灾难在2018年9月降临了。Telltale突然宣布大规模裁员，250名员工中的225人被即刻解雇，仅剩25人维持运营。消息震惊了整个游戏界。那些还在开发中的游戏——《我们身边的狼2》和《行尸走肉：最终季》的剩余章节——似乎都要胎死腹中了。</p><p>但故事没有结束。2019年，一家名为LCG Entertainment的投资公司收购了Telltale的品牌和部分资产。新公司由前Zombie Studios老板Jamie Ottilie和前Epic Games高管Mike Fischer领导。2020年，他们正式宣布Telltale回归。</p><p>回归后的Telltale首先完成了《行尸走肉：最终季》的剩余章节，然后开始了新项目的开发。2022年，他们与Deck Nine合作推出了《苍穹浩瀚》改编游戏。但所有人都在问：《我们身边的狼2》呢？</p><p>## 二、七年的等待：从2017到2024</p><p>《我们身边的狼》最初于2013年10月推出第一季。游戏改编自DC Vertigo漫画《成人童话》，讲述了一个狂野的设定：童话中的人物（比如白雪公主、大灰狼、三只小猪）实际上生活在我们现实的纽约市，他们被称为“法布尔”，必须隐藏自己的真实身份。主角比格比·沃尔夫——也就是大灰狼——是法布尔社区的警长，负责维护秩序。</p><p>第一季讲述了比格比调查一系列谋杀案的故事。游戏以其黑暗的成人叙事、复杂的角色塑造、以及那个经典的悬念结局赢得了无数赞誉。当比格比面对幕后黑手时，游戏戛然而止，留下一个巨大的谜团。</p><p>2017年，Telltale宣布续作启动。最初的计划是在2019年发售。但2018年的倒闭打乱了所有计划。当新Telltale在2019年收购品牌时，他们宣布《我们身边的狼2》将是首要项目。</p><p>但随后几年，几乎没有任何实质性进展。2022年，Telltale宣布与AdHoc Studio合作开发《我们身边的狼2》。AdHoc是一家由前Telltale员工创立的工作室，他们也正在开发自己的原创游戏《Dispatch》。当时看来，这是完美的组合：前员工深刻理解Telltale的叙事DNA，又有独立工作室的灵活性。</p><p>然而，2024年4月，Telltale突然宣布终止与AdHoc的合作。声明非常简短，没有解释原因。紧接着，2025年，Telltale再次裁员，并确认《我们身边的狼2》将从零开始重启。</p><p>为什么？</p><p>## 三、分裂的真相：“你做的不是Telltale游戏”</p><p>在接受IGN采访时，Jamie Ottilie第一次详细讲述了与AdHoc分手的真正原因。</p><p>“在《Dispatch》的开发过程中，AdHoc有一种非常独特的风格，那是他们自己的风格，”Ottilie说。“但当你试图把不同的DNA拼凑在一起时，就会出现问题。他们有自己的做事方式，我们有我们的。我认为双方很长时间都低估了我们在游戏开发理念上的差异。”</p><p>核心问题在于最基础的东西：游戏该如何呈现它的故事。</p><p>AdHoc Studio的成员来自不同的背景。虽然很多人曾是Telltale员工，但他们在离开后开发了《Dispatch》——一款使用Epic的MetaHuman技术来制作角色动画的游戏。MetaHuman是一种前沿的实时数字人类技术，让角色看起来极其逼真。</p><p>Ottilie说，AdHoc坚持使用MetaHuman，希望给《我们身边的狼2》带来全新的视觉质感。但Telltale认为，《我们身边的狼》的核心魅力在于其独特的艺术风格——那种带有漫画质感的、类似动态小说的呈现方式。</p><p>“我们和AdHoc在很多方面意见不一致，”Ottilie坦言。“比如故事应该怎么讲，什么应该是可玩的，什么是不可玩的。Telltale的招牌是让玩家感觉自己可以改变一切，但重要的不一定是玩家实际做了什么，而是他们感觉能做什么。”</p><p>AdHoc倾向于制作更注重玩法交互性的游戏，而Telltale坚持其核心哲学：游戏是关于选择、关于叙事节奏、关于那些安静的、情感驱动的时刻。</p><p>“最终，你必须让一切感觉像是一个Telltale游戏，”Ottilie说。“我们和AdHoc在保持Telltale独特DNA方面绝对存在分歧。”</p><p>分歧还体现在技术路径上。Telltale正在转向Unreal Engine 5，但AdHoc已经在使用UE5，而且加入了MetaHuman。Ottilie担心，过度追求技术写实会破坏《我们身边的狼》原有的视觉基调。</p><p>“我们不是想要做一个超写实的游戏，”他说。“我们有一些非常具体的艺术方向目标。最终我们决定回到原点，使用我们自己的方式。”</p><p>2024年的分手声明发布后，Telltale几乎用一年时间重新评估项目。他们最初的计划是继续使用AdHoc已经完成的部分工作——但后来发现，如果基础不统一，修改的成本几乎等于重做。</p><p>于是，2025年中期，Telltale做出了一个极其困难的决定：完全抛弃过去几年的工作，从零开始。</p><p>“我们之前一直试图修修补补，”Ottilie承认。“但到了某个点，你必须承认，重新开始比修补更快。”</p><p>## 四、重启之路：Trick Studio和新的开始</p><p>重新开始意味着需要新的合作伙伴。这一次，Telltale选择了Trick Studio。</p><p>Trick Studio是一家位于英国的联合开发工作室，曾参与过《古墓丽影：暗影》、《瘟疫传说：安魂曲》等大型项目。他们更擅长在客户的艺术框架内工作，而不是试图推行自己的风格。</p><p>Ottilie说，选择Trick是因为他们理解“合作”这个词的真正含义。“他们不会试图把游戏变成自己的，而是帮助我们实现我们的愿景。”</p><p>目前Telltale正在全力开发《我们身边的狼2》，团队规模在80到100人之间。Ottilie确认，游戏预计在2027年发售。同时，他们还将推出第一部的重制版，以迎接原版游戏13周年纪念。</p><p>“我们会在重制版中尽可能地保留原版的视觉风格，同时进行一些技术更新，确保它能在现代平台上流畅运行，”Ottilie说。重制版预计在2026年年内发售，正好赶上《我们身边的狼》第一季的13周年。</p><p>关于续作的故事，Ottilie透露了一些细节：</p><p>- 这是一个真正的续集，发生在第一季之后不久，时间线上是连续的。</p><p>- 玩家不需要玩过第一季也能理解剧情，但玩过会更好。</p><p>- 故事仍然是关于比格比·沃尔夫的，但是一个全新的故事。</p><p>- 游戏将回答第一季结尾留下的悬念，但具体如何回答，他拒绝剧透。</p><p>“我可以说的是，我们非常尊重第一季的内容，”Ottilie说。“粉丝们会对我们处理故事的方式非常满意。”</p><p>## 五、Telltale的第二次机会：他们学到了什么</p><p>Telltale的倒闭和重生是游戏产业中最戏剧性的故事之一。2018年的那场灾难，根源在于过度扩张、项目管理混乱，以及一种“越多越好”的思维。</p><p>“那时的Telltale同时在制作太多游戏，”Ottilie反思道。“每个项目都没有得到应有的关注。当所有游戏都开始走下坡路时，整个公司就崩溃了。”</p><p>新的Telltale采取了完全不同的策略：专注。</p><p>“我们不会同时开发五个项目，”他说。“我们要确保每个游戏都达到最高标准。如果这意味着我们只能每两三年推出一个游戏，那就这么办。”</p><p>这种策略的一个体现是，他们选择《我们身边的狼2》作为旗舰项目，而不是重启所有经典IP。《蝙蝠侠》和《无主之地传说》的续作可能会在之后考虑，但短期内，所有资源都围绕这个回归之作。</p><p>Ottilie还提到，Telltale正在探索新的技术，包括使用Niagara粒子系统来实现更好的视觉效果，以及优化对话选择系统的响应速度。“我们希望玩家的每个选择都能获得即时的、有意义的反馈。”</p><p>## 六、</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(629.5,'sec-0004')"><span>▶</span> 10:29</button><h3 class="section-title">重新定义叙事冒险游戏</h3></div><p>重新定义叙事冒险游戏</p></div>
+<div class="section" id="sec-0005"><p>：不仅仅是交互式电影</p><p>在讨论《我们身边的狼2》时，Ottilie特别强调了Telltale游戏的本质。</p><p>“很多人把Telltale游戏简单地叫做‘交互式电影’，但我觉得这种说法低估了它们，”他说。“一个真正的Telltale游戏，不在于你做出了多少选择，而在于那些选择如何让你感觉。你可能会觉得你改变了一切，但实际上你什么都没改变——但那种幻觉本身就是游戏体验的一部分。”</p><p>这种理念让他们在游戏设计上做出了不同于其他叙事游戏的选择。例如，他们不会像《底特律：成为人类》那样设置大量的分支结局，而是专注于让每一条故事线都足够丰富和情感饱满。</p><p>“如果你有10种不同的结局，每个结局只能得到10%的打磨，”Ottilie解释。“我们希望玩家在通关后，无论经历了什么，都觉得这是一段完整的、令人满足的旅程。”</p><p>## 七、未来之路：Telltale的2027和之后</p><p>2027年对Telltale来说是至关重要的一年。如果《我们身边的狼2》成功，这家工作室将彻底洗刷2018年倒闭的耻辱，重新确立自己在叙事游戏领域的地位。如果失败……恐怕就没有第二次机会了。</p><p>Ottilie对此非常清楚。“我们承担不起失败，”他说。“所以我们必须确保做到最好。”</p><p>除了《我们身边的狼2》，Telltale还在评估其他可能性。Ottilie提到，如果续作成功，他们考虑启动《我们身边的狼3》——但前提是第二部本身是完整的叙述。“我不会做那种两部的游戏只讲了一半故事，”他说。“第二部可以独立成篇，但如果人们想要更多，我们当然愿意。”</p><p>粉丝们最关心的另一个问题是：《行尸走肉》的克莱蒙汀会不会回归？Ottilie没有直接回答，但他暗示，Telltale并没有放弃与天空之舞传媒（Skybound Entertainment）的合作关系。“克莱蒙汀的故事已经结束了，”他说，“但我永远不会说‘不’。”</p><p>在技术层面，Telltale正在探索AI在游戏开发中的角色。Ottilie强调，他们不会用AI替代编剧或配音演员，但可能会用AI辅助生成分支对话的变体，或者优化演出流程。“我们很保守，”他说。“Telltale的叙事是人的艺术，AI可以帮忙但不能主导。”</p><p>## 八、十年的等待值得吗？</p><p>从2017年宣布到2027年发售，《我们身边的狼2》将经历整整十年的开发周期。这比大多数游戏的开发时间长了三到四倍。对于一款叙事冒险游戏来说，这几乎是不可想象的时间跨度。</p><p>但Ottilie认为，这段漫长的旅程最终会让游戏变得更好。“我们在2017年宣布得太早了，”他承认。“那时我们还没有一个清晰的愿景。后来公司倒闭了，合作伙伴不合适，我们走了弯路。但每一段弯路都让我们更清楚地知道，我们想要打造一个什么样的游戏。”</p><p>他引用了一个比喻：“这就像酿酒。有些酒需要时间来成熟。急不得。”</p><p>当被问及对等待了十年的粉丝有什么想说的话时，Ottilie停顿了一下。</p><p>“谢谢你们没有放弃我们，”他说。“我知道等待很痛苦。但我们会让你们觉得值得。”</p><p>## 尾声</p><p>在游戏史上，很少有工作室像Telltale这样，经历从巅峰到崩溃再到重生的完整周期。也很少有游戏序列像《我们身边的狼》这样，让粉丝等待整整一个十年。</p><p>但也许，最好的故事都是值得等待的。</p><p>就像比格比·沃尔夫一样，经历了狼群中的身份挣扎，Telltale也在寻找自己的身份。他们曾是叙事游戏的王者，然后失去了王冠，现在又重新开始锻造它。</p><p>2027年，当《我们身边的狼2》最终发布时，它不会只是一个游戏。它会是Telltale用十年时间写给自己的一封信，告诉世人：我们还在，我们还能讲故事。</p><p>而最好的故事，永远是关于重新开始的。</p><p>我是伊恩，感谢你听完这个故事。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(209.8,'sec-0002')"><span class="tl-time">03:29</span><span class="tl-title">从辉煌到死亡：Telltale的过山车十</span></div>
+<div class="tl-item" onclick="seek(629.5,'sec-0004')"><span class="tl-time">10:29</span><span class="tl-title">重新定义叙事冒险游戏</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260606063849" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
