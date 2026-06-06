@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-06-1218",
+  "title": "AI 失控警告、人脸识别暗藏、五角大楼宣传机器，今天的料有点硬",
+  "published_at": "2026-06-06 12:18",
+  "duration_seconds": 745.34,
+  "duration_label": "12分25秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Anthropic 喊停 AI 研发，是良心还是套路？",
+      "golden_quote": "AI 安全的真正难题不是技术，而是信任。",
+      "keywords": [
+        "Anthropic",
+        "AI 安全",
+        "全球协调",
+        "Mythos"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Meta 眼镜暗藏人脸识别，你被装了监控？",
+      "golden_quote": "最可怕的监控，是你随身携带的监控设备。",
+      "keywords": [
+        "Meta",
+        "人脸识别",
+        "NameTag",
+        "隐私"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "五角大楼的 AI 宣传机器，悄悄对准拉美",
+      "golden_quote": "AI 让宣传成本趋近于零，而真相的代价越来越高",
+      "keywords": [
+        "五角大楼",
+        "AI 宣传",
+        "拉丁美洲",
+        "信息战"
+      ],
+      "source": "The Intercept"
+    },
+    {
+      "title": "OpenAI 前 CTO 再揭宫斗：没 Altman 公司早垮了",
+      "golden_quote": "OpenAI 没垮，不是因为制度，而是因为个人魅力——这本身就是一个隐患。",
+      "keywords": [
+        "OpenAI",
+        "Sam Altman",
+        "董事会政变",
+        "Mira Murati"
+      ],
+      "source": "Bloomberg"
+    },
+    {
+      "title": "Google 每月 9.2 亿租算力：AI 算力饥荒开始",
+      "golden_quote": "当 GPU 被当成期货来交易，AI 的门槛就已经写在价格上了。",
+      "keywords": [
+        "Google",
+        "SpaceX",
+        "GPU 算力",
+        "算力短缺"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
