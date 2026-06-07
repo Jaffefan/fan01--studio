@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-07-1255",
+  "title": "5 件让你重新理解 AI 边界的事",
+  "published_at": "2026-06-07 12:55",
+  "duration_seconds": 470.21,
+  "duration_label": "7分50秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "用产品规范驯服“氛围编码”",
+      "golden_quote": "规范才是 AI 编码的合格证。",
+      "keywords": [
+        "GitHub",
+        "Spec Kit",
+        "AI 编码",
+        "产品规范",
+        "vibe coding"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "OpenCV 5 焕新：老库也要跑大模型",
+      "golden_quote": "老库革命，经典与未来握手。",
+      "keywords": [
+        "OpenCV 5",
+        "DNN 引擎",
+        "大模型",
+        "计算机视觉",
+        "ONNX"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "谷歌每月花 9.2 亿美元租 xAI 算力",
+      "golden_quote": "算力租赁才是 AI 新石油。",
+      "keywords": [
+        "谷歌",
+        "SpaceX",
+        "xAI",
+        "算力租赁",
+        "GPU"
+      ],
+      "source": "CNBC"
+    },
+    {
+      "title": "OpenAI 的 Lockdown Mode：数据安全的隔离墙",
+      "golden_quote": "锁定模式是 AI 安全的第一道防线。",
+      "keywords": [
+        "OpenAI",
+        "Lockdown Mode",
+        "提示注入",
+        "数据安全",
+        "ChatGPT"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "特朗普政府或入股 OpenAI",
+      "golden_quote": "AI 红利全民共享，还是变相国有化？",
+      "keywords": [
+        "特朗普",
+        "OpenAI",
+        "政府入股",
+        "公共财富基金",
+        "AI 治理"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
