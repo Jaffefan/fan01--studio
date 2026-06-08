@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-08-0902",
+  "title": "5 件让你重新理解 AI 边界的事",
+  "published_at": "2026-06-08 09:02",
+  "duration_seconds": 798.53,
+  "duration_label": "13分18秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "ChatGPT 要变 AgentGPT 了",
+      "golden_quote": "聊天已死，平台当立。",
+      "keywords": [
+        "ChatGPT",
+        "Agent",
+        "超级应用",
+        "OpenAI",
+        "IPO"
+      ],
+      "source": "X：宝玉 (@dotey)"
+    },
+    {
+      "title": "特朗普政府讨论让公民分享AI红利",
+      "golden_quote": "用股权买平安，全民分享AI红利。",
+      "keywords": [
+        "公共财富基金",
+        "OpenAI",
+        "特朗普政府",
+        "AI红利",
+        "主权基金"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "苹果秘密会议后终于认真对待AI",
+      "golden_quote": "苹果的AI觉醒，来得有点晚。",
+      "keywords": [
+        "苹果",
+        "AI",
+        "Siri",
+        "WWDC",
+        "秘密会议"
+      ],
+      "source": "Bloomberg：Technology（RSS）"
+    },
+    {
+      "title": "北海道农民用AI管100公顷农场",
+      "golden_quote": "AI最性感的应用，在田里。",
+      "keywords": [
+        "AI农业",
+        "Codex",
+        "ChatGPT",
+        "自动化",
+        "北海道农民"
+      ],
+      "source": "X：阿易 AI Notes (@AYi_AInotes)"
+    },
+    {
+      "title": "GPT-5.5设计被Opus 4.8完虐",
+      "golden_quote": "更聪明 vs 更懂人，AI模型开始分化。",
+      "keywords": [
+        "GPT-5.5",
+        "Opus 4.8",
+        "设计能力",
+        "AI对比",
+        "Cursor"
+      ],
+      "source": "X：宝玉 (@dotey)"
+    }
+  ]
+}
