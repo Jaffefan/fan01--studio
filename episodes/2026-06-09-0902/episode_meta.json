@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-09-0902",
+  "title": "5件让你重新理解AI边界的事",
+  "published_at": "2026-06-09 09:02",
+  "duration_seconds": 453.94,
+  "duration_label": "7分33秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "小米MiMo突破1000 tokens/s",
+      "golden_quote": "标准硬件，破局利器。",
+      "keywords": [
+        "小米MiMo",
+        "1万亿参数",
+        "1000 tokens/s",
+        "标准节点",
+        "MoE"
+      ],
+      "source": "X：小米MiMo"
+    },
+    {
+      "title": "苹果第三代AFM模型发布",
+      "golden_quote": "隐私不是口号，是架构。",
+      "keywords": [
+        "苹果",
+        "AFM",
+        "稀疏模型",
+        "Private Cloud Compute",
+        "多模态"
+      ],
+      "source": "Apple Machine Learning Research"
+    },
+    {
+      "title": "高德发布3D原生城市世界模型",
+      "golden_quote": "十分钟一座城，效率即生命。",
+      "keywords": [
+        "高德",
+        "3D城市",
+        "ABot-Earth",
+        "3DGS",
+        "应急救援"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "OpenAI向SEC提交IPO草案",
+      "golden_quote": "上市是工具，不是终点。",
+      "keywords": [
+        "OpenAI",
+        "IPO",
+        "S-1",
+        "SEC",
+        "融资"
+      ],
+      "source": "OpenAI官网"
+    },
+    {
+      "title": "奥尔特曼宣布第三发展阶段",
+      "golden_quote": "放缓不是退缩，是智取。",
+      "keywords": [
+        "OpenAI",
+        "第三阶段",
+        "安全",
+        "国际监管",
+        "Anthropic"
+      ],
+      "source": "IT之家"
+    }
+  ]
+}
