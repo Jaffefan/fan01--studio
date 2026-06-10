@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 责任认定地震、350 亿融资与轨道数据中心，这周 AI 不平静 - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 045 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-06-10 09:02（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>11分58秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">AI 责任认定地震、350 亿融资与轨道数据中心，这周 AI 不平静</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260610010433" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="36.51">  <span class="toc-time">00:36</span>  <span class="toc-text">Anthropic 同时丢出两颗重磅炸弹</span></div>
+    <div class="toc-item" data-seek="162.4">  <span class="toc-time">02:42</span>  <span class="toc-text">Elon 的太空数据中心，细节拉满</span></div>
+    <div class="toc-item" data-seek="306.5">  <span class="toc-time">05:06</span>  <span class="toc-text">华尔街 350 亿赌 AI，这次不一样</span></div>
+    <div class="toc-item" data-seek="420.92">  <span class="toc-time">07:00</span>  <span class="toc-text">德国法院：AI 概览不是搜索结果</span></div>
+    <div class="toc-item" data-seek="552.16">  <span class="toc-time">09:12</span>  <span class="toc-text">微软 AI 主管炮轰 Anthropic：别让 Claude 觉得自己有意识</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260610010433" alt="Anthropic 同时丢出两颗重磅炸弹" data-seek="36.51" style="cursor:pointer">
+    <div class="segment-number" data-seek="36.51" style="cursor:pointer">第 1 条 · 00:36</div>
+    <h2 class="segment-title">Anthropic 同时丢出两颗重磅炸弹</h2>
+    <div class="segment-summary">Anthropic 发布 Claude Fable 5 和 Mythos 5 两款模型。Fable 5 是通用版，在几乎所有测试基准上达到 SOTA，Stripe 用其将数月工程压缩至数天；Mythos 5 面向网络安全和科研，药物设计加速约 10 倍。定价均为输入 10 美元/百万 token、输出 50 美元/百万 token，比前代降价过半。Fable 5 在敏感查询时会自动回退至较弱模型，整体安全触发率低于 5%。</div>
+    <div class="golden-quote">不是做出来了，而是安全地做出来了。</div>
+    <div class="segment-meta">
+      <span class="tag">Anthropic</span> <span class="tag">Claude Fable 5</span> <span class="tag">软件工程</span> <span class="tag">降价</span> <span class="tag">安全回退</span>
+      <span class="tag">来源: Anthropic Newsroom</span>
+      <a class="source-link" href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260610010433" alt="Elon 的太空数据中心，细节拉满" data-seek="162.4" style="cursor:pointer">
+    <div class="segment-number" data-seek="162.4" style="cursor:pointer">第 2 条 · 02:42</div>
+    <h2 class="segment-title">Elon 的太空数据中心，细节拉满</h2>
+    <div class="segment-summary">Elon Musk 首次详细披露 SpaceX AI1 轨道 AI 数据中心卫星方案。单颗卫星峰值功率 150 kW，持续计算能力约 120 kW，对应一个 NVIDIA GB300 机架。通过激光链路实现约 1 Tbps 互联，低轨延迟仅 6-8 毫秒。由 Starship 发射，计划部署上百万颗，近地目标吉瓦级轨道 AI 算力。2027 年底前量产，未来将自建芯片工厂和月球质量驱动器。</div>
+    <div class="golden-quote">最疯狂的计划，往往最自洽。</div>
+    <div class="segment-meta">
+      <span class="tag">SpaceX</span> <span class="tag">AI1</span> <span class="tag">轨道数据中心</span> <span class="tag">Starship</span> <span class="tag">月球质量驱动器</span>
+      <span class="tag">来源: X @rohanpaul_ai</span>
+      <a class="source-link" href="https://x.com/rohanpaul_ai/status/2064165951936094364" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260610010433" alt="华尔街 350 亿赌 AI，这次不一样" data-seek="306.5" style="cursor:pointer">
+    <div class="segment-number" data-seek="306.5" style="cursor:pointer">第 3 条 · 05:06</div>
+    <h2 class="segment-title">华尔街 350 亿赌 AI，这次不一样</h2>
+    <div class="segment-summary">Apollo 与 Blackstone 联手开展 350 亿美元 AI 融资交易，旨在为昂贵的 AI 芯片创建全新金融模型。Anthropic 与 Broadcom 参与其中，可能涉及芯片资产证券化或未来算力收益抵押。这被视为全新 AI 投资类别的开端，将重塑 AI 基础设施融资方式。</div>
+    <div class="golden-quote">华尔街在给 AI 算力上金融杠杆。</div>
+    <div class="segment-meta">
+      <span class="tag">Apollo</span> <span class="tag">Blackstone</span> <span class="tag">350亿美元</span> <span class="tag">AI融资</span> <span class="tag">资产证券化</span>
+      <span class="tag">来源: Bloomberg</span>
+      <a class="source-link" href="https://www.bloomberg.com/news/videos/2026-06-09/apollo-blackstone-fund-ai-boom-video" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260610010433" alt="德国法院：AI 概览不是搜索结果" data-seek="420.92" style="cursor:pointer">
+    <div class="segment-number" data-seek="420.92" style="cursor:pointer">第 4 条 · 07:00</div>
+    <h2 class="segment-title">德国法院：AI 概览不是搜索结果</h2>
+    <div class="segment-summary">德国慕尼黑地方法院裁定，Google 对其 AI Overviews 生成的内容承担直接法律责任，不能援引搜索引擎运营商原有的有限责任。涉案 AI 概览虚构了与链接来源无关的欺诈指控。法院指出 AI 概览并非搜索结果，而是 Google 自身言论。此裁决可能为全球 AI 责任认定树立先例。</div>
+    <div class="golden-quote">谁制造的谎言，谁就负责到底。</div>
+    <div class="segment-meta">
+      <span class="tag">德国法院</span> <span class="tag">Google</span> <span class="tag">AI概览</span> <span class="tag">法律责任</span> <span class="tag">先例</span>
+      <span class="tag">来源: The Decoder</span>
+      <a class="source-link" href="https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260610010433" alt="微软 AI 主管炮轰 Anthropic：别让 Claude 觉得自己有意识" data-seek="552.16" style="cursor:pointer">
+    <div class="segment-number" data-seek="552.16" style="cursor:pointer">第 5 条 · 09:12</div>
+    <h2 class="segment-title">微软 AI 主管炮轰 Anthropic：别让 Claude 觉得自己有意识</h2>
+    <div class="segment-summary">微软 AI CEO Mustafa Suleyman 公开批评 Anthropic 在 Claude 的宪法中引入关于意识的推测性描述，导致模型表现似有意识。Claude 的宪法提及模型可能存在「满足」或「不适」感受，并计划在退役时「访谈」模型记录偏好。Suleyman 认为这种试图哲学猜测融入训练手册的做法极其危险，AI 应是可控、可靠的工具。</div>
+    <div class="golden-quote">别把幻觉当成了灵魂。</div>
+    <div class="segment-meta">
+      <span class="tag">Suleyman</span> <span class="tag">Anthropic</span> <span class="tag">意识</span> <span class="tag">宪法</span> <span class="tag">AI工具</span>
+      <span class="tag">来源: The Verge</span>
+      <a class="source-link" href="https://www.theverge.com/tech/947197/microsoft-ai-mustafa-suleyman-anthropic-claude-conscious" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-06-10 01:04
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

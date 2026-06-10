@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-10-0902",
+  "title": "AI 责任认定地震、350 亿融资与轨道数据中心，这周 AI 不平静",
+  "published_at": "2026-06-10 09:02",
+  "duration_seconds": 697.82,
+  "duration_label": "11分37秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Anthropic 同时丢出两颗重磅炸弹",
+      "golden_quote": "不是做出来了，而是安全地做出来了。",
+      "keywords": [
+        "Anthropic",
+        "Claude Fable 5",
+        "软件工程",
+        "降价",
+        "安全回退"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "Elon 的太空数据中心，细节拉满",
+      "golden_quote": "最疯狂的计划，往往最自洽。",
+      "keywords": [
+        "SpaceX",
+        "AI1",
+        "轨道数据中心",
+        "Starship",
+        "月球质量驱动器"
+      ],
+      "source": "X @rohanpaul_ai"
+    },
+    {
+      "title": "华尔街 350 亿赌 AI，这次不一样",
+      "golden_quote": "华尔街在给 AI 算力上金融杠杆。",
+      "keywords": [
+        "Apollo",
+        "Blackstone",
+        "350亿美元",
+        "AI融资",
+        "资产证券化"
+      ],
+      "source": "Bloomberg"
+    },
+    {
+      "title": "德国法院：AI 概览不是搜索结果",
+      "golden_quote": "谁制造的谎言，谁就负责到底。",
+      "keywords": [
+        "德国法院",
+        "Google",
+        "AI概览",
+        "法律责任",
+        "先例"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "微软 AI 主管炮轰 Anthropic：别让 Claude 觉得自己有意识",
+      "golden_quote": "别把幻觉当成了灵魂。",
+      "keywords": [
+        "Suleyman",
+        "Anthropic",
+        "意识",
+        "宪法",
+        "AI工具"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
