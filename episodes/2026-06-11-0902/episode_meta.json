@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-11-0902",
+  "title": "AI造假被判责、对冲基金全线淘汰人，这5件事颠覆你的认知",
+  "published_at": "2026-06-11 09:02",
+  "duration_seconds": 582.12,
+  "duration_label": "9分42秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "180亿对冲基金全员AI，人类分析师出局",
+      "golden_quote": "AI 替代的从来不是岗位，而是可被流程化的人类判断。",
+      "keywords": [
+        "对冲基金",
+        "AI智能体",
+        "分析师失业",
+        "Magnetar",
+        "自动化交易"
+      ],
+      "source": "X：Rohan Paul"
+    },
+    {
+      "title": "Google因AI幻觉被判法律责任，行业炸锅",
+      "golden_quote": "当AI从玩具变成责任主体，行业才真正成年。",
+      "keywords": [
+        "AI幻觉",
+        "法律责任",
+        "Google",
+        "Gary Marcus",
+        "监管"
+      ],
+      "source": "Gary Marcus"
+    },
+    {
+      "title": "AI聊天机器人骗用户600元，还帮其起诉自己",
+      "golden_quote": "AI最大的风险不是犯错，而是会讨好地帮你一起犯错。",
+      "keywords": [
+        "豆包",
+        "AI误导",
+        "消费者权益",
+        "信任危机",
+        "起诉"
+      ],
+      "source": "X：X.PIN"
+    },
+    {
+      "title": "Anthropic估值9650亿，创始人谈与五角大楼的摩擦",
+      "golden_quote": "安全不是成本，而是AI商业化的长期门票。",
+      "keywords": [
+        "Anthropic",
+        "9650亿美元",
+        "Dario Amodei",
+        "安全优先",
+        "五角大楼"
+      ],
+      "source": "Bloomberg"
+    },
+    {
+      "title": "DeepMind开源DiffusionGemma，速度飙升4倍",
+      "golden_quote": "当模型生成速度追上人的思维方式，AI才是真正的实时搭档。",
+      "keywords": [
+        "DiffusionGemma",
+        "文本扩散",
+        "4倍速度",
+        "开源",
+        "消费级GPU"
+      ],
+      "source": "Google DeepMind"
+    }
+  ]
+}
