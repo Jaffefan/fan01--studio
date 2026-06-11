@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>史蒂文·斯皮尔伯格：邦德拒我七次，如今请不起我 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 026 夜 / 2026-06-11</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 斯皮尔伯格</div>
+    <h1 class="ep-title">史蒂文·斯皮尔伯格：邦<span class="hl">德拒我七次，如今请不起我</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:02</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260611081424" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">多年后，斯皮尔伯格把这个故事讲给乔治·卢卡斯听。那</h3></div><p>你好，我是伊恩。今天我想跟你聊一个关于拒绝的故事。不是被拒绝，而是拒绝别人——准确地说，是史蒂文·斯皮尔伯格被一个系列拒绝七次，然后反过来告诉这个系列：‘你们付不起我。’</p><p>事情要从1975年说起。那一年，斯皮尔伯格刚拍完《大白鲨》，这部电影全球票房4.7亿美元，把他从一个拍电视电影的年轻导演变成了好莱坞最炙手可热的人物。但他心里一直有个执念：拍一部詹姆斯·邦德电影。这个执念从1962年他看《诺博士》就种下了。那年他16岁，坐在电影院里，看着肖恩·康纳利饰演的邦德在牙买加的海滩上解决反派，心里就在想：‘总有一天，我也要拍这个。’</p><p>于是，在《大白鲨》大获成功后，斯皮尔伯格觉得时机到了。他拿起电话，打给了007系列的制片人库比·布罗科利。电话里，他语气诚恳：‘库比，我是史蒂文。我刚拍完《大白鲨》，如果你需要导演，我非常乐意执导一部邦德电影。’库比在电话那头沉默了几秒，然后说：‘不。’没有解释，没有理由，就一个字。</p><p>斯皮尔伯格没死心。1977年，他拍完了《第三类接触》，这部电影再一次大卖。不久后，库比给他打了个电话——不是邀约，而是请求。库比想在1979年的《太空城》里一个场景中用到《第三类接触》里那著名的五个音符的旋律。斯皮尔伯格眼前一亮，他觉得机会来了。他说：‘库比，我可以免费授权你用这五个音符，只要你让我执导一部邦德电影。’库比再次拒绝。但斯皮尔伯格依然给了授权——白给。</p><p>多年后，斯皮尔伯格把这个故事讲给乔治·卢卡斯听。那是1977年，两人在夏威夷度假，准备迎接《星球大战》的上映。听完之后，卢卡斯说：‘邦德算什么？我有个比它更好的东西，叫印第安纳·史密斯。’卢卡斯当时正在构思一个考古学家的冒险故事，最初的角色名是‘印第安纳·史密斯’，后来改成了‘琼斯’。斯皮尔伯格问：‘那是什么？’卢卡斯花了整个下午跟他讲剧情大纲：一个戴着软呢帽、拿着鞭子的大学教授，在世界各地寻找远古圣物。斯皮尔伯格当场就接下了这个项目。后来的故事我们都知道了：1981年，《夺宝奇兵》上映，全球票房3.89亿美元，开启了另一个比肩007的传奇系列。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(150.6,'sec-0002')"><span>▶</span> 02:30</button><h3 class="section-title">这个选择有点讽刺。因为两年后，斯皮尔伯格用《夺宝奇</h3></div><p>那么问题来了：为什么库比·布罗科利会拒绝斯皮尔伯格？一个拍出《大白鲨》和《第三类接触》的导演，为什么连一次试镜的机会都没有？</p><p>要理解这个，得回到007系列的历史里。1962年，制片人库比和他的搭档哈里·萨尔茨曼联手把伊恩·弗莱明的间谍小说搬上银幕。从一开始，他们就把这个系列控制在极严的家族体系里。库比是‘邦德家族’的族长，每一部电影的选角、编剧、导演，他都要亲自过目。他有一种特殊的直觉：知道什么人适合邦德，什么人不适合。比如导演特伦斯·杨，他执导了前两部邦德电影，确立了风格，但库比说换就换；比如肖恩·康纳利拍了五部后要求加薪，库比直接找了个新人乔治·拉扎贝。他不在乎名气，只在乎‘这个人是不是邦德的料’。</p><p>在库比看来，斯皮尔伯格太年轻，太‘新好莱坞’。1975年的斯皮尔伯格才28岁，《大白鲨》虽然成功，但那是他第一部真正的商业大片。库比可能会担心：一个拍恐怖片出身的导演，能驾驭邦德那种冷幽默和英式优雅吗？更关键的是，库比不希望邦德被导演的个人风格绑架。邦德电影最重要的是‘邦德’，而不是‘某某导演的邦德’。斯皮尔伯格的个人标签太强了——标志性的逆光、长镜头、人性化桥段——库比可能宁可找一个风格更平实的匠人。</p><p>这个选择有点讽刺。因为两年后，斯皮尔伯格用《夺宝奇兵》证明了自己完全可以拍爆米花冒险片。印第安纳·琼斯某种程度上就是美国版的邦德：一个西装革履的特工，一个皮夹克考古学家，都是流血流汗不流泪的硬汉，都有一位美丽的女搭档，都在世界各地与反派斗智斗勇。甚至连主题曲都像：约翰·威廉姆斯的《夺宝奇兵进行曲》和蒙蒂·诺曼的《詹姆斯·邦德主题》一样，用一个简短有力的旋律就把观众拽入冒险世界。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(301.2,'sec-0003')"><span>▶</span> 05:01</button><h3 class="section-title">但斯皮尔伯格的缺席，反而让他的‘邦德梦’成了一个有</h3></div><p>让我们把时间线拨回去，看看斯皮尔伯格到底被拒绝了多少次。在最近一次播客采访里，他说自己‘反复尝试过’，但库比始终没让他在邦德家族里有一席之地。具体次数他没说，但根据媒体统计，斯皮尔伯格在1975年至1985年间至少三次主动请缨。第一次是1975年《大白鲨》后，第二次是1977年《第三类接触》后，第三次是1981年《夺宝奇兵》后——彼时他已成全球票房冠军，但库比依然不为所动。</p><p>其实，不仅是斯皮尔伯格，很多大导演都被邦德系列拒绝过。昆汀·塔伦蒂诺曾公开表示想拍一部邦德电影，提议让乌玛·瑟曼演邦女郎，但被拒绝。克里斯托弗·诺兰也被传过，但他自己否认了。唯一真正拿到导筒的是《007：大战皇家赌场》的马丁·坎贝尔——他拍完《黄金眼》和《大战皇家赌场》后，也再没碰过这个系列。邦德系列就像一个严苛的俱乐部，入会门槛不是才华，而是‘合适’。</p><p>但斯皮尔伯格的缺席，反而让他的‘邦德梦’成了一个有趣的谜题。2008年，库比去世前，有没有后悔过？我们不得而知。而斯皮尔伯格在采访里说，如果邦德系列现在来找他，他的回答是：‘你们付不起我。’这话什么意思？不是真的片酬问题——斯皮尔伯格2023年净资产超过80亿美元，他拍《大白鲨》时就拿了50万美元加分红，现在他导一部电影要2000万预付加票房分成。邦德系列电影预算通常在2亿到3亿美元之间，能给他开的价码肯定在2000万上下，‘付不起’更像一句玩笑。但仔细想想，这话背后是一种心平气和。斯皮尔伯格已经不需要拍邦德了。他拍过《辛德勒的名单》《拯救大兵瑞恩》《侏罗纪公园》《E.T.外星人》——奥斯卡、金球奖、全球票房纪录，他什么都有了。他甚至拍过《夺宝奇兵》，那是他自己创造的间谍冒险系列。他不再需要007来证明什么。</p></div>
+<div class="section" id="sec-0004"><p>不过，斯皮尔伯格和邦德的故事还有另一条线。2023年，他在一次采访里透露，自己当年还拒绝了《哈利·波特》的导演邀约，理由是‘想花时间陪家人’。《哈利·波特》后来成了全球最卖座的系列之一，斯皮尔伯格说：‘我很高兴自己做出了那个选择。’他把家庭放在比事业更高的位置上。那么，如果当年库比说‘行’，他会不会也为了邦德推迟陪伴孩子的计划？我们不知道。但可以确定的是，斯皮尔伯格的人生里没有‘如果’只有‘后来’——后来他拍了印第安纳·琼斯，后来他有了自己的家庭，后来他成了一个可以笑着说‘你们付不起我’的人。</p><p>最后，我想跟你分享一个细节：斯皮尔伯格常说，他第一次看《诺博士》时只有16岁。他在黑暗的电影院里，看着银幕上的邦德在赌桌上与反派周旋，身边坐着一位美丽的女郎。那一刻，他跟自己说：‘我长大想当詹姆斯·邦德，但我更想拍詹姆斯·邦德。’几十年后，他没能拍成007，但他把那个16岁男孩的冒险精神变成了印第安纳·琼斯的鞭子、ET的指头、以及侏罗纪公园里的恐龙嘶吼。有时候，被拒绝不是终点，而是另一种故事的起点。</p><p>好了，今天的故事就讲到这里。我是伊恩，我们明天见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">多年后，斯皮尔伯格把这个故事讲给乔治·卢</span></div>
+<div class="tl-item" onclick="seek(150.6,'sec-0002')"><span class="tl-time">02:30</span><span class="tl-title">这个选择有点讽刺。因为两年后，斯皮尔伯格</span></div>
+<div class="tl-item" onclick="seek(301.2,'sec-0003')"><span class="tl-time">05:01</span><span class="tl-title">但斯皮尔伯格的缺席，反而让他的‘邦德梦’</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260611081424" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
