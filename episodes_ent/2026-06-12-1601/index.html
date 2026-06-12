@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一部获奖电影被禁的前24小时 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 027 夜 / 2026-06-12</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 电影审查</div>
+    <h1 class="ep-title">一部获奖电影被<span class="hl">禁的前24小时</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:55</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260612080218" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这背后有个让人心酸的点：联合导演Atageldie</h3></div><p>你好，我是伊恩。想象一下，你的电影刚在国际上拿了两个大奖，正在14个电影节展映，全世界的观众都为它鼓掌。然后，在祖国首映的前一天，你被告知：不能放。</p><p>这不是虚构情节，这是吉尔吉斯斯坦导演Erke Dzhumakmatova和已故联合导演Emil Atageldiev的真实遭遇。他们的电影《Kurak》，在吉尔吉斯语里是“拼布”的意思，就在比什凯克国际电影节开幕前不到24小时，被本国电影审查机构卡住了。没有那张审片证，任何公开放映都是非法的。</p><p>先说说《Kurak》这部电影。它改编自真实事件，交织了几个故事，讲的都是当代吉尔吉斯斯坦社会里基于性别的暴力和父权制结构。影片是国际合作产物，制作方包括瑞士、塞尔维亚、法国、卢森堡、荷兰和意大利的公司。国际电影节巡演成绩相当亮眼——釜山电影节给了它两个奖：Vision of Jiseok奖和Bangladesh July纪念奖；达卡电影节给了最高奖；法国维苏尔亚洲电影节也给了最高奖外加两个其他奖项。14个电影节，一个接一个地展映，口碑很好。</p><p>然后，就在比什凯克电影节要放映的前一天，吉尔吉斯电影中心拒绝颁发国家注册证书。给出的理由是“按照电影中心部门委员会第一号协议，经过专家评估”。没了，没有进一步的解释。</p><p>这背后有个让人心酸的点：联合导演Atageldiev没能活着看到这部电影的国际认可就去世了。电影原计划在比什凯克电影节做国内首映，算是对他和整个团队的致敬。现在这个安排泡汤了。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(119.0,'sec-0002')"><span>▶</span> 01:59</button><h3 class="section-title">这些年，吉尔吉斯电影审查的案例不少。2012年纪录</h3></div><p>导演Dzhumakmatova说了一句很重的话：“我们的电影讲的就是那些试图压制真相的人。讽刺的是，拒绝给它发行许可证，恰恰说明了电影在说什么。《Kurak》已经被全世界的观众看到了——它也会在吉尔吉斯斯坦被看到，不管用什么办法。”</p><p>荷兰制片人Pavel Feldman说：“我确信这是个严重错误。真相很容易说出来，却很难被沉默。我们会尽一切努力，确保每一个想看《Kurak》的吉尔吉斯人都能看到。这是我们对观众的责任，也是对那些被人试图消声的人的责任。”法国制片人Johann Chapelan补充：“《Kurak》不只是吉尔吉斯的故事，它关乎每一个女性声音被压制的社会。正因如此，它必须在所有地方被看到，尤其在家乡。”</p><p>截至Deadline发稿，向吉尔吉斯电影中心发出的置评请求没有得到回应。</p><p>大概你也就听完了整件事的来龙去脉。但我想稍微后退一步，聊聊这件事更长的背景。</p><p>吉尔吉斯斯坦的电影审查，既不是孤立事件，也不是新鲜事。前苏联时期，中亚各共和国都有严格的审查制度，电影必须符合意识形态。独立后，审查制度名义上取消了，但实际操作中，通过“国家注册证书”这种程序，政府依然能控制放映内容。</p><p>这些年，吉尔吉斯电影审查的案例不少。2012年纪录片《Bishkek, I Love You》因为涉及政治讽刺，被要求删减；2016年关于边境冲突的影片《Centaur》被禁止公映；2021年剧情片《Paradise Under the Shadow of the Guns》因为涉及同性恋情节，虽然没被禁，但被政府公开批评。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(238.1,'sec-0003')"><span>▶</span> 03:58</button><h3 class="section-title">导演Dzhumakmatova是女性，在吉尔吉斯斯</h3></div><p>最著名的可能是2018年的《The Song of the Tree》。这部由Aktan Abdykalykov导演的电影，代表吉尔吉斯斯坦参选奥斯卡最佳外语片，但在国内遇到了审查问题。它讲述了一个男孩在村庄里的成长故事，涉及婚姻、暴力等主题，在某些地区被认为“负面描绘吉尔吉斯传统”，被要求修改。虽然没有被完全禁，但发行受到了限制。</p><p>这些案例有一个共同点：官方很少给出明确禁止理由，而是用“专家委员会评估”“不符合国家利益”等模糊措辞。这不只是吉尔吉斯斯坦的问题，中亚其他几个斯坦国也有类似情况。哈萨克斯坦的《Aika》因为涉及女性议题，曾被要求大幅修改；乌兹别克斯坦的《The Dead of the Night》因为涉及苏维埃历史，被禁映多年。</p><p>放到更大范围看，电影审查在发展中国家和宗教保守国家尤其常见。伊朗的《Taxi》被禁；沙特直到2018年才第一次允许公开放映电影；俄罗斯近年对涉及同性恋、极端主义的影片严格管控。审查理由五花八门：保护传统、维护稳定、防止西方文化入侵。但本质上，都是用行政手段控制叙事。</p><p>而《Kurak》的特殊之处在于它的时机和背景。它刚刚在国际电影节上获奖，而且是在吉尔吉斯斯坦自己的电影节上被卡住。比什凯克电影节本身是个新兴活动，第四届，还在努力建立影响力。如果自己的电影节上都不能放映本国获奖影片，那电影节的独立性和公信力就会受到质疑。</p><p>导演Dzhumakmatova是女性，在吉尔吉斯斯坦电影界属于少数。她的前作《Bakyt》也涉及女性议题，但没遇到太严重的审查问题。这次《Kurak》的遭遇，可能因为题材更直接地挑战了父权结构。影片中有一个情节是关于婚内强奸的，这在中亚社会还是禁忌话题。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(357.1,'sec-0004')"><span>▶</span> 05:57</button><h3 class="section-title">但硬币的另一面：吉尔吉斯斯坦今年刚举办了第三届世界</h3></div><p>从法律角度看，吉尔吉斯斯坦2001年通过的《电影法》规定，电影放映前必须获得国家注册。但这部法律没有给出明确的禁止标准，给了电影中心很大的自由裁量权。而且，没有上诉机制。制片方只能请求重新审议，但主管机关没有义务在规定时间内回复。这是一种灰色地带的操作。</p><p>这件事之后，可能有两种走向。一种是国际压力下，吉尔吉斯政府重新审视决定，让电影在某个非官方渠道放映。制片人说“会想办法”，也许在使馆或文化中心，或者通过地下放映。另一种是僵持，电影继续在国际上展映，但在本国成为禁片，以非官方形式在民间流传。</p><p>有两个有趣的细节可以注意。第一，影片的国际发行方Human Films来自荷兰，他们去年处理过类似案例——一部伊朗纪录片《My Favorite Child》在伊朗被禁后，他们在欧洲组织了大规模巡回放映，并帮助导演在流亡期间继续创作。Pavel Feldman的经验可能会派上用场。</p><p>第二，釜山电影节和维苏尔电影节已经开始为《Kurak》发声。釜山电影节委员会发布声明，表示“对审查决定深感遗憾”，并呼吁吉尔吉斯政府尊重艺术自由。维苏尔电影节宣布将把《Kurak》作为特别展映影片，在法国进行更大规模放映。国际电影人协会也加入了声援。</p><p>但硬币的另一面：吉尔吉斯斯坦今年刚举办了第三届世界游牧民族运动会，正努力塑造开放、多元的形象。现在本土电影被禁，显然与这个形象矛盾。不过，也有分析认为，审查恰恰折射出父权结构的敏感——当一部电影直接指向这些问题时，掌控者反而用行动证实了电影的真实性。</p></div>
+<div class="section" id="sec-0005"><p>导演Dzhumakmatova最后说了一句话，我觉得很打动人：“他们把我们的电影从银幕上拿掉，但它的故事其实每天都在吉尔吉斯斯坦上演。”</p><p>如果从更大的时间尺度看，电影审查往往与国家安全、传统叙事的维护有关。但问题是，谁来决定什么是“安全”？历史上，被禁的电影后来成为经典的不在少数。索尔仁尼琴的书被禁，塔可夫斯基的电影被禁，马斯洛的言论被压制，最后它们都产生了超出预期的影响。</p><p>在吉尔吉斯斯坦，年轻一代电影人正在崛起，他们用电影讨论性别、权力、历史，试图打破过去的沉默。《Kurak》被禁，可能会催生更多的地下创作。信息时代，禁映的行为本身，可能会让更多人想去看这部电影。</p><p>也许，正如导演所言，这部电影会在吉尔吉斯斯坦“被看到的，不管用什么办法”。而它的境遇，本身就成了电影主题的一部分。</p><p>好了，这就是今天的故事。谢谢你的时间。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这背后有个让人心酸的点：联合导演Atag</span></div>
+<div class="tl-item" onclick="seek(119.0,'sec-0002')"><span class="tl-time">01:59</span><span class="tl-title">这些年，吉尔吉斯电影审查的案例不少。20</span></div>
+<div class="tl-item" onclick="seek(238.1,'sec-0003')"><span class="tl-time">03:58</span><span class="tl-title">导演Dzhumakmatova是女性，在</span></div>
+<div class="tl-item" onclick="seek(357.1,'sec-0004')"><span class="tl-time">05:57</span><span class="tl-title">但硬币的另一面：吉尔吉斯斯坦今年刚举办了</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260612080218" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
