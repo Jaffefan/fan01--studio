@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-12-0902",
+  "title": "全自主无人机首次杀人，AI 的潘多拉魔盒打开了？",
+  "published_at": "2026-06-12 09:02",
+  "duration_seconds": 706.06,
+  "duration_label": "11分46秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "全自主无人机首次杀人，战争进入新阶段",
+      "golden_quote": "AI 杀人的第一滴血已经流了，战争伦理跟不上技术速度。",
+      "keywords": [
+        "自主武器",
+        "无人机",
+        "AI杀人",
+        "战争伦理",
+        "乌克兰"
+      ],
+      "source": "New Scientist"
+    },
+    {
+      "title": "Prometheus 120亿美元融资，AI 工厂梦能否照进现实？",
+      "golden_quote": "AI 要颠覆的不只是代码，而是整个工业基础。",
+      "keywords": [
+        "Prometheus",
+        "贝佐斯",
+        "制造业AI",
+        "融资",
+        "工业数据"
+      ],
+      "source": "X: @kimmonismus"
+    },
+    {
+      "title": "Anthropic与DXC结盟，Claude打入核心系统",
+      "golden_quote": "AI 的护城河不是模型，而是能把它塞进银行核心系统的那双手。",
+      "keywords": [
+        "Anthropic",
+        "Claude",
+        "DXC",
+        "企业AI",
+        "行业部署"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "Runway与狮门影业深化合作，AI创作IP",
+      "golden_quote": "AI 电影不是取代编剧，而是编剧的新笔。",
+      "keywords": [
+        "Runway",
+        "狮门影业",
+        "AI电影",
+        "IP创作",
+        "好莱坞"
+      ],
+      "source": "Runway News"
+    },
+    {
+      "title": "Gemini Omni Flash视频任务达SOTA",
+      "golden_quote": "当视频生成像打字一样简单，真正的稀缺品就成了创意。",
+      "keywords": [
+        "Gemini",
+        "视频生成",
+        "SOTA",
+        "Google",
+        "API"
+      ],
+      "source": "X: @OfficialLoganK"
+    }
+  ]
+}
