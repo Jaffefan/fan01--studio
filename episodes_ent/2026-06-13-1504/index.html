@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当14年的游戏创作宝库即将消失 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 028 夜 / 2026-06-13</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> RPG Maker</div>
+    <h1 class="ep-title">当14年的游戏<span class="hl">创作宝库即将消失</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:17</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260613070534" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">更关键的是，这个论坛承载着整个RPG Maker社</h3></div><p>你好，我是伊恩。</p><p>想象一下，一个藏有数十万份游戏开发教程、美术素材、脚本代码的线上图书馆，突然被告知半年后就要关门，而且官方不打算留下任何备份。社区里立刻炸了锅，有人把它比作“亚历山大图书馆的焚毁”。</p><p>这不是科幻小说，这是2026年6月11日，RPG Maker论坛上45万用户收到的消息。</p><p>运营这个论坛的是Gotcha Gotcha Games，一家隶属于日本角川集团的子公司，也是RPG Maker系列的知识产权持有者。他们在官方公告中宣布，这个持续了14年的论坛将在2026年12月11日彻底关闭。取而代之的是一个叫“RPG Maker Guild”的新论坛，但旧论坛里的所有内容——包括帖子、教程、游戏资源、代码片段——将不会被迁移或存档。FAQ里白纸黑字写着：“目前没有计划在论坛关闭后提供公开存档或备份。我们鼓励用户在关闭前自行保存任何希望保留的帖子、指南、资源或其他内容。”</p><p>听起来像是给用户留了半年时间备份，似乎很合理？但当你了解这个论坛的规模，就会明白这几乎是不可能完成的任务。</p><p>按照Eurogamer的报道，仅“Legacy Engine支持版块”就包含了大约45600个主题和28万条消息。而整个论坛，根据用户估算，总帖子数量可能超过百万。这不仅仅是数量的问题——很多资源是独家上传的，比如美术素材包、脚本插件、完整的游戏项目文件，这些在互联网其他地方根本找不到。</p><p>更关键的是，这个论坛承载着整个RPG Maker社区近15年的创作历史。从2008年论坛建立开始，无数独立开发者在这里分享经验、互相帮助、发布作品。可以说，RPG Maker这个工具之所以能催生出那么多经典独立游戏，论坛的社区生态功不可没。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(124.5,'sec-0002')"><span>▶</span> 02:04</button><h3 class="section-title">其实，这次事件不是孤例。在游戏行业，像这样“官方删</h3></div><p>你可能听过一些用RPG Maker制作的游戏：《OMORI》《恐惧与饥饿》《青鬼》《梦日记》《尸体派对》《OFF》——这些名字在独立游戏圈如雷贯耳。但你可能不知道，这些游戏的开发过程、早期版本、设计思路、甚至开发者之间的讨论，都深藏在RPG Maker论坛的某个角落。如果论坛就此消失，这段历史就会像被橡皮擦抹去一样干净。</p><p>社区的反应很强烈。在X上，用户们纷纷表达愤怒和失望。“这就像亚历山大图书馆被烧毁的那一刻。”有人写道。也有人冷静地开始行动。一位名叫“RPG_Fanboy”的用户在Reddit的r/DataHoarders版块发帖求助，希望借助数据囤积者的力量来备份整个论坛。这个子版块以大规模网络存档行动闻名，曾经成功保存过被关闭的政府网站、已删除的YouTube视频合集。</p><p>但问题在于，RPG Maker论坛并没有开放完整的爬虫抓取权限。很多页面需要登录才能访问，而且论坛软件是老旧的vBulletin版本，结构复杂，嵌套层级深。即使有半年时间，完整备份也需要大量的人力和协调。</p><p>Gotcha Gotcha Games为什么要关闭论坛？官方说法是“为了提供更好的用户体验”，新论坛将采用更现代的软件，整合进官网体系。但老用户并不买账。他们认为公司只是不想再花钱维护旧论坛的服务器和数据库，而且新论坛很可能对内容有更严格的审核，或者通过收费模式控制资源分享。</p><p>其实，这次事件不是孤例。在游戏行业，像这样“官方删除历史”的事件屡见不鲜。2023年，任天堂关闭了3DS和Wii U的在线商店，导致大量独占游戏和DLC永远无法购买。2019年，Epic Games关闭了旗下社交平台服务器，用户创建的关卡、截图、社区内容一夜之间消失。更早的2014年，微软关闭了《机甲战士Online》的论坛，导致大量改装教程和社区创作彻底消失。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(249.0,'sec-0003')"><span>▶</span> 04:08</button><h3 class="section-title">12月11日会到来。当那一天，你点击旧论坛的链接，</h3></div><p>每一次，社区都试图挽救，但往往力不从心。网络世界的记忆远比我们想象的脆弱。一个网站关闭，一个公司倒闭，一次服务器迁移——都可能让数亿字节的数据消失在数字黑洞中。</p><p>RPG Maker本身的历史也很有意思。这个软件最早诞生于1992年的日本，最初叫“RPG Tsukuru”，由Enterbrain开发。它让不会编程的人也能制作角色扮演游戏。随着版本迭代，从RPG Maker 2000到XP、VX、MV、MZ，它培养了几代游戏开发者。早期的《Ib》《魔女之家》《狂父》——这些震惊独立游戏圈的恐怖杰作，都是学生或业余爱好者用RPG Maker做出来的。</p><p>论坛正是这些创作者的摇篮。有人在上面问“怎么让NPC随机移动”，有人分享了自己花三个月做的粒子特效脚本，有人发布完整RTP素材包。论坛的“已完成游戏”板块里，至今还躺着成千上万从未走出社区的半成品。</p><p>而现在，这些即将消失。</p><p>当然，故事还没结束。社区已经开始自救。除了r/DataHoarders的参与，一些资深用户开始手动备份自己最常用的板块。有人编写了爬虫脚本，试图绕过登录限制。还有人在讨论是否要建立独立的镜像站点。</p><p>但讽刺的是，Gotcha Gotcha Games给出的期限是半年——恰好是许多RPG Maker游戏从立项到完成的平均周期。这是不是一种巧合？</p><p>12月11日会到来。当那一天，你点击旧论坛的链接，看到的可能只是一句冰冷的“This forum is closed”。而那些未被保存的帖子、那些从未被下载的素材、那些只存在于某个老会员硬盘里的游戏——将彻底从互联网消失。</p></div>
+<div class="section" id="sec-0004"><p>也许你会说，资料可以备份。但有些东西备份不了：2009年那个深夜，一个高中生发帖说“我终于完成了第一个游戏”，下面有20条回复说“加油”。那种社区温情，那种共同成长的记忆，是任何PDF都保存不了的。就像亚历山大图书馆被焚毁时，损失的不仅是书卷，更是无数思想碰撞的火花。</p><p>RPG Maker论坛的关闭，对大众来说可能只是个小新闻。但对那些把青春和梦想留在里面的人来说，这是真正的告别。</p><p>几个月后，当新论坛上线，也许一切看起来焕然一新。但是否会有人记得，在旧论坛的某个角落，曾经有一群人在凌晨三点讨论如何让像素小人跳得更远？这些故事，可能永远只在亲历者的记忆里了。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">更关键的是，这个论坛承载着整个RPG M</span></div>
+<div class="tl-item" onclick="seek(124.5,'sec-0002')"><span class="tl-time">02:04</span><span class="tl-title">其实，这次事件不是孤例。在游戏行业，像这</span></div>
+<div class="tl-item" onclick="seek(249.0,'sec-0003')"><span class="tl-time">04:08</span><span class="tl-title">12月11日会到来。当那一天，你点击旧论</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260613070534" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
