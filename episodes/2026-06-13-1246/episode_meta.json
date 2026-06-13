@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-13-1246",
+  "title": "Meta AI部门像古拉格、Anthropic调查揭示担忧，5条新闻撕开AI遮羞布",
+  "published_at": "2026-06-13 12:46",
+  "duration_seconds": 593.47,
+  "duration_label": "9分53秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "MiniMax M3开源：428B参数，代码能力惊人",
+      "golden_quote": "23B激活，跑出千亿性能",
+      "keywords": [
+        "MiniMax",
+        "M3",
+        "开源",
+        "代码能力"
+      ],
+      "source": "X：MiniMax (@MiniMax_AI)"
+    },
+    {
+      "title": "字节豆包上线任务模式，Agent落地",
+      "golden_quote": "一句话生成PPT，Agent不再遥远",
+      "keywords": [
+        "豆包",
+        "任务模式",
+        "Agent",
+        "字节跳动"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Anthropic调查：近半美国人盼AI治病，超六成忧失业",
+      "golden_quote": "仅15%信任AI公司，公众赤字惊人",
+      "keywords": [
+        "Anthropic",
+        "公众调查",
+        "信任",
+        "失业"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "中国禁西方AI，美国公司涌入DeepSeek，讽刺错位",
+      "golden_quote": "你禁我用，AI脱钩只是幻想",
+      "keywords": [
+        "DeepSeek",
+        "AI脱钩",
+        "中国",
+        "美国"
+      ],
+      "source": "TechRadar / Hacker News"
+    },
+    {
+      "title": "Meta AI部门被曝像古拉格，员工被强迫做苦力",
+      "golden_quote": "AI的智力，建构在员工的痛苦之上",
+      "keywords": [
+        "Meta",
+        "AI",
+        "强迫劳动",
+        "数据标注"
+      ],
+      "source": "TechCrunch / Hacker News"
+    }
+  ]
+}
