@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-14-1304",
+  "title": "15亿英磅AI豪赌、Anthropic千亿秘密上市、扎克伯克认错：5件重塑AI格局的大事",
+  "published_at": "2026-06-14 13:04",
+  "duration_seconds": 587.69,
+  "duration_label": "9分47秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "智谱 GLM-5.2 全量开放：1M 上下文，下周开源",
+      "golden_quote": "开源是最高级的军备竞赛。",
+      "keywords": [
+        "智谱",
+        "GLM-5.2",
+        "开源",
+        "1M上下文",
+        "Coding模型"
+      ],
+      "source": "公众号：智谱"
+    },
+    {
+      "title": "Suno 音轨分离大升级：从零生成，而非隔离",
+      "golden_quote": "不是修复，是再生。",
+      "keywords": [
+        "Suno",
+        "音轨分离",
+        "AI音乐",
+        "生成式音频",
+        "DAW"
+      ],
+      "source": "X：Suno"
+    },
+    {
+      "title": "Anthropic 秘密申请上市：估值9650亿美元",
+      "golden_quote": "最高明的公关，是让道德与商业双赢。",
+      "keywords": [
+        "Anthropic",
+        "IPO",
+        "9650亿美元",
+        "AI放缓",
+        "道德公关"
+      ],
+      "source": "Bloomberg"
+    },
+    {
+      "title": "扎克伯格承认Meta AI转型“脱轨”：裁员10%后果",
+      "golden_quote": "承认脱轨，是找回轨道的开始。",
+      "keywords": [
+        "Meta",
+        "扎克伯格",
+        "AI转型",
+        "裁员",
+        "组织管理"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "英国宣布15亿美元AI基础设施计划：建造超算",
+      "golden_quote": "15亿是入场券，不是冠军筹码。",
+      "keywords": [
+        "英国",
+        "AI基础设施",
+        "15亿美元",
+        "超算",
+        "芯片"
+      ],
+      "source": "Reuters"
+    }
+  ]
+}
