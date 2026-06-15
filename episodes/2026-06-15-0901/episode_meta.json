@@ -1,0 +1,70 @@
+{
+  "episode_id": "2026-06-15-0901",
+  "title": "白宫偏袒OpenAI？Anthropic被禁事件引爆AI监管大地震",
+  "published_at": "2026-06-15 09:01",
+  "duration_seconds": 380.98,
+  "duration_label": "6分20秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Anthropic被禁，印度吵翻",
+      "golden_quote": "依赖别人就要看别人脸色",
+      "keywords": [
+        "Anthropic",
+        "Fable",
+        "Mythos",
+        "印度",
+        "地缘政治"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Meta 20亿收购Manus被北京叫停",
+      "golden_quote": "20亿打水漂，谁都没赢",
+      "keywords": [
+        "Meta",
+        "Manus",
+        "收购",
+        "中国",
+        "地缘政治"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "开源小说生成器，一键出梗概",
+      "golden_quote": "把创作降低到按键程度",
+      "keywords": [
+        "小说生成",
+        "开源",
+        "AI创作",
+        "Skill"
+      ],
+      "source": "X"
+    },
+    {
+      "title": "白宫AI决策被指偏袒OpenAI",
+      "golden_quote": "这不叫监管，这叫拉偏架",
+      "keywords": [
+        "白宫",
+        "AI监管",
+        "Gary Marcus",
+        "Anthropic",
+        "OpenAI"
+      ],
+      "source": "Gary Marcus：The Road to AI We Can Trust"
+    },
+    {
+      "title": "Meta花14亿挖来Wang，Zuckerberg要卖力推销",
+      "golden_quote": "砸钱做模型不难，难的是让人用",
+      "keywords": [
+        "Meta",
+        "Scale AI",
+        "Alexandr Wang",
+        "Muse Spark",
+        "商业化"
+      ],
+      "source": "CNBC"
+    }
+  ]
+}
