@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>他靠一个单词勒索了整个游戏界17年 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 030 夜 / 2026-06-15</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 商标流氓</div>
+    <h1 class="ep-title">他靠一个单词勒索<span class="hl">了整个游戏界17年</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:00</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260615093434" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这不是他第一次得手。朗德尔的做法，在整个游戏界是有</h3></div><p>你好，我是伊恩。</p><p>想象一下，你花了一年做出一款游戏，刚上线就被下架，原因只有一个——你的游戏名字里有一个单词，属于某个人的“商标财产”。这不是黑帮勒索，这是游戏界最臭名昭著的商标流氓。</p><p>2026年6月，法国独立游戏工作室Mobigame的CEO大卫·帕帕齐安在领英上发了一篇长文。他说，17年了，他和他的团队终于等到了这一天。他们要彻底终结一个人——蒂姆·朗德尔。如果你对游戏史略有了解，这个名字会让你后脊发凉。这个人，用“Edge”这个单词，在游戏界横行霸道了将近三十年。</p><p>2009年，Mobigame在App Store上架了一款叫《Edge》的益智游戏。游戏很受欢迎，拿下不少奖项。然后突然有一天，苹果通知他们：游戏必须下架，或者改名，因为有人声称拥有“Edge”的商标权。这个人就是蒂姆·朗德尔的Edge Games。朗德尔的要求很简单：要么游戏改名字，要么给他所有收入的25%。不是买断，是永久抽成。</p><p>帕帕齐安当时是一个小工作室的创始人，团队不过几个人。他选择了改名，把游戏重新上架为《Edge Extended》。但朗德尔又找上来，说你这个名字里还有“Edge”。帕帕齐安被迫改成了《World of Goo》式的无厘头标题。那段时间，玩家根本找不到这个游戏，评论界一片混乱。朗德尔坐收渔利。</p><p>这不是他第一次得手。朗德尔的做法，在整个游戏界是有名的。他不仅盯上独立开发者，还盯上过EA。2007年，EA准备发行《镜之边缘》，朗德尔立刻跳出来，声称“Mirror's Edge”侵犯了他的商标。EA是大公司，打官司要钱要时间，他们选择了庭外和解。作为和解的一部分，朗德尔不得不放弃一批“Edge”相关的商标——包括“Edge”这个单词本身在游戏领域的部分权益。那本来是结束这场闹剧的最好机会。但律师们写和解协议时留下了一个漏洞：朗德尔只是放弃了某些特定类别的商标，他很快又用别的类别注册了新的“Edge”相关权利。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(120.1,'sec-0002')"><span>▶</span> 02:00</button><h3 class="section-title">回到2026年。朗德尔重新找上门来。这次，他声称E</h3></div><p>他追逐过南梦宫的《魂之刃》，那是《灵魂能力》的前身，因为原名就叫《Soul Edge》。他甚至起诉过英国的EDGE杂志——一本有二十年历史的严肃游戏媒体。2012年，朗德尔把目标转向硬件厂商雷蛇，声称他们的游戏平板电脑“Edge”侵犯了他的商标。每一次，他的策略都一样：先发律师函，要求下架或赔偿，然后等着对方为了息事宁人而妥协。</p><p>历史不是一片空白。商标流氓这个现象，在科技界早已有之。1990年代，一家叫“紫薯”的公司注册了无数与颜色相关的商标，专门告小企业。硅谷有句老话：最好的防守就是拥有一个足够宽泛的商标。而朗德尔把这件事做到了极致。他从1979年创办Edge Games以来，做的游戏屈指可数，大部分是80年代为Z80光谱和康懋达64这类古董电脑开发的小软件。他的公司几乎从不出新作，主要业务就是维护和扩张那个“Edge”的商标帝国。</p><p>回到2026年。朗德尔重新找上门来。这次，他声称Edge Games在1986年开发的一个叫《鲍比轴承》的游戏，在2000年代初有过一个J2ME手机移植版，而J2ME版是他拥有移动游戏领域“Edge”商标权的证据。帕帕齐安这次没有再退缩。他在领英上逐条反驳：首先，J2ME移植版根本没有在北美正式发行，主要在欧洲小范围流传，而朗德尔试图用这个来主张全球商标权，这在国际商标法上站不住脚。其次，帕帕齐安找到了《鲍比轴承》原程序员的联系方式，对方提供证词说，那个J2ME版他自己都没见过几份，而且版权归原始开发者所有，不是Edge Games。帕帕齐安说：“我们欢迎调查。我们要看文件、元数据、所谓的销售记录、文件来源、权利链、通信记录……如果证据证明他只是在耍流氓，Mobigame会要求全额赔偿。”</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(240.3,'sec-0003')"><span>▶</span> 04:00</button><h3 class="section-title">帕帕齐安在领英的结尾写道：“Mobigame不会把</h3></div><p>这一次，Mobigame不是当年的小作坊了。17年间，他们推出了多款成功的游戏，规模扩大，资金充裕。更重要的是，他们得到了整个独立游戏界的声援。帕帕齐安把所有材料都放在网上，完全公开。他们想通过这个案子，建立一个判例：让商标流氓再也不能用一个单词勒索整个行业。</p><p>你可能会问，为什么一个单词能被一个人抢注？商标法的本质是防止消费者混淆。一个叫“Edge”的游戏和一家叫“Edge”的公司，如果没有任何相似之处，理论上不应该冲突。但朗德尔利用了商标法中的“在先使用”条款——只要他能在某个商品类别中证明自己先用了这个单词，就可以打击后来者。他选择的是“电子游戏”这个大类别，而且他在很多国家都注册了。这种策略在九十年代和零零年代屡试不爽，因为当时数字产品在全球的发行渠道还不完善，很多小公司根本没有跨国维权的预算。</p><p>但时代变了。2026年的全球数字市场，独立开发者可以轻松绕开App Store，通过Steam、itch.io甚至自己的网站发行。帕帕齐安在接受采访时说，即使朗德尔再来一次下架要求，他们也毫不在乎——游戏可以通过其他平台继续销售。真正需要解决的，是朗德尔这种持续17年的威胁。</p><p>帕帕齐安在领英的结尾写道：“Mobigame不会把这个当作可以私下摆平的麻烦。我们欢迎公开较量。我们要把蒂姆·朗德尔彻底暴露在阳光下，让整个行业吸取教训，确保这种事不再发生。”截至发稿时，朗德尔和Edge Games方面尚未作出公开回应。但帕帕齐安已经准备好了：一个长达17年的故事，终于要写到最后一章了。</p></div>
+<div class="section" id="sec-0004"><p>那天下午我关掉网页，脑子里反复回响一个画面：一个年迈的律师坐在办公室里，面前堆着几十份商标注册证书，每一张都让他又多了一个勒索的理由。他大概从未想过，有一天会有一个被他欺负过的年轻人，带着17年的账单，站在法庭上，手里拿着光明正大的证据，身后站着整个行业。这个故事没有结局，但也许，最好的结局就是让一个单词，回到词典里。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这不是他第一次得手。朗德尔的做法，在整个</span></div>
+<div class="tl-item" onclick="seek(120.1,'sec-0002')"><span class="tl-time">02:00</span><span class="tl-title">回到2026年。朗德尔重新找上门来。这次</span></div>
+<div class="tl-item" onclick="seek(240.3,'sec-0003')"><span class="tl-time">04:00</span><span class="tl-title">帕帕齐安在领英的结尾写道：“Mobiga</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260615093434" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
