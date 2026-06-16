@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-16-1329",
+  "title": "5 件事告诉你：AI 抢饭碗、买豪宅、被政府盯上，但真相没那么简单",
+  "published_at": "2026-06-16 13:29",
+  "duration_seconds": 719.71,
+  "duration_label": "11分59秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "国产开源模型拿下多个第一，MiniMax M3 凭什么？",
+      "golden_quote": "开源不是施舍，是技术自信，M3 做到了。",
+      "keywords": [
+        "MiniMax",
+        "开源",
+        "多模态",
+        "M3",
+        "稀疏注意力"
+      ],
+      "source": "公众号：MiniMax（稀宇科技）"
+    },
+    {
+      "title": "Meta 给 Facebook 装上 AI 模式，但答案靠谱吗？",
+      "golden_quote": "AI 搜索的可靠度，取决于信源的可信度，不是算法多厉害。",
+      "keywords": [
+        "Meta",
+        "Facebook",
+        "AI 模式",
+        "搜索",
+        "订阅"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "36 亿美元！Salesforce 买下客服 AI，谁是赢家？",
+      "golden_quote": "AI 客服不是替代人类，而是把人类从重复劳动中解放出来。",
+      "keywords": [
+        "Salesforce",
+        "Fin",
+        "收购",
+        "AI 客服",
+        "Agentforce"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "AI 裁员潮是真是假？扎克伯格一边买豪宅一边裁 8000 人",
+      "golden_quote": "AI 不是裁员的原因，而是管理不善的借口。",
+      "keywords": [
+        "裁员",
+        "AI",
+        "贫富分化",
+        "扎克伯格",
+        "Cerebras"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "新模型太强被举报，Anthropic 周末紧急游说白宫",
+      "golden_quote": "你越强调 AI 危险，政府就越想管，这是自己挖坑。",
+      "keywords": [
+        "Anthropic",
+        "出口管制",
+        "Mythos 5",
+        "特朗普政府",
+        "监管"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
