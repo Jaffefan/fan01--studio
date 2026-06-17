@@ -1,0 +1,70 @@
+{
+  "episode_id": "2026-06-17-0901",
+  "title": "AI公司被迫选边：五角大楼、SpaceX和毕业生的三重考验",
+  "published_at": "2026-06-17 09:01",
+  "duration_seconds": 720.6,
+  "duration_label": "12分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "五角大楼弃用 Anthropic：原则换不来国防订单",
+      "golden_quote": "选边不可怕，怕的是既丢了原则也没拿到利益。",
+      "keywords": [
+        "五角大楼",
+        "Anthropic",
+        "AI军事化",
+        "供应链风险"
+      ],
+      "source": "X：阿易 AI Notes (@AYi_AInotes)"
+    },
+    {
+      "title": "微软缺算力找 AWS，GitHub 成烫手山芋",
+      "golden_quote": "连微软都要找 AWS 买算力，AI 的算力饥渴比我们想象的更严重。",
+      "keywords": [
+        "微软",
+        "GitHub",
+        "AWS",
+        "算力短缺",
+        "多云"
+      ],
+      "source": "RuntimeWire"
+    },
+    {
+      "title": "SpaceX 花 600 亿美元买下 Cursor，AI 编程成香饽饽",
+      "golden_quote": "航天公司买编程工具？不，它买的是未来软件自动化的入场券。",
+      "keywords": [
+        "SpaceX",
+        "Cursor",
+        "AI编程",
+        "收购",
+        "xAI"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "DeepSeek 首轮融资 500 亿美元，中国 AI 新巨头崛起",
+      "golden_quote": "500 亿美元估值却还要五年锁定期，梁文锋用结构告诉市场：AGI 不是短跑。",
+      "keywords": [
+        "DeepSeek",
+        "融资",
+        "开源",
+        "梁文锋",
+        "AI"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "毕业生被 AI 检测逼疯：手写摘要判 99% AI，AI 写的反而 0%",
+      "golden_quote": "AI 检测的荒诞在于：它无法区分「写得好」和「AI 写的」。",
+      "keywords": [
+        "AI检测",
+        "论文",
+        "毕业生",
+        "荒诞",
+        "学术诚信"
+      ],
+      "source": "公众号：数字生命卡兹克"
+    }
+  ]
+}
