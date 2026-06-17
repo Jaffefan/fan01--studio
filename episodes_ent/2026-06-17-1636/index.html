@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ShadowBytes勒索任天堂：2万美元赎金与员工数据泄露 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 032 夜 / 2026-06-17</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 任天堂</div>
+    <h1 class="ep-title">ShadowBytes勒索任天<span class="hl">堂：2万美元赎金与员工数据泄露</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:39</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260617083702" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">那么，TinyPulse到底是什么？它是一款员工反</h3></div><p>你好，我是伊恩。想象一下，你是一家全球知名游戏公司的员工，你的私人聊天记录、银行对账单，甚至你对老板AI政策的抱怨，都在一个黑客论坛上被公开叫卖——而赎金，是200万美元。这不是电影情节，这是2026年6月真实发生在任天堂身上的事。</p><p>6月12日，一个自称“勒索即服务”的黑客组织ShadowByt3$（简称ShadowBytes）在自己的网站上发布了一条令人不安的消息：他们声称从任天堂的第三方服务商TinyPulse那里窃取了约859MB的员工数据，包括员工姓名、邮箱、银行对账单PDF、甚至私人聊天记录。他们给任天堂48小时支付200万美元赎金，否则所有数据将被公开。ShadowBytes甚至附上了一个mega.io链接作为“证据”——虽然很快就无法访问。</p><p>任天堂的反应很快。6月13日，任天堂美国公司发布声明，承认“意识到一个涉及TinyPulse的问题”，但强调任天堂自身系统未被攻破，也没有客户或财务数据泄露。声明中写道：“数据仅限于一小部分员工的内部调查内容，大部分信息几年前就已存在。”但ShadowBytes显然不买账。6月14日，他们发布第二条威胁：既然任天堂拒绝支付，那就让TinyPulse在6月16日前付钱，否则所有数据——包括员工的私人消息——都会泄露。ShadowBytes还挑衅说：“这些私人消息就要不再隐私了，如果TinyPulse不和我们达成协议。”</p><p>那么，TinyPulse到底是什么？它是一款员工反馈平台，类似于企业内部论坛，员工可以在上面匿名讨论公司文化、管理问题或提出建议。任天堂美国公司用它来做内部员工调查。黑客正是攻破了这个第三方平台，而不是直接入侵任天堂的服务器。但问题在于，平台上留下的数据——包括员工对AI工具Copilot的担忧——成了勒索的筹码。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(129.9,'sec-0002')"><span>▶</span> 02:09</button><h3 class="section-title">而TinyPulse的这次事件，则是将矛头指向了员</h3></div><p>有热心网友在X上贴出了据称是泄露数据的截图。其中一张显示，一名员工写道：“我对公司推动Copilot AI工具有点担心，我们似乎没有充分考虑到过度依赖AI的负面影响。”这条消息的时间戳是2025年12月，正好是任天堂美国公司决定在工作场所引入微软Copilot AI的时候。而另一张截图则显示，ShadowBytes在提供证据时忘了模糊下载链接，导致他们的勒索“基本上毫无价值”——因为任何人都可以访问那些数据。</p><p>这场勒索事件让我想起游戏行业历史上的多次数据泄露。2019年，任天堂曾遭遇过一起重大数据泄露，大约16万个任天堂账户被入侵，原因是黑客利用了任天堂的登录系统漏洞。那一次，攻击者获取了用户的昵称、出生日期、邮箱地址和居住国家，但信用卡信息未被泄露。2023年，任天堂又被曝出一次数据泄露，涉及上万个账户，原因是未经授权的登录尝试。但这些泄露通常影响的是玩家，而不是员工。</p><p>而TinyPulse的这次事件，则是将矛头指向了员工隐私。事实上，第三方服务商的数据安全漏洞在游戏行业并不罕见。2021年，游戏开发商CD Projekt Red的服务器遭勒索软件攻击，源代码被窃取，但那次攻击直接针对公司内部系统。相比之下，任天堂这次更像是“池鱼之灾”——黑客看中的不是任天堂的第一手数据，而是第三方平台上的信息。这让我想起2024年的一次类似事件：一家游戏公司的员工数据通过其使用的办公软件被泄露，导致员工薪资和绩效被公开。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(259.8,'sec-0003')"><span>▶</span> 04:19</button><h3 class="section-title">再看黑客组织ShadowBytes。他们自称“勒索</h3></div><p>TinyPulse本身也是一个有趣的角色。它主打员工反馈和内部沟通，类似Slack但更专注于调查和匿名交流。然而，任何内部平台一旦暴露，其匿名性就会变成双刃剑。员工以为自己在私下吐槽公司政策，结果这些对话可能成为黑客手中的筹码。这次泄露中，员工对Copilot AI的抱怨就被直接公开，这无疑会加剧员工与管理层之间的信任危机。</p><p>回顾整个事件，我发现几个重要的细节。首先，ShadowBytes攻击的时机选择非常微妙：正好在任天堂财报发布前的一个月。任天堂在2026年5月发布的财报显示，Switch销量持续下滑，但新一代游戏主机尚未公布。公司正面临转型压力，而AI工具Copilot的引入正是其数字化转型的一部分。员工对AI的抵触情绪，可能反映出更深层的文化冲突：一家以手工艺闻名的游戏公司，是否适合拥抱自动化工具？</p><p>其次，勒索金额200万美元对于任天堂这样的巨无霸来说并不算高。但任天堂选择不支付，这可能意味着公司认为员工数据的敏感度不足以支付赎金。或者，他们坚信TinyPulse会承担责任。TinyPulse是否支付了赎金？截至本文写作时，尚无公开信息。</p><p>再看黑客组织ShadowBytes。他们自称“勒索即服务”，这其实是一种新型商业模式：黑客提供技术工具并从中抽成。相比传统的攻击，这种模式降低了技术门槛，让更多非技术背景的犯罪分子也能参与勒索。ShadowBytes在2025年才开始活跃，此前曾攻击过一家小型教育机构。这次盯上任天堂，显然是一次“名利双收”的企图——既能勒索巨额赎金，又能通过明星公司扩大名声。</p></div>
+<div class="section" id="sec-0004"><p>这次事件也暴露了游戏行业更深层的安全痼疾：多层外包下的数据链隐患。任天堂作为全球游戏巨头，其内部系统固然有严格防护，但第三方服务商TinyPulse的安全标准如何？如果TinyPulse的服务器存在漏洞，那么任何使用其服务的公司都可能成为目标。事实上，许多公司为了降低成本，将HR、薪资、内部沟通等系统外包给第三方，这恰恰成了黑客眼中的薄弱环节。</p><p>事件发生后，任天堂表示将“与供应商合作解决这一问题”，但未透露具体措施。行业观察人士指出，企业可能需要重新评估第三方服务的数据安全协议，尤其是涉及员工隐私的平台。另一方面，员工对AI的担忧也不容忽视——Copilot AI的引入是否被员工接受？任天堂是否真的听取了员工的反馈？这些数据泄露后，公司内部的信任重建将是一个漫长过程。</p><p>最后，我想分享一位社交媒体用户的话。他在看完泄露截图后说：“如果员工连在内部论坛的匿名抱怨都会被公开，那他们还会信任公司吗？”这句话或许点出了这次事件的真正影响。数据可以勒索金钱，但信任一旦失去，价值远超过200万美元。</p><p>感谢你的倾听，我是伊恩。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">那么，TinyPulse到底是什么？它是</span></div>
+<div class="tl-item" onclick="seek(129.9,'sec-0002')"><span class="tl-time">02:09</span><span class="tl-title">而TinyPulse的这次事件，则是将矛</span></div>
+<div class="tl-item" onclick="seek(259.8,'sec-0003')"><span class="tl-time">04:19</span><span class="tl-title">再看黑客组织ShadowBytes。他们</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260617083702" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
