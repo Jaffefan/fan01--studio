@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>《如龙》创作者的最后一颗钉子 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 033 夜 / 2026-06-18</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 名越工作室</div>
+    <h1 class="ep-title">《如龙》创作者<span class="hl">的最后一颗钉子</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:59</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260618081850" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">但一年多过去了，我们看到的不是游戏上市的消息，而是</h3></div><p>你好，我是伊恩。今天的故事，从一条 Twitter 个人简介的修改开始。</p><p>2026 年 6 月 17 号，Daisuke Sato 把自己的简介改成了“前名越工作室成员”——一款万众期待的犯罪史诗，可能就这样无声无息地沉了。</p><p>Daisuke Sato 是谁？他是《如龙》系列的核心制作人，从初代开始就参与其中，后来成了工作室的联合创始人。2021 年，他和《如龙》之父名越稔洋一起离开世嘉，加入网易，创办了名越工作室。他们的第一款游戏叫《Gang of Dragon》，一款犯罪史诗，设定在虚构的亚洲城市，融合了黑帮、阴谋、动作和过场动画。2024 年公布时，全世界都为之振奋。</p><p>但一年多过去了，我们看到的不是游戏上市的消息，而是一条条的坏消息。先是 2025 年 2 月，媒体报道网易正在撤资，缩减对《Gang of Dragon》的营销投入。当时大家还觉得问题不大，工作室可以继续开发。2025 年 12 月，游戏还在 TGA 上放了个新预告，看起来一切正常。但到了 2026 年 3 月，情况急转直下：报道说网易将在 5 月停止资金供应，而工作室需要额外的 4440 万美元来完成并发行游戏。工作室开始寻找其他资金来源，但之后几个月没有任何积极信号。4 月份，工作室的 YouTube 频道一度被删除又恢复，引发粉丝恐慌。一个月前，官网无法访问，Google 上的办公室状态显示“永久关闭”。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(119.8,'sec-0002')"><span>▶</span> 01:59</button><h3 class="section-title">其实历史总是惊人地相似。游戏行业里，才华横溢的工作</h3></div><p>而今天，Sato 的离职似乎成了压垮骆驼的最后一根稻草。虽然没有正式公告，但种种迹象表明：名越工作室可能已经名存实亡了。</p><p>让我们把时间拨回 2021 年。那年 10 月，名越稔洋和 Daisuke Sato 宣布离开世嘉，结束了自己在《如龙》系列上的漫长旅程。当时所有人都震惊：顶级人才跑去网易？他们要做 3A 大作？网易非常慷慨，不仅提供了资金，还允许工作室完全独立运营。2022 年，工作室正式成立，命名为 Nagoshi Studio。2023 年，他们开始招募人手，承诺打造一款“面向全球的高品质游戏”。</p><p>但这段蜜月期没能持续太久。网易作为中国互联网巨头，在游戏投资上一直走的是广撒网路线。它投资了日本工作室如 Grasshopper Manufacture、Sakura Studio，也投资了欧美如 Bungie、Quantic Dream。但 2024 年后，网易开始收缩战线。原因很复杂：国内政策收紧、市场竞争激烈、全球经济下行。2025 年初，网易宣布将重新评估海外投资组合，部分项目被砍。最著名的例子是：2024 年，网易悄悄关闭了樱花工作室（Sakura Studio），一个由资深日本开发者组成的团队。</p><p>现在，名越工作室似乎成了下一个。</p><p>其实历史总是惊人地相似。游戏行业里，才华横溢的工作室拿到大厂投资后分崩离析的故事比比皆是。2008 年，Bizarre Creations 被 Activision 收购，创作《几何战争》和《疾驰残影》的团队，在母公司战略调整后被关闭。2016 年，Kojima Productions 虽然成功从科乐美独立出来，但中间经历的资金断档、人员流失几乎让项目夭折。更近一点：2022 年，Quantic Dream 被网易收购后，创始人 David Cage 离职，团队士气低落。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(239.7,'sec-0003')"><span>▶</span> 03:59</button><h3 class="section-title">玩家们的反应很有意思。在 Reddit 和 Twi</h3></div><p>这些故事都有一个共同点：当投资方失去耐心或改变战略时，工作室的自主权就像沙滩上的城堡，看似坚固，一道浪就没了。</p><p>说到《如龙》系列本身，它的历史也是一部资金与创意的博弈史。2005 年，世嘉推出初代《如龙》，当时公司内部并不看好，但名越稔洋坚持要做这种“成年人版《莎木》”。首作销量不温不火，但靠着口碑慢慢积累。2006 年的《如龙 2》开始盈利，之后系列逐渐成为世嘉的招牌。2012 年，世嘉成立了专门的开发工作室 Ryu Ga Gotoku Studio，从此《如龙》有了稳定的家。但这稳定是建立在世嘉对《如龙》品牌的长期信心上。一旦换成外部投资方，情况就完全不同了——投资人看重的是回报周期，2 年不见成果就换赛道，3A 游戏动辄 4-5 年开发期，这种矛盾注定是死结。</p><p>现在的名越工作室，就像一个正在沉没的船。Sato 的离职是最后一声警报。剩下的员工呢？游戏资产呢？都将是争议的焦点。网易会出售 IP 吗？会裁掉整个团队吗？还是会有人接手这个项目？</p><p>玩家们的反应很有意思。在 Reddit 和 Twitter 上，有人咒骂“网易毁了工作室”，也有人冷静指出“创始人自己也有责任，拿了钱做不出成果”。媒体则更暧昧：《Kotaku》的文章说“我希望有人直接出来宣布发生了什么，而不是这种古怪的‘信号’”。名越稔洋本人尚未公开回应。他的 Twitter 简介还写着“Nagoshi Studio Inc.”，但自 2024 年 11 月后就再没更新。</p></div>
+<div class="section" id="sec-0004"><p>有趣的是，同期其他项目也有类似命运。比如网易投资的 Grasshopper Manufacture（《英雄不再》系列），创始人须田刚一也在 2024 年说过“网易没有干涉创作”，但之后 Grasshopper 就没什么动静了。更早的还有合作破裂、创始人出走、项目腰斩…… 似乎没有人能打破这个循环。</p><p>离开网易之后，Sato 会去哪？他可能回归世嘉？或者自己开个小工作室？但无论如何，《Gang of Dragon》大概率是看不到了。</p><p>我想到一个细节：在 2024 年的预告片里，有一个画面是主角站在雨中的霓虹灯招牌下，背景音乐是慢调的爵士乐。那个场面像极了《如龙》里的神户町——同样潮湿的街道、同样孤独的背影。当时有玩家感叹“熟悉的味道”。但味道终究会散。</p><p>也许名越工作室的悲剧不在于网易撤资，而在于这个行业里，创意和金钱的婚姻从来都不长久。每一次大厂注资，都隐藏着一个定时炸弹：当利润不达预期，或者战略转向，再天才的导演也会失业。这不是日本人的问题，也不是中国投资方的问题，而是全球游戏工业化进程里，一个无解的难题。</p><p>好了，今天就聊到这里吧。如果你对这个故事有自己的看法，欢迎在评论区留下你的声音。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">但一年多过去了，我们看到的不是游戏上市的</span></div>
+<div class="tl-item" onclick="seek(119.8,'sec-0002')"><span class="tl-time">01:59</span><span class="tl-title">其实历史总是惊人地相似。游戏行业里，才华</span></div>
+<div class="tl-item" onclick="seek(239.7,'sec-0003')"><span class="tl-time">03:59</span><span class="tl-title">玩家们的反应很有意思。在 Reddit </span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260618081850" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
