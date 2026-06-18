@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-18-0902",
+  "title": "OpenAI年亏80亿，Grok降价杀入，AI巨头急转弯",
+  "published_at": "2026-06-18 09:02",
+  "duration_seconds": 700.78,
+  "duration_label": "11分40秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Grok 4.3 碾压级性价比",
+      "golden_quote": "每美元智能成为新标尺",
+      "keywords": [
+        "Grok 4.3",
+        "Amazon Bedrock",
+        "性价比",
+        "企业AI"
+      ],
+      "source": "xAI"
+    },
+    {
+      "title": "谷歌99美元AI音箱是豪赌还是鸡肋",
+      "golden_quote": "99美元的硬件是诱饵，10美元的月费是陷阱",
+      "keywords": [
+        "Google Home Speaker",
+        "Gemini",
+        "订阅制",
+        "智能音箱"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "阿里云「快乐生蚝」一句话生成可交互世界",
+      "golden_quote": "一只生蚝撬开了实时交互数字世界的门",
+      "keywords": [
+        "HappyOyster",
+        "阿里云",
+        "世界模型",
+        "实时交互"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "OpenAI年亏390亿，但账不能这么算",
+      "golden_quote": "OpenAI在烧钱赌AGI，但财报提醒它现实世界要利润",
+      "keywords": [
+        "OpenAI",
+        "财务亏损",
+        "研发成本",
+        "盈利困境"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Anthropic被出口管制突袭：AI治理的黑色幽默",
+      "golden_quote": "用冷战工具管AI，只能得到荒诞",
+      "keywords": [
+        "Anthropic",
+        "出口管制",
+        "AI治理",
+        "政策乱象"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
