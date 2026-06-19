@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-19-1322",
+  "title": "5 条 AI 情报：谷歌 27 亿美元白花了？",
+  "published_at": "2026-06-19 13:22",
+  "duration_seconds": 623.26,
+  "duration_label": "10分23秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "谷歌 27 亿美元请回的人，又走了",
+      "golden_quote": "27 亿买不来创新环境，巨头正在为傲慢买单。",
+      "keywords": [
+        "Noam Shazeer",
+        "谷歌",
+        "OpenAI",
+        "人才流失"
+      ],
+      "source": "X：Yuchen Jin"
+    },
+    {
+      "title": "Claude 4.7 操控机器狗，比人快 20 倍",
+      "golden_quote": "AI 从辅助人类到自主操控，物理世界的大门正在松开。",
+      "keywords": [
+        "Anthropic",
+        "Claude 4.7",
+        "机器狗",
+        "自主操作"
+      ],
+      "source": "Anthropic 研究"
+    },
+    {
+      "title": "AI 确诊 18 名儿童罕见病，医生震惊",
+      "golden_quote": "AI 没有代替医生，只是给了他们一双能翻遍所有论文的眼睛。",
+      "keywords": [
+        "AI 诊断",
+        "罕见病",
+        "波士顿儿童医院",
+        "OpenAI"
+      ],
+      "source": "NBC News"
+    },
+    {
+      "title": "桑德斯要征 AI 公司 50% 股票税",
+      "golden_quote": "7 万亿的争议不在于数字，而在于：AI 的收益归谁？",
+      "keywords": [
+        "桑德斯",
+        "AI 征税",
+        "主权财富基金",
+        "财富分配"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "你的 AI 研究智能体，可能正在泄密",
+      "golden_quote": "AI 每向外提问一次，都可能留下一串无法擦除的脚印。",
+      "keywords": [
+        "隐私泄露",
+        "AI 智能体",
+        "马赛克攻击",
+        "多跳推理"
+      ],
+      "source": "Hugging Face 博客"
+    }
+  ]
+}
