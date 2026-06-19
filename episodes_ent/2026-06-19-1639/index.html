@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一首歌到一部电影，她用了十年 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 034 夜 / 2026-06-19</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Hayley Kiyoko</div>
+    <h1 class="ep-title">一首歌到一部电<span class="hl">影，她用了十年</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:54</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260619084049" alt=""></div></div>
+<div class="section" id="sec-0001"><p>你好，我是伊恩。</p><p>2015年夏天，一个叫Hayley Kiyoko的音乐人上传了一支音乐视频。画面里，两个十几岁的女孩在加州阳光下相遇、靠近、亲吻。歌很简单，反复唱着一句：&quot;女孩喜欢女孩，就像男孩一样。&quot;在这之前，主流流行歌里很少听到这样的歌词——不是暗语，不是隐喻，就是直白地说了一句很多人都觉得理所当然、但没人敢写在歌里的话。</p><p>到今天，这支视频在YouTube上累计1.63亿次播放。评论区里，成千上万的女孩留言说，她们第一次在屏幕上看到自己。她们说，希望有一部长电影能讲这样的故事。</p><p>Kiyoko看到了这些留言。她当时25岁，刚发行首张专辑，在业内算个新人。但她给自己种下了一个念头：我要拍一部这样的电影。她觉得这事不难——题材摆在那，受众摆在那，连故事都有人帮她写好了，就是那支MV，把它扩展成长片不就行了？</p><p>她后来才知道，自己想得太简单了。</p><p>接下来的十年，她一直在&quot;说服&quot;。说服投资人，说服制片厂，说服那些手握绿灯权的人：同性恋女孩的故事不是小众，不是边缘，不是&quot;niche&quot;。她说，&quot;我是有色人种的酷儿女性，我的故事是主流的。有数百万像我一样的人，我们需要的不止是两只手就能数完的故事。&quot;</p><p>她说的&quot;两只手&quot;，指的是那些年屏幕上的同性恋角色。2015年到2020年间，好莱坞有同性恋主角的电影不到三十部，其中讲女同性恋的、讲有色人种女同性恋的，更是少之又少。</p><p>这条说服之路走了快十年。2023年，Kiyoko把MV里的两个女孩写成了小说。然后，它吸引了Focus Features的注意。今年6月19日，电影《Girls Like Girls》在全美公映。</p><p>电影说的是2006年，16岁的Coley经历母亲去世，跟父亲搬到俄勒冈一个小镇。她认识了邻居Sonya，两人迅速成为最好的朋友，然后暧昧、亲吻。但Sonya有一个男朋友，她无法接受自己的感情。她推开Coley，说这是&quot;错的&quot;。Coley独自消化那些痛苦，打工、和父亲和解，最后跟Sonya面对面，把话说开。那场戏，Kiyoko要求两个演员演成&quot;你不知道她们之间会怎样&quot;的感觉。她说：&quot;我忘了自己在片场，我在看一部电影。&quot;</p><p>Coley由Maya Da Costa饰演，Sonya由Myra Molloy饰演，两个都是亚裔演员。对Kiyoko来说，这也不是偶然。她自己就是日裔美国人，她坚持&quot;这部电影里必须要有人看得到我&quot;。</p><p>甚至连2006年这个年份都很重要。Kiyoko说，电影里的那些细节——用IM聊天、在卧室听iPod、穿低腰牛仔裤——都是她真实的高中记忆。当时还没有智能手机，没有社交媒体，喜欢一个人要鼓足勇气走到她面前。紧张、笨拙、美好。</p><p>当然，这部电影不是完美无缺。评论里有人说，它节奏太慢，情节太淡，像一部横跨十五年的MV。但更多人看到的是不一样的东西。片中有一句台词，是Coley的爸爸告诉她：&quot;你妈妈去世的时候，她其实不完全了解你。&quot;Kiyoko说，这句话来自她自己的妈妈。她妈妈的妈妈去世得很早，&quot;如果她当初也是同性恋呢？永远没有一个机会让妈妈真正认识完整的自己——这种痛，我想放进电影里。&quot;</p><p>但说实话，这部电影本身不足以解释这十年。真正让人好奇的是：为什么一个已经有流量、有受众、有影响力的故事，要从2015年等到2026年才能上映？</p><p>这不是Kiyoko一个人的问题。</p><p>在好莱坞，同性恋电影历来面临一种&quot;玻璃天花板&quot;。不是不能拍，是拍了不赚钱。《断背山》得了金狮奖、奥斯卡，全球1.78亿美元票房。但之后几年，大制片厂并没有批量生产同性恋故事。2010年代，独立电影是主要阵地，但大部分是小成本、小范围上映，像《月光男孩》那样的突破是个例外。</p><p>2017年以后，电视端开始发力。《女子监狱》《姿态》《性教育》，流媒体平台让更多角色得以出现。但大银幕上，女同性恋为主角的电影仍然屈指可数。2019年的《燃烧女子的肖像》算是现象级作品，但它是法国片、历史题材、艺术片，跟当下美国青少年的生活隔了一层。</p><p>Kiyoko想拍的不是历史，不是悲剧。是青少年爱情，有痛苦、有美好、有阳光和眼泪。她说，&quot;我不想要那些悲伤的、被惩罚的结局。我想讲一个女孩爱上另一个女孩，然后一切都可以好好的。&quot;</p><p>但这恰恰是最难卖的概念。制片厂觉得没有冲突——&quot;没有冲突怎么拍电影？&quot;Kiyoko花了多年才明白：对很多人来说，光是存在本身就是冲突。一个女孩发现自己喜欢另一个女孩，已经足够构成叙事。</p><p>直到2023年，情况开始松动。那一年，《芭比》全球票房破14亿美元，导演格蕾塔·葛韦格证明了女性叙事可以有多大的商业潜力。同年，一些独立制片厂开始主动寻找&quot;酷儿浪漫喜剧&quot;。Kiyoko的小说正好赶上这个窗口。</p><p>Focus Features接了这部电影。选角时，Kiyoko用了两个关键决定：第一，两个女主角都是亚裔；第二，不要那种“出柜即痛苦”的套路。她说，&quot;我没有时间再等十年才看到另一个像我这样的女孩出现在屏幕上。&quot;</p><p>但电影上映之后，更大的问题浮出水面。</p><p>你能在多少家影院看到它？排片多吗？营销预算够吗？有多少宣传海报贴在地铁站？Kiyoko在采访中说：&quot;我们争取的不是上映，而是被看到。&quot;这句话点出了一个更</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(178.3,'sec-0002')"><span>▶</span> 02:58</button><h3 class="section-title">结构性的困境</h3></div><p>结构性的困境</p></div>
+<div class="section" id="sec-0003"><p>——即便绿灯通过，后续的发行和宣传往往还是“差异化对待”。行业内有一种默认：同性恋题材的电影不需要大范围上映，靠口碑和线上就行了。</p><p>这跟十年前的音乐视频是一样的处境：有观众，但没渠道。有需求，但没供应。Kiyoko用十年时间从MV走到银幕，但下一个十年呢？当一部同性恋电影不再被认为是“突破”，而只是“一部电影”的时候，才是真正的进步。</p><p>电影结尾，Coley和Sonya没有明确说在一起。她们站在一起，看着窗外。Kiyoko觉得，这样就够了——&quot;她们是彼此故事的开头，不是结尾。&quot;</p><p>我还想说一个细节。电影上映前，Kiyoko在Instagram上发了一段视频。她站在一个电影院门口，身后是《Girls Like Girls》的海报。她看着镜头，停了几秒，然后说：&quot;我们做到了。&quot;</p><p>声音没有颤抖，但眼睛湿了。</p><p>我也想起那条1.63亿播放量的MV。十年前，那些女孩在评论区里写自己故事。十年后，她们中可能有人已经当妈妈了，有人还在找自己。不管怎样，现在她们可以买一张电影票，坐在暗下去的放映厅里，跟着两个女孩一起笑、一起哭、一起成长。</p><p>这不是一个完美的结局。但这是一个开始。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(178.3,'sec-0002')"><span class="tl-time">02:58</span><span class="tl-title">结构性的困境</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260619084049" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
