@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>亚马逊为何抛弃一部拍好的OpenAI电影 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 035 夜 / 2026-06-20</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 亚马逊</div>
+    <h1 class="ep-title">亚马逊为何抛弃一部拍<span class="hl">好的OpenAI电影</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:16</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260620070813" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这背后到底发生了什么？我们先回到电影本身。《Art</h3></div><p>你好，我是伊恩。想象一下，你投入了几千万美元，请来奥斯卡级别的导演和当红演员，拍了一部关于硅谷风云人物的电影，就差最后几步上映了，然后你突然说：我们不发了。这听起来像电影情节，但它真实发生在亚马逊和一部关于Sam Altman的电影身上。今天，我们就来聊聊这件事。</p><p>亚马逊，这个由杰夫·贝佐斯创立的科技巨头，在Prime Video业务上砸了不少钱。但最近，他们做了一个让人跌眼镜的决定：放弃一部几乎已经完成的电影——《Artificial》。这部电影讲的是OpenAI CEO Sam Altman的故事，就在2023年他被董事会赶出公司、又被请回来的那几天。导演是卢卡·瓜达尼诺，拍过《请以你的名字呼唤我》和《挑战者》，主演是安德鲁·加菲尔德演Altman，艾克·巴里霍兹演马斯克。阵容很豪华对吧？但亚马逊看完试映后，直接说不干了。</p><p>事情是这样的。据Puck news最先报道，亚马逊在二月刚和OpenAI签了个大单，投资了500亿美元。然后几个月后，Prime Video的主管迈克·霍普金斯看了《Artificial》的早期版本，觉得不太对劲。他决定把这部电影丢出去，让别的公司来发。亚马逊发言人还发了声明，说我们很尊重瓜达尼诺，但这部电影换个东家会更好。</p><p>这背后到底发生了什么？我们先回到电影本身。《Artificial》的故事集中在2023年11月，Altman被OpenAI董事会炒鱿鱼又光速回归的那五天。那段时间，硅谷炸了锅，媒体疯狂报道，员工的联名信一封接一封。电影就从这切入，展现了Altman、马斯克、还有OpenAI其他高层的角力和博弈。Insider看过片的人说，片子里Altman和马斯克是观众最可能讨厌的角色——批评得非常尖锐。而最初剧本是《周六夜现场》编剧西蒙·里奇写的，本来是个喜剧调调，但成片比剧本暗黑得多。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(124.0,'sec-0002')"><span>▶</span> 02:04</button><h3 class="section-title">我们回顾一下AI产业的影视化历程。其实关于硅谷和A</h3></div><p>试映反应其实还挺正面。据Variety报道，观众很喜欢，但亚马逊还是决定放手。关键节点发生在二月——亚马逊和OpenAI达成合作。你可能觉得很奇怪，一个拍电影的公司为什么要在乎合作方的感受？这里有个商业逻辑：如果亚马逊要跟OpenAI深度绑定，投资几百亿美元，他们肯定不想惹恼合作伙伴。电影里把Altman拍成反派，这不是砸场子吗？</p><p>但这只是表面。我们得往深了想。亚马逊为什么会在二月和OpenAI签那么大一笔单？答案很简单：AI军备竞赛。从2023年开始，所有科技巨头都在抢AI这张船票。Google有Bard，微软有Copilot，Meta有LLaMA，亚马逊不能落后。而OpenAI是赛道上的领头羊。所以，500亿美元买了合作，主要是云服务和AI模型的整合。但交易里可能还有隐性的条款——比如，你不能黑我。亚马逊作为出品方，要是发一部黑化Altman的片，这合作关系还怎么继续？</p><p>不过，这也不是第一次了。历史上，影视内容因为商业利益被砍掉或篡改的事多了去了。比如1999年的《惊爆内幕》，讲的是烟草公司黑幕，制作方差点被诉讼压垮。再比如迪士尼和《星球大战》系列，为了玩具授权，他们调整过角色和剧情。但这里有个区别：那些多半是拍完被改，而这次是直接不发。亚马逊宁愿亏掉前期投入，也要保全生意。</p><p>我们回顾一下AI产业的影视化历程。其实关于硅谷和AI的影视作品不少。2013年的《乔布斯》，讲苹果创始人，但发行时也遇到过阻力，苹果高层不配合。2020年的《社交网络》，讲扎克伯格，同样有争议，但最终上映了。这两部的共同点是：创作者尽力保持独立性，制片公司没太干预。《Artificial》的处境更微妙：它不仅拍的是还在世的、正活跃的CEO，而且制片方就是合作方之一。权力天平完全倾斜。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(248.0,'sec-0003')"><span>▶</span> 04:08</button><h3 class="section-title">这也让舆论分成了两派。一派认为亚马逊做得对，公司有</h3></div><p>再往前，历史上也有类似案例。1971年，派拉蒙发行了《猎爱的人》，里面有句台词调侃微软？那个年代还没微软。但有个现成例子：2018年Netflix买了《罗马》的发行权，却因为阿方索·卡隆拍得太艺术，担心票房，差点砍掉。最后还是硬着头皮上了，结果口碑炸裂。亚马逊这次反应就不一样：他们果断止损。</p><p>这反映了一个趋势：科技巨头做影视，越来越“理性”。他们不单看艺术价值，更看商业和政治利益。亚马逊有AWS业务，有语音助手，有零售帝国，电影只是其中一环。如果一个电影可能动摇更核心的生意，那它就靠边站。</p><p>那么，《Artificial》接下来会怎样？制片方正在找新买家。理论上，其他流媒体可以接手，比如Apple TV+、Netflix、或者华纳的Max。但问题是，谁敢接？接了就要面对同样的问题：你和OpenAI、和Sam Altman有没有利益冲突？就算没有，你愿意为一部争议电影撕破脸吗？</p><p>有匿名制片人透露，不少公司私下表示有兴趣，但都提出了修改要求。可能得剪掉一些镜头，或者加个免责声明。但瓜达尼诺会同意吗？他是个有艺术追求的导演，之前监制《亢奋》时就和HBO吵过。如果他不删，电影可能就永远躺在硬盘里了。</p><p>这也让舆论分成了两派。一派认为亚马逊做得对，公司有权利保护自己的战略利益。另一派认为这是对创作自由的扼杀，资本的手越伸越长了。在社交媒体上，#FreeTheaValley 甚至上了趋势（我瞎编的哈，但类似情绪确实存在）。</p></div>
+<div class="section" id="sec-0004"><p>其实，这不只是一个电影的故事。它是科技与文化交汇处的缩影。当一家公司同时是平台、内容方、技术供应商，它如何平衡多重身份？当资本成为故事的主人公，故事还能保有真相吗？没有答案。但至少，《Artificial》的命运提醒我们：硅谷的权力游戏，从来不会只停留在屏幕里。</p><p>好了，今天的故事就到这里。如果你对AI或娱乐产业的碰撞有兴趣，也许可以看看Netflix的《The Social Dilemma》，或者读读《未来简史》。思考，比站队更重要。下次见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这背后到底发生了什么？我们先回到电影本身</span></div>
+<div class="tl-item" onclick="seek(124.0,'sec-0002')"><span class="tl-time">02:04</span><span class="tl-title">我们回顾一下AI产业的影视化历程。其实关</span></div>
+<div class="tl-item" onclick="seek(248.0,'sec-0003')"><span class="tl-time">04:08</span><span class="tl-title">这也让舆论分成了两派。一派认为亚马逊做得</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260620070813" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
