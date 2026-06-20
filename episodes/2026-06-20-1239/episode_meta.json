@@ -1,0 +1,60 @@
+{
+  "episode_id": "2026-06-20-1239",
+  "title": "4件重塑AI格局的事：阿里开源、机器人超员、大牛跳槽",
+  "published_at": "2026-06-20 12:39",
+  "duration_seconds": 360.57,
+  "duration_label": "6分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 4,
+  "segments": [
+    {
+      "title": "阿里开源Zvec：向量数据库免费了",
+      "golden_quote": "阿里开源的Zvec，让AI搜索的基础设施又平民化了一步。",
+      "keywords": [
+        "阿里",
+        "开源",
+        "Zvec",
+        "向量数据库",
+        "Pinecone",
+        "AI搜索"
+      ],
+      "source": "X：阿易 AI Notes (@AYi_AInotes)"
+    },
+    {
+      "title": "Figure机器人数首超人类员工",
+      "golden_quote": "Figure 的机器人数超过人类员工，这不是未来，是现在。",
+      "keywords": [
+        "Figure",
+        "机器人",
+        "超越",
+        "人类员工",
+        "人形机器人"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "AlphaFold负责人跳槽Anthropic",
+      "golden_quote": "John Jumper从DeepMind跳槽Anthropic，标志着AI人才争夺进入新阶段。",
+      "keywords": [
+        "AlphaFold",
+        "John Jumper",
+        "DeepMind",
+        "Anthropic",
+        "AI人才"
+      ],
+      "source": "X：Demis Hassabis (@demishassabis)"
+    },
+    {
+      "title": "DeepSeek开源AutoResearch：AI自主跑完研究闭环",
+      "golden_quote": "DeepSeek的AutoResearch让AI自主跑通RL研究闭环，打开了加速迭代的大门。",
+      "keywords": [
+        "DeepSeek",
+        "AutoResearch",
+        "强化学习",
+        "Self-play",
+        "自主研究"
+      ],
+      "source": "X：阿易 AI Notes (@AYi_AInotes)"
+    }
+  ]
+}
