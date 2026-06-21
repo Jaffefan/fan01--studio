@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-21-1316",
+  "title": "微软闷声发大财，成AI最大中间商",
+  "published_at": "2026-06-21 13:16",
+  "duration_seconds": 517.56,
+  "duration_label": "8分37秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "微软成AI最大中间商，双向倒卖GPT和DeepSeek",
+      "golden_quote": "微软不做最强模型，只做最大管道。",
+      "keywords": [
+        "微软",
+        "AI中间商",
+        "DeepSeek",
+        "ChatGPT",
+        "贸易网络"
+      ],
+      "source": "X：阿易AI Notes (@AYi_AInotes)"
+    },
+    {
+      "title": "Jane Street低调抢走AI聚光灯",
+      "golden_quote": "GPU太慢，CPU太慢，FPGA刚好卡中间。",
+      "keywords": [
+        "Jane Street",
+        "FPGA",
+        "AI推理",
+        "量化交易",
+        "NVidia"
+      ],
+      "source": "The Wall Street Journal"
+    },
+    {
+      "title": "《大西洋月刊》公开12万首音乐AI训练数据",
+      "golden_quote": "1200万首歌散落训练集，音乐人维权潮在即。",
+      "keywords": [
+        "音乐AI",
+        "数据集",
+        "版权",
+        "大西洋月刊",
+        "训练数据"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "诺贝尔奖得主跳槽，AI人才战烧到DeepMind",
+      "golden_quote": "Anthropic赌的是AI理解世界架构，而不仅仅是对话。",
+      "keywords": [
+        "John Jumper",
+        "DeepMind",
+        "Anthropic",
+        "人才流失",
+        "AlphaFold"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Signal总裁泼冷水：AI聊天机器人不是你的朋友",
+      "golden_quote": "它们不是你的朋友，不是有意识的，只是模型。",
+      "keywords": [
+        "Meredith Whittaker",
+        "AI聊天机器人",
+        "隐私",
+        "Signal",
+        "人格化"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
