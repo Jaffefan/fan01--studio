@@ -1,0 +1,68 @@
+{
+  "episode_id": "2026-06-22-1327",
+  "title": "NSA局长承认数小时失守，AI安全进入新纪元",
+  "published_at": "2026-06-22 13:27",
+  "duration_seconds": 689.4,
+  "duration_label": "11分29秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "美团免费接入GPT-5.5，意在AI入口",
+      "golden_quote": "免费是最贵的，也是最有效的圈地策略。",
+      "keywords": [
+        "美团",
+        "tabbit",
+        "GPT-5.5",
+        "Claude Opus 4.8",
+        "AI入口"
+      ],
+      "source": "X：阿易 AI Notes"
+    },
+    {
+      "title": "NSA局长：Mythos数小时攻破机密系统",
+      "golden_quote": "AI 让攻击能力民主化，安全从来不是绝对。",
+      "keywords": [
+        "Mythos",
+        "NSA",
+        "MacOS漏洞",
+        "AI攻击"
+      ],
+      "source": "X：AI Safety Memes"
+    },
+    {
+      "title": "三星全球部署ChatGPT和Codex，史上最大规模",
+      "golden_quote": "AI 正在从工具演变为企业操作系统。",
+      "keywords": [
+        "三星",
+        "ChatGPT Enterprise",
+        "Codex",
+        "企业AI部署"
+      ],
+      "source": "OpenAI"
+    },
+    {
+      "title": "MemoryOps：AI助手的记忆治理层",
+      "golden_quote": "记忆是治理问题，不是数据库问题。",
+      "keywords": [
+        "MemoryOps",
+        "AI记忆",
+        "数据治理",
+        "开源"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "清华Spatial-TTT开源，边看边学的空间智能",
+      "golden_quote": "空间智能是动态的，不是快照。",
+      "keywords": [
+        "Spatial-TTT",
+        "空间智能",
+        "ECCV 2026",
+        "流式视频",
+        "清华"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
