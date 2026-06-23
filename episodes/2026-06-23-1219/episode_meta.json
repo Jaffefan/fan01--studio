@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-23-1219",
+  "title": "AI律师打赢官司、程序员更孤独了：5件重塑AI边界的事",
+  "published_at": "2026-06-23 12:19",
+  "duration_seconds": 629.57,
+  "duration_label": "10分29秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "东京AI公司推出「河豚」系统，多智能体一键调用",
+      "golden_quote": "把河豚毒变成解药：多智能体走向产品化。",
+      "keywords": [
+        "Sakana AI",
+        "多智能体",
+        "Sakana Fugu",
+        "出口管制"
+      ],
+      "source": "X：Berry Xia"
+    },
+    {
+      "title": "微信Agent「小微」灰度内测：能发红包、读聊天记录",
+      "golden_quote": "超级App长出原生AI助手，入口之争尘埃落定。",
+      "keywords": [
+        "微信",
+        "小微",
+        "AI Agent",
+        "隐私设计"
+      ],
+      "source": "数字生命卡兹克"
+    },
+    {
+      "title": "小米YU7 GT刷新纽北，自动驾驶圈速榜因此诞生",
+      "golden_quote": "自动驾驶跑完地狱赛道，安全有了新标尺。",
+      "keywords": [
+        "小米YU7 GT",
+        "纽北",
+        "自动驾驶",
+        "赛道"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Anthropic工程负责人：Claude Code让程序员更孤独",
+      "golden_quote": "AI越能干，人类越需要彼此。",
+      "keywords": [
+        "Claude Code",
+        "程序员孤独",
+        "AI编程",
+        "协作"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "AI律师在英国打赢官司，开创历史先例",
+      "golden_quote": "AI赢了小额官司，人类律师守住高价值战场。",
+      "keywords": [
+        "AI律师",
+        "英国法院",
+        "Garfield AI",
+        "法律科技"
+      ],
+      "source": "The Guardian"
+    }
+  ]
+}
