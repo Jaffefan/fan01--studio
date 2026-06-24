@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-24-0902",
+  "title": "5 件让你重新理解 AI 边界的事",
+  "published_at": "2026-06-24 09:02",
+  "duration_seconds": 597.96,
+  "duration_label": "9分57秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "1.8 秒生成 5 秒视频，AI 视频进入了快车道",
+      "golden_quote": "速度才是 AI 视频落地的第一道门槛",
+      "keywords": [
+        "FastWan-QAD",
+        "视频生成",
+        "RTX 5090",
+        "实时生成"
+      ],
+      "source": "X：Sky Computing Lab (@haoailab)"
+    },
+    {
+      "title": "京东开源模型：视频交互从问答走向监控",
+      "golden_quote": "主动看视频的 AI，比被动问答的 AI 更有价值",
+      "keywords": [
+        "京东",
+        "全栈交互",
+        "视频监控",
+        "Agent"
+      ],
+      "source": "公众号：京东JoyAI"
+    },
+    {
+      "title": "网易有道开源 14 语种无口音语音克隆模型",
+      "golden_quote": "3 秒复制一个声音，14 种语言一个口音",
+      "keywords": [
+        "网易有道",
+        "语音克隆",
+        "跨语种",
+        "开源"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "豆包音频模型：一条指令编排整部广播剧",
+      "golden_quote": "一句话生成一部广播剧，音频创作的门槛从未如此之低",
+      "keywords": [
+        "豆包",
+        "音频生成",
+        "端到端",
+        "多角色"
+      ],
+      "source": "公众号：火山引擎"
+    },
+    {
+      "title": "字节 Seed2.1：AI 从助手进阶为可靠的生产力伙伴",
+      "golden_quote": "59.1% 的胜率背后，是模型从助手到伙伴的身份转变",
+      "keywords": [
+        "Seed2.1",
+        "字节",
+        "生产力",
+        "Agent"
+      ],
+      "source": "字节 Seed：Research Feed"
+    }
+  ]
+}
