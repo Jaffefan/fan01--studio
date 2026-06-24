@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当股东向褪色者拔剑：一场《艾尔登法环》背后的权力游戏 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 039 夜 / 2026-06-24</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Kadokawa</div>
+    <h1 class="ep-title">当股东向褪色者拔剑：一场《<span class="hl">艾尔登法环》背后的权力游戏</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:36</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260624065755" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">2022年2月，《艾尔登法环》横空出世，迅速席卷全</h3></div><p>你好，我是伊恩。想象一下，你是一家公司的CEO，你的旗舰产品在全世界卖了2500万份，拿了年度游戏大奖，可你的最大股东却因为你没有从中赚到足够的钱，正在联合其他股东要把你赶下台。这就是日本娱乐巨头Kadokawa当下的处境。</p><p>事情要从今年的股东大会上说起。Kadokawa，这家手握FromSoftware、角川书店等一众IP的庞然大物，正面临一场前所未有的内部叛乱。挑起事端的是一家名为Oasis Management的激进对冲基金，它持有Kadokawa 13.76%的股份，是最大股东。Oasis Management提出了一项动议：罢免CEO Takeshi Natsuno。给出的理由很直接——对《艾尔登法环》的海外发行策略严重不满。</p><p>2022年2月，《艾尔登法环》横空出世，迅速席卷全球。截至今年6月，这款由FromSoftware开发、Bandai Namco负责全球发行的游戏，累计销量已突破2500万份。从销售数据来看，它无疑是当代最成功的游戏之一。但在Oasis Management看来，Kadokawa作为母公司，并没有从这波热潮中获得应得的回报。问题出在发行协议上：海外发行交给了Bandai Namco，这意味着利润的大头被分走了。具体分成比例没有公开，但Oasis Management认为，如果Kadokawa自己来做海外发行，或者重新谈判条款，公司能多赚几亿美元。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(103.3,'sec-0002')"><span>▶</span> 01:43</button><h3 class="section-title">要理解这件事，得先捋一捋Kadokawa和From</h3></div><p>这已经不是Kadokawa第一次在商业策略上被股东诟病了。公司近年来的财务表现确实有些扎眼。截至今年3月的财年，Kadokawa的净资产收益率只有0.5%，而2022财年这个数字是9.4%。5月公布的年度营业利润也低于预期。换句话说，手握《艾尔登法环》这样的王牌，公司整体却在走下坡路。股东们看到的，是一手好牌没打好。</p><p>Takeshi Natsuno从2021年开始担任CEO，他试图推动数字化转型，改革公司架构。董事会目前支持他，认为换帅可能打乱改革节奏。去年他获得了90%的股东支持，但今年的气氛完全不同了。除了Oasis Management，两家主要的股东顾问机构——Institutional Shareholder Services（ISS）和Glass Lewis——都建议股东投票支持罢免动议。这两家机构的意见，对于机构投资者的投票取向有很强的影响力。而手握约10%股份的Sony，至今没有透露投票意向。</p><p>这其实不是Kadokawa第一次在发行权上栽跟头。2019年，它的另一款游戏《只狼：影逝二度》也是由动视暴雪负责全球发行，虽然口碑爆棚，但Kadokawa同样被指利润微薄。当时就有分析师质疑，为什么FromSoftware的母公司总是把发行权拱手让人？</p><p>要理解这件事，得先捋一捋Kadokawa和FromSoftware的关系。Kadokawa在2014年收购了FromSoftware，当时这家开发商因为《黑暗之魂》系列声名鹊起，但财务状况并不稳定。收购之后，Kadokawa给了FromSoftware相当高的自主权，让它继续专注做高难度动作游戏。这种放养策略催生了《血源诅咒》《只狼》《艾尔登法环》这些杰作，但另一方面，Kadokawa在商业层面的介入非常有限，包括发行、营销这些能直接产生收入的部分，都交给了更专业的发行伙伴。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(206.6,'sec-0003')"><span>▶</span> 03:26</button><h3 class="section-title">但事情真的有这么简单吗？就在不久前，FromSof</h3></div><p>换一个角度来看，过去十年间，日本游戏行业其实经历了一场深刻的国际化洗牌。2010年代初，日本主机游戏在全球市场一度式微，大量厂商选择与西方发行商合作以降低风险。2014年，FromSoftware与Bandai Namco合作推出《黑暗之魂2》，之后延续了这种模式。到了《艾尔登法环》，这个模式被推到了极致：一个日本本土的小型工作室，在全球最大的发行体系里，做出了一个现象级的作品。但问题在于，合约的框架还是十年前定的，当时的收益预期远没有今天这么惊人。</p><p>最近几年，日本监管机构正在推动上市公司改善治理和回报。本财年针对董事任命的反对提案数量是去年的三倍。Kadokawa的这场风波，恰恰是这股浪潮里的一个典型。激进基金越来越活跃，它们不再满足于安静的股息，而是直接挑战管理层。在Oasis Management看来，Natsuno既没有把《艾尔登法环》这块蛋糕最大化，也没有让股东看到足够的回报。</p><p>但事情真的有这么简单吗？就在不久前，FromSoftware的创始人、被誉为“魂系游戏之父”的宫崎英高，在接受采访时曾谈到与发行商的关系。他说，Bandai Namco在《艾尔登法环》上提供了巨大的资源支持，包括全球渠道、本地化、营销，如果当初由Kadokawa自己来发行，“游戏可能不会达到现在的规模”。这是一个非常微妙的表态。宫崎英高当然希望自己的作品被尽可能多的人玩到，而Kadokawa作为一家以出版和动画为主的娱乐公司，在全球游戏发行上的经验和网络确实比不上Bandai Namco。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(309.8,'sec-0004')"><span>▶</span> 05:09</button><h3 class="section-title">我不会告诉你谁对谁错。但这件事中有三个问题值得你思</h3></div><p>现在，Oasis Management的动议已经提交股东大会投票。根据日本公司法，罢免CEO需要获得超过50%的股份表决权支持。如果动议通过，Natsuno将立即下台，公司需要临时选出新的CEO。董事会和一些长期投资者对此持保留态度，他们认为改革需要连续性，仓促换人可能引发管理真空。而Oasis Management则强调，这不是针对Natsuno个人，而是针对公司治理和资本效率的缺失。</p><p>在游戏社区里，这件事也引发了分裂。很多玩家担心，如果Kadokawa在股东压力下调整发行策略，会不会导致FromSoftware的下一款游戏缩水？毕竟，FromSoftware一直以相对独立的创作环境著称，而一旦母公司开始强调利润导向，会不会影响游戏的品质？但也有理性的声音指出，任何公司都需要赚钱，如果Kadokawa长期无法从自己的明星产品中获得合理回报，反而会拖累未来的开发投入。</p><p>几天前，东京的Kadokawa总部大楼外，一些举着“守护艾尔登法环”标语的小规模抗议者出现过。他们不是股东，只是游戏玩家，但他们的存在提醒我们，这场会议室里的权力游戏，最终会影响到屏幕前每一个玩家的体验。</p><p>我不会告诉你谁对谁错。但这件事中有三个问题值得你思考：当一个文化产品成为资本博弈的棋子，创作者的自由与资本的利益应当如何平衡？日本游戏产业过去二十年里，从自给自足到依赖海外发行，这条路究竟走到哪儿了？以及，如果你是一家游戏公司的股东，你会投出那一票吗？</p></div>
+<div class="section" id="sec-0005"><p>好了，今天的故事就讲到这里。我是伊恩，感谢你的倾听。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">2022年2月，《艾尔登法环》横空出世，</span></div>
+<div class="tl-item" onclick="seek(103.3,'sec-0002')"><span class="tl-time">01:43</span><span class="tl-title">要理解这件事，得先捋一捋Kadokawa</span></div>
+<div class="tl-item" onclick="seek(206.6,'sec-0003')"><span class="tl-time">03:26</span><span class="tl-title">但事情真的有这么简单吗？就在不久前，Fr</span></div>
+<div class="tl-item" onclick="seek(309.8,'sec-0004')"><span class="tl-time">05:09</span><span class="tl-title">我不会告诉你谁对谁错。但这件事中有三个问</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260624065755" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
