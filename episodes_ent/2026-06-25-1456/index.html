@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>沙特买下Evo后，格斗游戏圈的一地鸡毛 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 040 夜 / 2026-06-25</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Evo</div>
+    <h1 class="ep-title">沙特买下Evo后，<span class="hl">格斗游戏圈的一地鸡毛</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:57</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260625065735" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">消息出来那天，我的社交媒体时间线被刷爆了。有人在骂</h3></div><p>你好，我是伊恩。</p><p>2026年2月，一个消息在格斗游戏社区炸开了锅：Evo——这个从1996年就由社区自己办起来的、号称最纯粹的格斗游戏赛事——被沙特阿拉伯的Qiddiya City全资收购了。</p><p>Evo，全称Evolution Championship Series，是格斗游戏圈子里最古老也最顶级的赛事。每年夏天，成千上万的玩家从世界各地飞往拉斯维加斯，挤在曼德勒海湾酒店那个巨大宴会厅里，对着大屏幕上的像素小人疯狂拍打摇杆和按键。那种氛围，你去过一次就忘不了。但今年二月，一切变了味。</p><p>Qiddiya City是沙特王储穆罕默德·本·萨勒曼主导的一个超级项目——要在沙漠里建一座娱乐新城，有主题公园、体育场、电竞馆，什么都往里面塞。这哥们这几年疯狂撒钱搞体育和文娱：高尔夫有LIV巡回赛，摔跤有WWE合作，连拳击、足球、一级方程式都砸了不少。现在轮到电竞了，而Evo是他们拿下的第一个真正有社区根基的电竞IP。</p><p>Qiddiya投资公司的首席战略官穆罕纳德·阿尔达伍德在公告里说得很漂亮，他说“Evo是一个全球性的游戏机构，建立在社区、竞争和创造力之上”，“我们致力于支持Evo的长期增长，尊重它的传统，加强它在格斗游戏社区中的角色”。这些话听起来像是公关稿里复制粘贴的，但社区里没有人买账。</p><p>消息出来那天，我的社交媒体时间线被刷爆了。有人在骂，有人在哀叹，有人在开玩笑——比如有人P图说“以后Evo的奖品不是奖金，是一头骆驼”。但笑声背后是一种深深的无力感。毕竟，这是Evo啊。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(119.6,'sec-0002')"><span>▶</span> 01:59</button><h3 class="section-title">沙特阿拉伯到底是个什么地方？我这里不说太多政治立场</h3></div><p>要理解这种感觉，你得先知道Evo对格斗游戏玩家意味着什么。它不是像英雄联盟S赛或Ti那样由游戏公司掏钱办的官方赛事。Evo从一开始就是玩家自己搞的。1996年，几个骨灰级玩家在加州一个小游戏厅里办了个叫“Battle by the Bay”的比赛，只有三个项目——超级街霸2X、拳皇95、侍魂。那时候没有直播，没有赞助，参赛的人自己带主机和显示器。十多年后，它变成了全世界格斗游戏玩家每年一次的朝圣。</p><p>Evo的精神是“包容”和“草根”。任何水平的玩家都能报名，职业选手和周末玩家坐在同一个赛台上。那个著名的画面——2016年Evo街霸5决赛，Infiltration和Punk打到最后一局，全场几千人一起跺脚，酒店地板都在震——那种能量不是钱能买来的。</p><p>但这些年，变化一点一点发生。2018年，Evo被一家叫RTS的私募公司收购了。2021年，索尼互动娱乐把Evo买了过去，成了PlayStation旗下的资产。当时很多人就不爽，觉得“大公司进来会毁了社区文化”。但索尼至少还算是游戏圈的人，他们保留了Evo的线下氛围，甚至投钱改善了直播质量。</p><p>然后就是今年二月——Qiddiya City从索尼手里接过了Evo。这意味着，从2026年开始，这个全球最受尊重的格斗游戏赛事，其最终老板是一个以严苛法律和糟糕人权记录闻名的君主国。</p><p>沙特阿拉伯到底是个什么地方？我这里不说太多政治立场，只引一个事实：根据国际特赦组织2025年的报告，沙特仍然是全球执行死刑最多的国家之一。女性仍然需要男性监护人同意才能结婚、旅行、办护照。同性恋行为可被判死刑。这些不是我说的，是国际人权组织的记录。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(239.1,'sec-0003')"><span>▶</span> 03:59</button><h3 class="section-title">SonicFox的立场很清晰：他不会因为Evo被沙</h3></div><p>而沙特政府这几年在游戏和电竞上砸了几百亿美元，目的很明确——不是因为他们爱玩拳皇，而是想通过体育和文化活动改善国家形象。这就是所谓的“sportswashing”——用体育清洗名誉。就像他们搞高尔夫LIV巡回赛一样，用天文数字的奖金吸引顶级选手来参赛，然后对外宣传“沙特很现代、很开放”。</p><p>格斗游戏社区对此反应最激烈的，不是那些天天泡在街机厅的业余玩家，恰恰是那些最有名、奖金拿最多的职业选手。你猜为什么？因为那些赚钱少的人没有顾忌，他们敢说。而真正站在顶尖的那些人，很多选择了沉默。</p><p>八届Evo冠军SonicFox——全名多米尼克·麦克莱恩——是为数不多公开反对此次收购的顶级选手之一。SonicFox是圈子里一个传奇存在：非二元性别者，黑人，公开的酷儿，平时穿狐狸头套，在各种比赛里用冷门角色把对手打得找不着北。他给我发了很长一封邮件，讲了他为什么反对。“很大程度上，核心问题是商业利益和无知，”他说，“我不太责怪那些沉默的同行，因为格斗游戏从来没见过这么大一笔钱。要么是他们不了解情况，要么就是这笔钱实在太多了。”</p><p>SonicFox的立场很清晰：他不会因为Evo被沙特收购就不去美国站和日本站的赛事——因为那等于放弃自己的职业生涯和社区存在感。但他明确表示，如果Evo在沙特办赛，他绝不踏进那个国家半步。“我完全反对他们对LGBTQ+群体的法律，我不想去参与他们的洗白活动。对我来说，去那里不安全。金额再大，我也不会去。”</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(358.7,'sec-0004')"><span>▶</span> 05:58</button><h3 class="section-title">于是，一种奇特的割裂感弥漫在社区里。论坛和社交媒体</h3></div><p>然后还有另一种选择，来自ChrisCCH——克里斯·汉考克，一个相对没那么出名的街霸6选手。他不像SonicFox那样在舞台上拿过八次冠军，但他做了一件更决绝的事情。2024年，ChrisCCH和队友赢得了《街霸联赛Pro-US》冠军，获得2025年电竞世界杯的邀请——那个比赛由沙特政府资助，奖金池高达数百万美元。他决定放弃。不是因为他不在乎钱，而是因为他知道自己很多朋友和亲人——LGBTQ+群体、女性、少数族裔——在那里会面临什么样的社会环境。“如果我去了，带着奖金回来，我该怎么面对他们？”他反问记者。</p><p>ChrisCCH的选择没有让他暴富，但让他获得了一种无形的资产：社区的尊重。在StackUp播客上，他详细解释了自己的决定。他说沙特政府花几十亿美元办这些比赛，目标不是扶持电竞，而是“改变世界的注意力”。他觉得，如果自己被利用成为那一环，那一切就太不值得了。</p><p>但大多数顶级选手没有发声，理由很现实。格斗游戏圈从来不是一个能轻松赚到大钱的行业。SonicFox的八次Evo冠军听起来厉害，但他拿到的总奖金可能还不如英雄联盟一个小赛事的亚军。当一个沙特资金扶持的赛事开出百万美元奖金时，一个职业选手的年度收入可能瞬间翻三倍甚至五倍。这种诱惑不是谁都能抵抗的。更何况还有很多赞助商合同里明确写着“必须参加所有主要赛事”的条款，你不去就是违约。</p><p>于是，一种奇特的割裂感弥漫在社区里。论坛和社交媒体上，业余玩家和高水平半职业选手在大声谴责；而在顶级选手的Discord群里，气氛往往是沉默的——偶尔有人说一句“反正我只想打比赛，别的不管”，然后话题就岔开了。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(478.3,'sec-0005')"><span>▶</span> 07:58</button><h3 class="section-title">现在的问题是，这条路会怎么继续走下去？是像LIV高</h3></div><p>这种沉默背后有一个更深层的问题：电竞选手到底应不应该为自己的参赛行为承担政治责任？沙特收购Evo后，有激进的声音呼吁所有玩家联合抵制。但抵制这种事情从来都是大人物承受损失更大，比如像SonicFox这样的巨星不去，可能真的会影响观赛人数；对一个每年靠打比赛奖金过活的普通人来说，“不参加”三个字可能意味着放弃全年的生活费。</p><p>我在查阅资料时，看到了游戏网站Kotaku的评论：“沙特政府利用竞争性选手和名人作为临时的宣传员，让他们在国外观众面前看起来很好，就像他们对高尔夫、职业摔跤和喜剧节一样。”这句话听着刺耳，但仔细想想，每个参赛者手里握着的号牌，是不是确实算得上那张宣传单上的一行小字？</p><p>我打格斗游戏也有二十年了，从街霸2玩到街霸6。我在Evo现场看过巅峰对决，也在小街机厅里和陌生人互飙垃圾话。我知道这个社区的感情有多深。所以当我看到2026年Evo的更新消息——可能增加的比赛项目全是沙特本土开发商的产品，比如一个以阿拉伯神话为主题的新格斗游戏——我心里真的不是滋味。</p><p>Evo的创始人汤姆·坎农和托尼·坎农两兄弟，在2018年卖掉Evo时就说过，他们希望Evo“由社区拥有和运营”。但现实是，实体一旦进入资本市场，它就不再属于任何人的情感。从RTS到Sony再到沙特政府，每一步都离最初的“那个小游戏厅”越来越远。</p><p>现在的问题是，这条路会怎么继续走下去？是像LIV高尔夫那样，用巨额奖金吸引顶尖玩家，然后慢慢让赛事流失原有的灵魂？还是社区能通过内部压力和公开反对，让新老板做出某些承诺——比如保障所有性别和性取向选手的安全参赛权利？SonicFox在邮件末尾说了一句话，我一直记着：“如果我们既赢下比赛，又用那个舞台发声，这才是社区团结的力量——而不是我们互相指责谁去谁不去。”</p></div>
+<div class="section" id="sec-0006"><p>这个夏天，2026年的Evo即将在拉斯维加斯开幕。你会看到熟悉的摇杆碰撞声、解说员嘶吼的“Hyper combo”、和观众席上的山呼海啸。但你也应该知道，在这些画面之外，还有很多人在纠结、在沉默、在做选择。</p><p>格斗游戏说到底，是一种一对一的对抗。你坐在赛台上，对面只有一个人，你们靠反应和策略决胜负。但这场比赛显然远远不止两个人。</p><p>谢谢。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">消息出来那天，我的社交媒体时间线被刷爆了</span></div>
+<div class="tl-item" onclick="seek(119.6,'sec-0002')"><span class="tl-time">01:59</span><span class="tl-title">沙特阿拉伯到底是个什么地方？我这里不说太</span></div>
+<div class="tl-item" onclick="seek(239.1,'sec-0003')"><span class="tl-time">03:59</span><span class="tl-title">SonicFox的立场很清晰：他不会因为</span></div>
+<div class="tl-item" onclick="seek(358.7,'sec-0004')"><span class="tl-time">05:58</span><span class="tl-title">于是，一种奇特的割裂感弥漫在社区里。论坛</span></div>
+<div class="tl-item" onclick="seek(478.3,'sec-0005')"><span class="tl-time">07:58</span><span class="tl-title">现在的问题是，这条路会怎么继续走下去？是</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260625065735" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
