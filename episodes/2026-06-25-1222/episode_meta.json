@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-25-1222",
+  "title": "AI 大棋局：定制芯片、双向语音与智能体帝国",
+  "published_at": "2026-06-25 12:22",
+  "duration_seconds": 390.29,
+  "duration_label": "6分30秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "ChatGPT 语音终于能“边听边说”了",
+      "golden_quote": "AI 终于学会被人类打断。",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "双向语音",
+        "Bidi 1",
+        "打断"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "通义千问开源“先预测再行动”的 Agent 世界模型",
+      "golden_quote": "AI 学会在虚拟世界试错，现实世界才敢放手。",
+      "keywords": [
+        "通义千问",
+        "世界模型",
+        "Agent",
+        "开源",
+        "预测"
+      ],
+      "source": "公众号：通义实验室（千问）"
+    },
+    {
+      "title": "Gemini 3.5 Flash 把“计算机使用”塞进了工具箱",
+      "golden_quote": "AI 终于学会用你的电脑了，安全措施你得跟上。",
+      "keywords": [
+        "Google",
+        "Gemini",
+        "计算机使用",
+        "Agent",
+        "安全"
+      ],
+      "source": "Google Blog"
+    },
+    {
+      "title": "OpenAI 造芯片了：Jalapeño，9个月从设计到流片",
+      "golden_quote": "从设计到芯片只用了9个月，算力供应链正在被重写。",
+      "keywords": [
+        "OpenAI",
+        "Broadcom",
+        "Jalapeño",
+        "推理芯片",
+        "LLM"
+      ],
+      "source": "OpenAI官网"
+    },
+    {
+      "title": "NSA 因为和 Anthropic 闹掰，丢了一个关键工具",
+      "golden_quote": "AI 一旦嵌入权力机构，断供就是核武器。",
+      "keywords": [
+        "NSA",
+        "Anthropic",
+        "Mythos",
+        "安全",
+        "依赖"
+      ],
+      "source": "The New York Times"
+    }
+  ]
+}
