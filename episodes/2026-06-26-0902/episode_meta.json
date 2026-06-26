@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-26-0902",
+  "title": "1750亿AI经济年化收入背后：OpenAI被政府叫停，IBM造出0.7纳米芯片",
+  "published_at": "2026-06-26 09:02",
+  "duration_seconds": 494.18,
+  "duration_label": "8分14秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "美国政府叫停GPT-5.6，逐客户审批太罕见",
+      "golden_quote": "AI的军备竞赛里，政府开始插队了。",
+      "keywords": [
+        "GPT-5.6",
+        "美国政府",
+        "安全审查",
+        "逐客户审批"
+      ],
+      "source": "X：Rohan Paul"
+    },
+    {
+      "title": "Anthropic指控阿里巴巴非法提取Claude能力",
+      "golden_quote": "模型能力的可复制性，是整个AI商业模式的阿喀琉斯之踵。",
+      "keywords": [
+        "Anthropic",
+        "阿里巴巴",
+        "Claude",
+        "模型提取"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "赫库兰尼姆古卷首次被完整虚拟解读",
+      "golden_quote": "AI最性感的用途，是解开人类文明的谜题。",
+      "keywords": [
+        "赫库兰尼姆古卷",
+        "虚拟解读",
+        "机器学习",
+        "斯多葛哲学"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "IBM首发0.7纳米芯片，指甲盖集成千亿晶体管",
+      "golden_quote": "当别人用原子计数时，我们还在纳米尺度挣扎。",
+      "keywords": [
+        "IBM",
+        "0.7纳米",
+        "芯片",
+        "纳米堆叠"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "AI经济年化收入超1750亿，增速是互联网3倍",
+      "golden_quote": "AI正在快速变成基础设施，但电力瓶颈和GPU寿命的风险也真实存在。",
+      "keywords": [
+        "AI经济",
+        "年化收入",
+        "增长速度",
+        "电力瓶颈"
+      ],
+      "source": "X：Rohan Paul"
+    }
+  ]
+}
