@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-27-1215",
+  "title": "OpenAI 出招，AI 安全监管进入「钉钉子」时代",
+  "published_at": "2026-06-27 12:15",
+  "duration_seconds": 521.3,
+  "duration_label": "8分41秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "OpenAI 发布 GPT-5.6 Sol，硬刚安全红线",
+      "golden_quote": "AI 越聪明，离政治决策桌就越近。",
+      "keywords": [
+        "GPT-5.6",
+        "OpenAI",
+        "AI安全",
+        "政府监管"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "微软为OpenAI造的超级计算机被盯上了",
+      "golden_quote": "超级计算机可以造，但法律的红线不能用算力来划。",
+      "keywords": [
+        "版权诉讼",
+        "微软",
+        "OpenAI",
+        "超级计算机"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "近400家报纸联合起诉，AI或成地方新闻业丧钟",
+      "golden_quote": "如果新闻消亡，AI 将失去最后一块可信的训练场。",
+      "keywords": [
+        "版权诉讼",
+        "微软",
+        "OpenAI",
+        "新闻业"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Anthropic 的 Mythos 5 艰难复活，政府谈判内幕",
+      "golden_quote": "AI 安全不该靠谈判桌来保证，但现实是它正在变成外交筹码。",
+      "keywords": [
+        "Anthropic",
+        "Mythos 5",
+        "政府监管",
+        "出口管制"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "GPT-5.6 全面解读：安全与博弈的双重信号",
+      "golden_quote": "AI 的下一个战场不是算力，是监管的灰色地带。",
+      "keywords": [
+        "GPT-5.6",
+        "Mythos 5",
+        "AI监管",
+        "价格战"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
