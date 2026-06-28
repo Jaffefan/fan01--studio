@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-06-28-1249",
+  "title": "AI 账单失控、福特返聘人类：5 个颠覆你认知的 AI 现实",
+  "published_at": "2026-06-28 12:49",
+  "duration_seconds": 891.77,
+  "duration_label": "14分51秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "马斯克把 xAI 关进 SpaceX",
+      "golden_quote": "AI 不需要品牌，需要场景。",
+      "keywords": [
+        "SpaceXAI",
+        "xAI",
+        "马斯克"
+      ],
+      "source": "X (via cb_doge)"
+    },
+    {
+      "title": "10 亿美元补 AI 的锅，谁买单？",
+      "golden_quote": "你让狼出钱建羊圈，羊只能祈祷狼别太饿。",
+      "keywords": [
+        "Raise Us",
+        "再培训",
+        "AI就业冲击"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "被 AI 账单逼疯的公司，All in 了 DeepSeek",
+      "golden_quote": "AI 的终局不是最智能，而是最便宜。",
+      "keywords": [
+        "AI账单",
+        "DeepSeek",
+        "Lindy"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "DeepSeek 开源：1 行代码让 V4 快 85%",
+      "golden_quote": "速度就是用户体验。",
+      "keywords": [
+        "DeepSeek",
+        "DSpark",
+        "投机解码"
+      ],
+      "source": "MarkTechPost"
+    },
+    {
+      "title": "福特的 AI 大梦翻车：灰胡子回归",
+      "golden_quote": "AI 再强，也抵不过老师傅的直觉。",
+      "keywords": [
+        "福特",
+        "AI替代",
+        "灰胡子"
+      ],
+      "source": "The Independent"
+    }
+  ]
+}
