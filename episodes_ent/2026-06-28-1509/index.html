@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>你买的电影，索尼说删就删 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 042 夜 / 2026-06-28</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 索尼</div>
+    <h1 class="ep-title">你买的电影，<span class="hl">索尼说删就删</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:16</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260628071037" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这不是索尼第一次这么干。2023年12月，索尼宣布</h3></div><p>你好，我是伊恩。</p><p>想象一下，你打开自己的电影库，想再看一遍《热血警探》，结果发现——它消失了。不是临时下架，不是版权到期无法购买，而是你清清楚楚付过钱、买断的那份数字拷贝，被索尼单方面从你的账户里删除了。这不是假设，这正是接下来几个月里，超过550部电影的购买者将要面对的现实。</p><p>2026年6月底，索尼通过电子邮件向PlayStation用户发出通知：从2026年9月1日起，因内容授权协议变更，你曾经通过PlayStation商店购买的Studio Canal影片将被删除。通知措辞直接：“内容将从您的视频库中移除。”没有提退款，没有提替代方案。</p><p>受影响的电影名单超过550部，索尼官网有完整列表。其中不乏知名度很高的作品：《现代启示录：终剪版》《街区大作战》《鬼玩人》《高地人》《热血警探》《帕丁顿熊》《第一滴血》《机械战警2014》《鲨卷风》《终结者2》《披头士：一周八天》等。甚至还有电视剧，比如《美国众神》第一季。</p><p>这不是索尼第一次这么干。2023年12月，索尼宣布从用户的PlayStation账户中删除Discovery内容，当时引发了巨大的负面反响。用户愤怒的是：我明明买了这些内容，为什么你说删就删？几周后，索尼改口，说Discovery内容不再删除，原因是“更新了授权安排”，并感谢粉丝的“持续支持和反馈”。当时索尼承诺至少再保留30个月——而30个月刚好在2026年6月到期。也就是说，这个月的保护期一过，索尼立刻启动了新一轮的删除。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(109.2,'sec-0002')"><span>▶</span> 01:49</button><h3 class="section-title">这并非PlayStation独有的问题。2022年</h3></div><p>事实上，索尼早在2021年就宣布停止在PlayStation商店出售或租赁电影和电视剧。但停止销售是一回事，删除用户已购买的内容是另一回事。</p><p>这件事的核心，是“数字所有权”这个我们已经争论了十几年的老问题。当我们说“买”了一部数字电影，我们到底买的是什么？</p><p>实际上，我们买的从来不是电影本身，而是一份有限的访问许可。用户协议里通常写得很清楚：你获得的是在特定平台、特定条件下的观看权，而非对数字文件的所有权。但问题在于，多数人不会去看那些冗长的法律条文，普通用户的理解就是：我付了钱，这东西就是我的。</p><p>这让人想起音乐领域的类似事件。2022年，苹果关闭了iTunes音乐下载服务，但用户已购的歌曲仍然保留在资料库中——苹果的做法相对温和。相比之下，索尼这种直接删除的做法更为激进。</p><p>为什么索尼要这么做？直接原因很明确：授权协议到期。Studio Canal是法国最大的电影制作和发行公司之一，索尼与它们的许可协议不再续约。但更根本的原因是，数字内容的商业模式从来就不支持“永久拥有”。版权方将内容许可给平台，平台再许可给用户，每个环节都有时间限制。一旦上游断供，下游就无法继续提供服务。</p><p>这并非PlayStation独有的问题。2022年，华纳兄弟的流媒体服务HBO Max突然下架了包括《蝙蝠女》在内的多部原创电影，甚至有些电影尚未上线就被撤下。虽然这些是平台自己制作的内容，但同样的逻辑在起作用：数字内容不存在物理载体上的“所有权”。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(218.5,'sec-0003')"><span>▶</span> 03:38</button><h3 class="section-title">索尼作为一家巨型娱乐公司，其游戏业务每年赚取数十亿</h3></div><p>回到PlayStation案例，有趣的是索尼此前曾尝试安抚用户。2023年Discovery事件后，索尼约定了30个月缓冲期，当时也有用户存疑：30个月后呢？现在答案揭晓了。</p><p>数字删除与物理世界形成鲜明对比。如果你想确保永远保有一部电影，最可靠的方式依然是买一张蓝光光盘或DVD。尽管物理介质也可能磨损、未来可能没有播放设备，但至少没有人能从你的书架上把它拿走。</p><p>这件事之后怎么发展？目前看索尼没有退款的迹象。IGN联系索尼寻求评论，尚未得到回复。但考虑到2023年Discovery事件中索尼最终改口，不排除这次也会出现转机。不过，即便这次删除被暂停或取消，根本问题依然存在：数字购买的“所有权”根基不稳。</p><p>用户能做什么？现在唯一的建议是：检查你的PlayStation视频库，看看是否有名单上的电影。如果有，在9月1日之前看掉，或者尝试下载到本地。但即使下载，索尼部分内容可能有DRM保护，离开PlayStation环境可能无法播放。</p><p>更深层的问题是：我们是否应该继续购买数字内容，尤其是电影和游戏？2024年，育碧关闭了老游戏《飙酷车神》的服务器，导致购买了该游戏的玩家无法再游玩。随后玩家组织起来抗议，但无济于事。数字时代的消费者权利，依然是一个没有被充分保护的灰色地带。</p><p>索尼作为一家巨型娱乐公司，其游戏业务每年赚取数十亿美元利润。在2025财年，索尼整体利润达到75.35亿美元。但利润丰厚并不妨碍它做出这类让用户反感的决定。对于消费者而言，唯一可靠的应对方式可能只有一种：如果你真的在乎，就买实体版。</p></div>
+<div class="section" id="sec-0004"><p>不过，实体版也在逐年萎缩。许多游戏不再推出实体版，电影发行也越来越依赖流媒体。未来我们可能别无选择。</p><p>这个故事没有完美的结局。索尼的删除按钮已经按下，倒计时已经开始。你账户里的电影，可能某天就会变成一行提示：“内容不再可用”。而你，除了接受，别无他法。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这不是索尼第一次这么干。2023年12月</span></div>
+<div class="tl-item" onclick="seek(109.2,'sec-0002')"><span class="tl-time">01:49</span><span class="tl-title">这并非PlayStation独有的问题。</span></div>
+<div class="tl-item" onclick="seek(218.5,'sec-0003')"><span class="tl-time">03:38</span><span class="tl-title">索尼作为一家巨型娱乐公司，其游戏业务每年</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260628071037" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
