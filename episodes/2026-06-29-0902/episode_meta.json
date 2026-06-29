@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-06-29-0902",
+  "title": "AI打《文明VI》造核弹仍输：暴露的远比你想的可怕",
+  "published_at": "2026-06-29 09:02",
+  "duration_seconds": 723.89,
+  "duration_label": "12分03秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "四项顶尖AI玩《文明6》全输，Claude核平法国仍败",
+      "golden_quote": "AI不是不够聪明，而是看不见自己瞎。",
+      "keywords": [
+        "文明VI",
+        "AI感知盲区",
+        "知行差距",
+        "AI执行"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "500天创业测试：仅3款AI盈利，规则启发式反超",
+      "golden_quote": "一条固定规则，打败了十个AI CEO。",
+      "keywords": [
+        "CEO-Bench",
+        "AI战略",
+        "长期决策",
+        "启发式"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "Grok 4.5私测于SpaceX和Tesla，性能接近Opus",
+      "golden_quote": "模型发布从年进化到月，跑得慢等于死。",
+      "keywords": [
+        "Grok 4.5",
+        "xAI",
+        "SpaceX",
+        "月更模型"
+      ],
+      "source": "X：Elon Musk"
+    },
+    {
+      "title": "新浪3B模型碾压大模型：推理可压缩，知识不行",
+      "golden_quote": "推理可压缩，世界知识不行——别把参数堆错了地方。",
+      "keywords": [
+        "VibeThinker-3B",
+        "参数压缩",
+        "推理可压缩",
+        "小模型"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "AI玩《文明6》造核弹仍输，感知与执行是瓶颈",
+      "golden_quote": "瓶颈不在大脑，在眼睛和手。",
+      "keywords": [
+        "AI Agent",
+        "感知盲区",
+        "知行差距",
+        "文明VI"
+      ],
+      "source": "Decrypt"
+    }
+  ]
+}
