@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一款格斗游戏的重制骗局：玩家被迫再买一次DLC - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 043 夜 / 2026-06-29</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 死或生6</div>
+    <h1 class="ep-title">一款格斗游戏的重制骗局<span class="hl">：玩家被迫再买一次DLC</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:32</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260629082551" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">问题出在哪？首先是DLC。你知道《死或生6》七年里</h3></div><p>你好，我是伊恩。想象一下：你花了几百美金，七年时间，买了一款格斗游戏的所有DLC——角色、服装、道具，一个不落。然后有一天，发行商突然下架了原版，推出一个所谓的“最终版”，标价40美元，却告诉你：对不起，你得再掏钱才能拥有那两个你已经买过的角色。这不是玩笑，这是Koei Tecmo在《死或生6》上干的事。</p><p>6月24日，《死或生6：最后一轮》在Steam上架，瞬间炸开了锅。截至今天，这款游戏的玩家好评率只有23%，活脱脱一个“多半差评”。要知道，原版《死或生6》好歹有78%的好评，虽然不算神作，但至少及格。这一轮重制，直接把口碑干到了谷底。</p><p>到底发生了什么？简单说，Koei Tecmo和Team Ninja把2019年发售的《死或生6》从商店下架，换上了这个所谓的“升级版”。官方说法是：它整合了新功能、五个新增角色和五套新服装，还承诺后续DLC正在开发。听起来不错？标价40美元，还有一个免费版“核心斗士”，但免费版不能玩故事模式，只能选四个角色。</p><p>问题出在哪？首先是DLC。你知道《死或生6》七年里出了多少个DLC吗？440个。虽然其中包含捆绑包，但绝大多数是单独卖的角色和服装。而《最后一轮》并不包含所有这些内容——它只打包了五个角色和五套服装。如果你想拥有全部440个DLC，对不起，请单独购买。更狠的是：就算你之前已经买过所有DLC，当你迁移到新版时，大部分内容可以继承，但有两个角色不行——不知火舞和库拉·戴尔蒙德。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(128.1,'sec-0002')"><span>▶</span> 02:08</button><h3 class="section-title">说到授权问题，这其实不是第一次。格斗游戏由于角色来</h3></div><p>这两位是SNK的跨界角色，《拳皇》系列的人气明星。Koei Tecmo在官网上解释说：由于授权协议，这两位角色和她们的服装无法转移到新版。换句话说，即使你在旧版花钱买了她们，到了新版还得再买一次。而且价格还涨了——原来每个8美元，现在涨到11美元。</p><p>这还没完。玩家们发现，《最后一轮》所谓的“当前世代硬件优化”纯属忽悠。有人指出，游戏的暂停菜单里，仍然显示的是2015年Steam手柄的图形。一位玩家评论说：“和六年前一样的Bug，一样的问题，只是多了个拍照模式。而且我5.5小时的MOD全部报废，因为新版本不兼容。”另一位玩家说：“我本以为会有图形升级或更精细的模型，结果一模一样。难怪发布前几乎没有宣传——没什么好宣传的。”</p><p>更可笑的是，官方宣传的重点“新角色”港，其实一开始没有包含在游戏里。第一个DLC角色“凑”在发售后才公布，但价格未知。玩家们干脆在Steam上刷起了差评，用词包括“可耻”“太贵了”“绝对的玩笑”。</p><p>说到授权问题，这其实不是第一次。格斗游戏由于角色来自不同公司，授权纠纷时有发生。最典型的例子是《漫威对卡普空：无限》，由于漫威和卡普空的授权到期，角色被下架，导致玩家无法再购买完整的游戏。《死或生6》的不知火舞和库拉，本质上也是同样的问题：SNK只授权了它们在原版游戏中使用，并没有授权在重制版中免费提供。但Koei Tecmo的处理方式引起众怒：他们完全可以从根源上解决，比如和SNK协商一个永久授权，或者至少让已购买玩家免费获得。但他们选择让玩家再次付费。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(256.2,'sec-0003')"><span>▶</span> 04:16</button><h3 class="section-title">那么，这件事后续会怎么发展？玩家们会不会抵制成功，</h3></div><p>这种“二次收费”的商业模式在游戏界并不新鲜。EA的《星球大战：前线2》曾经因为无良氪金而被骂；动视暴雪的《使命召唤：战争地带》也因付费武器被诟病。但像《死或生6》这样，把已购买的DLC在重制版中锁死，并重新收费，实属罕见。这不仅违背了玩家的信任，更触及了数字资产的产权问题——你买的数字内容，到底算不算你的？</p><p>回顾《死或生》系列的历史，这也不是Koei Tecmo第一次在DLC上作妖。从5代开始，他们的DLC策略就是“服装地狱”——一个角色可能有几十套服装，每套单独售卖，全买下来比游戏本体贵几十倍。到了6代，更是变本加厉：光服装DLC就超过300个，总价超过1000美元。而这次重制版，他们想通过“删旧版、推新版”的方式，让老玩家再吃一遍。</p><p>格斗游戏社区的反应很激烈。有玩家在Steam评测中写道：“这是一个好游戏，但差评会一直留着，直到它包含七年来所有的DLC。”还有人直接呼吁：“别买，除非他们把钱退给我。”更有玩家把这次事件称为“格斗游戏史上最无耻的操作之一”。</p><p>事件发生后，Koei Tecmo没有正式回应Steam的差评潮。他们只发表了一则关于新角色DLC的公告，继续推销他们的付费内容。这种漠视的态度进一步激怒了玩家。</p><p>那么，这件事后续会怎么发展？玩家们会不会抵制成功，迫使Koei Tecmo改变策略？从历史上看，EA在《星球大战：前线2》的氪金风波后，撤掉了付费箱系统；华纳兄弟在《真人快打1》的DLC争议后，也曾调整过策略。但Koei Tecmo一向以强硬著称，他们之前也曾因《仁王2》的DLC定价被骂，但最终未作让步。</p></div>
+<div class="section" id="sec-0004"><p>不过，Steam的差评轰炸确实会影响销量。截至今天，《最后一轮》的同时在线玩家峰值只有几百人，与原版相比大幅下降。如果商业表现持续低迷，也许Koei Tecmo会考虑至少解决授权角色的问题——但以他们的历史来看，可能性不大。</p><p>另一个变数是SNK。作为授权方，他们或许也在关注此事。如果Koei Tecmo因此损失了口碑和收入，可能会影响他们未来的合作意愿。但SNK自己也在做格斗游戏，他们不想得罪玩家。</p><p>最后，这件事给整个游戏行业敲响了警钟：数字内容的产权保障不够健全。当发行商可以随意下架一款游戏，然后推出“升级版”要求玩家再买一遍，甚至对已购买内容二次收费，那么玩家作为消费者的权益何在？</p><p>当然，也有人会说：“你买的是旧版的DLC，不是新版的。”这种逻辑在法律上站得住脚，但在道义上完全说不通。作为玩家，我们热爱的是这个游戏系列，不是某个版本本身。当Koei Tecmo用这种方式对待忠实玩家时，它失去的远比那11美元多得多。</p><p>好了，今天的故事就讲到这里。面对这样一场升级版的风波，你会选择继续支持，还是转身离开？</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">问题出在哪？首先是DLC。你知道《死或生</span></div>
+<div class="tl-item" onclick="seek(128.1,'sec-0002')"><span class="tl-time">02:08</span><span class="tl-title">说到授权问题，这其实不是第一次。格斗游戏</span></div>
+<div class="tl-item" onclick="seek(256.2,'sec-0003')"><span class="tl-time">04:16</span><span class="tl-title">那么，这件事后续会怎么发展？玩家们会不会</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260629082551" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
