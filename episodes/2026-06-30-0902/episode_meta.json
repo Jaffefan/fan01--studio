@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-06-30-0902",
+  "title": "5条资讯揭示AI的冲突与机遇：从军事到借贷",
+  "published_at": "2026-06-30 09:02",
+  "duration_seconds": 484.25,
+  "duration_label": "8分04秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "美团1.6万亿模型登顶OpenRouter",
+      "golden_quote": "通往前沿模型的道路不止一条。",
+      "keywords": [
+        "美团LongCat",
+        "Owl Alpha",
+        "MoE",
+        "国产ASIC",
+        "OpenRouter"
+      ],
+      "source": "X：Emad Mostaque"
+    },
+    {
+      "title": "美军AI选目标误炸伊朗学校",
+      "golden_quote": "AI没有犯错，是人类的系统让它犯错的。",
+      "keywords": [
+        "美军",
+        "AI目标选择",
+        "误炸",
+        "Anthropic",
+        "Palantir"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "OpenAI要做Codex硬件？",
+      "golden_quote": "当大公司开始做专用外设时，说明这个功能已经不是‘玩一玩’了。",
+      "keywords": [
+        "OpenAI",
+        "Codex",
+        "硬件",
+        "Work Louder",
+        "编程"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "中国对冲基金警告AI泡沫将破",
+      "golden_quote": "泡沫不意味着行业会完蛋，但估值和基本面之间的裂痕会被修复。",
+      "keywords": [
+        "AI泡沫",
+        "对冲基金",
+        "中国",
+        "英伟达",
+        "估值"
+      ],
+      "source": "Bloomberg / Hacker News"
+    },
+    {
+      "title": "Anthropic算力支出是工程师薪酬2.3倍",
+      "golden_quote": "AI公司不是印钞机，而是烧钱炉。",
+      "keywords": [
+        "Anthropic",
+        "算力成本",
+        "工程师薪酬",
+        "Agent",
+        "AI经济"
+      ],
+      "source": "Tomasz Tunguz博客"
+    }
+  ]
+}
