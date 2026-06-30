@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>你抓的宝可梦，可能正在帮美军训练无人机 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 044 夜 / 2026-06-30</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 宝可梦GO</div>
+    <h1 class="ep-title">你抓的宝可梦，可能<span class="hl">正在帮美军训练无人机</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:46</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260630070422" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">那一年，Niantic以35亿美元的价格，把《宝可</h3></div><p>你好，我是伊恩。你有没有想过，你站在街角对着补给站拍的那张照片，最后去了哪里？</p><p>五年前的一个下午，你打开《宝可梦GO》，发现游戏里多了一个新功能：扫描补给站。你只需要走到那个蓝色或红色的地标前，举起手机摄像头，绕着它走一圈，拍下十几秒的视频。作为回报，你就能获得珍贵的道具——金色蔓莓果、神奇糖果，甚至是一个稀有宝可梦的遭遇机会。你欣然照做，心想这不过是游戏公司想收集点街景数据，反正你也没损失什么。</p><p>但你可能不知道的是，就在你上传那段视频的那一刻，它已经汇入了一个庞大的数字海洋。《宝可梦GO》的玩家们，在过去的九年间，总共上传了大约300亿张现实环境图像。300亿。这个数字大到什么程度呢？如果把这些图片一张张摞起来，可以绕地球好几圈。它们记录了全球每一座城市、每一条街道、每一个转角的细节——路灯的样式、商店的招牌、墙上的涂鸦、路面的裂缝。</p><p>而Niantic，那个开发《宝可梦GO》的公司，一直安静地存储着这些数据。他们曾说，这是为了打造一个“覆盖全球的3D地图”，让虚拟和现实完美融合。听起来像个浪漫的科技愿景，对吧？但事情在2025年发生了转折。</p><p>那一年，Niantic以35亿美元的价格，把《宝可梦GO》和它的游戏业务卖给了另一家公司Scopely。被剥离之后，剩下的部分更名为Niantic Spatial，开始一门心思做空间智能技术。同年12月，Niantic Spatial宣布与美国国防科技企业Vantor达成合作，共同开发一套“用于无GPS环境的空对地视觉定位系统”。说白了，就是当卫星信号被干扰或丢失时，无人机和士兵还能靠地面图像来识别位置。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(131.6,'sec-0002')"><span>▶</span> 02:11</button><h3 class="section-title">数字权益观察组织的政策主管汤姆·萨尔斯顿接受采访时</h3></div><p>Vantor很快拿到了五角大楼的订单：两年内，高达2.17亿美元的配套训练软件合同。而这些软件的核心，就是让AI学会识别地面环境——一个无人机飞过一片居民区，它要能认出自己飞到了哪条街上，而训练AI的老师，正是Niantic手里那300亿张玩家扫描图。</p><p>消息一出，外界哗然。你玩宝可梦抓皮卡丘，结果你的手机摄像头成了美军的“侦察兵”？</p><p>Niantic和Vantor都很快否认了直接“卖数据”的说法。Niantic的声明非常精确：他们说，玩家提交的扫描数据只被用于“内部训练基础AI模型”，从未将原始图像交给军方。而Vantor也强调，他们获取的是基于卫星图像生成的3D数据，而不是那些街景照片。</p><p>但仔细琢磨一下，这其实是个文字游戏。“内部训练基础AI模型”——意思是公司用自己的数据训练了一个人工智能，然后把这个AI（或者它的算法能力）授权给了军事承包商。AI学到的知识，来自那些街角咖啡店、公交站台和公园长椅的照片。它知道怎么从不同角度辨认一个物体，知道光线变化时建筑轮廓如何改变，知道冬天和夏天街景的差异。然后，这个AI被装进了无人机里。</p><p>玩家在点击“同意”用户协议的时候，可能根本没想过，自己按下快门的那一刻，相当于志愿成为了一个全球空间情报项目的免费劳动力。</p><p>数字权益观察组织的政策主管汤姆·萨尔斯顿接受采访时说得很直白：“我们必须认清，许多免费软件服务从未将用户视为消费者，而是当作可出售的商品。”这句话点出了互联网时代一个尴尬的现实——当你没有为产品付费，你自己就是产品。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(263.2,'sec-0003')"><span>▶</span> 04:23</button><h3 class="section-title">2020年，Niantic放出了一个名为“Nian</h3></div><p>而这场风波，让人很容易想起另一个经典案例。2018年，健身应用Strava发布了一张全球用户活动热力图，本意是展示运动爱好者的跑步和骑行路线。结果人们发现，这些亮线清晰地勾勒出了美军在阿富汗和叙利亚的秘密前哨基地。因为士兵们休假时也戴着运动手表跑步，他们的运动轨迹泄露了基地的位置。军方紧急下令禁止使用此类应用，但为时已晚，数据早已公开。</p><p>从体育到游戏，从健身到抓宝可梦，我们似乎正在不知不觉地，成为全球最大的免费测绘员团队。</p><p>悉尼大学研究员罗布·尼科尔斯在评论中提到这件事，他说普通用户很可能在不知情的情况下，成为全球空间情报的免费数据来源。想想看，《宝可梦GO》的玩家遍布全球，从纽约时代广场到东京涩谷，从巴黎蒙马特到上海外滩，甚至是一些军事禁区周边的平民区。只要有人在那些地方打开游戏，扫描补给站，那个地点的高精度图像就会进入Niantic的数据库。</p><p>Niantic最早是从谷歌分拆出来的。2010年，谷歌内部孵化了Niantic Labs，一开始做的是增强现实游戏《Ingress》——那款游戏同样需要玩家走到真实世界的特定地点，扫描标记。2016年，《宝可梦GO》上线，一炮而红。Niantic手里的地理数据，从一开始就不只是游戏引擎的一部分，它本身就是一项资产。</p><p>2020年，Niantic放出了一个名为“Niantic Spatial Computing Platform”的开发者工具包，邀请第三方用它的地图数据开发各种应用。从室内导航到机器人配送，从智慧城市到工业巡检，很多公司都开始接入这个系统。所以，当Vantor找上门时，Niantic对合作并不陌生。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(394.8,'sec-0004')"><span>▶</span> 06:34</button><h3 class="section-title">再过不久，也许天空中会飞过一架无人机，它恰好路过你</h3></div><p>但军用场景是另一回事。玩家在不知情的情况下，协助训练了可能用于战争的AI。哪怕没有一张照片直接交给士兵，AI的知识已经渗透进无人机的大脑里了。</p><p>这件事引发了很多讨论。有人觉得，既然用户协议里写了“数据可能用于研发目的”，那Niantic没有违法。有人反驳，“研发目的”这个词太空泛了，普通玩家怎么可能联想到军事导航。还有人提出一个更根本的问题：数据作为资产，其产权到底属于谁？用户贡献了图像，公司加工成了模型，然后卖给了军方。用户得到了什么？几个金色蔓莓果。</p><p>2026年，也就是今年年内，Vantor的2.17亿美元订单已经逐步落地。与此同时，欧洲和亚洲多个国家开始考虑对增强现实游戏的数据收集行为进行更严格的监管。欧盟的《人工智能法案》也把“空间感知模型”列为高风险应用，训练这类模型可能需要更明确的用户授权。Niantic Spatial的发言人表示，他们会严格遵守各地的法律。</p><p>而作为《宝可梦GO》的老玩家，你或许会想起那个下午——你站在街角，举起手机，扫描了一个补给站。镜头里是一个蓝色的邮筒，旁边有只波波在扑腾翅膀。你拍完视频，领到了奖励，然后心满意足地走了。那幅画面现在安静地躺在某个数据中心的硬盘里，而它教会了一个AI，如何辨认这个街角的每一个角度。</p><p>再过不久，也许天空中会飞过一架无人机，它恰好路过你扫描过的那条街。在它的眼睛里，那个邮筒、那只虚拟的波波、和你的记忆，都成了它认识这个世界的坐标。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">那一年，Niantic以35亿美元的价格</span></div>
+<div class="tl-item" onclick="seek(131.6,'sec-0002')"><span class="tl-time">02:11</span><span class="tl-title">数字权益观察组织的政策主管汤姆·萨尔斯顿</span></div>
+<div class="tl-item" onclick="seek(263.2,'sec-0003')"><span class="tl-time">04:23</span><span class="tl-title">2020年，Niantic放出了一个名为</span></div>
+<div class="tl-item" onclick="seek(394.8,'sec-0004')"><span class="tl-time">06:34</span><span class="tl-title">再过不久，也许天空中会飞过一架无人机，它</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260630070422" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
