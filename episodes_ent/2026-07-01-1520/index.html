@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Netflix用AI复活已故演员的巧克力冒险 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 045 夜 / 2026-07-01</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Netflix</div>
+    <h1 class="ep-title">Netflix用AI复<span class="hl">活已故演员的巧克力冒险</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:10</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260701072152" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">我第一反应，说实话，是恶心。这比吃玻璃还要难受。但</h3></div><p>你好，我是伊恩。想象一下：一个已经去世八年的人，突然开口说话了——说的还不是他自己的台词，而是一档真人秀节目的宣传。这听起来像是科幻电影的桥段，但它在2024年真实发生了，主角是《查理和巧克力工厂》里那个古怪的威利·旺卡。</p><p>今年6月30号，Netflix放出了它最新真人秀节目《旺卡的金色门票》的首支预告。这档节目被形容为《鱿鱼游戏：挑战赛》的糖果版——都是根据虚构的IP改编，让参赛者在残酷的挑战中一个个被淘汰。但真正让这支预告引发轩然大波的，不是节目本身，而是它的旁白。</p><p>预告片里响起的，是已故演员吉恩·怀尔德的嗓音。他曾在1971年经典电影《威利·旺卡与巧克力工厂》中饰演那个戴着高礼帽、说话慢吞吞的巧克力大亨。怀尔德在2016年去世了，但Netflix用AI技术完美复现了他的声音，让他亲口说出：“欢迎来到我的工厂。”</p><p>据Deadline报道，Netflix使用了ElevenLabs——一家专注语音AI的公司——来生成怀尔德的语音。这家公司之前也为斯坦·李的遗产和迈克尔·凯恩做过类似项目。就在最近，一个AI版的迈克尔·凯恩正在朗读《奥德赛》有声书，以配合克里斯托弗·诺兰的新电影宣传。</p><p>我第一反应，说实话，是恶心。这比吃玻璃还要难受。但更让人五味杂陈的是，这个AI版的怀尔德听起来如此逼真——逼真到连他那种懒洋洋、心不在焉的语气都模仿得惟妙惟肖。我甚至觉得，这个AI完美再现了怀尔德如果还活着、被付费来推销这档节目时，他会有多不感兴趣。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(134.1,'sec-0002')"><span>▶</span> 02:14</button><h3 class="section-title">不过，Netflix这次的尺度显然更大。怀尔德不是</h3></div><p>你可能想问了，这是合法吗？Netflix当然做了功课。他们拿到了怀尔德遗孀凯伦·B·怀尔德的许可。凯伦在一份声明中说，她“很高兴”丈夫的声音能够“接触新一代观众”。她说只要Netflix尊重丈夫的遗愿，她就愿意支持。怀尔德生前确实是个热爱儿童和巧克力的人，所以如果是推销一个关于巧克力的节目，也许他不会反对？</p><p>但问题就在这里。凯伦的许可，真的能代表怀尔德本人的意愿吗？一个已经无法发声的人，他的声音被别人用技术“借走”，替他做商业代言——这真的合适吗？</p><p>让我们先看看这次事件的细节。Netflix的真人秀《旺卡的金色门票》将在9月23日首播。节目设定是：参赛者要在旺卡工厂里完成一系列挑战，最终赢家会获得“金色门票”大奖。听起来就是个奖金版的大富翁冒险。</p><p>但Netflix请来怀尔德的AI语音，不只是为了预告片。据Deadline透露，在正片中，怀尔德的AI声音会扮演“旁白”角色，贯穿全集。也就是说，整个节目都会有一个死者的声音在做画外解说。</p><p>这让我想起了一些类似的事情。2012年，科切拉音乐节通过全息投影“复活”了已故说唱歌手图派克。当时引起了巨大轰动，但也引发伦理争议。2021年，卢卡斯影业用AI技术为《星球大战外传：侠盗一号》中的莱娅公主合成声音，因为饰演者凯丽·费雪已经去世。但他们只用了五分钟的原始录音，而且征得了费雪家人的同意。</p><p>不过，Netflix这次的尺度显然更大。怀尔德不是客串一个角色，而是整个节目的“灵魂”——一个被商品化的声音。就像有评论家说的，“数字盗墓令人作呕”。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(268.1,'sec-0003')"><span>▶</span> 04:28</button><h3 class="section-title">这不止是怀尔德一个人的事。ElevenLabs已经</h3></div><p>回到历史的脉络中。好莱坞对死者“再利用”其实由来已久。早在1994年，电影《乌鸦》的主演李国豪在拍摄时意外身亡，剧组就用特效和替身完成了他的戏份。但那是在不得已的情况下完成的创作。而今天，在AI工具的加持下，这种“复活”变得轻而易举，甚至成了一种商业模式。</p><p>2019年，加利福尼亚州通过了一项法律，禁止未经授权使用死者肖像和声音进行商业活动。但Netflix这次得到了遗孀的许可，所以钻了法律的空子。其他州呢？很多还没有明确立法。这就形成了一个灰色地带——只要找对家人签字，一个死者的脸和声音就可以被随意租用。</p><p>而且，“许可”本身也是一个模糊的概念。家属的意愿能代表死者本人吗？别说死者，有时候连活着的演员都无法完全掌控自己的声音。2022年，配音演员Brock Baker就发现，有人用他的声音合成了特朗普的演讲音频。他什么也做不了，因为没有明确的法律保护他的声音权。</p><p>为什么公司们愿意做这种事？答案是：名气越来越贵，也越来越难获取。在互联网时代，文化变得碎片化，真正家喻户晓的明星越来越少。最好的例子就是：现在的小孩可能知道《查理和巧克力工厂》的约翰尼·德普版，但他们有几个知道吉恩·怀尔德？可他们的父母知道。Netflix要做的，就是吸引那些有记忆的成年人，用怀尔德的声音唤起他们的怀旧情感。</p><p>这不止是怀尔德一个人的事。ElevenLabs已经和好几家巨星遗产合作了。包括斯坦·李，包括迈克尔·凯恩。你可以想象一个未来：奥黛丽·赫本的声音出现在榨汁机广告里，鲍勃·霍普的笑声为贷款平台配音，马龙·白兰度的嘟囔给手机套餐做广播。只要钱到位，没有声音是买不到的。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(402.2,'sec-0004')"><span>▶</span> 06:42</button><h3 class="section-title">而且，这件事还有一个讽刺的点：Netflix这次的</h3></div><p>而且，这种“死人代言”还有一个好处：他不会涨价。他也不会抱怨。他永远不会闹丑闻，永远不会对剧本有意见。一个永远不会罢工的完美员工——前提是你买通了他的家人。</p><p>但这件事更深的层面，是对“真实”的侵蚀。我们听一个声音，原本是在和一个活生生的人对话。现在呢？你听到的可能是算法从五小时录音中学习出来的产物。它可能听起来完美无瑕，但你永远不知道哪句话是死者真说过，哪句话是AI编的。</p><p>Netflix在这件事上并非没有对手。迪士尼也在做类似的事情。就在去年，他们用AI为《星球大战》中达斯·维达的声音换掉了原本的配音演员，而且没有通知粉丝。当时也引发了一场小型风暴。但相比负面的声音，似乎更多人在问：什么时候能用AI复活斯内普教授？什么时候能让希斯·莱杰再来一遍小丑的笑声？</p><p>这种市场的需求是真真切切的。今天的娱乐产业，IP依然是最大的护城河。但IP也会过期，角色和演员都会老去。当自然规律摆在面前时，AI提供了一条捷径——让一个IP的代言人永远年轻，永远活着。</p><p>当然，不是所有人都赞成。我注意到一些业内的人士已经开始公开反对。比如SAG-AFTRA（美国演员工会）就明确表示，AI复活死者应该受到严格限制。他们担心，这会开启一个潘多拉魔盒：如果死者可以被任意使用，那活着的演员呢？他们以后签合同，会不会就要同意“死后永久授权”？</p><p>而且，这件事还有一个讽刺的点：Netflix这次的AI语音，恰恰体现了好莱坞的另一种“死亡”——创意枯竭。当大公司找不到新鲜的故事，他们就开始翻尸体。从翻拍老电影，到重启老IP，再到直接复活老演员——每一步都在向过去索取安全感。</p></div>
+<div class="section" id="sec-0005"><p>《旺卡的金色门票》节目本身就是一个证明。它不是原创的，而是改编自50年前的电影。现在连旁白都不是原创的，是50年前演员的声音。Netflix就像一个创作上消化不良的巨兽，不断吞咽以前的作品，却吐不出新鲜的创意。</p><p>接下来会发生什么？我想看到两种可能性。第一，这种技术在法律上得到规范。可能各州会出台更严格的“死后权”法案，要求即使是家属授权，也需要有明确的合同条款，且不能超出死者生前的合理预期。第二，市场会自我调节。如果太多类似事件引发公众反感，观众会用脚投票。Netflix这个节目如果真的收视惨淡，也许会让公司重新考虑。</p><p>但我不太乐观。怀尔德的声音只是冰山一角。2023年，ElevenLabs的产品每月有超过1000万用户使用。这只是开始。在之后的五年里，你可能会看到越来越多“死而复生”的明星，从广告到电影，从游戏到有声书。</p><p>吉恩·怀尔德生前是个和善的人，他爱他的影迷，也爱巧克力。但爱和生意是两回事。当他的声音出现在一档残酷的淘汰式真人秀里时，那不再是爱，是剥削。而剥削一个死人，连反抗的机会都没有。</p><p>我想起他扮演的威利·旺卡一个著名的台词：“生活如此甘甜，我们却一无所有。”现在我们有了AI，可以制作任何声音，却可能永远失去了真实的交流。我不知道这是进步，还是一种更精致的失落。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">我第一反应，说实话，是恶心。这比吃玻璃还</span></div>
+<div class="tl-item" onclick="seek(134.1,'sec-0002')"><span class="tl-time">02:14</span><span class="tl-title">不过，Netflix这次的尺度显然更大。</span></div>
+<div class="tl-item" onclick="seek(268.1,'sec-0003')"><span class="tl-time">04:28</span><span class="tl-title">这不止是怀尔德一个人的事。ElevenL</span></div>
+<div class="tl-item" onclick="seek(402.2,'sec-0004')"><span class="tl-time">06:42</span><span class="tl-title">而且，这件事还有一个讽刺的点：Netfl</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260701072152" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
