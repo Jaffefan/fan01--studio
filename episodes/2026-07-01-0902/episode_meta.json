@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-01-0902",
+  "title": "Sonnet 5杀到，美国解除出口管制，AI基建疯狂砸钱",
+  "published_at": "2026-07-01 09:02",
+  "duration_seconds": 513.74,
+  "duration_label": "8分33秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Sonnet 5来了，Opus 4.8还香吗？",
+      "golden_quote": "好模型不贵，才是真正的普惠。",
+      "keywords": [
+        "Claude Sonnet 5",
+        "Anthropic",
+        "智能体",
+        "定价",
+        "性能"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "美团长出1.6T参数巨猫，专为代码而生",
+      "golden_quote": "国产模型终于不是只会写作文了。",
+      "keywords": [
+        "LongCat-2.0",
+        "美团",
+        "MoE",
+        "智能体编程",
+        "百万上下文"
+      ],
+      "source": "SiliconFlow 推文"
+    },
+    {
+      "title": "Anthropic 给科学家造了个 AI 工作台",
+      "golden_quote": "科学家的实验室会标配一个AI实习生。",
+      "keywords": [
+        "Claude Science",
+        "科研工作台",
+        "Anthropic",
+        "生命科学",
+        "自动化"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "美国商务部松口，Claude禁令解除",
+      "golden_quote": "管制是弹性的，技术出海始终在走钢丝。",
+      "keywords": [
+        "出口管制",
+        "Anthropic",
+        "Claude Fable 5",
+        "商务部",
+        "地缘政治"
+      ],
+      "source": "Anthropic 推文"
+    },
+    {
+      "title": "黑石300亿美元砸向日本AI数据中心",
+      "golden_quote": "真正的风险是算力短缺，而不是泡沫。",
+      "keywords": [
+        "黑石",
+        "日本",
+        "AI数据中心",
+        "300亿美元",
+        "算力短缺"
+      ],
+      "source": "IT之家"
+    }
+  ]
+}

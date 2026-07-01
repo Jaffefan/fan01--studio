@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonnet 5杀到，美国解除出口管制，AI基建疯狂砸钱 - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 066 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-07-01 09:02（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>8分59秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">Sonnet 5杀到，美国解除出口管制，AI基建疯狂砸钱</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260701010406" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="33.2">  <span class="toc-time">00:33</span>  <span class="toc-text">Sonnet 5来了，Opus 4.8还香吗？</span></div>
+    <div class="toc-item" data-seek="140.61">  <span class="toc-time">02:20</span>  <span class="toc-text">美团长出1.6T参数巨猫，专为代码而生</span></div>
+    <div class="toc-item" data-seek="242.18">  <span class="toc-time">04:02</span>  <span class="toc-text">Anthropic 给科学家造了个 AI 工作台</span></div>
+    <div class="toc-item" data-seek="353.24">  <span class="toc-time">05:53</span>  <span class="toc-text">美国商务部松口，Claude禁令解除</span></div>
+    <div class="toc-item" data-seek="423.18">  <span class="toc-time">07:03</span>  <span class="toc-text">黑石300亿美元砸向日本AI数据中心</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260701010406" alt="Sonnet 5来了，Opus 4.8还香吗？" data-seek="33.2" style="cursor:pointer">
+    <div class="segment-number" data-seek="33.2" style="cursor:pointer">第 1 条 · 00:33</div>
+    <h2 class="segment-title">Sonnet 5来了，Opus 4.8还香吗？</h2>
+    <div class="segment-summary">Anthropic 发布 Claude Sonnet 5，性能接近 Opus 4.8，定价低至 $2/$10 每百万token，旨在将智能体能力下放到主流定价层。Sonnet 5 在规划、工具使用、编程等维度显著提升，安全方面不良行为率降低，但网络安全能力弱于 Opus。早期用户反馈其完成复杂任务更彻底，自动检查输出，对中小开发者是一大利好。</div>
+    <div class="golden-quote">好模型不贵，才是真正的普惠。</div>
+    <div class="segment-meta">
+      <span class="tag">Claude Sonnet 5</span> <span class="tag">Anthropic</span> <span class="tag">智能体</span> <span class="tag">定价</span> <span class="tag">性能</span>
+      <span class="tag">来源: Anthropic Newsroom</span>
+      <a class="source-link" href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260701010406" alt="美团长出1.6T参数巨猫，专为代码而生" data-seek="140.61" style="cursor:pointer">
+    <div class="segment-number" data-seek="140.61" style="cursor:pointer">第 2 条 · 02:20</div>
+    <h2 class="segment-title">美团长出1.6T参数巨猫，专为代码而生</h2>
+    <div class="segment-summary">美团 LongCat-2.0 是一款1.6T参数 MoE 旗舰模型，活跃参数约48B，原生支持100万上下文，专为智能体编程设计。SWE-bench Pro 得分59.5，与闭源主流持平，定价极低（输入缓存储存0.015美元/百万token）。其三大技术 LSA、Zero-Compute Experts、MOPD 合力压低算力成本，让百万上下文编程助手变得经济可行，可能重塑开发工具链格局。</div>
+    <div class="golden-quote">国产模型终于不是只会写作文了。</div>
+    <div class="segment-meta">
+      <span class="tag">LongCat-2.0</span> <span class="tag">美团</span> <span class="tag">MoE</span> <span class="tag">智能体编程</span> <span class="tag">百万上下文</span>
+      <span class="tag">来源: SiliconFlow 推文</span>
+      <a class="source-link" href="https://x.com/SiliconFlowAI/status/2071831773076746715" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260701010406" alt="Anthropic 给科学家造了个 AI 工作台" data-seek="242.18" style="cursor:pointer">
+    <div class="segment-number" data-seek="242.18" style="cursor:pointer">第 3 条 · 04:02</div>
+    <h2 class="segment-title">Anthropic 给科学家造了个 AI 工作台</h2>
+    <div class="segment-summary">Anthropic 推出 Claude Science 科研工作台，整合60多种预配置技能与连接器，覆盖基因组学、结构生物学等生命科学领域。它能生成3D蛋白质结构、基因组轨迹等可审计成果，内置审查智能体检查错误，支持本地或远程运行。旨在解决科研工具碎片化、结果不可复现的痛点，让科学家用自然语言交互即可完成从文献分析到出版级图表的多步骤研究，目前以beta形式面向Pro及以上用户。</div>
+    <div class="golden-quote">科学家的实验室会标配一个AI实习生。</div>
+    <div class="segment-meta">
+      <span class="tag">Claude Science</span> <span class="tag">科研工作台</span> <span class="tag">Anthropic</span> <span class="tag">生命科学</span> <span class="tag">自动化</span>
+      <span class="tag">来源: Anthropic Newsroom</span>
+      <a class="source-link" href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260701010406" alt="美国商务部松口，Claude禁令解除" data-seek="353.24" style="cursor:pointer">
+    <div class="segment-number" data-seek="353.24" style="cursor:pointer">第 4 条 · 05:53</div>
+    <h2 class="segment-title">美国商务部松口，Claude禁令解除</h2>
+    <div class="segment-summary">美国商务部解除对Anthropic旗下Claude Fable 5和Mythos 5的出口管制，Anthropic宣布明天恢复访问。此举反映美国政府在高性能AI出口管控上的折中态度，既要防止技术优势流失，又要维护企业全球竞争力，但对开发者和企业而言，这是一个不确定的喘息窗口。</div>
+    <div class="golden-quote">管制是弹性的，技术出海始终在走钢丝。</div>
+    <div class="segment-meta">
+      <span class="tag">出口管制</span> <span class="tag">Anthropic</span> <span class="tag">Claude Fable 5</span> <span class="tag">商务部</span> <span class="tag">地缘政治</span>
+      <span class="tag">来源: Anthropic 推文</span>
+      <a class="source-link" href="https://x.com/AnthropicAI/status/2072106151890809341" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260701010406" alt="黑石300亿美元砸向日本AI数据中心" data-seek="423.18" style="cursor:pointer">
+    <div class="segment-number" data-seek="423.18" style="cursor:pointer">第 5 条 · 07:03</div>
+    <h2 class="segment-title">黑石300亿美元砸向日本AI数据中心</h2>
+    <div class="segment-summary">黑石计划未来3-5年在日本投资300亿美元建设超1GW AI数据中心，此前已有500MW。黑石总裁认为AI投资仍早期，真正风险是算力短缺。同时，黑石、阿波罗、博通成立AI XPV平台，目标2028年提供超20GW算力，首期350亿美元支持Anthropic部署1GW基础设施。此举显示AI基建需求强烈，对普通人而言可能带来模型使用成本的下降。</div>
+    <div class="golden-quote">真正的风险是算力短缺，而不是泡沫。</div>
+    <div class="segment-meta">
+      <span class="tag">黑石</span> <span class="tag">日本</span> <span class="tag">AI数据中心</span> <span class="tag">300亿美元</span> <span class="tag">算力短缺</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/970/583.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-07-01 01:04
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
