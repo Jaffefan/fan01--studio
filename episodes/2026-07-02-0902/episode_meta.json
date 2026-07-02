@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-02-0902",
+  "title": "OpenAI 暗藏三款 Pro 模型，Meta 卖算力学 SpaceX",
+  "published_at": "2026-07-02 09:02",
+  "duration_seconds": 451.85,
+  "duration_label": "7分31秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "五万张国产卡训出万亿参数模型",
+      "golden_quote": "国产卡训出万亿模型，集群战术才是真武器。",
+      "keywords": [
+        "美团",
+        "万亿模型",
+        "国产算力",
+        "LongCat",
+        "开源"
+      ],
+      "source": "公众号：龙猫LongCat（美团）"
+    },
+    {
+      "title": "xAI 两分钟搭建语音代理，直接对标行业",
+      "golden_quote": "两分钟搭一个能接电话的 AI，呼叫中心要变天了。",
+      "keywords": [
+        "xAI",
+        "语音代理",
+        "无代码",
+        "Grok Voice",
+        "客服"
+      ],
+      "source": "xAI 官方博客"
+    },
+    {
+      "title": "Anthropic 被曝悄悄识别中国用户",
+      "golden_quote": "信任一旦用隐写术来透支，就再也还不上了。",
+      "keywords": [
+        "Anthropic",
+        "隐写术",
+        "Claude Code",
+        "用户信任",
+        "隐私"
+      ],
+      "source": "公众号：数字生命卡兹克"
+    },
+    {
+      "title": "Meta 学 SpaceX：卖掉多余的算力",
+      "golden_quote": "Meta 不想只当广告公司，它要变成 AI 时代的房东。",
+      "keywords": [
+        "Meta",
+        "算力变现",
+        "云业务",
+        "数据中心",
+        "AI 基础设施"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "OpenAI 暗藏三款 Pro 模型，打破单一顶级策略",
+      "golden_quote": "当模型能力到顶，产品分化就该开始了。",
+      "keywords": [
+        "OpenAI",
+        "GPT-5.6",
+        "Pro 模型",
+        "产品分化",
+        "基准测试"
+      ],
+      "source": "The Decoder"
+    }
+  ]
+}
