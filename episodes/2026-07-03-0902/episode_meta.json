@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-03-0902",
+  "title": "微软砸25亿派遣6000名AI工程师，能拯救企业AI落地吗？",
+  "published_at": "2026-07-03 09:02",
+  "duration_seconds": 799.97,
+  "duration_label": "13分19秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "微软砸25亿美元派驻6000名AI工程师",
+      "golden_quote": "AI落地不缺技术，缺的是人。",
+      "keywords": [
+        "微软",
+        "AI部署",
+        "Frontier Company",
+        "企业服务"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "Anthropic与五角大楼的护栏之争",
+      "golden_quote": "AI公司的红线，政府的底线，谁先让步？",
+      "keywords": [
+        "Anthropic",
+        "五角大楼",
+        "AI武器",
+        "护栏"
+      ],
+      "source": "X (Kim)"
+    },
+    {
+      "title": "OpenAI提议美国政府持股5%",
+      "golden_quote": "426亿美元的股份买的是政治保险。",
+      "keywords": [
+        "OpenAI",
+        "美国政府",
+        "股份",
+        "估值"
+      ],
+      "source": "Testing Catalog"
+    },
+    {
+      "title": "快手可灵AI斩获30亿美元融资",
+      "golden_quote": "AI视频赛道，资本军备竞赛已经开打。",
+      "keywords": [
+        "快手",
+        "可灵AI",
+        "融资",
+        "180亿美元"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "谷歌AI建设导致用电量飙升37%",
+      "golden_quote": "AI发展越快，碳排放账单越贵。",
+      "keywords": [
+        "谷歌",
+        "用电量",
+        "碳排放",
+        "AI数据中心"
+      ],
+      "source": "Ars Technica"
+    }
+  ]
+}
