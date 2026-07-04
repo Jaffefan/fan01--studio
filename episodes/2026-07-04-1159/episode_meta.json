@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-04-1159",
+  "title": "5件颠覆你对AI边界认知的事：从宜家到阿根廷，AI正在重新定义工作",
+  "published_at": "2026-07-04 11:59",
+  "duration_seconds": 510.53,
+  "duration_label": "8分30秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "一个$9的Prompt包，怎么替代$500/月的法律SaaS",
+      "golden_quote": "AI正在从工具变成工具的生产者。",
+      "keywords": [
+        "AI替代SaaS",
+        "Prompt工具包",
+        "低成本替代",
+        "自由职业者",
+        "AI技能壁垒"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "AI让宜家工人价值提升10倍？别误会了",
+      "golden_quote": "别把AI看作替代品，而是增强器。",
+      "keywords": [
+        "AI增强工人",
+        "宜家",
+        "信号放大器",
+        "管理思维",
+        "AI转型"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "Midjourney反将一军：你们好莱坞也在用AI偷素材",
+      "golden_quote": "AI训练用公开数据，已经是行业惯例，包括那些在法庭上起诉的人。",
+      "keywords": [
+        "Midjourney",
+        "版权诉讼",
+        "好莱坞",
+        "AI训练数据",
+        "行业惯例"
+      ],
+      "source": "Variety"
+    },
+    {
+      "title": "字节跳动新发现：AI代理学习速度每三个月翻倍",
+      "golden_quote": "AI通过动手实践还能继续变强，这可能是缓解数据干旱的解药。",
+      "keywords": [
+        "字节跳动",
+        "AI代理",
+        "缩放定律",
+        "数据干旱",
+        "环境学习"
+      ],
+      "source": "SCMP"
+    },
+    {
+      "title": "阿根廷要用AI管理公司？人类还是逃不掉",
+      "golden_quote": "AI可以当工具，但不能当法人。信任和责任，依然是人类的特权。",
+      "keywords": [
+        "阿根廷",
+        "AI公司",
+        "法律障碍",
+        "法人身份",
+        "责任分配"
+      ],
+      "source": "Reuters"
+    }
+  ]
+}
