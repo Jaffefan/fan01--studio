@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当作者拒绝看自己的电影 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 049 夜 / 2026-07-05</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Tomi Adeyemi</div>
+    <h1 class="ep-title">当作者拒绝<span class="hl">看自己的电影</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:45</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260705065128" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这件事的经过是这样的。2018年，Adeyemi的</h3></div><p>你好，我是伊恩。想象一下，你写了一部小说，卖了上百万册，被搬上大银幕，导演是大名鼎鼎的吉娜·普林斯-拜斯伍德，演员表里有Idris Elba、Viola Davis、Regina King——然后电影快上映了，你公开说：我不会看。而且——我永远不会看。这不是虚构，这是《血与骨之子》作者Tomi Adeyemi的真实故事。</p><p>上周，2026年7月4日，Deadline爆出了一条消息。Tomi Adeyemi，这位以非洲奇幻三部曲一举成名的32岁作家，在TikTok上回应了一位粉丝的提问——为什么她几乎从不谈论自己的小说被改编成电影的事。她发了几张私信截图，说：“这就是我从来不发任何关于改编作品的原因。”她还说：“我没有看过这部电影，而且我不会看。”她甚至在私信里对主演Amandla Stenberg说：“不要再在任何采访或视频里提我的名字。不要给我发短信。不要给我打电话。”日期是2026年2月底。</p><p>这件事的经过是这样的。2018年，Adeyemi的《血与骨之子》出版。她受到尼日利亚约鲁巴神话的启发，写了一个叫Zélie的女孩在虚构王国Orïsha里寻找魔法的故事。这本书一炮而红，连续几周登上《纽约时报》畅销榜，派拉蒙很快买下了电影改编权。2023年，他们宣布电影将由Gina Prince-Bythewood执导，她是《爱情与篮球》和《永生守卫》的导演。2024年，宣布主演是Amandla Stenberg——她将饰演公主Amari。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(117.1,'sec-0002')"><span>▶</span> 01:57</button><h3 class="section-title">我们回溯一下历史。作者与电影改编的冲突并不新鲜。J</h3></div><p>然后，2025年末到2026年初，争议出现了。一些粉丝指出，Stenberg是浅肤色的黑人，而在书里，Amari公主被描述为“深古铜色皮肤”。网上有人指责Stenberg“抢走了深肤色女性的角色”。2026年2月，Stenberg在接受《好莱坞报道》采访时，回应了这些指责。她说：“我和Tomi见过面，她告诉我，她当年看到我作为小演员在《饥饿游戏》里扮演Rue，看到我承受那些种族攻击，这启发了她写这套书。她说，‘我想让像你这样的黑人女孩，无论什么肤色，都有一个为她们创作的故事。’我们当时都哭了。”</p><p>然后，Adeyemi就对Stenberg发了一条那样的私信。而且，在电影宣布定档2027年1月15日之后，Adeyemi不仅没有参与宣传，反而在社交媒体上公开切割。她说：“我一直在努力压抑这件事。如果你们觉得我不在乎，我很抱歉。但这是我的真相。”</p><p>这件事让我想到一个更深的问题——当一个作者的作品被改编成电影，她到底有没有控制权？从法律上来说，她卖出了改编权，就没有了。但从情感上来说，这是她的作品，是她的孩子。Adeyemi和Stenberg的矛盾看似是一次社交媒体的争吵，但实际上是关于创作归属、种族身份、肤色政治在好莱坞的复杂交织。</p><p>我们回溯一下历史。作者与电影改编的冲突并不新鲜。J.K.罗琳对《哈利·波特》电影有很大发言权，但她也曾因为选角与粉丝起冲突——比如赫敏在舞台剧里由黑人演员扮演，她支持，但部分粉丝不满。但罗琳至少参与了剧本和选角。斯蒂芬·金早期讨厌《闪灵》的改编，说库布里克“拍了一部好电影，但那不是我的小说”。金后来甚至自己参与了电视版的重拍。更极端的例子是《守望者》的艾伦·摩尔，他要求自己的名字不出现在任何电影版里，并且拒绝收取任何版权费——因为他对电影改编深恶痛绝。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(234.2,'sec-0003')"><span>▶</span> 03:54</button><h3 class="section-title">从行业角度来看，这个事件揭示了一个现象：越来越多的</h3></div><p>但Adeyemi的情况更尖锐。她不仅指责电影本身，还直接与主演撕破脸。为什么？因为肤色政治。在好莱坞，浅肤色黑人演员常被选中扮演原本是深肤色肤色黑人的角色，这反映了行业内的“色彩主义”——深浅肤色歧视。Stenberg提到Adeyemi曾经告诉她，她当年在《饥饿游戏》里被种族攻击的经历启发了《血与骨之子》。这很讽刺：一个被启发的故事，最终却因为同样的肤色问题引发了冲突。</p><p>我们再看Stenberg的选角历史。她11岁在《饥饿游戏》里扮演Rue，一个被描述为“深色皮肤”的女孩。电影上映后，网友对她发起了大规模种族攻击，说Rue是“黑鬼”，说她不该扮演这个角色。她当时还是个孩子。Adeyemi说她就是受了这件事的启发才写这套书。现在，Stenberg长大了，又来扮演Adeyemi书里的浅肤色角色——而这次，批评变成了“她太浅了”。这就像是历史的重演，只是角色互换。</p><p>为什么Adeyemi的反应这么激烈？可能是因为她觉得自己被背叛了。她授权改编，却无法控制选角。好莱坞的权力结构决定了——作者可以被尊重，但最后决定的还是制片厂和导演。Adeyemi和Prince-Bythewood一起写了剧本，但她依然无法让电影符合她的想象。当Stenberg在采访中引用Adeyemi的“当年你启发了我”时，Adeyemi可能觉得自己的话语被利用了。她不想成为选角正当性的挡箭牌。</p><p>从行业角度来看，这个事件揭示了一个现象：越来越多的原著作者开始对改编表达强烈不满。以前作者们会保持沉默，或温和地支持，以免破坏关系。但社交媒体给了他们直接发声的平台。Adeyemi选择在TikTok上发布，绕过传统媒体，直接面对粉丝。她的语气里有一种决绝：“我永远不会看。”这不是模糊的“有些不同”，而是彻底的切割。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(351.3,'sec-0004')"><span>▶</span> 05:51</button><h3 class="section-title">但没人能知道，这个裂痕是否能被修补。Adeyemi</h3></div><p>电影界的选角色彩主义是真实存在的。2015年，有研究显示好莱坞电影中深肤色黑人角色的比例远低于浅肤色黑人。像Lupita Nyong’o这样的深肤色演员总在演“悲惨的黑人故事”，而浅肤色演员则得到更多主流角色。那次Stenberg的批评，也是这个问题的缩影。但Adeyemi的拒绝观看，更像是一种抗议：如果我的故事无法以我期望的方式呈现，那我宁愿不看。</p><p>现在，电影即将上映。派拉蒙已投入大量资金，卡司还包括Thuso Mbedu、Tosin Cole、Idris Elba、Cynthia Erivo、Lashana Lynch、Chiwetel Ejiofor、Regina King、Viola Davis——可以说是全明星阵容。评论会如何？票房会如何？但这些已经不重要了。重要的是，原作者已经公开拒绝。这是好莱坞史上罕见的作者与改编作品彻底决裂的案例。</p><p>事后，网络上出现了两种声音。一些评论者说：“这太可惜了，作者因为私人恩怨毁了一个好项目。”另一些人说：“她有权保护自己的作品。”Deadline的评论区里，有人写：“Stenberg是一位伟大的演员，作者让个人恩怨破坏这个项目，真遗憾。”还有人写：“希望作者和主演能放下分歧，拥抱这个时刻。”</p><p>但没人能知道，这个裂痕是否能被修补。Adeyemi已经在另一个社交帖子里说：“这不只是关于这部作品。这关于整个行业的系统。”她没有再说什么。</p></div>
+<div class="section" id="sec-0005"><p>所以，当电影在2027年1月上映时，会有很多人去看。但作者不会。她会坐在某个地方，可能根本不打开社交媒体。而那个被她写下“不要提我的名字”的女演员，会在红毯上微笑，回答记者关于《血与骨之子》的问题。</p><p>一部没能让作者认可的电影，它的命运如何？这可能是接下来几年内，一个值得持续观察的故事。</p><p>好了，今天的故事就到这里。我想听听你的想法——如果你写了一本畅销书，被改编成电影，但选角不是你想要的，你会怎么做？是像Adeyemi一样不看，还是去支持？你可以在评论区告诉我。我们明天见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这件事的经过是这样的。2018年，Ade</span></div>
+<div class="tl-item" onclick="seek(117.1,'sec-0002')"><span class="tl-time">01:57</span><span class="tl-title">我们回溯一下历史。作者与电影改编的冲突并</span></div>
+<div class="tl-item" onclick="seek(234.2,'sec-0003')"><span class="tl-time">03:54</span><span class="tl-title">从行业角度来看，这个事件揭示了一个现象：</span></div>
+<div class="tl-item" onclick="seek(351.3,'sec-0004')"><span class="tl-time">05:51</span><span class="tl-title">但没人能知道，这个裂痕是否能被修补。Ad</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260705065128" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
