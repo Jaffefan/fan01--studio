@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-05-1219",
+  "title": "AI芯片突破、机器人自学、学霸翻车：5条颠覆认知的AI真相",
+  "published_at": "2026-07-05 12:19",
+  "duration_seconds": 636.14,
+  "duration_label": "10分36秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "中国造出毫秒级神经芯片，GPU慌了",
+      "golden_quote": "50年瓶颈，2.12毫秒破局。",
+      "keywords": [
+        "神经动力学",
+        "忆阻器",
+        "存内计算",
+        "芯片",
+        "北京大学"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "NVIDIA机器人自己写程序，自己纠错",
+      "golden_quote": "真正智能的机器人，得会自己找错。",
+      "keywords": [
+        "机器人",
+        "自我改进",
+        "ASPIRE",
+        "NVIDIA",
+        "技能库"
+      ],
+      "source": "MarkTechPost"
+    },
+    {
+      "title": "2年追踪26000学生，AI悄然降智",
+      "golden_quote": "作业分涨了，脑子却空了。",
+      "keywords": [
+        "教育",
+        "AI依赖",
+        "学习损失",
+        "学生",
+        "双重差分"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "阿里巴巴AI挖出4种新超导体",
+      "golden_quote": "AI发现新材料，物理进入代扫模式。",
+      "keywords": [
+        "超导体",
+        "AI智能体",
+        "材料发现",
+        "达摩院",
+        "阿里巴巴"
+      ],
+      "source": "南华早报"
+    },
+    {
+      "title": "Google独立日广告：AI穿越遭群嘲",
+      "golden_quote": "技术有了，但故事还没编圆。",
+      "keywords": [
+        "Google",
+        "独立日",
+        "AI广告",
+        "Gemini",
+        "翻车"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}

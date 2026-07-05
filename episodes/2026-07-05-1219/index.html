@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI芯片突破、机器人自学、学霸翻车：5条颠覆认知的AI真相 - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 070 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-07-05 12:19（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>11分05秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">AI芯片突破、机器人自学、学霸翻车：5条颠覆认知的AI真相</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260705042108" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="42.7">  <span class="toc-time">00:42</span>  <span class="toc-text">中国造出毫秒级神经芯片，GPU慌了</span></div>
+    <div class="toc-item" data-seek="148.24">  <span class="toc-time">02:28</span>  <span class="toc-text">NVIDIA机器人自己写程序，自己纠错</span></div>
+    <div class="toc-item" data-seek="268.2">  <span class="toc-time">04:28</span>  <span class="toc-text">2年追踪26000学生，AI悄然降智</span></div>
+    <div class="toc-item" data-seek="403.98">  <span class="toc-time">06:43</span>  <span class="toc-text">阿里巴巴AI挖出4种新超导体</span></div>
+    <div class="toc-item" data-seek="511.26">  <span class="toc-time">08:31</span>  <span class="toc-text">Google独立日广告：AI穿越遭群嘲</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260705042108" alt="中国造出毫秒级神经芯片，GPU慌了" data-seek="42.7" style="cursor:pointer">
+    <div class="segment-number" data-seek="42.7" style="cursor:pointer">第 1 条 · 00:42</div>
+    <h2 class="segment-title">中国造出毫秒级神经芯片，GPU慌了</h2>
+    <div class="segment-summary">北京大学联合中科院等单位研制出全球首款基于可控存内计算的忆阻器神经动力学芯片，采用40纳米工艺，单步运算时延仅2.12毫秒，在脑皮层重建等任务中较GPU提速50至478倍，突破了神经动力学长达半个世纪的实时计算瓶颈。相关成果发表在《科学》杂志。</div>
+    <div class="golden-quote">50年瓶颈，2.12毫秒破局。</div>
+    <div class="segment-meta">
+      <span class="tag">神经动力学</span> <span class="tag">忆阻器</span> <span class="tag">存内计算</span> <span class="tag">芯片</span> <span class="tag">北京大学</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/972/526.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260705042108" alt="NVIDIA机器人自己写程序，自己纠错" data-seek="148.24" style="cursor:pointer">
+    <div class="segment-number" data-seek="148.24" style="cursor:pointer">第 2 条 · 02:28</div>
+    <h2 class="segment-title">NVIDIA机器人自己写程序，自己纠错</h2>
+    <div class="segment-summary">NVIDIA联合多所大学提出ASPIRE机器人自我改进框架，采用协调器-执行器架构、闭环执行引擎、技能库和进化搜索，使机器人能自动定位和修复程序错误。在多项基准测试中，成功率最高提升77个百分点，双手交接任务从20%升至92%。该框架让每次失败都能转化为可复用的技能。</div>
+    <div class="golden-quote">真正智能的机器人，得会自己找错。</div>
+    <div class="segment-meta">
+      <span class="tag">机器人</span> <span class="tag">自我改进</span> <span class="tag">ASPIRE</span> <span class="tag">NVIDIA</span> <span class="tag">技能库</span>
+      <span class="tag">来源: MarkTechPost</span>
+      <a class="source-link" href="https://www.marktechpost.com/2026/07/03/nvidia-ai-introduces-aspire-a-self-improving-robotics-framework-reaching-31-zero-shot-on-libero-pro-long-tasks" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260705042108" alt="2年追踪26000学生，AI悄然降智" data-seek="268.2" style="cursor:pointer">
+    <div class="segment-number" data-seek="268.2" style="cursor:pointer">第 3 条 · 04:28</div>
+    <h2 class="segment-title">2年追踪26000学生，AI悄然降智</h2>
+    <div class="segment-summary">一项追踪26000名中学生30个月的研究显示，使用AI后作业分数提升18%、完成时间缩短，但闭卷考试分数下降20%，升学考试分数下降18%-24%，且影响需约两年才完全显现。81%的长期用户表现出外包迹象。社会学科损失最大（27%），每周使用AI一小时约损失5%成绩。</div>
+    <div class="golden-quote">作业分涨了，脑子却空了。</div>
+    <div class="segment-meta">
+      <span class="tag">教育</span> <span class="tag">AI依赖</span> <span class="tag">学习损失</span> <span class="tag">学生</span> <span class="tag">双重差分</span>
+      <span class="tag">来源: The Decoder</span>
+      <a class="source-link" href="https://the-decoder.com/a-26000-student-study-shows-ais-hidden-learning-cost-takes-two-full-years-to-surface" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260705042108" alt="阿里巴巴AI挖出4种新超导体" data-seek="403.98" style="cursor:pointer">
+    <div class="segment-number" data-seek="403.98" style="cursor:pointer">第 4 条 · 06:43</div>
+    <h2 class="segment-title">阿里巴巴AI挖出4种新超导体</h2>
+    <div class="segment-summary">阿里巴巴达摩院联合高校推出AI智能体Elements Claw，专门用于发现超导材料。该智能体基于10亿参数模型，在28小时内筛选240万个晶体结构，找到约6.8万候选者，最终经实验室验证发现4种全新超导化合物。这是首个由AI发现并验证的超导材料，有望革新材料科学范式。</div>
+    <div class="golden-quote">AI发现新材料，物理进入代扫模式。</div>
+    <div class="segment-meta">
+      <span class="tag">超导体</span> <span class="tag">AI智能体</span> <span class="tag">材料发现</span> <span class="tag">达摩院</span> <span class="tag">阿里巴巴</span>
+      <span class="tag">来源: 南华早报</span>
+      <a class="source-link" href="https://www.scmp.com/tech/big-tech/article/3359335/alibabas-elements-claw-ai-agent-unearths-four-new-superconductors" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260705042108" alt="Google独立日广告：AI穿越遭群嘲" data-seek="511.26" style="cursor:pointer">
+    <div class="segment-number" data-seek="511.26" style="cursor:pointer">第 5 条 · 08:31</div>
+    <h2 class="segment-title">Google独立日广告：AI穿越遭群嘲</h2>
+    <div class="segment-summary">Google在美国独立日发布广告，设想开国元勋用Google Workspace和AI协作起草《独立宣言》，涉及Google Docs、Meet、Gemini等工具。虽然整体幽默，但在社群媒体上引发广泛批评，用户认为广告『尴尬』『没品』，历史学家指出广告未能证明AI对关键协作场景的必要性。AI营销的叙事困境再次凸显。</div>
+    <div class="golden-quote">技术有了，但故事还没编圆。</div>
+    <div class="segment-meta">
+      <span class="tag">Google</span> <span class="tag">独立日</span> <span class="tag">AI广告</span> <span class="tag">Gemini</span> <span class="tag">翻车</span>
+      <span class="tag">来源: TechCrunch</span>
+      <a class="source-link" href="https://techcrunch.com/2026/07/04/new-google-commercial-imagines-a-declaration-of-independence-written-with-help-from-ai/" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-07-05 04:21
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>
