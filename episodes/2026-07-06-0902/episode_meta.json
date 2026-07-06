@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-06-0902",
+  "title": "美团开源1.6T模型，扎克伯格砸千亿，富人用AI教娃",
+  "published_at": "2026-07-06 09:02",
+  "duration_seconds": 620.88,
+  "duration_label": "10分20秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "美团开源1.6T巨模型，MIT协议随便用",
+      "golden_quote": "开源不再是追赶，而是定价权。",
+      "keywords": [
+        "美团",
+        "LongCat",
+        "开源",
+        "MoE",
+        "AI编程"
+      ],
+      "source": "X：美团 LongCat (@Meituan_LongCat)"
+    },
+    {
+      "title": "扎克伯格押注千兆瓦AI集群，豪赌数千亿美元",
+      "golden_quote": "AI军备竞赛，拼的不是算法，是赌桌。",
+      "keywords": [
+        "Meta",
+        "扎克伯格",
+        "AI集群",
+        "投资",
+        "能源"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "NVIDIA下一代芯片Kyber推迟到2028年",
+      "golden_quote": "巨人的延迟，是追赶者的窗口。",
+      "keywords": [
+        "NVIDIA",
+        "Kyber",
+        "延期",
+        "GPU",
+        "芯片"
+      ],
+      "source": "X：SemiAnalysis (@SemiAnalysis_)"
+    },
+    {
+      "title": "父亲为自闭症儿子开发沟通App，意外成功",
+      "golden_quote": "技术不是用来炫技的，是用来让人被看见的。",
+      "keywords": [
+        "自闭症",
+        "沟通App",
+        "AAC",
+        "特殊教育",
+        "AI"
+      ],
+      "source": "Extelligence"
+    },
+    {
+      "title": "美国富人花7.5万美元让AI教孩子，靠谱吗？",
+      "golden_quote": "一所学校故意不教某段历史，它就不再是学校，而是洗脑工厂。",
+      "keywords": [
+        "AI教育",
+        "富人",
+        "Alpha School",
+        "Forge Prep",
+        "争议"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
