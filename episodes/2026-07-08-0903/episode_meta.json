@@ -1,0 +1,70 @@
+{
+  "episode_id": "2026-07-08-0903",
+  "title": "Meta 出招、Anthropic 扩张，具身机器人进入 22 万时代",
+  "published_at": "2026-07-08 09:03",
+  "duration_seconds": 720.89,
+  "duration_label": "12分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Meta 新模型：@ 一下就能用你的脸生成 AI 图",
+      "golden_quote": "你的脸，成了 Meta 的免费训练素材。",
+      "keywords": [
+        "Muse",
+        "Meta",
+        "AI图像生成",
+        "隐私",
+        "@提及"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Anthropic 把 Cowork 搬到手机：云上跑，关盖不停",
+      "golden_quote": "你合上电脑，AI 还在干活。",
+      "keywords": [
+        "Claude Cowork",
+        "Anthropic",
+        "移动端",
+        "云端运行",
+        "任务自动化"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "理想系团队创业半年，22 万机器人创交付纪录",
+      "golden_quote": "让机器人自己造自己，才是真正的降本。",
+      "keywords": [
+        "至简动力",
+        "i7 Pro",
+        "具身智能",
+        "百台交付",
+        "机器人造机器人"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "AI 生成代码占七成，文档却靠'你扛不住真相'",
+      "golden_quote": "AI 每小时更新代码，文档却停在一年前。",
+      "keywords": [
+        "AI生成代码",
+        "文档债",
+        "技术债",
+        "CI/CD"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "TechCrunch 追踪：Muse 发布即争议",
+      "golden_quote": "你的脸，变成了 Meta 社交营销的原材料。",
+      "keywords": [
+        "Muse",
+        "Meta",
+        "隐私",
+        "争议",
+        "AI生成"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
