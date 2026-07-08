@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>id Software裁掉一半人，FPS祖师爷还剩什么？ - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 052 夜 / 2026-07-08</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> id Software</div>
+    <h1 class="ep-title">id Software裁掉一<span class="hl">半人，FPS祖师爷还剩什么？</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:13</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260708060843" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">还有一个更具体的后果：受此次裁员影响，《毁灭战士：</h3></div><p>你好，我是伊恩。今天聊一个让人有点唏嘘的消息——老牌FPS工作室id Software，裁掉了将近一半的员工，95个人。而且裁掉的不是别的，几乎全是技术骨干。</p><p>消息是从Game Developer传出来的。id Software在Xbox最新一轮大规模裁员中遭遇重创，截止发稿前已经解雇了大约95名员工，占团队总规模的一半。裁员主要集中在程序员、QA人员以及工具开发等技术岗位，其中包含多位入职超过10年的资深开发人员。首席概念艺术家Colin Geller也确认被解雇。</p><p>3D Realms的联合创始人George Broussard在社交媒体上说，id Software核心团队幸存者现在只剩管理层、美术和设计人员，这让id Software作为开发工作室已经“名存实亡”。他判断，id Software未来的定位更像是为贝塞斯达其他工作室提供协助的辅助工作室。</p><p>这可不是个普通的工作室。id Software是《毁灭战士》《雷神之锤》的缔造者，是FPS这个游戏类型的奠基人。他们自主研发的id Tech引擎，从初代《毁灭战士》开始就不断迭代，至今已发展到id Tech 7。但这次裁员后，行业分析普遍认为，id Tech引擎的发展与维护将严重受损，很可能会被放弃，转而采用Epic的虚幻引擎。</p><p>还有一个更具体的后果：受此次裁员影响，《毁灭战士：黑暗时代 启示录》很可能成为id Software在未来很长一段时间的最后一个项目。尽管Xbox计划在未来将更多精力投向《毁灭战士》及《雷神之锤》等IP，但几乎所有技术骨干的离职，让这些项目的开发前景变得相当不明朗。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(108.4,'sec-0002')"><span>▶</span> 01:48</button><h3 class="section-title">每一次id Tech引擎的更新，都推动着整个行业的</h3></div><p>这件事让我想起2019年，id Software的联合创始人John Carmack离职时的情景。Carmack在1991年与John Romero等人共同创立id Software，他负责引擎技术，是游戏引擎开发史上的传奇人物。2013年他加入Oculus VR，专注于虚拟现实，但同年就从id Software董事会辞职。2019年，他完全离开id Software，表示“我在id的时代已经结束了”。Carmack的离开，被很多人看作是id技术灵魂的出走。</p><p>其实id Software的历史，就是一部FPS技术的发展史。1993年的《毁灭战士》用伪3D技术创造了惊人的快节奏射击体验；1996年的《雷神之锤》首次实现了真正的3D引擎，包括实时三维渲染、网络对战；1999年的《雷神之锤3》又引入了高端图形效果。之后id Tech引擎不断进化：2004年的《毁灭战士3》使用id Tech 4，以动态光影著称；2011年的《狂怒》使用id Tech 5，主打大规模开放世界；2016年的《毁灭战士》重启版使用id Tech 6，回归快节奏暴力美学；2020年的《毁灭战士：永恒》使用id Tech 7，把优化和特效推到新高度。</p><p>每一次id Tech引擎的更新，都推动着整个行业的技术进步。但这家公司的命运，从被收购开始就发生了转变。2009年，ZeniMax Media收购了id Software；2021年，微软收购ZeniMax，id随之归入Xbox游戏工作室旗下。大公司旗下的工作室，往往要服从整体战略。Xbox近年来的策略明显倾向订阅服务Game Pass和跨平台策略，对技术和引擎的独立研发投入可能不如从前。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(216.9,'sec-0003')"><span>▶</span> 03:36</button><h3 class="section-title">现在舆论场上有几种声音。一种是可惜——这样的老牌工</h3></div><p>更早的历史还有：1996年，id Software的灵魂人物之一John Romero因理念不合离开，随后创办了Ion Storm，但再也没有达到id的高度。那次分裂当时也引发了对id未来的担忧，但Carmack还在，技术核心没丢。这一次，连技术骨干都几乎被裁光，情况完全不同。</p><p>把视角拉远，这不是孤立事件。整个游戏行业最近两年都在经历“技术裁员潮”。2023年，Epic Games裁员830人，其中很大一部分是虚幻引擎的技术团队；同年，Unity裁员近300人，并进行业务重组；2024年，微软Xbox部门裁员数千人，四家第一方工作室被剥离。在这种大环境下，技术团队往往首当其冲，因为他们的成本高、产出慢，不像美术和设计可以直接体现在内容上。</p><p>另一个对比案例是CD Projekt Red。他们在《赛博朋克2077》发售后，也经历了技术团队的大换血，并决定抛弃自家引擎REDengine，转向虚幻引擎5。如今他们正在用虚幻5开发《巫师》新作。Halo Studios也在2024年宣布放弃Slipspace引擎，转用虚幻5。但这两家公司至少还有完整的核心团队，而id Software这次是连引擎的创造者都没了。</p><p>现在舆论场上有几种声音。一种是可惜——这样的老牌工作室，技术底蕴和品牌价值都极高的团队，就这么被架空，很多人觉得微软的策略短视。一种是冷静——认为在商业逻辑下，大公司收购后整合资源是常态，id作为辅助工作室可能更符合Xbox的“平台思维”。还有一种是悲观——认为引擎技术本来就是为了服务游戏，如果《毁灭战士》新作能用虚幻引擎做出更好的效果，那放弃id Tech也许不是坏事，但前提是留下来的团队还能做出好游戏。</p></div>
+<div class="section" id="sec-0004"><p>至于我的看法？我不喜欢“名存实亡”这个词，它的分量太重了。但或许，id Software真的进入了一个新阶段——从开创者变成协作者，从技术驱动变成IP孵化器。这未必是坏事，但确实有点冷。</p><p>好了，今天的故事就讲到这里。谢谢你听完。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">还有一个更具体的后果：受此次裁员影响，《</span></div>
+<div class="tl-item" onclick="seek(108.4,'sec-0002')"><span class="tl-time">01:48</span><span class="tl-title">每一次id Tech引擎的更新，都推动着</span></div>
+<div class="tl-item" onclick="seek(216.9,'sec-0003')"><span class="tl-time">03:36</span><span class="tl-title">现在舆论场上有几种声音。一种是可惜——这</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260708060843" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
