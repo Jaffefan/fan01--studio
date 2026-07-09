@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-09-0903",
+  "title": "Grok 4.5 杀价、机器人觉醒、ChatGPT 学会闭嘴——AI 今天三件大事",
+  "published_at": "2026-07-09 09:03",
+  "duration_seconds": 589.73,
+  "duration_label": "9分49秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Grok 4.5 杀价，Musk 喊出 Opus 级",
+      "golden_quote": "低价不是护城河，效果才是。",
+      "keywords": [
+        "SpaceXAI",
+        "Grok",
+        "定价战",
+        "OpenAI",
+        "GPT 5.6"
+      ],
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "用游戏训练机器人，这家公司要搞大事",
+      "golden_quote": "机器人不需要学一万小时真实走路，它需要学会「如何学习走路」。",
+      "keywords": [
+        "General Intuition",
+        "机器人",
+        "游戏数据",
+        "世界模型",
+        "泛化"
+      ],
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "GPT-5.6 要来了，安全审查刚解封",
+      "golden_quote": "被限制发布，本身就是一种实力证明。",
+      "keywords": [
+        "GPT 5.6",
+        "OpenAI",
+        "安全限制",
+        "模型能力",
+        "竞争"
+      ],
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "OpenAI 新语音：能听能说，还懂闭嘴",
+      "golden_quote": "下一次交互革命，不在屏幕上，在耳朵里。",
+      "keywords": [
+        "语音模型",
+        "全双工",
+        "ChatGPT Voice",
+        "同步翻译",
+        "人机交互"
+      ],
+      "source": "The Verge AI"
+    },
+    {
+      "title": "机器人新赛点：8 分钟微调，零样本开机",
+      "golden_quote": "机器人公司的未来，可能不是造机器人，而是买 API。",
+      "keywords": [
+        "机器人",
+        "微调",
+        "零样本",
+        "游戏数据",
+        "泛化"
+      ],
+      "source": "TechCrunch AI"
+    }
+  ]
+}
