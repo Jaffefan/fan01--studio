@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-10-1212",
+  "title": "AI 格局巨震：OpenAI 连出三拳，竞合博弈全面升级",
+  "published_at": "2026-07-10 12:12",
+  "duration_seconds": 727.68,
+  "duration_label": "12分07秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "ChatGPT Work：跨应用自主工作的 AI 智能体",
+      "golden_quote": "AI 从回答问题进化到替你干活。",
+      "keywords": [
+        "ChatGPT Work",
+        "AI智能体",
+        "Codex",
+        "GPT-5.6",
+        "自动化办公"
+      ],
+      "source": "OpenAI 官方博客"
+    },
+    {
+      "title": "GPT-5.6 登场：最强模型，三个版本锁定不同战场",
+      "golden_quote": "GPT-5.6 是阳谋——三个版本堵截所有对手。",
+      "keywords": [
+        "GPT-5.6",
+        "Sol",
+        "网络安全",
+        "效率提升",
+        "模型对比"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Elon Musk 公开认错：Anthropic 是 AI 领导者",
+      "golden_quote": "商业博弈里，没有王子与公主的故事。",
+      "keywords": [
+        "Elon Musk",
+        "Anthropic",
+        "算力租赁",
+        "竞争合作",
+        "商业博弈"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "微软 Copilot 换心？OpenAI 回应：GPT-5.6 仍是首选",
+      "golden_quote": "微软与 OpenAI 不是分手，是在重新校准关系。",
+      "keywords": [
+        "微软",
+        "OpenAI",
+        "Copilot",
+        "MAI",
+        "合作关系"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "一周深读： OpenAI 三拳出击，AI 竞合进入新阶段",
+      "golden_quote": "系统之争，才是 2026 年的主战场。",
+      "keywords": [
+        "AI竞争",
+        "系统生态",
+        "三足鼎立",
+        "GPT-5.6",
+        "AI智能体"
+      ],
+      "source": "综合"
+    }
+  ]
+}
