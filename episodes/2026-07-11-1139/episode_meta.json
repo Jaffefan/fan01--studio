@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-11-1139",
+  "title": "马斯克认输、苹果起诉、机器人开刀——AI 今天没闲着",
+  "published_at": "2026-07-11 11:39",
+  "duration_seconds": 540.82,
+  "duration_label": "9分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "百度搭子日均提问量暴增20倍",
+      "golden_quote": "AI 使用率不是靠参数堆出来的，是靠场景长出来的。",
+      "keywords": [
+        "百度搭子",
+        "AI 工作台",
+        "智能路由",
+        "自媒体套件",
+        "搭子联盟"
+      ],
+      "source": "公众号：百度智能云（文心）"
+    },
+    {
+      "title": "Claude Code 桌面版内置浏览器",
+      "golden_quote": "当 AI 学会「看网页」，它的能力就不再受限于你喂给它的文本了。",
+      "keywords": [
+        "Claude Code",
+        "内置浏览器",
+        "AI Agent",
+        "沙盒",
+        "自主浏览"
+      ],
+      "source": "X：Claude Devs (@ClaudeDevs)"
+    },
+    {
+      "title": "苹果起诉OpenAI窃取商业机密",
+      "golden_quote": "AI 公司造手机，苹果打官司——这场仗才刚刚开始。",
+      "keywords": [
+        "苹果起诉OpenAI",
+        "Tang Tan",
+        "商业机密",
+        "硬件竞争",
+        "Jony Ive"
+      ],
+      "source": "TechCrunch：AI（RSS）"
+    },
+    {
+      "title": "人形机器人首次完成活体手术",
+      "golden_quote": "当机器人学会缝合伤口，它离帮我们做饭还会远吗？",
+      "keywords": [
+        "宇树G1",
+        "微创手术",
+        "人形机器人",
+        "达芬奇",
+        "医疗机器人"
+      ],
+      "source": "X：X.PIN (@thexpin)"
+    },
+    {
+      "title": "马斯克承认Anthropic是AI领导者",
+      "golden_quote": "连对手都承认你强，这才是最硬的广告。",
+      "keywords": [
+        "马斯克",
+        "Anthropic",
+        "Mythos",
+        "AI竞赛",
+        "xAI"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    }
+  ]
+}
