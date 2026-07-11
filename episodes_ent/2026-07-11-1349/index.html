@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Muse上线三天就下架，Meta的AI犯众怒 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 055 夜 / 2026-07-11</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Meta</div>
+    <h1 class="ep-title">Muse上线三天就下架<span class="hl">，Meta的AI犯众怒</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 06:49</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260711055035" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">Meta最初还试图辩解。扎克伯格在接受采访时说，M</h3></div><p>你好，我是伊恩。今天聊一件发生得特别快的事——Meta的新AI功能Muse，上线才三天，就自己给掐了。</p><p>三天前，马克·扎克伯格的Meta公司，在Instagram上推出了一款叫Muse的AI图像生成器。它的玩法很简单：你只要在输入框里@一个公开的Instagram账号，Muse就能根据那个账号的公开内容，生成新的图像。听起来像是个创意工具，对吧？但问题出在，这个功能默认是自动开启的——也就是说，你的公开照片、视频、文字，只要别人想用，就可以通过@你来生成各种“衍生作品”，而且这些作品会被永久保存在网上。</p><p>消息一出，首先炸锅的是好莱坞。美国经纪公司巨头CAA率先发声，说这是对艺人姓名、肖像、声音和创作成果的滥用，要求Meta立即设置保护措施。CAA自己的AI项目“AI保险库”虽然也在存储艺人的数字形象，但那是在艺人明确授权的前提下。而Muse的做法，相当于把所有人的公开数据，变成了一锅AI可以随时舀的汤。</p><p>紧接着，演员工会SAG-AFTRA也发声明了，直接建议所有会员在Meta后台里找到设置，手动关闭Muse的引用权限，保护自己的肖像不被滥用。工会主席在一份内部备忘录里写道：“一个鼓励非自愿数字复制品的行为，是不负责任的。”</p><p>Meta最初还试图辩解。扎克伯格在接受采访时说，Muse“只针对公开内容”，并且用户可以通过设置选择退出。但舆论的压力显然超出了预期。不到48小时，Meta就发了个Instagram帖子，态度来了个一百八十度大转弯：“我们听到了反馈，这个功能确实‘missed the mark’，它不再可用了。”</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(136.5,'sec-0002')"><span>▶</span> 02:16</button><h3 class="section-title">那么Muse真的会侵犯隐私吗？从技术上说，它生成的</h3></div><p>Muse就这样夭折了，从推出到下架，前后不过三天。</p><p>但这不是Meta第一次在AI问题上栽跟头，也不是好莱坞第一次为了保护自己的形象而战。要理解这件事为什么会发展得这么快，我们需要往回看。</p><p>2023年，AI生成的“假照片”问题第一次大规模冲击好莱坞。当时，一张假的“小丑”海报在网上疯传，画面里华金·菲尼克斯的脸被AI替换成了某个喜剧演员。虽然最后证明是恶搞，但已经足够让行业警觉。同年，美国编剧工会大罢工中，AI生成剧本就是核心争议之一。工会要求制片厂明确承诺：不会用AI替代人类编剧。最终达成的协议里有一条关键条款——AI不能被视为“作者”，因为它没有版权。</p><p>2024年，SAG-AFTRA也通过了自己的劳动协议：任何使用AI生成演员数字复制品的行为，都必须获得演员的单独同意，并且要支付相应报酬。2025年，加州通过了一项州法，规定未经本人同意不得制作或传播“数字复制品”。</p><p>但这些法律和协议，主要针对的是传统影视制作场景——比如制片厂要拍一部片子，想让去世的演员“复活”，或者让现任演员扮演不同年龄的自己。而Muse这种社交媒体上的AI生成器，完全是另一个维度的问题。它不要求“使用”你的作品，它只需要“引用”你的公开数据。而“引用”这件事，在互联网时代几乎是无法禁止的。</p><p>那么Muse真的会侵犯隐私吗？从技术上说，它生成的图像并不直接复制原图，而是通过算法学习我的风格后再创作。但问题在于，公众关心的不是技术细节，而是控制权——我的脸，凭什么可以被别人用来变出任何东西？CAA的声明说得很直白：“没有清晰、记录的同意，任何人的姓名、图像、肖像、声音或创作作品都不应被第三方使用。”注意，他们说的是第三方，不是AI。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(272.9,'sec-0003')"><span>▶</span> 04:32</button><h3 class="section-title">我没有答案。我只是觉得，Muse这个名字起得挺有讽</h3></div><p>这场争议背后，其实是两条路线的博弈。一条是硅谷的“默认开放”逻辑：你的数据在公域，就是可以被所有人利用的。另一条是好莱坞的“知情同意”逻辑：我的形象是我的资产，任何使用都需要我点头。而数字世界让这两种逻辑直接撞上了。</p><p>Meta的退让，看似是认怂，但也许只是战术调整。Muse虽然下架了，但公开数据被AI模型训练的事实并不会消失。事实上，许多AI公司的数据来源，就包含了Instagram上公开的照片和文字。Meta自己也在训练大模型，而Muse只是那个模型的一个应用出口。现在出口关了，但训练池还在。</p><p>好莱坞这边，CAA和SAG-AFTRA的胜利虽然来得快，但也不代表问题解决了。CAA自己搞的“AI保险库”，就是主动把艺人的数字形象封存起来，自己掌握密钥。但几个大明星可以签协议让CAA托管，普通创作者怎么办？那些每天在Instagram上发照片的素人，他们的数据谁来保护？</p><p>事件本身已经落幕，但它留下了一些值得想的问题：当AI能在几秒内“学习”一个人的视觉风格并生产出全新内容，我们对“肖像权”的定义是不是需要重新写？我们以为“公开”就是默许，但“默许”和“同意”之间，距离是不是越来越远了？还有，每次硅谷搞出一个新功能，总是先上线、再挨骂、再下架——这种“先射箭再画靶”的节奏，还能持续多久？</p><p>我没有答案。我只是觉得，Muse这个名字起得挺有讽刺意味——在古希腊神话里，缪斯是掌握艺术创作的女神，而这次，Meta的Muse还没来得及创作什么作品，就被它自己的用户给叫停了。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">Meta最初还试图辩解。扎克伯格在接受采</span></div>
+<div class="tl-item" onclick="seek(136.5,'sec-0002')"><span class="tl-time">02:16</span><span class="tl-title">那么Muse真的会侵犯隐私吗？从技术上说</span></div>
+<div class="tl-item" onclick="seek(272.9,'sec-0003')"><span class="tl-time">04:32</span><span class="tl-title">我没有答案。我只是觉得，Muse这个名字</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260711055035" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
