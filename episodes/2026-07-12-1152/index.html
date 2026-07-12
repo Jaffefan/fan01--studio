@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 起 AI 事件：从医疗神级到硬盘毁灭，边界在哪 - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 077 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-07-12 11:52（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>14分04秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">5 起 AI 事件：从医疗神级到硬盘毁灭，边界在哪</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260712035402" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="30.2">  <span class="toc-time">00:30</span>  <span class="toc-text">蚂蚁的LingBot-VA 2.0：原生具身基础模型</span></div>
+    <div class="toc-item" data-seek="199.58">  <span class="toc-time">03:19</span>  <span class="toc-text">GPT-5.6医疗评估碾压专科医生</span></div>
+    <div class="toc-item" data-seek="350.11">  <span class="toc-time">05:50</span>  <span class="toc-text">GPT-5.6-Sol 删光创业者 Mac 硬盘</span></div>
+    <div class="toc-item" data-seek="492.94">  <span class="toc-time">08:12</span>  <span class="toc-text">Claude Fable 5 11天重写Bun为Rust</span></div>
+    <div class="toc-item" data-seek="651.9">  <span class="toc-time">10:51</span>  <span class="toc-text">苹果起诉OpenAI：一句“哈哈”泄露机密</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260712035402" alt="蚂蚁的LingBot-VA 2.0：原生具身基础模型" data-seek="30.2" style="cursor:pointer">
+    <div class="segment-number" data-seek="30.2" style="cursor:pointer">第 1 条 · 00:30</div>
+    <h2 class="segment-title">蚂蚁的LingBot-VA 2.0：原生具身基础模型</h2>
+    <div class="segment-summary">蚂蚁集团旗下Robbyant团队发布LingBot-VA 2.0，首个原生具身基础模型。采用因果DiT架构，视频专家约130亿参数（约19亿激活），训练规模153亿参数，推理时每token约25亿激活。引入多块预测实现23倍训练加速，推理延迟降至142毫秒。在RoboTwin 20的50个任务上，平均成功率938和934。该模型从零预训练，而非微调视频生成模型，解决了双向注意力与物理世界时序矛盾的架构问题。</div>
+    <div class="golden-quote">给机器人换上因果大脑，物理世界终于听得懂指令了。</div>
+    <div class="segment-meta">
+      <span class="tag">具身智能</span> <span class="tag">因果DiT</span> <span class="tag">机器人基础模型</span> <span class="tag">蚂蚁集团</span> <span class="tag">原生</span>
+      <span class="tag">来源: MarkTechPost</span>
+      <a class="source-link" href="https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260712035402" alt="GPT-5.6医疗评估碾压专科医生" data-seek="199.58" style="cursor:pointer">
+    <div class="segment-number" data-seek="199.58" style="cursor:pointer">第 2 条 · 03:19</div>
+    <h2 class="segment-title">GPT-5.6医疗评估碾压专科医生</h2>
+    <div class="segment-summary">OpenAI发布GPT-5.6系列医疗评估结果，最小变体Luna在最低推理强度下即超越最高强度的GPT-5.5，且成本低25倍。最大变体Sol树立新标杆。评估涵盖患者端与临床端多元化任务，由专科医生在无限时间和网络条件下撰写回答，其他医生盲评，共两万次评分。结果显示所有GPT-5.6模型表现均显著优于医生，且医生发现AI回答中的缺陷少于医生自己撰写的回答。</div>
+    <div class="golden-quote">最便宜的AI在医疗上已超过最聪明的医生，知识平权迈过关键门槛。</div>
+    <div class="segment-meta">
+      <span class="tag">医疗AI</span> <span class="tag">GPT-5.6</span> <span class="tag">医生评估</span> <span class="tag">成本效益</span> <span class="tag">知识平权</span>
+      <span class="tag">来源: X: Sam Altman</span>
+      <a class="source-link" href="https://x.com/sama/status/2075985056846451123" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260712035402" alt="GPT-5.6-Sol 删光创业者 Mac 硬盘" data-seek="350.11" style="cursor:pointer">
+    <div class="segment-number" data-seek="350.11" style="cursor:pointer">第 3 条 · 05:50</div>
+    <h2 class="segment-title">GPT-5.6-Sol 删光创业者 Mac 硬盘</h2>
+    <div class="segment-summary">知名AI创业者Matt Shumer的Mac硬盘被GPT-5.6-Sol Agent彻底清空。他在本地Agent上开启Full Access权限，让subagent执行文件清理任务，结果shell变量$HOME路径未正确展开，Agent直接执行`rm -rf /Users/mattsdevbox`，导致数年代码、文件、照片丢失。该任务此前已安全运行数百次。事故后，Agent自动生成报告承认错误。Matt表示他1000倍更信任Anthropic的Fable。事件暴露了Agent在shell命令变量展开上的脆弱性，以及高权限+自主运行的灾难放大风险。</div>
+    <div class="golden-quote">AI 不会熟能生巧，它在最安全的地方捅刀最狠。</div>
+    <div class="segment-meta">
+      <span class="tag">AI安全</span> <span class="tag">Agent风险</span> <span class="tag">目录删除</span> <span class="tag">GPT-5.6</span> <span class="tag">沙箱</span>
+      <span class="tag">来源: X: 阿易 AI Notes</span>
+      <a class="source-link" href="https://x.com/AYi_AInotes/status/2075761215251312722" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260712035402" alt="Claude Fable 5 11天重写Bun为Rust" data-seek="492.94" style="cursor:pointer">
+    <div class="segment-number" data-seek="492.94" style="cursor:pointer">第 4 条 · 08:12</div>
+    <h2 class="segment-title">Claude Fable 5 11天重写Bun为Rust</h2>
+    <div class="segment-summary">开发者Jarred Sumner借助Claude Fable 5模型，11天内将JavaScript运行时Bun从Zig重写为Rust。64个实例并行编写超100万行代码，API费用约16.5万美元。重构主因是Zig频繁内存错误，Rust可在编译时捕获。Bun v1.4.0以Canary版本发布，修复128个错误，速度提高约2%到5%。Bun团队于2025年12月被Anthropic收购。该案例展示了AI在大型代码库重写上的巨大潜力与成本优势。</div>
+    <div class="golden-quote">百万行重写只要11天，遗留代码的末日钟又拨快了。</div>
+    <div class="segment-meta">
+      <span class="tag">代码重写</span> <span class="tag">Claude Fable 5</span> <span class="tag">Rust</span> <span class="tag">Bun</span> <span class="tag">AI编程</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/975/469.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260712035402" alt="苹果起诉OpenAI：一句“哈哈”泄露机密" data-seek="651.9" style="cursor:pointer">
+    <div class="segment-number" data-seek="651.9" style="cursor:pointer">第 5 条 · 10:51</div>
+    <h2 class="segment-title">苹果起诉OpenAI：一句“哈哈”泄露机密</h2>
+    <div class="segment-summary">苹果起诉OpenAI，指控前工程师Chang Liu离职时带走未归还的MacBook、一名内应，并利用软件漏洞持续访问苹果内网。他发现漏洞后给同事发消息「哈哈，我发现我还能访问网络存储」，后者协助获取更多机密。苹果称OpenAI试图复制iPhone产品研发体系，核心从窃取的商业机密腐烂。已有超400名苹果员工跳槽至OpenAI，包括前高管Tang Tan。苹果曾尝试私了但未获回应。</div>
+    <div class="golden-quote">一句“哈哈”和一个漏洞，暴露了AI巨头硬件梦的脆弱地基。</div>
+    <div class="segment-meta">
+      <span class="tag">苹果</span> <span class="tag">OpenAI</span> <span class="tag">商业机密</span> <span class="tag">诉讼</span> <span class="tag">硬件竞争</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/975/634.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-07-12 03:54
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

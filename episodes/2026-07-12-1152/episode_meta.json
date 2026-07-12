@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-12-1152",
+  "title": "5 起 AI 事件：从医疗神级到硬盘毁灭，边界在哪",
+  "published_at": "2026-07-12 11:52",
+  "duration_seconds": 812.71,
+  "duration_label": "13分32秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "蚂蚁的LingBot-VA 2.0：原生具身基础模型",
+      "golden_quote": "给机器人换上因果大脑，物理世界终于听得懂指令了。",
+      "keywords": [
+        "具身智能",
+        "因果DiT",
+        "机器人基础模型",
+        "蚂蚁集团",
+        "原生"
+      ],
+      "source": "MarkTechPost"
+    },
+    {
+      "title": "GPT-5.6医疗评估碾压专科医生",
+      "golden_quote": "最便宜的AI在医疗上已超过最聪明的医生，知识平权迈过关键门槛。",
+      "keywords": [
+        "医疗AI",
+        "GPT-5.6",
+        "医生评估",
+        "成本效益",
+        "知识平权"
+      ],
+      "source": "X: Sam Altman"
+    },
+    {
+      "title": "GPT-5.6-Sol 删光创业者 Mac 硬盘",
+      "golden_quote": "AI 不会熟能生巧，它在最安全的地方捅刀最狠。",
+      "keywords": [
+        "AI安全",
+        "Agent风险",
+        "目录删除",
+        "GPT-5.6",
+        "沙箱"
+      ],
+      "source": "X: 阿易 AI Notes"
+    },
+    {
+      "title": "Claude Fable 5 11天重写Bun为Rust",
+      "golden_quote": "百万行重写只要11天，遗留代码的末日钟又拨快了。",
+      "keywords": [
+        "代码重写",
+        "Claude Fable 5",
+        "Rust",
+        "Bun",
+        "AI编程"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "苹果起诉OpenAI：一句“哈哈”泄露机密",
+      "golden_quote": "一句“哈哈”和一个漏洞，暴露了AI巨头硬件梦的脆弱地基。",
+      "keywords": [
+        "苹果",
+        "OpenAI",
+        "商业机密",
+        "诉讼",
+        "硬件竞争"
+      ],
+      "source": "IT之家"
+    }
+  ]
+}
