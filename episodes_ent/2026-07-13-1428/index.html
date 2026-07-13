@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>法国导演的《鬼玩人》新篇：用真火和假牙拍出最狠的恐怖 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 058 夜 / 2026-07-13</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Evil Dead Burn</div>
+    <h1 class="ep-title">法国导演的《鬼玩人》新篇：<span class="hl">用真火和假牙拍出最狠的恐怖</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:35</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260713063013" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">《Evil Dead Burn》的故事发生在《鬼玩</h3></div><p>你好，我是伊恩。想象一下，你在电影院看一部恐怖片，开场不到十分钟，一只狗被杀了。观众集体倒吸凉气，有人甚至喊了出来。然后，这只狗又活了过来——以一种更凶残的方式。这就是《Evil Dead Burn》的开场，也是法国导演Sébastien Vaniček带给我们的血泊狂欢。今天，我们来聊聊这部今年最受关注的恐怖片续集，以及它背后那个拍出《鬼玩人》系列最残忍镜头的男人。</p><p>导演Sébastien Vaniček在接受Variety采访时说了一段话，我觉得特别有意思。他说：“如果你在《鬼玩人》里都不能杀死狗，那你在什么电影里能这么做？这些是最疯狂、最野、基本上就是邪恶的电影。”他笑着补充，当然，他知道观众会恨这个场景。但这就是《鬼玩人》的精神——没有限制，不能有限制。果然，那只狗后来以一种“坏蛋”的新形态复活了，连同其他被残忍杀害后变成死灵的人类。</p><p>但狗只是开胃菜。Vaniček的这部电影充满了让你生理不适的暴力：女人被汽车座椅头枕刺穿身体，滚烫的蜡烛油浇进她的嘴里。这些不是特效，大多数是实拍。Vaniček说：“我在电影里看到假血时，我根本不觉得恶心，因为我知道那是假的。但当我看到《美国X档案》里牙齿掉在马路上的画面时，那是我再也看不下去的时刻。”所以他追求的是一种更真实的残酷。</p><p>《Evil Dead Burn》的故事发生在《鬼玩人崛起》之后，但关联很松散。一家人因为父亲威尔车祸去世而聚在一起，母亲爱丽丝在丈夫生前遭受过虐待，现在她陷入悲痛，而家族成员一个个被死灵附身，开始互相残杀。影片大部分在新西兰拍摄，是Vaniček继《Infested》之后的第二部长片，那是一部关于蜘蛛入侵公寓的法国小成本电影。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(127.0,'sec-0002')"><span>▶</span> 02:07</button><h3 class="section-title">那场晚餐戏之后，暴力开始升级。最令人印象深刻的一个</h3></div><p>Vaniček跟系列创始人Sam Raimi和制片人Rob Tapert说，他不那么在意呕吐袋式的血浆。他说：“当我看到电影里的假血，我不会感到反胃。但当我在《美国X档案》里看到牙齿落在人行道上，那是我无法再看屏幕的时刻。”他要的是那种心理上的痛感，而不是视觉上的泛滥。所以《Burn》里很少有经典的“血雨”场景，取而代之的是更具体的、更精细的暴力：比如用真蜡烛油浇嘴，用真火烧演员。</p><p>Vaniček在采访中透露，所有能实拍的都实拍了。唯一用CGI的是脸上的洞——在尸体脸上做绿色标记，后期合成。但最终怪物也是实体的，只是用CGI添加了洞眼。他特别强调：“我想保留乔治（演员）的眼睛和脸，他给Souheila的表演。火是巨大的挑战，因为我不想要CGI火，所以我们片场一直有真火。用真火照明整个场景非常棘手，拍摄时间长，强度大。但最终，观众能感觉到那种真实。”</p><p>影片中有一场葬礼后的晚餐戏，被认为是最紧张的场景之一。没有打斗，没有动作，全靠声音剪辑和表演来制造张力。Vaniček说他们花了很长时间写这场戏，因为要确保每个角色的动机都清晰。母亲和父亲对爱丽丝恶语相向，但你知道他们其实也被死灵影响了。这种心理恐怖比直接的砍杀更让人不安。</p><p>那场晚餐戏之后，暴力开始升级。最令人印象深刻的一个镜头是，一个女人被汽车座椅的头枕从嘴里刺穿——那根金属杆直接从喉咙穿出。Vaniček说这个想法来自他看的一部恐怖片《Carver》里的场景，但他做了改进。实拍时，演员嘴里含着一根假的金属杆，延伸部分用CGI补上。但他坚持用真蜡烛油，因为“假蜡烛油看起来像果冻”。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(254.0,'sec-0003')"><span>▶</span> 04:14</button><h3 class="section-title">实际上，法国恐怖片的暴力基因可以追溯到更早。196</h3></div><p>另一个标志性场景是“蜡烛油浇嘴”。演员被绑在椅子上，死灵把滚烫的蜡烛油倒进她的嘴里。Vaniček说他们用的是低温蜡烛油，但依然很烫，演员只能坚持几秒然后必须停下来。这个场景拍了多次，每次演员都要清洗嘴里剩余的蜡。</p><p>那么，这种极端的暴力风格从何而来？Vaniček是法国人，他成长在法国恐怖片新浪潮的背景下。2000年代，法国电影界出现了一批极其暴力的恐怖片，比如《高压电》（2003）、《殉难者》（2008）、《边城》（2008）和《人体雕像》（2004）。这些电影以毫不妥协的暴力、哲学化的折磨和极低的叙事铺垫著称。Vaniček的《Infested》虽然也是恐怖片，但更像是一部带有社会隐喻的怪物片，而《Evil Dead Burn》则是他真正展现法国极端风格的舞台。</p><p>实际上，法国恐怖片的暴力基因可以追溯到更早。1960年代，法国新浪潮导演让-吕克·戈达尔在《周末》（1967）中就用长镜头展现车辆爆炸和血肉模糊，但那更像是政治隐喻。真正的转折点是1990年代末和2000年代初，随着录像厅文化的崛起和数字拍摄的普及，一批年轻导演开始把美国恐怖片（尤其是《德州电锯杀人狂》）和意大利铅黄片（giallo）的元素融合，加入法国式的情感和哲学。\n</p><p>与亚洲恐怖片不同，法国极端恐怖片不玩心理暗示，而是把痛苦直接展示给你看。《殉难者》中女主角被囚禁、剥皮的过程几乎实拍，导演说演员真的脱了一层皮。《边城》里用真枪实弹拍摄，演员受伤是常事。Vaniček显然继承了这种传统，但他比前辈更聪明——他知道何时该留白。比如那只狗被杀，镜头切得很快，但观众已经受到了伤害。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(381.0,'sec-0004')"><span>▶</span> 06:21</button><h3 class="section-title">影片的一个争议点，也是很多人讨论的地方，是片尾彩蛋</h3></div><p>《鬼玩人》系列本身就有一个独特的历史。1981年Sam Raimi的《鬼玩人》是低预算的奇迹，他用极少的钱拍出了超乎想象的恐怖和幽默。电影中的死灵不是鬼魂，而是实体怪物，它们的尖叫和变形定格动画是标志。1987年的《鬼玩人2》在恐怖中加入了更多黑色幽默：主角阿什用电锯代替手，用猎枪对抗怪物。1992年的《魔界英豪》则走向了更喜剧的路线。2013年，Fede Álvarez重启了这个系列，拍了一部极其严肃、血腥的《鬼玩人》。那部电影中真正的血浆桶被泼在演员身上，演员差点溺毙。2023年《鬼玩人崛起》则把场景搬到了城市公寓，用玻璃碎片和奶酪刨制造新的恐怖。</p><p>Vaniček是第一个非英语母语的导演执导《鬼玩人》系列。他带来了法国电影特有的冷酷和对细节的执着。他说：“我跟Raimi说，我拍的是《鬼玩人》，但我不拍那种呕吐式的血浆。我要拍的是让你感到痛的恐怖。”他没有直接使用系列标志性的“死灵之书”录音带，而是通过场景氛围来暗示。</p><p>影片的一个争议点，也是很多人讨论的地方，是片尾彩蛋。彩蛋中，一个模糊的剪影出现在森林里，手里拿着电锯。很多人猜测这是不是阿什（Bruce Campbell饰演）的回归。Bruce Campbell在1990年代后淡出系列，只在2015年剧集《阿什斗鬼玩人》中出现过。Vaniček在采访中说：“我们想给老粉丝一个惊喜，让你们知道世界是相连的。”但没有确认是否是Bruce本人。</p></div>
+<div class="section" id="sec-0005"><p>《Evil Dead Burn》在北美首周票房为2600万美元，评分在烂番茄上维持80%新鲜度。但争议不小：有的影评人说这是“系列中最没有幽默感的一部”，而另一些人说“这是最恐怖的《鬼玩人》”。Vaniček本人对此很坦然：“我不是要讨好所有人。我要的是那些真正喜欢《鬼玩人》的灵魂。”</p><p>未来会怎样？Vaniček暗示如果票房成功，他可能会继续拍下一部。而那个彩蛋似乎指向了某个经典的回归。但也许，正如他所说的：“《鬼玩人》真正的力量在于，它是关于人之恶的。你不必非要有一个大反派，你自己就是最大的怪物。”</p><p>在离开电影院时，你可能不会呕吐，但你会记得每一根刺入身体的头枕、每一滴浇在舌头上的蜡。这就是法国导演的残忍，他让你记住的不是血浆的颜色，而是痛苦的形状。</p><p>今天的故事就到这里。也许晚上你不会开灯出门，也许你会怀疑邻居的笑容。但那正是恐怖片的意义——在安全的世界里，体验一下最深的恐惧，然后回到日常生活，感到一丝幸运。</p><p>我是伊恩，我们明天见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">《Evil Dead Burn》的故事发</span></div>
+<div class="tl-item" onclick="seek(127.0,'sec-0002')"><span class="tl-time">02:07</span><span class="tl-title">那场晚餐戏之后，暴力开始升级。最令人印象</span></div>
+<div class="tl-item" onclick="seek(254.0,'sec-0003')"><span class="tl-time">04:14</span><span class="tl-title">实际上，法国恐怖片的暴力基因可以追溯到更</span></div>
+<div class="tl-item" onclick="seek(381.0,'sec-0004')"><span class="tl-time">06:21</span><span class="tl-title">影片的一个争议点，也是很多人讨论的地方，</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260713063013" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
