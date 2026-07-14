@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 条资讯：从 OCR 开源到视频生成 20 亿估值 - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 079 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-07-14 11:29（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>9分23秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">5 条资讯：从 OCR 开源到视频生成 20 亿估值</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260714033053" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="29.34">  <span class="toc-time">00:29</span>  <span class="toc-text">腾讯 OCR 开源，推理加速 6 倍</span></div>
+    <div class="toc-item" data-seek="161.66">  <span class="toc-time">02:41</span>  <span class="toc-text">Meta 投 500 亿美元建数据中心</span></div>
+    <div class="toc-item" data-seek="263.74">  <span class="toc-time">04:23</span>  <span class="toc-text">黄仁勋否认 Rubin Ultra 延期</span></div>
+    <div class="toc-item" data-seek="359.58">  <span class="toc-time">05:59</span>  <span class="toc-text">字节图像编辑模型 Seedream 5.0</span></div>
+    <div class="toc-item" data-seek="449.75">  <span class="toc-time">07:29</span>  <span class="toc-text">PixVerse 融资 4.39 亿美元</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260714033053" alt="腾讯 OCR 开源，推理加速 6 倍" data-seek="29.34" style="cursor:pointer">
+    <div class="segment-number" data-seek="29.34" style="cursor:pointer">第 1 条 · 00:29</div>
+    <h2 class="segment-title">腾讯 OCR 开源，推理加速 6 倍</h2>
+    <div class="segment-summary">腾讯混元发布 HyOCR-1.5，为端到端 OCR 模型领域首个全栈开源项目。仅 1B 参数，支持 4K 分辨率与 128K 上下文，在 OmniDocBench 上以 94.74 分居首。引入 DFlash 投机解码框架，Transformers 下推理加速 6.37 倍。覆盖 8 种以上文本任务，拓展至 331 种语言与古文字识别。</div>
+    <div class="golden-quote">开源是最高级的打法</div>
+    <div class="segment-meta">
+      <span class="tag">OCR</span> <span class="tag">腾讯混元</span> <span class="tag">开源</span> <span class="tag">HyOCR</span>
+      <span class="tag">来源: 腾讯混元官方公众号</span>
+      <a class="source-link" href="https://mp.weixin.qq.com/s/vKFCa9FfoGBUGK8J1MhFag" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260714033053" alt="Meta 投 500 亿美元建数据中心" data-seek="161.66" style="cursor:pointer">
+    <div class="segment-number" data-seek="161.66" style="cursor:pointer">第 2 条 · 02:41</div>
+    <h2 class="segment-title">Meta 投 500 亿美元建数据中心</h2>
+    <div class="segment-summary">Meta 宣布将路易斯安那州数据中心扩建至 5GW，总投资超 500 亿美元。Meta 承诺承担全部能源及水费用，并另投 10 亿美元改善当地基础设施。与安特吉公司合作建设天然气发电厂、储能电池及核电增容项目。这是全球最大 AI 基础设施投资之一。</div>
+    <div class="golden-quote">AI 竞赛已变成能源战争</div>
+    <div class="segment-meta">
+      <span class="tag">数据中心</span> <span class="tag">Meta</span> <span class="tag">能源</span> <span class="tag">基础设施</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/976/149.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260714033053" alt="黄仁勋否认 Rubin Ultra 延期" data-seek="263.74" style="cursor:pointer">
+    <div class="segment-number" data-seek="263.74" style="cursor:pointer">第 3 条 · 04:23</div>
+    <h2 class="segment-title">黄仁勋否认 Rubin Ultra 延期</h2>
+    <div class="segment-summary">黄仁勋在摩根士丹利路演中透露英伟达季度营收逼近 1000 亿美元，否认 Rubin Ultra 延期。最受关注的是，一个此前主要依赖 ASIC 的 AI 模型项目，如今英伟达 GPU 占比已近 50%，市场普遍指向 Anthropic。英伟达 CPU 业务预计本财年收入约 200 亿美元。</div>
+    <div class="golden-quote">客户用钱投票，英伟达仍是首选</div>
+    <div class="segment-meta">
+      <span class="tag">英伟达</span> <span class="tag">黄仁勋</span> <span class="tag">Rubin Ultra</span> <span class="tag">Anthropic</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/975/865.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260714033053" alt="字节图像编辑模型 Seedream 5.0" data-seek="359.58" style="cursor:pointer">
+    <div class="segment-number" data-seek="359.58" style="cursor:pointer">第 4 条 · 05:59</div>
+    <h2 class="segment-title">字节图像编辑模型 Seedream 5.0</h2>
+    <div class="segment-summary">字节跳动发布 Seedream 5.0 Pro，核心亮点为可编辑交互：在图上标记区域并 @ 即可局部编辑，其他区域不变。支持打点、画框、涂鸦等操作，实测覆盖家装改造、商品图制作、海报排版等场景。火山引擎已全量上线 API，即梦、豆包、Lumina 可体验。</div>
+    <div class="golden-quote">设计工具不是替代创意，而是加速执行</div>
+    <div class="segment-meta">
+      <span class="tag">Seedream</span> <span class="tag">字节跳动</span> <span class="tag">图像编辑</span> <span class="tag">可编辑交互</span>
+      <span class="tag">来源: X：歸藏 (@op7418)</span>
+      <a class="source-link" href="https://x.com/op7418/status/2076604797202161800" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260714033053" alt="PixVerse 融资 4.39 亿美元" data-seek="449.75" style="cursor:pointer">
+    <div class="segment-number" data-seek="449.75" style="cursor:pointer">第 5 条 · 07:29</div>
+    <h2 class="segment-title">PixVerse 融资 4.39 亿美元</h2>
+    <div class="segment-summary">新加坡视频生成初创公司 PixVerse 完成 4.39 亿美元 C 轮扩展融资，估值超 20 亿美元，投资者包括阿里巴巴等。公司拥有 1500 万月活用户，生成一分钟视频成本 4.8 美元，已推出 V 系列、C 系列和 R 系列模型，覆盖消费、专业影视及游戏开发场景。</div>
+    <div class="golden-quote">视频生成赛道正在加速出清</div>
+    <div class="segment-meta">
+      <span class="tag">PixVerse</span> <span class="tag">视频生成</span> <span class="tag">融资</span> <span class="tag">世界模型</span>
+      <span class="tag">来源: TechCrunch</span>
+      <a class="source-link" href="https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-07-14 03:30
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

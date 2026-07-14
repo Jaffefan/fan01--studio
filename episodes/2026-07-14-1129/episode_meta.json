@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-14-1129",
+  "title": "5 条资讯：从 OCR 开源到视频生成 20 亿估值",
+  "published_at": "2026-07-14 11:29",
+  "duration_seconds": 541.13,
+  "duration_label": "9分01秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "腾讯 OCR 开源，推理加速 6 倍",
+      "golden_quote": "开源是最高级的打法",
+      "keywords": [
+        "OCR",
+        "腾讯混元",
+        "开源",
+        "HyOCR"
+      ],
+      "source": "腾讯混元官方公众号"
+    },
+    {
+      "title": "Meta 投 500 亿美元建数据中心",
+      "golden_quote": "AI 竞赛已变成能源战争",
+      "keywords": [
+        "数据中心",
+        "Meta",
+        "能源",
+        "基础设施"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "黄仁勋否认 Rubin Ultra 延期",
+      "golden_quote": "客户用钱投票，英伟达仍是首选",
+      "keywords": [
+        "英伟达",
+        "黄仁勋",
+        "Rubin Ultra",
+        "Anthropic"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "字节图像编辑模型 Seedream 5.0",
+      "golden_quote": "设计工具不是替代创意，而是加速执行",
+      "keywords": [
+        "Seedream",
+        "字节跳动",
+        "图像编辑",
+        "可编辑交互"
+      ],
+      "source": "X：歸藏 (@op7418)"
+    },
+    {
+      "title": "PixVerse 融资 4.39 亿美元",
+      "golden_quote": "视频生成赛道正在加速出清",
+      "keywords": [
+        "PixVerse",
+        "视频生成",
+        "融资",
+        "世界模型"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
