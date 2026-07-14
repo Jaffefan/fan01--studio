@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>波兰人在抢救失传的中国老游戏 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 059 夜 / 2026-07-14</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> GOG</div>
+    <h1 class="ep-title">波兰人在抢救失<span class="hl">传的中国老游戏</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 12:54</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260714054111" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">而且GOG卖的游戏都是“DRM-FREE”的，也就</h3></div><p>你好，我是伊恩。想象一下，你小时候玩过的一款国产老游戏，网上早就找不到下载，连盗版资源站都没了，操作系统也跑不起来——突然有一天，一群波兰人把它修好了，还能在Windows 11上直接玩。这事儿正在发生。</p><p>7月1日，索尼宣布将在2028年彻底取消实体游戏光盘，同时今年下半年就陆续关闭PS3和PS Vita的PlayStation商店。这意味着玩家以后再也买不到这些平台上的数字版游戏了。唯一的好消息是，索尼暂时允许玩家继续下载已购买的内容——但这份承诺能持续多久，没人知道。两条政策一叠加，玩家“收藏游戏”的权利几乎被彻底剥夺：实体版没了，数字版需要在线验证，离开网络你什么都玩不了。</p><p>但有人在逆势而行。我前阵子探访了波兰的游戏发行平台GOG，他们正在做的事情恰恰相反——把那些失传的、快被遗忘的老游戏抢救回来，让它们重新“可以玩”。而且，他们下一步的目标，是中国老游戏。</p><p>先说GOG是谁。国内稍微有点资历的PC玩家应该不陌生。GOG三个字母代表“Good Old Games”，直译就是“好老游戏”。它曾经是波兰游戏公司CD Projekt的一部分——对，就是做《巫师》和《赛博朋克2077》那家。GOG的初衷很简单：找到那些已经失去正常销售渠道、在网上都搜不到下载的老游戏，把它们修好，让它们能在现代操作系统上运行，然后联系版权方，上架销售。</p><p>而且GOG卖的游戏都是“DRM-FREE”的，也就是没有加密拷贝。你在GOG买了一个游戏，下载下来，拷到移动硬盘或刻成光盘，那就是真正属于你自己的正版“实体”游戏。不需要联网验证，不用登录账户，拿到任何设备上都能玩。从某种程度上说，你买游戏的同时，也成了保存游戏源文件的一份子。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(129.1,'sec-0002')"><span>▶</span> 02:09</button><h3 class="section-title">他们给我看了一间试玩室，里面摆着几台电脑，运行着《</h3></div><p>听起来很理想主义对吧？但做起来太难了。GOG长期游走在盈利和亏本的边缘。根据CDPR去年财报，GOG营收大约4700万欧元，不到Steam的千分之五，净利润只有26.8万欧元，大约220万人民币——这已经是平台极限压缩成本的结果了。今年1月，CDPR联合创始人Michał Kiciński用2500万美元把GOG从公司剥离，让它独立运营。外界普遍觉得这是“卸包袱”，但GOG方面觉得，独立之后不用再为母公司财报背书，反而能更自由地尝试自己想做的事。</p><p>我前阵子去了GOG在波兰华沙的总部，在一间紧凑的小办公室里，他们专门辟了一个角落来营造复古游戏氛围。墙上贴着老海报，桌上摆着旧主机。GOG在两年前启动了“游戏典藏计划”（Preservation Program），现在他们做的已经不只是“保存”老游戏，而是花大量时间和精力让这些游戏真正“可玩”。</p><p>他们给我看了一间试玩室，里面摆着几台电脑，运行着《生化危机0》《英雄无敌3》《最终幻想4》和《圣剑传说》。这些游戏都是GOG今年刚上架的，不仅能在Windows 10和11上流畅运行，还整合了所有的DLC，并且适配了PS5和Xbox Series X/S手柄。更厉害的是，GOG还会为一些老游戏直接打包民间制作的模组。比如《英雄无敌3》，他们和民间汉化组合作，把中文补丁直接整合进游戏里——官方做这种事总有顾虑，但GOG作为第三方可以居中协调。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(258.3,'sec-0003')"><span>▶</span> 04:18</button><h3 class="section-title">前面提到的那间试玩室里，有四款游戏：三款是亚洲作品</h3></div><p>GOG的高级业务拓展经理Marcin Paczyński告诉我，他们多年积累了一套完整的技术工具和流程，可以在没有游戏源代码的情况下维护游戏。市面上也有其他开源方案能复活经典游戏，但大多是为单一作品高度定制的，很难扩展。GOG从一开始就是奔着规模化去做，这套模式可以不断扩展、长期持续。</p><p>他们现在的合作方也越来越多。卡普空今年4月在Steam上架了原版《生化危机》三部曲，就是GOG修复的版本。但卡普空在Steam卖的是加了D加密的版本，而GOG自己的版本依然是DRM-FREE。厂商拿着GOG修好的版本去别处再卖一遍，GOG也不拦着——但如果那些游戏几年后出了兼容性问题，几乎没有其他公司会持续维护。玩家要想确保自己几年后还能玩，或者想方便地下载整合了汉化Mod的版本，最可靠的选择还是来GOG。</p><p>这就引出GOG现在做法的核心转变：他们不再只是卖“DRM-FREE”这个概念，而是在销售一种服务——为你提供更长的游戏生命周期。当然，Marcin也坦率承认，这套商业模式可持续性依然是个巨大的挑战。他们的分成结构和别的平台差不多，但要额外承担修复和维护的工作。好在过去多年的技术成本已经平摊了，现在他们也开放了打赏和订阅赞助，每月5美元，像喝杯咖啡钱，认可这项工作的玩家可以额外支持一下。</p><p>说到这里，你可能已经在想：这些波兰人跟中国老游戏有什么关系？</p><p>前面提到的那间试玩室里，有四款游戏：三款是亚洲作品，一款是《英雄无敌3》。GOG的工作人员特意说，这是专门为我们这些中国参观者准备的——中国玩家对《英雄无敌3》很熟悉，它早年以实体盘形式被正版引进过；亚洲作品则是GOG现在重点拓展的方向。但遗憾的是，GOG目前还没有收录任何一款中国经典老游戏。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(387.4,'sec-0004')"><span>▶</span> 06:27</button><h3 class="section-title">当然，Marcin也承认，GOG目前面向中国玩家提</h3></div><p>这正是他们下一步想做的事。</p><p>Marcin透露，他们已经为几款中国经典游戏做好了技术复原准备——母版和构建版本都有了，技术上随时可以上架。只要版权授权和商业模式谈妥，最快一周就能上线。但最大的挑战来自法律和授权层面。国内的老游戏版权状况非常复杂，很多游戏的版权方已经不存在了，或者权属不明。GOG非常需要国内的合作伙伴来帮他们理解和应对这个环境。</p><p>GOG曾经在2017年前后积极拓展过中国市场，后来因为平台一直难以盈利，就淡化了。但七年过去了，市场发生了巨大变化。Steam中国区用户数暴涨，独立游戏和复古游戏氛围浓厚。Marcin认为，现在是一个再次认真为中国玩家做点事的好时机。当初GOG在中国没能引起足够共鸣，主要因为他们的游戏库以欧美经典老游戏为主，上千款游戏里中国玩家可能只对一小部分感兴趣。但现在不一样了——十年前、十五年前在中国流行过的那些游戏，比如《仙剑奇侠传》《轩辕剑》《大富翁》《帝国时代》，技术上都开始出问题，需要持续维护。这正是GOG的战场。</p><p>不止是PC游戏。GOG也在研究PlayStation、Super Nintendo等旧主机的模拟方案，把这些平台上的经典游戏带到PC并纳入典藏计划。甚至网游也可能成为他们之后的方向。这些无疑都是中国玩家会感兴趣的内容。</p><p>当然，Marcin也承认，GOG目前面向中国玩家提供的服务还不够好——无论是技术问题、定价问题还是整体用户体验，都需要改善。他说“我对此感到抱歉”，并承诺会在基础服务达标后集中资源做中国市场。更多新动向会在今年夏天公布。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(516.6,'sec-0005')"><span>▶</span> 08:36</button><h3 class="section-title">Marcin告诉我，他们内部有一个非常明确的目标：</h3></div><p>其实GOG的客户端GOG GALAXY 2.0做得挺不错，尤其在游戏整理方面有很多Steam没有的功能，对中国玩家来说，短板主要还是网络连接问题。</p><p>文章最后，GOG所在的城市波兰华沙，二战期间因华沙起义失败，被纳粹报复性破坏，全城85%的建筑被炸平，人口只剩一千多人。之后华沙经历了漫长的重建。今天，站在华沙街头，你几乎看不出战争的痕迹，老城区还被列入了世界文化遗产。</p><p>游戏保护，某种程度上也是一场重建——重建那些差点被时间、被技术更迭、被商业逻辑掩埋的记忆。而扛起铁锹的，是一群波兰人。</p><p>他们修好了《生化危机》，修好了《英雄无敌3》，现在他们想来修我们的老游戏了。可问题是——那些老游戏，我们还能找到它们真正的“主人”吗？这意味着，我们需要有人帮忙理清那些陈年的版权纠纷，有人愿意牵线搭桥，有人先把这些游戏从技术的坟墓里挖出来。GOG已经把铲子递过来了，就看我们这边愿不愿意接。</p><p>当索尼在2028年彻底关上实体游戏那扇门，当Steam上的经典游戏随系统更新渐渐打不开，当某些公司服务器一关、你花几千块买的“数字资产”瞬间消失——那时候，我们会庆幸世界上还有人在做这种“吃力不讨好”的事。</p><p>Marcin告诉我，他们内部有一个非常明确的目标：让被纳入典藏计划的游戏，不论过多少年，永远可以玩。这是一个听起来近乎狂妄的承诺，但他们的自信来源于两样东西——一是技术，二是态度。技术层面，他们能在没有源代码的情况下修复和适配游戏；态度层面，他们愿意持续投入人力去做这件事，而不是像大多数公司那样，卖完就不管了。</p></div>
+<div class="section" id="sec-0006"><p>我问他，你们怎么确定哪些游戏值得救？他说，没有固定的标准，更多是看玩家社区的呼声，看合作方的意愿，看有没有足够的人希望这款游戏活下来。也就是说，每一款被拯救的老游戏，背后都站着一群不愿忘记它的人。</p><p>这让我想起一件事。很多国产老游戏的粉丝，多年来只能靠盗版、虚拟机、甚至YouTube云通关来重温童年。如果GOG真的能把这些游戏合法地、方便地、能永久拥有地放到玩家手上，那会是一份不可替代的礼物。</p><p>但话说回来，GOG毕竟还是商业公司，不是慈善机构。他们的生存模式需要玩家真金白银的支持，尤其是在中国这个盗版文化根深蒂固的市场。五美元一个月听着不多，但要让足够多的人愿意为一个波兰平台上的中国老游戏付费，这需要信任，也需要时间。</p><p>站在华沙那个紧凑的办公室里，看着那些老游戏在最新的显示器上流畅运行，我忽然觉得，这也许不仅仅是技术问题，也不仅仅是商业问题。这背后是一种非常朴素的情感：有些东西值得被记住，值得被传给下一代。而让它们可以玩，就是最好的记住方式。</p><p>当你某天打开GOG，看到自己童年玩过的游戏正端端正正地摆在货架上，点击购买，下载，安装，双击图标，然后听见那熟悉了十多年的开场音乐——那种感觉，应该挺奇妙的。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">而且GOG卖的游戏都是“DRM-FREE</span></div>
+<div class="tl-item" onclick="seek(129.1,'sec-0002')"><span class="tl-time">02:09</span><span class="tl-title">他们给我看了一间试玩室，里面摆着几台电脑</span></div>
+<div class="tl-item" onclick="seek(258.3,'sec-0003')"><span class="tl-time">04:18</span><span class="tl-title">前面提到的那间试玩室里，有四款游戏：三款</span></div>
+<div class="tl-item" onclick="seek(387.4,'sec-0004')"><span class="tl-time">06:27</span><span class="tl-title">当然，Marcin也承认，GOG目前面向</span></div>
+<div class="tl-item" onclick="seek(516.6,'sec-0005')"><span class="tl-time">08:36</span><span class="tl-title">Marcin告诉我，他们内部有一个非常明</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260714054111" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
