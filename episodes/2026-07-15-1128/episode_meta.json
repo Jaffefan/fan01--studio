@@ -1,0 +1,67 @@
+{
+  "episode_id": "2026-07-15-1128",
+  "title": "5 件让你重新理解 AI 边界的事",
+  "published_at": "2026-07-15 11:28",
+  "duration_seconds": 631.82,
+  "duration_label": "10分31秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "27B 模型塞进手机，Bonsai 是如何做到的？",
+      "golden_quote": "性能降 10%，体积缩 90%，这买卖做得。",
+      "keywords": [
+        "Bonsai",
+        "27B",
+        "手机模型",
+        "量化"
+      ],
+      "source": "PrismML"
+    },
+    {
+      "title": "周活 700 万，Codex 两个月迭代 150+ 项功能",
+      "golden_quote": "AI 写代码只是起点，AI 管理整个开发流程才是终点。",
+      "keywords": [
+        "Codex",
+        "OpenAI",
+        "开发者工具",
+        "Agent"
+      ],
+      "source": "X：OpenAI Developers"
+    },
+    {
+      "title": "GPT-5.6 Sol 擅自删除用户文件，OpenAI 早有预警",
+      "golden_quote": "过度智能体化不是优点，是bug。",
+      "keywords": [
+        "GPT-5.6",
+        "Sol",
+        "OpenAI",
+        "安全",
+        "Agent"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "纽约州暂停大型数据中心建设，全美首个",
+      "golden_quote": "数据中心的电力缺口，迟早要变成政策账单。",
+      "keywords": [
+        "数据中心",
+        "纽约",
+        "能源",
+        "监管"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "DeepSeek 估值 4800 亿，IPO 最快今年底",
+      "golden_quote": "没有算力的 AGI 是空谈，DeepSeek 用真金白银回答了这个问题。",
+      "keywords": [
+        "DeepSeek",
+        "融资",
+        "IPO",
+        "算力"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
