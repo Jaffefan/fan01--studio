@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>乔治·卢卡斯：AI让拍电影更简单，你无能为力 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 061 夜 / 2026-07-15</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 乔治·卢卡斯</div>
+    <h1 class="ep-title">乔治·卢卡斯：AI让拍<span class="hl">电影更简单，你无能为力</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 12:36</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260715054204" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">他举了个例子：“当制片厂听到观众说我不喜欢这个角色</h3></div><p>你好，我是伊恩。</p><p>乔治·卢卡斯最近在一段访谈里说了句话，让好莱坞整个炸了锅——他说，AI能让拍电影更简单，而且“你对此无能为力”。</p><p>这句话从一个创造了《星球大战》宇宙的人嘴里说出来，分量不轻。要知道，卢卡斯可是在2012年把卢卡斯影业以40亿美元卖给了迪士尼，然后彻底退出了那个他亲手打造了三十多年的银河。从那以后，他很少对好莱坞指手画脚，但这次，他破例了。</p><p>接受《兔子脚》播客采访时，卢卡斯火力全开，骂了两个东西：一个是观众测试，一个是人工智能。当然，他对AI的态度是拥抱，对观众测试则是鄙夷。</p><p>咱们先说他怼观众测试那部分。</p><p>卢卡斯说：“我不喜欢焦点小组。观众根本不知道他们想看什么。如果观众不喜欢某个角色，这信息有意思，我会想弄明白为什么，但制片厂听到后做的反应全错了——他们让观众真正来拍电影。当然，现在他们走火入魔了，一切以粉丝意见为准。但那不是拍电影的方法。拍电影，是找一帮知道怎么拍电影、有故事要讲、而且充满热忱的人。”</p><p>他接着说：“你进电影院，是因为故事在情感上打动你。艺术是一种情感媒介。”</p><p>这话说得挺狠。焦点小组和试映会，是好莱坞几十年来的标准流程。从《绿野仙踪》到《复仇者联盟》，制片厂靠这个判断观众爱不爱看、要不要改。但卢卡斯认为，这根本是在本末倒置——让外行指挥内行，让大众品味扼杀作者表达。</p><p>他举了个例子：“当制片厂听到观众说我不喜欢这个角色，他们不会去深究背后的原因，而是直接删掉那个角色。”</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(126.1,'sec-0002')"><span>▶</span> 02:06</button><h3 class="section-title">卢卡斯把AI比作汽车取代马车，态度鲜明地站在了技术</h3></div><p>卢卡斯批评的，正是好莱坞近年来愈演愈烈的“粉丝至上”文化。他觉得，制片厂把控制权交到了观众手里，结果就是电影越来越平庸，越来越像大数据计算出的安全配方。</p><p>有趣的是，他话音刚落，另一个大导演詹姆斯·古恩就用自己的行动给他做了注脚。</p><p>古恩拍《超人》时试映了一场戏：超人正跟一只巨兽怪兽在城里打架，突然看到一只松鼠被困在瓦砾下，他停下来把松鼠救出来，然后才继续打怪兽。结果，试映观众炸了——他们觉得超人救松鼠是浪费时间，特别是在城市被破坏的时候。</p><p>古恩说：“我们放给试映观众看，有些人不喜欢松鼠。他们问，为什么他要去救松鼠？为什么要花时间救一只松鼠？有一个版本我剪掉了松鼠，但后来我说，我真的想念那只松鼠，他必须救那只松鼠。而且，如果他不飞过去救松鼠，后面还有一些空间逻辑问题。所以最后我还是把松鼠放回去了，尽管我的团队成员很多人反对。”</p><p>古恩的选择恰恰印证了卢卡斯的观点——一个创作者坚持了自己的直觉，而不是听观众的。</p><p>但卢卡斯真正掀起波澜的，是他对AI的态度。</p><p>当主持人问他怎么看待AI在电影制作中的使用时，卢卡斯的回答出乎很多人的意料。他说：“人工智能意味着我们拍电影会容易得多。这很像有人坐在那儿说‘我相信马车才是正途，这些汽车总会抛锚，需要加油，有各种各样的毛病，很快它们就会被改造成坦克，用来杀人。太可怕了。’但你对此无能为力。那就是进步，就是未来。”</p><p>卢卡斯把AI比作汽车取代马车，态度鲜明地站在了技术乐观派一边。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(252.2,'sec-0003')"><span>▶</span> 04:12</button><h3 class="section-title">而卢卡斯，其实很早就拥抱了数字技术。1999年拍《</h3></div><p>当然，他也承认AI有风险。但他认为，AI本身也能解决这些问题：“如果你想要AI告诉你什么东西是假的、从哪儿来的，AI能做到。人类做不到，我们没那么聪明。关键你是人，你对自己说的话和做的事负责，如果干了违法的事，就该受到惩罚。无论你做什么，都应该被识别。这就像现实生活一样。”</p><p>这话一出，立刻在好莱坞炸开了锅。</p><p>要知道，就在卢卡斯说这话的同时，好莱坞正在经历一场AI引发的职业危机。2023年的编剧和演员双罢工，核心争议就是AI的使用——编剧们担心AI会取代他们的工作，演员们担心自己的数字形象被永久化使用。罢工持续了148天，让整个产业停摆，最终工会和制片厂达成了协议，限制AI的使用范围。</p><p>但卢卡斯的态度，却跟罢工的诉求几乎相反。他不仅不害怕AI，反而认为这是必然的趋势，甚至是好事。</p><p>这让人想起另一位大导演彼得·杰克逊。他在2021年用AI技术修复了《披头士：回归》纪录片，从大量原始素材中提取出清晰的画面和声音。杰克逊说，如果没有AI，这个项目根本无法完成。他走得更远，甚至成立了一家AI公司，专门做电影修复。</p><p>而卢卡斯，其实很早就拥抱了数字技术。1999年拍《星球大战前传1》时，他就大量使用数字特效和绿幕，CGI角色的比例远超当时任何电影。2002年的《星球大战前传2》，更是第一部全部用数字摄影机拍摄的主流大片。当时业界也对他一片质疑，认为他抛弃了胶片、丧失了电影感。但后来的结果证明，数字技术改变了整个行业。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(378.3,'sec-0004')"><span>▶</span> 06:18</button><h3 class="section-title">这个问题其实指向了卢卡斯主张中的一处矛盾。他拥抱A</h3></div><p>卢卡斯现在说AI，就像他当年说数字摄影——他的逻辑其实一以贯之。</p><p>但在批评者看来，这次不一样。AI不仅仅是工具升级，而是可能取代人类的核心创作功能。编剧和演员们担心的不仅仅是失业，更是创意和灵魂的丧失。如果连写剧本、表演、甚至是角色设计都能由AI完成，那电影还算人类艺术吗？</p><p>而卢卡斯的观点，恰恰是反过来的。他认为，正是因为AI降低了技术门槛，才让更多有故事要讲的人能拍出电影。过去只有少数人能驾驭昂贵的设备和复杂的后期流程，现在AI能自动完成很多技术工作，创作者可以把精力集中在故事和情感上。</p><p>卢卡斯自己就是最好的例子。他年轻时拍《星球大战》时，被传统电影技术折磨得够呛——特效公司工业光魔是他自己建立的，就因为当时没人能做出他想要的视觉效果。他遇到过设备故障、资金短缺、技术瓶颈，几乎每走一步都是硬扛过来的。</p><p>所以他说“AI让拍电影更容易”，不是站着说话不腰疼，而是从自己七十多年电影生涯中得出的结论。</p><p>但他对“观众测试”的批评，又怎么解释？如果观众测试不该决定电影，那AI呢？AI驱动的算法和数据分析，会不会变成更精准的“观众测试”，从而进一步扼杀创作者的直觉？</p><p>这个问题其实指向了卢卡斯主张中的一处矛盾。他拥抱AI，却厌恶观众测试。但如今制片厂最常用的AI，恰恰就是用来做观众测试和票房预测的——Netflix、迪士尼都在用AI分析剧本、剪辑和观众反馈。如果AI成了制片厂控制创作的终极武器，那它跟卢卡斯痛恨的焦点小组有什么区别？</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(504.4,'sec-0005')"><span>▶</span> 08:24</button><h3 class="section-title">而对于AI，他大概也是这样的态度：无力阻止，不如拥</h3></div><p>卢卡斯本人在采访中没有回答这个问题。他只是说：“艺术是情感媒介。”而情感，是人类特有的东西。他相信，只要创作者抓住情感核心，AI就是仆人而非主人。</p><p>但好莱坞的现实并不这么乐观。2025年，美国编剧工会发布报告，称已有超过30%的编剧在项目中使用AI辅助写作，而制片厂也在悄悄试验用AI生成剧本大纲、对话甚至角色弧线。很多编剧反映，他们接到的项目要求“按照AI生成的梗概写”，而他们只是把AI的东西改成更自然的语言。</p><p>那么，如果AI能写剧本，观众测试也由AI分析，最终电影会变成什么？</p><p>这个问题没有标准答案。不同导演给出了不同回答。</p><p>詹姆斯·古恩在他的《超人》中坚持保留救松鼠的镜头——他相信直觉。《沙丘》导演维伦纽瓦则明确反对AI，说它是“一种威胁”，警告“如果让AI主导创作，人类将失去讲述故事的能力”。</p><p>而卢卡斯走了第三条路：拥抱技术，保持直觉。他认为AI和创作者不是替代关系，而是合作关系。就像当年的数字摄影机没有杀死电影，反而让更多不同风格的作品出现。</p><p>他说：“人类是聪明的，我们总能适应。新技术带来新问题，但也会带来新解决方案。”</p><p>2026年的今天，我们回头看卢卡斯这番话，会更有意思。</p><p>当他卖出《星球大战》时，很多粉丝骂他背叛了系列。但他说：“《星球大战》会在我死后继续存在，我只是过客。”这句话里透出的，是对作品和自身关系的清醒认识。</p><p>而对于AI，他大概也是这样的态度：无力阻止，不如拥抱。他不需要守卫某个固定的电影形式，因为他早就超越了对任何特定技术的执念。</p></div>
+<div class="section" id="sec-0006"><p>你可能会觉得奇怪，一个创造了那么大IP、拥有巨大话语权的人，为什么会说“你对此无能为力”？</p><p>但如果你了解卢卡斯，就会明白，这不是认输，而是他对世界运作方式的理解。他认为技术是客观的、不可逆的，抵抗它无效，最好的方式是利用它。</p><p>就像当年他卖《星球大战》时说的：“我宁愿它掌握在能继续发展它的人手里。”</p><p>现在，他对电影行业说的是：“AI会来，你们最好学会用它。”</p><p>至于最终电影会因此变得更好、更糟、还是完全不同，没有人能给出答案。</p><p>但我想到一个细节：1977年《星球大战》上映前，福克斯高层对它几乎毫无信心，试映会上观众反应平平，甚至有人觉得可笑。但卢卡斯坚持不让步，反而几乎把整部电影重剪了一遍。结果，它成了影史最成功的系列。</p><p>试映会没有告诉他真相，是他的直觉告诉他的。</p><p>如今，他告诉电影人，直觉比测试结果重要；而技术，是直觉的延伸。</p><p>所以，《超人》里那只松鼠得救了，而卢卡斯也仍然在导演他的下一部电影——一部关于电影的纪录片，用他自己拍的素材，自己剪辑，不拿片酬。他说只是想拍而已。</p><p>你看，当他真正自由之后，他反而什么都不怕了。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">他举了个例子：“当制片厂听到观众说我不喜</span></div>
+<div class="tl-item" onclick="seek(126.1,'sec-0002')"><span class="tl-time">02:06</span><span class="tl-title">卢卡斯把AI比作汽车取代马车，态度鲜明地</span></div>
+<div class="tl-item" onclick="seek(252.2,'sec-0003')"><span class="tl-time">04:12</span><span class="tl-title">而卢卡斯，其实很早就拥抱了数字技术。19</span></div>
+<div class="tl-item" onclick="seek(378.3,'sec-0004')"><span class="tl-time">06:18</span><span class="tl-title">这个问题其实指向了卢卡斯主张中的一处矛盾</span></div>
+<div class="tl-item" onclick="seek(504.4,'sec-0005')"><span class="tl-time">08:24</span><span class="tl-title">而对于AI，他大概也是这样的态度：无力阻</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260715054204" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
