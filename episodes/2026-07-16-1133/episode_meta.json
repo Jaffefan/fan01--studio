@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-16-1133",
+  "title": "阿里双线夹击苹果AI，Suno抄袭真相被黑客掀翻",
+  "published_at": "2026-07-16 11:33",
+  "duration_seconds": 486.77,
+  "duration_label": "8分06秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "阿里语音模型全球第一，超越OpenAI",
+      "golden_quote": "你的手机不再需要App，它只需要一个Agent。",
+      "keywords": [
+        "Airtap",
+        "iMessage",
+        "AI Agent",
+        "云手机"
+      ],
+      "source": "X：阿易 AI Notes"
+    },
+    {
+      "title": "国行苹果AI备案，阿里千问集成上线",
+      "golden_quote": "苹果终于学会了在中国入乡随俗。",
+      "keywords": [
+        "苹果",
+        "Apple智能",
+        "阿里千问",
+        "国行AI"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "世界模型当教练，机器人训练成本砍40%",
+      "golden_quote": "让机器人在虚拟世界里先摔一万次，总比在现实中摔一次强。",
+      "keywords": [
+        "世界模型",
+        "VLA",
+        "强化学习",
+        "原力灵机"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "阿里语音模型全球第一，超越OpenAI",
+      "golden_quote": "阿里语音全球第一，苹果的Siri终于等到了救星。",
+      "keywords": [
+        "Qwen-Audio",
+        "语音模型",
+        "阿里",
+        "Apple智能"
+      ],
+      "source": "公众号：通义实验室（千问）"
+    },
+    {
+      "title": "Suno被曝从YouTube偷了200万首歌训练",
+      "golden_quote": "原创者的心血，成了AI的免费午餐。",
+      "keywords": [
+        "Suno",
+        "版权",
+        "AI训练",
+        "数据抓取"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
