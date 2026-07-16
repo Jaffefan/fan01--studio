@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>五百万美元拯救英伟达：从濒临破产到掀起游戏硬件风暴 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 064 夜 / 2026-07-16</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 英伟达</div>
+    <h1 class="ep-title">五百万美元拯救英伟达：从<span class="hl">濒临破产到掀起游戏硬件风暴</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:38</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260716075128" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">英伟达陷入绝境。账上的现金只够维持几个月。黄仁勋后</h3></div><p>你好，我是伊恩。想象一下，1995年，一家濒临倒闭的小公司，创始人赌错了技术方向，账上钱快烧光。这时候，日本一家游戏巨头的前社长，自掏腰包投了五百万美元。29年后，那家小公司成了全球市值第一，而当初的救命恩人——世嘉，如今正被它引发的硬件涨价潮逼到墙角。</p><p>上周三，英伟达CEO黄仁勋出现在东京一家街机厅，和世嘉前社长入交昭一郎共同出席了一场活动。不是发布新显卡，不是宣布合作，而是——感谢。黄仁勋说：“如果没有世嘉当年为英伟达所做的一切，如果没有入交先生，英伟达今天不会在这里。”他接着回忆道：“想想看，1995年，英伟达几乎破产。我们选择了完全错误的技术。谁能想到，今天我们会站在这里，成为全世界最大的公司？”</p><p>这个故事的起点，要从1990年代中期说起。当时3D图形加速卡才刚刚起步，市面上有几十家创业公司，英伟达只是其中一个。黄仁勋和两位联合创始人决定做一款名为NV1的芯片，目标是用一种叫做“四边形纹理映射”的技术来渲染3D图形。这个思路在当时算得上激进，但完全与行业主流背道而驰——微软和大多数PC游戏开发商都支持多边形渲染，而英伟达坚持走四边形路线。结果1995年产品一上市，反响惨淡。更大的打击来自微软：DirectX的1.0版本明确不支持英伟达的四边形纹理映射。这意味着，几乎所有PC游戏都不会为NV1优化。</p><p>英伟达陷入绝境。账上的现金只够维持几个月。黄仁勋后来回忆说：“那时候，每天醒来都在想，发完下个月的工资，公司就没了。”就在这时，世嘉的Dreamcast主机正在筹备中，需要一颗3D图形处理器。英伟达参与竞标，但最终败给了日本厂商NEC的PowerVR芯片。不过，就在招标石沉大海之后，世嘉时任社长入交昭一郎做了一个让很多人看不懂的决定：他自掏腰包，向英伟达注资500万美元。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(144.5,'sec-0002')"><span>▶</span> 02:24</button><h3 class="section-title">现在，时间来到2026年，英伟达已经变成一台超级印</h3></div><p>这笔钱在当时不算小数目，但也不至于改变世嘉的财报。可对英伟达来说，它可能就是生死线。黄仁勋多年后说，这笔资金让公司多撑了六个月，而这六个月，恰恰等来了NV2芯片的研发成功，以及后来与微软Xbox的合作机会。1999年，英伟达推出GeForce 256，全球首款“GPU”——图形处理单元，这个命名后来定义了整个行业。2001年，微软选择英伟达为第一代Xbox提供图形芯片。从那以后，英伟达在PC独立显卡市场上一路狂奔，先后收购了3dfx、Ageia等竞争对手，最终在2020年代凭借AI计算需求爆发，成为市值突破3万亿美元的科技巨头。</p><p>说来有趣，世嘉后来以1500万美元出手了英伟达的股份，赚了三倍。如果留到今天，以英伟达巅峰市值算，那笔投资价值超过一万亿美元——比整个世嘉公司值钱几百倍。当然，这属于事后诸葛亮式的玩笑。入交昭一郎在活动上说：“当年投资英伟达，不是因为我们能预测未来，而是因为黄仁勋这个人让我相信，他们能做成事情。”</p><p>现在，时间来到2026年，英伟达已经变成一台超级印钞机。AI大模型竞赛白热化，微软、谷歌、Meta都在疯狂采购H100、B200这类数据中心显卡。制造这些芯片需要大量的高带宽内存，也就是HBM——一种专门为AI计算设计的DRAM芯片。三星、SK海力士和美光的产能几乎被英伟达包圆，消费级DRAM的产能被严重挤压。结果就是：过去两年，DDR5内存颗粒的价格涨了两倍多。PS5和Xbox Series主机的生产成本随之飙升，因为内存是主机成本中占比最高的单一组件之一。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(289.0,'sec-0003')"><span>▶</span> 04:49</button><h3 class="section-title">黄仁勋在东京街机厅的那次讲话，或许可以看作一个隐喻</h3></div><p>今年初，任天堂把Switch 2的首年出货目标从2000万台砍到了1200万台。微软Xbox部门负责人抱怨过，下一代主机很难在保持性能提升的同时，把价格压在500美元以内。索尼的PS6据说要卖到900美元以上——这几乎是最新一代主机正常定价的两倍。而世嘉，这个早就放弃硬件业务的游戏公司，如今只能靠《索尼克》《如龙》这些IP在别人的平台上发行游戏。主机涨价直接打击它的潜在用户群：如果一个玩家需要花900美元买一台新主机，他可能就会少买两三个游戏。</p><p>这还没完。世嘉近期推出了一款基于生成式AI的互动营销游戏，玩家可以和AI索尼克对话，但需要允许系统收集对话数据来训练模型。消息一出，玩家群体炸了锅，很多人指责世嘉“出卖用户数据给AI”。世嘉不得不紧急澄清，说用户数据不会被用于训练模型，只是用作个性化推荐。但信任已经受损。</p><p>更有意思的是英伟达自己。就在感谢世嘉的同一周，英伟达被曝正在开发一套基于AI的“动态难度调节”技术，可以实时分析玩家行为，调整游戏参数——比如让敌人更难打，或者更简单。这项技术如果能落地，可能会彻底改变游戏设计逻辑。但代价是，它需要调用大量云端GPU算力。换句话说，未来可能会出现这样的场景：你买了一个游戏，但要想流畅运行最高画质，还得按月付费给英伟达的云游戏平台。</p><p>黄仁勋在东京街机厅的那次讲话，或许可以看作一个隐喻：曾经，一笔500万美元的救命钱，让英伟达活了下来。如今，英伟达反过来决定着整个游戏行业的生死——不是因为它要杀死谁，而是因为它的成功正在重塑所有硬件设计的成本结构。有人引用过黄仁勋本人说过的一句话：“我们不是在和同行竞争，我们是在和物理定律竞争。”物理定律没有感情，只讲能耗比和晶体管密度。而游戏行业，恰恰是那个最脆弱的、最需要人文温度的数字娱乐领域。</p></div>
+<div class="section" id="sec-0004"><p>回顾这段历史，你会发现一个循环：1995年，世嘉用一笔小额投资拯救了英伟达。2026年，英伟达的AI霸主地位正在挤压世嘉的生存空间。听起来像个寓言，但真实世界里的角色从来不是黑白分明的。世嘉前社长入交昭一郎在活动最后说：“当时的决定只是出于对技术的热爱，和对黄仁勋这个人的信任。我们从来没想过回报问题。”而黄仁勋的回应是：“英伟达永远不会忘记，是谁在我们最需要的时候伸出了手。现在唯一能为世嘉做的，就是继续造出最好的芯片——尽管这听起来有些讽刺。”</p><p>什么样的芯片才是“最好的芯片”？对AI公司来说，是算力最强的芯片。对游戏玩家来说，是性价比最高的芯片。对主机厂商来说，是供应充足、价格稳定的芯片。当全球半导体产能被AI吞噬，这些目标之间注定要产生冲突。世嘉的处境，不过是这种冲突的一个缩影。</p><p>这场活动结束后，有记者追问黄仁勋：英伟达会不会考虑针对游戏市场推出特定的“低价内存显卡”？黄仁勋笑了笑说：“我们在听市场的反馈。”这句话翻译过来可能是“很难”，也可能是“正在做”。但无论哪种可能，有一件事是确定的：游戏行业再也回不到那个500万美元就能改变一家命运的时代了。</p><p>今天的故事到这里。谢谢你听完。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">英伟达陷入绝境。账上的现金只够维持几个月</span></div>
+<div class="tl-item" onclick="seek(144.5,'sec-0002')"><span class="tl-time">02:24</span><span class="tl-title">现在，时间来到2026年，英伟达已经变成</span></div>
+<div class="tl-item" onclick="seek(289.0,'sec-0003')"><span class="tl-time">04:49</span><span class="tl-title">黄仁勋在东京街机厅的那次讲话，或许可以看</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260716075128" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
