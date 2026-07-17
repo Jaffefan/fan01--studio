@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-17-0902",
+  "title": "5 件让你重新理解 AI 边界的事：从百万行代码迁移到安全黑洞",
+  "published_at": "2026-07-17 09:02",
+  "duration_seconds": 690.12,
+  "duration_label": "11分30秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Claude Fable 5：能独立跑完复杂任务的“数字员工”",
+      "golden_quote": "Fable 5 不是让你更聪明，是让你更懒。",
+      "keywords": [
+        "Claude Fable 5",
+        "Anthropic",
+        "AI Agent",
+        "异步工作"
+      ],
+      "source": "Anthropic Blog"
+    },
+    {
+      "title": "xAI 起诉 Grok 用户：无法否认生成 CSAM，于是告用户",
+      "golden_quote": "AI 安全的漏洞不会因为否认而消失，它总以最糟糕的方式显现。",
+      "keywords": [
+        "xAI",
+        "Grok",
+        "CSAM",
+        "AI安全"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "欧盟强制谷歌开放 Android 和搜索：Gemini 面临最大挑战",
+      "golden_quote": "这不是反垄断，是反生态锁定。",
+      "keywords": [
+        "欧盟",
+        "Google",
+        "DMA",
+        "AI 助手"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Claude Code 两周迁移百万行代码：Bun 从 Zig 到 Rust",
+      "golden_quote": "AI 把代码迁移从苦役降维成了一场可负担的实验。",
+      "keywords": [
+        "Claude Code",
+        "代码迁移",
+        "Bun",
+        "Rust"
+      ],
+      "source": "Anthropic Blog"
+    },
+    {
+      "title": "54% 企业遭遇 AI 智能体安全事件，身份管控形同虚设",
+      "golden_quote": "AI 智能体的安全缺口，源于企业信任了不该信任的代理人。",
+      "keywords": [
+        "AI智能体",
+        "安全",
+        "身份管理",
+        "企业"
+      ],
+      "source": "VentureBeat"
+    }
+  ]
+}
