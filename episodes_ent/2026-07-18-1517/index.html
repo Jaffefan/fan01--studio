@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>漫威西迁：纽约漫画产业的黄昏时刻 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 068 夜 / 2026-07-18</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 漫威</div>
+    <h1 class="ep-title">漫威西迁：纽约漫<span class="hl">画产业的黄昏时刻</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:02</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260718071848" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这不仅仅是漫威一家公司的搬迁。对美国漫画产业来说，</h3></div><p>你好，我是伊恩。想象一下，没有纽约的漫威会是什么样子？帕克从皇后区荡着蛛丝穿梭在曼哈顿的天际线，马律师在地狱厨房的暗巷里暴揍罪犯，托尼·斯塔克在长岛的豪宅里制造他的战甲……这些画面全都建立在纽约这个具体的地理坐标上。而现在，这个坐标要消失了。2026年7月，漫威漫画正式宣布：搬迁至洛杉矶伯班克。87年纽约传奇，就此终结。</p><p>消息是由多家媒体在7月17日确认的。漫威漫画，这个从1939年作为Timely Publications在纽约起步的公司，即将打包所有编辑和运营人员，西迁至迪士尼在加利福尼亚的总部。那里已经是漫威影业的大本营，也是蜘蛛侠、钢铁侠、复仇者联盟在银幕上诞生与欢呼的地方。早在2015年，老对手DC漫画就已经先行一步迁到了加州，而过去十年里，迪士尼高层曾多次暗示要将漫画出版业务与影视娱乐合并，以降低运营成本——毕竟曼哈顿的写字楼租金，永远在涨。现在，它终于落地了。</p><p>这不仅仅是漫威一家公司的搬迁。对美国漫画产业来说，这是一场真正的“纽约大撤退”。从20世纪30年代到40年代的黄金时代，所有重要的漫画出版商都在纽约生根发芽：DC于1934年在纽约以“国家联合出版公司”的名义创立；漫威的前身Timely在1939年紧随其后；阿奇漫画同年以MLJ的名字亮相；戴尔漫画、福西特漫画（手握40年代销量冠军《惊奇队长》）、哈维漫画（《小富豪理查德》和《鬼马小精灵》）——没有一家例外。它们构成了纽约漫画出版业的黄金一代。而如今，当漫威——这座城市最后一家有分量的漫画出版商——决定离开时，漫画与纽约的关系，正式结束了。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(150.6,'sec-0002')"><span>▶</span> 02:30</button><h3 class="section-title">但时间推至21世纪20年代，这种关系在经济账与战略</h3></div><p>在纽约的诸多出版商中，漫威是最特殊的一个。DC的超级英雄大多住在虚构的城市：大都会和哥谭市，一个原型是纽约与克利夫兰的混合体，另一个则直接脱胎于暗黑的夜之城。而漫威，几乎从1961年以“漫威”这个名称正式重生以来，就把所有主要角色安放在了纽约的真实街区。神奇四侠住在曼哈顿的巴克斯特大厦，雷神托尔曾在曼哈顿拥有公寓，蜘蛛侠寄宿在皇后区的梅婶家，每天乘坐地铁去中城上学；夜魔侠在地狱厨房摸爬滚打；奇异博士在格林威治村接管了至圣所；就连复仇者联盟，刚成立时驻扎在亿万富翁弗里克在第五大道的旧宅，后来才搬进了自有大厦。斯坦·李在1960年代的“Bullpen Bulletins”专栏中，刻意打造了一个生动的“城市工作室”形象：漫威的员工们随时在曼哈顿中城的高层办公室里进出、聊天、争吵——像情景喜剧里的邻居一样。他还把纽约州的官方格言“Excelsior！”（不断向上）变成了自己的口头禅。漫威和纽约的关系，早已超越了商业选址，成为了品牌灵魂的一部分。</p><p>但时间推至21世纪20年代，这种关系在经济账与战略账面前，变得不堪一击。迪士尼在2009年以42.4亿美元收购漫威娱乐时，看中的不是漫画，而是它旗下的9000多个角色IP。之后的十多年里，漫威影业的23部电影在全球收割了超过220亿美元票房；电视方面，Disney+的系列剧如《旺达幻视》《洛基》各自吸引数千万订阅户；游戏领域，Insomniac的《蜘蛛侠》系列仅首作就卖出超过2000万套，成为索尼最成功的单人游戏之一。相比之下，漫画出版业的利润早已微不足道。根据行业数据，2024年美国漫画书店市场（Direct Market）的销售额约在5亿美元左右，而漫威在其中所占比例尽管领先，却无法与影视业务的零头相提并论。在迪士尼的棋盘上，维持一个位于曼哈顿第五大道的、每年租金可能高达数百万美元的独立办公室，不再是合理的资源配置。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(301.2,'sec-0003')"><span>▶</span> 05:01</button><h3 class="section-title">对纽约来说，这是文化和经济双重意义上的失去。过去的</h3></div><p>这其实是一场早有预兆的离心运动。早在2000年代初，随着漫威影业的起步，越来越多的漫画创作人才开始向洛杉矶流动。画师们要在编剧室附近工作，编辑们要配合电影档期作监修。到2020年代，漫威核心创作团队的实体办公地点早已是两地分散：编辑和策划部门留在纽约，而作者、画师们多为自由职业者，分散在全美甚至全球。但总部在纽约，意味着选角会议要视频连线，故事企划案要飞越时区。这次搬迁，只是将最后一块“纽约拼图”也放到了西海岸。</p><p>历史总有轮回。1980年代，随着独立漫画浪潮的兴起，加利福尼亚和太平洋西北地区已经崛起为新的漫画创作中心。Image Comics于1992年在加州诞生，由七位离开漫威的明星画师创立，打破了纽约对北美漫画出版的垄断。2000年代，随着漫画向图像小说的转型，俄勒冈的波特兰聚集了Dark Horse、Oni Press等众多出版商，被誉为“漫画之城”。2015年DC搬至伯班克时，业内就曾预测漫威迟早会跟进，只是时间问题。今天，这个预言终成现实。</p><p>对纽约来说，这是文化和经济双重意义上的失去。过去的87年间，这座城市不仅是漫画的产地，也是漫画的灵魂。行走在曼哈顿中城的第六大道，你会经过以前漫威的办公室；穿过时代广场，会看到《蜘蛛侠》的巨幅海报；甚至在地铁车厢里，都无法避免与那些画着复仇者联盟涂鸦的壁画相遇。纽约为漫画提供了活生生的场景，漫画也反过来塑造了纽约的文化身份。如今，随着最后一家大出版商的离开，这个相互塑造的关系宣告终结。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(451.8,'sec-0004')"><span>▶</span> 07:31</button><h3 class="section-title">在那些泛黄的漫画页里，彼得·帕克永远不会搬出皇后区</h3></div><p>但这件事值得叹息吗？对于漫威而言，搬迁意味着与迪士尼的影视资源全面整合：编剧、导演、艺术家、制片人可以随时开创意会议，共享食堂和停车场，从策划到上映的流程缩短三分之一。对于员工来说，从纽约搬到伯班克，意味着告别高昂的州税和冰冷的冬季，但也告别了那些充满传奇色彩的街区——也许再也不能在午休时散步到中央公园，迎面撞见当年斯坦·李经常坐的长椅。这笔账，每个人心里都有不同的答案。</p><p>漫画读者和观察者的反应更为复杂。一些人认为，漫威漫画从此将彻底沦为影视的附庸：角色的漫画冒险会成为即将上映电影的预告片，创作的自由将受制于IP统一规划。另一些人则乐观地指出，早在20世纪70年代，斯坦·李本人就频繁往返于纽约和加州之间参与影视项目，漫画和影视的融合并非新鲜事；资源集中后，甚至可能催生更优质的跨界漫画项目。争议的焦点，其实一直没变：在IP帝国时代，漫画到底是一种独立的艺术形式，还是仅供影视工业采掘的原矿？</p><p>可以肯定的是，纽约的漫画产业不会完全消亡。独立漫画店、小型出版商、自出版创作者的生态依然存在，每年一度的纽约漫展仍然吸引着几十万爱好者从全美涌来。但一个时代的确结束了——当漫威关上纽约办公室的门，也意味着漫画与这座城市持续87年的双向奔赴，终于画上了句号。</p><p>在那些泛黄的漫画页里，彼得·帕克永远不会搬出皇后区，夜魔侠依然会在夜晚守望着地狱厨房的街灯。而现实中，创作他们的人，将把目光投向加州的阳光，去继续书写那些超级英雄的新篇章。只是，下一次你要在纽约坐地铁时，会想到这些故事不再诞生于你头顶的某扇窗户里了。这就是时代的走向，不是吗？</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这不仅仅是漫威一家公司的搬迁。对美国漫画</span></div>
+<div class="tl-item" onclick="seek(150.6,'sec-0002')"><span class="tl-time">02:30</span><span class="tl-title">但时间推至21世纪20年代，这种关系在经</span></div>
+<div class="tl-item" onclick="seek(301.2,'sec-0003')"><span class="tl-time">05:01</span><span class="tl-title">对纽约来说，这是文化和经济双重意义上的失</span></div>
+<div class="tl-item" onclick="seek(451.8,'sec-0004')"><span class="tl-time">07:31</span><span class="tl-title">在那些泛黄的漫画页里，彼得·帕克永远不会</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260718071848" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
