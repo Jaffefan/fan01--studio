@@ -1,0 +1,68 @@
+{
+  "episode_id": "2026-07-18-1127",
+  "title": "八天四款模型，AI 江湖重新洗牌",
+  "published_at": "2026-07-18 11:27",
+  "duration_seconds": 569.06,
+  "duration_label": "9分29秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Sora 2 视频克隆真假难辨",
+      "golden_quote": "当视频不再可靠，信任被重新定义。",
+      "keywords": [
+        "Sora 2",
+        "深度克隆",
+        "AI视频",
+        "真假难辨"
+      ],
+      "source": "X：Gabriel (@gabriel1)"
+    },
+    {
+      "title": "Kimi K3 登顶前端编码榜",
+      "golden_quote": "双头垄断的裂痕，从一张编码榜开始。",
+      "keywords": [
+        "Kimi K3",
+        "前端编码",
+        "开放权重",
+        "Moonshot"
+      ],
+      "source": "X：阿易 AI Notes (@AYi_AInotes)"
+    },
+    {
+      "title": "Apple 起诉 OpenAI",
+      "golden_quote": "表面上谈数据，实际上谈权力。",
+      "keywords": [
+        "Apple",
+        "OpenAI",
+        "诉讼",
+        "Siri AI"
+      ],
+      "source": "The Verge：AI（RSS）"
+    },
+    {
+      "title": "月之暗面在GTC 2026的技术路线",
+      "golden_quote": "不堆算力改架构，更聪明的智能制造。",
+      "keywords": [
+        "月之暗面",
+        "Kimi K2.5",
+        "GTC 2026",
+        "MuonClip",
+        "多Agent"
+      ],
+      "source": "X：宝玉 (@dotey)"
+    },
+    {
+      "title": "八天四款模型发布",
+      "golden_quote": "八天四款模型，AI 加速进入百家争鸣。",
+      "keywords": [
+        "前沿模型",
+        "Grok 4.5",
+        "GPT-5.6",
+        "Muse Spark 1.1",
+        "Kimi K3"
+      ],
+      "source": "X：Artificial Analysis (@ArtificialAnlys)"
+    }
+  ]
+}
