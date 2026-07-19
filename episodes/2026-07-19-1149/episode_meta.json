@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-19-1149",
+  "title": "AI 造反、财富回流与 8K 生图：今天 AI 圈的五件大事",
+  "published_at": "2026-07-19 11:49",
+  "duration_seconds": 689.69,
+  "duration_label": "11分29秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Claude Code 修复权限绕过漏洞",
+      "golden_quote": "信任必须验证，而非盲目授权。",
+      "keywords": [
+        "Claude Code",
+        "权限绕过",
+        "安全漏洞",
+        "AI Agent",
+        "命令行工具"
+      ],
+      "source": "Claude Code：GitHub Releases（RSS）"
+    },
+    {
+      "title": "Index Ventures 联合创始人预言 AI 财富再分配",
+      "golden_quote": "AI 财富是公共基础设施的变现，再分配是必然。",
+      "keywords": [
+        "AI 财富",
+        "再分配",
+        "贫富差距",
+        "慈善",
+        "财富税"
+      ],
+      "source": "TechCrunch：AI（RSS）"
+    },
+    {
+      "title": "商汤发布原生8K生图模型U1 Pro",
+      "golden_quote": "AI 从生成工具跃迁为设计代理，8K 只是开始。",
+      "keywords": [
+        "商汤",
+        "U1 Pro",
+        "8K",
+        "多模态",
+        "设计代理"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "普渡机器人发布一脑多形战略",
+      "golden_quote": "机器人的智能上限取决于它能否在物理世界中持续沉淀可迁移的经验。",
+      "keywords": [
+        "普渡机器人",
+        "一脑多形",
+        "PuduFM",
+        "具身智能",
+        "数据飞轮"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "作家Dave Eggers当面痛斥OpenAI",
+      "golden_quote": "真正的威胁不是 AI 能写出句子，而是学生失去独立思考的习惯。",
+      "keywords": [
+        "Dave Eggers",
+        "OpenAI",
+        "写作",
+        "教育",
+        "创造力"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
