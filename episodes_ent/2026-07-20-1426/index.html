@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>被取消的序章：太空键刃使与遗失的王国之心 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 070 夜 / 2026-07-20</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 王国之心</div>
+    <h1 class="ep-title">被取消的序章：太空键<span class="hl">刃使与遗失的王国之心</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 12:19</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260720062719" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">Quadratum，对于《王国之心》粉丝来说并不陌</h3></div><p>你好，我是伊恩。想象一下，你是一个《王国之心》的铁杆粉丝，每天在Reddit上刷着各种理论帖。然后突然有一天，一个匿名用户在4chan上扔出了一段视频——穿着宇航服一样的键刃使者在虚空中对抗巨大的无心。那一瞬间，整个社区都陷入了疯狂。而这，很可能就是被取消的《王国之心：失落链接》的序章动画。</p><p>今天我们要聊的，就是这个泄漏事件——一个被取消的手游的序章动画，如何让《王国之心》的粉丝们再次陷入狂热。但我们要做的，不只是告诉你发生了什么，而是追溯这件事的来龙去脉：从《失落链接》的诞生与死亡，到《王国之心》系列如何一步步变成今天这样错综复杂的谜团，再到这次泄漏可能暗示了什么。</p><p>先说说这段视频本身。根据Kotaku记者Kenneth Shepard的报道，这段视频最初出现在4chan上，随后被分享到其他社交媒体，包括Twitter上的embed和Google Drive链接。视频不长，但信息量巨大：画面中，一队看起来像宇航员一样的键刃使者正在与一只巨大的无心战斗。这些键刃使者的造型，有网友说像极了《Pragmata》——那款Capcom一直推迟的科幻游戏里的角色。当他们击败无心后，周围的黑暗虚空消失，露出一个看起来像现实世界日本的城市——Quadratum。</p><p>Quadratum，对于《王国之心》粉丝来说并不陌生。在2022年公布的《王国之心4》预告片中，索拉就出现在了这个世界，一个基于现实涩谷的虚构城市。而《失落链接》原本就是一款设定在Scala ad Caelum的移动游戏，那个世界是《王国之心3》最终决战的地点，据说也是所有王国之心世界的起源。所以粉丝们立刻开始推测：这队键刃使者很可能就是来自Scala ad Caelum的士兵，他们正在探索Quadratum——而Quadratum正是《王国之心4》的主要舞台。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(123.2,'sec-0002')"><span>▶</span> 02:03</button><h3 class="section-title">《王国之心》系列从2002年第一部游戏开始，就以复</h3></div><p>但事情没那么简单。有些参加过《失落链接》Beta测试的玩家出来说，这段视频跟他们见过的任何内容都不相符。一个Reddit用户写道：“这看起来完全不像《失落链接》，抱歉。《失落链接》的风格更偏向蒸汽朋克。如果这是某些键刃mod或者粉丝作品，我一点都不会惊讶。”还有人怀疑这可能是AI生成的。但泄漏者随后又发布了其他截图，包括一个叫做Brain的角色——这个角色在之前的《王国之心》手游《Union χ》和《黑暗之路》中都有重要戏份。</p><p>Kotaku提到，Square Enix官方还没有发表任何声明。而《王国之心》的Reddit子版块已经决定禁止这些泄漏内容，版主发帖说：“为了与Square Enix的政策以及我们社区的Discord服务器保持一致，我们做出了艰难的决定，暂时不允许发布《失落链接》的泄漏内容。”</p><p>现在，我们暂时不知道泄漏是真是假。但这件事本身就很有意思——一个被取消的手机游戏，它的序章动画居然还能引发这么大的讨论。要理解这背后的逻辑，我们得往后退一步，看看《王国之心》系列的历史。</p><p>《王国之心》系列从2002年第一部游戏开始，就以复杂的剧情和神秘的编号系统著称。开发者野村哲也喜欢把核心剧情隐藏在外传里，导致玩家如果不玩遍所有平台上的游戏，就根本看不懂主线。比如《王国之心：记忆之链》发生在GBA上，但它的剧情直接连接了第一部和第二部；《王国之心：358/2天》在NDS上，讲述了罗克萨斯的故事；《王国之心：梦中降生》在PSP上，揭示了键刃战争的起源。这些游戏被粉丝戏称为“野村的迷宫”。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(246.4,'sec-0003')"><span>▶</span> 04:06</button><h3 class="section-title">而这次泄漏的视频，恰恰是这段被埋葬的历史的残留物。</h3></div><p>野村哲也对移动平台也有执念。早在2013年，他就推出了《王国之心χ》——一个浏览器游戏，后来变成了《王国之心Union χ》，一部在手机上运行的带有氪金抽卡机制的卡牌游戏。这两款游戏讲述了远古的键刃战争，引入了如玩家、预言者和五名核心角色。这些角色在后续作品中不断出现。2020年，Square Enix发布了《王国之心：黑暗之路》，这是一部基于Google Play和App Store上的应用，用来衔接《Union χ》和《王国之心3》。</p><p>2023年，Square Enix宣布了《王国之心：失落链接》，作为一款面向iOS和Android的开放世界动作RPG。根据官方描述，游戏设定在Scala ad Caelum，讲述了一场异象导致键刃使者从不同时代被传送到这里的探险队。游戏预计2024年上线，但到了2025年，Square Enix突然宣布取消。官方声明说是因为“为了确保《王国之心4》的质量，我们决定重新评估资源分配”。但很多人都推测，这是因为《Union χ》和《黑暗之路》的关服，让玩家对移动平台的《王国之心》失去了信心。</p><p>而这次泄漏的视频，恰恰是这段被埋葬的历史的残留物。如果我们假设视频是真的，那么从内容来看，它暗示了《失落链接》原本是一个重要的叙事桥梁。在《王国之心3》结尾，索拉为了找回凯莉而牺牲了自己，被传送到了Quadratum。但Quadratum到底是什么？在野村的设定中，Quadratum是世界的间隙，一个基于日本现实的虚构地点，是索拉在“轮回”之后到达的地方。而Scala ad Caelum的键刃使者探索Quadratum，可能揭示了Quadratum在系列历史中的地位——也许它是所有世界的原型，或者是一个被遗忘的起源。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(369.6,'sec-0004')"><span>▶</span> 06:09</button><h3 class="section-title">从商业角度看，《王国之心》系列一直面临着“移动游戏</h3></div><p>另一方面，泄漏中的宇航员造型引发了更多联想。有粉丝指出，这些键刃使者的设计让人联想到《王国之心：梦中降生》里的“装甲键刃使者”，或者《最终幻想XIV》里的加雷马帝国士兵。但Kotaku记者提到的《Pragmata》比较特别——那款Capcom游戏以未来科幻为主题，延期多次，至今未发售。如果野村确实受了《Pragmata》影响，那意味着《王国之心4》可能会引入更科技感的元素，而不是纯粹的迪士尼魔法和最终幻想风格。</p><p>粉丝们的反应五花八门。在Twitter上，用户kijuler发帖说：“我操，王国之心失落链接的动画是真的，宇航员哥们是真的，爷爷野村到底在这游戏里煮了什么？”而在Reddit，讨论更加两级分化。一些人坚信这是真泄漏，因为细节太多，AI很难伪造；另一些人则认为是粉丝作品，因为材质和光影看着不对。还有一种可能性是，这段视频是Square Enix内部员工偷偷泄露出来的，作为对取消项目的某种抗议。</p><p>Kotaku的更新提到，Square Enix至今没有回应。而Reddit上的消息是，泄漏者还分享了更多截图，包括Brain这个角色。Brain是《Union χ》里的重要角色，一个来自远古的键刃使者，在《黑暗之路》结束后失踪。如果他在《失落链接》中出现，那意味着他的故事还有后续。这对于那些认真追剧情的粉丝来说，无疑是一个巨大的悬疑缺口。</p><p>从商业角度看，《王国之心》系列一直面临着“移动游戏诅咒”。野村多次尝试在手机上讲述主线故事，但平台限制和运营模式的困难让这些项目难以持续。《Union χ》和《黑暗之路》的关服让许多玩家的存档化为乌有，Square Enix也没有提供任何离线版本。这导致了一种现象：玩家们在《王国之心4》的预告片中看到了来自《Union χ》的角色，但这些角色的游戏已经玩不到了。2026年6月，《王国之心4》的预告片就出现了《黑暗之路》的关键角色，Kotaku记者Kenneth Shepard专门写了一篇文章，标题就是“非常符合品牌调性：王国之心4有来自你不能玩的游戏的角色”。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(492.8,'sec-0005')"><span>▶</span> 08:12</button><h3 class="section-title">目前，最理性的态度是等待Square Enix的官</h3></div><p>而《失落链接》的取消，则增加了这个清单。如果泄漏属实，那么《王国之心4》的剧情可能仍然依赖已经消失的移动游戏。Square Enix需要在主机或PC上重新讲述这些故事，否则新玩家会完全迷失。但野村似乎没有这个打算——他喜欢让玩家去查资料、看剧情解析，甚至购买昂贵的攻略书。</p><p>这次泄漏事件之所以重要，不仅仅是因为它让我们窥见了一款被取消的游戏，更因为它揭示了《王国之心》系列一个根本问题：叙事与商业的矛盾。野村哲也有着宏大的故事构想，但公司需要尽快出产品。移动游戏被当作低成本叙事载体，但它们无法持久，导致故事一旦产生大量碎片就会被时间遗忘。结果，每款新作都背负着越来越重的历史负担，而玩家必须自己做考古学家。</p><p>对于粉丝来说，这次泄漏可能只是未来更多泄漏的开始。在《王国之心4》发布前，我们可能会持续看到来自《失落链接》的素材浮出水面。如果Square Enix不采取法律行动，这些内容可能会成为粉丝们拼凑完整故事拼图的重要线索。但也存在另一种可能：这只是一次精心策划的恶作剧，目的就是为了让社区陷入混乱。毕竟，在《王国之心》粉丝中，为了一个理论吵上几百楼是常有的事。</p><p>目前，最理性的态度是等待Square Enix的官方回应，或者等待《王国之心4》上市后自己去验证。但无论如何，这件事再次证明了《王国之心》粉丝群体的热情与信息饥渴——他们愿意为一段模糊的视频花上一整天去分析，去寻找这可能属于哪个游戏、哪个场景。这种热情，恰恰是《王国之心》系列能维持二十多年的生命力所在。</p></div>
+<div class="section" id="sec-0006"><p>我们最终可能永远不会知道泄漏视频的真相。*失落链接*已经消失了，它的故事被埋在了数字坟墓里。但这次泄漏就像一次小小的考古发现，让我们得以瞥见一个从未存在的世界。在《王国之心》的世界观里，心是永恒不变的，即使身体消失，心的记忆也会传递。那么，这段视频是不是某种意义上的“内心碎片”呢？我想，每个粉丝都会有自己的答案。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">Quadratum，对于《王国之心》粉丝</span></div>
+<div class="tl-item" onclick="seek(123.2,'sec-0002')"><span class="tl-time">02:03</span><span class="tl-title">《王国之心》系列从2002年第一部游戏开</span></div>
+<div class="tl-item" onclick="seek(246.4,'sec-0003')"><span class="tl-time">04:06</span><span class="tl-title">而这次泄漏的视频，恰恰是这段被埋葬的历史</span></div>
+<div class="tl-item" onclick="seek(369.6,'sec-0004')"><span class="tl-time">06:09</span><span class="tl-title">从商业角度看，《王国之心》系列一直面临着</span></div>
+<div class="tl-item" onclick="seek(492.8,'sec-0005')"><span class="tl-time">08:12</span><span class="tl-title">目前，最理性的态度是等待Square E</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260720062719" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
