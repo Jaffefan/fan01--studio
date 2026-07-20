@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-20-1200",
+  "title": "一夜之间，AI 的物理世界大门被三家巨头砸开",
+  "published_at": "2026-07-20 12:00",
+  "duration_seconds": 375.6,
+  "duration_label": "6分15秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "2.4T 参数开源的真正意图",
+      "golden_quote": "参数不是护城河，生态才是。",
+      "keywords": [
+        "Qwen3.8",
+        "开源",
+        "大模型",
+        "阿里巴巴"
+      ],
+      "source": "X：通义千问 / Qwen"
+    },
+    {
+      "title": "黄仁勋在日本埋下三颗炸弹",
+      "golden_quote": "Nvidia 在卖未来五年的合约。",
+      "keywords": [
+        "Nvidia",
+        "黄仁勋",
+        "物理AI",
+        "日本工厂"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "具身智能开源：1.5B 的野心",
+      "golden_quote": "机器人不需要聪明，需要敏捷。",
+      "keywords": [
+        "具身智能",
+        "开源",
+        "VLA",
+        "面壁智能"
+      ],
+      "source": "X：面壁智能 OpenBMB"
+    },
+    {
+      "title": "语音转录库的新玩具，性能飙了",
+      "golden_quote": "好的开源解决的是维护者的痛苦。",
+      "keywords": [
+        "ASR",
+        "语音转录",
+        "ggml",
+        "GPU加速"
+      ],
+      "source": "Hacker News"
+    },
+    {
+      "title": "量子+AI，中国公司拿出了交钥匙工程",
+      "golden_quote": "量子计算不应该只属于物理学家。",
+      "keywords": [
+        "量子计算",
+        "人工智能",
+        "WAIC",
+        "不筹量子"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
