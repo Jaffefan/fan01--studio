@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一场关于《GTA》的“抄袭”战争：小团队对抗大公司 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 071 夜 / 2026-07-21</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> GTA Wiki</div>
+    <h1 class="ep-title">一场关于《GTA》的“抄<span class="hl">袭”战争：小团队对抗大公司</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 12:47</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260721060738" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">根据GTA Wiki的管理员MonkeyPolic</h3></div><p>你好，我是伊恩。想象一下，你是一个小团队的志愿者，花了大量时间整理游戏数据，结果发现一个大公司直接复制粘贴你的文章，还声称这是“预期中的相似性”。这不是虚构剧情，而是2026年真实发生的——GTA Wiki的志愿者们指控Fandom的付费写手抄袭他们的内容，还晒出了铁证。</p><p>今年7月14日，Rockstar Games发布了《GTA Online》最新免费更新“Kortz Heist”，这个更新带来了大量新内容，包括新任务、新车辆，还有新角色。对玩家来说，这不过是又一次游戏内容的扩充，但对于维护GTA Wiki的志愿者们，这是一场与时间赛跑的文档工作。他们需要在更新上线后，第一时间整理出准确、详尽的攻略和资料，供数百万玩家查阅。GTA Wiki是一个由玩家社区自发维护的维基站点，没有广告，没有商业目的，靠的就是一群热爱《GTA》系列的人无偿付出。然而，就在他们辛辛苦苦完成更新后的几个小时里，一个让他们愤怒的事情发生了。</p><p>根据GTA Wiki的管理员MonkeyPolice188的说法，Fandom旗下的《GTA》维基几乎在几分钟后，就发布了几乎一模一样的文章。MonkeyPolice188在社交媒体上晒出了对比截图：两篇文章的文字几乎完全相同，只有个别词汇被替换了一下。最有力的证据是一个细节Bug：GTA Wiki在撰写一篇关于新加入车辆“Merula”的文章时，不慎写错了最高速度——他们写成了1870 KMPH，这显然是个打字错误。而几分钟后，Fandom上的Merula文章，同样出现了这个错误数字。MonkeyPolice188说：“我们想不出更好的‘陷阱街’了。”所谓的“陷阱街”是地图制作者们惯用的一种反抄袭手段——故意在作品里埋下一个不引人注意的假信息，如果有人直接复制，那这个错误就会暴露他们。这里的“陷阱街”就是那个离谱的1870 KMPH，而Fandom的写手显然没注意到这个错误，直接照搬了。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(127.8,'sec-0002')"><span>▶</span> 02:07</button><h3 class="section-title">这个回应让GTA Wiki团队非常失望，但也并不意</h3></div><p>MonkeyPolice188还提供了更多证据，比如一份时间线：他们发现Fandom的某位写手打开他们刚刚发布的文章，几分钟后就发布了Fandom版本。他们甚至截到了这位写手正在编辑页面时的截图，时间戳精确到秒。根据这些证据，GTA Wiki团队认为Fandom的行为已经构成了侵犯版权，因为他们使用的内容是基于知识共享署名-非商业性使用-相同方式共享（CC-BY-NC-SA）许可协议发布的，这个协议明确禁止商业用途。而Fandom是一个商业公司，靠广告盈利，用这些内容显然违背了协议。</p><p>于是GTA Wiki团队采取了行动：他们用自己的账号在Fandom维基上撤销了那些涉嫌抄袭的改动，理由是违反许可协议。结果呢？MonkeyPolice188声称，Fandom直接封禁了他们，并要求他们通过DMCA通知来正式投诉。他们照做了，48小时后，Fandom的法律团队给出了回复。这份回复相当精彩——Fandom的律师们认为，这些重合的内容并不构成版权侵权或抄袭，理由是：维基文章的格式和模板有相似性很正常，而且游戏更新的事实信息是公开数据，任何人都能用。他们还说，因为这两个维基有共同的历史，所以某些结构和格式的重叠是“预期中的”。</p><p>这个回应让GTA Wiki团队非常失望，但也并不意外。毕竟，Fandom是一家市值数亿美元的公司，掌握着全球最大的游戏和娱乐维基网络。而GTA Wiki只是一个社区项目，没有任何法律部门或资金来打官司。MonkeyPolice188在声明中说：“和那些抄袭我们内容的人不同，我们没有一个人靠编辑GTA Wiki拿薪水。我们没有钱把事情升级。既然Fandom显然不愿意遵守法律，下一个最好的希望就是让更多人看到这种漫画反派般的商业手段，让更多人知道还有一个不垃圾的、没有5000个广告的GTA维基存在。”</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(255.7,'sec-0003')"><span>▶</span> 04:15</button><h3 class="section-title">据多方报道，Fandom逐渐调整了广告策略，现在一</h3></div><p>说到这里，你可能会觉得这个故事有点熟悉——小团队对抗大公司，社区对抗商业平台。其实，像这样的争议在游戏和娱乐维基领域已经不是第一次了。维基平台的历史，很大程度上就是一部关于开放协作和商业利益之间不断拉锯的历史。</p><p>最早的时候，维基概念诞生于1995年，由沃德·坎宁安发明，但真正让维基变得家喻户晓的是维基百科。2001年出现后，它证明了“任何人都能编辑”这种模式的力量。很快，各个领域都出现了粉丝维基：游戏维基、动漫维基、电视剧维基……这些站点由爱好者维护，不盈利，纯粹为了分享知识。但问题来了：谁来承担服务器和带宽成本？维基百科靠捐赠生存，但很多小维基没有这种支持。</p><p>于是，2004年，Fandom（当时叫Wikia）成立了。它的前身是维基百科创始人之一吉米·威尔士发起的商业项目，旨在为那些不想独立维护维基的社区提供托管服务，同时通过广告盈利。从商业模式看，Fandom提供了免费托管，但用广告覆盖成本并赚钱。起初，很多社区觉得这是个折中方案：平台免费，我们继续编辑，但得忍受一些广告。但随着时间的推移，Fandom变得越来越强势。</p><p>据多方报道，Fandom逐渐调整了广告策略，现在一个页面上可以出现数量惊人的广告、弹窗、自动播放的视频，甚至一些干扰性极强的电影式广告。2018年，Fandom被TPG资本收购后，进一步增加了商业化应用。很多用户和编辑开始抱怨：站点加载变慢了、广告越来越多、内容被广告遮盖了。不仅如此，Fandom还推出了固定顶部导航栏、统一风格模板，强迫所有维基使用统一的视觉样式。对一些大维基来说，比如《我的世界》维基，这引发了强烈抗议——2018年，Minecraft Wiki直接迁移到了独立站点。类似的还有《魔兽世界》维基和《最终幻想》维基，它们都选择离开。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(383.5,'sec-0004')"><span>▶</span> 06:23</button><h3 class="section-title">GTA Wiki的团队认为，这些付费写手可能不熟悉</h3></div><p>但为什么这些维基能离开？因为它们是社区自发成立的，编辑者和管理员拥有权力。而像《GTA》维基，最初也是社区创建，后来成为Fandom的一部分。但并不是所有人都愿意离开，因为迁移成本很高：你需要建立新服务器、迁移所有内容、让搜索引擎重新索引。很多维基因缺乏技术或资金而被绑在Fandom上。</p><p>这次《GTA》维基的独立事件，实际上发生在2026年初。当时，GTA Wiki的团队决定脱离Fandom，创建自己的独立站点gta.wiki。原因和前面提到的类似：过多的广告、缓慢的加载速度，以及Fandom对编辑内容的审查。他们还指控Fandom会自行修改编辑者的文章以植入特定的商业内容。在宣布独立时，他们写道：“我们要夺回对内容的主导权，一个没有5000个广告的维基是可能的。”独立后，Fandom面临一个问题：它的《GTA》维基原来有数百万的月活用户，现在这么多编辑离开了，网站内容会变得过时。尤其在《GTA 6》即将于2026年底发售的背景下，Fandom绝对不能让维基内容陈旧，因为他们预估会有天量的搜索流量涌来。所以，他们很可能雇佣了付费写手来填补空白。而这正是争议的导火索。</p><p>GTA Wiki的团队认为，这些付费写手可能不熟悉游戏细节，所以最快捷的方法就是把gta.wiki的内容直接搬过去。而Fandom的回复中提到的“共同历史”也很有意思：因为GTA Wiki最初就在Fandom上，所以很多结构和模板是共有的。但问题是，独立后的新站点完全是社区从头写的，内容也是全新的。Fandom在为自己辩护时说，因为是同一个起点，所以相似性不可避免。但这很难解释为什么连打字错误都一模一样。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(511.4,'sec-0005')"><span>▶</span> 08:31</button><h3 class="section-title">而《GTA 6》的发售可能是另一个变量。Fando</h3></div><p>说到底，这场冲突的核心不只是一起抄袭案例，而是两种互联网模式的碰撞：公益社区和商业平台。社区维基靠无偿贡献，内容质量高但经营难；而商业平台提供免费和便利，但本质是赚钱。当两者的利益产生矛盾时，这种冲突几乎是必然的。</p><p>还有另外一个层面，就是法律问题。CC-BY-NC-SA协议确实允许他人复制和分发内容，但前提是“非商业使用”。Fandom的商业模式是广告，这显然是商业行为。但问题在于，要起诉侵权需要大量法律成本，而GTA Wiki的团队没有这笔钱。所以，他们只能寄希望于舆论压力。</p><p>那么，这件事最终会如何发展呢？我注意到一些有趣的走向。首先，GTA Wiki可能无法获得正式的法律胜利，但这场舆论战已经让很多玩家知道了真相。MonkeyPolice188贴出的证据在Reddit上迅速传播，很多用户表示要抵制Fandom。还有不少人开始主动编辑那些Fandom版本的文章，或者将gta.wiki的链接分享出去。其次，Fandom可能面临更多的维基服务迁移潮。毕竟，这次事件再次证明，依赖一个商业平台是有风险的。也许未来会有更多游戏社区考虑自建维基。</p><p>而《GTA 6》的发售可能是另一个变量。Fandom需要大量最新的《GTA》内容来变现，如果gta.wiki能成为玩家首选的信息源头，那么Fandom的流量就会锐减。相应的，Fandom可能会采取更激进的措施，比如优化体验、减少广告，甚至主动寻求和解？但也可能更糟：他们可能继续用这种手段来填充内容，直到另一个更强大的社区力量出现。</p></div>
+<div class="section" id="sec-0006"><p>我最后想说的是，信息时代的数字劳工问题——那些无偿写维基条目、做字幕、维护开源代码的人，他们的劳动支撑起了巨大的商业平台，却往往得不到任何回报。GTA Wiki的团队不仅是受害者，也是这一现象的警示牌。当你的劳动成为别人赚钱的工具时，当你连维基的名字都被占有时候，这种无力感会让人心酸。但至少，我们还有选择：把鼠标指向另一个网址。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">根据GTA Wiki的管理员Monkey</span></div>
+<div class="tl-item" onclick="seek(127.8,'sec-0002')"><span class="tl-time">02:07</span><span class="tl-title">这个回应让GTA Wiki团队非常失望，</span></div>
+<div class="tl-item" onclick="seek(255.7,'sec-0003')"><span class="tl-time">04:15</span><span class="tl-title">据多方报道，Fandom逐渐调整了广告策</span></div>
+<div class="tl-item" onclick="seek(383.5,'sec-0004')"><span class="tl-time">06:23</span><span class="tl-title">GTA Wiki的团队认为，这些付费写手</span></div>
+<div class="tl-item" onclick="seek(511.4,'sec-0005')"><span class="tl-time">08:31</span><span class="tl-title">而《GTA 6》的发售可能是另一个变量。</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260721060738" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
