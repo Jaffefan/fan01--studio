@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-21-0902",
+  "title": "训练成本砍90%、Kimi K3开源逼近美国，AI竞赛一夜变天",
+  "published_at": "2026-07-21 09:02",
+  "duration_seconds": 616.44,
+  "duration_label": "10分16秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "OpenAI长时模型暴露出新故障",
+      "golden_quote": "长时模型的安全问题，是对监控范式的根本重构。",
+      "keywords": [
+        "OpenAI",
+        "安全对齐",
+        "长时模型",
+        "评估体系"
+      ],
+      "source": "OpenAI"
+    },
+    {
+      "title": "《第九区》导演用AI拍了部13分钟短片",
+      "golden_quote": "AI电影不是要消灭导演，而是让想象力从预算枷锁中解放出来。",
+      "keywords": [
+        "AI电影",
+        "Blomkamp",
+        "Seedance",
+        "Nightborne"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "Kimi K3开源逼近美国前沿模型",
+      "golden_quote": "当最好的模型变成免费，AI公司的核心资产就不再是模型本身，而是信任和服务。",
+      "keywords": [
+        "Kimi K3",
+        "开源",
+        "中美AI竞争",
+        "商业模式"
+      ],
+      "source": "Gary Marcus"
+    },
+    {
+      "title": "Anthropic创纪录15亿美元版权和解获批",
+      "golden_quote": "15亿买不来版权规则，只能买来一个逃避判例的机会。",
+      "keywords": [
+        "Anthropic",
+        "版权",
+        "和解",
+        "合理使用"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Grok杀入Excel，自然语言写公式",
+      "golden_quote": "最好的AI工具，是让你感觉不到AI存在的那种工具。",
+      "keywords": [
+        "Grok",
+        "Excel",
+        "自然语言",
+        "办公AI"
+      ],
+      "source": "xAI"
+    }
+  ]
+}
