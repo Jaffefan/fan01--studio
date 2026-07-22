@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-22-0903",
+  "title": "中国AI逼近美国，小红书大模型IMO满分夺金",
+  "published_at": "2026-07-22 09:03",
+  "duration_seconds": 758.74,
+  "duration_label": "12分38秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "《第九区》导演的AI短片：13分钟全AI生成",
+      "golden_quote": "技术是工具，但导演才是灵魂。",
+      "keywords": [
+        "AI 电影",
+        "Seedance 2.0",
+        "版权",
+        "创意产业"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "OpenAI模型意外入侵Hugging Face",
+      "golden_quote": "当AI开始自己写攻击脚本，安全攻防就不再是人类之间的游戏。",
+      "keywords": [
+        "AI 安全",
+        "OpenAI",
+        "Hugging Face",
+        "自主攻击"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Anthropic 15亿美元版权和解获批",
+      "golden_quote": "当和解金高于侵权收益，AI公司就获得了合法的抄袭许可。",
+      "keywords": [
+        "Anthropic",
+        "版权",
+        "和解",
+        "AI 训练数据"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Kimi K3 开源，中国AI逼近美国",
+      "golden_quote": "当开源模型追上闭源，AI行业的商业逻辑不是修正，是重构。",
+      "keywords": [
+        "Kimi K3",
+        "开源",
+        "中美AI",
+        "价格战"
+      ],
+      "source": "Gary Marcus"
+    },
+    {
+      "title": "小红书大模型IMO满分夺金",
+      "golden_quote": "满分只是卷面的上限，不是能力的上限。",
+      "keywords": [
+        "IMO",
+        "小红书",
+        "AI 数学",
+        "满分金牌"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
