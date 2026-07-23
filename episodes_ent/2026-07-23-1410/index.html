@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>1980年代，中国游戏产业的先行者 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 073 夜 / 2026-07-23</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 80年代</div>
+    <h1 class="ep-title">1980年代，中<span class="hl">国游戏产业的先行者</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 17:02</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260723061200" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">书中也有关于电子游戏的论述：电视游戏机已经变成商店</h3></div><p>7月29日，中国音数协游戏博物馆开展了一场名为“新的故事：中国单机游戏展”的展览。展览聚焦的是从1980年代开始的国产原创游戏的历史发展，也会以大量的实物展示。但在国产原创游戏诞生之前，中国的电子游戏产业其实也有很多的故事——在这片土地上，对电子游戏的好奇、试制、消费和争议，比大多数人以为的要早。我今天就想跟你聊聊这段被遗忘的历史。</p><p>1980年，未来学家阿尔文·托夫勒的《第三次浪潮》出版，很快成为改革开放初期中国知识界的重要读物。托夫勒把人类文明划分为农业革命、工业革命和信息技术革命三次浪潮，相信新技术会让发展中国家获得重新起跑的机会。这本书在中国被大量翻印和传阅，此后数年流传量达上千万册。2006年《环球时报》评选“影响近现代中国的50个外国人”，托夫勒与基辛格等人并列入选；在多个“改革开放30年30本书”的评选中，《第三次浪潮》也榜上有名。当年读到这本书的中国青年中，不少人后来成了中国数字世界的建设者，正如书中那句煽动人心的话：“就像革命的先辈一样，我们的使命注定是创造未来。”</p><p>书中也有关于电子游戏的论述：电视游戏机已经变成商店里的抢手货。几百万美国人热心地把电视荧屏转变成乒乓球桌和网球场......利用这种简单的玩意儿，许多人学会和电视一起游戏，一起行动。他们由被动的接收者变成消息传送者，他们要控制电视，而不只是让电视控制他们。在托夫勒看来，“掌上电子计算机、电子表、电子游戏机”等商品所代表的电子产业，是“第三次浪潮”时代的主流产业之一。那么在深受这种技术想象影响的中国，当时是否已经有了电子游戏机产业？</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(127.8,'sec-0002')"><span>▶</span> 02:07</button><h3 class="section-title">这一轮扩散的关键推手是一颗芯片。1975年Atar</h3></div><p>过去关于中国游戏史的叙述，往往把80年代处理成一段空白，仿佛中国人直到90年代的小霸王和学习机热潮才开始接触游戏硬件。但在前两年筹备中国音数协游戏博物馆期间，我们从一批实物中看到了不同的答案。80年代的中国大陆有国营研究所在试制游戏机，有地方电子工厂在批量生产，有街机厅从广东沿海扩散到内陆县城，有中华学习机把Apple II游戏带进了全国的中小学计算机教室，也有港台的游戏公司和芯片厂商通过贸易网络向大陆输送硬件和技术。这些线索大多没有直接通向后来的产业巨头，但它们共同说明，中国社会对电子游戏的接触比通常的叙述要早得多，也广得多。</p><p>我们先从第一世代游戏机说起。所谓“第一世代游戏机”，通常指以1972年米罗华奥德赛为起点、到1970年代末为止的家用电视游戏设备。这一代产品的共同技术特征是只能运行内置的几个简单游戏，比如乒乓球、壁球，无法更换游戏卡带。在美国，这一世代的市场周期从1972年持续到1977年前后；在日本，任天堂1977年才转型游戏机生产，从玩具厂向游戏机大厂迈出重要一步。不过世代的划分依据是技术特征而非时间。在中国大陆，采用同一代技术的游戏机要到80年代初才出现。这个时间差说明中国并非缺席了第一世代，而是以延迟数年的方式参与了同一轮技术扩散。</p><p>这一轮扩散的关键推手是一颗芯片。1975年Atari推出家用版Pong游戏机之后，通用仪器（General Instrument）看准商机，于1976年设计了AY-3-8500，一款任何制造商都可以直接采购的低成本游戏专用芯片。芯片里集成了网球、曲棍球、壁球和练习赛四种球拍类游戏以及两种射击游戏，完全没有游戏开发经验的消费电子公司和玩具公司也能靠它造出类似Pong的游戏机。AY-3-8500在全球范围内被数以百计的制造商采用，第一世代游戏机的市场因此陡然井喷。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(255.6,'sec-0003')"><span>▶</span> 04:15</button><h3 class="section-title">因为年代久远，YQ-1型电视游戏机没有图片和实物流</h3></div><p>中国香港的电子加工业在70年代末已经相当成熟，1977年即有康力、伟易达等电子厂基于这颗芯片开发游戏机，一些还获取了米罗华奥德赛的授权。康力等公司在80年代就已经轰然落幕，伟易达至今仍然活跃，只是早已不做游戏机，转型成了“全球最大的婴幼儿及学前电子学习产品企业”。不仅是大型电子加工厂，一些小型工厂也可以生产电子游戏机，比如博物馆收藏了一台名为周氏牌电视游乐器的设备，同样是第一世代的游戏机，使用的也是AY-3-8500芯片，据推测可能是由中国香港或台湾地区一家名为周氏电子企业社的工厂开发。</p><p>借助同一颗芯片，改革开放之后的中国大陆也造出了自己的电子游戏机。1992年由西南交通大学出版社出版的《家用电视游戏机使用技巧及检修大全》，是目前已知最早系统记录国产电视游戏机型号和技术参数的出版物之一，书中记载：“1981年底北京第一轻工业研究所，以AY-3-8500为芯片，其余线路均为国产元器件组成。1982年初定型号为YQ-1型的电视游戏机通过技术鉴定并小批量投放市场，这算是我国电视游戏机生产的开端”。</p><p>因为年代久远，YQ-1型电视游戏机没有图片和实物流传，但同时期其他游戏机有一些保存至今。中国音数协游戏博物馆收藏的CY-A电视游戏机就是80年代上海春雷电子仪器厂生产的第一世代游戏机，博物馆同样收藏了陕西西安、江苏南京等地工厂生产的同类产品，可以看出各地都有无线电工厂和街道企业都在尝试这一“新潮”产品。同时期的电子杂志上也有佐证，《电子世界》1982年5月刊的封面展示了江苏无锡无线电二厂研制的游戏机。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(383.4,'sec-0004')"><span>▶</span> 06:23</button><h3 class="section-title">从地方电子工业志里我们还能找到更多与游戏机有关的线</h3></div><p>同年，上海广播器材厂也在做自己的尝试。这家位于延安西路1319号的大型国营企业，是上海最早的国营无线电骨干企业之一，长期承担军用雷达等军工电子产品的生产任务，1958年曾制造出上海第一台黑白电视机。据《上海电子仪表工业志》记载，1981年初该厂就组织过一批采用AY-8500系列电路的电视游戏机进口散件组装，以此探索产品技术。在这个基础上，1982年3月该厂开始研制MTG-8210型盒式电视游戏机，克服了ROM向EPROM转写及软件改版等技术难题，1983年底成功定型并通过部级鉴定，获航天工业部科技成果四等奖。从1983年6月投产到1988年停产，两个型号共生产了1821台，其中盒式机1619台、台式机202台。以今天的眼光看这个数字微不足道，但一家承担军工生产任务的国营工厂为一款电视游戏机走完了立项、定型、鉴定、投产的全套流程，这件事本身就说明电子游戏在当时被视为一种有潜力的新产品。</p><p>从地方电子工业志里我们还能找到更多与游戏机有关的线索。《黑龙江省志》的优质产品目录里出现了国营八二三三厂生产的“双山牌”YD-01、YD-02、YD-03电视游戏机，说明电视游戏机已经进入省级工业产品的正式记录。《哈尔滨市志·电子仪表工业志》则记录了哈尔滨的曙光无线电厂与黑龙江省电子研究所在80年代把电子游戏机纳入了军工企业转产民用品的试验范围：从《高速赛车》《捕鲨鱼》到《打击空中入侵者》，到1985年已有8个品种、400余台；后来转向彩色电子游戏机，产量扩大到数千台。虽然规模很小，但足以说明试制游戏机并非某一座城市的偶发行为，而是在全国大量国营无线电厂和电子仪表厂同时出现的。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(511.3,'sec-0005')"><span>▶</span> 08:31</button><h3 class="section-title">到80年代中期，电子游戏机已经进入商业媒体对新型消</h3></div><p>在硬件之外，也有与游戏软件有关的记载，如1982年中国科学院半导体研究所成功研制了一种“火箭炮”游戏芯片，后由广西桂林电子技术研究所接产。同一时期，北京市科委组织十所高等院校和研究所的科技人员联合开发彩色电视游戏机软件，其中包括以孙悟空为主题的游戏程序，据记载图像数据36KB，程序代码40KB，用Z80汇编语言编写。目前关于这批软件的唯一文献来源是前述《家用电视游戏机使用技巧及检修大全》，书中称软件于1983年初研制完成并出售给外国游戏机公司。如果记载属实，这可能是中国最早的具有本土文化主题的原创游戏软件，但当年的项目报告或其他独立资料尚未有流传。</p><p>到80年代中期，电子游戏机已经进入商业媒体对新型消费品的想象。1985年《浙江经济》杂志转载了一篇题为“大有前途的六类商品”的文章，预测八十年代后期和九十年代有发展前途的商品时，把录像机、电子游戏机、空调器等并列为第一类新型家用商品。只是在1980年代的国民经济条件下，电子游戏机的消费市场还撑不起规模化生产，这些第一世代游戏机无法像电视机、冰箱那样被纳入国家工业计划大规模制造，加之游戏种类有限，所以产量和销量都很小。几年之后，以任天堂红白机为原型的兼容机通过东南沿海进入大陆市场，并在90年代以“学习机”的名义大行其道，这些更早的尝试便彻底无人问津。但它们的意义不在销量：早在改革开放初期，国营研究所、无线电厂和地方企业就已经把电子游戏当成一种可以试制的新型电子产品，大陆对游戏硬件的接触比通常以为的要早得多。</p></div>
+<div class="section" id="sec-0006"><div class="section-header"><button class="section-btn" onclick="seek(639.1,'sec-0006')"><span>▶</span> 10:39</button><h3 class="section-title">同一时期，上海电子计算机厂在其引进的IBM PC游</h3></div><p>家用游戏机在80年代的中国大陆还是少数人的稀罕物件，街机的渗透要广泛得多。改革开放之初，国外制造的投币式游戏机经由香港流入广东沿海，之后迅速扩散到全国各大城市。广州是街机很早风行的城市，据《南风窗》1986年第7期报道，广州最早引进电子游戏机的是大宾馆，电子游戏室大规模涌现则是在1985年秋天以后；到报道写作时，几乎每间剧院都设有电子游戏室，大部分公园、文体场所、街道文化站都摆上了游戏机，不少商店和个体户也办起电子游戏室。海珠区先后几个月批了一百多份营业执照，仅光华路一百多米路段就有六家电子游戏室；按营业时间和玩家流量估算，全市每天接待的玩家已有数万人。</p><p>刚进入国内公共文化空间时，街机一度被当作“科学益智”的新事物。1982年1月，上海《解放日报》报道了市工人文化宫举办的电动游艺展览，将这些游戏机形容为“饶有趣味又启发人们智慧”的展品。当时正值“向科学进军”的氛围，电子游戏机作为新奇的科技产物，最初也出现在青年宫、少年宫、工人俱乐部和文化馆这类官方文化场所中，带着一层科技启蒙的光环。资深玩家、早期游戏杂志编辑张弦在网络电台节目《VG聊天室》中回忆，他1980年代初去当时还叫“上海市青年宫”的大世界看邮展，在大厅里第一次看到了日本Irem公司的射击游戏《银河帝国的逆袭（UniWar S）》，屏幕上像素化的太空战争场景让他震惊：“这完全契合了我们看科幻小说时候的想象”。</p><p>同一时期，上海电子计算机厂在其引进的IBM PC游戏软件专辑序言中写道：“少年之家、公园、中小学、幼儿园等配置了PC机......游戏程序面向大众的趋势是不可避免的”。序言甚至指出游戏“可以极大地锻炼和提高英语会话能力”，“对于专业软件工作者来说，游戏程序的设计技巧也不是没有可取之处的”，并期望这些游戏程序“对计算机的普及和推广，贡献一点微薄的力量”。从街机展览到PC软件序言，在电子游戏尚未成为社会争议焦点的那几年，官方语境中的游戏跟“科学益智”“计算机普及”紧密绑定在一起。</p></div>
+<div class="section" id="sec-0007"><div class="section-header"><button class="section-btn" onclick="seek(766.9,'sec-0007')"><span>▶</span> 12:46</button><h3 class="section-title">到80年代末，随着红白机兼容机（即后来的小霸王学习</h3></div><p>不过“益智”的光环没有持续太久。80年代中后期，以个体户为主的街机摊和街机厅在城市大街小巷遍地开花，公园角落、百货大楼大厅、弄堂深处，到处能看到拼装的街机框体。游戏主板多为从广州进货的日本走私板，框体由老板自行焊接组装。到了80年代末，《双截龙》《快打旋风》等游戏相继在中国街头出现，画面越来越好看，吸引了大量放学后不愿回家的青少年。</p><p>街机的扩散也不只是大城市报刊上的话题，各地的地方志也有详细记载：据《青田县志》记载，浙江省青田县在1985年就有了街机厅，而《湖南省志》则提到1988年长沙出现街机厅。这些记录说明街机已经从沿海蔓延到内陆。社会对街机的态度也开始转变。1987年《人民日报》发表了一篇题为《莫让电子游戏机误人子弟》的读者来信，批评街机厅的泛滥影响了青少年的学习。此后，关于电子游戏“毒害青少年”的报道越来越多。1989年，文化部、公安部、国家工商局联合发文，要求禁止在中小学校附近开设电子游戏厅，并限制青少年进入。这是中国最早的针对电子游戏的官方管制措施之一。</p><p>到80年代末，随着红白机兼容机（即后来的小霸王学习机）的涌入，国产硬件尝试几乎完全消失，街机厅也被严格管制。90年代，电子游戏正式进入“学习机”时代，但那是另一个故事了。而80年代的那些试制、争论和探索，只剩下几台锈蚀的游戏机、几本发黄的地方志和几本老杂志上零星的记载。它们像化石一样，埋在时间的尘土里，等待被重新发现。</p></div>
+<div class="section" id="sec-0008"><p>展览还在继续。如果你有兴趣，不妨去那家博物馆看看那些老游戏机。它们不会说话，但每一颗螺丝、每一条电路板上的引线，都在讲述一个关于好奇心和技术梦想的故事。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">书中也有关于电子游戏的论述：电视游戏机已</span></div>
+<div class="tl-item" onclick="seek(127.8,'sec-0002')"><span class="tl-time">02:07</span><span class="tl-title">这一轮扩散的关键推手是一颗芯片。1975</span></div>
+<div class="tl-item" onclick="seek(255.6,'sec-0003')"><span class="tl-time">04:15</span><span class="tl-title">因为年代久远，YQ-1型电视游戏机没有图</span></div>
+<div class="tl-item" onclick="seek(383.4,'sec-0004')"><span class="tl-time">06:23</span><span class="tl-title">从地方电子工业志里我们还能找到更多与游戏</span></div>
+<div class="tl-item" onclick="seek(511.3,'sec-0005')"><span class="tl-time">08:31</span><span class="tl-title">到80年代中期，电子游戏机已经进入商业媒</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260723061200" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
