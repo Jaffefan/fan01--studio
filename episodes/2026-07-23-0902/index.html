@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 军备竞赛再升级：腾讯、Anthropic、AMD、OpenAI、谷歌都在押注什么？ - 伊恩 AI 小报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg-page: #fdfcf8;
+    --bg-card: #ffffff;
+    --ink: #1d1d1f;
+    --ink-soft: #5a5a5e;
+    --ink-mute: #999;
+    --line: #e8e4db;
+    --line-light: #f0ece3;
+    --accent: #d4801b;
+    --serif: "Noto Serif SC", "Source Han Serif SC", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  }
+  body {
+    font-family: var(--serif);
+    background: var(--bg-page);
+    color: var(--ink);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── 面包屑 ── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-bottom: 36px;
+    letter-spacing: 0.5px;
+  }
+  .breadcrumb a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { font-size: 9px; }
+  .breadcrumb .vol {
+    margin-left: auto;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-mute);
+  }
+
+  /* ── 报头 (Newspaper Masthead) ── */
+  .masthead {
+    text-align: center;
+    border-top: 1px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 0;
+    margin-bottom: 32px;
+  }
+  .masthead-show {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .masthead-info {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+  .masthead-info span { margin: 0 10px; }
+
+  /* ── 标题 ── */
+  .title {
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── 播放器 ── */
+  .player {
+    background: var(--bg-card);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid var(--line);
+  }
+  .player-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  audio {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+  }
+
+  /* ── 章节目录 ── */
+  .toc {
+    margin-bottom: 36px;
+    padding: 0 4px;
+  }
+  .toc-title {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line-light);
+    transition: color 0.15s;
+    font-family: var(--serif);
+  }
+  .toc-item:last-child { border-bottom: none; }
+  .toc-item:hover { color: var(--accent); }
+  .toc-time {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--accent);
+    min-width: 50px;
+    margin-right: 16px;
+    font-weight: 500;
+  }
+  .toc-text {
+    flex: 1;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* ── 导读按语 (Editor's Note) ── */
+  .opening-note {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.9;
+    margin-bottom: 42px;
+    padding: 0 4px;
+  }
+
+  /* ── 资讯片段 ── */
+  .segment {
+    margin-bottom: 44px;
+  }
+  .segment-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 18px;
+  }
+  .segment-number {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .segment-title {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+  .segment-summary {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 14px;
+  }
+
+  /* ── 金句引用 ── */
+  .golden-quote {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: center;
+    padding: 20px 32px;
+    margin: 24px 0;
+    position: relative;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .golden-quote::before {
+    content: '\201C';
+    font-size: 56px;
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.4;
+  }
+
+  /* ── 来源与标签 ── */
+  .segment-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ink-mute);
+    align-items: center;
+  }
+  .tag {
+    background: #f5f0e8;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: var(--ink-soft);
+    font-size: 11px;
+  }
+  .source-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── 上下期导航 ── */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    font-family: var(--sans);
+  }
+  .episode-nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.15s;
+    display: block;
+  }
+  .episode-nav a:hover { color: var(--accent); }
+  .episode-nav-label {
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .episode-nav-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .episode-nav .next { text-align: right; }
+  .episode-nav .placeholder {
+    color: var(--ink-mute);
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .footer {
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-top: 48px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 24px 16px 64px; }
+    .title { font-size: 26px; }
+    .segment-title { font-size: 18px; }
+    .golden-quote { font-size: 16px; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="../../index.html">← 全部期刊</a>
+    <span class="sep">·</span>
+    <span>伊恩 AI 小报</span>
+    <span class="vol">第 088 期</span>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-show">伊恩 AI 小报</div>
+    <div class="masthead-info">
+      <span>2026-07-23 09:02（北京时间）</span><span>·</span><span>5 条深度报道</span><span>·</span><span>10分33秒</span><span>·</span><span>主笔 伊恩</span>
+    </div>
+  </div>
+
+  <h1 class="title">AI 军备竞赛再升级：腾讯、Anthropic、AMD、OpenAI、谷歌都在押注什么？</h1>
+
+  <div class="player">
+    <div class="player-label">收听本期</div>
+    <audio id="player" controls preload="metadata">
+      <source src="full.mp3?v=20260723010500" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">章节</div>
+    <div class="toc-item" data-seek="34.38">  <span class="toc-time">00:34</span>  <span class="toc-text">腾讯 Miora：设计 Agent 的「开放」牌</span></div>
+    <div class="toc-item" data-seek="145.89">  <span class="toc-time">02:25</span>  <span class="toc-text">Anthropic 赔了 15 亿，但赢了最关键的一仗</span></div>
+    <div class="toc-item" data-seek="261.82">  <span class="toc-time">04:21</span>  <span class="toc-text">AMD 砸 50 亿美元请 Anthropic 买自己的芯片？</span></div>
+    <div class="toc-item" data-seek="381.46">  <span class="toc-time">06:21</span>  <span class="toc-text">OpenAI 的 7500 亿美元算力狂奔</span></div>
+    <div class="toc-item" data-seek="495.14">  <span class="toc-time">08:15</span>  <span class="toc-text">谷歌 Q2：AI 收入飙涨 82%，Gemini 月活 9.5 亿</span></div>
+  </div>
+
+  
+  <div class="segment">
+    <img class="segment-image" src="image_01.jpg?v=20260723010500" alt="腾讯 Miora：设计 Agent 的「开放」牌" data-seek="34.38" style="cursor:pointer">
+    <div class="segment-number" data-seek="34.38" style="cursor:pointer">第 1 条 · 00:34</div>
+    <h2 class="segment-title">腾讯 Miora：设计 Agent 的「开放」牌</h2>
+    <div class="segment-summary">腾讯设计 Agent 平台 Miora 全面开放，无需邀请码。平台由 WorkBuddy 打造，提供品牌、影视、游戏、电商、UI/UX 五大场景，支持自定义多模态模型与推理深度，内置 Skill 市场和记忆系统。其核心创新在于将设计工具升级为 Agent 平台，允许用户组合多个 Agent 协作完成设计流程，灵活性远超传统软件。</div>
+    <div class="golden-quote">未来你不需要会设计，只需要会搭 Agent。</div>
+    <div class="segment-meta">
+      <span class="tag">腾讯</span> <span class="tag">Miora</span> <span class="tag">设计 Agent</span> <span class="tag">WorkBuddy</span> <span class="tag">Skill 市场</span>
+      <span class="tag">来源: 公众号：数字生命卡兹克</span>
+      <a class="source-link" href="https://mp.weixin.qq.com/s/qQhq9nxoeCD68iMwQoEVFQ" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_02.jpg?v=20260723010500" alt="Anthropic 赔了 15 亿，但赢了最关键的一仗" data-seek="145.89" style="cursor:pointer">
+    <div class="segment-number" data-seek="145.89" style="cursor:pointer">第 2 条 · 02:25</div>
+    <h2 class="segment-title">Anthropic 赔了 15 亿，但赢了最关键的一仗</h2>
+    <div class="segment-summary">Anthropic 因使用盗版数据库 LibGen 和 PiLiMi 训练 AI，向图书作者支付 15 亿美元和解金，创集体诉讼版权索赔纪录。但法官此前已裁定合法获取的书籍训练属于合理使用，因此赔偿主要针对盗版行为，而非 AI 训练本身。未来 AI 公司会更注重数据合规。</div>
+    <div class="golden-quote">15 亿买的是赎罪券，但核心判例才是行业真正的利好。</div>
+    <div class="segment-meta">
+      <span class="tag">Anthropic</span> <span class="tag">版权</span> <span class="tag">和解</span> <span class="tag">合理使用</span> <span class="tag">LibGen</span>
+      <span class="tag">来源: The Decoder</span>
+      <a class="source-link" href="https://the-decoder.com/anthropics-1-5b-piracy-settlement-with-book-authors-is-a-record-loss-that-hands-ai-labs-their-biggest-legal-win" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_03.jpg?v=20260723010500" alt="AMD 砸 50 亿美元请 Anthropic 买自己的芯片？" data-seek="261.82" style="cursor:pointer">
+    <div class="segment-number" data-seek="261.82" style="cursor:pointer">第 3 条 · 04:21</div>
+    <h2 class="segment-title">AMD 砸 50 亿美元请 Anthropic 买自己的芯片？</h2>
+    <div class="segment-summary">AMD 投资 50 亿美元给 Anthropic，条件是 Anthropic 采购 2GW 的 AMD GPU。这笔罕见交易旨在为 AMD 创造关键客户和生态验证，同时帮助 Anthropic 降低对英伟达的依赖。市场反应复杂，认为这是 AMD 高风险的信任投资。</div>
+    <div class="golden-quote">最贵的信任状，AMD 赌一个属于自己的英伟达时刻。</div>
+    <div class="segment-meta">
+      <span class="tag">AMD</span> <span class="tag">Anthropic</span> <span class="tag">投资</span> <span class="tag">GPU</span> <span class="tag">MI455</span>
+      <span class="tag">来源: X：SemiAnalysis</span>
+      <a class="source-link" href="https://x.com/SemiAnalysis_/status/2079929602429141215" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_04.jpg?v=20260723010500" alt="OpenAI 的 7500 亿美元算力狂奔" data-seek="381.46" style="cursor:pointer">
+    <div class="segment-number" data-seek="381.46" style="cursor:pointer">第 4 条 · 06:21</div>
+    <h2 class="segment-title">OpenAI 的 7500 亿美元算力狂奔</h2>
+    <div class="segment-summary">OpenAI 计划在佐治亚州建设 3.2GW 数据中心，投资 200 亿美元，总成本或超 300 亿美元。同时将 2030 年算力支出预期上调至 7500 亿美元，确保模型训练和推理的算力优势。此举反映 AI 军备竞赛的激烈程度，开发者则将受益于 API 价格下降。</div>
+    <div class="golden-quote">7500 亿美元不是泡沫，是战备。</div>
+    <div class="segment-meta">
+      <span class="tag">OpenAI</span> <span class="tag">数据中心</span> <span class="tag">7500亿美元</span> <span class="tag">算力</span> <span class="tag">GPU</span>
+      <span class="tag">来源: IT之家</span>
+      <a class="source-link" href="https://www.ithome.com/0/980/322.htm" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="segment">
+    <img class="segment-image" src="image_05.jpg?v=20260723010500" alt="谷歌 Q2：AI 收入飙涨 82%，Gemini 月活 9.5 亿" data-seek="495.14" style="cursor:pointer">
+    <div class="segment-number" data-seek="495.14" style="cursor:pointer">第 5 条 · 08:15</div>
+    <h2 class="segment-title">谷歌 Q2：AI 收入飙涨 82%，Gemini 月活 9.5 亿</h2>
+    <div class="segment-summary">Alphabet Q2 营收增长 24%，Google Cloud 增速 82%。Gemini 月活达 9.5 亿，API 处理量 220 亿 token/分钟，Gemini Enterprise 覆盖 90% 财富 100 强。AI 投资正从基础设施转化为实质性收入，谷歌云有望追上 AWS。</div>
+    <div class="golden-quote">谷歌用 AI 原生重塑云业务，回到牌桌中心。</div>
+    <div class="segment-meta">
+      <span class="tag">Alphabet</span> <span class="tag">Google Cloud</span> <span class="tag">Gemini</span> <span class="tag">Q2</span> <span class="tag">AI 收入</span>
+      <span class="tag">来源: X：Sundar Pichai</span>
+      <a class="source-link" href="https://x.com/sundarpichai/status/2080021408856293584" target="_blank" rel="noopener">原文 →</a>
+    </div>
+  </div>
+
+  <div class="episode-nav" id="episode-nav"></div>
+
+  <div class="footer">
+    Powered by Claude Code · 2026-07-23 01:05
+  </div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  document.querySelectorAll('[data-seek]').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = parseFloat(el.getAttribute('data-seek'));
+      player.currentTime = t;
+      player.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // 上一期 / 下一期导航
+  fetch('../../episodes-list.json')
+    .then(r => r.json())
+    .then(list => {
+      const m = window.location.pathname.match(/episodes\/([^\/]+)/);
+      if (!m) return;
+      const currentId = m[1];
+      const idx = list.findIndex(e => e.episode_id === currentId);
+      if (idx === -1) return;
+      const newer = idx > 0 ? list[idx - 1] : null;
+      const older = idx < list.length - 1 ? list[idx + 1] : null;
+      const nav = document.getElementById('episode-nav');
+      const olderHtml = older
+        ? `<a href="../${older.episode_id}/" class="prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">${older.title}</div>
+           </a>`
+        : `<div class="placeholder prev">
+             <div class="episode-nav-label">← 上一期</div>
+             <div class="episode-nav-title">已经是最早一期了</div>
+           </div>`;
+      const newerHtml = newer
+        ? `<a href="../${newer.episode_id}/" class="next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">${newer.title}</div>
+           </a>`
+        : `<div class="placeholder next">
+             <div class="episode-nav-label">下一期 →</div>
+             <div class="episode-nav-title">这是最新一期</div>
+           </div>`;
+      nav.innerHTML = olderHtml + newerHtml;
+    })
+    .catch(() => {});
+</script>
+</body>
+</html>

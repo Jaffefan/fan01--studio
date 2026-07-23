@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-23-0902",
+  "title": "AI 军备竞赛再升级：腾讯、Anthropic、AMD、OpenAI、谷歌都在押注什么？",
+  "published_at": "2026-07-23 09:02",
+  "duration_seconds": 596.23,
+  "duration_label": "9分56秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "腾讯 Miora：设计 Agent 的「开放」牌",
+      "golden_quote": "未来你不需要会设计，只需要会搭 Agent。",
+      "keywords": [
+        "腾讯",
+        "Miora",
+        "设计 Agent",
+        "WorkBuddy",
+        "Skill 市场"
+      ],
+      "source": "公众号：数字生命卡兹克"
+    },
+    {
+      "title": "Anthropic 赔了 15 亿，但赢了最关键的一仗",
+      "golden_quote": "15 亿买的是赎罪券，但核心判例才是行业真正的利好。",
+      "keywords": [
+        "Anthropic",
+        "版权",
+        "和解",
+        "合理使用",
+        "LibGen"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "AMD 砸 50 亿美元请 Anthropic 买自己的芯片？",
+      "golden_quote": "最贵的信任状，AMD 赌一个属于自己的英伟达时刻。",
+      "keywords": [
+        "AMD",
+        "Anthropic",
+        "投资",
+        "GPU",
+        "MI455"
+      ],
+      "source": "X：SemiAnalysis"
+    },
+    {
+      "title": "OpenAI 的 7500 亿美元算力狂奔",
+      "golden_quote": "7500 亿美元不是泡沫，是战备。",
+      "keywords": [
+        "OpenAI",
+        "数据中心",
+        "7500亿美元",
+        "算力",
+        "GPU"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "谷歌 Q2：AI 收入飙涨 82%，Gemini 月活 9.5 亿",
+      "golden_quote": "谷歌用 AI 原生重塑云业务，回到牌桌中心。",
+      "keywords": [
+        "Alphabet",
+        "Google Cloud",
+        "Gemini",
+        "Q2",
+        "AI 收入"
+      ],
+      "source": "X：Sundar Pichai"
+    }
+  ]
+}
