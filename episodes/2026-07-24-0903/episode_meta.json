@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-24-0903",
+  "title": "苹果起诉OpenAI窃密，AI圈最狠一战开局",
+  "published_at": "2026-07-24 09:03",
+  "duration_seconds": 583.03,
+  "duration_label": "9分43秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "小模型装上置信度探针：低分自动转大模型",
+      "golden_quote": "让模型学会自我怀疑，才是真正的智能。",
+      "keywords": [
+        "Cactus",
+        "Gemma 4",
+        "置信度探针",
+        "设备端 AI",
+        "自动路由"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "ChatGPT 桌面语音：一句话指挥多个智能体",
+      "golden_quote": "语音是新一代的鼠标和键盘。",
+      "keywords": [
+        "ChatGPT",
+        "语音控制",
+        "多智能体",
+        "桌面应用",
+        "GPT-Live"
+      ],
+      "source": "X：OpenAI (@OpenAI)"
+    },
+    {
+      "title": "Claude 语音获得 Opus 和 Sonnet 加持",
+      "golden_quote": "最好的语音助手不是答得快，而是想得深。",
+      "keywords": [
+        "Claude",
+        "语音模式",
+        "Opus",
+        "Sonnet",
+        "多语言"
+      ],
+      "source": "Claude：Blog（网页）"
+    },
+    {
+      "title": "AI 操控的 F-16 完成试飞：空战进入自主时代",
+      "golden_quote": "天空不再由人类独自守护。",
+      "keywords": [
+        "DARPA",
+        "F-16",
+        "AI 空战",
+        "VENOM",
+        "自主飞行"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "苹果起诉 OpenAI：窃取硬件制造机密",
+      "golden_quote": "苹果用法律壁垒，守住硬件护城河。",
+      "keywords": [
+        "苹果",
+        "OpenAI",
+        "窃取商业机密",
+        "硬件制造",
+        "诉讼"
+      ],
+      "source": "The Verge：AI（RSS）"
+    }
+  ]
+}
