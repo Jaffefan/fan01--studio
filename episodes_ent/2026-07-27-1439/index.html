@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>十四年等待，一纸沉默：当粉丝重制版遇上阀门紧闭 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 075 夜 / 2026-07-27</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Valve</div>
+    <h1 class="ep-title">十四年等待，一纸沉默：<span class="hl">当粉丝重制版遇上阀门紧闭</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:31</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260727064113" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">Dot Operator的原话是这么说的：“游戏已</h3></div><p>你好，我是伊恩。想象一下，你用十四年打磨一件作品，终于完工，却在发布前夕被晾在一边——不是因为质量不行，也不是因为侵权被告，而是因为那个本该点头的人，突然不说话了。这就是《Alive &amp; Kicking》制作组目前的故事。</p><p>先说说这个项目本身吧。《Alive &amp; Kicking》是一个粉丝重制版，目标是用《传送门2》的引擎重制初代《传送门》。负责这个项目的团队叫Rhubarb &amp; Rhubarb，自2011年起就开始了这项工程——你没听错，2011年，距今已经整整十四年。十四年是什么概念？《传送门2》本身在2011年发售，到现在也已经过了十四个年头。而《Alive &amp; Kicking》几乎和它的目标平台同龄。</p><p>这些年来，粉丝们一直在关注这个项目，但漫长的开发周期让很多人开始怀疑：它是不是已经胎死腹中了？直到最近，有人在Steam社区发帖询问项目状态。制作组的一位核心成员，代号Dot Operator，直接回复了一条爆炸性的消息：游戏已经完成，随时可以发布，但没法上架Steam。原因是——Valve，也就是开发《传送门》的母公司，突然不再回复他们的消息了。</p><p>Dot Operator的原话是这么说的：“游戏已经做完了，但我们目前没有能力在Steam上发布它。自从几个月前我提交了一份非商业使用许可的模板之后，我就再也没有收到Valve的任何消息。我很感激他们最初给了我这个选择，但现在我们一点回音都没有。”</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(102.3,'sec-0002')"><span>▶</span> 01:42</button><h3 class="section-title">Valve对于粉丝使用自家IP创作的态度，在整个游</h3></div><p>游戏现在的状态是什么？根据制作组的说法，所有开发工作都已结束，甚至他们还可能在原版谜题之外加入一些自己设计的新关卡。技术上，他们拿到了《传送门2》的源代码，基于此进行了全面视觉翻新。而Valve最初对此是支持的——愿意提供源代码，但要求签署保密协议。这一关他们过了。真正卡住的是后来的“非商业发布表格”。Dot Operator说，这份表格是最近才提交的，但提交之后就石沉大海。</p><p>这里有个有趣的矛盾：让这个粉丝重制成为可能的东西，恰恰是现在阻碍它发布的东西。因为拿到了源代码，他们才能做出这个重制版；但也因为使用了Valve的代码，他们必须获得Valve的正式授权才能公开上线。而现在，授权的通道关闭了。</p><p>这就引出了一个更大的问题：为什么Valve会突然沉默？要理解这一点，我们得先看看Valve和粉丝项目的历史关系。</p><p>Valve对于粉丝使用自家IP创作的态度，在整个游戏行业里都算相当开放的。无数的《半条命》粉丝游戏存在于Steam上，比如著名的《黑山》——一个粉丝重制《半条命》的项目，最终获得了Valve的官方认可并上架Steam；还有《追捕弗里曼》，虽然争议很大，但也得以发行。更不用说Valve直接发行了《Garry's Mod》——一个最初也是粉丝同人性质的作品。甚至《传送门》本身都源于外部：它最初是DigiPen学生Kim Swift的一个毕业设计，Valve给了资源让它成为了2007年《橙盒》中的黑马。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(204.7,'sec-0003')"><span>▶</span> 03:24</button><h3 class="section-title">另一个可能的因素是，Valve近年来的重点早已转向</h3></div><p>所以，Valve一向不是那种滥用版权的公司。但它也不是没有边界。2020年，Valve曾下架了一个叫《Portal: Prelude RTX》的粉丝光追重制版，理由是它使用了非授权的NVIDIA RTX技术。但除此之外，像《Portal Stories: Mel》这样的粉丝作品也顺利上架了。</p><p>那么《Alive &amp; Kicking》到底卡在哪里？答案可能不在法律层面，而在流程层面。Valve是一个出了名的“扁平化”公司，没有传统的层级管理，员工可以自由选择项目。这种结构让它能做出开创性的游戏，但也导致了很多事务被搁置——尤其是需要特定部门或特定人员批准的事情。很可能，负责审核粉丝许可协议的人要么太忙，要么已经转到了其他项目，而这份申请就被遗忘在了收件箱里。</p><p>事情曝光后，玩家社群迅速行动起来。在Reddit、Twitter和Steam论坛上，大量玩家呼吁Valve回应制作组的请求。有人翻出了Valve之前支持粉丝创作的表态，质问道：“你们对《黑山》的支持哪里去了？”也有人猜测，Valve可能是在准备《传送门3》——一个多年来被反复传闻的项目，如果属实，他们可能不希望有粉丝重制版在此时分散注意力。但这种猜测没有任何证据。</p><p>另一个可能的因素是，Valve近年来的重点早已转向硬件和平台。Steam Deck、Steam OS这些项目占据大量人力，而游戏开发本身反而放缓了。2020年发布的《半条命：Alyx》是Valve近十年来唯一的主要新作。在这样一个战略重心转移的时期，一个粉丝项目的非商业许可申请，确实可能被排在十分靠后的优先级。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(307.0,'sec-0004')"><span>▶</span> 05:07</button><h3 class="section-title">《Alive &amp; Kicking》的故事还有另一层</h3></div><p>但问题在于，这种沉默对制作组来说是很不公平的。十四年的投入付诸东流，不是因为他们做得不好——恰恰相反，游戏已经完成——而是因为一个应该点头的人不点头。Dot Operator在回帖中流露出的更多是无奈而非愤怒，他甚至感谢Valve最初提供了授权选项。这种温和的态度，也许正是粉丝项目面对大公司时的典型姿态：小心翼翼、充满感激，却又无力推动任何进展。</p><p>那么这件事之后会怎么发展？目前看，有几条可能的路径。第一，社群的声音足够大，引起Valve高层的注意，然后授权被迅速批准——这是最乐观的情况。第二，Valve继续沉默，制作组可能选择通过其他平台发布游戏，比如itch.io或Game Jolt这样的独立平台，但那样做可能会面临法律风险，因为使用了Valve的源代码。第三，双方最终达成某种形式的官方合作，比如Valve将《Alive &amp; Kicking》作为官方产品发布，但这需要商业谈判，对于非商业项目来说不太可能。</p><p>你可能会好奇，类似的僵局在游戏行业里常见吗？其实并不罕见。粉丝项目与版权方的关系始终处于灰色地带。比如，任天堂对同人游戏的态度就极其严苛，经常法务警告；而像世嘉或卡普空则比较宽松。Valve所处的中间位置——开放但又需要审批——反而造成了一种模糊的困境：不是不允许，也不是允许，而是“等待被允许”。</p><p>《Alive &amp; Kicking》的故事还有另一层含义：它让我们看到，在数字时代，完成一件作品从来不是终点。从代码完成到用户能玩到它之间，还隔着法律、平台和商业的层层关卡。当这些关卡因为一方沉默而冻结时，创作者的命运就完全掌握在别人手中了。</p></div>
+<div class="section" id="sec-0005"><p>Dot Operator和他的团队等了十四年。现在他们又要等下去。只是这一次，他们需要等的不是代码通过编译，而是一个礼貌的回复。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">Dot Operator的原话是这么说的</span></div>
+<div class="tl-item" onclick="seek(102.3,'sec-0002')"><span class="tl-time">01:42</span><span class="tl-title">Valve对于粉丝使用自家IP创作的态度</span></div>
+<div class="tl-item" onclick="seek(204.7,'sec-0003')"><span class="tl-time">03:24</span><span class="tl-title">另一个可能的因素是，Valve近年来的重</span></div>
+<div class="tl-item" onclick="seek(307.0,'sec-0004')"><span class="tl-time">05:07</span><span class="tl-title">《Alive &amp; Kicking》的故事</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260727064113" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
