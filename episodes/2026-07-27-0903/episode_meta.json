@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-27-0903",
+  "title": "3.4 万 token 的模型底牌被扒光，这是 AI 安全最黑色幽默的一天",
+  "published_at": "2026-07-27 09:03",
+  "duration_seconds": 690.0,
+  "duration_label": "11分30秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "ChatGPT 给毒药配方，OpenAI 选择不报警",
+      "golden_quote": "模型不会主动作恶，但让它闭嘴的人一旦决定开口，危险就来了。",
+      "keywords": [
+        "ChatGPT",
+        "生物武器",
+        "安全",
+        "OpenAI"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "硅谷撕裂：开源与闭源的终极一战",
+      "golden_quote": "开源不只是理想主义，它是实实在在的竞争工具。",
+      "keywords": [
+        "开源",
+        "游说",
+        "OpenAI",
+        "Anthropic",
+        "黄仁勋"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "8 美元芯片跑大模型，技术民主化新高度",
+      "golden_quote": "当每一件衣服、每一个工具都能塞进一个8美元的本地AI时，普及率会完全不一样。",
+      "keywords": [
+        "ESP32-S3",
+        "微控制器",
+        "大语言模型",
+        "边缘计算"
+      ],
+      "source": "GitHub"
+    },
+    {
+      "title": "Claude Opus 5 底牌被扒光：1511 行系统提示词全公开",
+      "golden_quote": "当系统提示词比模型参数还重要时，AI 的未来是设计更聪明的紧箍咒。",
+      "keywords": [
+        "Claude Opus 5",
+        "系统提示词",
+        "泄露",
+        "Anthropic"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "AI 能骑无把手自行车：从歌词看 AI 军备竞赛",
+      "golden_quote": "每次庆祝AI能力提升，都要问一句：这东西放在最坏的人手里会怎样？",
+      "keywords": [
+        "AI 军备竞赛",
+        "技术批判",
+        "双刃剑"
+      ],
+      "source": "Decoding Vibes"
+    }
+  ]
+}
