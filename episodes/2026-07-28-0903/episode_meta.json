@@ -1,0 +1,77 @@
+{
+  "episode_id": "2026-07-28-0903",
+  "title": "中国AI开源风暴：Kimi K3免费释放，硅谷慌了谁赢了？",
+  "published_at": "2026-07-28 09:03",
+  "duration_seconds": 698.28,
+  "duration_label": "11分38秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Kimi K3 开源：2.5倍智能，免费释放",
+      "golden_quote": "开源不是慈善，是生态的扩张。",
+      "keywords": [
+        "Moonshot AI",
+        "Kimi K3",
+        "开源",
+        "MoE",
+        "2.8T",
+        "1M上下文",
+        "免费权重"
+      ],
+      "source": "X：Kimi.ai (@Kimi_Moonshot)"
+    },
+    {
+      "title": "Google AI Overviews 覆盖43%，点击率被榨干",
+      "golden_quote": "搜索的终点是答案，不是链接。",
+      "keywords": [
+        "Google",
+        "AI Overviews",
+        "搜索结果",
+        "点击率",
+        "出版商",
+        "搜索趋势"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "NVIDIA 牵头成立 Open Secure AI Alliance",
+      "golden_quote": "安全不能关在黑盒子里。",
+      "keywords": [
+        "NVIDIA",
+        "Open Secure AI Alliance",
+        "AI安全",
+        "开源",
+        "防御",
+        "Hugging Face"
+      ],
+      "source": "NVIDIA Blog"
+    },
+    {
+      "title": "The Verge：中国为什么免费送最强AI模型？",
+      "golden_quote": "免费权重不是免费晚餐。",
+      "keywords": [
+        "中国AI",
+        "开源模型",
+        "Kimi K3",
+        "免费权重",
+        "地缘博弈",
+        "商业策略"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "纳德拉警告：别把命拴在一家AI公司上",
+      "golden_quote": "别把命拴在一家AI公司上。",
+      "keywords": [
+        "纳德拉",
+        "AI依赖",
+        "企业风险",
+        "多模型",
+        "AI网关",
+        "安全"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
