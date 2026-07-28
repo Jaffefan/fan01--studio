@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当一只戴王冠的猫接管了圣地亚哥 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 076 夜 / 2026-07-28</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Dungeon Crawler Carl</div>
+    <h1 class="ep-title">当一只戴王冠的<span class="hl">猫接管了圣地亚哥</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:31</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260728055849" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">就这么一个听起来像网文爽文的设定，硬是卖出了超过一</h3></div><p>你好，我是伊恩。</p><p>今年夏天的圣地亚哥动漫展，你可能以为还是漫威和DC的天下。但如果你在会场里走一圈，会发现到处都是同一只猫——一只戴着王冠、会说话的猫，来自一套叫《Dungeon Crawler Carl》的系列小说。</p><p>这场展览持续了四天，七月末的加州阳光把Gaslamp Quarter的街道烤得发烫。主会场外，成群的人背着印有Princess Donut头像的帆布包，T恤上那只橘猫的金色王冠在紫外线下闪闪发光。你几乎会以为这是某个新动画片的主角——但它其实来自一部没有拍成电影、没有改编成游戏、甚至没有官方译成中文的网文小说。</p><p>《Dungeon Crawler Carl》，这套书简体中文圈几乎没人知道。英文原名直译过来是《地牢爬行者卡尔》，作者Matt Dinniman是个之前没什么名气的作家。故事设定很简单：地球突然被外星人改造成了一个巨大的真人游戏节目。人类必须在层层叠叠的地牢里打怪升级，而每个参与者的宠物都会被变成魔法生物陪伴作战。主角Carl的猫，一只本来趾高气昂的橘猫，被变成了会说话、戴王冠、脾气暴躁的Princess Donut。</p><p>就这么一个听起来像网文爽文的设定，硬是卖出了超过一千万册。是的，一千万。在今年之前，大部分人对这个数字没什么概念。但Peacock——NBC环球旗下的流媒体平台——在上个月果断订购了改编真人剧集，请来了《恶搞之家》和《美国老爸》的制片人Seth MacFarlane担任执行制作。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(115.2,'sec-0002')"><span>▶</span> 01:55</button><h3 class="section-title">漫威当然没有缺席。他们带着《复仇者联盟：末日》来了</h3></div><p>Matt Dinniman在动漫展上开了两场座谈会，搭档是Jeff Hays——这位配音演员在小说有声书里一个人配了超过两百个角色，从高亢的猫到低沉的怪兽。粉丝们最关心的是：谁会给Princess Donut配音？Dinniman当场宣布：就是Jeff Hays。现场爆发的欢呼声几乎掀翻屋顶。</p><p>“有太多东西我想做，”Dinniman在Variety的采访间里说，挤出一丝疲惫的笑容，“所有这些事情好像同时发生了，因为我们从一开始就是同时启动的。我想要一个完整的电子游戏，我想要一个MMORPG，就像《辐射》那样，在《Dungeon Crawler Carl》的宇宙里。那会超级棒。”</p><p>他说这话时，手头还在写这个十部曲的最后两本书。他计划用十本完结这个故事。目前出版到第八本，每一本都比前一部长，最后一本据说会超过一千页。</p><p>但回到动漫展本身。今年的SDCC，其实特别像一个交接仪式。</p><p>漫威当然没有缺席。他们带着《复仇者联盟：末日》来了——小罗伯特·唐尼回归，这次饰演大反派毁灭博士。七千人容量的Hall H大厅里，Kevin Feige请来了Pedro Pascal、Paul Rudd、Anthony Mackie，还有回归的Chris Evans和Hayley Atwell。他们放了一段预告片，展示了毁灭博士更多背景。更劲爆的消息是：Ryan Gosling将出演《恶灵骑士》电影；而Ryan Coogler的《黑豹3》将由David Jonsson——就是《异形：罗慕路斯》里的那个演员——饰演新一代黑豹，特查拉王子二世。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(230.5,'sec-0003')"><span>▶</span> 03:50</button><h3 class="section-title">Prime Video则是靠大IP压阵：《指环王：</h3></div><p>DC这边就低调得多。他们主要推介了今年夏天的《绿灯侠》电视剧《Lanterns》，由Kyle Chandler和Aaron Pierre主演，给这个经典角色加了一层侦探故事的外壳。Aaron Pierre还会在明年夏天的《超人：明日之人》里继续饰演绿灯侠。另外，《泥面人》的主演Tom Rhys Harries意外出现在Jim Lee的座谈会上，放出了一段让人后背发凉的恐怖预告。</p><p>然而，尽管超级英雄依然占据最大展位，真正让在场媒体和粉丝感觉到“换代”的，是那些原本的边缘分支开始抢风头了。</p><p>先看看电视板块。Apple TV Plus今年第一次在动漫展上搞了两小时的大厅专场。他们展示的内容里，有《寡妇湾》和《羊毛战记》这种已经成名的系列，但真正引爆讨论的是两大新剧目：改编自William Gibson同名赛博朋克经典的《神经漫游者》，由Callum Turner主演；以及《火柴盒电影》，John Cena和Jessica Biel主演。前者是很多科幻爱好者期待了三十年的改编——Gibson的小说1984年出版，至今没有像样的影视呈现。Apple TV这一次，在展示了《神经漫游者》的首段画面后，现场安静了片刻，然后爆发出长达半分钟的掌声。</p><p>Prime Video则是靠大IP压阵：《指环王：力量之戒》第三季，《银翼杀手2099》，和Mike Flanagan的《魔女嘉莉》。《力量之戒》找来了Jamie Campbell Bower——就是《怪奇物语》里饰演Vecna的那位——新的卡司让粉丝疯狂。而《银翼杀手2099》因为有杨紫琼和Hunter Schafer搭档主演，加上制作人Silka Luisa的明确方向，已经被很多人列为明年必看。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(345.7,'sec-0004')"><span>▶</span> 05:45</button><h3 class="section-title">这其实和很多年前《权力的游戏》的情况很像。乔治·马</h3></div><p>但最有意思的，是独立电影板块的崛起。</p><p>过去几年，独立发行商Neon和A24已经把动漫展变成了恐怖片的首发阵地。从《一起》到《回应我》，这些片子在这里找到了最狂热的早期拥趸。今年，他们排了连续两场重量级发布：Neon的《希望》——来自《黄海》和《追击者》的韩国导演罗宏镇——和A24的《猛攻》，导演是《哥斯拉大战金刚》系列的Adam Wingard。</p><p>罗宏镇在动漫展上说，这是他第一次来SDCC。他用带着口音的英语回忆了《希望》的制作过程：一部外星人入侵动作片，从最初构思到拍完，整整用了十年。他说到“百分之九十的画面都是特效”时，全场大笑。但他随即补充：“我做这些，不是为了讨好任何人。只是为了证明，科幻可以是另一种样子。”</p><p>这让我想起一件事。</p><p>《Dungeon Crawler Carl》最初是Matt Dinniman在业余时间写的网文。他没有签出版公司，也没有代理商。第一部是在Kickstarter上众筹出版的。第一卷印刷了不到五千册。然后第二卷，第三卷，直到有一批书评人在Reddit和YouTube上疯狂推荐，销量开始不可控地增长。如今它已经被翻译成十几种语言，有声书版本在Audible上常年霸榜。整个过程中，没有任何大公司提前押注，没有任何营销预算。纯粹是读者的口耳相传。</p><p>这其实和很多年前《权力的游戏》的情况很像。乔治·马丁的《冰与火之歌》第一卷出版于1996年，卖了五年才累积了第一批忠实读者。那时候没有社交媒体，全靠奇幻社群里的口口相传。到2007年HBO宣布改编时，书的总销量大概在两百万册左右。而《Dungeon Crawler Carl》在宣布改编之前，已经卖了一千万。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(460.9,'sec-0005')"><span>▶</span> 07:40</button><h3 class="section-title">它是从一本网文里走出来的。它没有被大公司精心包装过</h3></div><p>更深层的变化可能在于：传统的IP开发逻辑正在被颠覆。过去，是影视公司先买下某个IP，再大规模推广，最后形成粉丝群体。现在反过来了。粉丝先形成，IP自主增长，流媒体平台再来抢购。这跟动漫展本身的变化也是一致的。SDCC曾经是超级英雄的专属领地。现在，它更像一个发现新世界的地方。</p><p>今年出现了一个有趣的现象：漫威的铁杆粉丝依然从周四就开始排队，等待周六晚的Hall H发布。但与此同时，其他几个展厅里，粉丝聚集的密度一样惊人。《波西·杰克逊》的新剧展台前挤满了青少年。《吸血鬼莱斯特》展台前则是哥特风格的成年人。《太空炮弹》的怀旧放映场座无虚席。还有《格林》的迷你 reunion。以及吉尔莫·德尔·托罗的《潘神的迷宫》十五周年纪念展。</p><p>当然，不是每个粉丝都能适应这种变化。我在展馆外听到一个穿着美国队长制服的中年男人对朋友抱怨：“现在这里到处都是些我不知道的东西。”他的朋友耸耸肩：“每年都有你不知道的东西。关键是，你愿不愿意去找。”</p><p>这句话倒是点出了一个更深层的问题：当超级英雄的潮水开始退去，真正的“新东西”到底在哪里？</p><p>答案或许就藏在那只戴王冠的猫身上。</p><p>它是从一本网文里走出来的。它没有被大公司精心包装过。它的作者在写第一部的时候，根本不确定有没有人愿意读。它可能永远不会成为《复仇者联盟》那样的百亿美元系列。但它让一千万人愿意掏钱，让Peacock愿意赌一把，让成千上万的人在动漫展上穿着它的T恤。</p></div>
+<div class="section" id="sec-0006"><p>这东西，叫文化共鸣。而共鸣从来不是因为规划出来的。</p><p>所以当我看到Matt Dinniman在采访里露出那个疲惫又兴奋的笑容时，我忽然觉得，今年SDCC最重要的新闻不是Ryan Gosling要演恶灵骑士，也不是《黑豹3》换了新主角。而是那个写了十年网文、在众筹平台上卖出了第一本书的作者，终于可以站在聚光灯下，对着一屋子穿着他角色T恤的读者说：“Jeff Hays会配那只猫。”</p><p>接下去会发生什么呢？</p><p>Dinniman说，Peacock的剧集还没有具体的开播日期，但粉丝们已经等不及了。选角消息成为社交媒体上的热点。游戏改编也在讨论中。而最重要的，是书还有两本才完成。</p><p>“我希望这个系列能有一个好的结束，”他说，“不是好的结局。是好的结束。所有线索都收回来，每个人都走到了他们该去的地方。”</p><p>那如果不会呢？</p><p>他没有回答。只是笑了笑，低头看了一眼手机——锁屏壁纸上，Princess Donut正歪着头，眼神像在说：“你最好别让我失望。”</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">就这么一个听起来像网文爽文的设定，硬是卖</span></div>
+<div class="tl-item" onclick="seek(115.2,'sec-0002')"><span class="tl-time">01:55</span><span class="tl-title">漫威当然没有缺席。他们带着《复仇者联盟：</span></div>
+<div class="tl-item" onclick="seek(230.5,'sec-0003')"><span class="tl-time">03:50</span><span class="tl-title">Prime Video则是靠大IP压阵：</span></div>
+<div class="tl-item" onclick="seek(345.7,'sec-0004')"><span class="tl-time">05:45</span><span class="tl-title">这其实和很多年前《权力的游戏》的情况很像</span></div>
+<div class="tl-item" onclick="seek(460.9,'sec-0005')"><span class="tl-time">07:40</span><span class="tl-title">它是从一本网文里走出来的。它没有被大公司</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260728055849" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
