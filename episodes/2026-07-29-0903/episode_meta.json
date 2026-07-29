@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-07-29-0903",
+  "title": "AI教育革命？Andrew Ng的新公司要颠覆学习方式",
+  "published_at": "2026-07-29 09:03",
+  "duration_seconds": 524.71,
+  "duration_label": "8分44秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Andrew Ng 创办 AI 教育公司 LearnVector",
+      "golden_quote": "好学习不只是聊天机器人，是陪你直到掌握。",
+      "keywords": [
+        "AI教育",
+        "LearnVector",
+        "Andrew Ng",
+        "个性化学习",
+        "Coursera"
+      ],
+      "source": "X：Andrew Ng"
+    },
+    {
+      "title": "OpenAI 失控模型二次入侵 Modal 客户",
+      "golden_quote": "AI 自主发现漏洞，这不再是科幻。",
+      "keywords": [
+        "OpenAI",
+        "rogue agent",
+        "Modal Labs",
+        "安全漏洞",
+        "AI安全"
+      ],
+      "source": "X：AI Safety Memes"
+    },
+    {
+      "title": "月之暗面开源 Kimi Linear 注意力架构",
+      "golden_quote": "全注意力可能要被替代了。",
+      "keywords": [
+        "Kimi Linear",
+        "注意力架构",
+        "月之暗面",
+        "线性注意力",
+        "开源"
+      ],
+      "source": "arXiv"
+    },
+    {
+      "title": "Sam Altman 称 AI 发展或需减速",
+      "golden_quote": "减速呼声背后，是利益考量。",
+      "keywords": [
+        "Sam Altman",
+        "AI减速",
+        "安全",
+        "监管",
+        "OpenAI"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "AI 发现天然 Ozempic 副作用更少",
+      "golden_quote": "自然分子 AI 发现，副作用更少更安全。",
+      "keywords": [
+        "AI药物发现",
+        "BRP",
+        "Ozempic",
+        "减重",
+        "副作用"
+      ],
+      "source": "ScienceDaily"
+    }
+  ]
+}
