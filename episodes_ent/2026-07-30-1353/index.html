@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>你的游戏大卖，他的千万年薪——EA的裁员与CEO奖金 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 078 夜 / 2026-07-30</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> EA</div>
+    <h1 class="ep-title">你的游戏大卖，他的千万年薪<span class="hl">——EA的裁员与CEO奖金</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:59</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260730055446" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">读到这里你可能会想：这难道不是很正常吗？CEO拿高</h3></div><p>你好，我是伊恩。今天要聊的这事，读起来有点像黑色幽默——你做出了一款销量爆炸的游戏，结果公司说“为了聚焦社区最重要的事”，把你裁了。然后你的CEO因为这游戏的成绩，拿到了一笔丰厚的奖金。</p><p>2026年3月，EA悄悄裁掉了一批《战地》系列开发团队的员工。数量没有公开，但涉及所有《战地》工作室。官方的说法是“为了更好地围绕社区最重要的事进行对齐”。然而讽刺的是，就在五个月前，他们刚庆祝了《战地6》——也就是这代新作——成为《战地》系列历史上最成功的首发。</p><p>《战地6》到底有多成功？2025年全年最畅销游戏，销量超过了动视的《使命召唤：黑色行动7》和2K的《NBA 2K26》。首发三天，销量冲破700万份。那个时间点，它是Xbox和PC上游戏销量的双料冠军。IGN的报道里用了一个词：record-breaking。</p><p>然后到了2026年7月，EA向美国证券交易委员会提交的文件显示，CEO安德鲁·威尔逊在2026财年的总薪酬是38,649,984美元。将近3900万。比前一年涨了800万美元。而这份文件的注释里，明确把涨薪与《战地6》的销售表现挂钩。文件称，《战地6》的“高质量首发”、“积极的媒体评测”、“稳定的服务和游戏体验”，帮助EA在“不可预测的外部环境中”保持了公司的韧性。</p><p>读到这里你可能会想：这难道不是很正常吗？CEO拿高薪，因为公司业绩好；而公司业绩好，是因为产品好。问题是，做出这个产品的那些人呢？他们的命运如何？</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(134.8,'sec-0002')"><span>▶</span> 02:14</button><h3 class="section-title">IGN在今年6月采访了《战地6》的一位创意主管Ar</h3></div><p>数据上的割裂非常明显。2026年3月的这次裁员，EA没有公布具体数字。其实整个2025财年，EA就进行过数次裁员，波及的部门从发行到技术支持，范围很广。而到了《战地6》开发团队最风光的时候，背后仍是那一把悬着的刀。</p><p>这样的故事其实不新鲜。在游戏行业，似乎已经形成了一套固定的叙事：一个团队花了几年甚至更长时间，做出爆款，大量资金涌入公司账上。然后裁员，然后CEO涨薪。看起来是公式，但每一次执行，都会有人因此丢掉工作。</p><p>如果我们把视线拉远一点，会发现EA的处境其实不坏。2025年，一项总价值550亿美元的收购案震惊了整个行业——EA被一个由沙特公共投资基金、银湖资本和阿菲尼蒂合伙公司组成的财团私有化。这意味着EA不再是一家上市公司，不用再看每季度财报的脸色。理论上，这样的背景应该给管理层更多的空间做长期投资，而不是短期削减成本。但结果呢？</p><p>CEO的奖金是有据可查的。而2025年财年，EA的整体员工薪酬中位数是大概11万美元左右。也就是说，CEO的工资是员工中位数的300多倍。</p><p>再回来看《战地6》本身。游戏在2025年秋季上线后，经历了口碑上的起伏。但内容更新一直在继续，今年8月即将开启的第4赛季，还会与《壮志凌云》展开联动，包含两架战斗机、角色的电影皮肤和配音。动视在COD那边不是也一直这么干吗？联动、赛季、通行证——商业模式已经高度同质化。</p><p>IGN在今年6月采访了《战地6》的一位创意主管Ariel Giovannetti。他说：“我希望路线图能证明我们在倾听，我们在朝向社区为我们设定的目标努力。同时我们也在灵活调整，因为《战地》太大了。”他还说，“我们的目标是向玩家展示我们在乎他们，向他们保证未来是光明的，我们正在进行很多改动，做很多事情，这正是社区想要的。我们对此非常满意。”</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(269.6,'sec-0003')"><span>▶</span> 04:29</button><h3 class="section-title">我们今天讲的这个故事，不是孤例。它映射的是一种深嵌</h3></div><p>这些话听起来很诚恳。但那些被裁掉的开发者，听到这番话的时候，会是什么感觉？</p><p>其实类似的境遇在游戏行业里每隔几年就会重演一次。2019年，动视暴雪在营收创纪录的情况下裁掉了800人；2023年，Riot Games在宣布延期新作后进行了约11%的裁员。而同年，整个游戏行业裁掉了超过1万人。2024年，这个数字更高，据GameIndustry.biz统计，全年累计裁员超过1.6万人。</p><p>在大公司工作，尤其是做一款超大制作的游戏，你很难掌控自己的命运。你的项目可能在三年前就定好了，团队规模、截止日期、市场策略，一切都在事先规划中。可一旦游戏卖得超预期，公司的决策逻辑常会简化为“我们需要把资源集中在未来更关键的项目上”。这个“关键”是谁定义的？显然是那个拿到千万年薪的人。</p><p>EA在收购后的未来会怎么走？现在没人能给出确切的答案。但至少我们可以观察到一种趋势：游戏的商业表现越来越成为资本决策的直接指标，而对创造游戏的人，行业整体上缺乏一种对其付出长期的尊重。不是没有，而是不够。</p><p>我有时候想，如果我是那个被裁掉的人，会怎么看待自己参与制作的游戏大卖这个事实。大概会是一种很复杂的感受吧——一方面骄傲，一方面又觉得荒谬。就像一部你主演的电影拿了奖，但你本人被告知不能参加首映礼。</p><p>我们今天讲的这个故事，不是孤例。它映射的是一种深嵌在当代游戏产业中的结构矛盾：风险由团队承担，收益由顶层享受。而且这似乎一直是被默认的。</p></div>
+<div class="section" id="sec-0004"><p>但话说回来，沉默的始终是那一头。CEO会发表声明，会感谢团队的付出，会在财报会议上对分析师称赞游戏的表现。然而当裁员那天到来时，那些话不会出现在任何一份SEC文件中。</p><p>我只是一名观察者。这些事情发生后，真正有意思的部分不是揣测动机，而是听各方的讲述。EA官方的表述是“更好地对齐社区最重要的事”，被裁的员工可能在社交媒体上有自己的版本，而玩家群体里“支持游戏，但谴责公司”的声音也渐成为一个常见立场。</p><p>很难说有哪一方是完全错误的。商业公司的逻辑是效率至上的，但与此同时，一个人被通知“你不再属于这个团队了”，这就是一个具体的、有温度的生活事件。</p><p>再过几个月，《战地6》又要迎来新的赛季更新。游戏还是会有人玩，营收数字可能继续增长，下一次CEO的薪酬调整说不定又会因“战略成功”而上升。但我更想知道的是，那些被裁的开发者现在去了哪里。他们是加入了其他工作室，还是在转行，抑或还在寻找下一个机会？</p><p>没有人会出一个报告来追踪这个。数据上，它们只会显示为一个统计数字：某年某月，EA解雇了若干员工。而具体的名字、面孔、他们做过的工作、参与过的版本，都不会被记录到财报里。</p><p>好了，今天的节目就到这里。故事讲完了，但我想，这件事的后劲，可能会在未来几年里，在一次又一次的行业变动中，被重新提起。毕竟，它不是第一次发生，也不会是最后一次。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">读到这里你可能会想：这难道不是很正常吗？</span></div>
+<div class="tl-item" onclick="seek(134.8,'sec-0002')"><span class="tl-time">02:14</span><span class="tl-title">IGN在今年6月采访了《战地6》的一位创</span></div>
+<div class="tl-item" onclick="seek(269.6,'sec-0003')"><span class="tl-time">04:29</span><span class="tl-title">我们今天讲的这个故事，不是孤例。它映射的</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260730055446" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
