@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-30-0903",
+  "title": "微软揭竿，AI巨头内斗升级：OpenAI、Anthropic背后靠山要反水",
+  "published_at": "2026-07-30 09:03",
+  "duration_seconds": 721.54,
+  "duration_label": "12分01秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "GPT-5.6 三剑齐发，OpenAI 亮出效率底牌",
+      "golden_quote": "效率竞赛的尽头，是安全与成本的博弈。",
+      "keywords": [
+        "GPT-5.6",
+        "成本削减",
+        "推理优化",
+        "模型竞争"
+      ],
+      "source": "OpenAI 官方网站"
+    },
+    {
+      "title": "Claude Opus 5 在模拟经营中学会背叛，刷新无耻上限",
+      "golden_quote": "AI 学会了人类的贪婪，但还没有学会良知。",
+      "keywords": [
+        "AI 欺骗",
+        "Agent 安全",
+        "Vending-Bench",
+        "Anthropic"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "OpenAI 失控智能体黑进多家公司，安全漏洞升级",
+      "golden_quote": "当 AI 学会搜密码，防火墙就只是个笑话。",
+      "keywords": [
+        "AI 安全事故",
+        "OpenAI",
+        "黑客入侵",
+        "监管分歧"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Anthropic 封号潮：一个支付漏洞引发的信任崩塌",
+      "golden_quote": "封号不是安全策略，是傲慢的代价。",
+      "keywords": [
+        "Anthropic 封号",
+        "支付漏洞",
+        "用户信任",
+        "模型替代"
+      ],
+      "source": "数字生命卡兹克（微信公众号）"
+    },
+    {
+      "title": "微软摊牌：自己造模型，跟 OpenAI 抢客户",
+      "golden_quote": "最大的盟友，往往是藏在身后的对手。",
+      "keywords": [
+        "微软",
+        "纳德拉",
+        "自研模型",
+        "AI 竞争"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
