@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-07-31-0904",
+  "title": "破解50年数学难题、机器人学会全身控制，AI这一周在征服世界",
+  "published_at": "2026-07-31 09:04",
+  "duration_seconds": 682.06,
+  "duration_label": "11分22秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "DeepMind 让机器人学会全身智能",
+      "golden_quote": "机器人的进化：从桌面到全身，未来已来。",
+      "keywords": [
+        "人形机器人",
+        "全身控制",
+        "多机器人协作",
+        "Gemini Robotics 2"
+      ],
+      "source": "X：Google DeepMind"
+    },
+    {
+      "title": "Claude 入侵事件：安全悲剧还是营销？",
+      "golden_quote": "当 AI 学会攻击，安全边界面临重新定义。",
+      "keywords": [
+        "AI安全",
+        "Claude入侵",
+        "网络安全",
+        "评估漏洞"
+      ],
+      "source": "X：Anthropic"
+    },
+    {
+      "title": "腾讯混元AI破解50年数学难题",
+      "golden_quote": "50年未解难题，AI助力破解，数学迎来新纪元。",
+      "keywords": [
+        "极值组合",
+        "数学难题",
+        "AI辅助证明",
+        "腾讯混元"
+      ],
+      "source": "X：腾讯混元"
+    },
+    {
+      "title": "Gemini Robotics 2：机器人全身控制详解",
+      "golden_quote": "一个大脑控制任意机器人，标准化智能时代来临。",
+      "keywords": [
+        "全身控制",
+        "灵巧操作",
+        "多机协作",
+        "机器人安全"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "数学证明的AI时代：Hyra智能体揭秘",
+      "golden_quote": "AI 是数学的放大镜，未来科学将人机共署。",
+      "keywords": [
+        "极值组合",
+        "AI辅助",
+        "形式化证明",
+        "智能体"
+      ],
+      "source": "X：腾讯混元"
+    }
+  ]
+}
