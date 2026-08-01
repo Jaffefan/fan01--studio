@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-01-1148",
+  "title": "AI界最大赌局崩塌：450亿对冲基金数日归零",
+  "published_at": "2026-08-01 11:48",
+  "duration_seconds": 749.16,
+  "duration_label": "12分29秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "DeepSeek V4 Flash 开源，开源模型格局生变",
+      "golden_quote": "DeepSeek 用 MIT 许可，把开源模型的性价比按在地上摩擦",
+      "keywords": [
+        "DeepSeek",
+        "开源模型",
+        "MIT许可"
+      ],
+      "source": "X：Artificial Analysis"
+    },
+    {
+      "title": "MiniMax H3 开源，视频生成进入千元时代",
+      "golden_quote": "MiniMax 把视频生成的价格打了三折，还把钥匙递给了你",
+      "keywords": [
+        "MiniMax",
+        "视频生成",
+        "开源"
+      ],
+      "source": "MiniMax：Blog"
+    },
+    {
+      "title": "中国《人工智能法》立法加速，万亿模型密集发布",
+      "golden_quote": "发改委的千里马论，是在给 AI 画跑道，而不是上马鞍",
+      "keywords": [
+        "人工智能法",
+        "发改委",
+        "监管"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "欧盟 AI 透明度新规落地，Meta 拒签引发争议",
+      "golden_quote": "欧盟用罚款给 AI 标注了边界，Meta 选择不透明地退出",
+      "keywords": [
+        "欧盟",
+        "AI透明度",
+        "Meta"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "AI 对冲基金神话破灭：450 亿两天蒸发",
+      "golden_quote": "Aschenbrenner 看到了未来，却输给了杠杆",
+      "keywords": [
+        "AI对冲基金",
+        "Aschenbrenner",
+        "泡沫"
+      ],
+      "source": "Hacker News - AI"
+    }
+  ]
+}
