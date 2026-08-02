@@ -1,0 +1,67 @@
+{
+  "episode_id": "2026-08-02-1150",
+  "title": "AI 侵权判罚、数学突破、芯片新赛道：今天你该知道的五件事",
+  "published_at": "2026-08-02 11:50",
+  "duration_seconds": 774.86,
+  "duration_label": "12分54秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "德国法院判 Suno 侵权，AI 音乐要变天",
+      "golden_quote": "AI 不是法外之地，模型记得住，就要担责任。",
+      "keywords": [
+        "Suno",
+        "版权",
+        "AI音乐",
+        "德国法院"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "OpenAI 两千美元破解十道数学难题",
+      "golden_quote": "两千美元，撬动数学大厦。",
+      "keywords": [
+        "OpenAI",
+        "Astra",
+        "数学",
+        "Lean",
+        "推理"
+      ],
+      "source": "X (Greg Brockman)"
+    },
+    {
+      "title": "中国在联合国兜售 AI 超级大国梦",
+      "golden_quote": "AI 时代，token 比炮舰更管用。",
+      "keywords": [
+        "token外交",
+        "中国AI",
+        "联合国",
+        "全球南方"
+      ],
+      "source": "Semafor"
+    },
+    {
+      "title": "AMD 正式下注机器人 AI 芯片",
+      "golden_quote": "AI 不能只活在云端，AMD 抢跑机器人。",
+      "keywords": [
+        "AMD",
+        "物理AI",
+        "机器人",
+        "芯片"
+      ],
+      "source": "ServeTheHome"
+    },
+    {
+      "title": "Sam Altman 想用 ChatGPT 帮你带孩子",
+      "golden_quote": "AI 能帮你记录孩子的生日，但代替不了你的拥抱。",
+      "keywords": [
+        "Sam Altman",
+        "ChatGPT",
+        "育儿",
+        "争议"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
