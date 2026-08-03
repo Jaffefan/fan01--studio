@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-03-0903",
+  "title": "5件让你重新理解AI边界的事",
+  "published_at": "2026-08-03 09:03",
+  "duration_seconds": 398.5,
+  "duration_label": "6分38秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Grok能看视频了，但有人开始调皮",
+      "golden_quote": "视频分析的下一个战场是理解梗，而不只是像素。",
+      "keywords": [
+        "Grok",
+        "视频分析",
+        "AI边界"
+      ],
+      "source": "X：Elon Musk"
+    },
+    {
+      "title": "Cloudflare要为AI智能体重建互联网",
+      "golden_quote": "未来的互联网可能不只是给人类用的，更是给AI用的。",
+      "keywords": [
+        "Cloudflare",
+        "Agent Cloud",
+        "智能体网络"
+      ],
+      "source": "Cloudflare Blog"
+    },
+    {
+      "title": "开源模型大爆发，连小米都来了",
+      "golden_quote": "AI不是只有OpenAI和谷歌，开源正在重塑格局。",
+      "keywords": [
+        "开源模型",
+        "Inkling",
+        "Kimi K3"
+      ],
+      "source": "Nathan Lambert：Interconnects"
+    },
+    {
+      "title": "OpenAI新模型Astra被过度吹捧？",
+      "golden_quote": "一次数学突破不等于奇点，清醒比兴奋更重要。",
+      "keywords": [
+        "Astra",
+        "OpenAI",
+        "合成谬误"
+      ],
+      "source": "Gary Marcus：The Road to AI We Can Trust"
+    },
+    {
+      "title": "用Sol指挥Luna Max，额度减半产出翻倍",
+      "golden_quote": "AI费用不是越高越好，关键是怎么组合。",
+      "keywords": [
+        "Codex",
+        "Luna Max",
+        "成本优化"
+      ],
+      "source": "X：阿易 AI Notes"
+    }
+  ]
+}
