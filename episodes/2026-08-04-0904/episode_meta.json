@@ -1,0 +1,55 @@
+{
+  "episode_id": "2026-08-04-0904",
+  "title": "AI 巨头开撕：开源 2.4T 参数，欧盟亮出罚款镰刀",
+  "published_at": "2026-08-04 09:04",
+  "duration_seconds": 572.49,
+  "duration_label": "9分32秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 4,
+  "segments": [
+    {
+      "title": "2.4 万亿参数，Qwen 开源新王登基",
+      "golden_quote": "参数不再是壁垒，自主才是王道。",
+      "keywords": [
+        "Qwen3.8-Max",
+        "开源模型",
+        "自主编码",
+        "2.4T参数"
+      ],
+      "source": "Qwen Blog"
+    },
+    {
+      "title": "GPT-Live 边听边说，实时语音换代",
+      "golden_quote": "AI 说话不再停顿，沟通阈值一夜拉高。",
+      "keywords": [
+        "GPT-Live",
+        "实时语音",
+        "OpenAI",
+        "交互革命"
+      ],
+      "source": "X (Greg Brockman)"
+    },
+    {
+      "title": "欧盟 AI 透明度新规生效，最高罚 1500 万欧",
+      "golden_quote": "AI 时代，透明是准入门槛，不是可选项。",
+      "keywords": [
+        "欧盟AI法案",
+        "透明度规则",
+        "合成内容标注",
+        "罚款"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Palantir CEO 炮轰 AI 巨头：你们是马克思主义者",
+      "golden_quote": "数据所有权，才是企业 AI 战略的死穴。",
+      "keywords": [
+        "Palantir",
+        "Alex Karp",
+        "数据所有权",
+        "模型无关"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
