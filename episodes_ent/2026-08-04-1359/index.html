@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一纸解散令，仙侠梦断网易 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 084 夜 / 2026-08-04</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 剑心雕龙</div>
+    <h1 class="ep-title">一纸解散令，<span class="hl">仙侠梦断网易</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:36</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260804060054" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">结果呢？立项近四年，游戏没做完，团队先散了。其实去</h3></div><p>你好，我是伊恩。今天想和你聊一个有点唏嘘的消息：网易首款仙侠单机游戏《剑心雕龙》，项目组在内部会议上正式解散。立项四年，去年刚公布，今年还在招人，上个月才做完首轮线下测试——突然就没了。</p><p>消息是竞核爆出来的。说是在7月底的某次内部会议里，项目负责人宣布团队解散，原因是开发进度没达到预期。动作很快，快到很多人还没反应过来——前两天还在知乎上看前员工倒苦水，转眼项目就没了。</p><p>先说说这是个什么样的项目。2025年1月3日，《剑心雕龙》正式对外公布，是网易雷火事业群旗下临安24th工作室的作品。不算最顶尖的3A，但定位明确：主打架空唐朝神话，单机买断制，还要上Switch2。这在网易的历史上，算头一遭。要知道，网易这些年做手游赚得盆满钵满，单机对他们来说，更像是个遥不可及的梦。所以这个项目从一开始就被寄予厚望，很多人说，这是网易在单机领域的试水之作。</p><p>制作人叫张毅君，圈内人称“工长君”。这名字你可能不熟，但提《仙剑奇侠传三》《仙剑奇侠传四》的监制，应该就有点印象了。他在单机圈混了二十年，2020年10月加入网易，负责这个项目。当时不少玩家还挺期待，觉得一个老江湖来带，应该稳了。</p><p>结果呢？立项近四年，游戏没做完，团队先散了。其实去年还传出过好消息，9月份张毅君对外说游戏品质优于预期，放出过实机演示，还说2026年准备招人。7月28日，刚结束首批定向线下测试，邀请了部分玩家去体验。谁也没想到，一个星期后，项目组就没了。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(129.2,'sec-0002')"><span>▶</span> 02:09</button><h3 class="section-title">不过话得说回来，网易以前也尝试过单机。2018年吧</h3></div><p>解散消息传出来，知乎上炸了锅。好几个自称是前员工的用户，毫不客气地批评张毅君的管理和专业能力。有人说他在团队里制造矛盾，用绩效考核打压员工；有人说他是技术保守派，项目长期拒绝升级引擎，导致后期管线全得重搭，开发陷入停滞；还有人说，他反复推翻设计，好多关卡做了又改、改了又做，浪费了大量时间。更有内部人士透露，团队人员流失特别严重，平均在职时间就一个月左右——也就是说，很多人刚进来没多久就走了，根本没法形成稳定战斗力。</p><p>这个说法听起来挺离谱，但也不是完全没道理。单机游戏开发周期长，一般都要四五年，人员流动很正常。但如果连核心人员都留不住，那就不是行业常态了，而是项目本身出了问题。竞核的报道里提到，网易其实给了不少资源，无论是钱还是人，但研发进度就是赶不上预期。说白了，钱不是问题，人是问题，管理更是问题。</p><p>这事放在整个国产单机的大背景下来看，就更有意思了。你看这些年，国产单机一直有个怪圈——想做的人不少，能做成的不多。早年的《血雨》《艾希》，后来的《太吾绘卷》《鬼谷八荒》，都是独立团队小成本搏出来的。大厂呢？腾讯做过《天涯明月刀》MMO，网易做过《逆水寒》《燕云十六声》，赚钱是真赚钱，但都是联网的，要么收费、要么氪金，没有一个是正儿八经的单机买断制。所以《剑心雕龙》可以说是网易第一次想认真做单机，结果——就折在这儿了。</p><p>不过话得说回来，网易以前也尝试过单机。2018年吧，他们搞了个《河洛群侠传》的合作，但那个准确说是代理。还有《神都夜行录》，也是偏单机的手游。真正投入人力物力、正儿八经立项做单机的，《剑心雕龙》确实是头一遭。这让我想到当年的一些老故事。你们知道仙剑？2003年出《仙剑奇侠传三》的时候，做游戏的是软星，母公司大宇。那时候单机市场还行，但盗版已经开始肆虐。仙剑三卖得不错，但赚的钱远不如预期。后来的仙剑四，更是经典中的经典——但做完之后，主创就散了，张毅君就是在那时候离开大宇的。所以他对国内单机的生存状况，应该比谁都清楚。他后来去了烛龙，做了《古剑奇谭》，口碑不错，但同样没赚大钱。再后来，烛龙被网元圣唐收购，他又出来创业，做《神舞幻想》，反响一般。2020年，他去了网易，那时候很多人觉得，单机大神进大厂，终于可以安心做自己喜欢的了。结果呢？四年过去，项目黄了，人设也崩了。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(258.4,'sec-0003')"><span>▶</span> 04:18</button><h3 class="section-title">但这也不是完全没影响。至少它证明了：单机游戏不是有</h3></div><p>其实大厂做单机，不止网易一家在试。米哈游在做《绝区零》，但那是动作RPG，也不是纯单机。法国的育碧、美国的EA，大家思路不一样。但在国内，大厂做单机，似乎总有一种“既要又要”的拧巴感——既想要单机的口碑，又放不下端游手游的盈利模式。所以你看，《剑心雕龙》搞了个“弹性买断制”，意思是先花钱买游戏，后续再用DLC、内购补充。听着挺灵活，但玩家买不买账就两说了。毕竟这几年国产单机全靠“买断+更新”模式，像《鬼谷八荒》《太吾绘卷》都是这样，但那是独立游戏，成本低，卖一份赚一份。大厂动辄几千万的成本，光靠卖游戏，怎么回本？所以最后往往变成——要么转线上，要么半途而废。</p><p>现在项目解散了，后续怎么办？网易官方没发公告，但按照惯例，大概率是保留IP，放仓库吃灰。那些前员工呢？知乎上骂完，还是要找工作，有些可能转去做手游，有些可能离职去了别的公司。张毅君呢？他还在网易，但名声已经臭了，短时间内可能没人敢找他做项目了。对了，那个Switch2版本，也没了。之前官宣的时候，很多玩家还挺期待，觉得国产仙侠能上主机，挺有面儿。现在，全白瞎。</p><p>但这也不是完全没影响。至少它证明了：单机游戏不是有钱就能做成的，天时地利人和，缺一不可。国内玩家对单机的热情，这几年确实在涨，但厂商的耐心和项目组的稳定，还是老问题。有人说，国产单机的春天要来了，但《剑心雕龙》的解散，又给这个春天浇了盆冷水。不过也有乐观的网友说，这未必是坏事，至少让大厂认清现实：不是随便拉几个有资历的人，就能做出好单机的。真正的好作品，需要时间沉淀，需要团队磨合，更需要一代代人的坚持。你说呢？</p></div>
+<div class="section" id="sec-0004"><p>好了，今天的故事就聊到这儿。我不知道你听完什么感受，是觉得可惜，觉得解气，还是觉得麻木？可能都有吧。但我想说的是，在这个行业里，每天都有项目倒下，也每天都有新项目站起来。《剑心雕龙》不会是第一个，也不会是最后一个。但至少它来过，也让一些人看清了前路。江湖再见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">结果呢？立项近四年，游戏没做完，团队先散</span></div>
+<div class="tl-item" onclick="seek(129.2,'sec-0002')"><span class="tl-time">02:09</span><span class="tl-title">不过话得说回来，网易以前也尝试过单机。2</span></div>
+<div class="tl-item" onclick="seek(258.4,'sec-0003')"><span class="tl-time">04:18</span><span class="tl-title">但这也不是完全没影响。至少它证明了：单机</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260804060054" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
