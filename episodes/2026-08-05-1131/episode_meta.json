@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-05-1131",
+  "title": "100 亿美元押注新创云公司，AI 算力格局正被改写",
+  "published_at": "2026-08-05 11:31",
+  "duration_seconds": 808.3,
+  "duration_label": "13分28秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "英伟达开放自动驾驶大模型：一场豪赌还是顺势而为？",
+      "golden_quote": "开放的是模型，锁定的是生态。",
+      "keywords": [
+        "英伟达",
+        "自动驾驶",
+        "开源模型"
+      ],
+      "source": "NVIDIA Blog（RSS） (zh)"
+    },
+    {
+      "title": "腾讯语音识别新模型：AI 开始听懂你的弦外之音",
+      "golden_quote": "听懂你，比听清你更重要。",
+      "keywords": [
+        "腾讯混元",
+        "语音识别",
+        "大模型"
+      ],
+      "source": "公众号：腾讯混元 (zh)"
+    },
+    {
+      "title": "AI 一周优化上百个工业软件，面壁智能这次玩真的",
+      "golden_quote": "AI 优化软件，省下的时间是真实的钱。",
+      "keywords": [
+        "面壁智能",
+        "AI优化",
+        "开源"
+      ],
+      "source": "公众号：面壁智能（MiniCPM） (zh)"
+    },
+    {
+      "title": "Anthropic 百亿押注新创云公司，AI 算力进入 speed dating 时代",
+      "golden_quote": "算力不再只拼资本，拼的是谁跑得更快。",
+      "keywords": [
+        "Anthropic",
+        "算力协议",
+        "云初创"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai) (zh)"
+    },
+    {
+      "title": "谷歌连发三款模型，AI 智能体进入效率时代",
+      "golden_quote": "AI 竞争下半场，效率才是王道。",
+      "keywords": [
+        "谷歌",
+        "Gemini",
+        "AI智能体"
+      ],
+      "source": "Google Blog：AI（RSS） (zh)"
+    }
+  ]
+}
