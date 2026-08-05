@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>200美元的玩笑游戏：百万流水背后的退款谜团 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 086 夜 / 2026-08-05</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Steam</div>
+    <h1 class="ep-title">200美元的玩笑游戏：<span class="hl">百万流水背后的退款谜团</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:28</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260805081434" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">可是，如果你以为梅杰就此一夜暴富，那就大错特错了。</h3></div><p>你好，我是伊恩。今天想跟你聊一个特别荒诞的故事——一个18岁的年轻人，做了一个粗制滥造的游戏，标价200美元，结果居然赚了134万美元，然后又被退款了差不多130万。这中间到底发生了什么？</p><p>先回到故事的开头。这个游戏的作者叫迈克尔·梅杰，一个18岁的新罕布什尔州少年。他之前做过一个叫《这个游戏卖10美元》的玩笑作品，这次干脆做了个续集，名字就叫《这个游戏卖200美元》。200美元，这是Steam平台允许开发者设置的最高定价。梅杰说，他做这个纯粹是想开个玩笑，想着这么贵的价格肯定没人会买。他甚至在游戏介绍里写道，这是“所有骗局中的终极骗局”，还说“我知道有些人会出于纯粹的好奇心买这个游戏，但我强烈建议你们也这么做”。</p><p>游戏本身呢？就是一个特别简单的俯视视角游戏，画面粗糙得像是上世纪80年代的作品，玩法也基本没什么可玩的。但就是这么一个东西，在Steam上架后，销量竟然一路飙涨。根据梅杰后来公布的Steam销售和激活报告，游戏卖出了6717份，总收入达到了134万5650美元。注意，这个数字是税前收入，实际到手的会少一些，但依然是个天文数字。</p><p>可是，如果你以为梅杰就此一夜暴富，那就大错特错了。因为很快，退款潮就来了。根据梅杰的数据，在6717个买家里，有6705个来自中国，其他买家分散在美国、香港、西班牙、沙特、台湾和新加坡。但这些人绝大多数都没玩过游戏就申请了退款。那些真正玩了的人，平均游戏时间也就10分钟。最后，退款金额把134万砍到了只剩下2045美元。也就是说，梅杰实际到手的钱，还不够他在Steam上买个显卡的。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(127.0,'sec-0002')"><span>▶</span> 02:07</button><h3 class="section-title">不过，《这个游戏卖200美元》的玩法更极致——它把</h3></div><p>那这些人为什么要买呢？梅杰有一个推测，他觉得有些人可能是为了Steam积分——Steam玩家每次购买游戏都能获得积分，积分可以用来兑换个人主页的装饰品、表情、背景之类的。花200美元买游戏，然后立刻退款，虽然钱退回来了，但积分是不是也能保留呢？这个说法听起来有点合理，但也有人怀疑，这些买家可能另有目的。梅杰自己甚至开玩笑说，可能有人利用高价游戏洗钱，他说：“我不是在开玩笑，我听说过Steam上有很多高价游戏被用来洗钱。我搞不清楚，说不定我现在已经在某个‘黑名单’上了。”</p><p>这个事件很快就上了新闻，连当地的电视台都报道了。梅杰在接受采访时说，当他看到Steam报告里的那个天文数字时，他“差点死过去”，他还说如果真赚到了那笔钱，他肯定会辞掉工作。但最后他还是很淡定地表示，这本来就是个玩笑，现在这个结果也在意料之中。</p><p>其实，这类“玩笑游戏”在Steam上并不少见。2014年，有一个叫《山》的游戏，卖价1美元，玩家买下来就是一座山，什么都不能做，就看着山发发呆。这个游戏卖出了超过10万份，开发者大卫·奥莱利说，他本来只想赚点学费，结果赚了几十万美元。还有一个叫《不要逃》的游戏，玩家只能按一个键，就是“不要逃”，结果也卖出了很多钱。这些游戏的特点就是极简、荒诞，但偏偏有人愿意花钱买。</p><p>不过，《这个游戏卖200美元》的玩法更极致——它把价格拉到了最高，然后赌没人买。结果，它触动了几个特殊的心理机制。一个是“好奇”——很多人就是想看看花200美元买下来是个什么体验，反正可以退款。另一个是“炫耀”——Steam个人主页上会显示你拥有的游戏，如果你有《这个游戏卖200美元》，那你的游戏库里就多了个亮眼的标签。还有人可能纯粹是恶搞，买下来送人，或者在社交平台上晒截图。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(254.0,'sec-0003')"><span>▶</span> 04:14</button><h3 class="section-title">当然，也不是所有独立开发者都这么“倒霉”。就在这个</h3></div><p>说到退款，Steam的退款政策是个关键。Steam允许玩家在购买后14天内退款，只要游戏时长不超过2小时。这个政策本来是保护消费者的，但它也给了玩家“免费尝试”的空间。而《这个游戏卖200美元》正好踩在了这个政策的空档上——玩家可以花200美元买下来，截个图，然后立刻退款，一分钱不花就能炫耀。这就是为什么退款率会这么高。</p><p>其实，类似的事情在游戏史上也不是第一次发生了。2017年，Steam上有一款叫《隐形游戏》的作品，售价5美元，但打开后就是一片黑屏，什么内容都没有。这个游戏居然也卖出去了几万份，玩家们甚至开始玩“找隐形游戏”的梗。还有一个叫《空集》的游戏，售价1美元，内容就是一个空白的文本文件。这些游戏都说明，在Steam这个平台，玩家的购买行为往往不太理性。</p><p>但《这个游戏卖200美元》的事件也有它独特的时代背景。它的买家绝大多数来自中国，这其实和Steam在中国的流行程度有关。中国是全球最大的PC游戏市场之一，Steam在中国的用户数量非常庞大。而且，Steam积分系统在中国玩家中特别受欢迎，很多人会为了集积分而买游戏，甚至出现了一些“刷积分”的灰色产业。这个玩笑游戏的高价和退款机制，正好为这些行为提供了一个温床。</p><p>当然，也不是所有独立开发者都这么“倒霉”。就在这个事件发生的同一段时间，另一个独立游戏开发者兼Twitch主播，在得知自己的塔防游戏《Tangy TD》上线30小时就赚了3万1942美元后，激动得当场泪流满面。这个视频在社交媒体上疯传，反而让游戏卖得更好了。你看，同样是独立开发者，有人赚得盆满钵满还哭，有人眼看着流水百万却一分没拿到，这命运真是天差地别。</p></div>
+<div class="section" id="sec-0004"><p>现在，这个事件的后续还在发酵。梅杰并没有下架游戏，他还在Steam上挂着呢，只不过他更新了游戏描述，说“感谢所有退款的人，你们让我看到了世界的美好”。至于那些买家，他们到底图什么，可能只有他们自己知道了。有人说，这其实就是一场行为艺术，玩家花200美元“买”一个瞬间，然后在网络世界里留下一个“我拥有这个游戏”的痕迹。还有人说，这暴露了Steam退款政策被滥用的漏洞，Steam甚至应该考虑修改规则了。</p><p>各位玩家，你们怎么看？如果Steam上有一款200美元的玩笑游戏，你会买吗？买完会退款吗？这个问题，也许没有标准答案。但至少，它让我们看到了游戏市场里那些光怪陆离的角落——那里有人的好奇、虚荣，也有商家的精明和平台的政策漏洞。这大概也是游戏产业的魅力所在吧。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">可是，如果你以为梅杰就此一夜暴富，那就大</span></div>
+<div class="tl-item" onclick="seek(127.0,'sec-0002')"><span class="tl-time">02:07</span><span class="tl-title">不过，《这个游戏卖200美元》的玩法更极</span></div>
+<div class="tl-item" onclick="seek(254.0,'sec-0003')"><span class="tl-time">04:14</span><span class="tl-title">当然，也不是所有独立开发者都这么“倒霉”</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260805081434" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
