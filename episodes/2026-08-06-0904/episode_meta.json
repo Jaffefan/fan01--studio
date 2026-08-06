@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-06-0904",
+  "title": "谷歌双子星分道扬镳：Jeff Dean 出走，哈萨比斯退位",
+  "published_at": "2026-08-06 09:04",
+  "duration_seconds": 643.82,
+  "duration_label": "10分43秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Jeff Dean 离职，谷歌股价暴跌 4%",
+      "golden_quote": "最贵的离职，不是工资，是机会成本。",
+      "keywords": [
+        "Jeff Dean",
+        "谷歌",
+        "DiscoLoop",
+        "AI 创业",
+        "股价下跌"
+      ],
+      "source": "X：Jeff Dean (@JeffDean)"
+    },
+    {
+      "title": "哈萨比斯升任主席，专注疾病治愈",
+      "golden_quote": "升职有时是为了让你离开核心。",
+      "keywords": [
+        "哈萨比斯",
+        "Google DeepMind",
+        "Alphabet",
+        "首席科学家",
+        "AI 健康"
+      ],
+      "source": "X：Demis Hassabis (@demishassabis)"
+    },
+    {
+      "title": "两位大佬同日官宣，谷歌 AI 权力重组",
+      "golden_quote": "创新者最大的敌人，是自己的成功。",
+      "keywords": [
+        "谷歌",
+        "AI 人才流失",
+        "创新者窘境",
+        "Gemini",
+        "DeepMind"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "DiscoLoop 获多家 VC 支持，挑战科学发现",
+      "golden_quote": "人才不会忠诚于公司，只会忠诚于改变世界的可能。",
+      "keywords": [
+        "Discovery Loop",
+        "科研自动化",
+        "VC 融资",
+        "递归改进",
+        "科学发现"
+      ],
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "谷歌领导人变动，AI 研究权向皮查伊集中",
+      "golden_quote": "失去天才，可能是巨头重新崛起的开始。",
+      "keywords": [
+        "谷歌重组",
+        "皮查伊",
+        "Koray Kavukcuoglu",
+        "DeepMind",
+        "领导层调整"
+      ],
+      "source": "The Verge AI"
+    }
+  ]
+}
