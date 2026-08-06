@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>《影之刃零》预售倒计时：国产武侠3A的终极一跃 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 087 夜 / 2026-08-06</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 影之刃零</div>
+    <h1 class="ep-title">《影之刃零》预售倒计时<span class="hl">：国产武侠3A的终极一跃</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:45</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260806060118" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">严格来说，这不是《影之刃零》第一次亮相。2024年</h3></div><p>8月6号，一个普通的周二，游戏圈炸了。不是因为打折，也不是因为跳票，而是因为一款叫《影之刃零》的游戏突然官宣：8月12号开启预售，还甩出了一段11分钟的实机演示。你可能觉得，不就是个预售吗？但如果你知道这款游戏背后藏了二十年的江湖恩怨，你也会坐不住。</p><p>先说说这个预告片。它跟以往所有《影之刃零》的片子都不一样。以前都是打打杀杀，刀光剑影，这次却花20秒怼着一个女人的脸拍。女主沐小葵，眼神里全是戏，嘴角微微抽动，眉头轻蹙，仿佛下一秒就要哭出来，又好像在压着某种愤怒。制片方说了，这是100%实机录制，不是CG。我特意盯着看了好几遍，确实，发丝边缘有轻微的锯齿，阴影偶尔闪一下，但就是因为这些瑕疵，才让人起鸡皮疙瘩——这是游戏引擎跑出来的，不是动画渲染。</p><p>这款游戏是《雨血》系列的正统续作，制作人梁其伟，江湖人称Soulframe。他前天半夜在美国发了一条推文：“燃尽了，但是完成了。”评论里都在猜，这是说他刚录完索尼State of Play的专场演示。三天后，官方正式确认了这一消息，还顺带公布了预售时间和售价，以及PC配置需求。整个宣发节奏，像一场精心策划的行军。</p><p>严格来说，这不是《影之刃零》第一次亮相。2024年，它放出了第一波实机演示，当时就惊艳四座，但也有人质疑，说这是不是又一个“预告骗”。后来游戏宣布延期，官方承诺要做画质和建模的全面升级。现在这个30秒的预热片，算是给玩家的一个交代。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(116.4,'sec-0002')"><span>▶</span> 01:56</button><h3 class="section-title">但《影之刃零》不想做第二个黑神话。它给自己选了一条</h3></div><p>我们得聊聊《雨血》系列的来历。那得回到2008年，梁其伟还是个清华建筑系的学生，他一个人用RPG Maker做出了《雨血之死镇》。那时候的画面粗糙得不行，但那个阴郁、潮湿、充满背叛与宿命的武侠世界，一下子就抓住了一小撮玩家。后来他去了美国读研，边读书边做游戏，2011年推出了《雨血：烨城》，2013年出了《雨血前传：蜃楼》。那几年，国内单机市场是一片荒漠，盗版横行，玩家只认网游，梁其伟的《雨血》像是一个逆行的孤胆侠客。</p><p>但《雨血》系列始终是小众的，玩过的人都说好，但没玩过的人压根不知道。梁其伟自己也很明白，一个横版过关的小品，撑不起真正的3A梦。所以从2017年开始，他组建了灵游坊，拉来了国内顶尖的程序员和美术，开始捣鼓《影之刃零》。这一捣鼓就是八年。</p><p>这八年里，国产游戏的境遇也天翻地覆。2015年《黑神话：悟空》的预告片横空出世，那个猴子踏碎凌霄的画面，让多少人第一次觉得，国产3A也许不是梦。但那之后，整整四年，黑神话一直活在玩家的期待和怀疑里。直到2024年，它正式发售，首月销量破千万，这才真正给国产单机市场打了一针强心剂。可以说，没有黑神话的探路，就没有今天《影之刃零》敢在最难的动作游戏领域正面硬刚的底气。</p><p>但《影之刃零》不想做第二个黑神话。它给自己选了一条更窄的路：硬核动作，但又怕门槛太高，于是设计了多档位难度。官方说了，就算你是手残党，也能玩得爽，想挑战自己的，也可以选最难的“死境”，体验那种刀刀到肉的刺激。这思路，有点像宫崎英高的《只狼》，但又比只狼更贴心。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(232.7,'sec-0003')"><span>▶</span> 03:52</button><h3 class="section-title">现在，预售即将开启，游戏马上要面对市场最挑剔的眼睛</h3></div><p>而且，这游戏在剧情上是有资本的。《雨血》系列的剧本，一直是被玩家津津乐道的。那个叫“组织”的杀手集团，那个在朝廷与江湖之间摇摆的主角魂，那个充满阴谋和血雨腥风的武林，都是梁其伟一笔一笔写出来的。现在《影之刃零》是这些故事的重启，但又不止是重启，据说时间线拉得更长，格局更大。</p><p>更让人兴奋的是，预售开启的同一时间，官方会放出11分钟的实机演示，紧接着索尼State of Play还有15到20分钟的专场解读。两段加起来接近半小时，这诚意是真的足。想想看，一般的3A作，预告片能给你看两三分钟就不错了，这直接甩半小时的干货，说明灵游坊对游戏的质量是相当自信的。</p><p>游戏定在10月29号全球同步发售，平台是PS5、Steam、Epic和WeGame。7月23号，它还拿到了版号。这一波，预购、版号、实机演示，三炮齐发，节奏感拉满。有玩家在论坛上感叹：“等了八年，终于要来了。”底下有人回：“八年算什么，我等了十六年了，从死镇开始。”</p><p>但我好奇的，不只是游戏本身。我更想知道，梁其伟这八年是怎么过的。他以前在接受采访的时候说过，做3A就像在悬崖上走钢丝，每一步都可能掉下去。为了开发，他烧光了之前所有的积累，还拉来了投资，最困难的时候，团队差点解散。但他们都咬牙挺过来了。</p><p>现在，预售即将开启，游戏马上要面对市场最挑剔的眼睛。有人说，《影之刃零》是中国武侠游戏最后的一块遮羞布，赢了，国产单机还能再上一个台阶，输了，可能又要倒退五年。这话说得重了点，但也不是没道理。毕竟，武侠是中国独有的文化符号，但这些年，能把武侠做出国际范儿的游戏，几乎没有。</p></div>
+<div class="section" id="sec-0004"><p>《影之刃零》能不能做到，还得等发售了才知道。但至少，它让很多人重新燃起了希望。我不喜欢说什么“里程碑”“神作”，因为那都是别人的评价。我只知道，有一个做游戏的人，用十六年时间，把一个横版小品做成了3A大作的形态，这本身就已经很了不起了。</p><p>预售那天，你会去抢吗？我会的。倒不是说我对游戏本身有多高的期待，我更想亲眼看看，那个从RPG Maker里走出来的武侠梦，最后会变成什么样。就算它最后有瑕疵，我也认了，因为至少有人试过。而且，说不定它真的能给我们一个惊喜呢。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">严格来说，这不是《影之刃零》第一次亮相。</span></div>
+<div class="tl-item" onclick="seek(116.4,'sec-0002')"><span class="tl-time">01:56</span><span class="tl-title">但《影之刃零》不想做第二个黑神话。它给自</span></div>
+<div class="tl-item" onclick="seek(232.7,'sec-0003')"><span class="tl-time">03:52</span><span class="tl-title">现在，预售即将开启，游戏马上要面对市场最</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260806060118" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
