@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>90张显卡，救回一款消失的FF7外传 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 088 夜 / 2026-08-07</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 游戏保护</div>
+    <h1 class="ep-title">90张显卡，救回一<span class="hl">款消失的FF7外传</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:34</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260807050447" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">2018年，Square Enix正式关闭这款游戏</h3></div><p>你好，我是伊恩。今天想跟你聊一个数字：900美元，90张显卡。听起来像某个加密货币矿场的配置，但其实是有人为了救回一款已经死了八年的手游。这款游戏叫《地狱犬的挽歌：失落章节》，是《最终幻想7》衍生作品《地狱犬的挽歌》的手游外传。它2006年上线，2018年服务器关闭，从此变成数字废墟。直到今年，一个叫Yuvi的玩家黑客，用一笔不算多的钱和一堆显卡，硬是把这堆数据从加密的坟墓里刨了出来。</p><p>先把事情讲清楚。2006年，手机游戏还处在远古时代，屏幕小、功能少，但Square Enix已经想试水了。他们做了一个只给Amp'd Mobile网络用户玩的手游，这个运营商现在早就没了，当年也只在北美部分地区运营。游戏是《地狱犬的挽歌》的延伸，主角文森特·瓦伦丁继续追杀敌人，有配音、有剧情，甚至还有3D画面，放在那个年代算得上豪华。但问题是：它锁在了一个小众的运营商网络里，受众本来就少，几年后Amp'd Mobile破产，游戏自然就下架了。Square Enix也没做移植，就这么把它扔进了历史垃圾堆。</p><p>2018年，Square Enix正式关闭这款游戏的服务器，联网功能全废，单机部分也因为授权和密钥问题没法运行，游戏彻底死了。但数字世界有个特点：只要数据还在，就总有复活的机会。2024年，Yuvi搞到一张加密的SD卡，里面存着游戏的全部文件，包括3D模型、关卡脚本、配音音频，甚至还有服务器端的逻辑代码。问题在于加密——没有密钥，这些文件就是一堆乱码。Yuvi说，他花了两年的时间去找密钥，联系Square Enix，查公开资料，都一无所获。他说：“我受够了，我们手上有数据，只是解不了锁，那就自己想办法。”</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(128.5,'sec-0002')"><span>▶</span> 02:08</button><h3 class="section-title">Yuvi不是第一个尝试拯救消逝游戏的人。2019年</h3></div><p>他开始了破解工程。加密算法并不罕见，但密钥强度很高，用普通电脑跑，可能要几个月甚至几年。Yuvi一开始用了点技巧，试着找漏洞，但进展太慢。于是他说：“我搞了个GPU农场。”他花了900美元，租用或调集了超过90块显卡，包括RTX 4090、A4000、A4500、A5000、RTX 6000，甚至还有H200这种数据中心级别的加速卡。这些显卡拼在一起，疯狂运算，试图暴力破解密钥。硬件的算力是惊人的：原本预计要跑几个月的任务，几天就完成了。密钥被找到，文件被解锁，游戏成功运行。Yuvi在YouTube上传了演示视频，画面里是文森特熟悉的红色披风，在粗糙但完好的3D场景中移动，语音清晰，操作流畅。这一瞬间，一款死了八年的游戏复活了。</p><p>这背后的意义，远不止一款冷门手游被救回来。游戏保护，一直是游戏行业的老大难问题。实体时代，卡带和光盘至少能留存几十年，但数字时代，游戏依附于服务器和在线服务，一旦商家关停，玩家手里的东西瞬间变成砖头。很多游戏就这么消失了，尤其是手游。根据“游戏历史基金会”的统计，超过80%的经典手游已经永远无法游玩。Square Enix自己就是“游戏杀手”：从PS2到手机，他们旗下的经典作品至少有十几款因为授权过期或硬件淘汰而永远封存。</p><p>Yuvi不是第一个尝试拯救消逝游戏的人。2019年，玩家们发起“漫威英雄”的私服计划，这款网游在关服最后一天被粉丝抓包，数据被完整保存，后来通过模拟服务器重开。2021年，一群爱好者用手机模拟器重制了《索尼克大冒险》的取消版本“索尼克Xtreme”，让一个从未发售的游戏首次可玩。更早期的例子是“蓝杰计划”，一群玩家花了数年时间破解N64平台《塞尔达传说》的未完成版本，最终在2019年放出了可运行的原型。但像Yuvi这样，为一个冷门手游砸钱砸时间，甚至自建GPU农场破解加密的，并不多见。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(257.1,'sec-0003')"><span>▶</span> 04:17</button><h3 class="section-title">但这种行为的意义，已经超越了单个游戏。Yuvi在博</h3></div><p>这件事还牵出更深层的行业问题。开发商和发行商一直在用法律和数字版权管理（DRM）来限制游戏的使用和保存。当游戏的生命周期结束，他们可能会考虑将数据归档，但大多数时候，他们只是关掉服务器，甚至会因为版权争议而阻止玩家保存。Square Enix在2024年还关掉了《最终幻想7：永恒危机》手游，这款游戏本来打算作为系列前传，结果运营不到一年就没了。玩家们经常开玩笑说，Square Enix最擅长的是创造经典，第二擅长的是把经典埋进土里。但讽刺的是，正是这些“违法”玩家和黑客，成了游戏历史真正的守护者。</p><p>游戏保护业界对此看法不一。支持者认为，这些努力是必要的，因为商业公司决策层可能不了解游戏的文化价值，而玩家是真正的热爱者。反对者则担心，破解加密可能涉及法律风险，甚至可能被利用传播恶意软件。法律专家指出，美国《数字千年版权法》第1201条禁止绕过访问控制技术，但图书馆和档案馆有豁免条款。不过，像Yuvi这样的个人行为，依然处在灰色地带。</p><p>但这种行为的意义，已经超越了单个游戏。Yuvi在博客里写道：“这些游戏不是产品，是文化。如果我们不保存它们，未来的人就再也看不到昨天的人们在做什么。”他的行动，是对数字时代“遗忘”的抵抗。与此同时，Square Enix似乎也在尝试回收这些旧作品的资产。在《最终幻想7重制版》三部曲中，制作人引用了《地狱犬的挽歌》的剧情元素，而在柏林粉丝节上，导演滨口直树提到，他们正计划把更多外传的设定融入新作《启示录》。这说明，商业公司也在寻找自己的方式，让这些草稿重见天日。</p></div>
+<div class="section" id="sec-0004"><p>回到Yuvi的这次成功，我想到一个更大的问题：我们到底该如何对待数字时代的遗产？我们写下的文字，拍下的照片，玩过的游戏，都只是储存在那些庞大的数据中心里，像待解的密码。也许，在未来的某一天，我们会需要一个一个GPU农场，去唤醒这些沉睡的记忆。那些漫长而孤独的破解过程，就像为冰冷的二进制数据注入生命力。玩家们在屏幕前尖叫，人工智能默默推演，而真正在驱动这一切的，是人对于曾经热爱之物的执念。</p><p>Yuvi的演示视频现在还在他的YouTube频道上，播放量不高，但评论区里满是感谢。“终于等到你”“谢谢你，我哭了”“这是给所有游戏人的礼物”。对我来说，这个故事的魅力不在于技术多酷，而在于，有人愿意为一个已经消失的世界，花900美元和一腔孤勇。这提醒我，在这个按下删除键就永别的时代，总有人愿意拒绝删除。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">2018年，Square Enix正式关</span></div>
+<div class="tl-item" onclick="seek(128.5,'sec-0002')"><span class="tl-time">02:08</span><span class="tl-title">Yuvi不是第一个尝试拯救消逝游戏的人。</span></div>
+<div class="tl-item" onclick="seek(257.1,'sec-0003')"><span class="tl-time">04:17</span><span class="tl-title">但这种行为的意义，已经超越了单个游戏。Y</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260807050447" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
