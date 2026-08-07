@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-07-1116",
+  "title": "5件让你重新理解AI边界的事",
+  "published_at": "2026-08-07 11:16",
+  "duration_seconds": 738.41,
+  "duration_label": "12分18秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "NVIDIA Cosmos 3：让AI学会物理世界",
+      "golden_quote": "让AI理解物理世界，是通往AGI的必经之路。",
+      "keywords": [
+        "NVIDIA",
+        "Cosmos 3",
+        "物理AI",
+        "世界模型",
+        "开放模型"
+      ],
+      "source": "NVIDIA Blog"
+    },
+    {
+      "title": "千问Wan3.0：30秒一镜到底的视频生成",
+      "golden_quote": "视频创作民主化，一条指令拍出电影感。",
+      "keywords": [
+        "千问",
+        "Wan3.0",
+        "视频生成",
+        "一镜到底",
+        "创作民主化"
+      ],
+      "source": "公众号：千问APP（阿里）"
+    },
+    {
+      "title": "微软财报背后的秘密：OpenAI贡献七成AI收入",
+      "golden_quote": "微软的AI叙事，正在被OpenAI绑架。",
+      "keywords": [
+        "微软",
+        "OpenAI",
+        "AI收入",
+        "依赖",
+        "Copilot"
+      ],
+      "source": "X：Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "Google AI大调整：Jeff Dean出走，理想主义终结",
+      "golden_quote": "理想主义的Google正在死去，但未必是坏事。",
+      "keywords": [
+        "Google",
+        "DeepMind",
+        "Jeff Dean",
+        "组织调整",
+        "人才流失"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "DeepSeek豪掷1.4亿入股宇树：杭州双雄联姻",
+      "golden_quote": "大脑与身体合体，AI的下一站是机器人。",
+      "keywords": [
+        "DeepSeek",
+        "宇树",
+        "IPO",
+        "战略合作",
+        "具身智能"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
