@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>《恶魔之魂》差点成第一人称？尘封18年的原型影像 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 092 夜 / 2026-08-08</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 恶魔之魂</div>
+    <h1 class="ep-title">《恶魔之魂》差点成第一人<span class="hl">称？尘封18年的原型影像</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:28</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260808060419" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">最让人惊讶的就是视角系统。在正式版的《恶魔之魂》里</h3></div><p>你好，我是伊恩。想象一下，你正在玩《恶魔之魂》，但眼前的画面不是那个经典的第三人称背影，而是第一人称的视角，你正举着盾牌，面对着那些怪物。这听起来像是一个平行宇宙的设定，但就在几天前，有人挖出了一段2007年的内部演示视频，证明这真的曾经存在过。</p><p>发现这段视频的人是兰斯·麦克唐纳，你可能听过他的名字，他就是那位著名的《艾尔登法环》数据挖掘者，经常能从游戏文件里找到一些被砍掉的内容。这次，他找到了一个发布于2007年的PowerPoint演示文稿，那是索尼电脑娱乐举办的一场内部活动，叫Gameshare 4，开发团队会展示他们正在做的项目，互相交流意见。日本工作室的PD#3小组，也就是后来制作《恶魔之魂》的那个团队，用微软的PowerPoint 2007做了这份幻灯片，里面放了一段实机演示的画面。</p><p>这段视频和图片在8月7日被麦克唐纳公开，距离它被首次展示，已经过去了整整18年。幻灯片里写着游戏的暂定名就是《恶魔之魂》，这个名称从头到尾都没变过。它还描绘了游戏的世界观，说那是一个充满“废墟城堡、荒芜之地和其他被诅咒的地方”，里面满是“敌人、扭曲的突变体和生物”。这些设定最终都保留了下来，但有些玩法细节，却和成品截然不同。</p><p>最让人惊讶的就是视角系统。在正式版的《恶魔之魂》里，玩家是用第三人称控制角色，镜头是自由的，你可以随意转动视角观察四周，战斗时还能锁定敌人。但在那段原型视频里，玩家居然可以用第一人称来战斗，麦克唐纳说这是一个可选的模式，你想切换就能切换。而且，原版的第三人称模式用的是固定镜头，镜头会跟着角色的朝向走，左摇杆用来闪避和左右移动，麦克唐纳说这“刻意”模仿了《上古卷轴4：湮没》的第三人称操作方式。这个设计后来被整个推翻，我们才见到了那个经典的自由镜头。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(125.6,'sec-0002')"><span>▶</span> 02:05</button><h3 class="section-title">就在这时候，制作人梶井健和导演宫崎英高开始了一个新</h3></div><p>除了视角，视频里还展示了一些最终被砍掉的生物，比如长着蛇头的男人——后来他们在《黑暗之魂》的塞恩古城里出现了——还有一只普普通通的鳄鱼。它也提到了灵魂系统，这个系统被保留了下来，并且出现在了后续的所有魂系游戏里。</p><p>不过，这份演示文稿里最有趣的部分，其实和玩法没关系。日本工作室在幻灯片里放了一张《南方公园》的截图，具体来说，是那集《做爱，不要魔兽世界》，画面上是那个浑身肥肉、满脸痘痘的埃里克·卡特曼，正沉迷于《魔兽世界》。他们用这张图来举例，说明“MMORPG玩家的刻板形象”，说他们希望避免这种形象，所以打算把单机RPG和在线RPG的元素结合起来，做出一个更平衡的体验。看到这个，我实在忍不住笑了，你能想象吗，一个如此严肃的团队，在内部演示里放《南方公园》的梗。</p><p>麦克唐纳的这次发现，也让我们再次想起那个问题：《恶魔之魂》是如何一步步成为今天这个模样的？它并不是凭空出现的，而是有着清晰的历史脉络。</p><p>让我们把时间往前推。21世纪初，FromSoftware还不是那个以魂系列闻名的公司。他们做过《国王密令》系列，那是一个第一人称的迷宫探索游戏，1994年发售，和《恶魔之魂》一样充满了黑暗和压抑的氛围。但《国王密令》之后，公司转向了其他类型，比如《装甲核心》系列的机甲战斗。到2006年左右，公司内部士气低落，连续几个项目都失败了。</p><p>就在这时候，制作人梶井健和导演宫崎英高开始了一个新项目。宫崎英高在2011年的一次采访中说过，他当时没有参与公司的商业计划，而是独自开发了一个玩法原型，那就是《恶魔之魂》的雏形。他的灵感来自《国王密令》，他想做一个“更现代、更成熟”的版本。但一开始，公司内部并不看好，因为那时候的游戏市场流行的是色彩鲜艳、动作爽快的作品，比如《鬼泣》和《战神》，而他们想做的这个游戏，黑暗、硬核、充满死亡惩罚，被很多人认为是“太奇怪了”。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(251.2,'sec-0003')"><span>▶</span> 04:11</button><h3 class="section-title">但这份演示文稿也提醒了我们，游戏开发的过程中，有无</h3></div><p>《恶魔之魂》最初在2009年发售时，其实并没有马上火起来。它先在北美上市，但发行商Atlus的销量预期很低，结果游戏意外地卖出不错，但也没到爆红的程度。直到后来在日本和其他地区发售，口碑慢慢发酵，越来越多的玩家开始讨论这个“难度高得离谱”的游戏，它才逐渐成为小众神作。</p><p>这份2007年的演示文稿，正好揭示了游戏在早期阶段的一些选择。第一人称的选项，听起来很特别，但并不是没有先例。FromSoftware最早的《国王密令》就是第一人称，所以这个想法可能来自他们自己的历史。而固定镜头的设计，则让人想起《上古卷轴4》那种偏重探索的RPG，后来他们放弃了，转向了更灵活的镜头，这也许是为了让战斗更直观，更聚焦于动作本身。</p><p>有意思的是，魂系列的后续作品里，一直没有出现过第一人称模式。《黑暗之魂》和《血源诅咒》都是纯粹的第三人称，《艾尔登法环》更是把镜头系统发挥到了极致，让玩家可以自由探索那个开放世界。也许他们觉得，第一人称会打破那种“你扮演一个角色、在世界上行走”的沉浸感，而第三人称更有利于展示角色的动作和装备，也更符合他们对“动作RPG”的定位。</p><p>但这份演示文稿也提醒了我们，游戏开发的过程中，有无数被砍掉的想法和试验。有些东西，比如第一人称，永远留在了那个2007年的演示里；而有些东西，比如蛇头人，兜兜转转换了个地方，出现在了后作里。这就像游戏的一个隐藏档案，记录着创作时的犹豫和选择。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(376.9,'sec-0004')"><span>▶</span> 06:16</button><h3 class="section-title">宫崎英高本人似乎从未公开提过这个第一人称选项，但他</h3></div><p>现在，麦克唐纳的发现引起了不小的讨论。有些玩家感叹，如果当年保留了第一人称选项，魂系列会不会变成完全不同的样子？也有人觉得，幸好砍掉了，因为第一人称可能会让战斗变得混乱，尤其是在那种紧张的对峙中，固定镜头也会限制玩家的感知。但也有老玩家说，玩过《国王密令》的人其实能感受到那种第一人称的压抑感，如果《恶魔之魂》也能提供这种视角，说不定会是一种独特的体验。</p><p>在Reddit上，一个热门帖子里，玩家们争论不休。有个用户说，他想象了一下用第一人称打“风暴王”的场景，觉得可能会更震撼，因为你能看到那些飞来的长矛，更能感受到角色面对巨兽的渺小。另一个用户则反驳说，魂系的精彩就在于第三人称让你能看到角色的翻滚和攻击动作，那是“表演”的一部分，第一人称会削弱那种战斗的美感。</p><p>还有人注意到，麦克唐纳的发现也展示了游戏界的一个普遍现象：很多经典作品在开发初期都尝试过不同的视角或操作方式，比如《生化危机4》原本是固定视角，后来改成了越肩视角，结果成了系列的分水岭。也许《恶魔之魂》的这次未竟尝试，只是游戏史上无数个“如果”中的一个。</p><p>宫崎英高本人似乎从未公开提过这个第一人称选项，但他在多次采访中说过，《恶魔之魂》的灵感来自他的童年阅读，那些他看不懂的英文幻想小说，让他想象了很多故事。第一人称的视角也许能更贴近那种“沉浸在自己的想象中”的感觉，但最后他们选择了第三人称，让玩家扮演一个明确的角色，经历一段明确的故事。</p></div>
+<div class="section" id="sec-0005"><p>现在，这件事就像一颗石子扔进湖里，激起了一圈涟漪，然后又沉下去。那些帧数不稳的演示画面，那个《南方公园》的梗，蛇头人的早期雏形，以及那个被遗忘的第一人称选项，都成了魂系粉丝茶余饭后的谈资。也许有一天，FromSoftware会重新拾起这个想法，做一款第一人称的魂系游戏，也许永远都不会。但无论怎样，这段影像让我们看到了，一个伟大系列诞生的前夜，它曾经有过的另一种可能。</p><p>在游戏开发的世界里，被砍掉的内容常常比保留下来的还要多。这些“幽灵”偶尔会被人发现，提醒我们，每一款游戏都是无数选择和妥协的产物。就像《恶魔之魂》里那些游荡的灵魂，它们不知道自己前世是什么样子，但玩家们在每一次躲闪和挥砍中，都能感受到那个团队在2007年做出的决定。而现在，我们至少能从这里，窥见一斑。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">最让人惊讶的就是视角系统。在正式版的《恶</span></div>
+<div class="tl-item" onclick="seek(125.6,'sec-0002')"><span class="tl-time">02:05</span><span class="tl-title">就在这时候，制作人梶井健和导演宫崎英高开</span></div>
+<div class="tl-item" onclick="seek(251.2,'sec-0003')"><span class="tl-time">04:11</span><span class="tl-title">但这份演示文稿也提醒了我们，游戏开发的过</span></div>
+<div class="tl-item" onclick="seek(376.9,'sec-0004')"><span class="tl-time">06:16</span><span class="tl-title">宫崎英高本人似乎从未公开提过这个第一人称</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260808060419" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
