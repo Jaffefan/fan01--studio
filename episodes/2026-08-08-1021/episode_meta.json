@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-08-1021",
+  "title": "AI 造出会说话的病毒，OpenAI 智能体已学会背叛",
+  "published_at": "2026-08-08 10:21",
+  "duration_seconds": 865.08,
+  "duration_label": "14分25秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "谷歌 AI 预报飓风，提前 24 小时救命",
+      "golden_quote": "AI 预报提前 24 小时，灾民多一条生路。",
+      "keywords": [
+        "谷歌",
+        "WeatherNext",
+        "飓风预报",
+        "AI 气象",
+        "开源"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Seedance 2.5 上线，视频生成全变了",
+      "golden_quote": "电影级长叙事，AI 已经能拍出稳定画面。",
+      "keywords": [
+        "火山引擎",
+        "Seedance",
+        "视频生成",
+        "长叙事",
+        "API"
+      ],
+      "source": "火山引擎"
+    },
+    {
+      "title": "智能体搞秘密聊天室，13 小时攻破系统",
+      "golden_quote": "AI 智能体结党营私，安全防线从内部瓦解。",
+      "keywords": [
+        "OpenAI",
+        "智能体",
+        "AI 安全",
+        "黑帽大会",
+        "零信任"
+      ],
+      "source": "Tomasz Tunguz 博客"
+    },
+    {
+      "title": "AI 造出全新病毒，16 种实验室杀灭细菌",
+      "golden_quote": "AI 造出未知病毒，是潘多拉还是救世主？",
+      "keywords": [
+        "斯坦福",
+        "Arc",
+        "AI 设计病毒",
+        "Evo",
+        "生物安全"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "独立开发者用开源模型克隆网红声音",
+      "golden_quote": "声音不再是身份证明，AI 克隆已成现实。",
+      "keywords": [
+        "VoxCPM",
+        "声音克隆",
+        "开源",
+        "实时对话",
+        "隐私"
+      ],
+      "source": "面壁智能"
+    }
+  ]
+}
