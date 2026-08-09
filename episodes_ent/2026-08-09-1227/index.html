@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当恐怖游戏成为现实：FNAF主题餐厅2027年开业 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 093 夜 / 2026-08-09</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> FNAF</div>
+    <h1 class="ep-title">当恐怖游戏成为现实：FN<span class="hl">AF主题餐厅2027年开业</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:43</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260809042916" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">根据后续的Facebook公告，这个体验馆会是一个</h3></div><p>你好，我是伊恩。想象一下，你走进一家披萨店，门口站着一只巨大的、眼神空洞的机械熊，它正朝你微笑。这不是恐怖片的片场，而是2027年即将在新泽西州发生的真实场景。没错，那个曾让你在深夜不敢关灯的游戏系列《玩具熊的五夜后宫》——玩家们常叫它FNAF——如今要变成一家可以真正走进去的餐厅了。</p><p>这个消息是昨天从美国梦购物中心传出来的。美国梦，听名字就知道，这是个超级大的娱乐零售综合体，坐落在新泽西州，距离纽约市只有几公里。他们通过社交媒体宣布，要和FNAF的创造者斯科特·考顿合作，打造一个永久性的沉浸式餐厅体验。官方发布了一段短短几秒的预告视频，画面昏暗，只有一只机械熊的眼睛在黑暗中闪烁，然后打出一个大大的年份：2027。配文只有一句话：走进《五夜后宫》的世界，成为第一批发现门后秘密的人。</p><p>这个预告片一出，粉丝圈立马炸了。评论区里全是woah、不敢相信、终于等到了之类的欢呼。因为从2014年游戏问世以来，玩家们就梦想着能真的去一家弗雷迪·费兹熊披萨店——游戏里那家深夜里闹鬼的披萨店。只不过，游戏里的餐厅白天是孩子们的乐园，晚上却是梦魇的舞台。而现在，美国梦要把这个虚构的场地变成现实，有食物、有街机、甚至还有机械动物舞台秀。</p><p>根据后续的Facebook公告，这个体验馆会是一个功能性的弗雷迪·费兹熊披萨店，完全重新想象，让游客沉浸在这个标志性恐怖系列的世界里。具体包括：可以吃的披萨，当然是那种经典的纽约风味；街机游戏区，会有FNAF主题的互动游戏；最重要的是，舞台上有真正的机械动物——弗雷迪、邦妮、奇卡、狐狸霍斯，它们会表演节目。还有狐狸霍斯的海盗湾，一个专门设计的区域；甚至还有沉浸式的多人合作生存恐怖体验，让你和朋友们在虚拟世界里一起躲避那些失控的机械玩偶。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(140.7,'sec-0002')"><span>▶</span> 02:20</button><h3 class="section-title">现在，让我们把时间轴拉得更长一些。FNAF这个游戏</h3></div><p>但等等，这听起来是不是有点太美好了？毕竟，原版游戏里的弗雷迪和他那帮伙伴可不太友好。在那些经典场景里，你扮演一个夜班保安，要在办公室里盯着监控摄像头，防止那些机械玩偶在午夜过后溜进来找你。它们会突然出现在走廊尽头，眼睛发着光，嘴里哼着不知名的小调。如果它们凑到了你的脸跟前，游戏就结束了。那种从脚底升起的寒意，相信任何玩过的人都不会忘。</p><p>所以，当美国梦宣布这个消息后，粉丝们除了兴奋，也有一丝好奇：这家餐厅的安保措施会是什么样？会有保安在办公室看着监控吗？如果游客们在午夜后还逗留在餐厅，会不会遇到什么……不寻常的事？美国梦当然没有回应这些疑问，但从预告片里那段隐晦的披萨图片来看，他们显然知道观众想要什么。那张图片里，披萨上的意大利辣香肠排列得歪歪扭扭，看起来像是几个字母。经过红色和绿色通道分离，再提升亮度，能看到上面写着coming soon。这些小巧思，正是FNAF粉丝们最熟悉的感觉。</p><p>现在，让我们把时间轴拉得更长一些。FNAF这个游戏，它的起源其实非常有意思。2014年，那个叫斯科特·考顿的独立游戏开发者，因为之前的作品《奇普的赌场大亨》等几款游戏接连失败，几乎到了走投无路的地步。那一年他大概只有25岁，住在得克萨斯州休斯顿附近的小镇。他的妻子鼓励他做点不一样的东西。有一天，他看到一则关于查克·E·芝士餐厅的新闻，说那家仿照披萨娱乐餐厅的连锁店因为业绩下滑关闭了几家门店，但它的机械动物舞台秀依然吸引着好奇的孩子和家长。斯科特突然想到：如果这些机械玩偶在晚上会自己动起来，而且有自己畸形的意识，会是一个什么样的恐怖游戏？这个念头他足足想了一整天。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(281.4,'sec-0003')"><span>▶</span> 04:41</button><h3 class="section-title">然后，到了2023年，FNAF改编电影终于上映了。</h3></div><p>他的第一款FNAF游戏是2014年8月发布的，那是一个很小的点击式生存游戏，你需要坐在办公室里，管理监控摄像头的用电，才能度过五个夜晚。没有几家公司愿意发行这种画质粗糙、玩法反人类的游戏，但斯科特把它做出来后，扔到了Steam上。谁也没想到，它一夜之间火了。游戏界从来没出现过这样的心理恐怖——你不会跑，不会跳，只是坐在那儿盯着屏幕，看着那些玩偶一步一步逼近。那种由未知带来的压迫感，让无数玩家边玩边叫，甚至有人吓得直接把电脑合上。YouTube上的主播们迅速涌入这个游戏，放大惊叫的瞬间，吸引了数百万点击量。FNAF成为了一个文化现象，而不仅仅是游戏。</p><p>从此，这个系列开始飞速扩张。从2014年到2017年，斯科特连续发布了六部主线游戏和四部外传，每一部都扩展了那种神秘感：五个地点、五个夜晚、一个比一个暗黑的背景故事——关于失踪的孩子、被复仇灵魂附身的机械玩偶、以及那个叫威廉·阿夫顿的可怕创始人。粉丝们开始深挖游戏里的每一个隐藏细节，解码电话录音、解码海报上的微小标记，甚至连一个披萨盒上模糊的污渍都能引发几万词的分析文章。这场解谜热潮催生了无数同人作品、理论视频和深度解读，持续了整整十年，而且热度不减。</p><p>然后，到了2023年，FNAF改编电影终于上映了。那是一部由布鲁姆豪斯公司制作的恐怖片，导演是艾玛·塔米。电影上映首周就取得了超过八千万美元的票房，创下了恐怖片首周末的最佳成绩之一。观众们穿着弗雷迪的T恤，带着那些机械熊的脸基尼，在电影院里尖叫、欢笑、鼓掌。这证明了一件事：FNAF的受众已经远远超出了游戏玩家，成为了流行文化的一部分。到了2025年，第二部电影《Five Nights at Freddy's 2》上映，同样表现不俗，全球票房累积超过五亿美元。同年，环球影城在他们的恐怖之夜活动中也加入了FNAF主题鬼屋，还原了游戏中的办公室和走廊，游客们可以真正体验被机械玩偶追的滋味。而今年，万圣节装饰品牌Spirit Halloween也推出了一个实体大小的弗雷迪玩偶，摆在货架上，售价比一台游戏主机还贵，但依然卖断货。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(422.1,'sec-0004')"><span>▶</span> 07:02</button><h3 class="section-title">美国梦方面表示，他们会和斯科特·考顿本人合作，确保</h3></div><p>回看这条发展脉络，你会发现，从2014年的独立游戏，到2026年宣布的永久餐厅，这其实是同一个逻辑的延续：FNAF一直在尝试打破虚拟与现实的界限。游戏里，玩家隔着屏幕与恐惧斗争；而电影、鬼屋、乃至现在的餐厅，都在试图让你直接站到那些玩偶身边。有人可能会质疑：把恐怖游戏做成餐厅，是不是一种自相矛盾？毕竟，查克·E·芝士那样的家庭餐厅是为了让孩子开心，而FNAF里的角色却是让人害怕的。</p><p>但至少从目前的粉丝反应来看，他们完全不在意这种矛盾。他们想要的，正是那种既熟悉又诡异的氛围——在这里，你能放心地吃一块披萨，但当你抬头看舞台时，那群机械玩偶正张着嘴，眼睛诡异地转动。这种体验，是任何影视作品都无法给予的。</p><p>当然，这并不意味着一切都是一帆风顺的。就在美国梦宣布这一合作之后，一些粉丝就在社交媒体上提出了质疑：美国梦是一家大型商业集团，他们真的能理解这个系列那种独立、诡异、甚至有点反主流的气质吗？会不会把它变成又一个商业化吃灰场所？也有行业观察者指出，过去几年旅游娱乐业为了吸引年轻人，一直在尝试把游戏、动漫和电影IP变成实体景点，比如超级任天堂世界、哈利波特主题区等等。但FNAF是恐怖IP，它面对的是一个比任天堂更复杂的受众群体——那些人既是游戏迷，也可能是恐怖片爱好者，他们对于如何呈现这个世界的期待值更高。</p><p>美国梦方面表示，他们会和斯科特·考顿本人合作，确保体验还原原作精神。斯科特·考顿虽然没有公开出面，但他在几个互动帖子里发了一些意味深长的表情，比如一个披萨加一个眼睛符号，这在粉丝看来就是最好的保证——毕竟，这个曾经几乎被业界抛弃的独立开发者，正是用这种神秘的小把戏建立了整个系列的粉丝文化。</p></div>
+<div class="section" id="sec-0005"><p>关于这家餐厅的具体细节，比如披萨是不是真的好吃，机械舞台秀会不会出现故障，以及那个所谓的沉浸式生存恐怖体验会是什么玩法，美国梦没有透露更多。但有一个耐人寻味的细节：在发布消息的当天，美国梦的官网上传了一张地图图片，似乎是餐厅的布局图，但在图片的蓝色的通道里，隐藏着类似迷宫一样的线条，有人放大之后，看到了几个小字：不要相信提线木偶。当然，这很可能是粉丝的过度解读。但以FNAF一贯的谜题风格，谁知道呢。</p><p>好了，到这里，这期的内容就差不多了。至于这家餐厅在2027年正式开业时，会不会真的像预告那样既充满欢乐又暗藏诡异，只有时间能给我们答案。但在那之前，也许你可以先打开游戏，重温一遍凌晨两点被邦妮敲门的恐惧——然后想一想，如果那扇门真的开在你面前，你会不会走进去。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">根据后续的Facebook公告，这个体验</span></div>
+<div class="tl-item" onclick="seek(140.7,'sec-0002')"><span class="tl-time">02:20</span><span class="tl-title">现在，让我们把时间轴拉得更长一些。FNA</span></div>
+<div class="tl-item" onclick="seek(281.4,'sec-0003')"><span class="tl-time">04:41</span><span class="tl-title">然后，到了2023年，FNAF改编电影终</span></div>
+<div class="tl-item" onclick="seek(422.1,'sec-0004')"><span class="tl-time">07:02</span><span class="tl-title">美国梦方面表示，他们会和斯科特·考顿本人</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260809042916" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
