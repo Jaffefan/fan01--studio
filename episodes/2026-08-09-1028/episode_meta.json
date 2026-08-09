@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-09-1028",
+  "title": "AI 流量超越人类，苹果牵手千问，OpenAI 桌面语音操控电脑",
+  "published_at": "2026-08-09 10:28",
+  "duration_seconds": 889.27,
+  "duration_label": "14分49秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "苹果 Mac 拥抱阿里千问，Apple 智能向中国用户开放",
+      "golden_quote": "苹果选阿里，不是因为它最强，而是因为它最懂中国。",
+      "keywords": [
+        "苹果",
+        "Apple智能",
+        "千问",
+        "阿里巴巴",
+        "macOS"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "OpenAI 桌面版语音指挥电脑，动嘴就能写代码提交 PR",
+      "golden_quote": "我们动动嘴的时代，真的来了。",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "语音交互",
+        "智能体",
+        "Codex"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Cloudflare 数据：AI 流量已超人类，五年后人类成误差",
+      "golden_quote": "当 AI 成为互联网的主角，内容创作者还能靠什么赚钱？",
+      "keywords": [
+        "Cloudflare",
+        "AI流量",
+        "智能体",
+        "财报",
+        "互联网"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Claude Code 默认自动模式，Anthropic 称安全风险低于人类",
+      "golden_quote": "当 AI 开始自己决定执行什么，信任就是最大的赌注。",
+      "keywords": [
+        "Anthropic",
+        "Claude Code",
+        "自动模式",
+        "安全",
+        "编程"
+      ],
+      "source": "Simon Willison's Weblog"
+    },
+    {
+      "title": "OpenAI 收购演示文稿初创公司 NextSlide，团队并入 ChatGPT",
+      "golden_quote": "科技巨头买 PPT 公司，不是买工具，是买通往办公室的门票。",
+      "keywords": [
+        "OpenAI",
+        "NextSlide",
+        "收购",
+        "PPT",
+        "办公"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
