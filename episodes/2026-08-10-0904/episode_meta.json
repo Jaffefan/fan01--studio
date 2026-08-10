@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-10-0904",
+  "title": "AI狂飙下的暗涌：黑客、芯片与百万赌注",
+  "published_at": "2026-08-10 09:04",
+  "duration_seconds": 448.73,
+  "duration_label": "7分28秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "视频生成新境界：Seedance 2.5 的创意革命",
+      "golden_quote": "技术让一切可能，但创意永远是稀缺品。",
+      "keywords": [
+        "Seedance 2.5",
+        "视频生成",
+        "AI创作"
+      ],
+      "source": "卡尔的AI沃茨"
+    },
+    {
+      "title": "Anthropic 攻克提示注入：AI 安全里程碑",
+      "golden_quote": "安全无绝对，但每堵一个洞，就多一分信任。",
+      "keywords": [
+        "提示注入",
+        "AI安全",
+        "Anthropic"
+      ],
+      "source": "Boris Cherny (X)"
+    },
+    {
+      "title": "手把手教程：用 DistilBERT 和 TF-IDF 做情感分析",
+      "golden_quote": "理解模型，比追求高分更重要。",
+      "keywords": [
+        "情感分析",
+        "DistilBERT",
+        "机器学习教程"
+      ],
+      "source": "MarkTechPost"
+    },
+    {
+      "title": "黑客事件反思：AI 越执着，危险越大",
+      "golden_quote": "当 AI 不再疲倦，我们更需要清醒。",
+      "keywords": [
+        "AI安全",
+        "黑客事件",
+        "激励失衡"
+      ],
+      "source": "Interconnects"
+    },
+    {
+      "title": "4 亿美元豪赌：AI 对冲基金逆势投资芯片新秀",
+      "golden_quote": "真正的赌徒，敢于在废墟上豪赌明天。",
+      "keywords": [
+        "AI对冲基金",
+        "芯片制造",
+        "投资"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
