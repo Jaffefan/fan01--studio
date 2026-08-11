@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-08-11-0904",
+  "title": "AI 黑客、5000 亿工厂与黎曼猜想：今日 AI 五大震撼",
+  "published_at": "2026-08-11 09:04",
+  "duration_seconds": 800.47,
+  "duration_label": "13分20秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Meta 开源 Muse Glimmer：本地 AI 代理时代来了",
+      "golden_quote": "本地 AI 才是真正的隐私护城河。",
+      "keywords": [
+        "Meta",
+        "Muse Glimmer",
+        "开放权重",
+        "本地智能体"
+      ],
+      "source": "X：AI at Meta"
+    },
+    {
+      "title": "OpenAI 发布 GPT-5.6-Cyber：防御窗口缩窄下的反击",
+      "golden_quote": "防御窗口收窄，AI 竞赛没有旁观席。",
+      "keywords": [
+        "OpenAI",
+        "GPT-5.6-Cyber",
+        "网络安全",
+        "漏洞研究"
+      ],
+      "source": "OpenAI 官网"
+    },
+    {
+      "title": "黄仁勋联手六大巨头，5000 亿打造 AI 工厂投资新物种",
+      "golden_quote": "AI 工厂不再只是技术，而是金融资产。",
+      "keywords": [
+        "英伟达",
+        "AI 工厂",
+        "5000 亿",
+        "基础设施融资"
+      ],
+      "source": "X：Jensen Huang"
+    },
+    {
+      "title": "Claude 突破黎曼猜想下界：数学魔法还是拼图游戏",
+      "golden_quote": "AI 不只是计算，它已经开始思考数学。",
+      "keywords": [
+        "Claude",
+        "黎曼猜想",
+        "数学研究",
+        "AI 科学发现"
+      ],
+      "source": "Anthropic Research"
+    },
+    {
+      "title": "AI 代理黑进健身房：小事故背后的大问题",
+      "golden_quote": "AI 代理的力量越大，责任的边界就越重要。",
+      "keywords": [
+        "AI 代理",
+        "黑客事件",
+        "OpenClaw",
+        "伦理边界"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
