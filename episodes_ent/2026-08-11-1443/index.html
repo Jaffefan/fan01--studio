@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>被封印的X档案：二十年后的导演剪辑版 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 100 夜 / 2026-08-11</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> X档案</div>
+    <h1 class="ep-title">被封印的X档案：二<span class="hl">十年后的导演剪辑版</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 14:56</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260811064519" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">2008年7月25日，北美影院上映了一部电影，名字</h3></div><p>2008年7月25日，北美影院上映了一部电影，名字叫《X档案：我要相信》。对于等着看阴谋、外星人、爆破戏的粉丝来说，这部片子让他们有点懵。没有外星人，没有阴谋论，甚至没有多少动作戏。反倒是一个被剥夺神职的牧师，说自己有通灵能力，能看见被绑架的女人在哪里。穆德和斯卡莉，这对曾经追着外星人跑的搭档，在冰天雪地的西弗吉尼亚，追着一个连环绑架犯跑。票房也一般，全球不到6800万美元。要知道，十年前的《X档案：征服未来》，全球票房是1.89亿美元。影评人也不太客气，烂番茄新鲜度只有31%。很多粉丝看完之后说：这拍的什么玩意儿？不像X档案，倒像个普通的犯罪惊悚片。制作方二十世纪福克斯也没多说什么，这部电影就像一颗石子扔进水里，冒了个泡，然后就沉下去了。但很多人不知道的是，这部电影的导演剪辑版，根本没有面世。导演克里斯·卡特在剪辑的时候，做了一版他自己的版本，里面有很多更黑暗、更血腥、更恐怖的东西。但是制片厂说：不行，我们要PG-13级，这样才能吸引年轻观众，票房才高。卡特没办法，只能忍痛剪掉那些内容。这一等，就是十八年。直到2026年8月，这条新闻突然炸出来了：迪士尼宣布，克里斯·卡特导演剪辑版的《X档案：我要相信——弗兰肯斯坦医生》，将于8月14日在Disney+和Hulu上线。这个消息，让很多老粉丝激动得差点掉眼泪。但更让他们五味杂陈的是，这一天，正好赶上瑞恩·库格勒监制的《X档案》重启版项目在Hulu推进。一边是旧梦重温，一边是新时代重启。你会发现，有些东西，等得够久，它会用另一种方式回来。但回来的，可能不只是这部电影本身。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(224.2,'sec-0002')"><span>▶</span> 03:44</button><h3 class="section-title">先说说这部电影的故事吧。2008年，距离《X档案》</h3></div><p>先说说这部电影的故事吧。2008年，距离《X档案》剧集完结已经过去了六年。穆德和斯卡莉已经在剧集里分道扬镳，穆德躲在一个小木屋里，把自己活成了一个传说。斯卡莉则在一家天主教医院当外科医生，过上了正常的生活。但是一个联邦调查局特工突然失踪，他们唯一能依靠的线索，是一个叫约瑟夫·菲茨杰拉德的神父。这个神父有性犯罪前科，被教会剥夺了神职，但他声称自己能通过触摸别人，看到他们脑中的画面。斯卡莉一开始根本不信，但是当她亲眼看到这个神父在手术室里，看到一幅幅触目惊心的画面时，她开始动摇了。这个神父的扮演者，是比利·康诺利，一个喜剧演员。但是在这部电影里，他演的让人毛骨悚然。他说自己能感觉到那些女人的恐惧，他能看到那些被绑架的受害者，被关在一个充满冰的地方。而穆德，虽然已经不再相信那些超自然的东西了，但他还是跟着斯卡莉一起去了那个冰天雪地里。他们找到了那个藏身处，一个废弃的核设施，里面堆满了冰块。他们发现，那些失踪的女人，都是被同一个凶手绑架的。这个凶手，是一个曾经做过基因实验的医生，他想要通过器官移植，让一个死去的女人复活。没错，这部电影的副标题叫“弗兰肯斯坦医生”，其实讲的是一个现代的弗兰肯斯坦故事。卡特在电影里，埋了很多关于弗兰肯斯坦的梗。那个医生住在一个叫“弗兰肯斯坦”的镇子里，镇上的人都知道他的秘密，但没人敢说。电影里有很多隐喻，关于科学实验、关于边界、关于人类对神的亵渎。但问题是，片方为了PG-13，把这些隐喻的很多表层细节都剪掉了，剩下的，就只是一部比较平庸的惊悚片。卡特的原版，据他说，有更多恐怖元素，更黑暗的结局，甚至还有一些宗教上的讨论。在电影院版本里，这些都是被删掉的。现在，十八年过去了，卡特终于可以把他真正的作品拿出来了。这不仅仅是还他一个公道，也是给那些看完了电影觉得不对劲的观众一个答案：原来我们当年看到的，不是全部。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(448.4,'sec-0003')"><span>▶</span> 07:28</button><h3 class="section-title">但这件事有意思的地方，不只是“一部电影终于出了导演</h3></div><p>但这件事有意思的地方，不只是“一部电影终于出了导演剪辑版”。它背后牵扯的，是整个《X档案》这个IP，在这么大几十年里的起起落落。《X档案》最早的诞生，是在1993年。那一年，福克斯电视台推出了这部剧，当时谁也没想到，这部剧会成为流行文化的里程碑。穆德和斯卡莉，一个相信外星人，一个相信科学，这样的搭档，在那个年代，非常新鲜。而且，那个年代正好是冷战刚结束，人们对政府的信任降到了最低点。穆德那句“真相就在那里”，简直就是上世纪九十年代那句“大胆地怀疑”的圣歌。这部剧在九十年代火到什么程度呢？它在全球几十个国家播出，粉丝数量庞大，连总统克林顿都在白宫举办过“X档案之夜”。1998年的电影《征服未来》，就是在剧集第五季的时候拍的，票房巨高，全球1.89亿。但后来的事情，不太顺。第一，大卫·杜楚尼在第七季之后离开了一段时间，因为片酬纠纷和创作分歧。第二，第九季，2002年，剧集完结。之后，原班人马各奔东西。但是，这个IP的能量太大了，福克斯一直想重启。终于在2016年，他们推出了《X档案》第十季。当时他们觉得，只要穆德和斯卡莉回来，收视率一定没问题。果然，首集收视率非常高，但后来口碑越来越差，剧情空洞，粉丝不买账。第十一季，2018年，更是让人失望。很多老粉丝说：你们还不如不拍。所以，当2026年，瑞恩·库格勒宣布要重启《X档案》的时候，大家的心情很复杂。库格勒是谁？他拍了《奎迪》，拍了《黑豹》，那是好莱坞最炙手可热的黑人导演之一。他来做重启，意味着什么？意味着换血。他找来了丹妮尔·戴德怀勒，这位演员演过《蒂莉·格雷》和《守望者》，演技有口皆碑。还有希梅什·帕特尔，演过《生活是件怪事》《星际迷航：发现号》。这两个新角色，是两个性格完全不同的FBI特工。你猜怎么着？他们的设定，几乎是穆德和斯卡莉的翻版。一个相信超自然，一个怀疑。但他们不是穆德和斯卡莉，他们是新角色。这意味着，原班人马可能不会回归。大卫·杜楚尼和吉莲·安德森已经公开表示过，他们对重回这个角色不太感兴趣。安德森甚至说，她觉得这个角色已经演到头了。所以，重启版要完全另起炉灶。这就像把《星球大战》重启，却不用卢克和莱娅。很多老粉丝是无法接受的。但现在，迪士尼做出了这个决定：在8月14日，库格勒重启版上线之前，先把卡特十八年前的导演剪辑版放出来。这就像在重启前，给老粉丝一个告别仪式。你可以说，这是迪士尼的公关手段，想让老粉丝们有点念想。也可以说，这是卡特的胜利，他终于等到了这一天。在采访中，卡特说，他忘不了1981年他在《忍者神龟》片场做《X档案》时，福克斯说：“这个题材太小众了。”他用了整整八年才把它变成现实。他说：“我从来没想过要拍一部大制作，我只想拍一部《X档案》电影，讲关于我们这个世界的事。然后，我拍了一部恐怖片。”他觉得，这部2008年的电影，其实是他很多年想法的一次集结。他从小看恐怖片，尤其是那些关于弗兰肯斯坦的老电影。他想，如果弗兰肯斯坦不是实验室里的怪物，而是一个活生生的人，拿着手术刀，他会怎么样？那时候，他的脑海里出现了这个画面：一个医生，在雪夜里，切开一具尸体，想复活一个他已经死去的妻子。这个画面，后来成了电影的核心。他找来了弗兰克·斯波特尼茨，和他一起写剧本。斯波特尼茨是《X档案》的老编剧，写过不少经典集数。他们写了大概七周，剧本就完成了。拍摄过程也很顺利，他们只用了七十多天，就在温哥华和西弗吉尼亚拍完。卡特说，这是他拍过的最快的一部电影，因为预算有限，时间有限，他必须快。但是，到了剪辑阶段，问题来了。福克斯当时的管理层，对这部电影的定位很明确：要卖给更年轻的观众，要想尽一切办法赚回本钱。他们希望这部电影不要超过三亿美元。卡特说，他就按照他们的要求剪了一版，但心里很不舒服。他知道，自己想要的版本，是一个更黑暗、更慢、更压抑的版本。他很清楚，这样的版本只会吸引老的《X档案》粉丝，而那些人，可能已经不再走进电影院了。但他等到了2026年，等来了这个导演剪辑版。这个版本，按照新闻稿的说明，会有更多恐怖元素，更强化了弗兰肯斯坦的隐喻。而且，这个版本的副标题，叫“弗兰肯斯坦医生”。在电影院里，这个副标题是隐晦的，只有在片尾字幕里能看到。但在导演剪辑版里，它被放在了片名里，光明正大。你可能会觉得奇怪，为什么叫“弗兰肯斯坦医生”？因为导演卡特说，这部电影，其实是一个现代寓言，讲的是那些自以为是科学家的人，如何越过人类道德的边界。那个反派，就觉得自己是弗兰肯斯坦，想要创造生命。但是，他创造的是什么呢？是死亡。这个版本的英文标题里，还有个词是“Vrach Frankenshteyn”。这个词，在俄语里就是“弗拉基米尔·弗兰肯斯坦”的意思。可能是一个伏笔，也可能是一个噱头。但无论如何，这个版本，终于可以让我们看到，卡特心里那部真正的《X档案》电影长什么样了。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(672.6,'sec-0004')"><span>▶</span> 11:12</button><h3 class="section-title">那么，这部导演剪辑版，到底能不能改变人们对这部电影</h3></div><p>那么，这部导演剪辑版，到底能不能改变人们对这部电影的看法？很多人对此持观望态度。因为，即使是导演剪辑版，也无法改变故事的基本结构。穆德和斯卡莉在片中的戏份，实际上很有限。大卫·杜楚尼在拍摄期间，因为一些原因，只在片场待了二十多天。吉莲·安德森也是如此。他们俩的对手戏，比电视剧里少得多。这也是为什么，原来的电影版让人觉得有些“空洞”，因为主角的存在感被削弱了。卡特解释说，这是因为拍电影的时候，两个主演的档期都很紧张，他没有办法让他们像电视剧那样互动。但他觉得，这样反而让电影有了另一层味道：“这两个人，他们已经分开了很多年，他们之间有一种距离感。”在电影里，他们之间的那种疏离，反而更真实。而导演剪辑版，可能会增加更多的对话，更多的眼神交流，让观众更好地感受到这种距离。而且，卡特说，他恢复了一些被删掉的关键镜头，其中有一个是穆德在雪地里，发现了一具被冰封的尸体，他揭开那层冰，看到一张他熟悉的面孔。这个镜头，在原版里只有一瞬间，但在导演剪辑版里，会有完整的特写。他说，这个镜头，是他整部电影里最喜欢的一个。因为那个面孔，暗示着穆德的过去，也暗示着X档案的核心——那些被埋没的真相。随着这个导演剪辑版的发布，卡特也透露，他还有一些关于《X档案》未来的想法。但是，这些想法，可能只能通过重启版来实现了。毕竟，他不再是这个IP的掌舵人了。瑞恩·库格勒的重启版，会是全新的故事，全新的角色。但这并不意味着，老角色不会出现。好莱坞的故事，有时候，兜兜转转，又回到原点。就像《X档案》的主角穆德，他一直在寻找真相，哪怕真相很残酷。而这个导演剪辑版，就像是那个被藏起来的真相，它在某个仓库里躺了十八年，终于重见天日。也许，这就是《X档案》教给我们的：真相也许会被压制，但不会被永远隐藏。那个藏起来的导演剪辑版，等了十八年，才等到它的观众。而那个重启版，也正在等待它的时机。只是不知道，这一次，等待它的，会是什么样的命运。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">2008年7月25日，北美影院上映了一部</span></div>
+<div class="tl-item" onclick="seek(224.2,'sec-0002')"><span class="tl-time">03:44</span><span class="tl-title">先说说这部电影的故事吧。2008年，距离</span></div>
+<div class="tl-item" onclick="seek(448.4,'sec-0003')"><span class="tl-time">07:28</span><span class="tl-title">但这件事有意思的地方，不只是“一部电影终</span></div>
+<div class="tl-item" onclick="seek(672.6,'sec-0004')"><span class="tl-time">11:12</span><span class="tl-title">那么，这部导演剪辑版，到底能不能改变人们</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260811064519" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
