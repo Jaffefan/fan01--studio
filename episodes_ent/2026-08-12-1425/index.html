@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>巨型充气老鼠：贝塞斯达开发者对抗微软裁员的另类抗议 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 102 夜 / 2026-08-12</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 贝塞斯达</div>
+    <h1 class="ep-title">巨型充气老鼠：贝塞斯达开<span class="hl">发者对抗微软裁员的另类抗议</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:40</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260812062610" alt=""></div></div>
+<div class="section" id="sec-0001"><p>想象一下，你走进办公室，发现门口站着一只巨大的充气老鼠，它浑身通红，牙齿尖尖的，还有一双诡异的眼睛。这不是万圣节的恶作剧，而是贝塞斯达开发者为迎接微软高层准备的特别礼物。这只老鼠有个名字，叫Scabby，是工会抗议的标志性象征。开发者们把它吹起来，放在马里兰州的洛克维尔办公室外，以此抗议微软的数轮裁员。自2025年7月以来，已有1600人失业，而到今年年底，还会有另外1600人离开。这不是一场无声的抗议，而是一次精心策划的、带着讽刺意味的示威。</p><p>要把这件事讲透，我得从头说起。贝塞斯达游戏工作室的工会，名为OneBGS-CWA，是一个由开发者组成的联合组织。他们在办公室外插了800面红旗，每一面旗代表一个自2025年7月被裁掉的员工。这些旗子不仅是数字的具象化，更是一种提醒：管理团队裁掉了我们的同事，我们的朋友。技术制作人内森·哈恩在给Kotaku的声明中说，每面旗都是对管理层的公开提醒。而在办公室内部，员工们在隔间外贴上标语，管理层要求他们取下，他们就换成气球。他们听说微软领导层要来视察，就决定要让自己的存在感变得显而易见。这不是冲动之举，而是经过深思的、有组织的行动。</p><p>事情的全貌是这样的。上个月，Xbox宣布将裁员约3200人，作为其所谓的‘大重置’的一部分，目的是让公司恢复盈利。CEO阿莎·夏尔马称，这一举措将让Xbox重回正轨。但裁员的影响远比数字要深远。曾经隶属于Xbox的工作室，如Double Fine和Compulsion Games，已经被剥离，重新独立，但也在裁员潮中遭受重创。忍者理论、不死实验室和阿尔坎·里昂的未来不明，有消息称它们可能被收购。裁员造成了无尽的混乱，而开发者们决定反击。下个月8月18日，Xbox员工将与传播工作者美国通信工人协会合作，在美国和加拿大举行集会，抗议裁员，并要求合同包含裁员保护条款。哈恩说，他们正在动员反击，不是为了自己，而是为了提醒公司和所有游戏工作室，这种裁员不能再继续下去。</p><p>但这只巨鼠并非凭空出现。它的历史可以追溯到19世纪末的工会运动。充气老鼠，或当时称为‘充气猪’，最初是工会用来嘲笑罢工破坏者的。想象一下，在罢工期间，工会在罢工者家中或工厂外放一个巨大的充气猪，用以羞辱那些穿越纠察线的人。这个传统在20世纪中期逐渐消失，但在1980年代，它以一种新的形式回归。当时，劳工组织开始使用充气老鼠来抗议工作场所的不公平待遇。这只老鼠通常有六七米高，面带獠牙，眼神凶狠，专为吸引注意力而设。它成了工会的吉祥物，也是企业最怕看到的东西。在很多情况下，光是看到这只老鼠，就能让企业主感到压力，因为它预示着负面舆论和公众关注。</p><p>游戏行业的工会化进程，正是从这种传统中汲取力量。长期以来，游戏开发者被视为加班和剥削的重灾区。从‘电子游戏行业是青春行业’的神话，到‘以爱为工作’的借口，开发者们一直缺乏组织起来的力量。但2018年，当Riot Games的员工因性别歧视提起诉讼，随后在2020年成立了第一个大型游戏工会时，这个行业开始出现变化。贝塞斯达的工会成立于2022年，是微软旗下第一个工会，但也并非最知名的那一个。2021年，动视暴雪的员工们开始组织起来，指控公司文化有毒。这些事件推动了</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(153.5,'sec-0002')"><span>▶</span> 02:33</button><h3 class="section-title">游戏行业的工会化浪潮</h3></div><p>游戏行业的工会化浪潮</p></div>
+<div class="section" id="sec-0003"><p>。然而，工会的增长并没有阻止裁员的发生。事实上，这次裁员的规模是空前的。微软在2024年已裁员1900人，而今年的3200人更是雪上加霜。这让人不禁想问：工会的存在，是否真的能改变什么？</p><p>在这个具体事件中，充气老鼠的象征意义超越了单纯的抗议。它代表了工会长久以来的精神：团结、不屈，以及用戏谑对抗权力。对贝塞斯达的开发者来说，这只老鼠是他们表达愤怒和沮丧的媒介。当微软高层周三到访时，他们看到的不仅是老鼠，还有旗子、气球，以及那些不愿沉默的员工。这是一场视觉上的对话，也是一次力量的展示。</p><p>人们对此反应不一。有些开发者表示支持，认为这是必要的反击，是对那些被裁员者的尊重。另一些人则认为，这可能会加剧管理层与员工的对立，使谈判变得更加困难。但哈恩和他的同事们似乎不在乎这些分歧，他们更关心的是让公司听到他们的声音。在一次采访中，哈恩说：‘我们只是想让公司知道，这些裁员不仅伤害了员工，也伤害了游戏本身。当有经验的开发者离开时，我们的游戏质量也会受到影响。’</p><p>这种观点并不孤立。id Software的资深开发者克里斯·海斯评论说，在裁员后，制作《毁灭战士：黑暗纪元》这样的大型游戏变得几乎不可能，因为整个部门都被掏空了。他还抨击微软不理解艺术，认为裁员是在摧毁创作潜能。贝塞斯达的工会在他们的声明中强调，他们不是反对公司，而是希望公司能更负起责任，给员工一个稳定的未来。</p><p>这件事的后续可能有很多种。也许微软会以某种方式回应，也许谈判会有所进展，也许这只会成为又一场失败的抵抗。但无论结果如何，这只充气老鼠已经成了一个标志，一个象征着游戏行业工人们开始为自己发声的标志。它提醒我们，即使在追求利润的企业世界里，人的价值和尊严仍然值得被捍卫。它的结局，可能就像所有工会运动一样，漫长而艰难。但至少在这一刻，有些人选择不沉默。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(153.5,'sec-0002')"><span class="tl-time">02:33</span><span class="tl-title">游戏行业的工会化浪潮</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260812062610" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
