@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>甄子丹入局《影之刃零》：功夫电影与游戏的双向奔赴 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 101 夜 / 2026-08-12</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 影之刃零</div>
+    <h1 class="ep-title">甄子丹入局《影之刃零》：<span class="hl">功夫电影与游戏的双向奔赴</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:10</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260812045950" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">所以这次想往前多走一步。梁其伟说，甄子丹本人也很懂</h3></div><p>你好，我是伊恩。今天上午，《影之刃零》突然放出了一支11分钟的实机预告，信息量爆炸。但最让我意外的，不是新Boss，不是新场景，而是预告片最后那个面具男——居然是甄子丹。而且他不只是露个脸，还亲自参与了动作捕捉。这事儿，我得好好跟你聊聊。</p><p>先说这支预告片本身。11分钟，全是实机画面，没有CG充数。新Boss、新场景、新角色，一个接一个往外抛。最抓眼球的，就是甄子丹饰演的那个面具男。动作干净利落，出招不带半点犹豫，和主角近身交手时，攻防转换快到让人喘不过气。那种拳拳到肉的感觉，一看就知道是懂行的。后来制作人梁其伟确认，甄子丹不仅参与了面部扫描和动作捕捉，还亲自设计了角色的大部分武打动作，连台词、表情都是他本人提出的建议。这哪是简单的代言？这是把整个人都揉进了游戏里。</p><p>但你知道吗？这次合作背后，藏着一个更大的故事。梁其伟在交流会上提到一个词——“融合”。他说，好莱坞那边，游戏和电影工业早就深度绑定了，基努·里维斯演《赛博朋克2077》，小岛秀夫找电影演员合作，那都不是明星站台，而是创作层面的互相渗透。而在国内，过去最常见的合作方式是什么？代言、拍广告、游戏里露个脸，没了。明星和游戏之间，隔着一条生产线。</p><p>所以这次想往前多走一步。梁其伟说，甄子丹本人也很懂这种合作模式。他和基努·里维斯是朋友，20多年前就给《鬼武者》做过动作指导，对游戏并不陌生。更重要的是，两人对武术文化有共同的执念——想把中国功夫用新的方式推向世界。梁其伟说，甄子丹聊起这个话题时，偶尔会露出遗憾的表情。他觉得，功夫能成为国际流行的视听语言，是他们那一代电影人一脚一拳打出来的，现在还想做得更多、更好，想留下更多东西。而数字技术恰好提供了新的可能——动作捕捉、数字形象，可以把这些武术精髓保存下来，甚至做出过去没法实现的尝试。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(143.5,'sec-0002')"><span>▶</span> 02:23</button><h3 class="section-title">回到这场合作本身。梁其伟说，他们和甄子丹的沟通从今</h3></div><p>于是就有了这次合作。甄子丹的“甄家班”也深度参与了项目，和游戏自己的动捕团队碰撞出不少火花。梁其伟说，他们合作的其实不是甄子丹一个人，而是他背后那整套功夫电影工业——那些积累了四五十年的经验，如今被一点点移植到游戏里。</p><p>如果你熟悉《影之刃》系列，就会知道这不是梁其伟第一次做“跨界”的事。十年前，《雨血》系列就在探索一种独特的武侠风格，后来变成《影之刃》，加入了更阴冷、更机器的元素。这次《影之刃零》甚至造了一个新词——“功夫朋克”。美术总监Michael Chang说，他们在设计时做了大量考据，比如舞狮，基础结构依然遵循传统，但会加入新的表达；武器也一样，青龙偃月刀的形制来自真实器物，再按自己的设计语言重新演绎。最难的，是掌握那个度——既要让玩家感到熟悉，又要有全新的视觉冲击。</p><p>音乐也是这个路子。音乐总监薄彩生说，他在“大师兄”那场战斗里用了二胡，但那是十轨二胡叠在一起，加了失真和吉他效果，左右声道分开播。听起来是传统的，但感觉完全是新的。另一场戏里，琵琶可以很温柔，也可以很狂暴，全看情绪怎么带。他会尝试Trap、Drill、Techno，甚至Dubstep，可能一首现代电子乐里突然冒出一段琵琶。他说，希望做出玩家“既熟悉、又从来没听过”的东西。</p><p>回到这场合作本身。梁其伟说，他们和甄子丹的沟通从今年上半年就开始了，那时候丹哥还在拍《凯恩传》，两人只能靠线上会议聊。从动作设计到角色表演，甄子丹事无巨细地参与。尤其在塑造面具男这个角色时，他对台词和表情提了很多意见——他觉得这个角色应该有更复杂的内心，所以打斗时的表情不能只是狠，还要有无奈和挣扎。梁其伟说，丹哥是在用拍电影的标准来抠这个角色的。</p></div>
+<div class="section" id="sec-0003"><p>这样一来，玩家就面临一个问题：面具男到底是谁？他是主角的敌人，还是镜像？预告片里那场战斗，背景音乐平静得反常，薄彩生说，那是一场悲剧，旋律要把情绪推到更深的地方。琵琶、二胡、电子乐，全都在为这个悲剧服务。</p><p>不过，《影之刃零》的野心不止于此。梁其伟希望这次合作能起到一个示范作用。国内有越来越好的单机游戏，也有越来越丰富的影视资源，如果两者能深度结合呢？动作捕捉、数字演员、电影工业的叙事逻辑，能不能从这里开始，走出一种新的可能？他说，他和甄子丹的共同期待，是让功夫文化找到一条新的出路——不只是怀旧，而是被重新激活。</p><p>那么接下来会发生什么？有人说，这可能会改变国内游戏和电影合作的模式。也有人担心，明星加入会不会喧宾夺主，让游戏变成粉丝片。还有人在等一个确切的发售日。但不管怎样，这支预告片已经证明了一点：当电影人和游戏人真正坐在一起，而不是隔着屏幕喊话，有些东西就会不一样。</p><p>至于面具男和主角的故事，还得等游戏自己来讲。我只知道，在那场悲剧性的战斗里，刀光剑影之间，藏着两种人对功夫的执念。一个来自电影，一个来自游戏，如今在同一个画面里，撞出了火花。这可能是这个夏天，最让我想继续看下去的事。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">所以这次想往前多走一步。梁其伟说，甄子丹</span></div>
+<div class="tl-item" onclick="seek(143.5,'sec-0002')"><span class="tl-time">02:23</span><span class="tl-title">回到这场合作本身。梁其伟说，他们和甄子丹</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260812045950" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
