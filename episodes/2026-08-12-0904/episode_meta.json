@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-12-0904",
+  "title": "AI 攻克数学难题，数学家既兴奋又担忧",
+  "published_at": "2026-08-12 09:04",
+  "duration_seconds": 526.73,
+  "duration_label": "8分46秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Runway 视频生成新高度：50 角色同框",
+      "golden_quote": "AI 视频不只能拍短片，它开始拍电影了。",
+      "keywords": [
+        "Runway",
+        "AI 视频",
+        "角色参考"
+      ],
+      "source": "X：Runway"
+    },
+    {
+      "title": "Gemini 月活破 10 亿，史上最快",
+      "golden_quote": "谷歌第 14 个十亿用户产品，这次是 AI 的胜利。",
+      "keywords": [
+        "Gemini",
+        "10亿用户",
+        "谷歌"
+      ],
+      "source": "X：Sundar Pichai"
+    },
+    {
+      "title": "OpenAI 攻克 10 道数学难题",
+      "golden_quote": "数学家不再解题，而是验证 AI 的答案。",
+      "keywords": [
+        "OpenAI",
+        "数学难题",
+        "Astra"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "ChatGPT 和 Gemini 双双破亿",
+      "golden_quote": "10 亿用户竞赛结束，变现竞赛开始。",
+      "keywords": [
+        "ChatGPT",
+        "Gemini",
+        "10亿用户"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "Anthropic 逼近黎曼猜想",
+      "golden_quote": "AI 团队里，也是 2 个天才，30 个干活的。",
+      "keywords": [
+        "Anthropic",
+        "黎曼猜想",
+        "AI 数学"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
