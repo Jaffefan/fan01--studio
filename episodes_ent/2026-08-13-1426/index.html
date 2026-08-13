@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当老板想用AI替换你时，他说了什么？ - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 104 夜 / 2026-08-13</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Saber Interactive</div>
+    <h1 class="ep-title">当老板想用AI替换<span class="hl">你时，他说了什么？</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:01</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260813062743" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">Saber的反应来得很快。他们先是发声明给PC G</h3></div><p>就在两周前，一款名叫“Rideshare Stimulator”的游戏发布了预告片，名字听起来就像是对网约车司机生活的一种讽刺模拟。但大多数人真正注意到它，是因为它的前首席编剧指控发行商Saber Interactive在开发中途用ChatGPT替换了她。Saber否认了，但CEO马修·卡奇（Matthew Karch）自己却跑出来说，“老实说，如果重来一次，我很乐意用AI替换她。”这话一出，就像在游戏圈扔了一颗炸弹。</p><p>事情得从头讲起。这位前编剧叫斯黛拉·萨科（Stella Sacco），她曾在Saber Interactive待过几年，参与过《特技人好莱坞》（Stuntman Hollywood）等游戏的叙事设计，直到2024年离开。上周，她在社交平台上爆料，说Saber在《Rideshare Stimulator》开发中途，把她换成了生成式AI，而且没在Steam页面上披露用了这技术。她还强调，决定用AI的是发行商Saber，而不是开发商Unigine。</p><p>Saber的反应来得很快。他们先是发声明给PC Gamer，说“无论是Saber还是Unigine，都没有在任何游戏里用AI替换过编剧，包括Rideshare。”但他们也承认，AI确实用在了游戏一个没公开的模式上。官方说，那是个“实验性的自由驾驶模式”，因为乘客数量无限，所以“必然要整合AI”。听起来像是个技术上的必要之举，但萨科不买账。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(108.4,'sec-0002')"><span>▶</span> 01:48</button><h3 class="section-title">现在，Steam上的《Rideshare Stim</h3></div><p>她直接怼了回去：“我当时就在那儿，写游戏是我的工作，但后来不是了，因为马特·卡奇决定用ChatGPT能给游戏带来好宣传。”她还补充说，她的上司其实一直在为她说话，但高层坚持“玩家爱新技术”，所以用AI会“很棒的市场营销”。接着，卡奇本人亲自下场回应了。</p><p>他在给行业媒体This Week In Video Games的一份声明里，先是玩了个梗：“斯黛拉是谁？我得问克劳德（Claude），因为我从没跟她说过话，也没见过她。”然后他说，游戏“某些部分”确实用了AI，但Steam页面会更新披露。接着，他话锋一转，说“我们一直打算公开，直到斯黛拉违反了保密协议，抢先曝光。”他还把萨科贬了一顿：“至于斯黛拉，她一开始就缺乏天赋，所以我换了更优秀的人。几个月后，她因为各种原因被解雇了。据我所知，她比我更喜欢争议。老实说，如果重来，我很乐意用AI替换她。至少那样，我们面对的是一个被编程说真话的人。”</p><p>这话一出，萨科当然不干了。她在推特上回应说，卡奇“疯了”，那些话是“拼命掩饰游戏里AI使用的真实程度”。她说：“我说的每句话都是真的。这份声明对任何公司的CEO来说都太可悲了，再加上用AI，这对Saber声誉的伤害远超过对我个人的。很多人第一次知道Saber这个品牌，就是因为这份咆哮。”</p><p>现在，Steam上的《Rideshare Stimulator》页面评论区已经吵翻了天。玩家们在争论游戏使用AI是否道德，以及Saber最初隐瞒这件事是否合适。Valve的规则是让开发商自己决定是否披露AI使用情况，而Saber选择了隐瞒。结果，这场风波让游戏在发售前就背上了“偷偷用AI还攻击吹哨人”的标签。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(216.7,'sec-0003')"><span>▶</span> 03:36</button><h3 class="section-title">比如，2023年，微软宣布和Inworld AI合</h3></div><p>但这不仅仅是Saber的问题。这个事件背后，是整个游戏行业，乃至创意产业，正面临的AI焦虑。从编剧、画师到配音演员，越来越多的人担心自己的饭碗会被AI抢走。而像Saber这样，把AI当作营销噱头，又试图掩盖的行为，只会加剧这种不信任。</p><p>其实，游戏行业和AI的纠葛，可以追溯到几十年前。上世纪八九十年代，游戏里就有“程序化生成”内容，比如《波斯王子》里的随机关卡，那时是为了节省存储空间。后来，AI更多用于非玩家角色（NPC）的决策，比如《模拟人生》里的角色行为。但那时，AI只是工具，不会替代人类创意。到了2010年代，随着深度学习的发展，AI开始能生成图像、音乐，甚至文本。2016年，谷歌的DeepMind用AI玩《星际争霸》，展示了AI也能打游戏。但真正引发恐慌的，是2022年ChatGPT的发布。它让普通人也能用AI写文章、写代码，游戏公司开始尝试用它做文本、对话，甚至剧情。</p><p>比如，2023年，微软宣布和Inworld AI合作，为Xbox开发者提供AI工具，用来生成对话和故事。育碧也测试了AI工具Ghostwriter，帮编剧生成NPC的闲聊。这些公司头头们说，AI能提高效率，让开发者更专注于创意。但基层的编剧和美术师却忧心忡忡，担心自己成为被AI替换的那一个。2024年美国编剧工会（WGA）罢工，就是反对制片厂用AI替代人类编剧。游戏行业虽然没有大罢工，但不少从业者也在私下抱怨。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(325.1,'sec-0004')"><span>▶</span> 05:25</button><h3 class="section-title">而莎翁的那句“诚实是最好的策略”，在这里显得格外讽</h3></div><p>萨科的遭遇，就像是一根导火索。她代表着许多创意工作者，在AI浪潮下的无助和愤怒。而卡奇的回应，恰恰证明了AI伦理的缺失：高管们只看到成本和效率，却没考虑人的价值和尊严。他甚至用“程序员编程说真话”来讽刺人类，这种傲慢，很难让人相信他会负责任地使用AI。</p><p>这让我想到另一个案例。2023年，CD Projekt Red（《巫师》系列的开发商）曾用AI为《赛博朋克2077》的已故配音演员配音，引发巨大争议。他们后来道歉了，表示会在家属同意下才用。相比之下，Saber的做法更是火上浇油。</p><p>回到《Rideshare Stimulator》。这款游戏本身是个讽刺作品，讲述网约车司机的艰难。但它自己，却成了AI替代人类的活生生例证。萨科说，游戏里有很多她写的对话，但被AI生成的内容替换了。玩家可能会在游戏里遇到一些奇怪的、不合逻辑的对话，不知道是AI的锅。而卡奇却说，这是为了让游戏更适合低价市场。</p><p>未来会怎样呢？可能的发展方向有好几个。一是Saber会迫于压力，在Steam页面加上AI披露，并完善游戏的AI内容。二是更多行业内幕会曝光，类似萨科的吹哨人会越来越多。三是玩家可能会抵制用AI不当的游戏，倒逼行业形成自律标准。已经有些平台，比如itch.io，要求开发者标明AI内容。Steam和Epic Games Store也可能跟进，制定更明确的规则。</p><p>而莎翁的那句“诚实是最好的策略”，在这里显得格外讽刺。Saber最初隐瞒AI，可能是觉得玩家会对AI反感，影响销量。但他们的CEO毫无诚意的回应，反而让大家更抵制这款游戏。萨科说，这个事件会损害Saber的声誉，也许吧。但更重要的是，它让我们思考：在AI时代，什么是不可替代的？是创意？是情感？还是仅仅是我们作为人类的尊严？</p></div>
+<div class="section" id="sec-0005"><p>我不知道答案。但我知道，下次当你打开一款游戏，看到那些充满灵性的对话，或许会想，这些话语背后，有没有一个像斯黛拉·萨科那样的人？她的名字，可能不会出现在制作名单里，但她的痕迹，依然在那里。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">Saber的反应来得很快。他们先是发声明</span></div>
+<div class="tl-item" onclick="seek(108.4,'sec-0002')"><span class="tl-time">01:48</span><span class="tl-title">现在，Steam上的《Rideshare</span></div>
+<div class="tl-item" onclick="seek(216.7,'sec-0003')"><span class="tl-time">03:36</span><span class="tl-title">比如，2023年，微软宣布和Inworl</span></div>
+<div class="tl-item" onclick="seek(325.1,'sec-0004')"><span class="tl-time">05:25</span><span class="tl-title">而莎翁的那句“诚实是最好的策略”，在这里</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260813062743" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
