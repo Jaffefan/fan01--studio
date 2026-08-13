@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-13-0904",
+  "title": "5条AI猛料：微软首秀推理模型，阿里开源2.4T巨兽，AI视频快到离谱",
+  "published_at": "2026-08-13 09:04",
+  "duration_seconds": 646.97,
+  "duration_label": "10分46秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Grok 4.6 发布，长时运行智能体",
+      "golden_quote": "Grok 4.6 学会了自我检查，智能体要进化了。",
+      "keywords": [
+        "Grok 4.6",
+        "长时运行智能体",
+        "xAI"
+      ],
+      "source": "xAI News"
+    },
+    {
+      "title": "阿里开源2.4T MoE 模型，参数惊人",
+      "golden_quote": "万亿参数开源，AI 的平民化又进了一步。",
+      "keywords": [
+        "Qwen3.8",
+        "开源模型",
+        "MoE"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "LTX-2.5 视频生成快如闪电",
+      "golden_quote": "AI 视频生成进入秒级时代，成本也跌进脚底板。",
+      "keywords": [
+        "LTX-2.5",
+        "AI视频生成",
+        "ComfyUI"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "微软首秀自研推理模型 MAI-Thinking-1",
+      "golden_quote": "微软的野心：不依赖任何一家，自立门户。",
+      "keywords": [
+        "微软",
+        "MAI-Thinking-1",
+        "推理模型"
+      ],
+      "source": "X / Mustafa Suleyman"
+    },
+    {
+      "title": "Research Gold 号称人类撰写，全程 AI",
+      "golden_quote": "AI 最大的罪过，不是取代人，而是假装成人。",
+      "keywords": [
+        "AI造假",
+        "学术诚信",
+        "Research Gold"
+      ],
+      "source": "404 Media"
+    }
+  ]
+}
