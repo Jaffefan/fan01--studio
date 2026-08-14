@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Netflix 为何关掉刚推出爆款的工作室？ - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 106 夜 / 2026-08-14</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Netflix</div>
+    <h1 class="ep-title">Netflix 为何关<span class="hl">掉刚推出爆款的工作室？</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:18</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260814062644" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">而就在游戏上线六周后，Netflix 突然宣布关闭</h3></div><p>你好，我是伊恩。今天想跟你聊一件挺魔幻的事：Netflix 刚刚关掉了一家游戏工作室，而这工作室六周前才推出了一款被玩家和媒体捧上天的游戏。这逻辑听起来是不是有点反常识？但我们先把故事从头讲起。</p><p>这家被关掉的工作室叫 Night School，在洛杉矶，最出名的作品是《Oxenfree》和《Oxenfree 2》，侧滚轴的心理惊悚游戏，画风诡异，故事像雾一样笼罩着你。Night School 在独立游戏圈里口碑一直不错，玩家群体虽然不大，但特别铁。而就在今年6月30日，他们刚刚上线了一款叫《Unhinged》的游戏，第一人称、叙事驱动、恐怖类型，还是跟《武器》的导演 Zach Cregger 合作的。演员阵容包括《怪奇物语》的 Sadie Sink 和《大小谎言》的 Zoë Kravitz，这架势在游戏圈里也算有点星光了。媒体评价它是“有趣又吓人的选择你自己的冒险”，在当下的游戏环境里，确实独树一帜。</p><p>而就在游戏上线六周后，Netflix 突然宣布关闭 Night School，连带着还有芬兰赫尔辛基的 Moonloot 工作室。Moonloot 还没发布过任何作品，但在开发一个未公开的模拟人生类项目。这消息一出来，业界哗然——尤其是那些在《Unhinged》上倾注心血的开发者。一位前 Night School 员工在 LinkedIn 上写道：“尽管我执导了《Unhinged》，并在六周前把它交给数百万兴奋且满意的玩家，看来我又要重新找工作了（还有 Night School 的其他同事们）！我为我们的成就感到骄傲，数百万人也认可我们做了一款好产品！向前看，期待下一件激动人心的事！”你看，这话里多少有点无奈和苦笑。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(111.7,'sec-0002')"><span>▶</span> 01:51</button><h3 class="section-title">但这里最让人觉得蹊跷的是时间点。Netflix 的</h3></div><p>Netflix 的回应倒是官方得很：一位发言人对 GameFile 说，“我们看到了一个更专注于执行的机会，所以我们正在对业务进行组织调整，以匹配这些优先事项。我们非常感谢今天要告别的有才华的同事，感谢他们对 Netflix 的所有贡献，祝他们好运。游戏仍然是我们在 Netflix 上扩展娱乐多样性的机会。”一句话，关掉，但游戏还是要做。</p><p>其实，这不是 Netflix 第一次干这种事了。2022年他们成立了 Team Blue 工作室，结果2024年关了，没发布任何游戏。同年他们收购了 Boss Fight Entertainment，2025年也关了，期间倒是发布了几款游戏，但当时 Netflix 把这次关闭描述为“在少数确定的垂直领域的更少但更精的策略”的一部分。所以你看，这几乎成了一种模式：开工作室，做游戏，然后关掉，说是战略调整。</p><p>但这里最让人觉得蹊跷的是时间点。Netflix 的共同 CEO Greg Peters 在2026年7月的投资者电话会议上，还专门提到《Unhinged》，说它是“我们最成功的云游戏首发之一”，取得了“非常扎实的数据，使其在我们的游戏表现中处于顶级水平”。他甚至说：“我们在探索这个空间的总潜力方面，还只是触及皮毛。你会看到我们继续校准和调整我们的投资水平，相对于我们的总体内容支出，这仍然非常小，基于验证过的表现，基于什么对会员有效，什么能为业务带来回报。”听着很官方，对吧？但问题来了：既然这么成功，为什么还要关掉工作室？</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(223.3,'sec-0003')"><span>▶</span> 03:43</button><h3 class="section-title">再往前看，其实移动游戏领域早有先例。比如苹果 Ar</h3></div><p>我们来追溯一下 Netflix 做游戏的历史。2016年，Netflix 开始尝试互动内容，比如《黑镜：潘达斯奈基》，那是一个让你做选择来决定剧情的电影。到了2021年，他们正式宣布进军游戏，先是做手机游戏，然后在2022年成立了内部工作室，同时也收购了几家。他们的思路是，游戏不是独立的业务，而是增强订阅会员价值的一个手段。就像他们说的，游戏是“Netflix 会员的另一种娱乐方式”。这个定位从一开始就决定了游戏不是独立的业务，而是增强订阅会员价值的一个手段。就像他们说的，游戏是“Netflix 会员的另一种娱乐方式”。这个定位从一开始就决定了游戏不是独立的业务，而是增强订阅会员价值的一个手段。</p><p>但问题也随之而来。游戏开发和影视制作，虽然都是内容创作，但基因完全不同。影视是一个相对线性的过程，而游戏充满了迭代和不确定性。Night School 这种叙事驱动的游戏，其实很接近影视，但它们的玩家群体是核心玩家，而不是大众订阅者。Netflix 更希望游戏能吸引那些原本不看游戏的人，但像《Oxenfree》系列这种风格，可能更适合小众精品市场。</p><p>再往前看，其实移动游戏领域早有先例。比如苹果 Arcade 推出时，也签了很多精品游戏，但也陆续关闭了一些项目。游戏行业的波动性太大，很多大厂都在“投资-关停”之间摇摆。迪士尼也曾有自己的游戏工作室，但最后都转向了授权经营。Netflix 想学的是亚马逊，亚马逊也做过游戏，也关过工作室，但他们的游戏部门还在摸索。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(335.0,'sec-0004')"><span>▶</span> 05:35</button><h3 class="section-title">有人会说，游戏行业就是这样，作品成功并不代表商业成</h3></div><p>更关键的是，云游戏这个赛道。Netflix 的技术基础是云游戏，也就是让玩家无需下载，直接串流。他们并没有说放弃云游戏，而是说“更专注地执行”。这意味着可能他们不再自己研发大型游戏，而是转向更轻量级的游戏，或者外包合作。这其实是一个商业逻辑的调整，而不是游戏品质的问题。</p><p>你看，Netflix 在游戏领域的投资相对于它总体的内容支出，其实微不足道。他们每年在影视内容上花掉上百亿，而游戏可能只是零头。所以游戏部门很容易被当成试验田，一旦觉得效率不高，就切割。而《Unhinged》的“成功”，可能在他们看来，并没有带来足够多的订阅拉动，或者没有达到预期的用户增长。</p><p>不过，还有另一种解读。有分析师认为，Netflix 可能在准备一种更集中式的游戏服务模式，就像他们的影视一样，推出一个“Netflix Games”的标准界面，所有游戏都统一体验，不再依赖内部工作室。这样更可控，成本也更低。而 Night School 这种独立工作室，开发周期长，成本高，可能与这种模式不兼容。</p><p>前员工的话里也透露出一种无奈。他们做出了被市场认可的作品，但还是逃不过被裁的命运。这背后是资本的无情，还是战略的短视？不同的人有不同的看法。</p><p>有人会说，游戏行业就是这样，作品成功并不代表商业成功，很多叫好不叫座的游戏背后往往有牺牲。也有人会说，Netflix 的“数据驱动”可能忽略了游戏的艺术价值，只看订阅转化。还有观点认为，Netflix 正在为自己的游戏平台“Netflix Games”铺路，将来可能只发布第三方游戏，不做第一方内容。</p></div>
+<div class="section" id="sec-0005"><p>但无论如何，玩家们失去了一个有趣的工作室。也许未来我们还会看到《Unhinged》系列的影子，但那也可能成为绝唱。就像我们失去很多经典游戏工作室一样，行业里总有人来，也总有人走。我唯一确定的是，下一个游戏项目，不知道会在哪里，由谁来做。但这就是游戏行业，永远在变动中前行。</p><p>今天的故事就到这里。我不打算给这个故事定一个结论，因为不同立场的人会有不同的解释。你可以觉得 Netflix 冷酷无情，也可以觉得它是商业规则使然，甚至你可以认为这只是一个更大的布局中的一步。你心里怎么想，都行。我只是把一个事件的全貌和它背后的脉络讲给你听，剩下的，你自己去品。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">而就在游戏上线六周后，Netflix 突</span></div>
+<div class="tl-item" onclick="seek(111.7,'sec-0002')"><span class="tl-time">01:51</span><span class="tl-title">但这里最让人觉得蹊跷的是时间点。Netf</span></div>
+<div class="tl-item" onclick="seek(223.3,'sec-0003')"><span class="tl-time">03:43</span><span class="tl-title">再往前看，其实移动游戏领域早有先例。比如</span></div>
+<div class="tl-item" onclick="seek(335.0,'sec-0004')"><span class="tl-time">05:35</span><span class="tl-title">有人会说，游戏行业就是这样，作品成功并不</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260814062644" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
