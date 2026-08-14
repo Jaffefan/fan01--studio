@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Netflix关停游戏工作室，员工发声：我们刚成功却被抛弃 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 105 夜 / 2026-08-14</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Netflix</div>
+    <h1 class="ep-title">Netflix关停游戏工作室<span class="hl">，员工发声：我们刚成功却被抛弃</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:55</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260814050141" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">想象一下，你是一个游戏开发者，你所在的团队刚刚发布</h3></div><p>想象一下，你是一个游戏开发者，你所在的团队刚刚发布了一款备受好评的游戏，数百万玩家涌入，评测分数亮眼，公司老板都在投资者面前夸你们是‘顶级表现’。然后，六周之后，你收到一封邮件：工作室关闭，你被裁员了。这不是虚构的剧情，而是Netflix旗下游戏工作室Night School的真实遭遇。就在几天前，Netflix宣布关闭位于洛杉矶的Night School工作室，以及芬兰赫尔辛基的Moonloot工作室。而Night School就在六周前刚刚发布了他们的新作《Unhinged》，一款第一人称叙事恐怖游戏，由《武器》导演扎克·克雷格合作打造，请来了《怪奇物语》的萨迪·辛克和《蝙蝠侠》的佐伊·克拉维茨配音。IGN的评测称它为‘有趣又吓人的选择你自己的冒险’，玩家社区也是一片好评。但这一切都没能保住工作室。一位前员工在LinkedIn上写道：‘尽管我执导了Unhinged并六周前将它交付给数百万兴奋、满意的玩家，但看起来我又要失业了（和Night School工作室的其他人一样）……我为我们的成就感到骄傲，数百万人同意我们做出了一个很棒的产品！期待下一件激动人心的事！’语气里带着无奈和讽刺。Netflix发言人则回应说：‘我们看到了更专注执行的机会，因此正在对业务进行组织调整……游戏仍然是扩展Netflix会员娱乐多样性的机会。’换句话说，关闭工作室是为了‘精简’和‘聚焦’。但问题是，一个刚发布成功游戏的工作室，为什么要被关掉？这背后是Netflix游戏业务的战略摇摆，还是更深的行业困境？我们得从Netflix进军游戏领域的往事说起。Netflix进军游戏，始于2017年，当时他们推出了一系列互动电影游戏，比如《黑镜：潘达斯奈基》，那是一个互动剧集，观众可以在观看中做出选择，导致不同结局。这一尝试获得了巨大成功，也让Netflix看到了游戏化的潜力。2021年，Netflix正式宣布进军游戏行业，并任命了游戏部门副总裁。他们的策略是：在移动端推出订阅制游戏服务，Netflix会员可以免费玩。这些游戏大多是休闲类或独立游戏，比如《怪奇物语》手游版。但Netflix并不满足于做发行，他们开始收购游戏工作室。2021年，Netflix收购了Night School，这家工作室以《Oxenfree》系列闻名，是一款2D心理惊悚游戏，被誉为叙事冒险的典范。Night School成为Netflix的第一家游戏工作室。之后，Netflix又收购了Boss Fight Entertainment（2022年）和芬兰的Next Games（2022年）。2022年，Netflix还在洛杉矶成立了Team Blue，负责开发3A级游戏。到2023年，Netflix的游戏库已有超过80款游戏，下载量超过1亿次，但与此同时，Netflix的游戏业务一直没找到清晰的盈利模式。游戏是免费的，作为订阅服务的一部分，它们不直接产生收入，而是用来增加订阅用户和留存率。但Netflix的高管们逐渐意识到，游戏行业的开发周期长、成本高，而且不确定性大，这与其内容制作的传统模式完全不同。2024年，Netflix关闭了Team Blue，一个开发了两年、没有发布任何游戏的3A工作室。当时，Netflix表示将‘更注重数量而非质量’，但实际是，他们发现3A游戏开发太烧钱，周期太长，不符合其流媒体业务的快节奏。2025年，Netflix又关闭了Boss Fight Entertainment，这家工作室曾推出过几款手游，但表现平平。现在，又是Night School和Moonloot。Moonloot是Netflix在2023年成立的，致力于开发一款未公布的生活模拟游戏，但还没有任何发布。这么一看，Netflix的关停动作似乎有个规律：那些没有取得突破性成功的，或者刚完成一个项目处于空档期的工作室，都被裁掉了。而Night School的遭遇更古怪——他们明明刚发布了一款成功的游戏，却还是被关停。这只能说明，Netflix的评估标准不是单个项目的成败，而是整个工作室的长期潜力。也许《Unhinged》虽然口碑好，但成本高昂，且开发周期长，不符合Netflix的‘有效投入’标准。在2026年7月的投资者电话会上，Netflix联席CEO格雷格·皮特斯专门提到了《Unhinged》，说它成为‘我们最成功的云游戏首发之一’，带来了‘非常坚实的数字，让我们在游戏表现上处于顶尖梯队’。他还说：‘我们正在触及这个领域能给我们带来总潜力的表层。你会看到我们继续调整和优化这里的投资水平，相对于我们的整体内容支出，这仍然非常小，基于我们成员所认可的展示表现，以及为我们业务带来的回报。’这话听起来很积极吧？但仅仅几周后，工作室就关了。这不禁让人怀疑，Netflix的高管们对游戏业务的热情，到底有多少。他们一方面说游戏很重要，另一方面却在持续削减游戏投入。这让人想起2022年，Netflix在招兵买马时，曾宣布要打造‘世界级的游戏工作室’，当时游戏副总裁迈克·韦尔杜说：‘我们致力于为所有Netflix会员提供高质量、创新的游戏体验。’结果呢？从2024年开始，工作室一个个关闭，员工被裁。这背后的核心矛盾是：Netflix本质上是一家流媒体公司，它的核心业务是视频内容，游戏只是吸引用户的附属品。当游戏开发的成本上升、周期变长，且没有直接付费模式时，Netflix就很容易动刀。但真正的代价是，那些有才华的开发者，那些创造独特游戏体验的工作室，成了Netflix战略调整的牺牲品。Night School的员工们在社交媒体上宣泄着愤怒和失望，而游戏行业也再次警醒：在如今的大公司并购潮中，即使是成功的工作室，也可能随时被母公司抛弃。这件事让我想起1990年代初的世嘉。当时，世嘉的游戏开发部门曾被视为创意天堂，但随着市场竞争加剧和母公司财务压力，许多项目被腰斩，工作室被重组。更近的例子是，2024年微软收购动视暴雪后，关闭了多个工作室，包括Arkane Austin和Tango Gameworks，尽管它们曾制作过《耻辱》和《恶灵附身》等口碑佳作。微软的理由也是‘重组资源’。游戏行业就是这样，资本逻辑与创作逻辑常有冲突。大公司收购工作室，本是为了获取创意和IP，但一旦发现工作室的产出不符合其财务目标，就会毫不留情地关停。这让人想起谷歌的Stadia，它推出了云游戏平台，吸引了大量开发者，但当平台失败时，谷歌直接把整个云游戏业务砍掉，只赔偿开发者，而玩家则被遗弃。相比之下，Netflix至少还在继续推出游戏，只不过，它们的策略越来越保守。Night School的遭遇，可能是Netflix游戏业务的一个转折点。如果连刚发布成功作品的工作室都不能幸免，那还有什么能保证团队的稳定？一些业内分析师认为，Netflix将逐步转型为专注于低成本、高回报的休闲游戏，比如基于其热门剧集改编的互动剧情游戏，而像《Unhinged》这样的3A级叙事游戏，将成为过去式。但另一方面，Netflix联席CEO的言论似乎又在暗示，他们仍然看好游戏市场。那未来会怎样？也许Netflix会像迪士尼那样，将游戏作为IP延伸的工具，而不是独立的创作实体。对于Night School的开发者们，他们大多已经在寻找新的机会，有些人可能会加入其他独立工作室，有些可能会转行。不管怎样，这次关停给游戏行业敲响了警钟：在资本面前，创意是脆弱的。但同样，游戏行业的历史也告诉我们，每一次裁员潮之后，都会有一批新的独立开发者崛起，带来更具创造力的作品。就像2014年Paragon和Telltale Games关闭后，许多前员工创立了新的工作室，推出了像《英雄不再》续作这样的独特体验。甚至Night School本身，就是由一群前Telltale员工在2014年创立的。所以，也许这个故事的下一章，会是某个新工作室的诞生。就在网上，有前Night School员工已经开始分享简历，互相推荐工作。这让我想到那句话：‘游戏行业很残酷，但也很迷人。’因为总有新人在废墟上重建。今天的节目就到这里，我是伊恩，感谢你的收听。如果你喜欢今天的节目，请订阅并分享，让更多人听到背后的故事。我们明天见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">想象一下，你是一个游戏开发者，你所在的团</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260814050141" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
