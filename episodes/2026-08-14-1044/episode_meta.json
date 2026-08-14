@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-08-14-1044",
+  "title": "AI音乐革命：从生成到创作，多智能体系统暗藏危机",
+  "published_at": "2026-08-14 10:44",
+  "duration_seconds": 553.39,
+  "duration_label": "9分13秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "小红书开源语音合成模型，能否撼动行业？",
+      "golden_quote": "语音合成的边界，正在从技术挑战变成伦理选择。",
+      "keywords": [
+        "语音合成",
+        "开源",
+        "dots.tts",
+        "端到端"
+      ],
+      "source": "公众号：小红书技术（dots.llm）"
+    },
+    {
+      "title": "MiniMax Music 3.0，AI 作曲也能专业级",
+      "golden_quote": "当每个人都能制作音乐，真正的音乐家反而会脱颖而出。",
+      "keywords": [
+        "MiniMax",
+        "音乐生成",
+        "开源",
+        "Music 3.0"
+      ],
+      "source": "MiniMax：Blog（网页）"
+    },
+    {
+      "title": "OpenAI 极速模式，快 14 倍的智能体",
+      "golden_quote": "当模型足够快，它的智能才可能真正融入到每一个决策瞬间。",
+      "keywords": [
+        "OpenAI",
+        "GPT-5.6",
+        "速度",
+        "Cerebras"
+      ],
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）"
+    },
+    {
+      "title": "多智能体系统暗藏系统性风险",
+      "golden_quote": "智能体之间的协作，可能比人机交互更复杂，也更需要克制。",
+      "keywords": [
+        "多智能体",
+        "Anthropic",
+        "风险",
+        "协作"
+      ],
+      "source": "Anthropic：Research（发表成果 · 网页）"
+    },
+    {
+      "title": "Suno 变身专业音乐工作站",
+      "golden_quote": "音乐创作的未来，可能真的不是更复杂的软件，而是更智能的助手。",
+      "keywords": [
+        "Suno",
+        "AI音乐",
+        "数字音频工作站",
+        "MIDI"
+      ],
+      "source": "The Verge AI"
+    }
+  ]
+}
