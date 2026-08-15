@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-15-0950",
+  "title": "价格战+新模型：AI界五大剧变，谁在真正受益？",
+  "published_at": "2026-08-15 09:50",
+  "duration_seconds": 600.94,
+  "duration_label": "10分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "小红书开源新模型：参数小，本事大",
+      "golden_quote": "效率才是开源新战场",
+      "keywords": [
+        "小红书",
+        "dots3-note",
+        "开源模型",
+        "长程智能体",
+        "多模态"
+      ],
+      "source": "公众号：小红书技术（dots.llm）"
+    },
+    {
+      "title": "智谱 GLM-5.3：编程开源第一，还自带安全天赋",
+      "golden_quote": "编程与安全，开源双刃剑",
+      "keywords": [
+        "智谱",
+        "GLM-5.3",
+        "编程",
+        "安全",
+        "开源"
+      ],
+      "source": "公众号：智谱（GLM）"
+    },
+    {
+      "title": "中美 AI 价格战：OpenAI 和 Anthropic 降价 80%",
+      "golden_quote": "降价不是仁慈，是生存之战",
+      "keywords": [
+        "价格战",
+        "OpenAI",
+        "Anthropic",
+        "中国 AI",
+        "API"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Cursor 并入 SpaceX：编程工具要上天？",
+      "golden_quote": "算力决定智能高度",
+      "keywords": [
+        "Cursor",
+        "SpaceX",
+        "收购",
+        "GPU集群",
+        "AI编程"
+      ],
+      "source": "Cursor Blog"
+    },
+    {
+      "title": "84%的token不用SOTA，我们真的需要最先进模型吗？",
+      "golden_quote": "SOTA 陷阱，性价比王道",
+      "keywords": [
+        "SOTA",
+        "OpenRouter",
+        "性价比",
+        "开源模型",
+        "企业AI"
+      ],
+      "source": "Tomer Tunguz 博客"
+    }
+  ]
+}
