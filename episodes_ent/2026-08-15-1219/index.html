@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>复仇者末日：小罗伯特·唐尼携哨兵大军卷土重来 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 108 夜 / 2026-08-15</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 复仇者联盟：末日</div>
+    <h1 class="ep-title">复仇者末日：小罗伯特·<span class="hl">唐尼携哨兵大军卷土重来</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:17</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260815042021" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">但最让人意外的是，X战警真的来了。帕特里克·斯图尔</h3></div><p>你好，我是伊恩。想象一下，你坐在电影院里，灯光暗下，银幕上出现了一个熟悉又陌生的身影——那曾经是钢铁侠的脸，如今却戴上了末日博士的面具。身后，一支哨兵机器人军团遮天蔽日，而对面站着的是美国队长、雷神、X战警，甚至还有神奇四侠。这不是粉丝的幻想，这是漫威在2026年8月14日D23大会上刚刚放出的《复仇者联盟：末日》第二支预告片。今天，我们就来聊聊这部影片的来龙去脉，以及它如何让整个漫威宇宙的天平彻底倾斜。</p><p>先说这支预告片本身。它不是在社交媒体上悄悄流出的，而是在迪士尼的D23粉丝大会上高调首映，现场数千名观众先睹为快。预告片里，小罗伯特·唐尼饰演的末日博士站在一个类似末日堡垒的地方，他的面前是密密麻麻的哨兵机器人——那些在漫画里专门用来猎杀变种人的巨型机器人。镜头一转，美国队长史蒂夫·罗杰斯回来了，还是克里斯·埃文斯那张脸，但沧桑了许多。接着是雷神、蚁人、黑豹、冬兵、洛基、尚奇，一个接一个亮相，像是把过去十五年的老朋友们全召集了起来。</p><p>但最让人意外的是，X战警真的来了。帕特里克·斯图尔特再次戴上光头，查尔斯·泽维尔教授坐着轮椅出现；伊恩·麦克莱恩的万磁王悬浮在空中，金属碎片环绕；詹姆斯·麦斯登的镭射眼、凯尔西·格兰莫的野兽、丽贝卡·罗梅恩的魔形女、艾伦·卡明的夜行者，还有钱宁·塔图姆的牌皇——这些二十年前福克斯版X战警的经典面孔，终于正式踏上了漫威主宇宙的舞台。这不仅是粉丝的狂欢，更是迪士尼收购福克斯之后，首次在《复仇者联盟》主线上，让变种人和复仇者们真正并肩作战。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(135.5,'sec-0002')"><span>▶</span> 02:15</button><h3 class="section-title">但为什么是末日博士？为什么选在现在？这就要说到漫威</h3></div><p>预告片的时长不到两分钟，但信息量巨大。末日博士的造型是绿色的斗篷，金属面具，声音经过处理，有些低沉，但依然能听出唐尼的语调。他对英雄们说了一句话，大概是“你们的世界即将终结”，然后哨兵大军倾巢而出。而英雄这边，神奇四侠的里德·理查兹——佩德罗·帕斯卡饰演——在镜头里和末日博士有过一次正面对峙，他似乎在试图谈判，但末日博士一挥手，哨兵就把神奇先生打飞了。整个预告片的高潮是，美国队长和末日博士在废墟上对打，盾牌打在了金属面具上，溅出火星。然后画面一黑，上映日期：12月18日。</p><p>现在我们来回溯一下这事儿的来龙去脉。小罗伯特·唐尼在《复仇者联盟：终局之战》里，钢铁侠打了那个响指，拯救了宇宙，自己却牺牲了。那是2019年，漫威观众哭成一片，以为这就是唐尼的告别。但2024年圣地亚哥动漫展上，漫威突然宣布唐尼将以末日博士的身份回归——这个转折震动了整个行业。大家的第一反应是：搞什么？钢铁侠的脸怎么成了反派？但漫威的解释是，这“不是钢铁侠，而是末日博士”——一个平行宇宙的变体，或者某种更复杂的叙事诡计。</p><p>但为什么是末日博士？为什么选在现在？这就要说到漫威电影宇宙的第四、第五阶段。在《终局之战》后，漫威失去了钢铁侠和美国队长这两个核心角色，票房和口碑都遭遇滑铁卢。2023年的《蚁人3》和《惊奇队长2》表现平平，观众开始感到疲劳。于是，漫威在2024年宣布要重回“秘密战争”大事件，而末日博士就是这条故事线的终极反派。选择唐尼，一方面是因为他是漫威最成功的演员，他的回归自带话题度；另一方面，也是想复制“英雄变反派”的戏剧冲突，就像当年灭霸戴上无限手套时，观众也是又恨又怕。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(271.1,'sec-0003')"><span>▶</span> 04:31</button><h3 class="section-title">那么，为什么是今年？2026年，漫威电影宇宙已经走</h3></div><p>但更深层的历史，是漫威和福克斯的恩怨。二十年前，漫威因为濒临破产，把X战警的电影版权卖给了福克斯。福克斯拍了很多部X战警电影，从2000年的第一部开始，帕特里克·斯图尔特和伊恩·麦克莱恩就分别饰演了X教授和万磁王。那些电影塑造了一批经典角色，但也和漫威电影宇宙完全割裂。粉丝们一直幻想着两个宇宙的融合，但版权是堵墙。直到2019年，迪士尼以713亿美元收购福克斯，X战警的版权才回到漫威手里。从那以后，漫威一直在慢慢引入变种人元素，比如《惊奇队长2》里出现了凯茜·朗，但始终没有大规模整合。现在，《末日》直接让福克斯版X战警演员全员回归，这等于是在银幕上承认了那个老X战警宇宙的存在，并且把它融入了主世界。</p><p>再说哨兵机器人。在漫画里，哨兵是专门对付变种人的武器，由人工智能制造，能侦测并消灭变种人。在福克斯的《X战警：逆转未来》里，哨兵军团曾经摧毁了整个世界。那部电影是2014年的，里面哨兵的设计是银白色，能够变形。现在《末日》预告片里的哨兵，明显更庞大，数量更多，而且似乎被末日博士控制。这就有意思了——原本变种人的天敌，成了末日博士的私人军队。这暗示着末日博士可能不是单纯的外敌，而是利用了变种人曾经的恐惧来统治世界。</p><p>那么，为什么是今年？2026年，漫威电影宇宙已经走过了整整18年。从2008年的《钢铁侠》到现在，观众们看着托尼·斯塔克从花花公子变成英雄，又看着他在《终局之战》里牺牲。这些年里，超级英雄电影经历了从崛起到饱和，再到现在的转折点。迪士尼+的流媒体剧集让漫威的叙事更加复杂，但也分薄了观众的热情。观众开始怀念那些老角色，怀念那种“大事件”的震撼。《末日》的预告片，纯粹是情怀炸弹——每一个镜头都在提醒你，你曾经为什么爱看这些电影。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(406.6,'sec-0004')"><span>▶</span> 06:46</button><h3 class="section-title">所以，接下来的路会怎么走？《末日》将在12月18日</h3></div><p>但这也引出了一个问题：多元宇宙到底要玩到什么时候？漫威在第四阶段引入了多元宇宙的概念，《蜘蛛侠：英雄无归》里让三代蜘蛛侠同框，票房爆炸。《奇异博士2》里看到了各种变体。《死侍与金刚狼》更是把福克斯的旧英雄们拉出来遛了一圈。而《末日》似乎要把这一切推向顶点——那个末日博士，可能就是某个平行宇宙的托尼·斯塔克，黑化后成为了末日博士。这种“英雄堕落”的叙事，在漫画里有很多经典案例，比如智械危机里的钢铁侠，但在电影里是第一次。</p><p>对于这个预告片，外界的反应是两极的。一部分粉丝激动不已，他们在预告片下留言说：“这就是漫威的世纪之作！”另一部分则困惑，尤其是唐尼的转型——很多人表示：“我看到钢铁侠的脸就出戏，总觉得他要说‘我是钢铁侠’。”还有一些影评人认为，漫威这是在用情怀掩盖创作力的匮乏，过度依赖老演员和粉丝熟悉的故事。</p><p>也有业内人士透露，漫威内部其实做过市场调研，发现观众最怀念的就是初代复仇者们，所以决定用末日博士这个反派来串起所有角色。而选在D23发布，也是因为那里聚集了最忠实的粉丝，可以最大化曝光。至于哨兵军团的引入，有人说这是为了铺垫之后的《秘密战争》大事件，那部电影可能会涉及所有平行宇宙的碰撞，彻底重置漫威电影宇宙。</p><p>所以，接下来的路会怎么走？《末日》将在12月18日上映，距离现在还有四个月。这期间，漫威肯定会放出更多预告片，每一支都会引爆社交媒体。但更重要的是，这可能是漫威电影宇宙的一次大洗牌。如果票房成功，漫威也许会继续用老演员，比如让克里斯·埃文斯成为美国队长，甚至可能给唐尼颁发一座终身成就奖。但如果失败，漫威可能真的要好好想想，观众是不是已经厌倦了这些超级英雄。</p></div>
+<div class="section" id="sec-0005"><p>其实你仔细想想，超级英雄电影本身就是美国文化的一个投影。冷战时是超人的绝对正义，911后是黑暗骑士的焦虑，而现在，这个末日博士带着哨兵大军，像极了我们时代的不安——科技失控、身份危机，还有那些我们以为能永远依靠的英雄，最终都可能转身变成威胁。漫威这次把末日博士的起源留了一个巨大的悬念，唐尼演的这个角色到底是哪个宇宙的？他的动机是什么？哨兵大军是为了清除变种人，还是为了建立新秩序？这些问题的答案，也许在12月18日才会揭晓。但在那之前，我想说的其实是，超级英雄的故事永远不会结束，它们只是换了件衣服，重新回来讲述关于权力和牺牲的古老寓言。而我，我们，依然会坐在银幕前，去见证这个宇宙下一步的疯狂。好了，今天的故事就讲到这里。快世界，慢思考，我是伊恩，我们下次再聊。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">但最让人意外的是，X战警真的来了。帕特里</span></div>
+<div class="tl-item" onclick="seek(135.5,'sec-0002')"><span class="tl-time">02:15</span><span class="tl-title">但为什么是末日博士？为什么选在现在？这就</span></div>
+<div class="tl-item" onclick="seek(271.1,'sec-0003')"><span class="tl-time">04:31</span><span class="tl-title">那么，为什么是今年？2026年，漫威电影</span></div>
+<div class="tl-item" onclick="seek(406.6,'sec-0004')"><span class="tl-time">06:46</span><span class="tl-title">所以，接下来的路会怎么走？《末日》将在1</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260815042021" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
