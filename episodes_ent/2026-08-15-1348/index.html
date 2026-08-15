@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>王国之心：迪士尼的十年棋局 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 111 夜 / 2026-08-15</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 王国之心</div>
+    <h1 class="ep-title">王国之心：迪<span class="hl">士尼的十年棋局</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:29</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260815055001" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">为什么这次是真的？因为时机变了。2022年，迪士尼</h3></div><p>你好，我是伊恩。今天要聊的，是一个等了二十年的动画，和一个藏了十年的秘密。</p><p>先从一个画面说起。1999年，大阪，一家小游戏公司的会议室里，几个年轻人正围着迪士尼的动画师，桌上摊着《狮子王》的角色稿。其中一个戴着眼镜的程序员，后来回忆说，他们当时问迪士尼的人：“能不能让我们用辛巴？”对方愣住了——因为从来没有人要在游戏里用“角色”，而不是“形象”。</p><p>十六年后，那个程序员成了游戏界最神秘的制作人。他叫野村哲也，他手里的系列，叫《王国之心》。而今年八月，他的这个系列，同时引爆了三次元的两颗炸弹：一是动画剧集正式宣布登陆Disney+，二是游戏的第四代，将在2027年底发售，并加入《寻梦环游记》的亡灵世界。</p><p>但你知道吗？这些新闻背后，藏着一个更长的故事——一个关于游戏、动画、还有迪士尼如何下棋的故事。</p><p>先说第一条线：动画。8月14日，迪士尼官方宣布，《王国之心》动画剧集，将由日本动画公司神风动画制作，登陆Disney+。消息一出，粉丝们炸了锅。因为这不是第一次说要动画化——早在2019年，就有传言说迪士尼要和野村合作拍动画。但每次都是“正在计划中”，然后没了下文。</p><p>为什么这次是真的？因为时机变了。2022年，迪士尼宣布要大幅削减传统电视内容，全力转向流媒体。他们需要内容，但自己的动画工作室产能有限。于是，他们开始把目光投向那些“沉睡的IP”——比如《王国之心》，这个他们拥有角色版权，但从来没真正开发过动画的系列。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(114.9,'sec-0002')"><span>▶</span> 01:54</button><h3 class="section-title">但推迟发售，不仅仅是创作上的选择。2024年，Sq</h3></div><p>但等一下——如果你以为这只是迪士尼单方面的决定，那就太小看野村了。</p><p>野村哲也这个人，用一句话形容就是：控制狂。他负责的游戏，从角色设计到剧情走向，甚至到菜单按钮的位置，都要自己把关。所以当迪士尼找到他说“我们要做动画”时，他提了一个条件：故事必须由他亲自撰写。迪士尼同意了。</p><p>这个条件有多重要？因为《王国之心》的剧情，从来不是简单的“迪士尼角色大冒险”。它讲的是三个少年少女在多元宇宙中寻找朋友的故事，里面的“心之暗”和“无世界”的概念，比大多数动画都深。如果让迪士尼自己拍，很可能会变成一部纯粹的合家欢——但野村要的，是像《新世纪福音战士》那样的深度动画。</p><p>所以，动画剧集将会是“全新的故事”，不是游戏的直接改编。这招叫什么？这叫“双轨并进”。游戏和动画互相独立，但又共享世界观。粉丝想要完整理解，就得两边都看。</p><p>现在，我们把镜头转向第二条线：游戏。</p><p>《王国之心4》原定于2026年发售，但这次发布会上，野村亲自宣布推后到2027年。为什么？因为加入了一个新世界——《寻梦环游记》的亡灵之地。这个决定，看似突然，但其实蓄谋已久。</p><p>早在2019年，野村就说过，他在《寻梦环游记》上映后看了三遍，每次哭得稀里哗啦。他说，这部电影的核心是关于记忆和遗忘——这正好和《王国之心》的主题“记忆是心的恩惠”完美契合。所以，当迪士尼在2023年提出合作新世界时，野村第一个就锁定了它。</p><p>但推迟发售，不仅仅是创作上的选择。2024年，Square Enix经历了大规模人员调整，核心开发团队几乎重建。野村曾在采访中承认，如果硬赶工期，游戏质量会下降，他不想让《王国之心》系列留下遗憾。这个决定，让粉丝们又爱又恨——爱的是他的坚持，恨的是又多等一年。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(229.9,'sec-0003')"><span>▶</span> 03:49</button><h3 class="section-title">于是，双方达成了一个秘密协议：迪士尼不再干涉剧情，</h3></div><p>但你知道，这已经不是这个系列第一次“跳票”了。</p><p>让我们回到2002年。那一年，《王国之心》初代发售，是史克威尔和迪士尼的首次合作。当时，史克威尔刚因为《最终幻想：灵魂深处》电影票房惨败，赔了巨额资金。而迪士尼这边，正在寻找进入游戏市场的突破口。两家公司一拍即合，但合作并不顺利。</p><p>野村后来回忆说，他第一次提交剧本时，迪士尼的制片人看都没看，就说：“我们不需要故事，只要角色。”那段时间，他每天都要和迪士尼的人争辩，为什么游戏需要剧情。后来，当《王国之心》第一作发售，卖出千万份，迪士尼才明白，他们捡到了一个金矿。</p><p>但这个故事最精彩的部分，还在后面。2005年，史克威尔和艾尼克斯合并，形成了今天的Square Enix。但迪士尼和野村的关系，却变得越来越微妙。2013年，《王国之心3》开始开发，迪士尼要求加入更多“现代化”元素，比如加入更多电影角色。但野村拒绝了，他说：“《王国之心》不是迪士尼乐园，它有自己的规则。”</p><p>双方僵持了两年，直到2015年，迪士尼突然妥协。原因有几个：一是主机市场正在洗牌，任天堂势头正猛；二是迪士尼自己的游戏部门刚被裁撤，他们需要外部合作伙伴；三是野村当时正在开发《最终幻想7重制版》，迪士尼担心他离开。</p><p>于是，双方达成了一个秘密协议：迪士尼不再干涉剧情，但所有原创角色版权归迪士尼所有。这就是为什么你会看到《王国之心》里的原创角色，比如索拉、里库，后来都出现在迪士尼乐园的游行里。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(344.8,'sec-0004')"><span>▶</span> 05:44</button><h3 class="section-title">有媒体透露，动画剧集计划在2027年春季上线，正好</h3></div><p>现在，这个协议延伸到了新领域：动画。</p><p>但你知道，迪士尼不是第一次玩这种“跨媒体”游戏。还记得2001年那部《星际宝贝》吗？它原本只是一部电影，但迪士尼后来把它拍成了电视剧，甚至衍生出全球性的“莉萝”IP。后来，迪士尼又把动画片《超能陆战队》改编成漫画和游戏，赚得盆满钵满。</p><p>但《王国之心》不一样——它一开始就是“游戏优先”的IP。这在迪士尼历史上，是绝无仅有的。迪士尼的所有角色，都是先有电影，再有其他产品。而《王国之心》，是第一个“游戏催生动画”的案例。</p><p>这让我想到了另一个例子：任天堂的《超级马里奥》。2019年，任天堂和照明娱乐合作拍《超级马里奥大电影》，结果全球票房超过13亿美元。但你知道，任天堂在20多年前，就拍过一部《超级马里奥兄弟》真人电影，但那是场灾难，导致任天堂20年不敢碰电影。</p><p>所以，当迪士尼宣布要拍《王国之心》动画时，业界都在看：这回，游戏IP能不能在动画上复制《马里奥》的成功？</p><p>不过，和《马里奥》不同，《王国之心》的动画，是由日本公司神风动画负责的。这家公司以“藤本”风格著称，代表作是《忍者蝙蝠侠》。他们的特点是，画面极具动感，但又保留了日式动画的细腻。这可能是迪士尼和日本动画的第一次深度合作——不是投资，而是合作。</p><p>那么，未来的故事会怎么走？</p><p>有媒体透露，动画剧集计划在2027年春季上线，正好赶在《王国之心4》发售之前。这显然是有预谋的——迪士尼想借游戏的热度，来推动画。反过来，动画也能为游戏预热。这就是所谓的“互相引流”。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(459.7,'sec-0005')"><span>▶</span> 07:39</button><h3 class="section-title">这就是迪士尼的“十年棋局”：从一开始的“用角色换版</h3></div><p>但也有粉丝担心：如果动画做砸了，会不会毁了游戏的口碑？毕竟，游戏粉丝们大多都是“原作党”。对此，野村在发布会上说了一句话，让我印象很深。他说：“希望大家把动画当作另一个世界去看，它不是游戏的补充，而是一段全新的旅程。”</p><p>而游戏这边，除了《寻梦环游记》世界，野村还透露，会加入更多原创剧情，并解决一些系列遗留的“坑”。比如，索拉的朋友凯莉，在《王国之心3》结尾失踪了，她去哪里了？这个坑，会在第四代里填上。</p><p>另一个值得注意的细节是，这次《王国之心4》的预告片里，出现了一个完全陌生的世界——现实世界。主角索拉躺在一条街上，周围是现代建筑。野村没有解释这意味着什么，但粉丝们已经吵翻了。有人说，这暗示游戏将打破“虚拟世界”的界限，进入现实。也有人说，这只是野村又一个故弄玄虚的陷阱。</p><p>其实，这种“模棱两可”正是野村的一贯作风。他喜欢在预告片里放“隐藏信息”，然后等粉丝们自己去挖掘。他甚至曾经在采访中承认，他喜欢看粉丝们的解读，因为他自己有时候都没想过那些含义。</p><p>但不管怎样，有一点是确定的：《王国之心》这个系列，已经不再只是游戏了。它正在成为一个“跨媒体宇宙”。迪士尼这边，有动画；游戏这边，有第四代和未来的续作；还有，迪士尼乐园里的“王国之心”主题区，也在计划中。</p><p>这就是迪士尼的“十年棋局”：从一开始的“用角色换版权”，到现在的“共同开发IP”，他们已经把《王国之心》当成了自己的“东方米奇”。</p></div>
+<div class="section" id="sec-0006"><p>好了，故事讲到这里，也该告一段落了。但我知道，你心里一定还有一个问题：动画和游戏，哪个才是“正统”？</p><p>这个问题，恐怕连野村自己都回答不了。因为在《王国之心》的世界里，从来没有一条单一的时间线。就像索拉在游戏里说的那句话：“无论你在哪个世界，我们都会找到彼此。”</p><p>也许，这就是《王国之心》的魅力所在——它永远在寻找，不管是在游戏里，还是在屏幕外。</p><p>那么，未来的路，会通向哪里？谁也不知道。但我相信，野村和迪士尼，都还没有下完这盘棋。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">为什么这次是真的？因为时机变了。2022</span></div>
+<div class="tl-item" onclick="seek(114.9,'sec-0002')"><span class="tl-time">01:54</span><span class="tl-title">但推迟发售，不仅仅是创作上的选择。202</span></div>
+<div class="tl-item" onclick="seek(229.9,'sec-0003')"><span class="tl-time">03:49</span><span class="tl-title">于是，双方达成了一个秘密协议：迪士尼不再</span></div>
+<div class="tl-item" onclick="seek(344.8,'sec-0004')"><span class="tl-time">05:44</span><span class="tl-title">有媒体透露，动画剧集计划在2027年春季</span></div>
+<div class="tl-item" onclick="seek(459.7,'sec-0005')"><span class="tl-time">07:39</span><span class="tl-title">这就是迪士尼的“十年棋局”：从一开始的“</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260815055001" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
