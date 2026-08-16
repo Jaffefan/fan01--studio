@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-16-0959",
+  "title": "5件事告诉你，AI正在悄悄改变游戏规则",
+  "published_at": "2026-08-16 09:59",
+  "duration_seconds": 744.0,
+  "duration_label": "12分24秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "亚马逊被AI书淹没，人类作者收入下滑",
+      "golden_quote": "AI书不靠质量赢，靠数量淹没市场。",
+      "keywords": [
+        "AI书籍",
+        "亚马逊",
+        "收入下滑"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "阿里大模型下载量全球第一，超越Meta谷歌",
+      "golden_quote": "Qwen成为开发者默认选择，中国AI走向台前。",
+      "keywords": [
+        "阿里巴巴",
+        "Qwen",
+        "开源模型"
+      ],
+      "source": "Bloomberg / Yahoo Finance"
+    },
+    {
+      "title": "AI助力25万行天气代码GPU移植，提速5.1倍",
+      "golden_quote": "AI加速旧码移植，验证让科学可信。",
+      "keywords": [
+        "GPU",
+        "AI辅助编程",
+        "天气模拟"
+      ],
+      "source": "arXiv"
+    },
+    {
+      "title": "Claude推出水印技术，不可见但可检测",
+      "golden_quote": "水印为AI内容上牌，透明度是通行证。",
+      "keywords": [
+        "水印",
+        "Claude",
+        "AI透明度"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "SpaceX完成Cursor收购，编程新时代开启",
+      "golden_quote": "SpaceX收编Cursor，AI编程进入资源战。",
+      "keywords": [
+        "SpaceX",
+        "Cursor",
+        "AI编程"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
