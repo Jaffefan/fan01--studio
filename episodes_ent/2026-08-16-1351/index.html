@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CEO的道歉信：当AI取代编剧之后 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 116 夜 / 2026-08-16</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Saber Interactive</div>
+    <h1 class="ep-title">CEO的道歉信：<span class="hl">当AI取代编剧之后</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 06:51</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260816055205" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">Saber方面先是发了一则公式化的否认声明，说没有</h3></div><p>你好，我是伊恩。今天要讲的是游戏圈一场闹剧的落幕，一个CEO在众目睽睽之下，向被他用AI取代的编剧低头认错。不过，这场道歉的背后，藏着的可能是整个行业未来的阴影。</p><p>事情发生在几天前。Saber Interactive，这家做过《僵尸世界大战》和《雪地奔驰》的公司，公布了一款新游戏的预告片，叫《Rideshare Simulator》。预告片里有个梗，是嘲讽Gearbox的CEO Randy Pitchford，说他离开Embracer集团后只能靠变魔术糊口。这本来是个小玩笑，但没想到，Saber自己的CEO Matt Karch很快就成了更大的靶子。</p><p>预告片发布后没两天，这款游戏的前首席编剧Stella Sacco在社交媒体上发帖说，她被公司解雇了，原因就是公司要用ChatGPT替代她，而且在Steam页面上根本没有披露任何AI使用的信息。这条帖子就像扔进池塘的石头，涟漪迅速扩大。</p><p>Saber方面先是发了一则公式化的否认声明，说没有这回事。但真正让事情失控的，是CEO Karch的亲自下场。他在一篇回应里极尽嘲讽之能事，先是说“Stella谁？我都没见过她”，然后又说他们本来打算在Steam页面上加AI声明的，只是要等“功能集最终确定”之后。语气轻佻，还夹带着一些自认幽默的评论。这段回应被Giant Bomb节目当众朗读，成了全网的笑料。Karch在那段话里甚至说，他宁愿当初就用AI来替代她。这句话一出，舆论彻底炸了。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(102.9,'sec-0002')"><span>▶</span> 01:42</button><h3 class="section-title">现在，让我们把时间轴拉长，看看这场争吵背后，游戏行</h3></div><p>为什么他会这么气急败坏？因为Sacco不仅在帖子里说自己被AI替代，还指出Saber在Steam页面上隐瞒了AI生成内容的事实。这戳中了行业里最敏感的神经。玩家对AI生成内容的信任度极低，尤其是在游戏里，如果不用AI还被骂，隐瞒AI更是火上浇油。Saber随后更新了Steam页面，加上了AI生成内容声明，承认游戏里的很多配音、音乐和非任务对话都是AI生成的。这等于变相承认了Sacco说的是真的。</p><p>然后，这场风波持续了一周，Karch终于顶不住了，他给Sacco发了一封长篇道歉邮件。Sacco在社交媒体上公开了这件事，说Karch“毫无保留地道歉”，并承诺要让事情变得更好。邮件具体内容保密，但Sacco说她会考虑接受道歉，但需要时间。她还说，“当道歉如此稀缺，不该轻易拒绝”。于是，这场闹剧暂时落幕。</p><p>现在，让我们把时间轴拉长，看看这场争吵背后，游戏行业是怎么一步步走到今天的。AI在游戏中的应用不是新鲜事，从上世纪八十年代的程序生成关卡，到九十年代《模拟人生》的AI角色，再到近几年的动态游戏难度调节。但用大语言模型来替代编剧，这是最近几年才开始的尝试。为什么？因为大语言模型能生成文本，成本低，速度快，对于需要海量文本的开放世界或多人游戏，吸引力巨大。但你想想，游戏剧本不是简单的文本堆砌，它需要情节逻辑、角色弧光、情感张力。ChatGPT生成的对话，很多时候是那种“看起来对，但细想空洞”的模式化内容。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(205.9,'sec-0003')"><span>▶</span> 03:25</button><h3 class="section-title">Sacco说她需要时间想想“怎样才能挽回损失”，她</h3></div><p>游戏编剧们一直是行业里的“隐形人”，他们的名字很少出现在封面上，但他们的工作决定了游戏是让人沉浸还是让人出戏。此前，编剧被AI替代的事也有过苗头。比如2023年，美国编剧工会大罢工，就是为了对抗AI对编剧岗位的威胁，虽然那是影视行业，但游戏编剧也感同身受。曾经有一位知名游戏编剧，因为被要求用AI重写剧情而公开辞职，但没引起什么水花。而这次Saber事件，因为CEO的失态而闹得人尽皆知，这也是为什么它能成为全行业的话题。</p><p>再往前看，游戏行业对新技术总是既爱又怕。比如2005年，游戏界就开始担心外包和全球化会抢走本土开发者的工作，但后来证明，外包反而让游戏产业更繁荣，因为人力成本降低后，更多小作品能诞生。但AI不一样，它不只是降低成本，它还在模仿创造力本身。这引发了更深层的恐惧，不只是“我的工作没了”，而是“人类的创作还有没有价值”。</p><p>现在，回到事件本身。Karch道歉后，舆论分成了几派。有人为Sacco感到高兴，认为这是小创作者对抗CEO霸权的胜利；也有人觉得Karch的道歉只是公关动作，掩盖不了Saber使用AI的事实；还有中立派说，AI就是未来，早点适应吧。Saber之外，其他公司也在看风向。有些公司偷偷用AI，有些公司公开宣布不用。但玩家的眼睛是雪亮的，Steam上有专门的AI内容标签，玩家可以据此避雷。</p><p>Sacco说她需要时间想想“怎样才能挽回损失”，她可能已经收到解约赔偿，但职业声誉的损伤，可能不是一封信能弥补的。这场风波过后，游戏行业会不会改变对待编剧的方式？还是说，这只是技术洪流中的一朵小浪花？我不知道。但我知道，当CEO在愤怒中说出“我宁愿用AI”时，他暴露了行业里真实的态度，那就是编剧被视为可替换的零部件。这种傲慢，或许才是真正需要道歉的。</p></div>
+<div class="section" id="sec-0004"><p>今天的故事就讲到这里，至于以后怎样，我们走着瞧。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">Saber方面先是发了一则公式化的否认声</span></div>
+<div class="tl-item" onclick="seek(102.9,'sec-0002')"><span class="tl-time">01:42</span><span class="tl-title">现在，让我们把时间轴拉长，看看这场争吵背</span></div>
+<div class="tl-item" onclick="seek(205.9,'sec-0003')"><span class="tl-time">03:25</span><span class="tl-title">Sacco说她需要时间想想“怎样才能挽回</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260816055205" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
