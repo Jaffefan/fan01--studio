@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-17-0905",
+  "title": "5件颠覆认知的AI动向：过度思考的模型与70亿收购",
+  "published_at": "2026-08-17 09:05",
+  "duration_seconds": 731.26,
+  "duration_label": "12分11秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Qwen 3.8 27B：默认过度思考，效果哭笑不得",
+      "golden_quote": "AI 要的是结果，不是思考过程。",
+      "keywords": [
+        "Qwen",
+        "开源模型",
+        "推理强度"
+      ],
+      "source": "Simon Willison 博客"
+    },
+    {
+      "title": "Stripe 拟70亿美元收购 OpenRouter，AI支付大战打响",
+      "golden_quote": "AI 时代，收费站比路更重要。",
+      "keywords": [
+        "Stripe",
+        "OpenRouter",
+        "收购"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Anthropic CEO：AI 赢得人心的唯一方式是真正治好癌症",
+      "golden_quote": "少喊口号，多做实事，信任才会来。",
+      "keywords": [
+        "Anthropic",
+        "信任",
+        "癌症"
+      ],
+      "source": "Business Insider"
+    },
+    {
+      "title": "OpenAI 解散安全团队，IPO 前的又一次调整",
+      "golden_quote": "安全不是成本，而是保险。",
+      "keywords": [
+        "OpenAI",
+        "安全团队",
+        "IPO"
+      ],
+      "source": "The Verge"
+    },
+    {
+      "title": "扎克伯格发布6500字宣言，但公众为何不买账？",
+      "golden_quote": "信任不是靠宣言赢来的，是靠行动。",
+      "keywords": [
+        "扎克伯格",
+        "Meta",
+        "个人AI"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
