@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>双重末日：揭秘《复仇者5》的双毁灭博士之谜 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 120 夜 / 2026-08-17</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 复仇者：末日</div>
+    <h1 class="ep-title">双重末日：揭秘《复仇<span class="hl">者5》的双毁灭博士之谜</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:26</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260817053014" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">昨天，漫威在D23上扔出了《复仇者：末日》的预告片</h3></div><p>昨天，漫威在D23上扔出了《复仇者：末日》的预告片，几千万人看了，但真正让评论区沸腾的不是毁灭博士的灭世宣言，而是一双眼睛，和一颗痣。预告里，毁灭博士戴着金属面具，只给了几个眼部特写。但就这几秒钟，粉丝们炸了：那双眼睛是蓝绿色的，而小罗伯特·唐尼是棕色眼睛。更蹊跷的是，眼睛旁边还有一颗小痣，唐尼脸上没有。于是，一个大胆的猜测迅速蔓延：这部片子里有两个毁灭博士，唐尼演的是个假的，真正的毁灭博士可能是别人——很多人押注基里安·墨菲。我们先回到预告本身。整个预告几乎全是毁灭博士的主场。开头苏·斯托姆说，拉脱维亚的统治者“曾经很善良，很有爱心”，然后画面一转，他像扔蚂蚁一样把雷神丢了出去，还召唤了一支哨兵机器人军团。他的声音低沉而威严：“你们所有人都活在被偷走的人生里，但现在，你们必须还回来。”这句台词配合着里德·理查兹的惨叫，压迫感十足。但真正让粉丝抠细节的，是那几个眼部特写。你以为这是唐尼戴了美瞳？那痣呢？网上立刻分成两派。一派坚信有两个毁灭博士，理由是漫威不可能花几千万请唐尼演个假货，但立刻有人反驳，他们当年也花大钱请了本·金斯利演假满大人。另一派则觉得大家想多了，就是唐尼戴了变色瞳片，痣可能是临时贴的。但预告里还有另一个细节：毁灭博士有两套不同的服装和面具。一套是经典的金属面具，眼神凶狠；另一套更光滑，线条更简洁，看起来没那么狰狞。这在一个反派身上显得很不寻常——难道他还有心情换造型？于是，阴谋论更盛了：两个毁灭博士，一个善一个恶，或者一个真一个假。那真的会是谁？粉丝们第一个想到的就是基里安·墨菲。他的眼睛本来就是淡蓝色，而且在《奥本海默》和《28年后》里的表演都证明了能驾驭复杂角色。之前墨菲就是粉丝选角的常客，现在又有迹象：他学过罗马尼亚语和罗姆语，正好和毁灭博士的吉普赛背景契合。甚至有网友放出了一段早期试镜的模糊音频，听起来像墨菲在念罗马尼亚语台词，真假难辨。当然，也有别的猜测：法斯宾德的万磁王，或者某个平行宇宙的里德，再大胆一点，克里斯·埃文斯的美国队长。但墨菲的呼声最高，因为他有那种阴郁又智慧的气质，和漫画里的毁灭博士很贴。现在，我们来聊聊毁灭博士这个角色的前生今世。他1962年就出现在《神奇四侠》里，是漫威最复杂的反派之一。他本是天才科学家维克多·冯·杜姆，母亲是吉普赛女巫，父亲是医生。小时候家乡受领主欺压，他用自己造的机器想救母亲，结果毁容，从此戴上了金属面具，发誓要用魔法和科技征服世界。他既是拉脱维亚的独裁者，又是科学和魔法兼修的天才，有时候甚至做出拯救世界的举动。但银幕上的毁灭博士却一直不太顺利。2005年和2007年的《神奇四侠》电影里，朱利安·麦克马洪演了一版，被批不够还原；2015年的《神奇四侠》重启里，托比·凯贝尔演了一版，但电影本身口碑崩盘。而漫威自己拿到版权后，一直没正式让他登场，直到这次。所以，当漫威宣布唐尼饰演毁灭博士时，争议立刻爆发。一是唐尼是漫威宇宙的元老，钢铁侠的形象太深入人心，观众很难把他和反派联系起来。二是漫威之前用男演员演反派经常引发质疑，比如《美国队长3》里的泽莫，虽然演得好但路人脸总会出戏。三是漫威已经有过“假反派”先例，《钢铁侠3》里本·金斯利演了假满大人，让很多粉丝失望。所以，当预告出来，很多人宁愿相信有两个毁灭博士，这样唐尼可以是假扮的，而真身另有其人，这能解释为什么唐尼会接这个角色——也许他演的是个改邪归正的钢铁侠变体，或者一个被洗脑的版本。而真正的毁灭博士另有其人，这样故事才有惊喜。但反转来了：也有理性声音认为，漫威这么做完全合理。唐尼的片酬是天文数字，他们肯定物尽其用。预告里的眼部和痣，可能纯粹是特效和化妆的细节，或者说，唐尼戴着特效面具和彩色隐形眼镜，痣是画上去的，为了让他更像漫画里的杜姆。毕竟漫画里杜姆确实有颗痣，但那是演员本身没有的。还有一种解读是，预告片故意放出这些“线索”，就是想让粉丝争论，制造热度。漫威向来擅长玩这种元叙事，他们知道粉丝会逐帧分析，所以故意放些烟雾弹。而且，漫威宇宙已经进入了多元宇宙阶段，《蜘蛛侠：英雄无归》里三个蜘蛛侠同框，奇异博士也展示了各种平行宇宙，所以有两个毁灭博士完全符合设定。再说了，他们之前说过，唐尼是“毁灭博士”而不是“钢铁侠”，但预告里唐尼的声音和姿态还是有点托尼·史塔克的味道，这可能是刻意的，也可能就是观众先入为主的错觉。现在回到关键问题：如果真有第二个毁灭博士，会是谁？墨菲的支持者搬出了证据：一，他的眼睛是蓝色，符合预告里那双眼的颜色；二，他之前被传是漫威新反派的首选；三，他的身高气质和漫画里杜姆相似——杜姆高瘦，墨菲也高瘦。而且，墨菲演过《蝙蝠侠》里的稻草人，那种阴郁疯癫劲儿和杜姆很搭。但也有反对者说，墨菲的片酬也不低，而且他刚拿了奥斯卡，可能不太想再演超级英雄大片的配角。还有人提出，漫威可能藏着更大的棋局：如果唐尼演的是“铁甲杜姆”——也就是托尼·斯塔克在某个平行宇宙变成了毁灭博士——那么真正的杜姆可能是另一个人，比如墨菲，或者甚至更隐藏的演员。这样，电影里会有两个杜姆，一个是托尼的黑化版，一个是正统漫画版，两人对决，钢铁侠以另一种方式回归。这只是猜测。但也有聪明人指出，漫威其实一直在玩“反派假扮”梗。2008年的《钢铁侠》里，反派是铁霸王，但假象是斯塔克公司在操纵。2012年《复仇者联盟》里，洛基假扮过美国队长。2016年《美国队长3》里，泽莫假扮了巴恩斯，嫁祸给美队。所以，漫威对这个套路驾轻就熟。可以确认的是，漫威不会白白浪费唐尼的回归。《钢铁侠3》里他们已经戏耍过观众一次，当时也引发巨大争议。所以，这次很可能又是故技重施，但手法更高级，因为他们直接预告了“两个杜姆”的可能性。毕竟，预告里毁灭博士的服装有两套，造型差异不小，这不像偶然。漫威甚至可能故意在预告里用不同眼色的特写来制造话题。因为逻辑上，如果只有一个杜姆，漫威不可能不小心让两个镜头里的瞳色不一致。所以，要么是疏忽，要么是刻意。作为一个观察者，我更倾向于后者。因为在漫威这样的大制作里，后期特效会统一瞳色，不可能出现这种错误。除非，他们真的用了两个演员，或者他们故意留下破绽。如果是故意，那说明他们非常清楚粉丝们会这么解读，所以顺便甩出的话题热度，他们乐见其成。甚至，墨菲的那些传闻也可能是漫威自己放出来的，为了混淆视听。毕竟，《复仇者：末日》是漫威宇宙第六阶段的重头戏，《复仇者：秘密战争》之前的铺垫，他们必须搞得足够引爆话题。现在回到粉丝们的情绪。很多人对唐尼演杜姆依然抱有怀疑，因为钢铁侠的阴影太重。他们担心的是，漫威会为了情怀而牺牲角色。但也有人觉得，唐尼演技足够，而且杜姆这个角色本身就有一种极度自信、领袖魅力和悲剧情绪，托尼·史塔克也有相似特质。也许，漫威正是看中了唐尼能同时演好天才、混蛋、英雄和反派。实际上，漫画里杜姆在“秘密战争”中确实曾成为全世界的救世主，甚至取代过上帝。所以，漫威完全可以把杜姆写成另一个“托尼·史塔克”，那种“我有权力所以全世界都该听我的”的心态。而唐尼正好能把这种自负和自私演得入木三分。所以，无论是否真有两个杜姆，这一波预告片已经成功挑起了所有人的好奇心。在电影十二月上映前，我们还会看到更多物料，也许会有第二支预告，答案也许会更明朗。“末日”究竟是谁的末日？是复仇者联盟的，还是漫威自己？只有到时候才知道了。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">昨天，漫威在D23上扔出了《复仇者：末日</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260817053014" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
