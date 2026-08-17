@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI模型泛滥成灾，买家却寥寥无几 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 118 夜 / 2026-08-17</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> AI</div>
+    <h1 class="ep-title">AI模型泛滥成灾<span class="hl">，买家却寥寥无几</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:56</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260817040155" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">CGTrader不是唯一一个在AI问题上左右为难的</h3></div><p>你好，我是伊恩。想象一下，你走进一家超市，货架上摆满了商品，但几乎没人愿意伸手去拿。这不是因为价格太贵，而是因为每件商品上都贴着一个标签：‘AI制造’。今天，我们就聊聊这个现象——3D模型市场被AI卖家挤爆，但买家呢？几乎为零。</p><p>事情是这样的。CGTrader，一个运营了十几年的3D资产交易平台，最近发布了一份年度报告。报告显示，平台上新增的商品里，大约有六分之一是AI生成的。听起来挺热闹吧？但关键在于，这些AI模型的销售额，只占了总销售额的百分之一。也就是说，货架摆满了，但卖出去的寥寥无几。</p><p>CGTrader的首席执行官Dalia Lašaitė在接受404 Media采访时说：‘我们的目标不是增加AI资产的产量，而是给设计师更好的工具，让他们工作更快，把更多时间花在创意上。’这话说得挺官方，但数据摆在那儿：调查中，买家不买AI模型的主要理由就是质量不行。只有百分之五的买家对AI购买感到满意，只有百分之四的用户觉得AI‘运作良好’。</p><p>我自己的直觉是，如果最终产品只是几个提示词就能生成，那为什么我还要花钱买一个不是你亲手做的东西呢？这不是单纯的偏见，而是价值判断的问题。</p><p>这个现象背后，其实有个更大的背景。CGTrader在去年三月和腾讯签了个协议，把AI技术整合到市场里，优化用户生成的模型。所以，这个平台现在成了AI模型的展示厅，但销售数据却表明，这些模型都在积灰。</p><p>CGTrader不是唯一一个在AI问题上左右为难的公司。几乎每个大平台都在一边砸钱推广AI，一边又得把AI产生的垃圾从公众视野里清理掉。这暴露了一个核心问题：AI公司到现在都还没找到盈利模式，但她们照样把它变成你的麻烦。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(119.2,'sec-0002')"><span>▶</span> 01:59</button><h3 class="section-title">回到3D模型市场。这个行业的历史，其实可以追溯到9</h3></div><p>说到这儿，我想起一些前尘往事。其实，AI生成内容的争议不是新鲜事。早在2022年，AI绘画突然火起来的时候，像ArtStation这样的平台就被AI作品刷屏，艺术家们集体抗议，要求平台禁止AI生成内容。后来，Epic Games收购了ArtStation，但AI问题还是没解决。直到上个月，Epic把ArtStation卖了，用户拍手叫好，说：‘终于摆脱Epic和我对AI垃圾的热爱了。’</p><p>还有游戏行业。Saber Interactive的CEO Matt Karch，上个月被爆出用ChatGPT替换了《Rideshare Simulator》的主笔，引发轩然大波。他在道歉时还说，如果回到过去，他‘很乐意’用AI换掉那位作家。这种态度，和CGTrader的CEO形成鲜明对比——一个是拥抱AI，一个是敷衍应对，但都反映出行业对AI的复杂心态。</p><p>再往前看，2023年，好莱坞编剧罢工了148天，核心诉求之一就是限制AI在编剧中的使用。当时，电影公司想用AI生成剧本初稿，编剧们坚决反对，最后达成的协议明确区分了‘AI辅助’和‘AI替代’。所以，AI在创意领域的每一次渗透，都伴随着激烈的博弈。</p><p>回到3D模型市场。这个行业的历史，其实可以追溯到90年代末。当时，3D建模还是一项高门槛的技术，只有专业工作室才能做。后来，像TurboSquid、CGTrader这样的平台出现，降低了门槛，让独立艺术家也能卖自己的模型。最初，这些平台靠的是人力成本低、质量高。但现在，AI让任何人都能生成模型，供给量暴增，但质量参差不齐，买家自然不买账。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(238.4,'sec-0003')"><span>▶</span> 03:58</button><h3 class="section-title">最后，我想起一个哲学问题：如果一件作品是AI生成的</h3></div><p>这不是第一次技术冲击市场了。还记得数字音乐吗？MP3出现后，唱片行业大乱，但最后Spotify这样的流媒体服务找到了合法订阅模式，把用户从盗版拉了回来。但AI模型不一样——它没有实体成本，可以无限复制，而且质量不稳定，所以市场共识很难形成。</p><p>有些买家觉得，AI模型‘可用但不划算’。比如，一个游戏开发者可能需要一百个树模型，AI生成可能挺快，但细节不够，还得手动修。而人类艺术家做的模型，虽然贵，但一次到位。所以，CGTrader报告里，买家说不买AI，主要原因是‘质量不达标’，这个理由很实在。</p><p>还有一点，买家的心理预期。你花钱买一个‘原创’作品，结果发现它其实是AI批量生产的，感觉就像买了个盗版。这种心理隔阂，不是技术能解决的。</p><p>那未来会怎样呢？可能有两种走向。一种，AI模型技术继续进步，质量提升到和人类作品无异，那市场会重新洗牌。另一种，是形成‘分级市场’——低端模型便宜卖，高端模型靠人工。实际上，已经有平台在尝试了，比如Sketchfab上的AI模型标注，让买家自己选择。但问题是，AI生成模型的成本几乎为零，一旦有人开始免费提供，收费的怎么办？</p><p>CGTrader的报告里，还有一个数据：只有百分之五的买家对AI满意。这个数字说明，AI在3D模型市场还远远没到成熟期。但反过来说，如果技术突破，这个数字可能会反转。硅谷的投资人看的是未来，但买家的需求是当下。</p><p>最后，我想起一个哲学问题：如果一件作品是AI生成的，那它的价值在哪里？是创意本身，还是制作过程？一位数字艺术家曾说：‘AI生成的艺术品，就像一场没有棋手的棋局。’棋盘上棋子很多，但没人动它。</p></div>
+<div class="section" id="sec-0004"><p>所以，CGTrader的这场‘AI洪水’，或许不是终点，而是一个过渡。就像当年音乐产业从CD转向流媒体，最终会形成新的平衡。但至于这个平衡长什么样，没人知道。也许，买家最终会接受AI模型，就像接受Photoshop一样。但现在，他们选择用脚投票。</p><p>好了，今天的故事就讲到这里。下次当你看到一堆AI生成的产品时，不妨想想，是谁在买，又是谁在卖。我是伊恩，我们下次再聊。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">CGTrader不是唯一一个在AI问题上</span></div>
+<div class="tl-item" onclick="seek(119.2,'sec-0002')"><span class="tl-time">01:59</span><span class="tl-title">回到3D模型市场。这个行业的历史，其实可</span></div>
+<div class="tl-item" onclick="seek(238.4,'sec-0003')"><span class="tl-time">03:58</span><span class="tl-title">最后，我想起一个哲学问题：如果一件作品是</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260817040155" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
