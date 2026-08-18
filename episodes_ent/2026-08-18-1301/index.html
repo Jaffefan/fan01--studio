@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>当星际迷航撞上911：被改写的剧情 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 124 夜 / 2026-08-18</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 星际迷航</div>
+    <h1 class="ep-title">当星际迷航撞上9<span class="hl">11：被改写的剧情</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:48</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260818050246" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">拉塞尔说，9月11日发生时，他们正紧张地制作这款游</h3></div><p>你好，我是伊恩。想象一下，你正坐在电脑前，准备发射星际飞船的穿梭机，结果下一秒，它却撞进了一栋大楼。这不是科幻电影，而是《星际迷航：精英力量2》原本的开场。但2001年9月11日之后，这个镜头永远不可能出现了。</p><p>2002年6月，一款名为《星际迷航：精英力量2》的第一人称射击游戏登陆PC平台。它由Raven Software开发，Activision发行，采用id Tech 3引擎——就是《雷神之锤3》那个引擎。游戏发售后，商业表现并不理想，堪称商业失败。但时间是个有趣的东西，二十多年过去，它却成了星际迷们心中的经典，被许多人称为最棒的《星际迷航》游戏之一。它巧妙融合了解谜、动作和对话，让你在星际舰队学院当学员，然后卷入一场跨维度危机。</p><p>但你可能不知道的是，这款游戏原本的开场完全不同。在一档名为FRVR的播客采访中，游戏的剧情主笔兼关卡设计师本森·拉塞尔回忆道，他们最初设定了一个惊心动魄的开场：星际舰队学院遭到攻击，一架穿梭机撞进了大楼。这个画面，在2001年9月11日之前，或许只是科幻冒险的常规操作。但那天之后，一切都不一样了。</p><p>拉塞尔说，9月11日发生时，他们正紧张地制作这款游戏。恐怖袭击的新闻铺天盖地，而他们的游戏里，正好有穿梭机撞楼的场景。说实话，那个画面本该是什么效果呢？在游戏里，你扮演刚入学的军校生，突然警报大作，窗外一架穿梭机失控，直直撞向学员宿舍楼，爆炸、火焰、碎片横飞，你抓起相位枪冲出去，开始你的第一个任务。听起来很刺激，对不对？但在2001年9月的美国，任何与飞机撞楼相关的画面都会勾起人们最痛苦的回忆。拉塞尔用了“no-no”这个词，他说那是禁区，原因不言自明。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(117.8,'sec-0002')"><span>▶</span> 01:57</button><h3 class="section-title">我们回过头看《星际迷航》本身。这个系列诞生于196</h3></div><p>于是，开发团队不得不紧急重写这段剧情。具体怎么改的，拉塞尔没有细说，但最终版本里，开场变成了你在学院里平静地接受训练，然后被传送到一艘星舰上，参与对付博格人的任务。原本的袭击情节被彻底移除，整个游戏的叙事方向都随之调整。</p><p>这不是唯一受影响的作品。你可能还记得，Rockstar的《侠盗猎车手3》同样诞生于那个敏感时期。游戏设定在类似纽约的“自由市”，原本计划让警车外观更贴近真实的纽约警局车辆，但9/11之后，他们赶紧改了设计，让它看起来更普通，避免任何联想。更著名的是游戏封面：原版封面是主角克劳德站在车前，背景是自由市的天际线，但美国版封面换成了更抽象、更具网格感的风格。这个临时改出来的封面，意外成了经典，从此奠定了《侠盗猎车手》系列封面的统一风格——直到今天，包括即将发布的《GTA6》封面，都延续了那个网格状设计。也就是说，如果没有9/11，也许《GTA》系列的封面会是另一个样子。</p><p>我们回过头看《星际迷航》本身。这个系列诞生于1966年，由吉恩·罗登贝瑞创建，描绘了一个乐观的未来：人类摆脱了战争和偏见，探索星辰，与外星文明和平共处。但历史上的每一次现实危机，都曾投射到《星际迷航》的故事里。越战期间，原初系列讲了很多关于战争和和平的寓言；冷战时期，克林贡人和罗慕兰人成了政治隐喻；而在9/11之后，整个科幻警匪影视作品都开始调整内容。好莱坞一度推迟或修改了涉及恐怖袭击的影片，比如《蜘蛛侠》里世贸中心被取消的镜头，还有《致命武器4》等片删除了撞楼画面。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(235.6,'sec-0003')"><span>▶</span> 03:55</button><h3 class="section-title">站在今天，我们看这件事，或许能更平和地思考：艺术创</h3></div><p>游戏界同样如此。在《精英力量2》之前，就有游戏因现实事件被迫改动。比如，2001年初的《秘密潜入》（Project I.G.I.）就因为它以中东为背景而受到争议。更早之前，1986年的《壮志凌云》电影引发了飞行游戏热潮，但那时冷战尚存，玩家毫无心理负担。可到了新世纪，飞机与大楼的组合就成了大忌。</p><p>所以说，《星际迷航：精英力量2》只是众多被历史事件改写的作品之一。但它的不同在于，它保留了那个时代特有的乐观主义：即便危机四伏，星际舰队依然代表着人类最美好的理想。也许正是这种理想主义，让它在多年后依然打动人心。</p><p>现在，我们再来看看拉塞尔的那段采访。他没有透露太多重写的细节，但你可以想象那个开发团队当时的困境：游戏开发周期紧张，发行商盯着进度，突然一个全球性事件打乱了所有计划。他们必须迅速修改剧情，而又不能破坏游戏的整体结构。实际上，这种修改还影响了游戏的基调。原本那个袭击开场可能会带来更沉重的氛围，但最终版本的《精英力量2》保持了相对轻快的冒险感，这也是它吸引玩家的原因之一。</p><p>当然，这类修改并非总是一帆风顺。2002年，真人大片《生化危机》上映，片中有一幕飞机撞向浣熊市大厦的镜头，虽然拍摄于9/11之前，但片方还是决定删除。而在游戏界，2003年的《核战危机》（Atom Strike）原本也包含类似场景，后来被替换成地面攻击。</p><p>站在今天，我们看这件事，或许能更平和地思考：艺术创作和现实之间的关系，从来都是双向的。有时现实打破艺术，有时艺术影响现实。9/11改变了美国，也改变了全球的娱乐产业。那些在2001年夏天还在制作的游戏、电影、电视剧，一夜之间都需要重新审视。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(353.4,'sec-0004')"><span>▶</span> 05:53</button><h3 class="section-title">如今，9/11已经过去二十多年，新一代玩家可能根本</h3></div><p>《星际迷航：精英力量2》最终在2002年6月发售，正好是“9/11”一年后。玩家们玩到的，是一个没有穿梭机撞楼时刻的游戏。但如果你玩过，你会发现，游戏里依然有一次飞船坠毁的桥段，不过那是在外星球上，画面不涉及地球地标。这大概是一种微妙的平衡：既要保留科幻的刺激感，又要避免触碰现实创伤。</p><p>让我再讲一个细节。在《精英力量2》里，玩家可以见到皮卡德舰长，由帕特里克·斯图尔特配音。有人开玩笑说，光是听到他那深沉的声音就值回票价了。这款游戏后来被粉丝们称为“最好的Star Trek游戏之一”，甚至有人专门制作了高清补丁，让它能在现代系统上运行。</p><p>所以，当我们谈论《星际迷航：精英力量2》时，我们谈论的不仅是一款游戏，更是一段历史的见证。它提醒我们，创作永远不可能是真空中的行为。每一个游戏、每一部电影，都嵌在时代背景里，而时代会留下它的痕迹，即使你试图忽略。</p><p>也许你觉得，改动一个开场镜头没什么大不了。但换一个角度想，如果那款游戏真的保留了穿梭机撞楼的场面，它还会成为今天的“感人经典”吗？恐怕不会。正是因为那些删改，它才成了一个“幸存者”，一个度过了时代风暴的作品。而《GTA3》的封面故事更是彻底改变了整个系列的美学走向。所以，历史有时会以我们意想不到的方式，悄悄影响文化作品的面貌。</p><p>如今，9/11已经过去二十多年，新一代玩家可能根本不知道这段往事。但每次有人玩《精英力量2》，或者看到《GTA3》的封面，他们都在无形中体验着历史的重写。这不是坏事，这只是故事的一部分。</p></div>
+<div class="section" id="sec-0005"><p>好了，今天的故事就讲到这里。下一次你拿起手柄，或者点开一部老科幻片，不妨想想它背后可能隐藏着多少被抹去的瞬间。那些看似中性的画面，可能是创作人员顶着时代压力做出的选择。艺术从来不是纯净的，它包含了所有现实的痕迹。</p><p>我是伊恩，我们下次再见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">拉塞尔说，9月11日发生时，他们正紧张地</span></div>
+<div class="tl-item" onclick="seek(117.8,'sec-0002')"><span class="tl-time">01:57</span><span class="tl-title">我们回过头看《星际迷航》本身。这个系列诞</span></div>
+<div class="tl-item" onclick="seek(235.6,'sec-0003')"><span class="tl-time">03:55</span><span class="tl-title">站在今天，我们看这件事，或许能更平和地思</span></div>
+<div class="tl-item" onclick="seek(353.4,'sec-0004')"><span class="tl-time">05:53</span><span class="tl-title">如今，9/11已经过去二十多年，新一代玩</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260818050246" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
