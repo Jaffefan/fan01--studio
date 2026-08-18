@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>六十六天倒计时：影之刃零的功夫朋克突围 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 126 夜 / 2026-08-18</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 影之刃零</div>
+    <h1 class="ep-title">六十六天倒计时：影<span class="hl">之刃零的功夫朋克突围</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 10:11</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260818060712" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">游戏里有个东西叫影境，是八幅手绘的水墨地图拼起来的</h3></div><p>8月18号上午十点，索尼开了场State of Play，也就是它们那种不定期播的官方发布会。这事本身不稀奇，稀奇的是，这场发布会的所有时间，都给了同一个游戏——《影之刃零》。这可是索尼第一次为一个国产游戏专门开专场发布会，而且时间长达18分钟，还拉上了甄子丹一起出镜讲解。当时我正刷着手机，看到这个消息第一反应是，这游戏什么来头，能让索尼这么给面子？</p><p>游戏制作人梁其伟和创意总监，再加上甄子丹，三个人在视频里聊了聊世界观、剧情和玩法。甄子丹演的是游戏里的一个角色，叫魔渊。但更让我注意的，是视频里展示的一个boss战——舞狮。你可以想象一下，一个传统的舞狮，被改造成了机械怪物，身上带着铆钉和蒸汽管道，动作却保留着南派舞狮的灵动。这个画面当时就让我愣住了，传统和机械感混在一起，没有违和感，反而有股说不出的劲儿。</p><p>《影之刃零》的故事，玩家扮演一个叫魂的杀手，被组织里的兄弟背叛，胸口被捅了一刀，命悬一线。一个叫鬼手的医生救了他，但代价是魂只剩下66天的命。所以整个游戏就是在这66天里，魂得查出真相，报自己的仇，顺便还牵扯出了一个可能毁掉整个武林的阴谋。这个设定加上开放的结局，听着就有点像武侠版的《死亡搁浅》，但梁其伟他们想的远不止这些。</p><p>游戏里有个东西叫影境，是八幅手绘的水墨地图拼起来的一个世界。传统水墨画的那种留白和山水的意境，里面却藏着各种蒸汽机关和机械改造的人。梁其伟管这个叫功夫朋克，这个词儿听着新鲜，其实就是把东方武侠的骨血，塞进一个工业革命的壳里。你看游戏里的武器，30种主武器，25种副武器，什么醉剑、白蟒赤练、灵蛇软剑，每一把都有自己的一套机制和出处。像醉剑，喝醉酒了闪避就猛，那种醉拳的节奏感，玩起来肯定带感；白蟒赤练，双剑合璧能打出远程剑气，听着就像古龙小说里的招式。还有一个叫虎炮的武器，一把做成老虎形的火铳，能提前引爆敌人身上的炸药。这种把武侠里的奇门兵器，跟火器、机关结合起来的做法，是这游戏最妙的地方。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(152.9,'sec-0002')"><span>▶</span> 02:32</button><h3 class="section-title">说到梁其伟，这名字可能会让一些老玩家心里咯噔一下。</h3></div><p>但要说这游戏最狠的，还是难度设计。它有四个难度，最简单的是入阵者模式，给你降低操作门槛，让没玩过动作游戏的也能看看剧情；最难的叫逆天者模式，它不只是给你加怪物攻击力，还弄了一套动态AI，怪物会学着你的打法来针对你，你老爱用闪避，它就专挑你闪避完的那个空档反击；而二周目还有个66天模式，在这模式里，不光你死了会扣天数，剧情推进也扣天数，天数归零，存档就没了，从头再来。这个设计我印象特别深，它把游戏里魂只剩66天命的设定，直接变成了玩家身上的压力。你每做一个决定，都得掂量掂量值不值，那种紧迫感，估摸着玩起来会攥着手柄出汗。</p><p>梁其伟他们没想只做一款爽快的动作游戏，他们想借这个66天的机制，让人感觉到魂每天活在倒计时里的那种焦虑。这是把武侠里常说的江湖身不由己，跟游戏机制绑在了一起。一个年头的命，逼着你对选择负责，这种设计，在动作游戏里不太多见。</p><p>说到梁其伟，这名字可能会让一些老玩家心里咯噔一下。他是个独立游戏开发者出身，2008年的时候，他还是个在清华读建筑的学生，业余时间做了个叫《雨血》的RPG。那游戏用RMXP做的，就是那种小黄油常用的引擎，画面倒是挺特别的，黑白水墨风，但讲的故事一点不简单。魂和左殇的故事，就是从那里开始的。当时《雨血：死镇》发到网上，没花一分钱宣传，就靠玩家口口相传，拿了个独立游戏节的奖。那时候国内单机市场还冷着呢，他跟朋友几个人，凭着一股气，硬是把《雨血》系列做了下去。到了《雨血：蜃楼》，他们转成了横版动作游戏，有点像《胧村正》那种。但那时候想在国内出，太難了，他们就把玩家攒的钱，拿去成立了公司，这就是后来的灵游坊。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(305.9,'sec-0003')"><span>▶</span> 05:05</button><h3 class="section-title">国产武侠游戏，这几十年其实没少折腾。从《仙剑奇侠传</h3></div><p>灵游坊那阵子接了不少外包活计，也做了手游，像《影之刃》和《影之刃2》，都是基于《雨血》世界观。手游赚钱啊，一个皮肤挣得比单机一辈子都多。但梁其伟心里那个武侠梦一直没灭，他后来在采访里提过，说手游那几年，是让他们团队活下来的办法，但脑子里“魂”的故事，从来没放下。一直到2019年，他们在那个年度游戏大奖的颁奖礼上，放出了《影之刃零》的第一段预告片。片子里就一个黑衣角色，胸口插着一把剑，站在雪地里，水墨和蒸汽交杂，一秒钟就让人认出那是魂的故事。那个预告片当时在B站炸了，弹幕里全是“有生之年”。但那时候没人想到，这个游戏会跟索尼绑得这么深。</p><p>索尼PlayStation从2018年起就一直在扶持中国独立游戏，他们有个中国之星计划，投钱投技术，帮像《暗影火炬城》《纪元：变异》这些国产游戏上主机。但主机平台的玩家，口味刁得很，你再有情怀，手感差了照样不买账。可《影之刃零》毕竟熬了六年，光Demo就打磨了好几版，今年三月份放出的那段实机演示，在国外游戏社区里居然也刷了屏。有些老外评论说，这游戏的“武侠味”比《只狼》还浓。当时我心里还犯嘀咕，是不是国内玩家在吹，可后来看到索尼直接给这游戏开专场发布会，我信了。索尼不是慈善家，它敢这么捧，肯定是因为这游戏质量过硬，能在全球市场卖得动。</p><p>国产武侠游戏，这几十年其实没少折腾。从《仙剑奇侠传》那种回合制拖到《古剑奇谭》的即时动作，但一直没跳出国产RPG的圈子。更早的《金庸群侠传》虽然开放，但技术还是太糙。到了《影之刃零》，它想做的不只是把一个武侠故事讲好，它是想用国际3A的标准，去重建一个中国武侠的骨架。你看它学《黑暗之魂》：魂系那套地图设计——把一张大地图拆成几个箱庭，通过捷径绕来绕去，它学这套，但学得聪明，它把大地图的故事，用一环扣一环的事件串起来，这味道就不同了。而舞狮boss战那段，它把南派舞狮的“起狮头，施狮尾”都绑在机械骨架上，打起来看着既像看表演，又像打一个机甲战士。这种把自家民俗文化用电子游戏讲出来的讲究，是我以前没见过的。</p></div>
+<div class="section" id="sec-0004"><p>对于《影之刃零》能不能卖爆，网上有看好的，也有说悬的。看好的人觉得，这游戏有索尼帮忙站台，宣发渠道广了，而且游戏本身那个黑暗美学的武侠，在全球玩家眼里有新鲜劲。不看好的人说，武侠文化太东方了，老外不一定懂那套江湖恩怨情仇，而且剧情里那层人与人之间的算计，可能不像中世纪骑士那样容易代入。还有一种声音，在社区里吵得挺凶的，就是说它过于魂，怕它学了个皮没学骨，到时候手感不伦不类。但梁其伟在采访里回过这个话，他说《影之刃零》不是要做一个魂的克隆，它是把魂的那套“受苦”精神，拿到武侠世界里来重新煮一遍。</p><p>我认识一个在游戏媒体干了十几年的朋友，他说这游戏最大的意义，不在于它卖多少份，而在于它证明了国产游戏也能靠一张水墨脸，站到全球顶级发行商的主桌旁边。这话我琢磨了一下，真不是在吹。索尼给它做专场发布会，等于是在说，我看好这款游戏能帮着卖我的PS5。什么时候中国游戏能上索尼的宣传封页？以前我们总说，等哪天中国人自己做出一个像样的3A来，现在《影之刃零》至少把脖子探出去了。</p><p>至于最后它品质到底配不配得上这份排面，等10月29号上线了，咱们玩到手再说。你可以自己试试，看看魂在那个只有66天的世界里，能走多远，能不能在倒计时归零之前，找到那条自己认定的路。反正我自己是已经预购了，到时候，咱们游戏里见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">游戏里有个东西叫影境，是八幅手绘的水墨地</span></div>
+<div class="tl-item" onclick="seek(152.9,'sec-0002')"><span class="tl-time">02:32</span><span class="tl-title">说到梁其伟，这名字可能会让一些老玩家心里</span></div>
+<div class="tl-item" onclick="seek(305.9,'sec-0003')"><span class="tl-time">05:05</span><span class="tl-title">国产武侠游戏，这几十年其实没少折腾。从《</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260818060712" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
