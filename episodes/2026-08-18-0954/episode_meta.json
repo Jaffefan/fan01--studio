@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-18-0954",
+  "title": "AI 时代的水印与暗流：从代码托管到珍本书籍的争夺",
+  "published_at": "2026-08-18 09:54",
+  "duration_seconds": 703.92,
+  "duration_label": "11分43秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Cursor 出招：Origin 代码托管，挑战 GitHub",
+      "golden_quote": "代码托管的下一战，不是仓库，是智能体。",
+      "keywords": [
+        "Cursor",
+        "Origin",
+        "代码托管",
+        "GitHub",
+        "AI智能体"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "亚马逊买下珍本图书，扫描后销毁？",
+      "golden_quote": "书被销毁了，但它以另一种形式融入了 AI。",
+      "keywords": [
+        "亚马逊",
+        "珍本图书",
+        "AI训练数据",
+        "销毁",
+        "404 Media"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "一张手机照片，就能测出你胰岛素抵抗？",
+      "golden_quote": "健康筛查，可能从一张照片开始。",
+      "keywords": [
+        "Google",
+        "PhotoScan",
+        "胰岛素抵抗",
+        "身体成分",
+        "智能手机"
+      ],
+      "source": "Google Research：Blog（网页）"
+    },
+    {
+      "title": "大学生全员 AI 作弊？这真不怪学生",
+      "golden_quote": "不是学生都坏，是考试设计太天真。",
+      "keywords": [
+        "AI作弊",
+        "大学生",
+        "教育",
+        "开卷考试",
+        "诚信"
+      ],
+      "source": "Hacker News - AI"
+    },
+    {
+      "title": "Anthropic 给 Claude 生成内容加数字水印",
+      "golden_quote": "水印不解决所有问题，但至少让来源可追踪。",
+      "keywords": [
+        "Anthropic",
+        "Claude",
+        "水印",
+        "AI透明度",
+        "欧盟"
+      ],
+      "source": "Hacker News - AI"
+    }
+  ]
+}
