@@ -1,0 +1,69 @@
+{
+  "episode_id": "2026-08-19-0955",
+  "title": "5 个信号：AI 正在悄悄改变我们的工作、学习与创造",
+  "published_at": "2026-08-19 09:55",
+  "duration_seconds": 850.2,
+  "duration_label": "14分10秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Mojo 语言正式开源，编译器全面开放",
+      "golden_quote": "开源的不仅仅是代码，更是野心。",
+      "keywords": [
+        "Mojo",
+        "开源",
+        "编译器",
+        "Modular",
+        "Python"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "Claude 接管你的邮箱和网盘，你准备好了吗",
+      "golden_quote": "把发送键交给 AI，得看它是不是靠谱。",
+      "keywords": [
+        "Claude",
+        "Gmail",
+        "Google Drive",
+        "AI 助手"
+      ],
+      "source": "X：Claude (@claudeai)"
+    },
+    {
+      "title": "OpenAI 推出 ChatGPT for Teens：安全与学习并重",
+      "golden_quote": "AI 教育，安全与效果并重。",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT for Teens",
+        "教育",
+        "安全",
+        "家长控制"
+      ],
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）"
+    },
+    {
+      "title": "笔记本模型媲美云端巨头？Qwen3.8-27B 登顶",
+      "golden_quote": "参数不是唯一标准，思考才是。",
+      "keywords": [
+        "Qwen",
+        "模型",
+        "智能指数",
+        "本地部署",
+        "成本"
+      ],
+      "source": "Tomer Tunguz 博客（VC 分析）"
+    },
+    {
+      "title": "建筑巨头用 Runway 设计体育场，效率翻倍",
+      "golden_quote": "AI 不是来抢饭碗的，是来帮你搬砖的。",
+      "keywords": [
+        "Populous",
+        "Runway",
+        "建筑设计",
+        "效率提升"
+      ],
+      "source": "Runway：News（网页）"
+    }
+  ]
+}
