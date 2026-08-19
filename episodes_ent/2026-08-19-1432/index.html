@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>舞狮Boss战：中式武侠的全球惊艳 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 129 夜 / 2026-08-19</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 影之刃零</div>
+    <h1 class="ep-title">舞狮Boss战：<span class="hl">中式武侠的全球惊艳</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 13:43</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260819063436" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">为了做到这一点，灵游坊的动作团队，在制作人梁其伟和</h3></div><p>你好，我是伊恩。今天想跟你聊聊一只狮子。不是动物园里的那种，而是一只出现在游戏里的、由人扮演的南狮。它，在几天前，惊艳了全球玩家。</p><p>8月18号，国产武侠游戏《影之刃零》在索尼的State of Play发布会上，放出了一段18分钟的实机演示。就在这段视频里，有一场完整的舞狮Boss战。镜头里，一只巨大的、色彩斑斓的南狮在破败的庙宇中苏醒，它眨了眨眼，抖了抖鬃毛，然后以一套匪夷所思的身法向主角扑来。那一刻，屏幕前的玩家，无论国内还是国外，都屏住了呼吸。这段演示在YouTube上迅速突破了百万播放，评论区里，不同语言都在惊叹同一个词：Chinese Kung Fu。</p><p>但你可能不知道，这只狮子背后，藏着一个中国游戏团队多年的执念和匠心。今天，我们就来聊聊这只狮子，以及它背后的《影之刃零》，是如何在一招一式中，把中式武侠的神韵，打给全世界看的。</p><p>先说说这场舞狮Boss战本身。它不是简单的套个狮子的皮，而是把传统南狮的神态、动作，甚至那种介于“像”与“不像”之间的微妙质感，都做了出来。你会看到狮子苏醒时，它的身体起伏，毛发像波浪一样抖动，那是模仿狮子呼吸的节奏。你还会看到它眨眼、张嘴，那些细微的面部表情，都带着一种类似真狮的灵气，但你又知道，它是由人扮演的。这种“似像非像”的状态，正是舞狮的灵魂。</p><p>为了做到这一点，灵游坊的动作团队，在制作人梁其伟和动作导演羊柳的带领下，做了一件在游戏行业里近乎疯狂的事：他们完全抛弃了市面上现有的动作模板——那些欧美或日式游戏里成熟的武打套路——而是从零开始，去创作一套原创的中式武学体系。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(117.6,'sec-0002')"><span>▶</span> 01:57</button><h3 class="section-title">但武侠，或者说真正的中国功夫，它讲究的是“内敛”、</h3></div><p>他们去找了南派舞狮的非遗传承人，实地观摩舞狮的身法、节奏、发力方式，甚至神态细节。他们在动捕棚里一遍遍地捕捉，反复调整，就为了还原南狮那种灵动鲜活的气韵。用梁其伟的话说，这不是简单的动作捕捉，而是进入到文化的母体之中，让文化表达更有质感。</p><p>你可能要问，为什么要这么费劲？直接用现成的动作资源不行吗？这里，我们得把时间往回拨一拨，看看中国武侠游戏这几十年的路。</p><p>实际上，武侠游戏并不是个新鲜词。早在上世纪90年代，国产单机游戏就迎来过武侠的黄金时代。你还记得《仙剑奇侠传》吗？那是1995年，大宇资讯的《仙剑》凭借动人的剧情和古风配乐，成了无数中国玩家的初恋。然后是《金庸群侠传》，它让你能自由探索金庸笔下的世界。还有《剑侠情缘》，以及后来的网络游戏《剑侠情缘网络版3》，也就是玩家常说的“剑网3”。这些游戏，大多以剧情、角色和世界观见长。但在动作设计上，坦白说，很长一段时间里，我们并没有形成自己的一套体系。</p><p>你去看很多国产武侠游戏的动作，要么是模仿日式动作游戏——比如《鬼泣》或《忍者龙剑传》那种流畅但风格偏动漫的招式，要么是套用欧美动作游戏——比如《战神》那种厚重、强调力量感的打击感。甚至有些干脆就是单纯的数据计算，你打我一下，我打你一下，动作只是个数字的标尺。</p><p>但武侠，或者说真正的中国功夫，它讲究的是“内敛”、“坚韧”、“藏力于形”。就像李小龙说的，功夫是一种为了截击对手而设计的艺术，它强调的是一击必杀，而不是花哨的表演。这种神韵，很难在欧美的动作模板里找到。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(235.2,'sec-0003')"><span>▶</span> 03:55</button><h3 class="section-title">在CGTN的纪录片里，我们看到，梁其伟和羊柳，他们</h3></div><p>其实，中国游戏界很早就有一批人，想要做出真正的中国功夫游戏。我们不妨回溯到2000年左右，当时有一些尝试，比如《傲世三国》——虽然它是策略游戏，但它的美术风格和氛围，就在努力营造三国乱世的铁血感。还有《秦殇》，那是一款即时制角色扮演游戏，设定在秦末，战斗系统很有特色，但它的动作感，在今天看来还是不够“武侠”。更近一点，我们看到了《流星蝴蝶剑》，那大概是很多老玩家记忆里，第一款真正强调“冷兵器碰撞”的国产动作游戏。它的剑招、匕首招，甚至有大刀、长枪，每一种武器都有独立的架势和招式。但受限于当时的开发条件，它的操作手感比较生硬，画面也简陋，后来逐渐被遗忘。</p><p>但《影之刃零》的不同之处在于，它是在现代化工业体系下，用最高级别的技术来做这件事。它是一个3A级的项目——也就是高投入、高体量、高画质的游戏。它的目标，不仅仅是中国玩家，而是全球市场。这意味着，它的每一个动作，不仅要让中国人觉得“对”，还要让外国玩家觉得“帅”。这是一个极大的挑战。</p><p>梁其伟，这个制作人，其实是个很有意思的人。他毕业于清华大学，又去了美国南加州大学电影艺术学院攻读互动媒体专业。他的起点，是《雨血》系列——那是一个以阴暗美学和深沉剧情见长的武侠独立游戏，在海外口碑很好。但这次的《影之刃零》，是他在工业化上的全力一搏。</p><p>在CGTN的纪录片里，我们看到，梁其伟和羊柳，他们不是在闭门造车。羊柳深受《卧虎藏龙》的影响，他深知中式武学的神韵。他强调，所有招式、身法、攻防姿态，都必须建立在人类体能的边界之内。这意味着，不会有那种凭空飞跃十米、或者一拳打碎山石的超现实动作。他们要做的是，在合理范畴内放大武侠的飘逸感与力量感。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(352.9,'sec-0004')"><span>▶</span> 05:52</button><h3 class="section-title">而舞狮，特别是南狮，它讲究“生动威猛”，追求的是既</h3></div><p>这就让我们想到影视行业的一个类似现象。很多中国电影，在追求“东方美学”时，往往会陷入两个极端：要么是用好莱坞的套路拍中国故事，结果不伦不类；要么是刻意堆砌中国元素，但流于表面，空洞无物。但真正成功的，比如《卧虎藏龙》，它之所以能打动全球观众，是因为它把东方哲学的意境，融入了动作设计里。李慕白和玉娇龙在竹林上打斗，那种随风飘动、身轻如燕的物理感，其实是中国水墨画的意境，而不是真实的物理。那一刻，观众相信，功夫的世界里，人是可以借助自然之力腾挪的。</p><p>再比如近年的大片《一代宗师》，王家卫展现的“功夫”是一种人生哲学，每招一式都有讲究。而《叶问》系列，则把咏春拳的“近身、短桥、窄马”拍得虎虎生风，让全世界都知道了“Chinese Wing Chun”。</p><p>但游戏和电影不同。游戏是互动的，玩家的每一个操作，都需要有即时的反馈。这意味着，游戏动作设计必须更精确、更有物理感。而《影之刃零》的团队，正是希望在这个互动性上，做出中式哲学的味道。</p><p>再回到这只舞狮Boss。为什么选舞狮？可能一部分原因是，舞狮本身就自带一种“游戏感”——它是由人操控的，有一个操控者，被操控的狮子是有生命力的，但操控者和狮子之间又有一种权力关系。这在游戏里，就呈现为Boss战的多阶段变化：第一阶段，你可能要对付狮子的凶猛扑击；第二阶段，狮子也许会露出它下面的人，或者操控者加入战斗；这种设计，就很有张力。</p><p>而舞狮，特别是南狮，它讲究“生动威猛”，追求的是既凶猛又传神。在传统民俗里，舞狮是驱邪避害的瑞兽。把它放在一个黑暗风格的武侠游戏里，就形成了一种反差：本来是喜庆的狮子，在这里成了凶险的敌人。这种颠覆，让文化表达有了新的维度。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(470.5,'sec-0005')"><span>▶</span> 07:50</button><h3 class="section-title">当然，这背后还有一个更大的背景，就是中国游戏产业在</h3></div><p>其实，在更早的《影之刃》系列——那是一款横版动作游戏——梁其伟就已经在尝试原创的武术体系。但那个系列因为多是2D，很多动作设计靠的是手绘，物理反馈有限。而现在的3D，意味着他可以用动捕，把真实武术家的动作记录下里，再调整成游戏的打击感。这是一个巨大的进步。</p><p>我们再看看全球游戏界，其实有很多游戏都在尝试用动作来传达文化。比如《只狼》，它虽然是日本背景，但它的弹刀、架招，其实是日本刀剑术的体现——那种强调架势碰撞和一击必杀的决战感，就是日式的武士道美学。再比如《对马岛之魂》，它更多地参考了黑泽明的电影，用剑戟片的方式做战斗，讲究“交手一瞬间”的决斗。这些都是他们本民族文化在游戏里的显现。</p><p>而中国，一直缺少这样的一个代表作。我们有很多仙侠游戏，但那更多的是一种玄幻魔法，是“御剑飞行”、“法术轰炸”，跟传统武术的物理近战，完全是两个路子。</p><p>所以，《影之刃零》的意义，也许就在于它试图填补这个空白：用现代技术，去呈现真正的、根植于传统武术的武侠。它不是修仙，不是玄幻，而是实打实的“江湖”。</p><p>当然，这背后还有一个更大的背景，就是中国游戏产业在全球化过程中的文化自觉。过去，我们谈“文化输出”，更多是表面的符号，比如灯笼、包子、功夫演员。但真正有深度的文化输出，是靠产品本身内在的审美和哲学。《影之刃零》的这次尝试，不管是成功还是失败，都标志着中国游戏开始有底气去用世界听得懂的语言，讲述独特的中式故事。</p></div>
+<div class="section" id="sec-0006"><div class="section-header"><button class="section-btn" onclick="seek(588.1,'sec-0006')"><span>▶</span> 09:48</button><h3 class="section-title">将来，这只狮子会成为游戏史上的经典Boss，还是仅</h3></div><p>现在，游戏已经定档在10月29号发售。玩家们的期待值，经过这次舞狮Boss的展示后，已经拉到了顶点。但期待背后，也有担忧。有人担心，这个游戏会不会是“预告党”——只预告好看，实际玩起来就拉胯。这种担心很合理，毕竟我们见过太多宣传惊艳、实机拉胯的案例。有人在社交媒体上表达了类似“怕失望”、“先观望着”的念头。</p><p>同时，也有人对这个游戏的“黑暗美学”提出质疑。很多中式武侠游戏，都喜欢走明亮、唯美的路线，像仙侠游戏那样仙气缭绕。但《影之刃零》的调性非常暗黑，有点那种《黑暗之魂》式的绝望感。这种风格，能不能被国内玩家接受？也是个未知数。我记得油管上有老外评论说：“终于有一款游戏，不是穿得花里胡哨的仙侠，而是真正的、沾着泥土的江湖。”但也有老玩家说：“这感觉像西方游戏套了东方皮，希望战斗能更接近我们想象中的武侠，而不是魂系。”这些声音，都值得玩味。</p><p>说到底，游戏还没发售，谁都不知道它最终会是什么样。但有一点可以确定：这只舞狮，已经让全世界看到，中国游戏人正在用一种前所未有的方式，来诠释我们自己的文化。它不是模仿，也不是拼凑，而是源自对传统的敬畏和对未来的野心。你可能会觉得，我说得有点大。但如果你去看CGTN那条纪录片，看到那些动画师和动捕演员在棚里一遍遍摔倒、爬起，反复调整一个翻身动作的细节，你会明白，这确实是一个匠人团队在做的事。</p><p>将来，这只狮子会成为游戏史上的经典Boss，还是仅仅成为一段模糊的回忆？这取决于游戏本身的品质。但至少，它为后来者蹚出了一条路。哪怕失败了，至少让后人知道，这条路有人走过，而且走得很认真。或许，这就是“匠心”最好的注脚。</p></div>
+<div class="section" id="sec-0007"><p>今天就聊到这里。那只狮子，还在等它的十月。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">为了做到这一点，灵游坊的动作团队，在制作</span></div>
+<div class="tl-item" onclick="seek(117.6,'sec-0002')"><span class="tl-time">01:57</span><span class="tl-title">但武侠，或者说真正的中国功夫，它讲究的是</span></div>
+<div class="tl-item" onclick="seek(235.2,'sec-0003')"><span class="tl-time">03:55</span><span class="tl-title">在CGTN的纪录片里，我们看到，梁其伟和</span></div>
+<div class="tl-item" onclick="seek(352.9,'sec-0004')"><span class="tl-time">05:52</span><span class="tl-title">而舞狮，特别是南狮，它讲究“生动威猛”，</span></div>
+<div class="tl-item" onclick="seek(470.5,'sec-0005')"><span class="tl-time">07:50</span><span class="tl-title">当然，这背后还有一个更大的背景，就是中国</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260819063436" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
