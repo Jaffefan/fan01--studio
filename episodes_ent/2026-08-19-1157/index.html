@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>罗宾·威廉姆斯的孩子用Instagram对抗AI垃圾 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 127 夜 / 2026-08-19</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 罗宾·威廉姆斯</div>
+    <h1 class="ep-title">罗宾·威廉姆斯的孩子用In<span class="hl">stagram对抗AI垃圾</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:39</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260819035858" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这个行动背后，是泽尔达去年的一次呼吁。她曾在社交媒</h3></div><p>2014年8月11日，罗宾·威廉姆斯离开人世，留下的是无数欢笑和深思。他的Instagram账号，像一片安静的墓地，停在了2014年，直到十年后的今天，2026年8月，他的三个孩子——扎克、泽尔达和科迪——决定重新激活它。他们不是想复活父亲的虚拟形象，而是想在这个人工智能泛滥的时代，为父亲的记忆建立一个安全的避风港。</p><p>这个消息来自《Deadline》的报道。威廉姆斯的孩子们发表了一份联合声明，说：'在我们父亲75岁冥诞之际，我们感激地看到新一代发现他的作品，而老粉丝们继续庆祝他带来的欢乐。'声明继续道：'随着技术的发展，我们希望这里成为一个安全、可信的地方，让故事、照片、视频和回忆，都以真实、温暖和关怀的方式，反映他的遗产。'</p><p>他们不是要分享父亲的AI生成视频，而是要分享他真实的瞬间。声明说：'扎克、泽尔达和科迪的意图，是分享父亲独特的才华和幽默，包括那些让我们和你们许多人都笑过的时刻，因为我们铭记父亲非凡的一生和作品。'这个账号还链接了TikTok、Facebook和YouTube，同样的声明也在那里发布。</p><p>这个行动背后，是泽尔达去年的一次呼吁。她曾在社交媒体上请求人们停止制作她父亲的AI视频。她说：'如果你还有一点道德，就请停止这样对他和我，对所有人这样做，彻底停止。这很愚蠢，浪费时间和精力，相信我，这绝不是他想要的。'她称这些AI产物'恶心'且'令人抓狂'，并说：'看着真实人物的遗产被压缩成“这大概看起来像他们，听起来像他们，所以就够了”，只是为了别人能制作出可怕的TikTok垃圾，把这些木偶一样的人偶操纵起来，这令人抓狂。你不是在创作艺术，你在用人类生命的残渣制作令人作呕的过度加工的热狗，然后把它们塞进别人的喉咙，希望他们给你点个赞。恶心。'</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(129.9,'sec-0002')"><span>▶</span> 02:09</button><h3 class="section-title">对威廉姆斯家族来说，这个问题是切肤之痛。罗宾·威廉</h3></div><p>泽尔达的愤怒，是许多名人后代共同的愤怒。AI技术让已故明星'复活'成了可能，但也成了乱象。比如，今年早些时候，有人用AI让詹姆斯·迪恩在电影中'复出'，引起了轩然大波。还有，已故歌手艾米·怀恩豪斯的AI版'录制'了新歌，粉丝们既感动又困惑。这些是科技与伦理的碰撞，也是商业与情怀的战斗。</p><p>要理解威廉姆斯孩子们的举动，得回顾一下历史。2014年，当罗宾·威廉姆斯去世时，社交媒体还是方兴未艾。他的Instagram账号停在2014年，像时间胶囊，记录着他与粉丝的最后互动。那时没有AI，没有深度伪造，网络上的内容还算是人类亲手创作的。但十年间，技术进步得飞起。AI生成内容的'垃圾'——被称为'AI slop'——开始淹没互联网。它们是不请自来的、质量低劣的、甚至有害的内容，利用名人的形象制造流量。</p><p>这种现象不是突然出现的。2023年，AI图像生成器开始流行时，就有人用它们制作假的名人照片，从教皇穿着羽绒服到特朗普被捕的假图。2024年，AI声音克隆技术让骗子能模仿亲人的声音进行诈骗。2025年，深度伪造视频成为政治工具，甚至影响了台湾的选举。到2026年，AI生成的名人葬礼悼词、演唱会、甚至新电影，都成了常态。</p><p>对威廉姆斯家族来说，这个问题是切肤之痛。罗宾·威廉姆斯是好莱坞最受爱戴的演员之一，他的快节奏喜剧和深层忧郁并存。他的形象，是无数人的童年记忆。但AI '复生'他，不仅侵犯了他的肖像权，更扭曲了他的精神。泽尔达说：'这不是艺术，这是垃圾。'她说的'垃圾'，是指那些无脑的AI生成内容，它们把有血有肉的人变成空洞的符号。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(259.8,'sec-0003')"><span>▶</span> 04:19</button><h3 class="section-title">泽尔达的激烈言辞，其实是一种对'AI复活'的人文反</h3></div><p>威廉姆斯家族的应对，与美国演员工会（SAG-AFTRA）的立场不谋而合。工会一直在推动立法，保护演员的数字化身权。2025年，加州通过了《数字复制品法》，禁止未经授权使用已故名人的肖像和声音。但联邦层面还没有统一法律。威廉姆斯家族重新激活Instagram，也是一种策略——他们想占据阵地，用真实的内容对抗虚假的AI。</p><p>这个策略有先例。1997年，邓肯·麦克劳德——一个赛车手——去世后，他的家人重新激活了他的网站，发布他的比赛视频，对抗盗版。更近的例子是，2024年，老布什总统的官方X账号重新活跃，发布他的演讲和照片，以对抗AI生成的假演讲。这些行动的共同点，是主动出击，让真实的声音盖过虚假的噪音。</p><p>但问题是，这能奏效吗？在声明发布后，网上反应不一。一位名叫Neely O的网友评论说：'技术会发展，但我们应该在全球范围内讨论这种所谓技术的道德性。AI垃圾除了增加不信任和狂热，对文化毫无贡献。'也有网友持实用主义态度，比如Anon说：'拥有它并授权它——它不会消失。'这反映了社会对AI的两种分裂态度：拥抱还是抵制。</p><p>泽尔达的激烈言辞，其实是一种对'AI复活'的人文反抗。她不是反对技术本身，而是反对滥用。她的父亲，罗宾·威廉姆斯，是一个极力捍卫诚实和创造力的人。他在电影《死亡诗社》中扮演的基廷老师，鼓励学生'抓住当下'，而不是沉溺于虚构。AI制造的假威廉姆斯，恰恰违背了他的精神。</p></div>
+<div class="section" id="sec-0004"><p>威廉姆斯家族的举动，或许会开启一种新模式：名人后代主动管理先人的数字遗产，而不是任由AI操控。这不仅仅是一个明星家庭的故事，而是所有在数字时代失去亲人的人，都要面对的课题。当我们的记忆可以被篡改，当死者的声音可以被再创造，我们该如何定义真实的遗产？</p><p>我会想起泽尔达的话，她说：'这绝不是他想要的。'这句话，才是整件事的核心。AI技术是中性的，但用在哪里，怎么用，是人的选择。威廉姆斯家族选择了用爱与尊重来守护记忆，而不是用技术来消费记忆。他们的行动，不是一个简单的账号复活，而是一场关于记忆所有权的声明。</p><p>这件事的余韵，可能延伸得很远。未来，可能会有法律来规范数字遗产，可能会有平台来认证真实内容，但更重要的是，我们每个人，作为观众，能否辨别真伪，能否拒绝垃圾。罗宾·威廉姆斯用笑声治愈了无数人，现在，他的孩子们用行动提醒我们：笑声背后，是真实的人，不容亵渎。</p><p>故事讲到这儿，也许没有绝对的答案。AI不会消失，但我们可以选择记住什么。在虚拟与真实之间，我们或许可以像威廉姆斯家族那样，握紧那些真实的东西。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这个行动背后，是泽尔达去年的一次呼吁。她</span></div>
+<div class="tl-item" onclick="seek(129.9,'sec-0002')"><span class="tl-time">02:09</span><span class="tl-title">对威廉姆斯家族来说，这个问题是切肤之痛。</span></div>
+<div class="tl-item" onclick="seek(259.8,'sec-0003')"><span class="tl-time">04:19</span><span class="tl-title">泽尔达的激烈言辞，其实是一种对'AI复活</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260819035858" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
