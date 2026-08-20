@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>虚假红信：壁纸引擎背后的病毒陷阱 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 132 夜 / 2026-08-20</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Steam</div>
+    <h1 class="ep-title">虚假红信：壁纸引<span class="hl">擎背后的病毒陷阱</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:18</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260820051845" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">但故事的高潮还不只是盗号。黑客拿到了权限，连Ste</h3></div><p>你好，我是伊恩。今天想跟你聊一个发生在Steam上的事。你可能听说过“壁纸引擎”这个软件，它让无数玩家的桌面动了起来，但最近，这个乐园里藏了刺。卡巴斯基发了个警告，说有一批恶意壁纸正在创意工坊里悄悄传播，专门偷你的Steam账号，甚至伪装成客服来骗你。这事儿听起来有点吓人，但它背后的故事，远不止一个病毒那么简单。</p><p>事情是这样的。卡巴斯基的研究人员发现，在Steam创意工坊里，有几十款动态壁纸被植入了恶意代码。这些壁纸看起来没什么特别，有的还挺漂亮，但当你下载并运行之后，藏在里面的代码就会在后台悄悄启动。它们会释放一个叫Synaptics.exe的后门文件，同时替换掉系统里的AggregatorHost.dll。这个被篡改的文件专门用来定位Steam程序，然后调取你的账号凭据，接管你的登录会话。换句话说，你辛辛苦苦攒的库存、游戏时长、甚至钱包，可能一瞬间就变成了别人的东西。</p><p>更让人防不胜防的是，黑客拿到权限后，会用你的账号继续上传更多恶意壁纸，让病毒像滚雪球一样在社区里扩散。卡巴斯基提到，这些病毒背后的家族包括DarkKomet、Lumma、Vidar和RenEngine，显然不是一伙人干的，而是一群各自为战的黑客团队。受害者主要集中在国内，占了恶意下载尝试的89%，俄罗斯是5.5%。这些壁纸专门用了中文标题和描述，比如“绝对不卡”“超清4K”，一看就是冲着咱们来的。</p><p>但故事的高潮还不只是盗号。黑客拿到了权限，连Steam客户端的界面都成了他们的诈骗工具。有受害者就在客户端里收到了“红信”——就是Steam官方发的那种交易警告信——还有“实时客服”弹窗。这些假客服会说你的账号有异常，要你验证身份、转移物品，甚至支付一笔“保证金”。不少人一看是客户端里的官方消息，立刻就信了，结果一步步掉进陷阱。卡巴斯基特别提醒，Steam官方客服只通过官网工单沟通，绝不会在客户端里发这种消息，更不会要你转移库存或者付钱。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(146.1,'sec-0002')"><span>▶</span> 02:26</button><h3 class="section-title">我还记得，几年前有个类似的案例，是《CS:GO》的</h3></div><p>这起事件让我想到，Steam这个平台，其实一直是个“信任的乌托邦”。它的创意工坊，本意是让玩家分享mod、壁纸、工具，大家凭兴趣创作，自由下载。这个机制从2011年上线以来，催生了无数经典内容，像《上古卷轴5》的mod社区、CS:GO的创意地图，都离不开它。但正是这种开放和信任，也成了被利用的缺口。早在2024年，就有安全公司报告过类似的攻击，当时也有恶意mod混在创意工坊里，偷取用户凭证。所以这次不是第一次，恐怕也不会是最后一次。</p><p>回顾Steam的历史，其实它一直在跟恶意行为作斗争。Valve早就建立了Steam Guard，也就是手机令牌，用来保护账号安全。但黑客总能找到新的招数，比如这次用壁纸做幌子，就是因为Wallpaper Engine的用户量太大了——这个软件在Steam上排名前列，有上千万的订阅用户。它虽然是个付费软件，但创意工坊里的壁纸大部分是免费的，这吸引了很多玩家去下载。而Wallpaper Engine本身支持动态壁纸，本质上就是一个可以运行网页或脚本的窗口，这给了代码执行的空间。</p><p>我还记得，几年前有个类似的案例，是《CS:GO》的创意工坊地图里被塞了恶意代码，当时也闹得沸沸扬扬。Valve后来加强了审查，但创意工坊的体量太大，每天上传的内容成千上万，纯靠人工审核根本不可能。所以像卡巴斯基这样的第三方安全机构，就成了重要的防线。这次他们公布了技术细节，提醒用户自查——检查授权设备列表、查看Web API密钥、清理本地文件。这些建议听起来简单，但很多人可能从没意识到，自己的账号权限已经被悄悄转移了。</p></div>
+<div class="section" id="sec-0003"><p>那么这件事之后会怎么发展呢？有安全专家认为，这次攻击的手法并不复杂，但胜在隐蔽和针对性。特别是针对中文用户，说明黑客在刻意放大社交工程的效果。他们可能在论坛、社交群里散布“免费壁纸”的链接，诱导玩家去创意工坊下载。而Steam的开放生态，短期内恐怕很难有根本性的改革。Valve可能会加强上传审查，或者引入更严格的代码沙箱，但这对一个庞大的平台来说，是个慢功夫。</p><p>卡巴斯基在报告里说了一句话，我印象很深：“在数字世界里，信任是最脆弱的货币。”这次事件里，玩家信任了创意工坊，信任了客户端的红信，结果这些信任全被利用了。对于普通用户来说，最好的办法可能还是那句老话——下载前看看作者，装完杀个毒，别点奇怪的链接。但这说起来容易，做起来难，尤其是当一切看起来都那么正常的时候。</p><p>我就想到，游戏社区曾经是个充满善意的地方。十几年前，大家在论坛上分享mod，没想过里面会藏病毒。但现在的环境变了，有人的地方就有江湖，恶意代码像野草一样割不完。也许我们该习惯这种不安全感，或者说，学会在享受便利的同时，多留个心眼。</p><p>这就是今天的故事，一个关于信任被利用的样本。你听完之后，可能会想，Steam还能不能放心用了？我的想法是，该用还是用，但别再把账号当命根子，该开令牌就开，该查授权就查。毕竟，数字世界的规则，从来都是自己保护自己。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">但故事的高潮还不只是盗号。黑客拿到了权限</span></div>
+<div class="tl-item" onclick="seek(146.1,'sec-0002')"><span class="tl-time">02:26</span><span class="tl-title">我还记得，几年前有个类似的案例，是《CS</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260820051845" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
