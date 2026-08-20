@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-20-0953",
+  "title": "5件让你重新理解AI边界的事：从Mac本地视频到Stripe收购",
+  "published_at": "2026-08-20 09:53",
+  "duration_seconds": 589.06,
+  "duration_label": "9分49秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "GLM-5.3上线，开源第一但成本更低",
+      "golden_quote": "性能追平闭源，成本只有零头，开源正在倒逼行业降价",
+      "keywords": [
+        "GLM-5.3",
+        "开源模型",
+        "成本降低"
+      ],
+      "source": "公众号：智谱（GLM）"
+    },
+    {
+      "title": "Mac本地30秒生成视频，不靠云端",
+      "golden_quote": "视频生成从云端飞入寻常百姓家，Mac用户迎来创作自由",
+      "keywords": [
+        "FastMetal",
+        "Mac本地视频生成",
+        "Apple Silicon"
+      ],
+      "source": "X：Sky Computing Lab (@haoailab)"
+    },
+    {
+      "title": "Replit Free Mode，用GPT-5.6 Luna免费造软件",
+      "golden_quote": "免费让想法变成软件，AI编程进入普惠时代",
+      "keywords": [
+        "Replit",
+        "GPT-5.6 Luna",
+        "免费编程"
+      ],
+      "source": "OpenAI：官网动态（RSS）"
+    },
+    {
+      "title": "Anthropic主动踩刹车，模型开发让位安全",
+      "golden_quote": "模型能力越强，越要主动踩刹车——这是行业的自我进化",
+      "keywords": [
+        "Anthropic",
+        "安全",
+        "暂停训练"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "OpenRouter加入Stripe，AI路由器迎来新主人",
+      "golden_quote": "当路由层被买下，AI生态的整合大戏才刚刚开始",
+      "keywords": [
+        "OpenRouter",
+        "Stripe",
+        "AI基础设施"
+      ],
+      "source": "OpenRouter：Announcements（RSS）"
+    }
+  ]
+}
