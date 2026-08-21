@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-21-0955",
+  "title": "AI 正在接管你的屏幕与键盘，5 个你必须知道的新变化",
+  "published_at": "2026-08-21 09:55",
+  "duration_seconds": 702.89,
+  "duration_label": "11分42秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "阿里 Qwen-UI-Agent：让 AI 真正'会用'屏幕",
+      "golden_quote": "AI 会用了，但更要知道何时停手。",
+      "keywords": [
+        "Qwen-UI-Agent",
+        "GUI智能体",
+        "跨应用操作"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Claude 全面开放 Computer Use，智能体落地",
+      "golden_quote": "软件的新门槛，是 AI 能不能看见它。",
+      "keywords": [
+        "Computer Use",
+        "Skills API",
+        "浏览器操作"
+      ],
+      "source": "Claude：Blog"
+    },
+    {
+      "title": "OpenAI 最迟 2027 上市，CFO 安抚军心",
+      "golden_quote": "上市不是终点，是另一种融资。",
+      "keywords": [
+        "OpenAI",
+        "IPO",
+        "年化营收"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "ChatGPT 新增 Apple Messages 插件，替你发短信",
+      "golden_quote": "信任，是 AI 替你开口的代价。",
+      "keywords": [
+        "ChatGPT",
+        "Apple Messages",
+        "隐私"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "研究称三分之一的网页由 AI 撰写，你正被 AI 包围",
+      "golden_quote": "真假难辨的互联网，更显真人创作之贵。",
+      "keywords": [
+        "AI 创作",
+        "网页",
+        "皮尤研究"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
