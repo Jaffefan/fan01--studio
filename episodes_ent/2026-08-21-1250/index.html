@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>迈克尔·杰克逊传记片续集：真相与救赎的舞台 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 136 夜 / 2026-08-21</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 迈克尔·杰克逊</div>
+    <h1 class="ep-title">迈克尔·杰克逊传记片<span class="hl">续集：真相与救赎的舞台</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:32</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260821045240" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这个项目本身，就是一部好戏。2019年，狮门影业宣</h3></div><p>你好，我是伊恩。今天我们要聊的，是一部电影，一个家族，和一个从未真正沉默的传奇。想象一下，2026年夏天，一部关于迈克尔·杰克逊的传记片《迈克尔》横扫全球票房，突破十亿美元。但它的结尾，却停在1987年，那场风暴尚未到来。现在，续集即将启程，有人说，它要给那个被指控的男人一个发声的机会。</p><p>这部电影的男主角，是迈克尔的外甥贾法尔·杰克逊，一个和舅舅年轻时几乎一模一样的年轻人。他在今年八月对《GQ中东》杂志说，续集将不仅呈现那场风波，更是要让迈克尔的声音被听见。他说，‘这是别人故事，别人的想法，由议程驱动。这是我们家庭一直以来的问题——迈克尔的声音没有被听到。’</p><p>贾法尔没有剧本的控制权，但他表达了自己的希望。他说，第一部的成功，让全球观众看到了迈克尔从童年到《Bad》的辉煌，那是他人性的根基。而第二部，将走进九十年代，走进那些从未被证实的指控，走进迈克尔如何在破碎中保持善良。他说，即使被世界伤害，迈克尔依然相信人性的美好，而这种纯度，他希望能在续集中被感受到。</p><p>这个项目本身，就是一部好戏。2019年，狮门影业宣布了这个项目，当时引起巨大争议。有人欢呼，有人质疑：为什么在纪录片《逃离梦幻岛》播出后，还要拍这么一部美化他的电影？制片人格拉汉姆·金说，他们想要‘平衡’的视角，但试映后，他们收到了不少批评，说电影太偏向迈克尔家属。现在，续集承诺‘更多洞察’，你觉得这是另一种平衡，还是又一次辩护？</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(150.8,'sec-0002')"><span>▶</span> 02:30</button><h3 class="section-title">所以，这部续集，它将如何处理那段黑暗的历史？贾法尔</h3></div><p>让我们先回到三十年前。1993年，一个13岁的男孩指控迈克尔性侵，这场诉讼以庭外和解告终，迈克尔支付了数百万美元，但从未承认过错。2003年，又一起指控，这次他面临刑事审判。那个案子持续了五个月，陪审团最终裁定他无罪。但陪审团主席曾说，他们认为原告不诚实，却也相信迈克尔‘奇怪’的行为可能‘吸引’孩子。2005年无罪释放后，迈克尔移居中东，直到2009年去世前，他都在准备复出巡演。</p><p>这两起案件，就像两条河流，始终缠绕在迈克尔的名誉上。支持者认为他是无辜的，反对者则坚信有罪。而米高梅的纪录片《逃离梦幻岛》，在2019年再次点燃了火焰。两部纪录片中，两名男子详述了他们童年时的遭遇，细节令人不寒而栗。迈克尔遗产管理委员会强烈否认，称这是‘哗众取宠’和‘私利之作’。</p><p>但历史从不简单。在我们这个时代，许多娱乐圈的儿童性侵案都浮出水面，从韦恩斯坦到尼克国际儿童频道，时间给了许多受害者发声的勇气。与此同时，我们也在学习如何平衡‘无罪推定’和‘相信幸存者’。迈克尔·杰克逊的案例，正好卡在这个复杂的地带。</p><p>贾法尔说，他希望观众能看到迈克尔的人性。他提到，迈克尔从小被父亲虐待，但总是选择用爱与善意回应世界。这种叙事，其实早有先例。2003年的纪录片《迈克尔·杰克逊的私人家庭电影》中，我们看到一个和孩子一起玩耍的男人，像彼得潘一样。但批评者会说，那正是问题所在。</p><p>所以，这部续集，它将如何处理那段黑暗的历史？贾法尔暗示，它会展现迈克尔视角，而非简单呈现指控。制片方曾表示，他们会‘直接面对’指控，但具体如何呈现，仍未可知。有报道称，剧本可能会采用一种‘回述’结构，在时间线上穿插，或许会重现法庭场景，或许会通过他人的口叙。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(301.6,'sec-0003')"><span>▶</span> 05:01</button><h3 class="section-title">当片尾字幕升起，当灯光亮起，每个人会带着自己的答案</h3></div><p>这让我想到另一个案例：伍迪·艾伦。他也在生前最后一部电影《里夫金的电影节》中，间接回应了性侵指控。但他从未正面回应。而迈克尔已离世，无法亲口回答。所以，续集将如何‘让他的声音被听见’？这或许是一种象征性的再现，通过演员的表演，通过剧本的台词，去传达他可能感到的冤屈和痛苦。</p><p>贾法尔在这个角色中的投入，几乎是宿命的。他从小模仿迈克尔，在《迈克尔》中，他学习了迈克尔的舞步、歌声和语气，甚至连神态都惊人地相似。他说，扮演舅舅是一种‘连接’，他感到迈克尔的精神在引导他。这种情感投射，让他的说法更显真诚，但也可能让故事倾斜。</p><p>从商业角度，第一部突破了十亿美元，续集几乎板上钉钉。但续集能否继续成功，取决于它如何平衡真实与叙事。观众已经对小报故事厌倦，他们想要新的视角。如果续集能提供一个新的理解框架，或许能打开更广阔的讨论。</p><p>而这之外的现实，是娱乐产业在‘后真相’时代的困境：当公众对名人的认知被媒体和记忆割裂，我们该如何讲述历史？是尊重法律的无罪推定，还是承认那些讲述的可信度？迈克尔杰克逊的遗产，在音乐和慈善的印记下，依然被阴影笼罩。贾法尔说，‘他希望观众带着善意离开影院’，但这可能吗？</p><p>我们或许永远不会知道真相。但至少，续集提供了一个机会，去重新审视那个复杂的男人。贾法尔引用迈克尔的话：‘如果你充满仇恨，你就无法歌唱。’他说，迈克尔就是这样生活的。而这部电影，或许就是那种生活的注脚。</p><p>当片尾字幕升起，当灯光亮起，每个人会带着自己的答案离开。这正是这部电影的价值，它让我们面对一个问题：我们该如何记住一个既不完美又充满创造力的灵魂？贾法尔说，他相信观众会感受到‘人性’。而我，我只感到复杂。谢谢你的聆听。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这个项目本身，就是一部好戏。2019年，</span></div>
+<div class="tl-item" onclick="seek(150.8,'sec-0002')"><span class="tl-time">02:30</span><span class="tl-title">所以，这部续集，它将如何处理那段黑暗的历</span></div>
+<div class="tl-item" onclick="seek(301.6,'sec-0003')"><span class="tl-time">05:01</span><span class="tl-title">当片尾字幕升起，当灯光亮起，每个人会带着</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260821045240" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
