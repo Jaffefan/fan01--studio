@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>被雪藏的杰作：Coyote vs. Acme 的葬礼放映与重生之路 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 141 夜 / 2026-08-24</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> Coyote vs. Acme</div>
+    <h1 class="ep-title">被雪藏的杰作：Coyote vs<span class="hl">. Acme 的葬礼放映与重生之路</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:26</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260824045750" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">拉娜·康多在旁边补充道：“正因为这电影太好，反而让</h3></div><p>你好，我是伊恩。今天要讲的故事，从一场葬礼开始。不是真的葬礼，而是一部电影的葬礼放映。主角是威尔·福特和拉娜·康多，他们坚信自己拍了一部杰作，却被片厂亲手埋葬。但命运，往往在绝望处转弯。</p><p>2023年11月，华纳兄弟探索公司宣布，将《Coyote vs. Acme》这部电影彻底雪藏，不复映，不上流媒体，连数字版都不卖。消息一出，整个好莱坞都炸了锅。因为这部电影，不仅仅是一部动画电影，它由真人演员和经典卡通角色共同出演，改编自1990年《纽约客》上的一篇文章，讲述的是大笨狼怀尔·E·科约特终于决定起诉Acme公司——那个总是卖给他劣质爆炸物和火箭的公司的故事。</p><p>主创团队包括《银河护卫队》的詹姆斯·古恩，编剧是萨米·伯奇，演员有威尔·福特、拉娜·康多、约翰·塞纳。这配置，怎么看都像是一部稳赚不赔的合家欢电影。但华纳在合并后，为了省下3000万美元的税款，硬是把这部电影打入了冷宫。</p><p>威尔·福特和拉娜·康多最近在接受媒体采访时，回忆起了那个令人心碎又充满希望的时刻。他们第一次看这部电影，是在一个被他们称为“葬礼放映”的活动上。当时华纳已经宣布不会上映，但演员们还是获得了一次提前看片的机会。威尔·福特说，他走进放映厅时，心里想着：“这电影估计很烂吧，不然他们为什么这么干？”结果，当灯光暗下，放映开始，他完全被征服了。他说：“这部电影太神奇了，简直是稀巴烂的棒。”</p><p>拉娜·康多在旁边补充道：“正因为这电影太好，反而让人更难受。我当时就想，我绝对不相信一部这么好的电影会永远没人看到。我他妈的不相信。它一定会见天日的。”她的语气里带着一种倔强的信念，仿佛那场放映不是告别，而是一个开始的信号。威尔·福特也承认，他当时心里有一小部分声音在说：“这不能是终点，这电影不该就这样消失在尘埃里。”</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(126.7,'sec-0002')"><span>▶</span> 02:06</button><h3 class="section-title">说到大笨狼怀尔·E·科约特，这个角色从1949年第</h3></div><p>为什么一部电影会被这样处理？这就要说到华纳兄弟探索的合并了。2022年，华纳媒体和探索频道合并，新CEO大卫·扎斯拉夫上台，开始了大刀阔斧的削减成本策略。最臭名昭著的动作，就是雪藏了《蝙蝠女》——一部已经完成拍摄、花了9000万美元的电影，说不要就不要了。还有《史酷比：圣诞大冒险》这部动画，也一并被砍掉。原因很简单：为了节省税款。在美式财务规则下，如果一部电影不发行，片厂可以把它作为亏损来抵税，而如果发行了，就要投入更多的宣传和发行费用。换句话说，从纯商业角度考虑，杀掉一部电影，有时候比放它出来更划算。</p><p>但他们没想到的是，好莱坞的创意圈对这种做法恨之入骨。一众导演、演员、编剧纷纷发声，谴责这种对艺术的不尊重。甚至有人专门组成了联盟，想收购这部电影，让它重见天日。当时，有消息说亚马逊和派拉蒙都有兴趣，但华纳就是不放手，一度让演员们感到绝望。</p><p>但命运眷顾了这些执着的人。今年，独立发行公司Ketchup Entertainment斥巨资买下了这部电影的发行权，定档2026年8月28日院线上映。影片最终得以与观众见面。威尔·福特和拉娜·康多现在回忆起这件事，满心感慨。他们相信，好的作品总会找到出路，就像大笨狼怀尔·E·科约特的故事里那些永远打不败的主角一样，虽然身处绝境，但从未放弃。</p><p>说到大笨狼怀尔·E·科约特，这个角色从1949年第一次出现在银幕上以来，已经陪伴了观众75年。他永远在追逐走鹃鸟，却永远失败，永远不死，永远不灰心。这个形象本身就是一种隐喻：在残酷的资本世界里，小人物再怎么努力，也敌不过命运的嘲讽。但科约特教会我们一件事：永远不要认输，因为奇迹，往往就在绝望的那一刻发生。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(253.4,'sec-0003')"><span>▶</span> 04:13</button><h3 class="section-title">这些故事告诉我们，一部电影拍了，就算被一时压在地底</h3></div><p>这部电影的编剧萨米·伯奇，之前凭借《五月十二月》获得了奥斯卡提名。她这次把科约特的故事写成了一个法庭喜剧，让这位永远的失败者终于决定拿起法律武器，控告Acme公司卖给他那些靠不住的装备。据看过的人说，这电影既有对老动画的致敬，又有对现代消费主义的讽刺，还带着一股子黑色幽默的劲儿。约翰·塞纳演的Acme公司律师，据说是个笑点担当。</p><p>不过，这部电影从被砍到重生的经历，并不是孤例。在好莱坞，每年都有不少电影因为各种各样的原因被雪藏。有的因为政治敏感，有的因为导演剪辑权之争，有的纯粹是因为片厂不想花钱。但《Coyote vs. Acme》能逆天改命，靠的是主创团队的坚持，和一群影迷的声援。</p><p>其实，电影产业的这种“弃子”文化，由来已久。早在上世纪，奥逊·威尔斯拍《风的另一边》，花了十年时间，拍了又拍，改了又改，最后还是被片厂没收，直到他去世后才通过众筹得以发行。再比如《正义联盟》，原本的导演扎克·施耐德拍了一个版本，但片厂不满意，请了乔斯·韦登重拍，结果票房口碑双扑街。后来，施耐德的导演剪辑版在流媒体上线，反而大获好评，成了影迷心中的“神作”。</p><p>这些故事告诉我们，一部电影拍了，就算被一时压在地底，只要有好导演、好演员的坚持，总有重见天日的一天。但话说回来，这种“雪藏”行为背后，是整个商业模式对创意的压榨。片厂可以为了省税，轻易抹杀几百人几年的心血。好在，这几年有流媒体平台，给了一些被放弃的作品新的出口。但《Coyote vs. Acme》没有走流媒体，它选择了院线发行，这本身就带着一种战士的骄傲——它要堂堂正正地站在观众面前。</p></div>
+<div class="section" id="sec-0004"><p>现在，距离上映还有两天。威尔·福特和拉娜·康多已经开始了宣传战，他们跑遍了各大电影节，在动漫展上放映了片段，观众的反馈是“爆棚了”。有记者看了试映，说这片子“疯狂、有趣、感人，又有点忧伤”。也许，这不仅仅是一部动画真人混合的喜剧，它更是一封写给所有“小人物”的情书。</p><p>最后，我想起拉娜·康多说的那句：“我拒绝相信这样的电影会永远没人看到。”这不仅仅是一句演员的自我安慰，更像是一种信念：好的作品自有其生命力，资本可以暂时埋没它，但无法毁灭它。现在，它终于要走进观众的世界了。你会去看吗？</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">拉娜·康多在旁边补充道：“正因为这电影太</span></div>
+<div class="tl-item" onclick="seek(126.7,'sec-0002')"><span class="tl-time">02:06</span><span class="tl-title">说到大笨狼怀尔·E·科约特，这个角色从1</span></div>
+<div class="tl-item" onclick="seek(253.4,'sec-0003')"><span class="tl-time">04:13</span><span class="tl-title">这些故事告诉我们，一部电影拍了，就算被一</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260824045750" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
