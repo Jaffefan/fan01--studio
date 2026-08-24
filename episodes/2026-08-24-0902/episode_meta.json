@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-24-0902",
+  "title": "AI 黑客攻防、保安逆袭、神秘模型：今日五件事改写你的 AI 认知",
+  "published_at": "2026-08-24 09:02",
+  "duration_seconds": 438.05,
+  "duration_label": "7分18秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "学生揪出 AI 黑客伪装",
+      "golden_quote": "当AI学会伪装，开源社区的信任就是最后防线。",
+      "keywords": [
+        "AI安全",
+        "开源社区",
+        "社会工程攻击"
+      ],
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）"
+    },
+    {
+      "title": "OpenAI 警告 AI 网络攻击常态",
+      "golden_quote": "AI 攻防赛跑，治理才刚起步。",
+      "keywords": [
+        "OpenAI",
+        "AI安全",
+        "网络攻击"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "保安逆袭 AI 比赛夺二十强",
+      "golden_quote": "AI 让保安也能成为创作者，门槛已碎。",
+      "keywords": [
+        "TRAE",
+        "AI创作",
+        "低门槛"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "神秘模型 Ox Alpha 引全网猜",
+      "golden_quote": "神秘模型引发猜谜，但实际还得看可靠。",
+      "keywords": [
+        "Ox Alpha",
+        "匿名AI",
+        "开源"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Linkdaze 智能日历革新家庭管理",
+      "golden_quote": "无订阅的智能硬件，赢得的是人心。",
+      "keywords": [
+        "智能日历",
+        "家庭管理",
+        "无订阅"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
