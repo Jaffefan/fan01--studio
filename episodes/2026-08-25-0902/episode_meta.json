@@ -1,0 +1,71 @@
+{
+  "episode_id": "2026-08-25-0902",
+  "title": "AI 吞噬软件护城河，你的饭碗还稳吗？",
+  "published_at": "2026-08-25 09:02",
+  "duration_seconds": 793.03,
+  "duration_label": "13分13秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "GPT-5.6 登陆 Kiro，开发者成本再降 82%",
+      "golden_quote": "成本降 82%，但你的技能必须升一级",
+      "keywords": [
+        "GPT-5.6",
+        "Kiro",
+        "AI 编码",
+        "成本降低",
+        "OpenAI"
+      ],
+      "source": "OpenAI 官网"
+    },
+    {
+      "title": "NVIDIA 新芯片效能提升 30 倍，AI 智能体要起飞",
+      "golden_quote": "能耗效率 30 倍，AI 的成本墙塌了",
+      "keywords": [
+        "NVIDIA",
+        "Vera Rubin",
+        "AI 智能体",
+        "效率提升",
+        "成本降低"
+      ],
+      "source": "NVIDIA Blog"
+    },
+    {
+      "title": "丰田把 50 个 AI 智能体搬进产线，交付提速 45 倍",
+      "golden_quote": "4 天上架 AI 智能体，丰田把 AI 变成了标准件",
+      "keywords": [
+        "丰田",
+        "AI 智能体",
+        "Deep Agents",
+        "LangSmith",
+        "企业落地"
+      ],
+      "source": "LangChain Blog"
+    },
+    {
+      "title": "OpenAI 想让白领交出控制权，你敢吗？",
+      "golden_quote": "AI 要替你干活，但你会给钥匙吗？",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT Work",
+        "AI 智能体",
+        "白领",
+        "控制权"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "AI 正在拆掉软件护城河，下一个是硬件",
+      "golden_quote": "代码不再是护城河，数据与物理世界才是",
+      "keywords": [
+        "AI",
+        "软件护城河",
+        "硬件",
+        "中国制造",
+        "护城河重构"
+      ],
+      "source": "Hacker News"
+    }
+  ]
+}
