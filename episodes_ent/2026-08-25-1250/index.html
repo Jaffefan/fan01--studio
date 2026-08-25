@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GTA 6泄密风暴：新细节与游戏产业的未来 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 145 夜 / 2026-08-25</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> GTA 6</div>
+    <h1 class="ep-title">GTA 6泄密风暴：<span class="hl">新细节与游戏产业的未来</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 08:24</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260825045120" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">再看看电视节目。在脱衣舞俱乐部的场景里，背景的电视</h3></div><p>你好，我是伊恩。这两天，游戏圈几乎被同一个话题刷屏：GTA 6又泄露了。不是官方放的预告，而是黑客直接甩出了好几段实机视频。Rockstar还没吭声，但这些视频在推特上疯传，又被疯狂删除，像是猫鼠游戏。而当我们把这些碎片拼起来，能看到不少让人眼前一亮的细节。比如，你能在游戏里钓鱼，偷车时要克隆钥匙，甚至……六星通缉回归了？这些都发生在游戏发售前几个月，让人好奇，到底还有多少惊喜是我们不知道的？</p><p>这次泄露的主角是一个叫Cyberleek的黑客，据他自己说，他对游戏行业从实体转向数字版这事深恶痛绝，于是决定用行动表达抗议。他放出的视频里，有Jason在脱衣舞俱乐部闲逛，有在沼泽地摸鱼，还有开着飞机掠过水面的场景。虽然Rockstar没确认这些视频的真实性，但那些因版权投诉而被删除的帖子，反而让大家更相信这些就是真货。</p><p>先说钓鱼。视频里，Jason的背包里有一根鱼竿，而在另一个驾驶飞机的片段中，屏幕弹出一个提示，说附近有钓鱼点，可以钓到‘Common Snook’。这在GTA系列里算是头一遭。以前的GTA，你能干的事基本就是开车、开枪、做任务，钓鱼这种休闲活动是想都不敢想的。但RDR2里，钓鱼是核心玩法之一，Rockstar显然把西部那套搬到了现代都市，让游戏世界更生动了。</p><p>再看看电视节目。在脱衣舞俱乐部的场景里，背景的电视在播一场篮球赛。GTA系列一直有在游戏里看电视的传统，比如GTA V里的节目就特别搞笑，什么‘弗兰克林与拉马尔’之类的。但这次，电视上出现了体育直播，你能想象在GTA里熬夜看比赛吗？会不会有博彩系统？视频里没细说，但光是这个细节，就让人觉得游戏世界的活力又上了一个台阶。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(126.1,'sec-0002')"><span>▶</span> 02:06</button><h3 class="section-title">武器轮盘回来了。GTA V和RDR2都有这个设计，</h3></div><p>还有搜刮尸体。以前你在GTA里杀人，直接捡钱和枪就行。但这次，视频里显示，你得蹲下来，手动从尸体上搜出弹药和现金，动作比RDR2快很多，不至于让人厌烦。这明显是RDR2的机制移植，Rockstar想让你对每一场枪战都更上心，而不是打完就拍拍屁股走人。</p><p>说到尺度，这次泄露的镜头里出现了不少裸露画面，脱衣舞俱乐部里当然是重头戏，但更让人惊讶的是，还有一个裸体营地的片段，里面各种身材的裸体男女在草地上走来走去。这在GTA的历史上是空前的。GTA V虽然也有脱衣舞夜总会，但全程都是暗示，没有露点。而这次，Rockstar似乎决定彻底放飞自我，这也符合他们一贯的‘反正成人分级’的做派。</p><p>另外，视频里还有一个暴力镜头：在一次肇事逃逸中，一个NPC的肢体被撞飞了。这是GTA系列首次出现肢解效果。虽然不知道实际游戏中会不会这么频繁，但按照Rockstar的尿性，估计到时候能玩出不少花活。</p><p>偷车流程也变了。视频里，Jason走到一辆车旁边，屏幕提示可以‘克隆钥匙’，不用再砸窗户了。这大概是通过某种电子设备复制车钥匙的FOB信号，然后解锁开车。当然，砸窗户的选项依然在，但多了个高科技手段，让偷车更有代入感，也让人想起《看门狗》里的黑客玩法。</p><p>武器轮盘回来了。GTA V和RDR2都有这个设计，玩家可以随时切换武器。但这次GTA 6的武器轮盘看起来更紧凑，更像RDR2，可能意味着你不能像以前那样背一身的枪支和火箭筒了，得精挑细选。这会不会引发更讲究的战术搭配？有待观察。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(252.1,'sec-0003')"><span>▶</span> 04:12</button><h3 class="section-title">游戏分析师们则看到了另一面。一位名叫Claire的</h3></div><p>这些细节，放到GTA这个IP的历史里看，其实是一次次进化。回想2001年GTA III刚出来的时候，整个游戏世界是2D的，你能做的有限。后来VC和SA加入了更多生活元素，比如恋爱、健身、做小生意。到了GTA V，三个主角切换机制成了卖点，世界也更大更热闹。但无论是哪一代，GTA的核心都是‘自由’。而这一次，Rockstar似乎想把‘沉浸’推到极致，让每一个角落都有事情可干，每一条路都有意外发生。</p><p>钓鱼、看电视、裸体、肢解、克隆钥匙，这些看似零散的细节，其实折射出Rockstar对游戏世界的野心：不是越大越好，而是越真越好。他们砸了几亿美元，开发了近十年，就是想让玩家在敲碎车窗的那一刻，感觉到这是一个活生生的小社会。</p><p>当然，也有人说，这些细节可能只是冰山一角，而真正的游戏还要等到11月发售才能见分晓。而且别忘了GTA Online，那个让Take-Two赚得盆满钵满的摇钱树。这次单人模式里加了这么多新东西，会不会同步到线上模式？官方至今守口如瓶。</p><p>其他厂商也被波及。Netflix在其中还扮演了角色：据传他们也在帮着Rockstar处理泄露事件，但具体情况未明。有人猜测，这是因为Netflix参与了GTA的影视改编项目，但谁也没证实。</p><p>游戏分析师们则看到了另一面。一位名叫Claire的行业分析师在社交媒体上写道：‘泄露视频能增加预购量，但也会让开发团队感到挫败，因为他们精心准备的惊喜被提前剧透了。’她提醒玩家，泄露版本可能很老，很多细节可能早就改了。</p></div>
+<div class="section" id="sec-0004"><p>玩家社群的态度两极分化。Reddit上有人兴奋地讨论每个新发现，觉得这波泄露是‘老天爷赏饭吃’；也有粉丝论坛里，老玩家抱怨说：‘Rockstar这下得加班了，发售日说不定又要跳票。’这些担心不是没道理——2013年GTA V的PC版就晚了一年多。但到目前为止，Rockstar还没有任何延期的消息，官网依然写着‘2025年11月’。</p><p>还有一个有意思的细节：泄露的视频里，Jason穿着一件印着‘Rockstar’字样的T恤，但后来被网友P掉了。这大概是黑客的恶作剧，但也有人解读为：Rockstar自己清楚泄露迟早会发生，他们只是选择沉默。</p><p>不管怎样，GTA 6注定是今年最大的游戏事件。你甚至可以说，它已经是游戏史上的一个节点：开发周期最长、成本最高、期待值最爆棚。而泄露事件，只是这个传奇故事里的一页。</p><p>最后，我想说，如果你是主播凯尔特，你看到这些视频，会不会也跟我一样，心里既惊喜又忐忑？惊喜的是，这款游戏看起来确实不赖；忐忑的是，我们知道的，是不是只是冰山一角。好了，今天就聊到这里，我们明天见。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">再看看电视节目。在脱衣舞俱乐部的场景里，</span></div>
+<div class="tl-item" onclick="seek(126.1,'sec-0002')"><span class="tl-time">02:06</span><span class="tl-title">武器轮盘回来了。GTA V和RDR2都有</span></div>
+<div class="tl-item" onclick="seek(252.1,'sec-0003')"><span class="tl-time">04:12</span><span class="tl-title">游戏分析师们则看到了另一面。一位名叫Cl</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260825045120" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
