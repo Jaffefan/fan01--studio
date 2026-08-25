@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GTA 6 泄露歌单：一曲穿越三十年的听觉密码 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 144 夜 / 2026-08-25</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> GTA 6</div>
+    <h1 class="ep-title">GTA 6 泄露歌单：<span class="hl">一曲穿越三十年的听觉密码</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 11:34</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260825035851" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">另外还有 Worldwide FM、Kaleido</h3></div><p>你知道吗，在过去的几周里，一个叫 Cyberleek 的黑客像定时闹钟一样，每天准时在社交平台上甩出一段 GTA 6 的实机泄露视频。这些视频大多不到两分钟，画质粗粝，有些甚至带着开发者的调试菜单。但就在这些模糊的片段里，藏着 Rockstar 埋下的无数细节——比如钓鱼系统、需要加油的汽车，还有一个六星通缉等级。</p><p>而今天，我想跟你聊的是这些泄露视频里最容易被忽略、却最能说明问题的部分：音乐。</p><p>Kotaku 的编辑 Zack Zwiezen 把目前泄露中出现的所有电台和歌曲整理成了一份清单。这份清单像是一张时间地图，从 80 年代的摇滚到 2024 年的说唱，从古典交响乐到诡异的外语翻唱。但你知道吗，这份歌单背后，藏着的其实是 Rockstar 三十年来的一个执念：用音乐构建城市的灵魂。</p><p>让我先把这张歌单摊开在你面前。目前泄露中出现的电台有 14 个，其中几个老玩家会特别眼熟：V-Rock 和 Emotion 98.3，这两个名字直接来自 2002 年的《侠盗猎车手：罪恶都市》。那是 GTA 系列第一次真正把广播电台做成一个独立的记忆点，V-Rock 的重金属和 Emotion 98.3 的抒情歌，到现在还是无数玩家的青春背景音。</p><p>另外还有 Worldwide FM、Kaleidoscope FM、Symphony FM 这些新面孔。从名字就能猜出它们的风格：Worldwide FM 全球音乐，Kaleidoscope FM 迷幻电子，Symphony FM 古典乐。而 Cocoteo FM、Circo Loco Records Radio 这种名字，几乎就是在暗示拉丁和电子舞曲的狂欢。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(115.7,'sec-0002')"><span>▶</span> 01:55</button><h3 class="section-title">还记得 2013 年的 GTA 5 吗？那游戏的广</h3></div><p>歌曲方面，跨度大得惊人。有 DJ Khaled 的《Bills Paid》，有 Sexyy Red 的《Pound Town》这种这两年才火的梗曲，也有 Tommy Richman 的《Million Dollar Baby》和 Coi Leray 的《Players》这种今年夏天还在热播的歌。</p><p>但你往清单前面翻，会看到 Kansas 的《Carry On Wayward Son》、Cliff Richard 的《Devil Woman》、Glen Campbell 的《Rhinestone Cowboy》。这些歌全部来自 70 年代和 80 年代。最让我意外的是那首《Herz aus Glas》，德语版《Heart of Glass》，原唱是 Blondie，德语翻唱者 Marianne Rosenberg。你知道这是 1979 年的歌吗？Rockstar 居然把它塞进了一个 2026 年的游戏里。</p><p>这份歌单不是随便凑的。Rockstar 的电台音乐挑选，从来都是一个持续多年的复杂过程。公司内部有个专门的音乐监督团队，他们会为每款游戏构建一个庞大的候选曲库，然后根据游戏的设定年代、地点和文化氛围去逐个筛选。</p><p>还记得 2013 年的 GTA 5 吗？那游戏的广播电台里有 240 多首授权歌曲，横跨 50 年。当时我算过一笔账，光音乐授权费可能就花了上千万美元。但 Rockstar 从来不在乎这个，因为在他们看来，电台音乐不是背景噪音，而是世界观的一部分。一句歌词、一段前奏，就能让你在开车的瞬间，感受到这个虚拟城市的脉搏。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(231.5,'sec-0003')"><span>▶</span> 03:51</button><h3 class="section-title">2013 年的《GTA 5》则是音乐的万花筒，从灵</h3></div><p>而这次 GTA 6 的歌单，泄露出来的可能只是冰山一角。但仅仅从这几十首歌里，你就能看出 Rockstar 在设计上的野心：他们要的不只是一个“好听”的电台，而是一个能让老玩家会心一笑、新玩家感到惊艳的听觉博物馆。</p><p>为什么这么说？因为这些歌的选择，透露出一个明确的信号：GTA 6 的故事场景是佛罗里达州，是霓虹灯和棕榈树交织的迈阿密，是那个被称作“罪恶都市”的地方。30 年前，1997 年，初代 GTA 在伦敦东部的一个小工作室里诞生，当时没人会想到这个游戏会变成一个文化现象。而在 GTA 系列的早期，音乐只是游戏里可有可无的点缀，甚至用的是合成器生成的简单旋律，谈不上什么授权。</p><p>转折点发生在 2002 年的《罪恶都市》。那是 Rockstar 第一次把音乐和城市身份绑在一起：游戏里的电台全是 80 年代的歌曲，从 Van Halen 到 Michael Jackson，每首歌都在帮你找回那个年代的感觉。这不仅仅是怀旧，而是一种叙事。80 年代的迈阿密是毒品和黑帮的代名词，这些歌曲正好衬托出那个浮华又危险的氛围。</p><p>2004 年的《圣安地列斯》更进一步，电台内容覆盖了 90 年代的嘻哈、乡村、放克，甚至还有脱口秀和广告，把加州南部的生活质感做得滴水不漏。</p><p>2013 年的《GTA 5》则是音乐的万花筒，从灵魂乐到电子乐，从后摇到电台流行，还有主持人的插科打诨，让开车成为了游戏里最享受的时光。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(347.2,'sec-0004')"><span>▶</span> 05:47</button><h3 class="section-title">当然，这份歌单可能会变。Rockstar 在游戏发</h3></div><p>但你可能不知道，Rockstar 挑选音乐还有一个更隐晦的规则：他们喜欢用“时代错位”的音乐来制造张力。比如在 GTA 4 里，主角 Niko 是个东欧移民，但他的车子里却总是循环着 80 年代的美国摇滚，这种格格不入的感觉，反而加深了角色的疏离感。而在 GTA 6 泄露的歌单里，我看到了同样的小心思：把那首德语版《Heart of Glass》放在一个佛罗里达的电台里，这不就是在暗示这座城市里混杂着多少移民、多少异乡人吗？</p><p>回到泄露本身。每一代 GTA 在发售前，都会经历一次或几次大规模的泄露，这几乎成了一个固定节目。2013 年《GTA 5》发售前，就有一些开发内容和截图流出；2022 年，一个 18 岁的英国黑客入侵了 Rockstar 的服务器，把 90 个 GTA 6 开发视频公之于众，那可是系列史上最大的一次泄露，连 Take-Two 都不得不承认。当时那批泄露里出现的音乐，后来被证明大多是占位的，就是 Rockstar 内部临时用的歌，很多还是 GTA 5 里的旧歌。</p><p>而这次的泄露，距离 GTA 6 发售不到三个月，游戏已经基本定型，所以音乐大概率是真的。这就像是在大幕拉开之前，有人掀开了一条缝，让你偷瞄了一眼后台。你能看到灯光，看到演员就位，甚至听到乐队调音的声音。</p><p>当然，这份歌单可能会变。Rockstar 在游戏发售前调整歌曲，是常有的事。比如《GTA 5》正式版里，就有几首预告片里的歌被换掉了。所以，如果你特别在意某首歌能不能留在最终版，先别急着买歌词海报。</p></div>
+<div class="section" id="sec-0005"><div class="section-header"><button class="section-btn" onclick="seek(463.0,'sec-0005')"><span>▶</span> 07:42</button><h3 class="section-title">而音乐行业的反应，大多数是观望。因为 GTA 的流</h3></div><p>但更重要的是，这份歌单不仅仅是歌单。它是一份文化宣言。你想想，一个游戏里放进从 Cliff Richard 到 Sexyy Red 的歌曲，从 60 年代到 2020 年代，从英国摇滚到佛罗里达的摇摆嘻哈，这背后是音乐行业半个世纪的流变。Rockstar 用这些歌曲，在游戏世界里塞进了一段音乐史。</p><p>曾有玩家做过统计，GTA 系列的电台音乐涵盖了至少 30 种流派，从摇滚、乡村、嘻哈、电子到爵士、放克、雷鬼，甚至还有古典乐和流行乐。这种广度，远超任何其他游戏。你可以说这是一种炫技，但我觉得，这是 Rockstar 在试着捕捉一种“真实的混乱感”——你可以开车穿过迈阿密的红灯区，耳边是硬摇滚；也可以开到郊区的日落大道，电台切换到乡村。这就像你走在真实的世界里，永远不知道下一秒会听到什么。</p><p>《纽约客》曾评价 GTA 的电台是“游戏史上最伟大的音乐编辑项目”，这个说法一点也不夸张。</p><p>那么，GTA 6 之后会怎样呢？我想先听听玩家们的声音。在 Kotaku 的评论区，已经有人迫不及待地说：“如果正式版里没有《Devil Woman》，我就不买了。”也有人调侃说：“看这歌单，Rockstar 的音乐监督肯定是个 50 多岁的白人男性。”还有人认真地分析：“把《Herz aus Glas》放进电台，这绝对是对 80 年代欧洲迪斯科的致敬，太天才了。”</p><p>而音乐行业的反应，大多数是观望。因为 GTA 的流量效应是惊人的：一首歌如果被选进 GTA，很可能在游戏发售后冲上各大音乐平台的播放榜。此前就有过先例，M.I.A. 的《Paper Planes》因为出现在《GTA 4》的预告片里，直接成了全球热单。所以，很多独立音乐人甚至会把“被 GTA 选中”当作一种荣耀。</p></div>
+<div class="section" id="sec-0006"><p>但也有一些争议。有人指责 Rockstar 的曲库里白人老摇滚太多，忽略了新兴的黑人艺术家。比如这次选进去的《Players》和《Pound Town》确实火了，但更多是主流流行，一些更地下、更先锋的音乐还是缺席。这些批评，Rockstar 一向不回应，他们只会在下一款游戏里默默改进。</p><p>还有，这泄露背后的问题。黑客 Cyberleek 的动机不明，有人说他只是为了炫技，也有人说他想要钱。Take-Two 已经下了禁令，要求 Discord 上交用户数据，但黑客依然没停。这场猫鼠游戏，可能要到游戏真正发售的那天才结束。</p><p>而对我来说，最关心的还是那个最老套的问题：音乐，到底在一个游戏里扮演什么角色？是装饰，是陪伴，还是说它本身就是故事的一部分？我想起《荒野大镖客2》里，当主角骑着马穿越平原，背景是悠扬的乡村音乐时，你会感觉整个世界都慢了下来。那一刻，音乐不是背景，它成了你情感的一部分。</p><p>GTA 6 的歌单，现在只是一串名字。但等到 11 月 19 号游戏发售，当你开着偷来的车，驶过霓虹灯下的迈阿密海岸，电台里响起某首歌时，你可能会突然意识到：这不仅仅是声音，这是一种穿越时空的对话。</p><p>我猜想到那时候，你心里的答案，会比任何乐评人的分析都更真实。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">另外还有 Worldwide FM、Ka</span></div>
+<div class="tl-item" onclick="seek(115.7,'sec-0002')"><span class="tl-time">01:55</span><span class="tl-title">还记得 2013 年的 GTA 5 吗？</span></div>
+<div class="tl-item" onclick="seek(231.5,'sec-0003')"><span class="tl-time">03:51</span><span class="tl-title">2013 年的《GTA 5》则是音乐的万</span></div>
+<div class="tl-item" onclick="seek(347.2,'sec-0004')"><span class="tl-time">05:47</span><span class="tl-title">当然，这份歌单可能会变。Rockstar</span></div>
+<div class="tl-item" onclick="seek(463.0,'sec-0005')"><span class="tl-time">07:42</span><span class="tl-title">而音乐行业的反应，大多数是观望。因为 G</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260825035851" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
