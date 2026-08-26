@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-26-0903",
+  "title": "AI 飓风预警、芯片自研，这波新料谁能接住？",
+  "published_at": "2026-08-26 09:03",
+  "duration_seconds": 621.17,
+  "duration_label": "10分21秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "AI 抢跑飓风五级登陆，提前五天",
+      "golden_quote": "AI 不是替代人类，而是给我们多一天时间。",
+      "keywords": [
+        "WeatherNext",
+        "飓风预测",
+        "AI模型"
+      ],
+      "source": "Google AI (@GoogleAI)"
+    },
+    {
+      "title": "开源智能体 OpenWorker 给安全加了层盾",
+      "golden_quote": "开源不是万能药，但至少让防守方有反击的武器。",
+      "keywords": [
+        "OpenWorker",
+        "开源智能体",
+        "网络安全"
+      ],
+      "source": "X：Andrew Ng（DeepLearning.AI 创始人）"
+    },
+    {
+      "title": "OpenAI 自研芯片 Jalapeño 初露锋芒",
+      "golden_quote": "芯片是 AI 的底层命脉，谁掌握它谁就有话语权。",
+      "keywords": [
+        "Jalapeño",
+        "自研芯片",
+        "推理"
+      ],
+      "source": "OpenAI 官网"
+    },
+    {
+      "title": "机器人创企 Generalist 估值飙至 30 亿美元",
+      "golden_quote": "机器人赛道是长跑，现在比的不是速度，是耐心。",
+      "keywords": [
+        "Generalist",
+        "机器人",
+        "融资"
+      ],
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Claude 终于记住聊天内容了，告别反复口述",
+      "golden_quote": "记忆是 AI 的温度，但边界必须有用户自己掌控。",
+      "keywords": [
+        "Claude",
+        "记忆",
+        "Anthropic"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
