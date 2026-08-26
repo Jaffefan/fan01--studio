@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>英雄谢幕：一场跨越十六年的重逢 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 149 夜 / 2026-08-26</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 海顿·潘妮蒂尔</div>
+    <h1 class="ep-title">英雄谢幕：一场<span class="hl">跨越十六年的重逢</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 13:54</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260826040332" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">让我们先把时间拨回2006年秋天。那时候，漫威电影</h3></div><p>你好，我是伊恩。今天想跟你聊的，不是一场普通的告别，而是一场跨越十六年的重逢。2026年8月25日晚上，洛杉矶一栋不起眼的房子里，一群人围坐在一起，他们之间的距离不远，但有些人已经快十年没见了。他们不是来参加颁奖礼，也不是为了新片宣传，而是为了悼念一个共同的朋友——海顿·潘妮蒂尔。九天前，她离开了这个世界，年仅38岁。海顿的离世像一枚石子投进湖里，荡开的不是涟漪，而是一整个时代的回声。这群人来自同一部剧，2006年的《英雄》。那天晚上，剧中的“海地人”吉米·让-路易斯在社交媒体上发了一张合影，配文说，这场重聚为了庆祝海顿的生命，心情沉痛，但更多的是爱和感恩。他说，我们记得那些美好的时刻，以及她给这么多人带来的持久影响。法语里那句“Au revoir”是“再见”，可所有人都知道，这一别就是永远。今天，我想带你回到那个夜晚，回到那部剧，回到一个超级英雄还没占领银幕的时代，看看一个女孩如何用她的光芒照亮了一代人，又如何在聚光灯下熄灭了。</p><p>让我们先把时间拨回2006年秋天。那时候，漫威电影宇宙还只是个概念，DC的《超人归来》票房平平，超级英雄在大银幕上还是稀罕物。电视上更不用说，没有《权力的游戏》，没有《怪奇物语》，流媒体连影子都没有。就在那样的背景下，NBC推出了一部叫《英雄》的剧。它的开场白我记得很清楚：有一天，一个普通的印度遗传学教授发现他的妹妹能飞，然后世界各地开始有人觉醒超能力，日本一个宅男能扭曲时空，洛杉矶一个啦啦队长发现自己不会死。那句台词成了当年的流行语：“拯救啦啦队长，拯救世界。”而那个啦啦队长，就是克莱尔·班尼特，演员叫海顿·潘妮蒂尔。海顿那时才17岁，金发碧眼，笑起来有酒窝，可爱得像邻家女孩，但角色却要每天面对父亲的手术刀，被开颅验尸，发现自己的血能治愈一切。她演得不做作，恐惧是真恐惧，勇敢是真勇敢，观众一下就被抓住了。《英雄》第一季火到什么程度？首播就有1400万人看，结局达到1800万，是NBC近十年来最火的新剧。超市里到处是克莱尔的海报，万圣节最火的装扮是啦啦队长服。海顿成了青少年偶像，上了无数杂志封面，还被提名金球奖。但你可能不知道的是，这个光芒万丈的开局，背后藏着另一条暗线。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(166.9,'sec-0002')"><span>▶</span> 02:46</button><h3 class="section-title">《英雄》之后，海顿演过一些独立电影，给动画片配音，</h3></div><p>海顿的童年并不平坦。她1989年出生在纽约，母亲是选美皇后，父亲是消防员。11岁就开始演戏，白天在片场，晚上赶作业，几乎没有正常孩子的生活。15岁，她第一次接触到了药物——准确地说，是医生开的止痛药，因为拍摄动作戏扭伤了背。那个年纪，她不知道依赖是什么，只知道药能止痛，还能让她在凌晨三点的片场保持清醒。2007年，《英雄》第一季大热时，她接受《人物》杂志采访，说了一句话：“我从小就被教导要坚强，不能软弱。所以我总是假装一切都好，哪怕心里在哭。”后来我们才知道，那已经显现了双相情感障碍的端倪，但在当时，所有人都以为她只是压力大。</p><p>《英雄》的辉煌只持续了一季。第二季因为编剧罢工，剧集被砍到11集，剧情崩盘，观众流失。第三季试图重启，但时间旅行和平行宇宙的烂账让路人彻底放弃。2010年第四季完结，NBC宣布取消。期间，海顿的片酬从每集3万美元涨到7.5万美元，她成了全剧组收入第三高的演员，仅次于男一号和女二号。但热闹是表面的，剧集被砍前一年，她刚满20岁，开始频繁出入好莱坞的派对，八卦小报拍到过她深夜从夜店出来，眼神涣散。有影评人说，海顿正在成为一个典型的童星反面教材，像林赛·罗韩，像布兰妮。她后来在采访里回忆：“《英雄》结束后，我的事业像是坐上了跳楼机，停不下来，也没法控制下降的速度。”</p><p>《英雄》之后，海顿演过一些独立电影，给动画片配音，上过音乐剧《芝加哥》，但都难回巅峰。2015年，她去《音乐之乡》客串，角色是个乡村歌手，带着自己的创伤故事，像是为她量身定做的。那一年，她宣布和职业拳击手弗拉基米尔·克列钦科交往，并怀孕了。怀孕期间，她产后抑郁症发作，情绪失控，曾多次被媒体拍到在街头崩溃大哭。2017年，她在《今日秀》上公开承认：“我有产后抑郁症，但没有人听我说话，我甚至不知道该向谁求助。”同年，她和克列钦科分手，女儿凯亚跟着父亲生活。那几年，除了八卦新闻，海顿几乎从公众视野消失了。直到2023年，她出版回忆录《钻石般的女孩》，书里才揭露了更深的秘密：她长期受双相情感障碍困扰，在《英雄》期间就开始滥用药物，后来发展为酒精依赖。她写道：“我一直以为只要表现得很开心，我就真的开心。但药物和酒精只是让我暂时忘记了痛苦，它们从不真正解决问题。”她提到，2012年她曾试图自杀，被朋友救回。她写道：“那一刻，我觉得自己死了也没人会记得。”但事实是，六年后的这个8月，至少有十位前同事聚在一起，只为告诉她：我们记得。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(333.9,'sec-0003')"><span>▶</span> 05:33</button><h3 class="section-title">说到海顿对动物的保护，那是她一生中少有的、能让她忘</h3></div><p>现在，我们再回到那个夜晚。吉米·让-路易斯的合影里，有我们熟悉的面孔：扎克瑞·昆图，演大反派塞勒那个；米洛·文蒂米利亚，演爱上啦啦队长的年轻政治家，后来靠《我们这一天》拿了艾美奖；还有格里格·戈伦伯格，剧里的布莱恩，演员本人是“英雄”的疯狂粉丝，剧集播出时他还组织过线下粉丝会。他们坐在那间房子里，没有红毯，没有摄像机，只有一束白玫瑰，和一张海顿的照片。吉米说，那晚大家轮流讲起海顿的趣事：比如她总在片场哼歌，音不准但特别大声；比如她救过一只受伤的流浪猫，带回去养在房车里；比如她1997年8月，8岁生日那天，她妈妈带她去试镜，海顿在电梯里对另一个小孩说：“我要成为明星。”那小孩后来成了她的粉丝。还有杰克·科尔曼，演她父亲那个，他发了一段话：“我爱你，海顿。我很抱歉你受了那么多苦。我记得你在片场有多快乐，记得你在欧洲宣传时如何笑话不断，记得你为了保护被欺凌的助理挺身而出，记得你对动物福利的执着，敢把自己的安全置之度外。我只希望别人也这样保护过你。”这段话被媒体反复引用，因为他说出了所有同事的心声：我们不知道她那么痛，如果我们知道了，会不会不一样？</p><p>说到海顿对动物的保护，那是她一生中少有的、能让她忘记自己伤痛的事业。15岁起，她就参与动物保护组织的活动，18岁成为“海豚联盟”的代言人。2011年，她曾到日本太地町，试图阻止当地渔民捕杀海豚。她穿着潜水服，站在海豚身边，镜头前哭得像个孩子。后来由于被捕杀的海豚是持续多年的传统，她面临了当地警方的警告，威胁说要逮捕她，但她还是去了，还带了摄像机，拍下了那段让她成为争议人物的影像。有媒体骂她作秀，但剧组同事说，那是她少数几项从不炒作的行为。今年早些时候，她还捐了十万美元给一个海洋生物救援组织。现在这个组织在她的脸书主页上发了一封告别信，落款是“我们永远感激，海豚不会忘记你，我们也不会”。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(500.8,'sec-0004')"><span>▶</span> 08:20</button><h3 class="section-title">我最近总是在想，为什么我们会对一部十几年前的剧集角</h3></div><p>这种跨越虚构和现实的双重印记，让我想起很多类似的告别。去年，我们刚送走《黑豹》的查德威克·博斯曼，43岁。他的同事们在他去世两年后，还在分享他在片场教小演员说台词、给工作人员送手写卡片的细节。2014年，罗宾·威廉姆斯去世，他的《死亡诗社》学生们在聚会上重读“Oh Captain, My Captain”。更早一点，2008年，《蝙蝠侠：黑暗骑士》拍摄期间，希斯·莱杰意外离世，他的替身演员在镜头前说，希斯曾在休息时教他如何用眼睛表演。这些告别有一个共同点：当年那些角色，早已不是演员一个人，而是一群人一起塑造的。海顿的克莱尔，也从来不是她一个人的。编剧写了台词，导演调了光线，同事接住了她的眼泪。这就是为什么《英雄》重聚的意义不只是怀旧——它是在提醒公众，银幕上的英雄需要搭档，生活中的他们同样需要。海顿不是一个人走的，她带着一群人的记忆走了。</p><p>我最近总是在想，为什么我们会对一部十几年前的剧集角色的离去感到如此痛心？也许是因为，那些角色在某种程度上，就是我们自己某个阶段的投影。2006年时，我还是个大学生，每周二晚上守在宿舍电脑前，等着克莱尔从手术台上醒来，等着她跑过走廊，等着她说那句“我能治愈一切”。那时候，我们以为超级英雄就应该这样：有超能力，就该拯救世界，即使内心千疮百孔。我们从来没有想过，片场那个金发女孩，卸妆后会不会哭。海顿去世后，有心理学者在《综艺》上撰文讨论童星的心理创伤，引用了一个数据：童星成年后患抑郁症的概率是普通人的三倍，药物滥用率是四倍。文章标题很直接：《我们让克莱尔拯救世界，谁救她？》</p></div>
+<div class="section" id="sec-0005"><p>说回那场重聚。据在场的人透露，那晚大家没有一起看剧集回顾，也没有播放海顿的片段。他们只是坐着喝酒、聊天、笑。有几次提到海顿在片场搞怪，会刻意模仿她的语调。但没有人提及她生命的最后几年，具体经历了什么。这让我觉得，那更像是一个正式的告别仪式，不是撕开伤口的讨论，而是带着感恩的名词。吉米在帖子的最后写道：“Au revoir，Hayden。”这让我想起法语中这个告别词的另一个含义——它不是“永别”，而是“期待再次相见”。也许他们相信，在某个平行宇宙里，那个来自《英雄》第一季的啦啦队长，永远不会死。</p><p>但我们呢？我们这些观众，会记住什么？我可能会记住克莱尔那身蓝色的制服，同样也记住海顿的眼睛，不管处在任何情境下，都带着认真的光。也许十年后，人们再提起海顿·潘妮蒂尔，不会只想起她的悲剧结局，而是会想起2006年那个秋天，她如何让无数观看的年轻人相信：普通人也能拥有超能力，只要你足够勇敢。她曾说过一句话：“我最大的超能力，是努力让生活变得更好，即使我一次次失败。”这句话，或许是她留给这个世界最好的注脚。</p><p>窗外天快亮了，那场重聚的灯也已经熄灭。但我想，那些聚在她身边的身影，会像当年一样，各自回到生活的轨道。海顿的推特账号永远停在了8月16日，最后一条动态，是她转发的一条动物救援信息，配文是“永远不要放弃”。她没有放弃，直到最后一刻。</p><p>那就这样吧。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">让我们先把时间拨回2006年秋天。那时候</span></div>
+<div class="tl-item" onclick="seek(166.9,'sec-0002')"><span class="tl-time">02:46</span><span class="tl-title">《英雄》之后，海顿演过一些独立电影，给动</span></div>
+<div class="tl-item" onclick="seek(333.9,'sec-0003')"><span class="tl-time">05:33</span><span class="tl-title">说到海顿对动物的保护，那是她一生中少有的</span></div>
+<div class="tl-item" onclick="seek(500.8,'sec-0004')"><span class="tl-time">08:20</span><span class="tl-title">我最近总是在想，为什么我们会对一部十几年</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260826040332" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
