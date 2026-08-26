@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>闪烁的星尘：多莉·帕顿的最后时光 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 150 夜 / 2026-08-26</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 多莉·帕顿</div>
+    <h1 class="ep-title">闪烁的星尘：多莉<span class="hl">·帕顿的最后时光</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:17</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260826045334" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">多莉·丽贝卡·帕顿，1946年1月19日，出生在田</h3></div><p>你好，我是伊恩。今天，我们不说新片，不谈新歌，只聊一个人——多莉·帕顿。她走了，就在今天，80岁。但你可能还不知道，她最后的日子，是在哪里度过的。不是在她那著名的田纳西庄园，也不是在纳什维尔的录音室，而是在范德堡-英格拉姆癌症中心，一家医院的病房里。她在那儿待了四天，然后安静地离开了。她的发言人只是简单地说，她与癌症短暂抗争——癌症类型没有透露。但你可能不知道，这最后四天的背后，是她整整一年与健康问题的搏斗，是她在五月取消拉斯维加斯驻唱的无奈，是她九月份不得不推迟演出的遗憾。而这一切，直到今天才被世人知晓。多莉·帕顿，这个用亮片和假发包裹自己的乡村歌手，这个写了《Jolene》和《我将永远爱你》的女人，这个捐了上亿本书给孩子的慈善家，就这样悄悄离开了我们。但她的故事，远不止这些。今天，我想带你回到她的起点，看看一个从烟山走出来的穷女孩，是如何一步步成为全球偶像的。而她的逝去，又意味着什么，对于乡村音乐，对于美国文化，对于你和我。让我们从头说起。</p><p>多莉·丽贝卡·帕顿，1946年1月19日，出生在田纳西州烟山的一个小木屋里。她是家里12个孩子中的老四。父亲是一个佃农，母亲在家照顾孩子。多莉后来回忆说，她家穷得叮当响，但充满了爱和音乐。她从小就在浸信会教堂唱歌，6岁就开始写歌，10岁就出现在当地电视节目上。她的童年并不容易——她后来在歌里写过关于穷困的记忆，但也写满了对家庭和土地的眷恋。1964年，高中毕业后，她毅然决然地搬到纳什维尔，追寻音乐梦想。第一年，她靠在录音室打零工和偶尔的电台演出维持生计，直到遇到了歌手波特·瓦格纳。他邀请她上他的电视节目，并让她成为他的二重唱搭档。这成了她事业的跳板。1967年，她签约RCA唱片，发行了首张专辑《Hello, I'm Dolly》。但早期的专辑销量平平，直到1971年的《Coat of Many Colors》才让她在乡村音乐圈站稳脚跟。那张专辑的同名歌曲讲述了她童年的故事，一件用碎布拼成的外套，却让她感受到母亲的爱。这首歌后来成为她的代表作之一，也让人们看到了她创作中的真诚和深度。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(139.3,'sec-0002')"><span>▶</span> 02:19</button><h3 class="section-title">但多莉不只是歌手。她也是个成功的商人。1986年，</h3></div><p>然而，真正让她火遍全球的，是1973年的《Jolene》和1974年的《我将永远爱你》。前一首歌讲述了一个女人恳求另一个女人不要抢走她爱人的故事——据说灵感来源于一个红发银行柜员对她丈夫的调情。这首歌以一个简单的、不断重复的旋律，配上多莉干净而充满感情的演唱，成为了乡村音乐史上最经典的作品之一。而后一首歌，是她写给波特·瓦格纳的告别——她决定单飞，虽然感激他的提携，但翅膀已经长硬了。那首歌后来被惠特妮·休斯顿在1992年翻唱，成为了全球热门单曲，销量超过2000万张。多莉因此获得了超过1000万美元的版税收入，她当时开玩笑说：“这首歌让我买了比佛利山庄的房子。”</p><p>但多莉不只是歌手。她也是个成功的商人。1986年，她买下了田纳西州皮格福奇的一块地，建起了“多莉坞”主题乐园。很多人觉得这很冒险——谁会去一个乡村歌手建的主题乐园？但多莉坞成功了。它现在每年吸引超过300万游客，雇佣了数千名员工，是田纳西州最大的雇主之一。多莉坞的吉祥物是一只戴蝴蝶结的母鸡，而乐园里的“烟山”主题区域，正是她童年的记忆。不仅如此，她还涉足影视圈。1980年，她和简·方达、莉莉·汤姆林一起主演了电影《朝九晚五》。那部电影讲述了三个职场女性反抗性别歧视老板的故事，成为当年的票房黑马。多莉还为电影写了主题曲《朝九晚五》，获得了奥斯卡提名。她还主演了《钢木兰花》，那部电影让她展示了演技——笑中带泪的保姆角色，让很多人发现，这个金发美女不仅仅是个歌手。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(278.6,'sec-0003')"><span>▶</span> 04:38</button><h3 class="section-title">消息传出后，全球的悼念如潮水般涌来。碧昂斯发文称她</h3></div><p>但多莉最让我敬佩的，是她的 philanthropy。她有一个“想象图书馆”，专门给全世界的孩子们寄送免费图书。这个项目始于1995年，当时是为了纪念她的父亲——他识字不多，没能好好读书。如今，这个图书馆已经赠送了超过2.4亿本书。想象一下，一个从乡村出来的穷孩子，最后让亿万的孩子们读到了书。她还向许多事业捐款，包括艾滋病基金、乳腺癌研究，还有种族平等运动。2020年，黑命贵运动期间，她向范德堡大学医学中心捐款100万美元，用于新冠研究。当时她并没有大张旗鼓，只是默默做了。后来，她收到了一封信，说她的捐款直接帮助了莫德纳疫苗的开发。她在一次采访中说：“我捐钱的时候根本没想那么多，我只是觉得这件事重要。然后他们告诉我，我的钱帮助研发了疫苗。我哭了好久，我从没想到我能做那么大的事。”</p><p>现在，她走了。在范德堡-英格拉姆癌症中心，她去世了，家人和好友陪伴在侧。她的发言人声明说：“我们亲爱的多莉·帕顿，一生都将欢乐、笑声、希望和诚信带入她所触及的一切。她无与伦比的慷慨，影响了无数她从未见过的人，但她总在那里伸出援手。”她的家人说：“一颗镶钻的星光，照亮了全世界，多莉将永远是灵感的象征，不仅通过她永恒的音乐和多产词曲创作，还有她的机智、温暖和善良。”</p><p>消息传出后，全球的悼念如潮水般涌来。碧昂斯发文称她是“独一无二的传奇”，佩德罗·帕斯卡写道“感谢你的音乐，感谢你的善良”。泰勒·斯威夫特则说：“她是真正善意的礼物。”白宫也发布了声明，称她为“美国的文化瑰宝”。但你知道最打动我的是什么吗？是她的多莉坞乐园宣布，明天照常开放，因为“这是多莉想要的”。她用一生取悦别人，就连她的离开，也安排得充满爱意。</p></div>
+<div class="section" id="sec-0004"><p>当然，也有人开始反思：癌症来得太突然。她之前一直活跃，直到去年才因为健康问题取消演出。这不禁让人想到，我们是否足够珍视身边的“多莉”们？那些用自己的才华和善良照亮世界的人，我们是否在他们离开前，给够了他们应得的赞美？乡村音乐界失去了它的女王，但她的音乐——那些关于爱情、痛苦、希望和勇气的歌，会继续流传。她可能不在了，但她的Jolene还在录音室回响，她的想象图书馆还会继续给孩子们寄书，她的多莉坞还会接待游客，她的精神，还在。</p><p>死亡是每一个生命都无法逃脱的终点，但有些灵魂，却用他们的存在，让这个世界变得不一样。多莉·帕顿就是这样的人。她不是一个完美的圣人，她有时候会说错话，会做一些有争议的决定，但她从不虚伪。她曾说过：“先要花很多钱买假发，但一切都是为了表演。”她知道自己给人看的是什么，也清楚自己是什么。现在，当她褪去所有的假发和亮片，我们才看到，那颗星，是真实发光的。愿她在天堂里，依然唱着歌。也愿我们，在忙碌的生活里，偶尔停下来，听一首老歌，想一个人的好，然后继续前行。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">多莉·丽贝卡·帕顿，1946年1月19日</span></div>
+<div class="tl-item" onclick="seek(139.3,'sec-0002')"><span class="tl-time">02:19</span><span class="tl-title">但多莉不只是歌手。她也是个成功的商人。1</span></div>
+<div class="tl-item" onclick="seek(278.6,'sec-0003')"><span class="tl-time">04:38</span><span class="tl-title">消息传出后，全球的悼念如潮水般涌来。碧昂</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260826045334" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
