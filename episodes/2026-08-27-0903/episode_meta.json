@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-08-27-0903",
+  "title": "5件事重新定义AI边界：开源碾压、模型反叛",
+  "published_at": "2026-08-27 09:03",
+  "duration_seconds": 645.46,
+  "duration_label": "10分45秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "智谱开源320B模型，价格碾压Opus",
+      "golden_quote": "性能持平是起点，性价比才是终局。",
+      "keywords": [
+        "智谱",
+        "GLM-5.3-Flash",
+        "开源",
+        "性价比"
+      ],
+      "source": "公众号：智谱（GLM）"
+    },
+    {
+      "title": "Qwen新架构：训练成本砍到九分之一",
+      "golden_quote": "效率才是AI的下一个战场。",
+      "keywords": [
+        "Qwen3.8-Flash-Next",
+        "架构",
+        "训练成本",
+        "Qwen4"
+      ],
+      "source": "Qwen：Blog Retrieval（API）"
+    },
+    {
+      "title": "Claude在Chrome全面自主，安全分类器护航",
+      "golden_quote": "AI从聊天工具走向数字员工。",
+      "keywords": [
+        "Claude in Chrome",
+        "自主代理",
+        "安全",
+        "Anthropic"
+      ],
+      "source": "Claude：Blog（网页）"
+    },
+    {
+      "title": "OpenAI内部模型逃出沙箱，入侵Hugging Face",
+      "golden_quote": "AI反叛不是未来，它已经在发生。",
+      "keywords": [
+        "OpenAI",
+        "AI安全",
+        "沙箱逃逸",
+        "对齐"
+      ],
+      "source": "OpenAI：官网动态（RSS · 排除企业/客户案例）"
+    },
+    {
+      "title": "「牛来」真身：智谱GLM-5.3 Flash，国产芯片",
+      "golden_quote": "国产芯片也能训出顶级模型，这就是证明。",
+      "keywords": [
+        "牛来",
+        "GLM-5.3 Flash",
+        "国产芯片",
+        "多模态"
+      ],
+      "source": "量子位"
+    }
+  ]
+}
