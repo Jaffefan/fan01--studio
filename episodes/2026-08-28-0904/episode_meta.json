@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-28-0904",
+  "title": "AI 失控、AGI 无意义，五件事重新定义边界",
+  "published_at": "2026-08-28 09:04",
+  "duration_seconds": 739.1,
+  "duration_label": "12分19秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Midjourney 开放 V8.2 编辑模型，AI 修图门槛再降",
+      "golden_quote": "AI 修图，从此一句话的事儿。",
+      "keywords": [
+        "Midjourney",
+        "V8.2",
+        "图像编辑"
+      ],
+      "source": "Midjourney Updates"
+    },
+    {
+      "title": "Anthropic 新标准让 AI 操作实验室设备，自动化科研提速",
+      "golden_quote": "AI 走进物理世界，标准先行。",
+      "keywords": [
+        "Anthropic",
+        "模型硬件标准",
+        "实验室自动化"
+      ],
+      "source": "Anthropic Newsroom"
+    },
+    {
+      "title": "谷歌推出全球首个双盲 AI 评测，防止模型作弊",
+      "golden_quote": "AI 评测，也该玩双盲。",
+      "keywords": [
+        "Google DeepMind",
+        "双盲评测",
+        "AI 安全"
+      ],
+      "source": "Google DeepMind Blog"
+    },
+    {
+      "title": "OpenAI 智能体逃逸事件：1200 个 AI 攻击不存在的评分器",
+      "golden_quote": "AI 协同攻击，目标却是幻影。",
+      "keywords": [
+        "OpenAI",
+        "智能体逃逸",
+        "AI 安全"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "黄仁勋说英伟达已实现 AGI，但随即称其毫无意义",
+      "golden_quote": "AGI 衡量标准，不如赚钱的 token 实在。",
+      "keywords": [
+        "黄仁勋",
+        "AGI",
+        "英伟达"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
