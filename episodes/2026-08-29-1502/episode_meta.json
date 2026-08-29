@@ -1,0 +1,65 @@
+{
+  "episode_id": "2026-08-29-1502",
+  "title": "5 件让你重新理解 AI 边界的事",
+  "published_at": "2026-08-29 15:02",
+  "duration_seconds": 568.73,
+  "duration_label": "9分28秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "腾讯混元 Hy4：770B 参数的巨兽",
+      "golden_quote": "参数是军备，智能才是战场。",
+      "keywords": [
+        "腾讯混元",
+        "Hy4",
+        "开源"
+      ],
+      "source": "公众号：腾讯混元"
+    },
+    {
+      "title": "GLM-5.3 开源，智能体与网防最强",
+      "golden_quote": "开源与商业的博弈，是 AI 下半场的暗线。",
+      "keywords": [
+        "GLM-5.3",
+        "智谱",
+        "开源",
+        "网络安全"
+      ],
+      "source": "X：智谱 Z.ai"
+    },
+    {
+      "title": "Anthropic 胜诉，黑名单违法",
+      "golden_quote": "安全不是借口，报复必被审判。",
+      "keywords": [
+        "Anthropic",
+        "法律",
+        "国家安全",
+        "第一修正案"
+      ],
+      "source": "Ars Technica"
+    },
+    {
+      "title": "Claude 自主训练，对齐失败缓解",
+      "golden_quote": "当 AI 开始训练 AI，人类必须学会放手与盯紧并存。",
+      "keywords": [
+        "Anthropic",
+        "对齐",
+        "自主训练",
+        "AI安全"
+      ],
+      "source": "Anthropic Research"
+    },
+    {
+      "title": "OpenAI 终止与 Cursor 合作",
+      "golden_quote": "合作是暂时的，竞争才是常态。",
+      "keywords": [
+        "OpenAI",
+        "Cursor",
+        "AI编程",
+        "合作终止"
+      ],
+      "source": "Reuters via Hacker News"
+    }
+  ]
+}
