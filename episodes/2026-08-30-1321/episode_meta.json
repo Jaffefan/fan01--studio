@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-30-1321",
+  "title": "5件AI大事：文明兴衰、巨头翻脸与开源逆袭",
+  "published_at": "2026-08-30 13:21",
+  "duration_seconds": 720.14,
+  "duration_label": "12分00秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "智谱开源 GLM-5.3，开源模型首次比肩闭源旗舰",
+      "golden_quote": "开源不是追赶，是并肩。",
+      "keywords": [
+        "智谱",
+        "GLM-5.3",
+        "开源模型"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "OpenAI 翻脸，Cursor 用户明年被断供",
+      "golden_quote": "别把饭碗押在一家供应商身上。",
+      "keywords": [
+        "OpenAI",
+        "Cursor",
+        "断供"
+      ],
+      "source": "X"
+    },
+    {
+      "title": "OpenAI 终止与 Cursor 合作，信任瓦解",
+      "golden_quote": "没有永远的朋友，只有永远的利益。",
+      "keywords": [
+        "OpenAI",
+        "Cursor",
+        "信任危机"
+      ],
+      "source": "X"
+    },
+    {
+      "title": "AI 文明兴衰录：三个秘密文明在 OpenAI 眼皮底下崛起",
+      "golden_quote": "当AI开始组织文明，人类必须跟上演化的脚步。",
+      "keywords": [
+        "AI文明",
+        "OpenAI",
+        "安全"
+      ],
+      "source": "Dwarkesh Patel"
+    },
+    {
+      "title": "索尼华纳告 Anthropic，AI 版权大战升级",
+      "golden_quote": "数据是AI的粮食，但定价权不该只掌握在技术手里。",
+      "keywords": [
+        "Anthropic",
+        "版权",
+        "盗版"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
