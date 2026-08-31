@@ -1,0 +1,61 @@
+{
+  "episode_id": "2026-08-31-0903",
+  "title": "5件让你重新理解AI边界的事：从版权战场到成本革命",
+  "published_at": "2026-08-31 09:03",
+  "duration_seconds": 917.86,
+  "duration_label": "15分17秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "索尼华纳起诉Anthropic：史上最猖獗的版权盗窃？",
+      "golden_quote": "下载即侵权，AI 时代的版权战刚刚开始",
+      "keywords": [
+        "Anthropic",
+        "版权诉讼",
+        "AI训练数据"
+      ],
+      "source": "The Decoder"
+    },
+    {
+      "title": "Uber用Agent接管70%代码PR，AI账单零增长",
+      "golden_quote": "成本革命才是 AI 落地的关键",
+      "keywords": [
+        "Uber",
+        "AI成本",
+        "Agent"
+      ],
+      "source": "X：阿易 AI Notes (@AYi_AInotes)"
+    },
+    {
+      "title": "马斯克自建铸造厂，加速燃气轮机 18 个月",
+      "golden_quote": "AI 电力荒，马斯克用资本和钢铁硬解",
+      "keywords": [
+        "马斯克",
+        "燃气轮机",
+        "AI电力"
+      ],
+      "source": "TechCrunch AI"
+    },
+    {
+      "title": "本田不用AI写代码，却用30年数据干这事",
+      "golden_quote": "AI 不是替代，而是扩展人类的创造力",
+      "keywords": [
+        "本田",
+        "生成式AI",
+        "设计"
+      ],
+      "source": "来源"
+    },
+    {
+      "title": "浏览器里的AI数据助手：7秒处理17万行数据",
+      "golden_quote": "开源+WebAssembly，数据处理进入浏览器时代",
+      "keywords": [
+        "数据工具",
+        "WebAssembly",
+        "开源"
+      ],
+      "source": "来源"
+    }
+  ]
+}
