@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-09-01-0904",
+  "title": "5 件让你重新理解 AI 边界的事：从开源到国防",
+  "published_at": "2026-09-01 09:04",
+  "duration_seconds": 723.62,
+  "duration_label": "12分03秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "DeepSeek 开源多模态模型，逼近 Opus-4.8",
+      "golden_quote": "开源是把下一代 AI 的入场券发给每个人。",
+      "keywords": [
+        "DeepSeek",
+        "开源",
+        "多模态",
+        "Agent"
+      ],
+      "source": "IT之家"
+    },
+    {
+      "title": "Runway Solaris：操作系统自己生成界面",
+      "golden_quote": "当界面不再是代码的产物，软件的边界就消失了。",
+      "keywords": [
+        "Runway",
+        "Solaris",
+        "界面世界模型",
+        "AI Agent"
+      ],
+      "source": "Runway：News（网页）"
+    },
+    {
+      "title": "MiniMax 视频模型被玩成 24 小时 AI 电视台",
+      "golden_quote": "当每个观众都有专属 AI 频道，媒体的定义就被改写。",
+      "keywords": [
+        "MiniMax",
+        "H3 Max",
+        "AI 视频",
+        "24小时直播"
+      ],
+      "source": "公众号：MiniMax（稀宇科技）"
+    },
+    {
+      "title": "ChatGPT 广告年入 10 亿美元，OpenAI 加速变现",
+      "golden_quote": "OpenAI 用广告养免费，用免费养生态。",
+      "keywords": [
+        "ChatGPT Ads",
+        "OpenAI",
+        "广告",
+        "10亿美元"
+      ],
+      "source": "OpenAI：官网动态"
+    },
+    {
+      "title": "五角大楼用上定制版 ChatGPT 和 Grok",
+      "golden_quote": "当 AI 穿上军装，安全边界就成了新的战场。",
+      "keywords": [
+        "五角大楼",
+        "ChatGPT",
+        "Grok",
+        "军事 AI"
+      ],
+      "source": "TechCrunch AI"
+    }
+  ]
+}
