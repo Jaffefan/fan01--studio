@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一条船漂了三千年：奥德修斯形象演变史 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 159 夜 / 2026-09-02</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 奥德修斯</div>
+    <h1 class="ep-title">一条船漂了三千年：<span class="hl">奥德修斯形象演变史</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 16:24</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260902075546" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">公元前8世纪，爱琴海东岸。一位盲诗人弹着里拉琴，唱</h3></div><p>电影院里，灯光暗下来。银幕上，爱琴海的浪拍打着三列桨战舰的船舷。奥德修斯站在船头，胡须凌乱，眼神疲惫——他已经打了十年的仗，现在只想回家。这是一个已经重复讲了三千年的故事。观众走进影院看的，不只是一部电影，而是一条船三千年漂流的最新一站。这条船为什么永远在漂？为什么西方文明三千年来，反复需要一个归乡者的形象？答案或许藏在一个更深的矛盾里：西方文明从诞生之初就带着向外的冲动——探索、扩张、征服、抵达世界的尽头。但与此同时，它又永远在寻找自己的伊塔卡。走得越远，&quot;家&quot;的焦虑就越深。奥德修斯的船漂了三千年还没靠岸，不是因为荷马写得好，而是因为这个张力从未真正解决。每一代人都在出发，每一代人都在迷路，每一代人都想回家。</p><p>公元前8世纪，爱琴海东岸。一位盲诗人弹着里拉琴，唱出了第一个版本：一个叫奥德修斯的人，在海上漂了十年，用尽一切办法，只想回家。没人想到，这个名字一旦出发，就再也没有真正靠岸。在《伊利亚特》和《奥德赛》里，奥德修斯是和阿喀琉斯并列的另一种英雄。阿喀琉斯靠力量，他靠脑子。献木马计破特洛伊、海上十年漂流返乡——他的全部魅力都来自&quot;能屈能伸、随机应变&quot;。他会撒谎，会哭泣，会在绝境里装疯卖傻。但这些在口头史诗传统里，更像是&quot;智谋型英雄的标准配置&quot;，而不是现代心理学意义上的&quot;人性弱点&quot;。荷马时代的听众欣赏的，是清晰和力度——一个典型的智者形象，而不是一个复杂的现代人。后世常说奥德修斯是&quot;西方文学中第一个饱满的人&quot;，这话其实用错了时代。&quot;饱满&quot;是一个属于后世的词——它说的是内心的深度、矛盾的层次、自我意识的复杂。但荷马的奥德修斯，他的&quot;多&quot;不在心里，在身上。他是整个史诗里换过最多张脸的人。伊塔卡的国王、特洛伊城下的战士、独眼巨人洞里的&quot;无人&quot;、喀耳刻岛上的情人、费埃克斯人宫廷里的游吟者、回到伊塔卡后伪装的乞丐、最终复仇的射手——他每到一个地方就换一个身份，每面对一个人就戴一张面具。他不是&quot;一个有很多面的人&quot;，他是&quot;一个可以成为很多种人的人&quot;。这种身份的可变性，才是后来三千年里&quot;人的全面性&quot;这个命题真正的种子。力量型英雄的内核是&quot;一&quot;——纯粹、决绝、不变；智谋型英雄的内核是&quot;变&quot;——适应、变形、什么都能做。后者天然适合在不同的时代长出不同的血肉。他掌心的老茧，握过剑柄也握过船桨，摸过乞丐的破碗也拉过国王的弓弦——这双手换过多少种身份，就磨过多少层皮。但有一件事是确定的：从荷马开始，奥德修斯这个形象天然地承载了一个双重结构——他既是出发最远的人，也是最想回家的人。这个结构，就是后来三千年漂流的龙骨。多变是他的手段，回家是他的目的。手段越花哨，目的越坚定，这个人物就越有张力。船从这里出发。但它的航线，从一开始就不是荷马能决定的。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(196.9,'sec-0002')"><span>▶</span> 03:16</button><h3 class="section-title">中世纪的海水是滚烫的。但丁在《神曲·地狱篇》第26</h3></div><p>风变了。公元前5世纪的雅典，奥德修斯的形象开始变味。在索福克勒斯的《菲罗克忒忒斯》里，他成了劝人行骗的政客——智谋被重新定义为狡诈，英雄光环开始褪色。当然，雅典的悲剧传统对他并非只有一种声音，《埃涅阿斯》里的他又成了务实讲理的一方。但总体而言，在那个推崇坦荡与勇武的城邦时代，一个靠诡计取胜的人，注定不会拥有最高的声望。到了古罗马，评价更糟。西塞罗在《论义务》卷三第26节中，拿尤利西斯装疯避役的诡计讨论&quot;表面利益&quot;与道德的冲突，痛斥&quot;把狡诈冒充为审慎&quot;。羊皮卷上的墨迹还没干，尤利西斯的名字已经和&quot;狡诈&quot;绑在了一起。罗马人推崇的是虔敬的埃涅阿斯——那个背负着家国使命、服从神意的人。而奥德修斯，成了&quot;一己小智、罔顾道德&quot;的反面参照。这不是人物本身翻转了，是时代的道德坐标系转了向。更深层的变化是：当一个文明正在扩张、推崇&quot;服从与使命&quot;，它就不再那么需要一个&quot;想回家的人&quot;了。埃涅阿斯的方向是向前的——背负神谕，建立新邦；奥德修斯的方向是往回的——历尽艰险，只为回到原点。罗马选择了埃涅阿斯，因为它需要的是开拓者，不是归乡者。但这条船没有沉。它只是在港口外徘徊，等待下一个时代的风。</p><p>中世纪的海水是滚烫的。但丁在《神曲·地狱篇》第26歌中，把尤利西斯安置在第八层地狱的烈火中，与其他欺诈者同罪。火焰舔着船舷，烧焦了他的胡须，这是中世纪的正统判决——诡计多端的人，理应在地狱受罚。但真正值得注意的是：但丁笔下的尤利西斯，从未回到过伊塔卡。他亲口说，对儿子、对老父、对佩涅洛佩应有的爱，&quot;都压不过我心中要去经历世界、经历人类之恶与德的渴望&quot;。他从喀耳刻的岛上直接启程，穿过赫拉克勒斯之柱，驶向&quot;太阳的另一边&quot;，去探索世界的边缘。最后，在望见净界山的风暴中，船沉了。他不肯回到平庸的家中。不是&quot;回了家又厌倦&quot;，而是从一开始就没有打算回去——为了求知，他把父亲、儿子、妻子、王位、故乡全部抛在了身后。一个人，既是罪人，又是求知先驱。但丁遵循中世纪传统将其定罪，却又借他之口表达了对知识和探索的渴望——这种矛盾恰恰预告了文艺复兴的到来。这也是&quot;归乡焦虑&quot;第一次以分裂的形式呈现：中世纪的神是终极的家，人应当回到神的怀抱；但人的求知欲又在不断把人推向远方。尤利西斯在地狱的烈火里航行，就是这种分裂的完美象征——他因为走得太远而受罚，但哪怕在受罚，他还是在远航。地狱里的火焰没能烧掉这条船。反而，在最黑暗的地方，它偷偷升起了新的帆。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(393.8,'sec-0003')"><span>▶</span> 06:33</button><h3 class="section-title">风终于来了。15、16世纪，欧洲人的世界观天翻地覆</h3></div><p>风终于来了。15、16世纪，欧洲人的世界观天翻地覆。大航海时代的卡拉维尔帆船鼓满了风，载着探险家们驶向未知的大陆。尤利西斯，这个在地狱里漂了一千年的名字，也跟着一起扬帆出海了。卡斯蒂利奥内将尤利西斯描述为&quot;一个受苦受难的人，从冒险中幸存并学到经验&quot;；多尔切赞美他&quot;用自己的美德抗拒反复无常的命运女神&quot;。这不再是一个狡诈者，而是一个在命运中保持尊严的人。最有意思的是两个以他命名的人：美洲的命名者阿美利哥·维斯普西，直接自称&quot;我那个时代的奥德修斯&quot;；博物学家乌利塞·阿尔德罗万迪，父母直接以奥德修斯的名字为他命名，因为他们相信这个名字代表&quot;一个思维全面的人，一个游历广阔的人&quot;。这个时代的尤利西斯，不再是罪人，而是文艺复兴&quot;全人&quot;理想的化身——探索世界、认识自我、在命运中保持人的尊严。而&quot;归乡&quot;的命题在这里也发生了微妙的偏转：家不再是那个地理意义上的伊塔卡，而是人自身的完整性。探索世界的终点，是认识自己。大航海走得越远，&quot;认识你自己&quot;的德尔斐神谕就越响亮——向外探索和向内折返，在这个时代第一次被认为是同一件事。值得注意的是，文艺复兴对尤利西斯的&quot;翻案&quot;，恰恰是一次价值的翻转。在荷马那里，奥德修斯的&quot;多变&quot;是手段——他换身份、变形、什么都能演，为的是回到伊塔卡。但到了文艺复兴，&quot;多变&quot;本身成了目的——一个完整的人，就应该什么都见识过、什么都经历过、什么都能做。&quot;饱满的人&quot;这个说法，就是从这里开始的。不是奥德修斯本身&quot;饱满&quot;，而是文艺复兴人需要一个&quot;全人&quot;的原型，于是从他身上找到了——找到了那个两千年前就埋在史诗里的种子：一个什么都能演的人。这是解读史，不是事实史——但经典的生命力，正体现在这种被反复征用的能力上。从中世纪的地狱里漂出来，这条船焕然一新。它载着一整个时代的雄心，继续向前。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(590.7,'sec-0004')"><span>▶</span> 09:50</button><h3 class="section-title">20世纪初的都柏林，电车哐当哐当地碾过石板路。一个</h3></div><p>工业革命的黑烟漫过了海面。19世纪，浪漫主义思潮席卷欧洲。丁尼生的戏剧独白诗《尤利西斯》，将这个形象推向了又一个高峰。诗中的尤利西斯已经老去，回到伊塔卡后却不甘于日复一日的平庸生活，渴望再度出海。他说自己&quot;喝下过许多海水&quot;，见过&quot;许多城邦和风俗&quot;，而现在，他要&quot;像一颗沉落的星星，追赶知识，超越人类思想的极限&quot;。最有名的是那句结尾：&quot;奋斗、探索、寻求，而不屈服。&quot;但丁笔下的&quot;惩罚&quot;到了浪漫派这里变成了&quot;奖赏&quot;——漂泊不再是被迫的命运，而是主动的人生选择。永不止步的精神，令尤利西斯成为现代人的精神先驱。这背后，是维多利亚时代的进取精神，是探索未知的帝国雄心。但丁是&quot;从未打算回家&quot;，丁尼生是&quot;回了家，再出发&quot;。两个人物，两种漂泊，恰好构成了归乡焦虑的完整光谱——一端是从一开始就拒绝返乡，另一端是返乡之后发现自己再也无法停留。但如果你仔细听，这句激昂的宣言底下，藏着一种新的焦虑：回家之后呢？回到伊塔卡的尤利西斯，坐在王位上，处理着琐碎的政务，面对着已经陌生的儿子和老去的妻子——他发现自己回不去了。不是地理上回不去，是精神上回不去了。那个出发前的奥德修斯已经死在了路上，回来的是另一个人。这是归乡焦虑的现代版本：不是&quot;能不能回家&quot;，而是&quot;回家之后还是不是自己&quot;。人一旦走得太远，就再也无法真正回到原点。蒸汽船已经老了，但船长不想停。他把漂泊本身，活成了一种意义。</p><p>20世纪初的都柏林，电车哐当哐当地碾过石板路。一个叫乔伊斯的爱尔兰人干了一件石破天惊的事。他把奥德修斯的十年漂泊，压缩成了一个都柏林小市民一天的游荡。全书18章，分别对应《奥德赛》的人物、地名或情节——伊塔卡国王对应广告业务员，英雄奥德修斯对应平庸的布卢姆。这是对荷马史诗最具颠覆性的改写。用神话框架反衬现代人的卑微与苍白，既是致敬也是颠覆。但换个角度看，乔伊斯的降格其实是&quot;归乡&quot;命题的极端化——英雄的伟大漂泊被拆解成凡人的琐碎日常。可反过来，正因为布卢姆在一天之内经历了生老病死、欲望屈辱、救赎与和解，他反而成了另一种意义上&quot;完整的人&quot;。他早餐的面包屑掉在衬衫上，他在酒馆里和人争执，他睡前和妻子莫莉和解——这些琐碎到近乎无聊的细节，就是他的&quot;独眼巨人洞&quot;，就是他的&quot;塞壬之歌&quot;，就是他的&quot;伊塔卡&quot;。从荷马到乔伊斯，&quot;人是一个整体&quot;这个命题没变，但&quot;回家&quot;的含义彻底变了。荷马的奥德修斯要回的是一个具体的家——伊塔卡的王宫、妻子的怀抱、儿子的成长。而布卢姆的&quot;家&quot;是什么？是都柏林的一条街道，是一顿平凡的早餐，是睡前和妻子莫莉的和解。家不再是远方的终点，而是日常的此刻。这是20世纪归乡焦虑的答案吗？也许是。当宏大的英雄叙事崩塌，当帝国的雄心退潮，当上帝死了、信仰散了，人还能回到哪里？答案是：回到生活本身。回到琐碎，回到平庸，回到一天二十四小时的吃喝拉撒和喜怒哀乐。这不是降格，这是另一种抵达。几乎在同一个时代，希腊作家卡赞扎基斯写了一部现代版《奥德赛》，方向正好相反——他把奥德修斯的冒险进一步放大，让他最终死于南极冰原。一个往小里缩，缩成都柏林一天的琐碎；一个往大里放，放到南极冰原的尽头。方向相反，本质一样：都是在探&quot;人到底能走多远&quot;的边界。英雄走下了神坛，船却没有搁浅。它只是换了一个船长，驶进了更广阔的人海。</p></div>
+<div class="section" id="sec-0005"><p>这条船不止在西方漂。西方读者第一次读到《西游记》时，几乎本能地会说——这就是中国的奥德赛。唐僧师徒四人西天取经，一路上遭遇各种妖魔鬼怪，历经九九八十一难，最终取得真经返回东土。一个师父带着几个徒弟，长途跋涉，遭遇重重考验，最终完成使命回家——这个结构，和奥德修斯带着船员海上漂流、遭遇独眼巨人、塞壬女妖、卡律布狄斯漩涡、最终回到伊塔卡，确实有许多相似之处。但如果只停留在&quot;结构像&quot;，那就太浅了。更深层的原因在于：奥德赛已经不是一部具体的作品，而是一个叙事母题的代名词。在西方文论的工具箱里，&quot;奥德赛式叙事&quot;几乎就是&quot;成长型旅程叙事&quot;的同义词，现在我们可以看到各种泛滥的“奥德赛”——《刺客信条：奥德赛》《超级马里奥：奥德赛》，暴雪被砍的生存3A游戏也叫“奥德赛”，甚至科幻文学名著、科幻电影经典《2001太空漫游》也跟“奥德赛”有关——因为它的英文名是《2001: A Space Odyssey》。这些作品，可以说都是那条船的变体。那么，这条船的未来会漂向何方？在不同的时代，它总能被重新书写。也许，只要人类还有对远方的渴望和对家的眷恋，这条船就会永远漂下去。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">公元前8世纪，爱琴海东岸。一位盲诗人弹着</span></div>
+<div class="tl-item" onclick="seek(196.9,'sec-0002')"><span class="tl-time">03:16</span><span class="tl-title">中世纪的海水是滚烫的。但丁在《神曲·地狱</span></div>
+<div class="tl-item" onclick="seek(393.8,'sec-0003')"><span class="tl-time">06:33</span><span class="tl-title">风终于来了。15、16世纪，欧洲人的世界</span></div>
+<div class="tl-item" onclick="seek(590.7,'sec-0004')"><span class="tl-time">09:50</span><span class="tl-title">20世纪初的都柏林，电车哐当哐当地碾过石</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260902075546" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
