@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-09-02-0904",
+  "title": "AI 安全警钟：Astra 突破临界，好莱坞成下一战场",
+  "published_at": "2026-09-02 09:04",
+  "duration_seconds": 788.42,
+  "duration_label": "13分08秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "OpenAI 首次评定模型达到「危险」级别",
+      "golden_quote": "一个能自主攻击的 AI 诞生了，信任与恐惧同时上升。",
+      "keywords": [
+        "OpenAI",
+        "Astra",
+        "网络安全",
+        "AI安全"
+      ],
+      "source": "OpenAI"
+    },
+    {
+      "title": "Anthropic 发布 Fable 5.1，性能再升级",
+      "golden_quote": "性能提升一分，成本可能飙升，但缓存降价是真正的甜头。",
+      "keywords": [
+        "Claude Fable 5.1",
+        "Anthropic",
+        "智能体",
+        "定价"
+      ],
+      "source": "Claude Platform"
+    },
+    {
+      "title": "Gemini 视频理解新招：省 88% token",
+      "golden_quote": "AI 不再盲目乱看，而是学会找重点，成本大降。",
+      "keywords": [
+        "Google DeepMind",
+        "Gemini",
+        "视频理解",
+        "Token效率"
+      ],
+      "source": "Google DeepMind Blog"
+    },
+    {
+      "title": "Claude Fable 5.1 登顶却更贵，值不值？",
+      "golden_quote": "登顶是有代价的，聪明但不便宜。",
+      "keywords": [
+        "Claude Fable 5.1",
+        "基准测试",
+        "成本",
+        "AI评测"
+      ],
+      "source": "X @ArtificialAnlys"
+    },
+    {
+      "title": "Google 砸钱买好莱坞，AI 要变味？",
+      "golden_quote": "拿童年记忆换 AI 好感，这交易值得吗？",
+      "keywords": [
+        "Google",
+        "好莱坞",
+        "AI版权",
+        "授权"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
