@@ -1,0 +1,70 @@
+{
+  "episode_id": "2026-09-03-0904",
+  "title": "5件大事：Nvidia收购Hugging Face，OpenAI最新推理技术引发安全担忧",
+  "published_at": "2026-09-03 09:04",
+  "duration_seconds": 583.2,
+  "duration_label": "9分43秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "Gemini 3.8：六周第三次更新，凭什么？",
+      "golden_quote": "当模型学会更努力，人类只能更聪明。",
+      "keywords": [
+        "Gemini 3.8",
+        "Flash",
+        "Google",
+        "模型发布",
+        "网络安全"
+      ],
+      "source": "Google DeepMind Blog"
+    },
+    {
+      "title": "Claude 后台操控电脑，你解放了吗？",
+      "golden_quote": "AI 学会了替你干活，但别让它替你思考。",
+      "keywords": [
+        "Claude",
+        "后台操作",
+        "AI 自动化",
+        "电脑操控"
+      ],
+      "source": "X: Claude (@claudeai)"
+    },
+    {
+      "title": "129 亿美元，Nvidia 买下 AI 的 GitHub？",
+      "golden_quote": "当巨头买下社区，开放就成了陈列品。",
+      "keywords": [
+        "Nvidia",
+        "Hugging Face",
+        "收购",
+        "AI 社区",
+        "生态"
+      ],
+      "source": "X: Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "美国政府站队 OpenAI：版权到底算啥？",
+      "golden_quote": "官方背书下，合理使用成了 AI 的新护身符。",
+      "keywords": [
+        "OpenAI",
+        "版权诉讼",
+        "司法部",
+        "合理使用",
+        "国家安全"
+      ],
+      "source": "X: Rohan Paul (@rohanpaul_ai)"
+    },
+    {
+      "title": "OpenAI 的『递归深度』：是天才还是玩火？",
+      "golden_quote": "当 AI 学会隐藏思考，人类最该警惕。",
+      "keywords": [
+        "OpenAI",
+        "递归深度",
+        "AI 安全",
+        "思维链",
+        "Astra"
+      ],
+      "source": "TechCrunch"
+    }
+  ]
+}
