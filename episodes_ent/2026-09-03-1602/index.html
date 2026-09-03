@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>巫师重制搁浅，等待白狼归来 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 160 夜 / 2026-09-03</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 巫师</div>
+    <h1 class="ep-title">巫师重制搁浅<span class="hl">，等待白狼归来</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 09:33</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260903080331" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">这种'等一等'的做法，在游戏行业其实挺常见。但为什</h3></div><p>你好，我是伊恩。今天想跟你聊聊，那个让无数玩家魂牵梦萦的猎魔人世界，最近传来一个消息：初代《巫师》的重制版，被暂时搁置了。别急，这不是坏消息，而是一盘大棋的开局。</p><p>先说说这个消息本身。CD Projekt Red，就是那个做出《巫师3》和《赛博朋克2077》的波兰公司，最近向媒体确认，初代《巫师》的重制版目前处于暂停状态。原因听起来有点绕：这个重制版要基于《巫师4》的技术来开发，所以得等《巫师4》先把基础打好。与此同时，负责重制版的工作室Fool's Theory，现在主要精力放在《巫师3》的一个新扩展包上，叫'过去之歌'，还有一部分人在帮忙做《巫师4》。</p><p>你可能想问，这游戏到底还做不做了？别担心，CDPR说了，只是暂时搁置，不是取消。他们给出的理由是技术上的依赖关系。原来，重制版不是从零开始，而是要利用《巫师4》的引擎、工具和素材。就像你要盖一座新房子，得先等新地基打好，才能往上砌砖。所以，重制版的开发团队得先等着《巫师4》推进到一定程度，才能拿到那些新工具。</p><p>这种'等一等'的做法，在游戏行业其实挺常见。但为什么偏偏是这个时候？我们来算算时间线。初代《巫师》是2007年出的，都快二十年了。重制版的消息在2022年公布，当时玩家一片欢呼，毕竟原作虽然经典，但技术已经落后，操作和画面都有些过时。当时CDPR说，重制版会做成开放世界，还会删掉或重做那些他们觉得过时或糟糕的部分。听着挺有诚意。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(114.7,'sec-0002')"><span>▶</span> 01:54</button><h3 class="section-title">初代《巫师》是什么样？现在回头看，它毛病不少。战斗</h3></div><p>可这都2025年了，游戏还没影子，现在又搁置。外界的猜测是，重制版可能要到2028年之后才能见面。而《巫师4》预计2028年发售，CDPR还计划在《巫师4》发售后六年内完成一个三部曲。所以，重制版很可能穿插在《巫师4》和《巫师5》之间，用来填档期，让玩家有东西可玩。</p><p>这就引出一个大背景：CDPR这几年在忙什么？除了《巫师4》，他们还公布了一个代号'Hadar'的新IP，最近又在加大招聘力度。听起来，他们手里的牌不少。但玩家最关心的，还是《巫师》这个金字招牌。从2007年到现在，这个系列经历了怎样的起落？我们今天就来聊聊它的前世今生。</p><p>《巫师》这个IP，最初来源于波兰作家安杰伊·萨普科夫斯基的奇幻小说，主角利维亚的杰洛特，是个猎魔人，靠着变异的身体和法术，在乱世中猎杀怪物，但真正可怕的往往是人心。小说在东欧很火，但在2007年之前，还没多少人听过。CD Projekt Red当时只是一家刚成立的波兰工作室，之前主要做游戏本地化，没什么游戏开发经验。他们拿到了《巫师》的改编权，做出了初代游戏。</p><p>初代《巫师》是什么样？现在回头看，它毛病不少。战斗系统很别扭，要点击时机才能连招，画面也糙，配音更是一股波兰口音的英语。但它的内容却异常丰富，多线剧情，道德困境，还有紧张的政治斗争，让玩家觉得，这不像一般的打怪RPG，而是一个能做出选择题的成人故事。当时卖了大概两百万份，对于小厂来说已经算成功，但还没到爆款程度。</p></div>
+<div class="section" id="sec-0003"><div class="section-header"><button class="section-btn" onclick="seek(229.4,'sec-0003')"><span>▶</span> 03:49</button><h3 class="section-title">现在，他们选择把重制版和《巫师4》捆绑，这种做法背</h3></div><p>真正让《巫师》封神的，是2011年的《巫师2：国王刺客》。CDPR把画面和技术提升了一大截，还加入了非线性叙事，你做的选择会在后面造成连锁反应。但那时候，欧美市场还被《上古卷轴5》统治，波兰游戏还上不了台面。转折点在2015年，《巫师3：狂猎》发售。那一年，全世界都疯了。开放世界，沙盒，猎魔人的最后一次冒险，杰洛特在寻找养女希里的路上，经历了一场场生死交错。记得当时，很多人为了玩它，专门买了新显卡，就为了看那片沼泽和树林的雾气。它赢得了年度游戏，卖出了五千万份，成了波兰的文化输出，甚至总理送给外国领导人的礼物都是它。</p><p>但故事还没完。CDPR在《巫师3》成功后，野心勃勃地扑向了《赛博朋克2077》，结果2020年发售时灾难性翻车，bug多到让人怀疑人生，主机版几乎没法玩，口碑崩了，股价跳水。让很多人觉得，这家波兰公司是不是不行了。CDPR花了很长时间修复《赛博朋克》，出了动画《赛博朋克：边缘行者》挽回了一些声誉，游戏口碑也逐渐好转。但现在，他们必须证明自己还能做出第二个《巫师3》。所以，《巫师4》对他们来说，不只是续作，更是翻身仗。</p><p>现在，他们选择把重制版和《巫师4》捆绑，这种做法背后有讲究。游戏开发中，引擎和工具是关键。如果他们单独做重制版，要么用老引擎，那跟原作差不多，没意义；要么用新引擎，但得自己做工具，不划算。捆绑《巫师4》的好处是，等《巫师4》的引擎成熟了，重制版直接拿来用，省时省力，还能保证质量。但缺点是，玩家要等更久。</p></div>
+<div class="section" id="sec-0004"><div class="section-header"><button class="section-btn" onclick="seek(344.2,'sec-0004')"><span>▶</span> 05:44</button><h3 class="section-title">但问题也来了。重制版要改多少？原作的'时代感'要不</h3></div><p>还有一种可能，CDPR在避免重蹈覆辙。他们经历过《赛博朋克2077》的赶工教训，现在宁可多花时间，也不想拿半成品出来。而且，Fool's Theory这家工作室，其实是很多人没听过的名字。它是一家波兰工作室，以前做过一些独立游戏，还有《博德之门3》的辅助开发。让它来做重制版，靠谱吗？CDPR倒是很放心，他们说Fool's Theory的人正在参与《巫师4》的开发，目的就是为了让他们熟悉新工具，之后才能更好地做重制。</p><p>但玩家等得太久了。有些忠实粉丝开玩笑说，他们从2007年玩到2025年，从青丝等到白发，还不算完。网上有人抱怨，也有理解的声音。其实，游戏行业不就是这样吗？很多重制版或续作都采取捆绑策略。比如《最终幻想7重制版》，用了新技术，做了三部曲，隔着几年才出完。还有《生化危机》系列，重制版用的就是最新引擎。</p><p>我们再往深里想，CDPR想要什么？他们想建立一个更庞大的《巫师》宇宙。除了游戏，他们还有剧集、小说、漫画。《巫师》剧集虽然拍得魔改，但也吸引了很多新玩家。重制版如果能在《巫师4》之后出来，一方面能填补时间空档，另一方面也能让老玩家重温经典，新玩家入坑。</p><p>但问题也来了。重制版要改多少？原作的'时代感'要不要保留几十年前的僵直动画，还是干脆全部重做？如果改得太彻底，老玩家可能觉得不像原版；如果保留太多，又会显得过时。CDPR之前说，要删除或重做'过时的地方'，这话让一些老一辈玩家有些忐忑。但我想起《巫师3》里有一个任务，杰洛特在奥克森福特的一口井旁，遇到一个要被处死的人，他可以选择救他，也可以看着他死。这种选择带来的冲击，是文字和视频无法替代的。也许重制版，要的就是这样的感觉。</p></div>
+<div class="section" id="sec-0005"><p>未来的事，谁说得准呢？但我知道，CDPR正在积累势能。他们手里有很多项目，就像猎魔人随时准备应对各种怪物。而在等待的日子里，玩家们不妨再去玩一遍老游戏，或者干脆把《巫师3》的昆特牌再打开，那是最好的下酒菜。至于那个重制版，就像杰洛特说的，'命运会指引我们相遇'。只不过，这句话也常被拿来当咒骂对手高层的玩笑话。好了，今天就聊到这儿。让我们在自己的世界里，继续当个自由的猎魔人吧。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">这种'等一等'的做法，在游戏行业其实挺常</span></div>
+<div class="tl-item" onclick="seek(114.7,'sec-0002')"><span class="tl-time">01:54</span><span class="tl-title">初代《巫师》是什么样？现在回头看，它毛病</span></div>
+<div class="tl-item" onclick="seek(229.4,'sec-0003')"><span class="tl-time">03:49</span><span class="tl-title">现在，他们选择把重制版和《巫师4》捆绑，</span></div>
+<div class="tl-item" onclick="seek(344.2,'sec-0004')"><span class="tl-time">05:44</span><span class="tl-title">但问题也来了。重制版要改多少？原作的'时</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260903080331" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
