@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>红磡夜火：何勇的燃烧与熄灭 - 伊恩娱乐深度谈</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--ink:#1A1613;--pink:#FF3366;--green:#00E5A3;--gray:#9A9A9A;--light:#EFECE6;--card:#FFFFFF;--border:#E0DDD6;--sans:"Noto Sans SC",sans-serif;--art:"Playfair Display",serif}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth}
+.bg-blob{position:fixed;border-radius:50%;filter:blur(120px);opacity:.55;pointer-events:none;z-index:0}
+.bg-blob-1{top:-80px;right:-10%;width:500px;height:500px;background:linear-gradient(135deg,#FFEEF2,#E3FFF2)}
+.bg-blob-2{top:40%;left:-10%;width:400px;height:400px;background:linear-gradient(135deg,#FFFCE3,#FFEEF2);opacity:.45}
+header{max-width:1200px;margin:0 auto;padding:24px 24px 16px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-badge{background:var(--ink);color:#fff;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;letter-spacing:1px}
+.logo-text{font-size:12px;font-weight:900;letter-spacing:3px;color:var(--gray)}
+.issue-num{font-size:12px;font-family:monospace;color:var(--gray)}
+main{max-width:1200px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:1fr 360px;gap:40px;position:relative;z-index:10}
+@media(max-width:960px){main{grid-template-columns:1fr}}
+.content{min-width:0}
+.tag-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(0,229,163,.12);color:#00A372;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:16px}
+.ep-title{font-size:34px;font-weight:900;line-height:1.25;margin-bottom:24px;letter-spacing:-.5px}
+.ep-title .hl{color:var(--pink)}
+@media(max-width:600px){.ep-title{font-size:24px}}
+.player{background:var(--card);border:2px solid var(--ink);padding:20px;border-radius:16px;box-shadow:6px 6px 0 0 var(--ink);margin-bottom:32px}
+.player-row{display:flex;align-items:center;gap:14px}
+.play-btn{width:56px;height:56px;border-radius:12px;background:var(--green);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .15s}
+.play-btn:hover{background:var(--pink);color:#fff}
+.play-btn svg{width:22px;height:22px;fill:currentColor;margin-left:2px}
+.player-info{flex:1;min-width:0}
+.player-status{font-size:11px;font-weight:900;color:var(--gray);text-transform:uppercase;letter-spacing:1px}
+.player-time{font-size:11px;font-family:monospace;font-weight:700;color:var(--ink)}
+.player-bar-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.progress-bar{height:12px;background:var(--light);border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.progress-fill{height:100%;background:var(--pink);border-radius:999px;width:0;transition:width .3s}
+.story{font-size:16px;line-height:1.9;color:#444}
+.story p{margin-bottom:20px}
+.section{padding-top:16px;scroll-margin-top:24px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-btn{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--ink);color:var(--green);font-size:11px;font-family:monospace;font-weight:700;border-radius:8px;cursor:pointer;border:none;transition:all .15s}
+.section-btn:hover{background:var(--pink);color:#fff}
+.section-btn span{font-size:12px}
+.section-title{font-size:22px;font-weight:900;color:var(--ink)}
+@media(max-width:600px){.section-title{font-size:18px}}
+.image-card{margin:32px 0;position:relative;display:flex;justify-content:center}
+.image-card-inner{width:100%;aspect-ratio:16/9;background:var(--light);border-radius:24px;border:2px solid var(--ink);box-shadow:4px 4px 0 0 var(--ink);overflow:hidden}
+.image-card-inner img{width:100%;height:100%;object-fit:cover;display:block}
+.more{border-top:1px solid var(--border);padding-top:32px;margin-top:40px}
+.more-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;font-family:monospace;margin-bottom:14px}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.more-grid{grid-template-columns:1fr}}
+.more-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:16px;text-decoration:none;transition:all .15s;display:block}
+.more-card:hover{border-color:var(--pink)}
+.more-card-label{font-size:11px;font-family:monospace;font-weight:700;color:var(--pink);margin-bottom:4px}
+.more-card-title{font-size:14px;font-weight:700;color:var(--ink)}
+.more-card:hover .more-card-title{color:var(--pink)}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:20px}
+@media(max-width:960px){.sidebar{position:static}}
+.host-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--pink))}
+.host-avatar{width:64px;height:64px;background:#FFFCE3;border-radius:50%;border:2px solid var(--ink);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.host-name{font-weight:900;font-size:14px}
+.host-handle{font-size:10px;font-family:monospace;color:var(--pink);font-weight:700;margin:2px 0 8px}
+.host-bio{font-size:12px;color:var(--gray);line-height:1.6;text-align:left;background:var(--bg);padding:12px;border-radius:10px}
+.timeline{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:20px;box-shadow:4px 4px 0 0 var(--ink)}
+.timeline-label{font-size:11px;font-weight:900;color:var(--gray);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.tl-item{display:flex;align-items:flex-start;gap:10px;padding:10px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:all .15s;margin-bottom:4px}
+.tl-item:hover{background:#FFEEF2;border-color:rgba(255,51,102,.2)}
+.tl-time{background:var(--ink);color:var(--green);font-family:monospace;font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.tl-item:hover .tl-time{background:var(--pink);color:#fff}
+.tl-title{font-size:12px;font-weight:700;color:var(--ink)}
+footer{max-width:1200px;margin:0 auto;padding:0 24px 40px;text-align:center;position:relative;z-index:10}
+.footer-quote{font-family:var(--art);font-style:italic;font-size:15px;color:var(--ink);margin-bottom:8px}
+.footer-tag{font-size:11px;font-weight:700;color:var(--gray)}
+</style></head>
+<body>
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<header>
+  <div class="logo">
+    <span class="logo-badge">IAN</span>
+    <span class="logo-text">伊恩娱乐深度谈</span>
+  </div>
+  <div class="issue-num">第 161 夜 / 2026-09-04</div>
+</header>
+
+<main>
+  <div class="content">
+    <div class="tag-pill"><span>#</span> 何勇</div>
+    <h1 class="ep-title">红磡夜火：何<span class="hl">勇的燃烧与熄灭</span></h1>
+
+    <div class="player">
+      <div class="player-row">
+        <button class="play-btn" id="play-btn" onclick="togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="player-info">
+          <div class="player-bar-row">
+            <span class="player-status" id="player-status">点击播放</span>
+            <span class="player-time"><span id="current-time">00:00</span> / 07:33</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <div class="image-card"><div class="image-card-inner"><img src="cover.jpg?v=20260904075948" alt=""></div></div>
+<div class="section" id="sec-0001"><div class="section-header"><button class="section-btn" onclick="seek(0.0,'sec-0001')"><span>▶</span> 00:00</button><h3 class="section-title">真正让何勇进入大众视野的，是1994年。那一年，魔</h3></div><p>你好，我是伊恩。今天早上，手机弹出一条新闻：魔岩三杰之一的何勇去世了，57岁。我愣了几秒，脑子里第一个画面是1994年红磡舞台上那个穿着海魂衫、跳着叫着唱《钟鼓楼》的年轻人。那场演唱会，被称为中国摇滚的巅峰之夜。可谁能想到，三十年后，这个曾经点燃无数人的歌手，会在北京的某个清晨，静悄悄地离开。</p><p>何勇的名字，对于90年代听过中国摇滚的人来说，是一个符号。他出生在北京一个音乐世家，四世同堂。父亲何玉笙是三弦演奏家，母亲也从事音乐。何勇5岁开始学音乐，最早学的是中国民乐，三弦、笛子都学过。11岁那年，他参演了儿童电影《四个小伙伴》，算是童星出道。但音乐才是他的归宿，中学时他开始迷上吉他，后来干脆组乐队，15岁就登台演出，写了第一首歌《长江第一漂》。有意思的是，他后来加入过一个叫“五月天”的乐队，不过那是台湾五月天出现之前的事，那支乐队后来也解散了。</p><p>真正让何勇进入大众视野的，是1994年。那一年，魔岩唱片推出了“魔岩三杰”——窦唯、张楚、何勇。他们代表着中国摇滚的新生力量，歌词里全是城市、理想、迷茫和反抗。12月，魔岩三杰和唐朝乐队一起在香港红磡体育馆开了一场演唱会。那场演唱会，后来被无数人称为“中国摇滚的巅峰”。何勇在台上唱了《钟鼓楼》和《姑娘漂亮》，他穿着海魂衫，抱着吉他，蹦蹦跳跳，现场气氛炸裂。尤其是《钟鼓楼》里那句“我的家就在二环路的里边”，成了那一代人的记忆。何勇在台上还说了一句“四大天王里，除了张学友，其他的都是小丑”，这句话后来被媒体放大，引发了不小的争议。</p></div>
+<div class="section" id="sec-0002"><div class="section-header"><button class="section-btn" onclick="seek(151.2,'sec-0002')"><span>▶</span> 02:31</button><h3 class="section-title">可是，盛极而衰。红磡演唱会之后，“魔岩三杰”并没有</h3></div><p>但巅峰之后，一切急转直下。何勇的运气并不好。他的音乐事业没有持续走高，反而因为各种原因陷入低谷。更麻烦的是，他的精神状态一直不稳定。2002年，33岁的何勇在北京家中纵火，殃及了邻居，被警方拘禁，随后被送进精神病医院。那几年，他断断续续地接受治疗，病情时好时坏。2006年，他又因为病情严重被送进医院。之后，何勇几乎从公众视野里消失了，偶尔出现在一些小型演出上，但状态大不如前。他长期服药，精神疾病一直困扰着他。直到今天，他去世的消息传来，享年57岁。</p><p>说起何勇，很难不谈“魔岩三杰”背后的整个中国摇滚史。这支脉络，要追溯到80年代中期。1986年，崔健在北京工体唱了那首《一无所有》，被很多人视为中国摇滚的起点。但那时候的摇滚乐，还只是地下的小众音乐。直到90年代初，唱片公司开始注意到这个市场。当时，滚石唱片旗下的魔岩唱片进入中国，签了一批年轻歌手，包括窦唯、张楚、何勇。1994年，魔岩三杰横空出世，被包装成“中国摇滚的新希望”。那一年，他们的专辑《黑梦》《孤独的人是可耻的》《垃圾场》几乎同时发行，每一张都像是炸弹，炸开了中国年轻人的心。红磡演唱会，更是让整个华语乐坛都看到了中国摇滚的能量。</p><p>可是，盛极而衰。红磡演唱会之后，“魔岩三杰”并没有乘胜追击。窦唯逐渐转向实验音乐，张楚在发行了《造飞机的工厂》后就几乎隐退，何勇因为精神问题反复入院。魔岩唱片也在几年后退出中国，中国摇滚第一波商业化浪潮就这么草草收场。这背后的原因很复杂。一方面，摇滚乐的内容审查和市场环境的限制，让这些音乐人没法自由创作。另一方面，这些音乐人本身也背负着巨大的精神压力，他们中的很多人是被时代推着走的，没有准备好应对成名后的生活。何勇就是很典型的例子，他从小在音乐的浸泡里长大，但精神世界却一直不太稳定。红磡演唱会那晚，他的张扬和疯狂，其实已经埋下了后来的隐患。</p></div>
+<div class="section" id="sec-0003"><p>何勇去世的消息传开后，朋友圈里很多人都在刷他的歌。有人发《钟鼓楼》的歌词，有人转发红磡演唱会的视频片段。我看了几个评论，有一个说：“那个时代过去了，我们也老了。”还有一个说：“希望他在另一个世界，能平静一些。”这些留言很感性，但它们背后，是人们对那个黄金时代的集体怀念。</p><p>何勇这一生，像是一场燃烧。他年轻时，用音乐点燃了自己的生命，也点燃了一个时代的热情。但火焰太旺，人却承受不住。他后来被精神疾病折磨，被生活击垮，像一根燃尽的火柴。他的歌，留在了那些热爱摇滚的人的硬盘和记忆里。</p><p>不过，也有人认为，何勇的悲剧是时代造成的。他的歌里全是反抗和愤怒，但当现实没有给他足够的回响时，那种愤怒就转向了自己。精神疾病，或许是他太敏感、太真实的结果。还有人说，何勇的经历，是中国摇滚乐的缩影——曾经灿烂，但没能继续往前。</p><p>当然，这些都只是外界的猜测。何勇到底经历了什么，只有他自己知道。在他生命的最后几年，他几乎从公众视野消失了。他可能在北京的某个胡同里，安静地生活着，弹弹三弦，喂喂猫。</p><p>何勇走了，留下了他的歌，也留下了一个时代的问号。那些歌，还会被年轻的一代继续听吗？那个曾经在红磡舞台上张扬呐喊的年轻人，他的火，是否还能在某个角落延续？或许，当《钟鼓楼》的旋律再次响起时，我们还是会想起那个夏天，想起那个跳动的身影。毕竟，有些声音，是不会消失的。</p></div>
+    </article>
+
+    <section class="more">
+      <p class="more-label">更多故事 / MORE STORIES</p>
+      <div class="more-grid" id="more-grid">
+        <a href="#" class="more-card" id="card-next">
+          <p class="more-card-label">NEXT →</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+        <a href="#" class="more-card" id="card-prev">
+          <p class="more-card-label">← PREVIOUS</p>
+          <h4 class="more-card-title">敬请期待</h4>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <div class="host-card">
+      <div class="host-avatar">🧔🏻‍♂️</div>
+      <div class="host-name">讲述者：伊恩 (Ian)</div>
+      <div class="host-handle">@IAN_TALKSHOW</div>
+      <div class="host-bio">AI影视行业编导。像窝在咖啡馆闲聊的朋友，把影视、动漫、游戏的来龙去脉聊得通透有趣。</div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-label">故事时间轴</div>
+      <div class="tl-item" onclick="seek(0.0,'sec-0001')"><span class="tl-time">00:00</span><span class="tl-title">真正让何勇进入大众视野的，是1994年。</span></div>
+<div class="tl-item" onclick="seek(151.2,'sec-0002')"><span class="tl-time">02:31</span><span class="tl-title">可是，盛极而衰。红磡演唱会之后，“魔岩三</span></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p class="footer-quote">" 听完故事，咖啡刚好也凉了。 "</p>
+  <p class="footer-tag">IAN ENTERTAINMENT IN-DEPTH TALK © 2026</p>
+</footer>
+
+<audio id="audio" preload="metadata"><source src="full.mp3?v=20260904075948" type="audio/mpeg"></audio>
+<script>
+const audio=document.getElementById('audio');
+const playBtn=document.getElementById('play-btn');
+const playIcon=document.getElementById('play-icon');
+const pauseIcon=document.getElementById('pause-icon');
+const progressFill=document.getElementById('progress-fill');
+const currentTimeEl=document.getElementById('current-time');
+const playerStatus=document.getElementById('player-status');
+
+function fmt(t){var m=Math.floor(t/60),s=Math.floor(t%60);return (m<10?'0':'')+m+':'+(s<10?'0':'')+s}
+
+function togglePlay(){if(audio.paused){audio.play()}else{audio.pause()}}
+audio.onplay=function(){playIcon.style.display='none';pauseIcon.style.display='block';playerStatus.textContent='正在播放'}
+audio.onpause=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='已暂停'}
+audio.ontimeupdate=function(){var p=audio.currentTime/audio.duration*100;progressFill.style.width=p+'%';currentTimeEl.textContent=fmt(audio.currentTime)}
+audio.onended=function(){playIcon.style.display='block';pauseIcon.style.display='none';playerStatus.textContent='播放完毕';progressFill.style.width='0%';currentTimeEl.textContent='00:00'}
+
+function seek(t,elId){audio.currentTime=t;if(audio.paused)audio.play();if(elId){var el=document.getElementById(elId);if(el)el.scrollIntoView({behavior:'smooth'})}}
+
+fetch('../../episodes_ent_list.json').then(function(r){return r.json()}).then(function(list){
+  var m=location.pathname.match(/episodes_ent\/([^\/]+)/);
+  if(!m)return;
+  var cur=m[1],idx=list.findIndex(function(e){return e.id===cur});
+  if(idx===-1)return;
+  var newer=idx>0?list[idx-1]:null,older=idx<list.length-1?list[idx+1]:null;
+  if(newer){var cn=document.getElementById('card-next');cn.href='../'+newer.id+'/';cn.querySelector('.more-card-title').textContent=newer.title}
+  if(older){var co=document.getElementById('card-prev');co.href='../'+older.id+'/';co.querySelector('.more-card-title').textContent=older.title}
+}).catch(function(){});
+</script>
+</body></html>
