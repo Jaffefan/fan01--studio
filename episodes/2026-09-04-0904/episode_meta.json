@@ -1,0 +1,66 @@
+{
+  "episode_id": "2026-09-04-0904",
+  "title": "OpenAI 踩下 AGI 油门，英伟达把开源社区买回家",
+  "published_at": "2026-09-04 09:04",
+  "duration_seconds": 931.34,
+  "duration_label": "15分31秒",
+  "cover_image": "image_01.jpg",
+  "segment_count": 5,
+  "segments": [
+    {
+      "title": "GPT-6 Astra：能入侵系统的 AGI？",
+      "golden_quote": "满分漏洞利用，零越界行为——这可能是最危险的和谐",
+      "keywords": [
+        "GPT-6",
+        "计算机操作",
+        "网络安全",
+        "高性能模型"
+      ],
+      "source": "MarkTechPost"
+    },
+    {
+      "title": "IFM 开源六款模型：从手表到数据中心",
+      "golden_quote": "把训练秘方开源，才是真正的降维打击",
+      "keywords": [
+        "开源模型",
+        "K2 Horizon",
+        "Agentic AI",
+        "IFM"
+      ],
+      "source": "IFM AI Blog"
+    },
+    {
+      "title": "英伟达 129 亿买下 Hugging Face",
+      "golden_quote": "英伟达不卖铲子了，直接买了整个矿区",
+      "keywords": [
+        "英伟达",
+        "Hugging Face",
+        "收购",
+        "开源生态"
+      ],
+      "source": "NVIDIA Blog"
+    },
+    {
+      "title": "GPT-6 细节：从 PCB 到 3D 建模",
+      "golden_quote": "模型在 AGI 门槛边缘试探，但分数有水分",
+      "keywords": [
+        "GPT-6 能力",
+        "Computer Use",
+        "任务自动化",
+        "智能体"
+      ],
+      "source": "量子位"
+    },
+    {
+      "title": "英伟达 PAIR：让你的电脑组队跑 AI",
+      "golden_quote": "闲置电脑组队，英伟达教你榨干每一块 GPU",
+      "keywords": [
+        "英伟达",
+        "PAIR",
+        "本地 AI",
+        "分布式计算"
+      ],
+      "source": "The Verge"
+    }
+  ]
+}
